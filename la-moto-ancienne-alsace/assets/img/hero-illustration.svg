@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" width="100%" height="100%" role="img" aria-label="Route à travers les vignes d'Alsace, moto ancienne en vedette">
+  <defs>
+    <radialGradient id="soleil" cx="78%" cy="22%" r="30%">
+      <stop offset="0%" stop-color="#d2ac72" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#d2ac72" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="colline1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2d24"/>
+      <stop offset="100%" stop-color="#2a211c"/>
+    </linearGradient>
+    <linearGradient id="colline2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241b16"/>
+      <stop offset="100%" stop-color="#1b1512"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="#1b1512"/>
+  <circle cx="1248" cy="198" r="260" fill="url(#soleil)"/>
+
+  <!-- collines / coteaux -->
+  <path d="M0,520 C220,460 380,560 620,500 C860,440 1040,520 1600,460 L1600,900 L0,900 Z" fill="url(#colline1)"/>
+  <path d="M0,600 C260,540 460,620 760,560 C1060,500 1280,600 1600,540 L1600,900 L0,900 Z" fill="url(#colline2)"/>
+
+  <!-- rangs de vigne stylisés -->
+  <g stroke="#3a2d24" stroke-width="3" opacity="0.5">
+    <path d="M60,640 C260,600 420,660 640,610" fill="none"/>
+    <path d="M60,668 C260,628 420,688 640,638" fill="none"/>
+    <path d="M60,696 C260,656 420,716 640,666" fill="none"/>
+    <path d="M980,560 C1140,600 1300,540 1540,580" fill="none"/>
+    <path d="M980,588 C1140,628 1300,568 1540,608" fill="none"/>
+  </g>
+
+  <!-- route en perspective -->
+  <path d="M640,900 C700,760 745,650 790,560 L870,560 C905,650 950,760 1020,900 Z" fill="#241b16"/>
+  <path d="M800,560 L812,560 L770,900 L742,900 Z" fill="#b58a4a" opacity="0.6"/>
+  <g fill="#d2ac72" opacity="0.75">
+    <rect x="800" y="600" width="6" height="26" transform="skewX(-4)"/>
+    <rect x="793" y="660" width="8" height="30" transform="skewX(-4)"/>
+    <rect x="784" y="730" width="10" height="36" transform="skewX(-4)"/>
+    <rect x="772" y="810" width="12" height="42" transform="skewX(-4)"/>
+  </g>
+
+  <!-- silhouette moto ancienne + motard, premier plan -->
+  <g transform="translate(730,676) scale(1.65)">
+    <ellipse cx="60" cy="86" rx="92" ry="10" fill="#000" opacity="0.35"/>
+    <g fill="none" stroke="#7c1f2b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="18" cy="78" r="19" fill="#120e0c" stroke="#b58a4a" stroke-width="3"/>
+      <circle cx="102" cy="78" r="19" fill="#120e0c" stroke="#b58a4a" stroke-width="3"/>
+      <path d="M18,78 L48,46 L78,46 L102,78" />
+      <path d="M48,46 C50,30 66,24 78,30" />
+      <path d="M18,78 C30,56 44,50 58,50" />
+      <path d="M78,46 L86,30 L104,28" />
+      <circle cx="86" cy="30" r="6" fill="#d2ac72" stroke="none"/>
+      <path d="M58,50 L46,30" />
+      <path d="M46,30 L34,24" />
+    </g>
+    <g fill="#1b1512" stroke="#3a2d24" stroke-width="2">
+      <path d="M-4,64 Q-2,46 24,44 Q34,52 22,66 Q6,72 -4,64 Z"/>
+      <ellipse cx="60" cy="40" rx="20" ry="9"/>
+    </g>
+    <g fill="#241b16" stroke="#b58a4a" stroke-width="1.6">
+      <path d="M30,16 C44,2 70,0 82,10 L82,24 C66,16 46,18 34,30 Z"/>
+    </g>
+  </g>
+
+  <!-- oiseaux -->
+  <g stroke="#b58a4a" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6">
+    <path d="M300,160 q14,-14 28,0 q14,-14 28,0"/>
+    <path d="M400,210 q10,-10 20,0 q10,-10 20,0"/>
+  </g>
+</svg>

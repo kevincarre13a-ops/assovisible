@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galerie — La Moto Ancienne d'Alsace</title>
+<meta name="description" content="Galerie photo des sorties, expositions et bourses d'échange de La Moto Ancienne d'Alsace, classée par événement.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="galerie">
+
+<header class="entete">
+  <div class="conteneur">
+    <a href="index.html" class="marque">
+      <img src="assets/img/logo-lmaa.svg" alt="La Moto Ancienne d'Alsace" class="marque__badge">
+      <span class="marque__texte">
+        <span class="marque__nom">LMAA</span>
+        <span class="marque__lieu">Wittenheim &middot; Alsace</span>
+      </span>
+    </a>
+    <nav class="nav-principale" aria-label="Navigation principale">
+      <a href="index.html" data-cible="accueil">Accueil</a>
+      <a href="association.html" data-cible="association">L'association</a>
+      <a href="sorties-evenements.html" data-cible="sorties">Sorties &amp; événements</a>
+      <a href="motos.html" data-cible="motos">Les motos</a>
+      <a href="galerie.html" data-cible="galerie">Galerie</a>
+      <a href="actualites.html" data-cible="actualites">Actualités</a>
+      <a href="adherer-contact.html" data-cible="contact" class="bouton">Adhérer / Contact</a>
+    </nav>
+    <button class="bouton-burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="entete-page">
+    <div class="decor-illustration" aria-hidden="true"><img src="assets/img/bandeau-route.svg" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="conteneur">
+      <p class="fil-ariane"><a href="index.html">Accueil</a> / Galerie</p>
+      <h1>Galerie</h1>
+      <p class="chapo">Un aperçu en images de nos sorties, de l'Expo-Bourse de Wittenheim et des grands rassemblements.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="conteneur">
+
+      <div class="filtre-galerie reveal">
+        <button class="actif" data-filtre="tout">Tout voir</button>
+        <button data-filtre="bourse">Expo-Bourse</button>
+        <button data-filtre="sorties">Sorties &amp; balades</button>
+        <button data-filtre="legende">Coupes Moto Légende</button>
+      </div>
+
+      <div class="grille grille--3 reveal-groupe">
+
+        <div class="galerie-carte reveal" data-categorie="bourse" style="--retard:0">
+          <img src="assets/img/bandeau-route.svg" alt="Exposition de motos anciennes à la Halle au Coton" style="object-fit:cover;">
+          <div class="galerie-carte__legende"><strong>Expo-Bourse</strong><span>Halle au Coton, Wittenheim</span></div>
+        </div>
+
+        <div class="galerie-carte reveal" data-categorie="bourse" style="--retard:1">
+          <img src="assets/img/bandeau-route.svg" alt="Bourse d'échange de pièces détachées" style="object-fit:cover;">
+          <div class="galerie-carte__legende"><strong>Bourse d'échange</strong><span>Pièces &amp; accessoires</span></div>
+        </div>
+
+        <div class="galerie-carte reveal" data-categorie="sorties" style="--retard:2">
+          <img src="assets/img/bandeau-route.svg" alt="Balade à moto sur les routes d'Alsace" style="object-fit:cover;">
+          <div class="galerie-carte__legende"><strong>Balade du club</strong><span>Routes d'Alsace</span></div>
+        </div>
+
+        <div class="galerie-carte reveal" data-categorie="sorties" style="--retard:3;background:#1b1512;display:flex;align-items:center;justify-content:center;">
+          <img src="assets/img/moto-silhouette.svg" alt="Sortie entre membres du club" style="width:60%;height:auto;object-fit:contain;">
+          <div class="galerie-carte__legende"><strong>Sortie entre membres</strong><span>Toute l'année</span></div>
+        </div>
+
+        <div class="galerie-carte reveal" data-categorie="legende" style="--retard:4">
+          <img src="assets/img/bandeau-route.svg" alt="Stand du club aux Coupes Moto Légende" style="object-fit:cover;">
+          <div class="galerie-carte__legende"><strong>Coupes Moto Légende 2023</strong><span>Stand du club</span></div>
+        </div>
+
+        <div class="galerie-carte reveal" data-categorie="legende" style="--retard:5;background:#241b16;display:flex;align-items:center;justify-content:center;">
+          <img src="assets/img/moto-silhouette.svg" alt="Machines exposées aux Coupes Moto Légende 2019" style="width:60%;height:auto;object-fit:contain;">
+          <div class="galerie-carte__legende"><strong>Coupes Moto Légende 2019</strong><span>Terrot, Norton, Indian&hellip;</span></div>
+        </div>
+
+        <div class="galerie-carte reveal" data-categorie="bourse" style="--retard:0;background:#2a211c;display:flex;align-items:center;justify-content:center;">
+          <img src="assets/img/cadran.svg" alt="Visiteurs à l'Expo-Bourse" style="width:55%;height:auto;object-fit:contain;">
+          <div class="galerie-carte__legende"><strong>Visiteurs du jour</strong><span>Expo-Bourse 2026</span></div>
+        </div>
+
+        <div class="galerie-carte reveal" data-categorie="sorties" style="--retard:1">
+          <img src="assets/img/bandeau-route.svg" alt="Pause balade en Alsace" style="object-fit:cover;">
+          <div class="galerie-carte__legende"><strong>Pause route</strong><span>Entre vignes et collines</span></div>
+        </div>
+
+        <div class="galerie-carte reveal" data-categorie="legende" style="--retard:2">
+          <img src="assets/img/bandeau-route.svg" alt="Rassemblement national de motos anciennes" style="object-fit:cover;">
+          <div class="galerie-carte__legende"><strong>Grand rassemblement</strong><span>Clubs de toute la France</span></div>
+        </div>
+
+      </div>
+
+      <p class="note-attente" style="margin-top:26px;">Cette galerie utilise pour l'instant des illustrations : envoyez vos photos pour les remplacer, catégorie par catégorie.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <div class="pied__grille">
+      <div>
+        <div class="pied__marque">
+          <img src="assets/img/logo-lmaa.svg" alt="" class="marque__badge">
+          <div>
+            <strong style="font-family:var(--font-titre);color:var(--creme-clair);text-transform:uppercase;letter-spacing:.04em;display:block;">La Moto Ancienne d'Alsace</strong>
+            <p>Club de passionnés de motos anciennes, à Wittenheim (Haut-Rhin).</p>
+          </div>
+        </div>
+        <h4>Suivez-nous</h4>
+        <p>Nos pages réseaux sociaux seront bientôt indiquées ici.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="association.html">L'association</a></li>
+          <li><a href="sorties-evenements.html">Sorties &amp; événements</a></li>
+          <li><a href="motos.html">Les motos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Le club</h4>
+        <ul>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="adherer-contact.html">Adhérer</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Coordonnées</h4>
+        <p>Wittenheim (68) &middot; Haut-Rhin, Alsace</p>
+        <p><a href="mailto:walterpascal@neuf.fr">walterpascal@neuf.fr</a></p>
+        <p>Contact association : Pascal Walter</p>
+      </div>
+    </div>
+    <div class="pied__bas">
+      <span>&copy; <span data-annee>2026</span> La Moto Ancienne d'Alsace</span>
+      <a href="mentions-legales.html">Mentions légales</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

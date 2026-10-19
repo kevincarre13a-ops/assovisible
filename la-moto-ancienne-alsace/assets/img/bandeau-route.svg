@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" role="img" aria-label="Route et coteaux d'Alsace, motif décoratif">
+  <defs>
+    <linearGradient id="bColline1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#352821"/>
+      <stop offset="100%" stop-color="#241b16"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="500" fill="#1b1512"/>
+  <path d="M0,300 C220,250 420,330 680,280 C960,226 1180,310 1600,250 L1600,500 L0,500 Z" fill="url(#bColline1)"/>
+  <g stroke="#b58a4a" stroke-width="2" opacity="0.45" fill="none">
+    <path d="M60,340 C280,300 460,360 700,320"/>
+    <path d="M900,300 C1100,340 1280,290 1540,320"/>
+  </g>
+  <g opacity="0.85">
+    <ellipse cx="420" cy="430" rx="18" ry="18" fill="#120e0c" stroke="#b58a4a" stroke-width="3"/>
+    <ellipse cx="500" cy="430" rx="18" ry="18" fill="#120e0c" stroke="#b58a4a" stroke-width="3"/>
+    <path d="M420,430 L448,400 L470,400 L500,430" fill="none" stroke="#7c1f2b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M448,400 L458,382 L478,380" fill="none" stroke="#7c1f2b" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

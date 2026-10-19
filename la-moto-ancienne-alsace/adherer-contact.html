@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adhérer / Contact — La Moto Ancienne d'Alsace</title>
+<meta name="description" content="Rejoignez La Moto Ancienne d'Alsace à Wittenheim : infos d'adhésion, formulaire de contact et coordonnées du club de motos anciennes.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="contact">
+
+<header class="entete">
+  <div class="conteneur">
+    <a href="index.html" class="marque">
+      <img src="assets/img/logo-lmaa.svg" alt="La Moto Ancienne d'Alsace" class="marque__badge">
+      <span class="marque__texte">
+        <span class="marque__nom">LMAA</span>
+        <span class="marque__lieu">Wittenheim &middot; Alsace</span>
+      </span>
+    </a>
+    <nav class="nav-principale" aria-label="Navigation principale">
+      <a href="index.html" data-cible="accueil">Accueil</a>
+      <a href="association.html" data-cible="association">L'association</a>
+      <a href="sorties-evenements.html" data-cible="sorties">Sorties &amp; événements</a>
+      <a href="motos.html" data-cible="motos">Les motos</a>
+      <a href="galerie.html" data-cible="galerie">Galerie</a>
+      <a href="actualites.html" data-cible="actualites">Actualités</a>
+      <a href="adherer-contact.html" data-cible="contact" class="bouton">Adhérer / Contact</a>
+    </nav>
+    <button class="bouton-burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="entete-page">
+    <div class="decor-illustration" aria-hidden="true"><img src="assets/img/bandeau-route.svg" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="conteneur">
+      <p class="fil-ariane"><a href="index.html">Accueil</a> / Adhérer &amp; Contact</p>
+      <h1>Adhérer &amp; Contact</h1>
+      <p class="chapo">Curieux, amateur ou passionné confirmé : vous serez toujours bien accueilli au club.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="conteneur grille grille--2" style="align-items:start;">
+
+      <div class="reveal">
+        <span class="etiquette">Rejoindre le club</span>
+        <h2 style="font-size:1.7rem;">Comment adhérer</h2>
+        <p>L'adhésion à La Moto Ancienne d'Alsace est ouverte à tous les passionnés de motos anciennes, qu'ils possèdent déjà une machine ou non. Le plus simple est de nous contacter via le formulaire ci-contre ou par courriel : nous reviendrons vers vous avec les modalités.</p>
+
+        <div class="table-simple" style="margin:24px 0;">
+          <table class="table-simple" style="width:100%;">
+            <tbody>
+              <tr><th>Cotisation annuelle</th><td><span class="note-attente">Montant à confirmer par le bureau</span></td></tr>
+              <tr><th>Ce qu'elle comprend</th><td><span class="note-attente">Détails à compléter (assurance, bulletin, sorties&hellip;)</span></td></tr>
+              <tr><th>Pour adhérer</th><td>Contact direct avec le bureau via le formulaire ou par courriel</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="citation" style="font-size:1.1rem;">« On vous accueille comme on aime être accueilli : avec un café, une poignée de main, et beaucoup de questions sur votre prochaine restauration. »</p>
+      </div>
+
+      <div class="reveal" style="--retard:1">
+        <span class="etiquette">Nous écrire</span>
+        <h2 style="font-size:1.7rem;">Formulaire de contact</h2>
+
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/merci" class="formulaire">
+          <p class="cache-honeypot">
+            <label>Ne pas remplir : <input name="bot-field"></label>
+          </p>
+          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="subject" value="Nouveau message depuis le site — %{formName}">
+
+          <div class="champ--double">
+            <div class="champ">
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="champ">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+
+          <div class="champ">
+            <label for="telephone">Téléphone (facultatif)</label>
+            <input type="tel" id="telephone" name="telephone">
+          </div>
+
+          <div class="champ">
+            <label for="sujet">Sujet</label>
+            <select id="sujet" name="sujet">
+              <option>Demande d'adhésion</option>
+              <option>Question sur une sortie ou un événement</option>
+              <option>Partage de photos pour la galerie</option>
+              <option>Autre question</option>
+            </select>
+          </div>
+
+          <div class="champ">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="bouton">Envoyer le message</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section--creme-clair">
+    <div class="conteneur grille grille--2" style="align-items:stretch;">
+      <div class="reveal">
+        <span class="etiquette">Coordonnées</span>
+        <h2 style="font-size:1.6rem;">Nous trouver</h2>
+        <p><strong>La Moto Ancienne d'Alsace</strong><br>Wittenheim (68270) &middot; Haut-Rhin, Alsace</p>
+        <p>Contact association : Pascal Walter<br><a href="mailto:walterpascal@neuf.fr" style="color:var(--bordeaux);font-weight:600;">walterpascal@neuf.fr</a></p>
+        <p class="note-attente">Adresse précise du lieu de réunion à confirmer</p>
+        <p style="margin-top:20px;">Notre rendez-vous le plus visible reste l'Expo-Bourse annuelle à la Halle au Coton de Wittenheim &mdash; voir le <a href="sorties-evenements.html" style="color:var(--bordeaux);font-weight:600;">calendrier des événements</a>.</p>
+      </div>
+      <div class="reveal" style="--retard:1;min-height:320px;border-radius:var(--rayon);overflow:hidden;border:1px solid rgba(27,21,18,0.15);">
+        <iframe
+          title="Localisation de Wittenheim, Haut-Rhin"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=7.3050%2C47.7994%2C7.3450%2C47.8234&amp;layer=mapnik&amp;marker=47.8114%2C7.3250"
+          style="width:100%;height:100%;min-height:320px;border:0;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <div class="pied__grille">
+      <div>
+        <div class="pied__marque">
+          <img src="assets/img/logo-lmaa.svg" alt="" class="marque__badge">
+          <div>
+            <strong style="font-family:var(--font-titre);color:var(--creme-clair);text-transform:uppercase;letter-spacing:.04em;display:block;">La Moto Ancienne d'Alsace</strong>
+            <p>Club de passionnés de motos anciennes, à Wittenheim (Haut-Rhin).</p>
+          </div>
+        </div>
+        <h4>Suivez-nous</h4>
+        <p>Nos pages réseaux sociaux seront bientôt indiquées ici.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="association.html">L'association</a></li>
+          <li><a href="sorties-evenements.html">Sorties &amp; événements</a></li>
+          <li><a href="motos.html">Les motos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Le club</h4>
+        <ul>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="adherer-contact.html">Adhérer</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Coordonnées</h4>
+        <p>Wittenheim (68) &middot; Haut-Rhin, Alsace</p>
+        <p><a href="mailto:walterpascal@neuf.fr">walterpascal@neuf.fr</a></p>
+        <p>Contact association : Pascal Walter</p>
+      </div>
+    </div>
+    <div class="pied__bas">
+      <span>&copy; <span data-annee>2026</span> La Moto Ancienne d'Alsace</span>
+      <a href="mentions-legales.html">Mentions légales</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
