@@ -17,7 +17,7 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
 KEY = re.compile(r"asso|annuaire|vie-?locale|vie-?associ|guide|sport|culture|loisir|club|bénévol|benevol|animation|solidar", re.I)
 STRONG = re.compile(r"annuaire|asso|vie-?associ|guide-?des|livret", re.I)
 EMAIL = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
-MAXPAGES, MAXPDF = 22, 6
+MAXPAGES, MAXPDF = int(os.environ.get('MAXPAGES', 22)), int(os.environ.get('MAXPDF', 6))
 
 class _R:
     pass
@@ -68,6 +68,26 @@ def page_info(url, r):
         if t.get("datetime"): metas.setdefault("time", []) if False else None
     times = [t.get("datetime") for t in soup.find_all("time") if t.get("datetime")][:10]
     mailtos = set(); ctxs = []
+    def _cf(h):
+        try:
+            k = int(h[:2], 16); return "".join(chr(int(h[i:i + 2], 16) ^ k) for i in range(2, len(h), 2))
+        except Exception:
+            return ""
+    for el in soup.find_all(attrs={"data-cfemail": True}):
+        em = _cf(el["data-cfemail"])
+        if "@" in em:
+            mailtos.add(em)
+            node = el; ctx = ""
+            for _ in range(6):
+                node = node.parent
+                if node is None: break
+                t = node.get_text(" | ", strip=True)
+                if len(t) >= 40: ctx = t[:700]; break
+            ctxs.append({"email": em, "ctx": ctx})
+    for a in soup.find_all("a", href=True):
+        if "/cdn-cgi/l/email-protection#" in a["href"]:
+            em = _cf(a["href"].split("#", 1)[1])
+            if "@" in em: mailtos.add(em); ctxs.append({"email": em, "ctx": a.parent.get_text(" | ", strip=True)[:700] if a.parent else ""})
     title = (soup.title.get_text(" ", strip=True) if soup.title else "")
     h1 = " | ".join(h.get_text(" ", strip=True) for h in soup.find_all(["h1"])[:2])
     metas["_title"] = title; metas["_h1"] = h1
@@ -95,12 +115,13 @@ def pdf_text(content):
         f.write(content); p = f.name
     try:
         txt = subprocess.run(["pdftotext", "-layout", p, "-"], capture_output=True, timeout=90).stdout.decode("utf8", "ignore")
+        raw = subprocess.run(["pdftotext", p, "-"], capture_output=True, timeout=90).stdout.decode("utf8", "ignore")
         info = subprocess.run(["pdfinfo", p], capture_output=True, timeout=30).stdout.decode("utf8", "ignore")
     except Exception as e:
-        txt, info = "", str(e)
+        txt, raw, info = "", "", str(e)
     os.unlink(p)
     m = re.search(r"CreationDate:\s*(.*)", info); mm = re.search(r"ModDate:\s*(.*)", info)
-    return txt, {"CreationDate": m.group(1) if m else None, "ModDate": mm.group(1) if mm else None}
+    return (txt, raw), {"CreationDate": m.group(1) if m else None, "ModDate": mm.group(1) if mm else None}
 
 def score(url, label):
     s = 0
@@ -150,16 +171,16 @@ def crawl(code, entries):
                 if npdf >= MAXPDF: continue
                 rr = get(u, timeout=40)
                 if rr.status_code >= 400 or len(rr.content) > 25_000_000: continue
-                txt, info = pdf_text(rr.content); npdf += 1
+                (txt, rawtxt), info = pdf_text(rr.content); npdf += 1
                 res["pages"].append({"url": u, "kind": "pdf", "status": rr.status_code, "last_modified": rr.headers.get("Last-Modified"),
-                                     "pdfinfo": info, "mailtos": [], "text": txt[:300000]})
+                                     "pdfinfo": info, "mailtos": [], "text": txt[:300000], "text_raw": rawtxt[:300000]})
             else:
                 rr = get(u)
                 if rr.status_code >= 400 or "html" not in rr.headers.get("Content-Type", "html"): continue
                 t, mt, mm, tm, lk = page_info(rr.url, rr)
                 res["pages"].append({"url": rr.url, "kind": "html", "status": rr.status_code, "last_modified": rr.headers.get("Last-Modified"),
                                      "meta_dates": mm, "times": tm, "mailtos": mt, "text": t[:60000]})
-                if depth < 3: push(lk, depth + 1)
+                if depth < 4: push(lk, depth + 1)
             n += 1
         except Exception as e:
             res["notes"].append("err %s: %s" % (u[:80], type(e).__name__))

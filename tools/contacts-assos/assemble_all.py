@@ -10,26 +10,44 @@ S, OUT = sys.argv[1], sys.argv[2]
 PRIO = {"Sport": 0, "Loisirs-Culture": 1, "Solidarité": 2, "Autre": 3}
 HDR = ["nom_association", "ville", "email", "telephone", "source", "date_source", "categorie", "type_de_date"]
 
-# ---- fusion décisions agents + données source --------------------------------
-rows = []
-missing = 0
+# ---- fusion vagues 1..N ------------------------------------------------------
+WAVES = [w for w in os.environ.get("WAVES", "w2").split(",") if w]
+recs = {}   # (commune,email) -> record source
+dec = {}    # (commune,email) -> (wave, decision)
+def better(old, new):
+    if old is None: return True
+    if new.get("keep") and new.get("conf") == "high": return True
+    if not new.get("keep") and "indétermin" not in (new.get("reason") or "").lower(): return True
+    return False
 for z in range(1, 6):
     full = {r["i"]: r for r in json.load(open(os.path.join(S, "chunks", f"zone{z}_full.json")))}
-    dec = {}
     for fn in glob.glob(os.path.join(S, "chunks", f"out_z{z}_*.jsonl")):
         for l in open(fn):
             l = l.strip()
             if not l: continue
-            try: d = json.loads(l)
-            except Exception: continue
-            dec[int(d["i"])] = d
-    for i, r in full.items():
-        d = dec.get(i)
-        if not d:
-            missing += 1; continue
-        rows.append({"zone": z, "i": i, "commune": r["commune"], "email": r["email"], "url": r["url"], "date": r["date"], "basis": r["basis"],
-                     "kind": r["kind"], "keep": bool(d.get("keep")), "name": (d.get("name") or "").strip(), "cat": d.get("cat") or "",
-                     "phone": (d.get("phone") or "").strip(), "conf": d.get("conf") or "low", "reason": d.get("reason") or ""})
+            d = json.loads(l); r = full[int(d["i"])]; k = (r["commune"], r["email"])
+            recs[k] = {"commune": r["commune"], "email": r["email"], "url": r["url"], "date": r["date"], "basis": r["basis"], "kind": r["kind"], "zone": z}
+            dec[k] = (1, d)
+missing = 0
+for w in WAVES:
+    full = {r["i"]: r for r in json.load(open(os.path.join(S, "chunks", f"{w}_full.json")))}
+    seen = set()
+    for fn in glob.glob(os.path.join(S, "chunks", f"out_{w}_*.jsonl")):
+        for l in open(fn):
+            l = l.strip()
+            if not l: continue
+            d = json.loads(l); r = full[int(d["i"])]; k = (r["commune"], r["email"]); seen.add(int(d["i"]))
+            old = recs.get(k)
+            if old is None or (r["date"] or "") >= (old["date"] or ""):
+                recs[k] = {"commune": r["commune"], "email": r["email"], "url": r["url"], "date": r["date"], "basis": r["basis"], "kind": r["kind"], "zone": r.get("zone")}
+            if k not in dec or better(dec[k][1], d): dec[k] = (int(w[1:]), d)
+    missing += len(set(full) - seen)
+rows = []
+for k, (wv, d) in dec.items():
+    r = recs[k]
+    rows.append({"zone": r["zone"], "i": 0, "commune": r["commune"], "email": r["email"], "url": r["url"], "date": r["date"], "basis": r["basis"],
+                 "kind": r["kind"], "keep": bool(d.get("keep")), "name": (d.get("name") or "").strip(), "cat": d.get("cat") or "",
+                 "phone": (d.get("phone") or "").strip(), "conf": d.get("conf") or "low", "reason": d.get("reason") or "", "wave": wv})
 
 def phone_ok(p):
     d = re.sub(r"\D", "", p)
@@ -84,7 +102,7 @@ sheet(ws2, HDR, [rowof(r) for r in autres], [44, 24, 36, 16, 70, 12, 16, 38])
 ws3 = wb.create_sheet("A verifier (nom incertain)")
 sheet(ws3, HDR, [rowof(r) for r in verif], [44, 24, 36, 16, 70, 12, 16, 38])
 
-st = json.load(open(os.path.join(S, "communes_status.json")))
+st = json.load(open(os.path.join(S, "communes_status_w2.json")))
 kept_by_commune = Counter(r["commune"] for r in main)
 ws4 = wb.create_sheet("Communes")
 crows = []
@@ -95,7 +113,7 @@ sheet(ws4, ["commune", "code_insee", "zone", "site_mairie", "statut_collecte", "
 ws5 = wb.create_sheet("Exclus (curation)")
 sheet(ws5, ["ville", "email", "nom_detecte", "motif", "source"], [[r["commune"], r["email"], r["name"], r["reason"], r["url"]] for r in sorted(excl, key=lambda r: (r["commune"], r["email"]))], [24, 36, 40, 50, 70])
 
-pre = json.load(open(os.path.join(S, "rejected_prefilter.json")))
+pre = json.load(open(os.path.join(S, "rejected_prefilter_w2.json")))
 pre_c = Counter(r["reject"] for r in pre)
 ws6 = wb.create_sheet("Synthese", 0)
 ws6.append(["Base de contacts associations loi 1901 - Essonne (91)"]); ws6["A1"].font = Font(bold=True, size=14)
@@ -109,7 +127,7 @@ lines = [("Contacts retenus (feuille Contacts)", len(main)), ("  dont Sport", ca
          ("Exclus avant curation: date de source introuvable", pre_c["date_source introuvable"]),
          ("Exclus avant curation: email du domaine de la mairie", pre_c["email du domaine de la mairie (service communal)"]),
          ("Exclus avant curation: domaine sans MX/A", pre_c["domaine sans MX/A (email non délivrable)"]),
-         ("Lignes non traitées par la curation", missing)]
+         ("Lignes non traitées par la curation", missing), ("Contacts issus de la vague 1", sum(1 for r in main if r["wave"]==1)), ("Contacts issus des vagues suivantes", sum(1 for r in main if r["wave"]>1))]
 for a, b in lines: ws6.append([a, b])
 ws6.append([])
 cs = Counter(v["statut"].split(":")[0].split(" (")[0] for v in st.values())
