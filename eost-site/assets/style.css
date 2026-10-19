@@ -11,7 +11,7 @@ p{margin:0 0 1em}.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
 .site-header.solid{background:rgba(8,42,68,.96);backdrop-filter:blur(8px);box-shadow:0 2px 18px rgba(0,0,0,.25);padding:8px 0}
 .site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
-.brand svg{width:44px;height:44px;flex:none}.brand b{font-family:var(--serif);font-size:1.5rem;letter-spacing:.06em;display:block;line-height:1}
+.brand img{height:46px;width:auto;flex:none}.brand b{font-family:var(--serif);font-size:1.5rem;letter-spacing:.06em;display:block;line-height:1}
 .brand small{font-size:.68rem;letter-spacing:.04em;opacity:.85;display:block;max-width:210px;line-height:1.25}
 nav ul{list-style:none;display:flex;gap:2px;margin:0;padding:0}
 nav a{color:#fff;text-decoration:none;font-size:.88rem;padding:8px 11px;border-radius:30px;display:block;position:relative;white-space:nowrap}
