@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adhérer / Contact — Baie de Douarnenez Environnement</title>
+<meta name="description" content="Adhérez à Baie de Douarnenez Environnement ou contactez-nous : formulaire de contact, coordonnées de Jean Hascoët, président.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2248%22 fill=%22%230f6184%22/></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M2 16c1.5-2 3.5-2 5 0s3.5 2 5 0 3.5-2 5 0 3.5 2 5 0" stroke-linecap="round"/><path d="M12 3v9" stroke-linecap="round"/></svg></span>
+      <span>Baie de Douarnenez<small>Environnement</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="association.html">L'association</a>
+      <a href="combats.html">Nos combats</a>
+      <a href="agir.html">Agir avec nous</a>
+      <a href="agenda.html">Agenda</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="contact.html" class="btn btn-coral btn-sm nav-cta active">Adhérer</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
+    <a href="index.html">Accueil</a>
+    <a href="association.html">L'association</a>
+    <a href="combats.html">Nos combats &amp; dossiers</a>
+    <a href="agir.html">Agir avec nous</a>
+    <a href="agenda.html">Agenda</a>
+    <a href="galerie.html">Galerie</a>
+    <a href="actualites.html">Actualités &amp; presse</a>
+    <a href="contact.html" class="active">Adhérer / Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="page-hero compact">
+    <div class="hero-dots"></div>
+    <div class="container">
+      <span class="eyebrow">Adhérer / Contact</span>
+      <h1>Bienvenue — on est toujours heureux d'accueillir une nouvelle voix</h1>
+      <p class="lede">Que vous souhaitiez adhérer, poser une question ou signaler quelque chose sur le terrain, Jean Hascoët et l'équipe de bénévoles vous répondent avec plaisir.</p>
+    </div>
+    <div class="wave-divider">
+      <svg viewBox="0 0 1600 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="wave-front wave-anim-1" d="M0 80 C 200 40, 400 110, 600 80 C 800 50, 1000 110, 1200 80 C 1400 50, 1600 110, 1800 80 L1800 120 L0 120 Z" transform="translate(-200,0)"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ADHESION -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Adhésion</span>
+        <h2>Devenir adhérent·e</h2>
+        <p>Votre adhésion soutient directement nos actions de veille, nos avis sur les enquêtes publiques et nos mobilisations pour la baie.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card reveal">
+          <h3>Montant de la cotisation</h3>
+          <div class="placeholder-note" style="margin-top:12px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01" stroke-linecap="round"/></svg>
+            <span>Montant de la cotisation annuelle à préciser par l'association — texte modifiable ici dès que l'information est confirmée.</span>
+          </div>
+        </div>
+        <div class="card reveal">
+          <h3>Comment adhérer</h3>
+          <p>Remplissez le formulaire ci-dessous en précisant votre souhait d'adhésion, ou contactez directement Jean Hascoët par téléphone ou e-mail : un bulletin d'adhésion vous sera transmis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULAIRE + COORDONNEES -->
+  <section class="section bg-sand">
+    <div class="container two-col" style="align-items:flex-start;">
+      <div class="reveal">
+        <div class="section-head" style="margin-bottom:28px;">
+          <span class="eyebrow" style="color:var(--marine);">Formulaire</span>
+          <h2>Écrivez-nous</h2>
+        </div>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/merci.html" class="card">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hp-field"><label>Ne pas remplir si vous êtes humain : <input name="bot-field"></label></p>
+          <div class="form-grid">
+            <div>
+              <label for="name">Nom complet *</label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+            <div>
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div>
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </div>
+            <div>
+              <label for="subject">Motif de votre message *</label>
+              <select id="subject" name="subject" required>
+                <option value="">Choisir...</option>
+                <option value="Adhésion">Adhésion</option>
+                <option value="Bénévolat">Devenir bénévole</option>
+                <option value="Signaler une pollution">Signaler une pollution</option>
+                <option value="Presse">Presse / médias</option>
+                <option value="Autre">Autre question</option>
+              </select>
+            </div>
+            <div class="full">
+              <label for="message">Votre message *</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="full checkbox-row">
+              <input type="checkbox" id="newsletter" name="newsletter" value="oui">
+              <label for="newsletter">Je souhaite être informé·e des actualités et des événements de l'association</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-coral" style="margin-top:22px;">Envoyer le message</button>
+        </form>
+      </div>
+
+      <div class="reveal">
+        <div class="section-head" style="margin-bottom:28px;">
+          <span class="eyebrow" style="color:var(--marine);">Coordonnées</span>
+          <h2>Nous contacter directement</h2>
+        </div>
+        <div class="card" style="margin-bottom:20px;">
+          <div class="person-avatar" style="margin:0 0 14px;">JH</div>
+          <h3>Jean Hascoët</h3>
+          <p style="margin-bottom:6px; color:var(--marine); font-weight:600;">Président</p>
+          <p>📞 <a href="tel:+33677625803">06 77 62 58 03</a></p>
+          <p>✉️ <a href="mailto:jean-hascoet@wanadoo.fr">jean-hascoet@wanadoo.fr</a></p>
+        </div>
+        <div class="card">
+          <h3>Zone d'intervention</h3>
+          <p>Baie de Douarnenez, Finistère — communes de Douarnenez, Telgruc-sur-Mer, Plonévez-Porzay, Locronan, Crozon et leurs environs.</p>
+          <a href="https://www.facebook.com/p/Baie-de-DouarneneZ-Environnement-100064359172478/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" style="margin-top:10px;">Suivre sur Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M2 16c1.5-2 3.5-2 5 0s3.5 2 5 0 3.5-2 5 0 3.5 2 5 0" stroke-linecap="round"/><path d="M12 3v9" stroke-linecap="round"/></svg></span>
+          <span>Baie de Douarnenez<small>Environnement</small></span>
+        </a>
+        <p>Association loi 1901 fondée en 2010, engagée pour la protection de l'environnement et du littoral de la baie de Douarnenez.</p>
+        <div class="social-row">
+          <a href="https://www.facebook.com/p/Baie-de-DouarneneZ-Environnement-100064359172478/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3H13.5V9.1c0-.9.3-1.6 1.6-1.6h1.4V4.8c-.3 0-1.2-.1-2.2-.1-2.3 0-3.8 1.4-3.8 3.9V11H8v3h2.5v7h3z"/></svg></a>
+          <a href="mailto:jean-hascoet@wanadoo.fr" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6" stroke-linecap="round"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="association.html">L'association</a></li>
+          <li><a href="combats.html">Nos combats &amp; dossiers</a></li>
+          <li><a href="agir.html">Agir avec nous</a></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="actualites.html">Actualités &amp; presse</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Coordonnées</h4>
+        <ul>
+          <li>Jean Hascoët, président</li>
+          <li><a href="mailto:jean-hascoet@wanadoo.fr">jean-hascoet@wanadoo.fr</a></li>
+          <li><a href="tel:+33677625803">06 77 62 58 03</a></li>
+          <li>Baie de Douarnenez, Finistère</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Association</h4>
+        <ul>
+          <li><a href="contact.html">Adhérer</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year>2026</span> Baie de Douarnenez Environnement — Association loi 1901</span>
+      <a href="mentions-legales.html">Mentions légales</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
