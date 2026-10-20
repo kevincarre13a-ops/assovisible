@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tetraktys-musique-de-chambre.netlify.app/sitemap.xml
