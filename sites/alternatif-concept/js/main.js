@@ -38,7 +38,7 @@
     burger.addEventListener('click', function () { setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
     nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
     doc.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
-    window.addEventListener('resize', function () { if (window.innerWidth > 1060) setMenu(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 1100) setMenu(false); });
   }
 
   /* ---- apparition au défilement ---- */
