@@ -1,0 +1,127 @@
+file: licence-contact.html
+nav: contact
+title: Licence / Contact — rejoindre le club, nous écrire
+desc: Prendre sa licence au Carreau Thouarsais, club de pétanque de Thouars : infos d'adhésion, formulaire de contact, coordonnées et localisation des terrains. Venez essayer, débutants bienvenus !
+body: page
+---
+<section class="page-hero">
+  <div class="wrap grid">
+    <div>
+      <p class="crumbs"><a href="index.html">Accueil</a> / Licence / Contact</p>
+      <p class="eyebrow">Rejoindre le club</p>
+      <h1>Licence / Contact</h1>
+      <p class="lead">Une question, une envie d'essayer, une licence à prendre&nbsp;? Écrivez-nous ou appelez-nous, on vous répond avec plaisir.</p>
+    </div>
+    <figure class="polaroid">
+      <img src="img/galerie/sortie-12.webp" alt="Des licenciés du club installés à l'ombre des arbres" width="1000" height="667">
+      <figcaption>Bienvenue chez nous&nbsp;!</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="wrap">
+    <div class="welcome reveal"><span class="boule" aria-hidden="true"></span><div><strong>Venez essayer&nbsp;— débutants bienvenus&nbsp;!</strong><br>Dites-nous simplement que vous voulez découvrir la pétanque&nbsp;: nous vous accueillons.</div></div>
+  </div>
+</section>
+
+<section class="section" id="licence" aria-labelledby="t-licence">
+  <div class="wrap split top">
+    <div class="reveal left">
+      <p class="eyebrow">Licence &amp; adhésion</p>
+      <h2 id="t-licence">Prendre sa licence</h2>
+      <p class="lead">La licence de la Fédération Française de Pétanque et de Jeu Provençal permet de jouer en concours et en championnat avec le club.</p>
+      <ol class="steps">
+        <li><div><b>Venez essayer</b><span>Rencontrez le club et testez la pétanque, sans engagement.</span></div></li>
+        <li><div><b>Demandez votre licence</b><span>Contactez-nous&nbsp;: le club vous remet le dossier à remplir pour la saison en cours.</span></div></li>
+        <li><div><b>Jouez toute l'année</b><span>Entraînements, concours, école de pétanque, sorties du club.</span></div></li>
+      </ol>
+    </div>
+    <div class="reveal right">
+      <div class="card card-pad">
+        <h3 style="text-transform:uppercase">Infos pratiques</h3>
+        <ul style="margin:0 0 1rem">
+          <li><b>Tarif de la licence&nbsp;:</b> <span class="wait-tag">à compléter</span></li>
+          <li><b>Pièces à fournir&nbsp;:</b> <span class="wait-tag">à compléter</span></li>
+          <li><b>Mineurs&nbsp;:</b> le club dispose du questionnaire de santé «&nbsp;QS-Sport&nbsp;» pour les mineurs, à demander lors de l'inscription.</li>
+          <li><b>Vous venez d'un autre club&nbsp;?</b> Une mutation est possible&nbsp;: contactez-nous.</li>
+          <li><b>Sport adapté&nbsp;:</b> licence FFSA, avec l'ADAPEI 79&nbsp;: <a href="licence-contact.html?sujet=handi#formulaire">nous contacter</a>.</li>
+        </ul>
+        <p class="note wait" style="margin:0">Les tarifs et pièces à fournir seront précisés par le club avant l'ouverture du site.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-paper" id="formulaire" aria-labelledby="t-form">
+  <div class="wrap split top">
+    <div class="reveal left">
+      <p class="eyebrow">Nous écrire</p>
+      <h2 id="t-form">Contactez le club</h2>
+      <p class="lead">Remplissez ce formulaire&nbsp;: votre message arrive directement au club, qui vous répond rapidement.</p>
+      <ul class="contact-list">
+        <li><span class="ico">{{icon:phone}}</span><div><b>Téléphone</b><a class="big" href="tel:+33771626468">07 71 62 64 68</a></div></li>
+        <li><span class="ico">{{icon:pin}}</span><div><b>Adresse du club</b>4 rue Jules Renard<br>79100 Thouars</div></li>
+        <li><span class="ico">{{icon:clock}}</span><div><b>Meilleurs moments pour nous joindre</b><span class="wait-tag">à compléter</span></div></li>
+        <li><span class="ico">{{icon:users}}</span><div><b>Réseaux sociaux</b><a href="{{FACEBOOK}}" target="_blank" rel="noopener">Facebook&nbsp;: Carreau Thouarsais Petanque<span class="sr"> (nouvel onglet)</span></a><br><a href="{{TWITTER}}" target="_blank" rel="noopener">X (Twitter)&nbsp;: @Carro_Thouars<span class="sr"> (nouvel onglet)</span></a></div></li>
+      </ul>
+    </div>
+    <div class="reveal right">
+      <form class="form" id="contact-form" name="contact" method="POST" action="merci.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hp"><label>Ne pas remplir ce champ <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="row2">
+          <div><label for="f-prenom">Prénom</label><input id="f-prenom" name="prenom" type="text" autocomplete="given-name" required></div>
+          <div><label for="f-nom">Nom</label><input id="f-nom" name="nom" type="text" autocomplete="family-name" required></div>
+        </div>
+        <div class="row2">
+          <div><label for="f-email">E-mail</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          <div><label for="f-tel">Téléphone <span class="opt">(facultatif)</span></label><input id="f-tel" name="telephone" type="tel" autocomplete="tel"></div>
+        </div>
+        <div>
+          <label for="f-sujet">Votre demande</label>
+          <select id="f-sujet" name="sujet" required>
+            <option data-key="essai" value="Venir essayer la pétanque">Venir essayer la pétanque</option>
+            <option data-key="licence" value="Licence et adhésion">Licence et adhésion</option>
+            <option data-key="ecole" value="École de pétanque (enfants)">École de pétanque (enfants)</option>
+            <option data-key="handi" value="Handi-Pétanque et sport adapté">Handi-Pétanque et sport adapté</option>
+            <option data-key="concours" value="Inscription à un concours">Inscription à un concours</option>
+            <option data-key="partenaire" value="Devenir partenaire">Devenir partenaire</option>
+            <option data-key="autre" value="Autre question">Autre question</option>
+          </select>
+        </div>
+        <div><label for="f-msg">Votre message</label><textarea id="f-msg" name="message" required></textarea></div>
+        <div class="check"><input id="f-rgpd" name="consentement" type="checkbox" required><label for="f-rgpd">J'accepte que le club utilise ces informations pour me répondre. Elles ne sont pas transmises à des tiers (voir les <a href="mentions-legales.html#donnees">mentions légales</a>).</label></div>
+        <button class="btn btn-red" type="submit">Envoyer mon message {{icon:arrow}}</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="t-plan">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Plan &amp; accès</p>
+      <h2 id="t-plan">Où nous trouver&nbsp;?</h2>
+      <p class="lead">Le club joue à Thouars, sur deux terrains selon la saison.</p>
+    </div>
+    <div class="grid g2">
+      <div class="reveal left">
+        <h3>Terrains d'hiver — Espace Club</h3>
+        <p>Rue Denfert Rochereau, 79100 Thouars</p>
+        <div class="mapbox">
+          <div data-hide><p>La carte se charge à la demande, pour respecter votre vie privée.</p><button type="button" class="btn btn-sm" data-map="https://maps.google.com/maps?q=Rue%20Denfert%20Rochereau%2C%2079100%20Thouars&amp;output=embed&amp;hl=fr" data-title="Plan : terrains d'hiver, rue Denfert Rochereau à Thouars">Afficher la carte</button></div>
+        </div>
+        <p style="margin-top:.8rem"><a href="https://www.openstreetmap.org/search?query=Rue%20Denfert%20Rochereau%2C%2079100%20Thouars" target="_blank" rel="noopener">Ouvrir dans OpenStreetMap<span class="sr"> (nouvel onglet)</span></a></p>
+      </div>
+      <div class="reveal right">
+        <h3>Terrains d'été — Stade Philippe Morin</h3>
+        <p>Stade Philippe Morin, Thouars</p>
+        <div class="mapbox">
+          <div data-hide><p>La carte se charge à la demande, pour respecter votre vie privée.</p><button type="button" class="btn btn-sm" data-map="https://maps.google.com/maps?q=Stade%20Philippe%20Morin%2C%20Thouars&amp;output=embed&amp;hl=fr" data-title="Plan : terrains d'été, stade Philippe Morin à Thouars">Afficher la carte</button></div>
+        </div>
+        <p style="margin-top:.8rem"><a href="https://www.openstreetmap.org/search?query=Stade%20Philippe%20Morin%20Thouars" target="_blank" rel="noopener">Ouvrir dans OpenStreetMap<span class="sr"> (nouvel onglet)</span></a></p>
+      </div>
+    </div>
+  </div>
+</section>

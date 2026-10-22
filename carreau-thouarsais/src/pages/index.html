@@ -1,0 +1,148 @@
+file: index.html
+nav: accueil
+title: Le Carreau Thouarsais — Club de pétanque à Thouars
+desc: Le Carreau Thouarsais, club de pétanque de Thouars (Deux-Sèvres) depuis 2001 : concours, école de pétanque, Handi-Pétanque. Venez essayer, débutants bienvenus !
+events: yes
+scene: yes
+body: home
+---
+<section class="hero" id="hero" aria-labelledby="titre-accueil">
+  <picture class="hero-bg">
+    <source media="(max-width: 720px)" srcset="img/hero-mobile.webp">
+    <img src="img/hero.webp" alt="" width="1600" height="1067" fetchpriority="high">
+  </picture>
+  <div class="hero-shade"></div>
+  <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="wrap hero-inner">
+    <p class="eyebrow fade-in">Club de pétanque · Thouars, Deux-Sèvres</p>
+    <h1 id="titre-accueil"><span class="word"><span>Le Carreau</span></span> <span class="word accent"><span>Thouarsais</span></span></h1>
+    <p class="script fade-in">Un club, une famille, une passion&nbsp;!</p>
+    <p class="lead fade-in">La pétanque à Thouars depuis 2001&nbsp;: des concours toute l'année, une école de pétanque et de la bonne humeur pour tous les âges.</p>
+    <div class="btns fade-in">
+      <a class="btn btn-gold" href="concours-calendrier.html">Voir les concours {{icon:arrow}}</a>
+      <a class="btn btn-ghost" href="jouer-avec-nous.html">Venez essayer&nbsp;— débutants bienvenus</a>
+    </div>
+  </div>
+  <p class="hero-hint" aria-hidden="true">Touchez pour lancer une boule</p>
+</section>
+
+<section class="next" aria-label="Prochain rendez-vous">
+  <div class="wrap" id="next-event">
+    <noscript><div class="next-card"><div class="next-body"><h2>Prochains concours</h2><p>Retrouvez toutes les dates sur la page <a href="concours-calendrier.html">Concours &amp; calendrier</a>.</p></div></div></noscript>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="bg-navy" style="margin-inline:0;padding:clamp(2.2rem,5vw,4rem);overflow:hidden;position:relative">
+      <img class="watermark" src="img/logo.webp" alt="" width="520" height="520" loading="lazy">
+      <div class="head reveal" style="position:relative">
+        <p class="eyebrow">Le club en chiffres</p>
+        <h2>25 ans de passion, de partage et de convivialité</h2>
+      </div>
+      <div class="stats" style="position:relative">
+        <div class="stat reveal"><span class="n" data-count="59">59</span><span class="l">Licenciés</span><small>de 7 à 77 ans et plus, toutes catégories</small></div>
+        <div class="stat reveal"><span class="n" data-count="25">25</span><span class="l">Ans d'histoire</span><small>de passion et d'engagement (2001–2026)</small></div>
+        <div class="stat reveal"><span class="n" data-count="80" data-prefix="+&nbsp;">+&nbsp;80</span><span class="l">Titres</span><small>départementaux et régionaux</small></div>
+        <div class="stat reveal"><span class="n" data-count="10">10</span><span class="l">Compétitions</span><small>organisées chaque année</small></div>
+      </div>
+      <div class="badge-line reveal" style="position:relative;margin-top:1.8rem">
+        <span class="pill">{{icon:school}} + de 15 jeunes formés chaque saison</span>
+        <span class="pill">{{icon:access}} + de 20 licenciés en situation de handicap</span>
+        <span class="pill">{{icon:pin}} 2 boulodromes couverts et extérieurs à Thouars</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight" aria-labelledby="t-carreau">
+  <div class="wrap split">
+    <div class="reveal left">
+      <p class="eyebrow">Pourquoi « Le Carreau » ?</p>
+      <h2 id="t-carreau">Le plus beau geste de la pétanque</h2>
+      <p class="lead">Faire un <b>carreau</b>, c'est lancer sa boule si juste qu'elle frappe celle de l'adversaire, la chasse… et prend exactement sa place. Un geste d'adresse, de sang-froid et de panache.</p>
+      <p>Le carreau, c'est aussi le nom que porte notre club. À vous d'essayer : touchez la boule adverse, juste devant le cochonnet.</p>
+    </div>
+    <div class="reveal right">
+      <div class="demo">
+        <canvas id="demo-canvas" role="img" aria-label="Démonstration animée d'un carreau : une boule lancée prend la place d'une autre boule près du cochonnet"></canvas>
+        <span class="carreau-tag" aria-hidden="true">Carreau&nbsp;!</span>
+        <div class="demo-bar">
+          <span id="demo-msg" class="demo-msg" aria-live="polite">Visez la boule adverse, juste devant le cochonnet.</span>
+          <button type="button" class="btn btn-gold btn-sm" id="demo-shoot">Lancer la boule</button>
+          <button type="button" class="btn btn-light btn-sm" id="demo-replay" hidden>Rejouer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-paper" aria-labelledby="t-decouvrir">
+  <div class="wrap">
+    <div class="head center reveal">
+      <p class="eyebrow">Découvrir le club</p>
+      <h2 id="t-decouvrir">Tout savoir sur le Carreau</h2>
+      <p class="lead">Une section pour chaque envie&nbsp;: rencontrer le club, venir jouer, suivre les concours, revivre les bons moments.</p>
+    </div>
+    <div class="grid g3">
+      <article class="card lift reveal"><a class="tile" href="le-club.html"><div class="tile-img"><span class="tile-num">01</span><img src="img/galerie/sortie-01.webp" alt="" loading="lazy" width="600" height="400"></div><div class="tile-body"><h3>Le club</h3><p>Notre histoire depuis 2001, nos valeurs et les bénévoles du bureau.</p><span class="btn btn-sm btn-line">Découvrir</span></div></a></article>
+      <article class="card lift reveal"><a class="tile" href="jouer-avec-nous.html"><div class="tile-img"><span class="tile-num">02</span><img src="img/galerie/ecole-3.webp" alt="" loading="lazy" width="600" height="400" style="object-position:50% 40%"></div><div class="tile-body"><h3>Jouer avec nous</h3><p>Entraînements, terrains, école de pétanque et découverte pour les débutants.</p><span class="btn btn-sm btn-line">Venir jouer</span></div></a></article>
+      <article class="card lift reveal"><a class="tile" href="concours-calendrier.html"><div class="tile-img"><span class="tile-num">03</span><img src="img/events/provencal.webp" alt="" loading="lazy" width="600" height="400" style="object-position:50% 40%"></div><div class="tile-body"><h3>Concours &amp; calendrier</h3><p>Doublettes, triplettes, Téléthon, Coupe de Noël&nbsp;: toutes les dates en un coup d'œil.</p><span class="btn btn-sm btn-line">Voir le calendrier</span></div></a></article>
+      <article class="card lift reveal"><a class="tile" href="resultats-palmares.html"><div class="tile-img"><span class="tile-num">04</span><img src="img/25-ans-affiche.webp" alt="" loading="lazy" width="600" height="400" style="object-position:50% 62%"></div><div class="tile-body"><h3>Résultats &amp; palmarès</h3><p>Plus de 80 titres départementaux et régionaux&nbsp;: le palmarès du club.</p><span class="btn btn-sm btn-line">Voir le palmarès</span></div></a></article>
+      <article class="card lift reveal"><a class="tile" href="galerie.html"><div class="tile-img"><span class="tile-num">05</span><img src="img/galerie/sortie-02.webp" alt="" loading="lazy" width="600" height="400"></div><div class="tile-body"><h3>Galerie</h3><p>Sorties, école de pétanque, anniversaire des 25 ans&nbsp;: les photos du club.</p><span class="btn btn-sm btn-line">Voir les photos</span></div></a></article>
+      <article class="card lift reveal"><a class="tile" href="actualites-partenaires.html"><div class="tile-img"><span class="tile-num">06</span><img src="img/label-handi-petanque.webp" alt="" loading="lazy" width="600" height="400" style="object-fit:contain;background:var(--navy-3)"></div><div class="tile-body"><h3>Actualités &amp; partenaires</h3><p>Le label Handi-Pétanque 2026-2027, les nouvelles du club et ceux qui nous soutiennent.</p><span class="btn btn-sm btn-line">Lire les actus</span></div></a></article>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight" aria-label="Nos partenaires">
+  <div class="wrap">
+    <div class="head center reveal"><p class="eyebrow">Ils nous soutiennent</p><h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem)">Nos partenaires</h2></div>
+  </div>
+  <div class="marquee reveal" aria-label="Logos de partenaires du club">
+    <div class="marquee-track">
+      <div class="logo-chip"><img src="img/partners/credit-mutuel.webp" alt="Crédit Mutuel" loading="lazy"></div>
+      <div class="logo-chip"><img src="img/partners/intersport.webp" alt="Intersport Thouars" loading="lazy"></div>
+      <div class="logo-chip"><img src="img/partners/leclerc.webp" alt="E.Leclerc Thouars" loading="lazy"></div>
+      <div class="logo-chip"><img src="img/partners/patapain.webp" alt="Patapain" loading="lazy"></div>
+      <div class="logo-chip"><img src="img/partners/minute-blonde.webp" alt="La Minute Blonde" loading="lazy"></div>
+      <div class="logo-chip"><img src="img/partners/anett.webp" alt="Anett" loading="lazy"></div>
+      <div class="logo-chip"><img src="img/partners/ville-thouars.webp" alt="Ville de Thouars" loading="lazy"></div>
+      <div class="logo-chip"><img src="img/partners/deux-sevres.webp" alt="Département des Deux-Sèvres" loading="lazy"></div>
+      <div class="logo-chip"><img src="img/partners/puy-du-fou.webp" alt="Puy du Fou" loading="lazy"></div>
+      <div class="logo-chip"><img src="img/partners/zoodyssee.webp" alt="Zoodyssée" loading="lazy"></div>
+      <div class="logo-chip" aria-hidden="true"><img src="img/partners/credit-mutuel.webp" alt="" loading="lazy"></div>
+      <div class="logo-chip" aria-hidden="true"><img src="img/partners/intersport.webp" alt="" loading="lazy"></div>
+      <div class="logo-chip" aria-hidden="true"><img src="img/partners/leclerc.webp" alt="" loading="lazy"></div>
+      <div class="logo-chip" aria-hidden="true"><img src="img/partners/patapain.webp" alt="" loading="lazy"></div>
+      <div class="logo-chip" aria-hidden="true"><img src="img/partners/minute-blonde.webp" alt="" loading="lazy"></div>
+      <div class="logo-chip" aria-hidden="true"><img src="img/partners/anett.webp" alt="" loading="lazy"></div>
+      <div class="logo-chip" aria-hidden="true"><img src="img/partners/ville-thouars.webp" alt="" loading="lazy"></div>
+      <div class="logo-chip" aria-hidden="true"><img src="img/partners/deux-sevres.webp" alt="" loading="lazy"></div>
+      <div class="logo-chip" aria-hidden="true"><img src="img/partners/puy-du-fou.webp" alt="" loading="lazy"></div>
+      <div class="logo-chip" aria-hidden="true"><img src="img/partners/zoodyssee.webp" alt="" loading="lazy"></div>
+    </div>
+  </div>
+  <p class="center" style="margin-top:1.6rem"><a class="btn btn-sm btn-line" href="actualites-partenaires.html#partenaires">Tous les partenaires</a></p>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="bg-green join" style="margin-inline:0;padding-inline:clamp(1.4rem,5vw,4rem)">
+      <div class="join-inner">
+        <img class="reveal zoom" src="img/logo.webp" alt="Logo du Carreau Thouarsais : un dinosaure lançant une boule de pétanque" width="260" height="260" loading="lazy">
+        <div class="reveal">
+          <p class="eyebrow">Rejoignez-nous</p>
+          <h2>Venez essayer, débutants bienvenus&nbsp;!</h2>
+          <p class="script">Un club, une famille, une passion&nbsp;!</p>
+          <p class="lead" style="color:#fff">Vous avez 7 ans ou 77 ans et plus, vous découvrez la pétanque ou vous rêvez de titres&nbsp;: il y a une place pour vous au Carreau.</p>
+          <div class="btns">
+            <a class="btn btn-gold" href="jouer-avec-nous.html">Venir jouer {{icon:arrow}}</a>
+            <a class="btn btn-ghost" href="licence-contact.html">Licence &amp; contact</a>
+            <a class="btn btn-ghost" href="tel:+33771626468">{{icon:phone}} 07 71 62 64 68</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
