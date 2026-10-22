@@ -116,10 +116,10 @@ fs.writeFileSync(path.join(OUT,'404.html'),head('404.html','Page introuvable','P
 
 // ---- bilingue FR / BR ----
 const br=JSON.parse(fs.readFileSync(path.join(__dirname,'br.json'),'utf8'));
-const done=new Set(br.__pages_done||[]);
+const done=new Set(br.__pages_done||[]);const txt=JSON.parse(fs.readFileSync(path.join(__dirname,'br-textes.json'),'utf8'));
 const dict=Object.entries(br).filter(([k,v])=>!k.startsWith('__')&&v).sort((a,b)=>b[0].length-a[0].length);
 fs.mkdirSync(path.join(OUT,'br'),{recursive:true});
-const banner='<div class="trad-note" role="note"><b>Troidigezh e brezhoneg o vont war araok.</b> Traduction bretonne en cours : les parties encore en français seront traduites par l\'association.</div>';
+const banner='<div class="trad-note" role="note"><b>Troidigezh gentañ da wiriekaat gant ar gevredigezh.</b> Première traduction en breton, en cours de relecture par l\'association.</div>';
 const sw=(lang,f)=>lang==='fr'?`<div class="langsw" role="group" aria-label="Langue"><a class="on" href="${f}" hreflang="fr" lang="fr" aria-current="true">FR</a><a href="br/${f}" hreflang="br" lang="br">BR</a></div>`:`<div class="langsw" role="group" aria-label="Yezh"><a href="../${f}" hreflang="fr" lang="fr">FR</a><a class="on" href="${f}" hreflang="br" lang="br" aria-current="true">BR</a></div>`;
 const alt=f=>`<link rel="alternate" hreflang="fr" href="${SITE}${f}"><link rel="alternate" hreflang="br" href="${SITE}br/${f}">`;
 for(const f of fs.readdirSync(OUT).filter(x=>x.endsWith('.html')&&x!=='404.html')){
@@ -127,6 +127,7 @@ for(const f of fs.readdirSync(OUT).filter(x=>x.endsWith('.html')&&x!=='404.html'
  fs.writeFileSync(path.join(OUT,f),fr.replace('__LANGSW__',sw('fr',f)).replace('__ALT__',alt(f)));
  let h=fr.replace('__LANGSW__',sw('br',f)).replace('__ALT__',alt(f)).split('assets/').join('../assets/').replace('<html lang="fr">','<html lang="br">');
  for(const [k,v] of dict)h=h.split(k).join(v);
+ h=h.replace(/>([^<>]+)</g,(m,t)=>Object.prototype.hasOwnProperty.call(txt,t)?'>'+txt[t]+'<':m);
  if(!done.has(f))h=h.replace('</section>','</section>'+banner);
  fs.writeFileSync(path.join(OUT,'br',f),h);
 }
