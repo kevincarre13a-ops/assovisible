@@ -120,7 +120,8 @@ const done=new Set(br.__pages_done||[]);const txt=JSON.parse(fs.readFileSync(pat
 const dict=Object.entries(br).filter(([k,v])=>!k.startsWith('__')&&v).sort((a,b)=>b[0].length-a[0].length);
 fs.mkdirSync(path.join(OUT,'br'),{recursive:true});
 const banner='<div class="trad-note" role="note"><b>Troidigezh gentañ da wiriekaat gant ar gevredigezh.</b> Première traduction en breton, en cours de relecture par l\'association.</div>';
-const sw=(lang,f)=>lang==='fr'?`<div class="langsw" role="group" aria-label="Langue"><a class="on" href="${f}" hreflang="fr" lang="fr" aria-current="true">FR</a><a href="br/${f}" hreflang="br" lang="br">BR</a></div>`:`<div class="langsw" role="group" aria-label="Yezh"><a href="../${f}" hreflang="fr" lang="fr">FR</a><a class="on" href="${f}" hreflang="br" lang="br" aria-current="true">BR</a></div>`;
+const lab=(s,l)=>`<span class="lf">${l}</span><span class="ls">${s}</span>`;
+const sw=(lang,f)=>`<div class="langsw" role="group" aria-label="Langue / Yezh"><a${lang==='fr'?' class="on" aria-current="true"':''} href="/${f}" hreflang="fr" lang="fr" title="Français">${lab('FR','Français')}</a><a${lang==='br'?' class="on" aria-current="true"':''} href="/br/${f}" hreflang="br" lang="br" title="Brezhoneg">${lab('BR','Brezhoneg')}</a></div>`;
 const alt=f=>`<link rel="alternate" hreflang="fr" href="${SITE}${f}"><link rel="alternate" hreflang="br" href="${SITE}br/${f}">`;
 for(const f of fs.readdirSync(OUT).filter(x=>x.endsWith('.html')&&x!=='404.html')){
  const fr=fs.readFileSync(path.join(OUT,f),'utf8');
