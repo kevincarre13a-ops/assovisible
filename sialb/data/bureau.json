@@ -1,0 +1,66 @@
+[
+  {
+    "nom": "John O'Brien",
+    "role": "Président",
+    "groupe": "Bureau",
+    "photo": "assets/img/portraits/john-obrien.jpg",
+    "texte": "Professeur émérite à l'Université de Durham (Royaume-Uni), spécialiste de la Renaissance, John O'Brien a publié de nombreuses études sur la littérature française du XVIe siècle (en particulier consacrées à La Boétie, Montaigne, Rabelais). Il a dirigé avec Marc Schachter le volume La première circulation de la Servitude Volontaire en France et au-delà (Paris, Champion, 2019). Il préside la SIALB depuis 2020.",
+    "lien": { "label": "Le volume chez Champion", "url": "https://www.honorechampion.com/fr/10946-book-08534990-9782745349903.html" }
+  },
+  {
+    "nom": "Julien Siegle",
+    "role": "Vice-Président",
+    "groupe": "Bureau",
+    "photo": "assets/img/portraits/julien-siegle.jpg",
+    "texte": "Professeur de philosophie au Lycée Pré de Cordy à Sarlat, Julien Siegle est responsable du partenariat entre le Lycée et la SIALB, dont il est le vice-président depuis 2020."
+  },
+  {
+    "nom": "Laurent Gerbier",
+    "role": "Secrétaire",
+    "groupe": "Bureau",
+    "photo": "assets/img/portraits/laurent-gerbier.jpg",
+    "texte": "Maître de conférences à l'Université de Tours, Laurent Gerbier est spécialiste de philosophie morale et politique de la Renaissance (notamment Machiavel, La Boétie, Castellion et Montaigne). Il co-dirige depuis 2012 les Cahiers La Boétie (Éditions Classiques Garnier). Il est secrétaire de la SIALB depuis 2014."
+  },
+  {
+    "nom": "Thomas Gerbier",
+    "role": "Secrétaire adjoint",
+    "groupe": "Bureau",
+    "photo": "assets/img/portraits/thomas-gerbier.jpg",
+    "texte": "Ingénieur-maître en communication audiovisuelle, professeur de français, histoire-géographie et culture générale dans l'enseignement professionnel. Responsable du site web de la SIALB. Il est secrétaire adjoint de la SIALB depuis 2022."
+  },
+  {
+    "nom": "Ambre Pérez-Parfait",
+    "role": "Trésorière",
+    "groupe": "Bureau",
+    "photo": "assets/img/portraits/ambre-perez-parfait.jpg",
+    "texte": "Docteure en philosophie (Servir et critiquer l'État : politiques du libertinage chez Naudé et La Mothe Le Vayer, Tours, 2024), chercheuse associée au Centre d'Études Supérieures de la Renaissance de Tours. Elle est trésorière de la SIALB depuis 2024."
+  },
+  {
+    "nom": "Xavier Griffet",
+    "role": "Trésorier adjoint",
+    "groupe": "Bureau",
+    "photo": "assets/img/portraits/xavier-griffet.jpg",
+    "texte": "Titulaire d'un master de philosophie (Penser le politique : Claude Lefort et Étienne de La Boétie, Tours, 2017), chercheur associé au laboratoire InTRu, Tours. Il est trésorier adjoint de la SIALB depuis 2024."
+  },
+  {
+    "nom": "Valéry Laurand",
+    "role": "Grand Stratéguerre",
+    "groupe": "Membre d'honneur",
+    "photo": "",
+    "texte": "Son laboratoire (Sciences, Philosophie, Humanités, Bordeaux) soutient financièrement la SIALB depuis 2010. Valéry Laurand a été officiellement nommé « Grand Stratéguerre » lors de l'assemblée générale de 2019, titre honorifique qui lui confère un siège au bureau."
+  },
+  {
+    "nom": "Frédéric Inizan",
+    "role": "Président d'honneur",
+    "groupe": "Présidents d'honneur",
+    "photo": "assets/img/portraits/frederic-inizan.jpg",
+    "texte": "Fondateur de la SIALB en 2001, alors qu'il était libraire à Sarlat, Frédéric Inizan en a été le premier président, de 2001 à 2014. Désormais chargé de mission et de médiation au Conseil Départemental de la Dordogne, il est président d'honneur de la SIALB."
+  },
+  {
+    "nom": "Michaël Boulet",
+    "role": "Président d'honneur",
+    "groupe": "Présidents d'honneur",
+    "photo": "assets/img/portraits/michael-boulet.jpg",
+    "texte": "Co-fondateur de la SIALB en 2001, Michaël Boulet est professeur de littérature dans le second degré. Il a soutenu en 2013 à l'Université de Toulouse une thèse de lettres consacrée à la declamatio à la Renaissance. Président de la SIALB de 2014 à 2020, il en est désormais président d'honneur."
+  }
+]

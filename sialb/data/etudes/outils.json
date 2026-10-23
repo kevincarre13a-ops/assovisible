@@ -1,0 +1,34 @@
+[
+  {
+    "titre": "Bibliographie",
+    "categorie": "Ressource",
+    "texte": "Texte d'attente : la bibliographie sur La Boétie sera publiée ici. Elle reprendra, sous forme de liste, les ouvrages de référence, dont les volumes des Cahiers La Boétie (voir la liste « Publications »).",
+    "lien": { "label": "Voir les publications de la SIALB", "url": "etudes-outils.html#publications" },
+    "attente": true
+  },
+  {
+    "titre": "Sitographie",
+    "categorie": "Ressource",
+    "texte": "Texte d'attente : la sitographie (sites et bases de données utiles aux chercheurs) sera publiée ici.",
+    "lien": null,
+    "attente": true
+  },
+  {
+    "titre": "Bibliothèques Virtuelles Humanistes — manuscrit Mériadeck",
+    "categorie": "Édition numérique",
+    "texte": "Le manuscrit Mériadeck (Bordeaux, Bx 2199) a été transcrit et mis en ligne par Alain Legros pour les « Bibliothèques Virtuelles Humanistes » du Centre d'Études Supérieures de la Renaissance (Université de Tours) en 2013.",
+    "lien": { "label": "Consulter la transcription", "url": "https://montaigne.univ-tours.fr/un-manuscrit-inedit-du-discours-de-la-servitude-volontaire-de-la-boetie/" }
+  },
+  {
+    "titre": "Captation vidéo des quatrièmes Rencontres",
+    "categorie": "Vidéo",
+    "texte": "« La coutume : formes, représentations et enjeux » (Sarlat, novembre 2008) : les Rencontres ont fait l'objet d'une captation vidéo accessible sur Canal-U.",
+    "lien": { "label": "Voir sur Canal-U", "url": "https://www.canal-u.tv/chaines/ut2j/la-coutume-formes-representation-et-enjeux" }
+  },
+  {
+    "titre": "Collection « Cahiers La Boétie »",
+    "categorie": "Collection",
+    "texte": "Depuis 2011, les travaux de la SIALB sont publiés dans la collection « Cahiers La Boétie » aux éditions Classiques Garnier.",
+    "lien": { "label": "Voir la liste des publications", "url": "etudes-outils.html#publications" }
+  }
+]

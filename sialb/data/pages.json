@@ -1,0 +1,94 @@
+{
+  "accueil": {
+    "kicker": "Sarlat, 1530 — Germignan, 1563",
+    "titre": "Étienne de La Boétie",
+    "lead": "Fondée à Sarlat, la Société Internationale des Amis de La Boétie étudie l'œuvre d'Étienne de La Boétie et sa place dans la Renaissance en France et en Europe, mais aussi ses enjeux modernes et contemporains du point de vue des arts, des lettres et des sciences humaines.",
+    "citation": "Soyez résolus de ne plus servir, et vous voilà libres.",
+    "citationSource": "Discours de la servitude volontaire",
+    "apercuTitre": "Parcourir le site",
+    "apercuLead": "Cinq portes d'entrée vers la recherche sur La Boétie.",
+    "apercu": [
+      { "id": "sialb", "href": "la-sialb.html", "titre": "La SIALB", "texte": "Le bureau, l'histoire de l'association et ses partenaires." },
+      { "id": "rencontres", "href": "les-rencontres.html", "titre": "Les Rencontres", "texte": "Les Rencontres internationales La Boétie depuis 2004 : programmes et affiches." },
+      { "id": "etudes", "href": "etudes-outils.html", "titre": "Études & outils", "texte": "Manuscrits, éditions du XVIe siècle, publications, études, articles et outils." },
+      { "id": "carnets", "href": "carnets.html", "titre": "Carnets", "texte": "Recensions, résumés de débats et documents issus des sessions scientifiques." },
+      { "id": "agenda", "href": "agenda.html", "titre": "Agenda", "texte": "Les rendez-vous de la SIALB et l'actualité de La Boétie." }
+    ],
+    "friseTitre": "Une vie brève, une œuvre qui circule",
+    "friseLead": "De la naissance à Sarlat en 1530 à la recherche d'aujourd'hui : les repères de la vie de La Boétie, puis la réception de son œuvre.",
+    "adhererTitre": "Soutenir la recherche sur La Boétie",
+    "adhererTexte": "L'adhésion à la SIALB soutient les Rencontres internationales, les publications et les outils mis à disposition des chercheurs."
+  },
+  "sialb": {
+    "kicker": "L'association",
+    "titre": "La SIALB",
+    "lead": "Une association savante fondée à Sarlat, soutenue par les collectivités locales et par des laboratoires de recherche des universités de Toulouse, Bordeaux et Tours.",
+    "meta": "Présentation, bureau, histoire et partenaires de la Société Internationale des Amis de La Boétie (SIALB).",
+    "image": "assets/img/hero/statue-sarlat.jpg",
+    "blocs": {
+      "bureau": { "titre": "Le bureau de la SIALB", "lead": "Les membres du bureau de l'association." },
+      "histoire": { "titre": "Histoire de la SIALB", "lead": "De la maison de La Boétie à Sarlat aux Rencontres internationales : repères chronologiques." },
+      "partenaires": { "titre": "Les partenaires de la SIALB", "lead": "Collectivités, établissements et entreprises qui soutiennent l'association." }
+    }
+  },
+  "rencontres": {
+    "kicker": "Rencontres internationales La Boétie",
+    "titre": "Les Rencontres",
+    "lead": "Depuis 2004, la SIALB organise à Sarlat les Rencontres internationales La Boétie, qui réunissent chercheurs français et internationaux autour de La Boétie et de ses écrits.",
+    "meta": "Les Rencontres internationales La Boétie depuis 2004 : thèmes, dates, lieux, affiches et programmes à télécharger.",
+    "image": "assets/img/hero/manuscrit-2.jpg",
+    "intro": "Depuis 2008, ces Rencontres donnent lieu à une conférence organisée au lycée polyvalent Pré de Cordy devant les élèves de classes de première et de terminale, accompagnée d'une rencontre animée par les étudiants de master et de doctorat associés à la SIALB. Depuis 2011, les travaux de la SIALB sont publiés dans la collection « Cahiers La Boétie » aux éditions Classiques Garnier.",
+    "introLien": { "label": "Découvrir les Cahiers La Boétie", "url": "etudes-outils.html#publications" }
+  },
+  "etudes": {
+    "kicker": "Ressources pour la recherche",
+    "titre": "Études & outils",
+    "lead": "Manuscrits du Discours de la servitude volontaire, éditions du XVIe siècle, publications de la SIALB, études, articles et outils documentaires.",
+    "meta": "Manuscrits et éditions anciennes du Discours de la servitude volontaire, publications, études, articles et outils pour les chercheurs.",
+    "image": "assets/img/hero/manuscrit-1.jpg",
+    "listes": {
+      "etudes": { "titre": "Études", "lead": "Biographie et textes de référence sur La Boétie." },
+      "manuscrits": { "titre": "Manuscrits et éditions anciennes", "lead": "Les manuscrits connus du Discours de la servitude volontaire et les éditions imprimées du XVIe siècle." },
+      "publications": { "titre": "Publications", "lead": "Les volumes publiés par la SIALB chez Classiques Garnier." },
+      "articles": { "titre": "Articles, thèses et mémoires", "lead": "Travaux universitaires consacrés à La Boétie." },
+      "outils": { "titre": "Outils", "lead": "Bibliographie, ressources en ligne et documents pour les chercheurs." }
+    }
+  },
+  "carnets": {
+    "kicker": "Carnets de la SIALB",
+    "titre": "Carnets",
+    "lead": "Les Carnets de la SIALB publient les matériaux et les textes issus des sessions scientifiques des Rencontres La Boétie qui n'ont pas fait l'objet d'autres publications : recensions, résumés des débats, études et documents inédits produits par les chercheuses et chercheurs de la SIALB.",
+    "meta": "Les Carnets de la SIALB : recensions, résumés de débats, études et documents inédits issus des Rencontres La Boétie.",
+    "image": "assets/img/hero/manuscrit-3.jpg",
+    "listes": {
+      "etudes": { "titre": "Études", "lead": "Études et notes de recherche issues des sessions scientifiques." },
+      "manuscrits": { "titre": "Manuscrits et éditions anciennes", "lead": "Notes et transcriptions autour des manuscrits et des éditions anciennes." },
+      "publications": { "titre": "Publications", "lead": "Comptes rendus et notices de publications récentes." },
+      "articles": { "titre": "Articles", "lead": "Recensions et articles publiés dans les Carnets." },
+      "outils": { "titre": "Outils", "lead": "Documents de travail, index et ressources partagés par les chercheurs." }
+    }
+  },
+  "agenda": {
+    "kicker": "Rendez-vous",
+    "titre": "Agenda",
+    "lead": "Suivez ici les rendez-vous de la SIALB et les actualités concernant La Boétie.",
+    "meta": "Agenda de la SIALB : rencontres, colloques et rendez-vous autour d'Étienne de La Boétie.",
+    "image": "assets/img/hero/manuscrit-3.jpg",
+    "avenir": "À venir",
+    "passe": "Rendez-vous passés"
+  },
+  "contact": {
+    "kicker": "Nous écrire",
+    "titre": "Contact",
+    "lead": "Une question, une proposition de communication, une demande d'adhésion : utilisez le formulaire ou écrivez-nous.",
+    "meta": "Contacter la Société Internationale des Amis de La Boétie : formulaire, adresse postale et courriel.",
+    "image": "assets/img/hero/maison-natale.jpg"
+  },
+  "mentions": {
+    "kicker": "Informations légales",
+    "titre": "Mentions légales",
+    "lead": "Éditeur du site, hébergement, données personnelles et crédits.",
+    "meta": "Mentions légales du site de la Société Internationale des Amis de La Boétie (SIALB).",
+    "image": "assets/img/hero/manuscrit-1.jpg"
+  }
+}

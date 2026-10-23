@@ -1,0 +1,21 @@
+[
+  {
+    "id": "presentation",
+    "titre": "Présentation de la SIALB",
+    "texte": "Fondée en 2003 à Sarlat, la Société Internationale des Amis de La Boétie est une Association loi 1901 qui a pour objet l'étude de l'œuvre d'Étienne de La Boétie et de sa place dans la Renaissance en France et en Europe, mais aussi de ses enjeux modernes et contemporains du point de vue des arts, des lettres et des sciences humaines.\n\nSoutenue par les collectivités locales (ville de Sarlat-la-Canéda, Conseil Départemental de la Dordogne) ainsi que par plusieurs laboratoires de recherche en lettres et sciences humaines des universités de Toulouse, Bordeaux et Tours, la SIALB organise depuis 2004 les Rencontres Internationales La Boétie, qui réunissent à Sarlat chercheurs français et internationaux autour de La Boétie et de ses écrits.",
+    "lien": { "label": "Découvrir les Rencontres", "url": "les-rencontres.html" }
+  },
+  {
+    "id": "lycee",
+    "titre": "Avec le Lycée Pré de Cordy",
+    "texte": "Depuis 2008, les Rencontres donnent lieu à une conférence organisée au lycée polyvalent Pré de Cordy de Sarlat devant les élèves de classes de première et de terminale, accompagnée d'une rencontre animée par les étudiants de master et de doctorat associés à la SIALB.",
+    "image": "assets/img/partenaires/lycee-pre-de-cordy.png",
+    "lien": { "label": "Le lycée Pré de Cordy", "url": "https://lycee-predecordy-sarlat.com/" }
+  },
+  {
+    "id": "adherer",
+    "titre": "Adhérer à la SIALB",
+    "texte": "L'adhésion se fait en ligne, via la plateforme HelloAsso.",
+    "lien": { "label": "Adhérer à la SIALB via HelloAsso", "url": "https://www.helloasso.com/associations/societe-internationale-des-amis-de-la-boetie" }
+  }
+]

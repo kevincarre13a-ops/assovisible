@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Société Internationale des Amis de La Boétie (SIALB)</title>
+<meta name="description" content="Contacter la Société Internationale des Amis de La Boétie : formulaire, adresse postale et courriel.">
+<meta name="theme-color" content="#22090f">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="SIALB — Société Internationale des Amis de La Boétie">
+<meta property="og:title" content="Contact — Société Internationale des Amis de La Boétie (SIALB)">
+<meta property="og:description" content="Contacter la Société Internationale des Amis de La Boétie : formulaire, adresse postale et courriel.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/cormorant-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-serif-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="contact">
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header id="site-header"></header>
+<main id="contenu">
+<section class="page-head" data-page-head>
+  <div class="page-head__bg" aria-hidden="true" style="background-image:url('assets/img/hero/maison-natale.jpg')"></div>
+  <div class="container page-head__inner">
+    <div>
+      <p class="kicker">Nous écrire</p>
+      <h1>Contact</h1>
+      <p class="lead">Une question, une proposition de communication, une demande d&#x27;adhésion : utilisez le formulaire ou écrivez-nous.</p>
+    </div>
+    <div class="arch" aria-hidden="true"><img src="assets/img/hero/maison-natale.jpg" alt="" width="300" height="375" fetchpriority="high"></div>
+  </div>
+  <div class="page-head__frise" aria-hidden="true"></div>
+</section>
+<section class="sec">
+  <div class="container contact-grid">
+    <div data-reveal>
+      <form class="form" name="contact" method="POST" action="merci.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hp" aria-hidden="true"><label>Ne pas remplir : <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div><label for="f-nom">Nom</label><input id="f-nom" name="nom" type="text" autocomplete="family-name" required></div>
+        <div><label for="f-prenom">Prénom</label><input id="f-prenom" name="prenom" type="text" autocomplete="given-name" required></div>
+        <div class="full"><label for="f-email">Courriel</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="full"><label for="f-objet">Objet</label><input id="f-objet" name="objet" type="text" required></div>
+        <div class="full"><label for="f-message">Message</label><textarea id="f-message" name="message" required></textarea></div>
+        <div class="full consent"><input id="f-consent" name="consentement" type="checkbox" value="oui" required><label for="f-consent" style="text-transform:none;letter-spacing:0;font:inherit;margin:0">J'accepte que ces informations soient utilisées pour répondre à ma demande (voir les <a href="mentions-legales.html">mentions légales</a>).</label></div>
+        <div class="full"><button class="btn" type="submit">Envoyer le message</button></div>
+      </form>
+    </div>
+    <aside class="card coord" data-coord data-reveal></aside>
+  </div>
+</section>
+</main>
+<footer id="site-footer"></footer>
+<noscript><p class="vide" style="margin:1rem auto;max-width:640px">Ce site affiche ses listes (rencontres, manuscrits, agenda…) grâce à JavaScript. Pour nous joindre : contact@sialb.fr.</p></noscript>
+</body>
+</html>

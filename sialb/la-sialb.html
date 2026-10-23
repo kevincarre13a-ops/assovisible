@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La SIALB — Présentation, bureau, histoire et partenaires | SIALB</title>
+<meta name="description" content="Présentation, bureau, histoire et partenaires de la Société Internationale des Amis de La Boétie (SIALB).">
+<meta name="theme-color" content="#22090f">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="SIALB — Société Internationale des Amis de La Boétie">
+<meta property="og:title" content="La SIALB — Présentation, bureau, histoire et partenaires | SIALB">
+<meta property="og:description" content="Présentation, bureau, histoire et partenaires de la Société Internationale des Amis de La Boétie (SIALB).">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/cormorant-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-serif-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="sialb">
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header id="site-header"></header>
+<main id="contenu">
+<section class="page-head" data-page-head>
+  <div class="page-head__bg" aria-hidden="true" style="background-image:url('assets/img/hero/statue-sarlat.jpg')"></div>
+  <div class="container page-head__inner">
+    <div>
+      <p class="kicker">L&#x27;association</p>
+      <h1>La SIALB</h1>
+      <p class="lead">Une association savante fondée à Sarlat, soutenue par les collectivités locales et par des laboratoires de recherche des universités de Toulouse, Bordeaux et Tours.</p>
+    </div>
+    <div class="arch" aria-hidden="true"><img src="assets/img/hero/statue-sarlat.jpg" alt="" width="300" height="375" fetchpriority="high"></div>
+  </div>
+  <div class="page-head__frise" aria-hidden="true"></div>
+</section>
+<nav class="subnav" data-subnav aria-label="Sections de la page"></nav>
+<section class="sec" id="presentation" data-liste="data/sialb-blocs.json" data-layout="blocs" data-label="Présentation">
+  <div class="container">
+    <div data-body></div>
+  </div>
+</section>
+<section class="sec sec--alt" id="bureau" data-liste="data/bureau.json" data-layout="bureau" data-head="blocs">
+  <div class="container">
+    <div data-head-slot></div>
+    <div data-body></div>
+  </div>
+</section>
+<section class="sec" id="histoire" data-liste="data/histoire.json" data-layout="histoire" data-head="blocs">
+  <div class="container">
+    <div data-head-slot></div>
+    <div data-body></div>
+  </div>
+</section>
+<section class="sec sec--alt" id="partenaires" data-liste="data/partenaires.json" data-layout="partenaires" data-head="blocs">
+  <div class="container">
+    <div data-head-slot></div>
+    <div data-body></div>
+  </div>
+</section>
+</main>
+<footer id="site-footer"></footer>
+<noscript><p class="vide" style="margin:1rem auto;max-width:640px">Ce site affiche ses listes (rencontres, manuscrits, agenda…) grâce à JavaScript. Pour nous joindre : contact@sialb.fr.</p></noscript>
+</body>
+</html>

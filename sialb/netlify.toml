@@ -1,0 +1,70 @@
+# Configuration Netlify du site SIALB (site statique, aucune étape de build)
+[build]
+  publish = "."
+
+# Anciennes adresses du site Wix -> nouvelles pages
+[[redirects]]
+  from = "/news"
+  to = "/agenda.html"
+  status = 301
+[[redirects]]
+  from = "/études-outils"
+  to = "/etudes-outils.html"
+  status = 301
+[[redirects]]
+  from = "/la-sialb"
+  to = "/la-sialb.html"
+  status = 200
+[[redirects]]
+  from = "/les-rencontres"
+  to = "/les-rencontres.html"
+  status = 200
+[[redirects]]
+  from = "/etudes-outils"
+  to = "/etudes-outils.html"
+  status = 200
+[[redirects]]
+  from = "/carnets"
+  to = "/carnets.html"
+  status = 200
+[[redirects]]
+  from = "/agenda"
+  to = "/agenda.html"
+  status = 200
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+
+# Les données doivent se rafraîchir vite quand le client les modifie
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=120, must-revalidate"
+
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"

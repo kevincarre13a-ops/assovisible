@@ -1,0 +1,11 @@
+[
+  {
+    "titre": "Articles, thèses et mémoires autour de La Boétie",
+    "auteur": "",
+    "date": "",
+    "texte": "Texte d'attente : cette liste accueillera les articles, thèses et mémoires consacrés à La Boétie. Chaque fiche comprend un titre, un auteur, une date, un résumé et, si possible, un lien ou un fichier à télécharger. Remplacez cette fiche en modifiant le fichier data/etudes/articles.json.",
+    "lien": null,
+    "fichier": null,
+    "attente": true
+  }
+]

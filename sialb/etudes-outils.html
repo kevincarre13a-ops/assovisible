@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Études &amp; outils — manuscrits, éditions anciennes, publications | SIALB</title>
+<meta name="description" content="Manuscrits et éditions anciennes du Discours de la servitude volontaire, publications, études, articles et outils pour les chercheurs.">
+<meta name="theme-color" content="#22090f">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="SIALB — Société Internationale des Amis de La Boétie">
+<meta property="og:title" content="Études &amp; outils — manuscrits, éditions anciennes, publications | SIALB">
+<meta property="og:description" content="Manuscrits et éditions anciennes du Discours de la servitude volontaire, publications, études, articles et outils pour les chercheurs.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/cormorant-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/source-serif-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script type="module" src="assets/js/app.js"></script>
+</head>
+<body data-page="etudes">
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header id="site-header"></header>
+<main id="contenu">
+<section class="page-head" data-page-head>
+  <div class="page-head__bg" aria-hidden="true" style="background-image:url('assets/img/hero/manuscrit-1.jpg')"></div>
+  <div class="container page-head__inner">
+    <div>
+      <p class="kicker">Ressources pour la recherche</p>
+      <h1>Études &amp; outils</h1>
+      <p class="lead">Manuscrits du Discours de la servitude volontaire, éditions du XVIe siècle, publications de la SIALB, études, articles et outils documentaires.</p>
+    </div>
+    <div class="arch" aria-hidden="true"><img src="assets/img/hero/manuscrit-1.jpg" alt="" width="300" height="375" fetchpriority="high"></div>
+  </div>
+  <div class="page-head__frise" aria-hidden="true"></div>
+</section>
+<nav class="subnav" data-subnav aria-label="Listes de la page"></nav>
+<section class="sec" id="etudes" data-liste="data/etudes/etudes.json" data-layout="etudes" data-head="listes">
+  <div class="container">
+    <div data-head-slot></div>
+    <div data-body></div>
+  </div>
+</section>
+<section class="sec sec--alt" id="manuscrits" data-liste="data/etudes/manuscrits.json" data-layout="manuscrits" data-head="listes">
+  <div class="container">
+    <div data-head-slot></div>
+    <div data-body></div>
+  </div>
+</section>
+<section class="sec" id="publications" data-liste="data/etudes/publications.json" data-layout="publications" data-head="listes">
+  <div class="container">
+    <div data-head-slot></div>
+    <div data-body></div>
+  </div>
+</section>
+<section class="sec sec--alt" id="articles" data-liste="data/etudes/articles.json" data-layout="articles" data-head="listes">
+  <div class="container">
+    <div data-head-slot></div>
+    <div data-body></div>
+  </div>
+</section>
+<section class="sec" id="outils" data-liste="data/etudes/outils.json" data-layout="cartes" data-head="listes">
+  <div class="container">
+    <div data-head-slot></div>
+    <div data-body></div>
+  </div>
+</section>
+</main>
+<footer id="site-footer"></footer>
+<noscript><p class="vide" style="margin:1rem auto;max-width:640px">Ce site affiche ses listes (rencontres, manuscrits, agenda…) grâce à JavaScript. Pour nous joindre : contact@sialb.fr.</p></noscript>
+</body>
+</html>

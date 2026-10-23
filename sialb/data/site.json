@@ -1,0 +1,31 @@
+{
+  "nom": "Société Internationale des Amis de La Boétie",
+  "sigle": "SIALB",
+  "baseline": "Sarlat",
+  "description": "Association savante consacrée à Étienne de La Boétie : recherche, rencontres internationales, publications, manuscrits et outils pour les chercheurs.",
+  "adresse": [
+    "Hôtel de Ville de Sarlat",
+    "Place de la Liberté, CS 80210",
+    "24206 Sarlat-la-Canéda Cedex"
+  ],
+  "email": "contact@sialb.fr",
+  "telephone": "",
+  "adhesion": {
+    "label": "Adhérer via HelloAsso",
+    "url": "https://www.helloasso.com/associations/societe-internationale-des-amis-de-la-boetie"
+  },
+  "nav": [
+    { "id": "accueil", "label": "Accueil", "href": "index.html" },
+    { "id": "sialb", "label": "SIALB", "href": "la-sialb.html" },
+    { "id": "rencontres", "label": "Rencontres", "href": "les-rencontres.html" },
+    { "id": "etudes", "label": "Études & outils", "href": "etudes-outils.html" },
+    { "id": "carnets", "label": "Carnets", "href": "carnets.html" },
+    { "id": "agenda", "label": "Agenda", "href": "agenda.html" },
+    { "id": "contact", "label": "Contact", "href": "contact.html" }
+  ],
+  "pied": [
+    { "id": "mentions", "label": "Mentions légales", "href": "mentions-legales.html" }
+  ],
+  "piedTexte": "Étudier l'œuvre d'Étienne de La Boétie et sa place dans la Renaissance en France et en Europe, ainsi que ses enjeux modernes et contemporains.",
+  "copyright": "© SIALB — Société Internationale des Amis de La Boétie"
+}

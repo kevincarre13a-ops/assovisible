@@ -1,0 +1,12 @@
+[
+  { "nom": "Ville de Sarlat", "groupe": "À Sarlat", "logo": "assets/img/partenaires/ville-de-sarlat.png", "url": "https://www.sarlat.fr/" },
+  { "nom": "Hôtel restaurant La Couleuvrine", "groupe": "À Sarlat", "logo": "assets/img/partenaires/la-couleuvrine.jpg", "url": "https://www.la-couleuvrine.com/" },
+  { "nom": "Lycée Pré de Cordy", "groupe": "À Sarlat", "logo": "assets/img/partenaires/lycee-pre-de-cordy.png", "url": "https://lycee-predecordy-sarlat.com/" },
+  { "nom": "Le Pécharmant", "groupe": "À Sarlat", "logo": "assets/img/partenaires/pecharmant.png", "url": "https://www.vins-bergeracduras.fr/appellations/pecharmant/" },
+  { "nom": "Le Foie Gras", "groupe": "À Sarlat", "logo": "assets/img/partenaires/foie-gras.png", "url": "https://lefoiegras.fr/" },
+  { "nom": "L'Armagnac", "groupe": "À Sarlat", "logo": "assets/img/partenaires/armagnac.jpg", "url": "http://www.armagnac.fr/" },
+  { "nom": "Université du temps libre de Sarlat", "groupe": "À Sarlat", "logo": "assets/img/partenaires/utl-sarlat.png", "url": "https://www.utlspn.fr/" },
+  { "nom": "Université de Tours", "groupe": "Organismes universitaires", "logo": "assets/img/partenaires/universite-de-tours.png", "url": "https://www.univ-tours.fr/" },
+  { "nom": "Université Bordeaux Montaigne", "groupe": "Organismes universitaires", "logo": "assets/img/partenaires/universite-bordeaux-montaigne.png", "url": "https://www.u-bordeaux-montaigne.fr/fr/index.html" },
+  { "nom": "Université Toulouse Jean Jaurès", "groupe": "Organismes universitaires", "logo": "assets/img/partenaires/universite-toulouse-jean-jaures.png", "url": "https://www.univ-tlse2.fr/" }
+]

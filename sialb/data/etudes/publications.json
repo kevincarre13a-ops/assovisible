@@ -1,0 +1,74 @@
+[
+  {
+    "collection": "Cahiers La Boétie",
+    "numero": "n° 1",
+    "date": "2012",
+    "titre": "Amitié & Compagnie. Autour du Discours de la servitude volontaire",
+    "auteur": "Stéphan Geonget et Laurent Gerbier (dir.)",
+    "texte": "Paris, Éditions Classiques Garnier, « Cahiers La Boétie, n° 1 », 2012.",
+    "lien": { "label": "Découvrir chez Garnier", "url": "https://classiques-garnier.com/cahiers-la-boetie-amitie-compagnie.html" }
+  },
+  {
+    "collection": "Cahiers La Boétie",
+    "numero": "n° 2",
+    "date": "2012",
+    "titre": "Les Figures de la coutume. Autour du Discours de la servitude volontaire",
+    "auteur": "Laurent Gerbier et Olivier Guerrier (dir.)",
+    "texte": "Paris, Éditions Classiques Garnier, « Cahiers La Boétie, n° 2 », 2012.",
+    "lien": { "label": "Découvrir chez Garnier", "url": "https://classiques-garnier.com/cahiers-la-boetie-les-figures-de-la-coutume.html" }
+  },
+  {
+    "collection": "Cahiers La Boétie",
+    "numero": "n° 3",
+    "date": "2013",
+    "titre": "Lectures politiques de La Boétie",
+    "auteur": "Laurent Gerbier (dir.)",
+    "texte": "Paris, Éditions Classiques Garnier, « Cahiers La Boétie, n° 3 », 2013.",
+    "lien": { "label": "Découvrir chez Garnier", "url": "https://classiques-garnier.com/cahiers-la-boetie-lectures-politiques-de-la-boetie.html" }
+  },
+  {
+    "collection": "Cahiers La Boétie",
+    "numero": "n° 4",
+    "date": "2014",
+    "titre": "Nature et naturel. Autour du Discours de la servitude volontaire",
+    "auteur": "Laurent Gerbier et Olivier Guerrier (dir.)",
+    "texte": "Paris, Éditions Classiques Garnier, « Cahiers La Boétie, n° 4 », 2014.",
+    "lien": { "label": "Découvrir chez Garnier", "url": "https://classiques-garnier.com/cahiers-la-boetie-nature-et-naturel-autour-du-discours-de-la-servitude-volontaire.html" }
+  },
+  {
+    "collection": "Cahiers La Boétie",
+    "numero": "n° 5",
+    "date": "2016",
+    "titre": "La parole de La Boétie : approches philologiques, rhétoriques et littéraires",
+    "auteur": "Sandra Provini, Agnès Rees, Alice Vintenon (dir.)",
+    "texte": "Paris, Éditions Classiques Garnier, « Cahiers La Boétie, n° 5 », 2016.",
+    "lien": { "label": "Découvrir chez Garnier", "url": "https://classiques-garnier.com/cahiers-la-boetie-la-parole-de-la-boetie-approches-philosophiques-rhetoriques-et-litteraires.html" }
+  },
+  {
+    "collection": "Cahiers La Boétie",
+    "numero": "n° 6",
+    "date": "2022",
+    "titre": "Traductions de La Boétie",
+    "auteur": "Romain Menini (dir.)",
+    "texte": "Paris, Éditions Classiques Garnier, « Cahiers La Boétie, n° 6 », 2022.",
+    "lien": { "label": "Découvrir chez Garnier", "url": "https://classiques-garnier.com/traductions-de-la-boetie.html" }
+  },
+  {
+    "collection": "Études montaignistes — La Boétie : études et textes",
+    "numero": "n° 65",
+    "date": "2018",
+    "titre": "Étienne de La Boétie et le destin du Discours de la servitude volontaire",
+    "auteur": "Anne-Marie Cocula-Vaillières",
+    "texte": "Paris, Éditions Classiques Garnier, « Études Montaignistes n° 65 », 2018.",
+    "lien": { "label": "Découvrir chez Garnier", "url": "https://classiques-garnier.com/etienne-de-la-boetie-et-le-destin-du-discours-de-la-servitude-volontaire.html" }
+  },
+  {
+    "collection": "Études montaignistes — La Boétie : études et textes",
+    "numero": "n° 66",
+    "date": "2018",
+    "titre": "Étienne de La Boétie, Poésies complètes",
+    "auteur": "Édition de Christophe Bardyn et Marilise Six",
+    "texte": "Paris, Éditions Classiques Garnier, « Études Montaignistes n° 66 », 2018.",
+    "lien": { "label": "Découvrir chez Garnier", "url": "https://classiques-garnier.com/poesies-completes-1.html" }
+  }
+]

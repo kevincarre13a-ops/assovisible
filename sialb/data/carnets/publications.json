@@ -1,0 +1,11 @@
+[
+  {
+    "titre": "Publications récentes",
+    "auteur": "",
+    "date": "",
+    "texte": "Texte d'attente : comptes rendus et notices de publications récentes consacrées à La Boétie. Remplacez cette fiche en modifiant le fichier data/carnets/publications.json.",
+    "lien": null,
+    "fichier": null,
+    "attente": true
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "prochaines-rencontres",
+    "date": "",
+    "dateLibelle": "Date à annoncer",
+    "titre": "Prochaines Rencontres La Boétie",
+    "lieu": "À préciser",
+    "description": "Texte d'attente : date, lieu et programme de la prochaine rencontre seront annoncés ici. Remplacez cette fiche par l'événement réel dans le fichier data/agenda.json.",
+    "lien": {
+      "label": "Voir les Rencontres passées",
+      "url": "les-rencontres.html"
+    },
+    "attente": true
+  },
+  {
+    "id": "rencontres-2025",
+    "date": "2025-11-06",
+    "dateFin": "2025-11-07",
+    "dateLibelle": "6 et 7 novembre 2025",
+    "titre": "Onzièmes Rencontres La Boétie : « La volonté »",
+    "lieu": "Bordeaux",
+    "description": "Colloque organisé par la SIALB et la SIAAM, avec le soutien du Centre Montaigne, de l'Atelier Montaigne et de l'Institut de recherche Montesquieu.",
+    "lien": {
+      "label": "Télécharger le programme",
+      "url": "files/programmes/rencontres-11-2025.pdf"
+    }
+  },
+  {
+    "id": "carnets-2025",
+    "date": "2025-11-01",
+    "dateLibelle": "Novembre 2025",
+    "titre": "Premier texte des Carnets de la SIALB",
+    "lieu": "En ligne",
+    "description": "Sylvia Giocanti, recension de Tristan Dagron, Le Soi subjugué. Servitude volontaire et cliniques de l'aliénation (Paris, Vrin, 2022). Ce compte rendu inaugure les Carnets de la SIALB.",
+    "lien": {
+      "label": "Lire dans les Carnets",
+      "url": "carnets.html"
+    },
+    "precision": "mois"
+  },
+  {
+    "id": "rencontres-2023",
+    "date": "2023-11-15",
+    "dateFin": "2023-11-17",
+    "dateLibelle": "15 au 17 novembre 2023",
+    "titre": "Dixièmes Rencontres La Boétie : « Reconnaissance et Entre-connaissance »",
+    "lieu": "Sarlat — Centre Culturel",
+    "description": "Rencontres organisées par Olivier Guerrier et Laurent Gerbier. Assemblée générale de la SIALB le vendredi 17 novembre.",
+    "lien": {
+      "label": "Télécharger le programme",
+      "url": "files/programmes/rencontres-10-2023.pdf"
+    }
+  },
+  {
+    "id": "rencontres-2021",
+    "date": "2021-11-09",
+    "dateFin": "2021-11-10",
+    "dateLibelle": "9 et 10 novembre 2021",
+    "titre": "Neuvièmes Rencontres La Boétie : « Les possibles de la servitude volontaire »",
+    "lieu": "Sarlat — Hôtel de Ville",
+    "description": "Circulations, diffusions, réceptions de La Boétie, organisées par Laurent Gerbier.",
+    "lien": {
+      "label": "Télécharger le programme",
+      "url": "files/programmes/rencontres-09-2021.pdf"
+    }
+  }
+]
