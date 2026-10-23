@@ -1,0 +1,5 @@
+{
+  "avoid": ["Duolingo", "Duo the owl", "Lingo"],
+  "domains": ["duolingo.com", "speak.com", "usespeak.com"],
+  "colors": ["#58cc02", "#58a700", "#89e219", "#1cb0f6", "#ce82ff"]
+}

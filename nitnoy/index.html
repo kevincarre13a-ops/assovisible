@@ -1,0 +1,1003 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Nitnoy</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500&family=Sarabun:wght@400;500;700&display=swap">
+<style>
+/* Layout: one phone-width column (max 520px). Home = sticky stats bar + vertical path of unit bands.
+   Lesson and Talk are full-screen overlays with a progress bar on top and one big action button at the bottom. */
+:root{
+  --bg:#eef3ee; --surface:#ffffff; --border:#cfdcd4; --border-input:#6f8a80;
+  --text:#15302b; --muted:#4e6b62;
+  --accent:#f0a030; --on-accent:#1f1300; --accent-text:#8a4f03; --ring:#8a4f03;
+  --accent-soft:#fbe7c6; --accent-dark:#d98a1c;
+  --danger:#b3261e; --on-danger:#ffffff; --danger-soft:#f6dcd9;
+  --success:#276f45; --on-success:#ffffff; --success-soft:#d6ebdc;
+  --shadow-node:0 5px 0 0 rgba(21,48,43,.18); --shadow-sheet:0 -8px 32px rgba(21,48,43,.18);
+  --display:Mitr,'Noto Sans Thai',system-ui,sans-serif;
+  --body:Sarabun,'Noto Sans Thai',system-ui,sans-serif;
+  --r-sm:8px; --r-md:14px; --r-lg:22px;
+  --nav-h:60px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#10211d; --surface:#182e29; --border:#2c473f; --border-input:#7fa094;
+    --text:#ecf2ee; --muted:#a6bdb3;
+    --accent:#f2a93b; --on-accent:#1f1300; --accent-text:#f6be6a; --ring:#f2a93b;
+    --accent-soft:#3a2d14; --accent-dark:#e0962a;
+    --danger:#ff8a80; --on-danger:#2a0b09; --danger-soft:#3c1f1c;
+    --success:#6fcf97; --on-success:#0b1f14; --success-soft:#1b3b2a;
+    --shadow-node:0 5px 0 0 rgba(0,0,0,.45); --shadow-sheet:0 -8px 32px rgba(0,0,0,.5);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10211d; --surface:#182e29; --border:#2c473f; --border-input:#7fa094;
+  --text:#ecf2ee; --muted:#a6bdb3;
+  --accent:#f2a93b; --on-accent:#1f1300; --accent-text:#f6be6a; --ring:#f2a93b;
+  --accent-soft:#3a2d14; --accent-dark:#e0962a;
+  --danger:#ff8a80; --on-danger:#2a0b09; --danger-soft:#3c1f1c;
+  --success:#6fcf97; --on-success:#0b1f14; --success-soft:#1b3b2a;
+  --shadow-node:0 5px 0 0 rgba(0,0,0,.45); --shadow-sheet:0 -8px 32px rgba(0,0,0,.5);
+  color-scheme:dark;
+}
+html,body{height:100%}
+body{background:var(--bg);color:var(--text);font:16px/1.5 var(--body);-webkit-tap-highlight-color:transparent}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+*{box-sizing:border-box}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+button:disabled{cursor:default}
+:focus-visible{outline:2px solid var(--ring);outline-offset:2px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:500;margin:0;text-wrap:balance;line-height:1.2}
+p{margin:0}
+.thai{font-family:var(--display);font-weight:400}
+.muted{color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- shell ---------- */
+.app{max-width:520px;margin:0 auto;min-height:100%;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 calc(var(--nav-h) + 24px + env(safe-area-inset-bottom,0px))}
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px 10px}
+.brand{font-family:var(--display);font-size:22px;font-weight:500;letter-spacing:.01em;display:flex;align-items:baseline;gap:8px}
+.brand small{font-size:13px;color:var(--muted);font-family:var(--body);font-weight:400}
+.pills{display:flex;gap:8px}
+.pill{display:inline-flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:4px 10px 4px 8px;font-weight:700;font-size:14px;font-variant-numeric:tabular-nums}
+.pill svg{width:16px;height:16px}
+.pill.streak svg{color:var(--accent-dark)}
+.pill.xp svg{color:var(--success)}
+
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--surface);border-top:1px solid var(--border);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:max(0px,env(safe-area-inset-left,0px));padding-right:max(0px,env(safe-area-inset-right,0px))}
+.nav-in{max-width:520px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);height:var(--nav-h)}
+.nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:12px;font-weight:500;color:var(--muted);border-radius:0}
+.nav button svg{width:24px;height:24px}
+.nav button[aria-current="page"]{color:var(--accent-text)}
+.nav button[aria-current="page"] svg{color:var(--accent-dark)}
+
+/* ---------- home ---------- */
+.hello{display:flex;flex-direction:column;gap:4px;padding-block:8px 16px}
+.hello h1{font-size:30px}
+.hello h1 .thai{font-weight:300}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 12px 10px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.stat b{font-family:var(--body);font-size:26px;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat span{font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.goal{height:6px;border-radius:3px;background:var(--border);margin-top:6px;overflow:hidden}
+.goal i{display:block;height:100%;background:var(--success);width:0;transition:width .3s}
+
+.unit{margin-bottom:28px}
+.unit-head{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 16px;margin-bottom:18px}
+.unit-head.current{background:var(--accent);color:var(--on-accent);border-color:transparent}
+.unit-head.current .u-sub{color:inherit;opacity:.8}
+.unit-head.locked{opacity:.6}
+.u-num{font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;opacity:.8}
+.u-title{font-family:var(--display);font-size:19px;font-weight:500;line-height:1.2}
+.u-sub{font-size:13px;color:var(--muted)}
+.u-prog{font-family:var(--body);font-weight:700;font-size:15px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.path{display:flex;flex-direction:column;gap:14px}
+.node-row{display:flex;justify-content:center}
+.node-row.l{justify-content:flex-start;padding-left:18%}
+.node-row.r{justify-content:flex-end;padding-right:18%}
+.node{display:flex;flex-direction:column;align-items:center;gap:6px;width:150px;text-align:center}
+.node .disc{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:2px solid var(--border);color:var(--muted);box-shadow:var(--shadow-node);transition:transform .12s}
+.node .disc svg{width:30px;height:30px}
+.node:active .disc{transform:translateY(2px);box-shadow:none}
+.node.done .disc{background:var(--accent);border-color:var(--accent-dark);color:var(--on-accent)}
+.node.current .disc{background:var(--surface);border-color:var(--accent-dark);color:var(--accent-dark);animation:pulse 1.8s ease-in-out infinite}
+.node.locked{opacity:.55}
+.node.locked .disc{box-shadow:none}
+.node .lab{font-size:13px;font-weight:500;line-height:1.25}
+.node .lvl{display:flex;gap:3px;height:6px}
+.node .lvl i{width:12px;height:6px;border-radius:3px;background:var(--border)}
+.node .lvl i.on{background:var(--accent-dark)}
+@keyframes pulse{0%,100%{box-shadow:var(--shadow-node),0 0 0 0 rgba(240,160,48,.55)}60%{box-shadow:var(--shadow-node),0 0 0 12px rgba(240,160,48,0)}}
+
+/* ---------- list screens ---------- */
+.section-title{font-size:24px;padding-block:8px 6px}
+.lead{color:var(--muted);margin-bottom:16px;max-width:36ch}
+.search{display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border-input);border-radius:var(--r-md);padding:0 12px;margin-bottom:14px}
+.search input{flex:1;min-width:0;border:0;background:none;font:inherit;color:inherit;height:46px;outline:none}
+.search svg{width:18px;height:18px;color:var(--muted);flex:none}
+.group{margin-bottom:18px}
+.group h3{font-size:14px;color:var(--muted);font-family:var(--body);font-weight:700;letter-spacing:.03em;padding-block:6px}
+.row{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:10px 10px 10px 14px;margin-bottom:8px;min-width:0}
+.row .txt{flex:1;min-width:0}
+.row .th{font-family:var(--display);font-size:20px;line-height:1.3}
+.row .ro{font-size:14px;color:var(--accent-text);font-weight:500}
+.row .en{font-size:14px;color:var(--muted)}
+.row .tag{font-size:11px;font-weight:700;color:var(--success);background:var(--success-soft);border-radius:999px;padding:2px 8px;margin-left:6px;vertical-align:middle}
+.iconbtn{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-text);flex:none}
+.iconbtn svg{width:20px;height:20px}
+.iconbtn.big{width:64px;height:64px;background:var(--accent);color:var(--on-accent)}
+.iconbtn.big svg{width:28px;height:28px}
+.empty{text-align:center;color:var(--muted);padding:32px 16px;border:1px dashed var(--border);border-radius:var(--r-md)}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 20px;border-radius:var(--r-md);font-weight:700;font-size:16px;width:100%;transition:transform .1s,background .15s}
+.btn.primary{background:var(--accent);color:var(--on-accent);box-shadow:0 4px 0 0 var(--accent-dark)}
+.btn.primary:active{transform:translateY(3px);box-shadow:none}
+.btn.secondary{background:var(--surface);border:2px solid var(--border);color:var(--text)}
+.btn.ghost{color:var(--accent-text);min-height:40px}
+.btn.danger{background:var(--danger);color:var(--on-danger)}
+.btn.ok{background:var(--success);color:var(--on-success)}
+.btn.bad{background:var(--danger);color:var(--on-danger)}
+.btn:disabled{opacity:.45;box-shadow:none;transform:none}
+.btn svg{width:20px;height:20px}
+
+/* ---------- overlay screens (lesson, talk) ---------- */
+.screen{position:fixed;inset:0;z-index:20;background:var(--bg);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.screen-in{max-width:520px;width:100%;margin:0 auto;display:flex;flex-direction:column;flex:1;min-height:0}
+.lesson-top{display:flex;align-items:center;gap:12px;padding-block:14px 10px}
+.close{width:40px;height:40px;display:grid;place-items:center;color:var(--muted);border-radius:50%}
+.close svg{width:22px;height:22px}
+.bar{flex:1;height:10px;background:var(--border);border-radius:5px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent-dark);width:0;transition:width .3s}
+.ex{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:16px;padding-block:8px 16px;min-height:0}
+.prompt{font-size:22px;font-family:var(--display);font-weight:500;line-height:1.25}
+.prompt .thai{font-size:34px;line-height:1.3}
+.prompt small{display:block;font-family:var(--body);font-size:14px;color:var(--muted);font-weight:400;margin-bottom:4px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px 20px;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.card .big{font-family:var(--display);font-size:40px;line-height:1.35;font-weight:400}
+.card .ro{color:var(--accent-text);font-weight:700;font-size:18px}
+.card .en{font-size:18px}
+.card .note{font-size:14px;color:var(--muted);margin-top:6px}
+.card .play{align-self:flex-start;margin-top:8px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:12px;text-align:left;background:var(--surface);border:2px solid var(--border);border-radius:var(--r-md);padding:12px 14px;min-height:52px;width:100%;transition:border-color .12s,background .12s}
+.opt .k{width:24px;height:24px;border-radius:7px;border:1.5px solid var(--border);display:grid;place-items:center;font-size:12px;color:var(--muted);flex:none;font-weight:700}
+.opt .t{flex:1;min-width:0}
+.opt .t>span{display:block}
+.opt .t .th{font-family:var(--display);font-size:22px;line-height:1.3}
+.opt .t .ro{font-size:14px;color:var(--accent-text);font-weight:500}
+.opt .t .en{font-size:17px}
+.opt[aria-pressed="true"]{border-color:var(--ring);background:var(--accent-soft)}
+.opt.correct{border-color:var(--success);background:var(--success-soft)}
+.opt.wrong{border-color:var(--danger);background:var(--danger-soft)}
+.opt:disabled{cursor:default}
+.tiles{display:flex;flex-wrap:wrap;gap:8px;min-height:64px;padding:10px 0;border-bottom:2px solid var(--border);border-top:2px solid var(--border)}
+.tiles.bank{border:0}
+.tile{background:var(--surface);border:2px solid var(--border);border-radius:var(--r-sm);padding:6px 12px;display:flex;flex-direction:column;align-items:center;line-height:1.2;box-shadow:0 3px 0 0 var(--border)}
+.tile .ro{font-weight:700;font-size:16px}
+.tile .th{font-family:var(--display);font-size:14px;color:var(--muted)}
+.tile.ghosted{visibility:hidden}
+.pairs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pairs .col{display:grid;gap:10px;min-width:0}
+.pairs .opt{min-height:60px;justify-content:center;text-align:center}
+.pairs .opt .t .th{font-size:20px}
+.pairs .opt.locked{opacity:.4;border-color:var(--success)}
+.speak{display:flex;flex-direction:column;align-items:center;gap:14px;padding-block:8px}
+.speak .status{font-size:15px;color:var(--muted);min-height:22px;text-align:center}
+.speak .heard{font-family:var(--display);font-size:20px;text-align:center}
+.speak .mic{width:84px;height:84px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;box-shadow:0 5px 0 0 var(--accent-dark)}
+.speak .mic svg{width:36px;height:36px}
+.speak .mic.listening{animation:pulse 1.2s ease-in-out infinite;background:var(--accent-dark)}
+.speak .mic:active{transform:translateY(3px);box-shadow:none}
+.hint{font-size:14px;color:var(--muted);text-align:center;max-width:34ch}
+.footer{padding-block:12px 16px;display:flex;flex-direction:column;gap:8px}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:16px max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));box-shadow:var(--shadow-sheet);transform:translateY(100%);transition:transform .22s cubic-bezier(.2,.8,.2,1)}
+.sheet.show{transform:none}
+.sheet.ok{background:var(--success-soft);color:var(--text)}
+.sheet.bad{background:var(--danger-soft);color:var(--text)}
+.sheet-in{max-width:520px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.sheet h3{font-size:20px;display:flex;align-items:center;gap:8px}
+.sheet h3 svg{width:26px;height:26px;flex:none}
+.sheet.ok h3{color:var(--success)}
+.sheet.bad h3{color:var(--danger)}
+.sheet .ans{font-family:var(--display);font-size:22px}
+.sheet .ans small{display:block;font-family:var(--body);font-size:15px;color:var(--muted)}
+
+/* ---------- complete ---------- */
+.done-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:22px;text-align:center}
+.done-wrap h2{font-size:30px}
+.done-wrap .thai{font-size:40px;font-weight:300;display:block}
+.done-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%}
+.done-stats .stat{align-items:center;text-align:center}
+.done-stats .stat span{white-space:normal;line-height:1.2}
+
+/* ---------- talk ---------- */
+.chat{display:flex;flex-direction:column;gap:12px;padding-block:8px}
+.bub{max-width:88%;border-radius:18px;padding:12px 14px;display:flex;flex-direction:column;gap:3px;border:2px solid transparent}
+.bub.app{align-self:flex-start;background:var(--surface);border-color:var(--border);border-bottom-left-radius:6px}
+.bub.you{align-self:flex-end;background:var(--accent-soft);border-bottom-right-radius:6px}
+.bub.now{border-color:var(--ring)}
+.bub .who{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.03em}
+.bub .th{font-family:var(--display);font-size:22px;line-height:1.3}
+.bub .ro{font-size:14px;color:var(--accent-text);font-weight:500}
+.bub .en{font-size:14px;color:var(--muted)}
+.bub .tools{display:flex;gap:8px;margin-top:6px}
+.bub .tools .iconbtn{width:36px;height:36px}
+.bub .tools .iconbtn svg{width:16px;height:16px}
+.bub.pending{opacity:.45}
+.bub.said{border-color:var(--success)}
+
+/* ---------- settings ---------- */
+.setting{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:12px 14px;margin-bottom:10px}
+.setting .l{min-width:0}
+.setting .l b{display:block;font-weight:700}
+.setting .l span{font-size:13px;color:var(--muted)}
+.seg{display:inline-flex;background:var(--bg);border:1px solid var(--border);border-radius:999px;padding:3px;flex:none}
+.seg button{padding:6px 12px;border-radius:999px;font-weight:700;font-size:14px;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--on-accent)}
+.switch{width:50px;height:30px;border-radius:15px;background:var(--border);position:relative;flex:none;transition:background .15s}
+.switch::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:var(--surface);transition:transform .15s;box-shadow:0 1px 2px rgba(0,0,0,.2)}
+.switch[aria-checked="true"]{background:var(--success)}
+.switch[aria-checked="true"]::after{transform:translateX(20px)}
+input[type=text]{font:inherit;color:inherit;background:var(--bg);border:1px solid var(--border-input);border-radius:var(--r-sm);padding:8px 10px;width:120px;max-width:40vw}
+.toast{position:fixed;left:50%;bottom:calc(var(--nav-h) + 16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(20px);background:var(--text);color:var(--bg);padding:10px 16px;border-radius:999px;font-weight:700;opacity:0;transition:all .2s;z-index:40;pointer-events:none;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+@media (max-width:380px){
+  .node-row.l{padding-left:6%}.node-row.r{padding-right:6%}
+  .card .big{font-size:34px}
+}
+</style>
+
+<div class="app" id="app"></div>
+<nav class="nav" id="nav" aria-label="Main">
+  <div class="nav-in">
+    <button data-tab="home" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h6a4 4 0 0 0 0-8H9a4 4 0 0 1 0-8h7"/><circle cx="18" cy="19" r="2"/></svg>Learn</button>
+    <button data-tab="practice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.3L3 16"/><path d="M3 21v-5h5"/></svg>Practice</button>
+    <button data-tab="phrases"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg>Phrases</button>
+    <button data-tab="me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Me</button>
+  </div>
+</nav>
+<div id="overlay"></div>
+<div class="sheet" id="sheet" role="status" aria-live="polite"></div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* =========================================================
+   CONTENT. Items are [thai, romanisation, english, note].
+   Phrases use one space per word in BOTH thai and romanisation,
+   so the sentence-building tiles line up. Thai is joined for display.
+   Romanisation: à low, â falling, á high, ǎ rising, no mark = mid.
+   ========================================================= */
+const UNITS = [
+{ id:'u1', title:'Hello and thank you', sub:'The six words you will say 50 times a day', lessons:[
+  { id:'u1l1', title:'First words', items:[
+    ['สวัสดี','sà-wàt-dii','hello / goodbye','Works at any time of day, for hello and for bye.'],
+    ['ครับ','khráp','polite ending word','Men end sentences with khráp. Women say khà. It makes anything polite.'],
+    ['ขอบคุณ','khàwp-khun','thank you'],
+    ['ใช่','châi','yes / that is right'],
+    ['ไม่','mâi','no / not','Put it before a word to negate it: mâi phèt = not spicy.'],
+    ['ขอโทษ','khǎw-thôot','sorry / excuse me']
+  ]},
+  { id:'u1l2', title:'How are you?', items:[
+    ['สบายดี ไหม','sà-baai-dii mǎi','How are you?','Literally "well, yes-no?".'],
+    ['สบายดี','sà-baai-dii','I am fine / well'],
+    ['ไม่ เป็น ไร','mâi pen rai','no problem / you are welcome','The most Thai sentence there is. Also "never mind".'],
+    ['โชคดี','chôok-dii','good luck','Often said instead of goodbye.'],
+    ['ไหม','mǎi','question word','Goes at the end to turn a sentence into a yes/no question.'],
+    ['มาก','mâak','very / a lot','Goes after the word: sǔay mâak = very beautiful.'],
+    ['ดี','dii','good']
+  ]},
+  { id:'u1l3', title:'Put it together', items:[
+    ['สวัสดี ครับ','sà-wàt-dii khráp','Hello (polite)'],
+    ['ขอบคุณ มาก ครับ','khàwp-khun mâak khráp','Thank you very much'],
+    ['สบายดี ไหม ครับ','sà-baai-dii mǎi khráp','How are you? (polite)'],
+    ['สบายดี ครับ ขอบคุณ','sà-baai-dii khráp khàwp-khun','I am fine, thank you'],
+    ['ไม่ เป็น ไร ครับ','mâi pen rai khráp','No problem'],
+    ['ขอโทษ ครับ','khǎw-thôot khráp','Excuse me / sorry (polite)']
+  ]}
+], talk:{ title:'Meeting a neighbour', scene:'You pass your neighbour on the stairs.', lines:[
+  {who:'you', th:'สวัสดี ครับ', ro:'sà-wàt-dii khráp', en:'Hello.'},
+  {who:'app', th:'สวัสดี ค่ะ สบายดี ไหม คะ', ro:'sà-wàt-dii khà, sà-baai-dii mǎi khá', en:'Hello! How are you?'},
+  {who:'you', th:'สบายดี ครับ ขอบคุณ', ro:'sà-baai-dii khráp, khàwp-khun', en:'I am fine, thank you.'},
+  {who:'app', th:'โชคดี นะ คะ', ro:'chôok-dii ná khá', en:'Good luck, see you.'},
+  {who:'you', th:'ขอบคุณ ครับ โชคดี ครับ', ro:'khàwp-khun khráp, chôok-dii khráp', en:'Thank you. See you!'}
+]}},
+
+{ id:'u2', title:'Who I am', sub:'Name, country, Chiang Mai, age', lessons:[
+  { id:'u2l1', title:'Me and you', items:[
+    ['ผม','phǒm','I / me','Men say phǒm. Women say chǎn.'],
+    ['คุณ','khun','you','Also put before a name to be polite: khun Kevin.'],
+    ['ชื่อ','chʉ̂ʉ','name / to be called'],
+    ['อะไร','à-rai','what','Goes at the end: chʉ̂ʉ à-rai = what name?'],
+    ['เป็น','pen','to be (a person, a thing)'],
+    ['คน','khon','person / people']
+  ]},
+  { id:'u2l2', title:'Where I live', items:[
+    ['อยู่','yùu','to live / to be at'],
+    ['ที่','thîi','at / in (a place)'],
+    ['เชียงใหม่','chiang-mài','Chiang Mai'],
+    ['มา จาก','maa jàak','to come from'],
+    ['ฝรั่งเศส','fà-ràng-sèet','France / French'],
+    ['อายุ','aa-yú','age'],
+    ['ปี','pii','year']
+  ]},
+  { id:'u2l3', title:'Introduce yourself', items:[
+    ['ผม ชื่อ เควิน','phǒm chʉ̂ʉ Kevin','My name is Kevin'],
+    ['คุณ ชื่อ อะไร ครับ','khun chʉ̂ʉ à-rai khráp','What is your name?'],
+    ['ผม เป็น คน ฝรั่งเศส','phǒm pen khon fà-ràng-sèet','I am French'],
+    ['ผม อยู่ ที่ เชียงใหม่','phǒm yùu thîi chiang-mài','I live in Chiang Mai'],
+    ['ผม มา จาก ฝรั่งเศส','phǒm maa jàak fà-ràng-sèet','I come from France'],
+    ['ผม อายุ สามสิบสอง ปี','phǒm aa-yú sǎam-sìp-sǎwng pii','I am 32 years old','sǎam-sìp-sǎwng = 3-10-2 = 32. Numbers are in the next unit.'],
+    ['ยินดี ที่ ได้ รู้จัก ครับ','yin-dii thîi dâai rúu-jàk khráp','Nice to meet you']
+  ]}
+], talk:{ title:'At a café', scene:'The person at the next table starts talking to you.', lines:[
+  {who:'app', th:'สวัสดี ค่ะ คุณ ชื่อ อะไร คะ', ro:'sà-wàt-dii khà, khun chʉ̂ʉ à-rai khá', en:'Hello! What is your name?'},
+  {who:'you', th:'ผม ชื่อ เควิน ครับ', ro:'phǒm chʉ̂ʉ Kevin khráp', en:'My name is Kevin.'},
+  {who:'app', th:'มา จาก ไหน คะ', ro:'maa jàak nǎi khá', en:'Where are you from?'},
+  {who:'you', th:'ผม มา จาก ฝรั่งเศส ครับ ผม อยู่ ที่ เชียงใหม่', ro:'phǒm maa jàak fà-ràng-sèet khráp, phǒm yùu thîi chiang-mài', en:'I come from France. I live in Chiang Mai.'},
+  {who:'app', th:'ยินดี ที่ ได้ รู้จัก ค่ะ', ro:'yin-dii thîi dâai rúu-jàk khà', en:'Nice to meet you.'},
+  {who:'you', th:'ยินดี ที่ ได้ รู้จัก ครับ', ro:'yin-dii thîi dâai rúu-jàk khráp', en:'Nice to meet you too.'}
+]}},
+
+{ id:'u3', title:'Numbers', sub:'Prices, ages, how many', lessons:[
+  { id:'u3l1', title:'0 to 5', items:[
+    ['ศูนย์','sǔun','0'],['หนึ่ง','nʉ̀ng','1'],['สอง','sǎwng','2'],['สาม','sǎam','3'],['สี่','sìi','4'],['ห้า','hâa','5']
+  ]},
+  { id:'u3l2', title:'6 to 10', items:[
+    ['หก','hòk','6'],['เจ็ด','jèt','7'],['แปด','pàet','8'],['เก้า','gâo','9'],['สิบ','sìp','10']
+  ]},
+  { id:'u3l3', title:'Bigger numbers', items:[
+    ['สิบเอ็ด','sìp-èt','11','11 and 21 end in èt, not nʉ̀ng.'],
+    ['สิบสอง','sìp-sǎwng','12','Tens + units: 10-2.'],
+    ['ยี่สิบ','yîi-sìp','20','20 is yîi-sìp, not sǎwng-sìp.'],
+    ['ยี่สิบเอ็ด','yîi-sìp-èt','21'],
+    ['สามสิบสอง','sǎam-sìp-sǎwng','32','Your age: 3-10-2.'],
+    ['ห้าสิบ','hâa-sìp','50'],
+    ['ร้อย','ráwy','100','nʉ̀ng ráwy or just ráwy.'],
+    ['พัน','phan','1000']
+  ]}
+], talk:{ title:'Two people, please', scene:'At a restaurant door, then a question about you.', lines:[
+  {who:'app', th:'กี่ คน คะ', ro:'gìi khon khá', en:'How many people?'},
+  {who:'you', th:'สอง คน ครับ', ro:'sǎwng khon khráp', en:'Two people.'},
+  {who:'app', th:'อายุ เท่าไหร่ คะ', ro:'aa-yú thâo-rài khá', en:'How old are you?'},
+  {who:'you', th:'สามสิบสอง ปี ครับ', ro:'sǎam-sìp-sǎwng pii khráp', en:'32 years old.'}
+]}},
+
+{ id:'u4', title:'Food and drink', sub:'Order, say it is good, pay', lessons:[
+  { id:'u4l1', title:'On the table', items:[
+    ['น้ำ','nám','water'],['ข้าว','khâao','rice / a meal'],['กาแฟ','gaa-fae','coffee'],['ไก่','gài','chicken'],['หมู','mǔu','pork'],
+    ['ขอ','khǎw','may I have / please give me','Start any order with khǎw.'],
+    ['เอา','ao','to take / to want','ao an-níi = I will take this one.'],
+    ['อันนี้','an-níi','this one','Point and say it. Solves most menus.']
+  ]},
+  { id:'u4l2', title:'Tastes', items:[
+    ['อร่อย','à-ràwy','delicious'],['เผ็ด','phèt','spicy'],['หวาน','wǎan','sweet'],['หิว','hǐu','hungry'],['อิ่ม','ìm','full (after eating)'],
+    ['เบียร์','bia','beer'],['เช็คบิล','chék-bin','the bill','From English "check bill". Everyone says it.']
+  ]},
+  { id:'u4l3', title:'Ordering', items:[
+    ['ขอ น้ำ ครับ','khǎw nám khráp','Water, please'],
+    ['ขอ กาแฟ ครับ','khǎw gaa-fae khráp','A coffee, please'],
+    ['เอา อันนี้ ครับ','ao an-níi khráp','I will take this one'],
+    ['ไม่ เผ็ด ครับ','mâi phèt khráp','Not spicy, please'],
+    ['อร่อย มาก ครับ','à-ràwy mâak khráp','Very delicious!'],
+    ['ผม หิว ครับ','phǒm hǐu khráp','I am hungry'],
+    ['เช็คบิล ครับ','chék-bin khráp','The bill, please']
+  ]}
+], talk:{ title:'At a restaurant', scene:'Lunch at a small place near the market.', lines:[
+  {who:'app', th:'สวัสดี ค่ะ รับ อะไร ดี คะ', ro:'sà-wàt-dii khà, ráp à-rai dii khá', en:'Hello, what would you like?'},
+  {who:'you', th:'ขอ ข้าว ไก่ ครับ ไม่ เผ็ด ครับ', ro:'khǎw khâao gài khráp, mâi phèt khráp', en:'Chicken rice, please. Not spicy.'},
+  {who:'app', th:'ดื่ม อะไร คะ', ro:'dʉ̀ʉm à-rai khá', en:'What do you drink?'},
+  {who:'you', th:'ขอ น้ำ ครับ', ro:'khǎw nám khráp', en:'Water, please.'},
+  {who:'app', th:'อร่อย ไหม คะ', ro:'à-ràwy mǎi khá', en:'Is it good?'},
+  {who:'you', th:'อร่อย มาก ครับ เช็คบิล ครับ', ro:'à-ràwy mâak khráp, chék-bin khráp', en:'Very good. The bill, please.'}
+]}},
+
+{ id:'u5', title:'Shopping and money', sub:'How much, too expensive, a little discount', lessons:[
+  { id:'u5l1', title:'Prices', items:[
+    ['เท่าไหร่','thâo-rài','how much / how many'],['บาท','bàat','baht'],['แพง','phaeng','expensive'],['ถูก','thùuk','cheap'],
+    ['ได้','dâai','can / OK / possible','The all-purpose yes: dâai = sure, can do.'],
+    ['ไม่ ได้','mâi dâai','cannot / not possible']
+  ]},
+  { id:'u5l2', title:'Bargaining words', items:[
+    ['ลด','lót','to lower / to discount'],
+    ['หน่อย','nàwy','a little (softener)','Add it to a request to make it gentle: lót nàwy.'],
+    ['มี','mii','to have'],['ซื้อ','sʉ́ʉ','to buy'],['ราคา','raa-khaa','price'],['ใหญ่','yài','big'],['เล็ก','lék','small']
+  ]},
+  { id:'u5l3', title:'At the market', items:[
+    ['อันนี้ เท่าไหร่ ครับ','an-níi thâo-rài khráp','How much is this one?'],
+    ['แพง มาก ครับ','phaeng mâak khráp','That is very expensive'],
+    ['ลด หน่อย ได้ ไหม ครับ','lót nàwy dâai mǎi khráp','Can you lower it a little?'],
+    ['มี ไหม ครับ','mii mǎi khráp','Do you have it?'],
+    ['ร้อย บาท ครับ','ráwy bàat khráp','100 baht'],
+    ['ไม่ เอา ครับ ขอบคุณ','mâi ao khráp khàwp-khun','No thanks (I do not want it)']
+  ]}
+], talk:{ title:'At the night market', scene:'A shirt you like, a price you do not.', lines:[
+  {who:'you', th:'อันนี้ เท่าไหร่ ครับ', ro:'an-níi thâo-rài khráp', en:'How much is this one?'},
+  {who:'app', th:'สองร้อย บาท ค่ะ', ro:'sǎwng-ráwy bàat khà', en:'200 baht.'},
+  {who:'you', th:'แพง มาก ครับ ลด หน่อย ได้ ไหม ครับ', ro:'phaeng mâak khráp, lót nàwy dâai mǎi khráp', en:'Very expensive. Can you lower it a little?'},
+  {who:'app', th:'ได้ ค่ะ ร้อยห้าสิบ บาท', ro:'dâai khà, ráwy-hâa-sìp bàat', en:'OK. 150 baht.'},
+  {who:'you', th:'เอา อันนี้ ครับ ขอบคุณ ครับ', ro:'ao an-níi khráp, khàwp-khun khráp', en:'I will take it. Thank you.'}
+]}},
+
+{ id:'u6', title:'Getting around', sub:'Taxis, directions, the toilet', lessons:[
+  { id:'u6l1', title:'Places', items:[
+    ['ไป','pai','to go'],['ไหน','nǎi','where'],['ที่ไหน','thîi-nǎi','where (which place)'],
+    ['ห้องน้ำ','hâwng-nám','toilet','Literally "water room".'],
+    ['ตลาด','tà-làat','market'],['โรงแรม','roong-raem','hotel'],['สนามบิน','sà-nǎam-bin','airport']
+  ]},
+  { id:'u6l2', title:'Directions', items:[
+    ['ซ้าย','sáai','left'],['ขวา','khwǎa','right'],['ตรง ไป','trong pai','straight ahead'],['เลี้ยว','líao','to turn'],
+    ['จอด','jàwt','to stop / to park'],['ตรงนี้','trong-níi','right here'],
+    ['ใกล้','glâi','near','Falling tone. The famous trap: glai with a mid tone means far.'],
+    ['ไกล','glai','far','Mid tone. Say it flat.']
+  ]},
+  { id:'u6l3', title:'In a taxi', items:[
+    ['ห้องน้ำ อยู่ ที่ไหน ครับ','hâwng-nám yùu thîi-nǎi khráp','Where is the toilet?'],
+    ['ไป ตลาด ครับ','pai tà-làat khráp','To the market, please'],
+    ['ไป สนามบิน เท่าไหร่ ครับ','pai sà-nǎam-bin thâo-rài khráp','How much to the airport?'],
+    ['เลี้ยว ซ้าย ครับ','líao sáai khráp','Turn left, please'],
+    ['จอด ตรงนี้ ครับ','jàwt trong-níi khráp','Stop right here, please'],
+    ['โรงแรม อยู่ ใกล้ ไหม ครับ','roong-raem yùu glâi mǎi khráp','Is the hotel near?']
+  ]}
+], talk:{ title:'In a red truck', scene:'A songthaew driver leans out of the window.', lines:[
+  {who:'app', th:'ไป ไหน คะ', ro:'pai nǎi khá', en:'Where to?'},
+  {who:'you', th:'ไป ตลาด ครับ เท่าไหร่ ครับ', ro:'pai tà-làat khráp, thâo-rài khráp', en:'To the market. How much?'},
+  {who:'app', th:'หกสิบ บาท ค่ะ', ro:'hòk-sìp bàat khà', en:'60 baht.'},
+  {who:'you', th:'ได้ ครับ', ro:'dâai khráp', en:'OK.'},
+  {who:'you', th:'เลี้ยว ขวา ครับ จอด ตรงนี้ ครับ ขอบคุณ ครับ', ro:'líao khwǎa khráp, jàwt trong-níi khráp, khàwp-khun khráp', en:'Turn right. Stop here, please. Thank you.'}
+]}},
+
+{ id:'u7', title:'Compliments and small talk', sub:'Be nice, be liked', lessons:[
+  { id:'u7l1', title:'Nice things', items:[
+    ['สวย','sǔay','beautiful','Rising tone. Flat, it means unlucky.'],['น่ารัก','nâa-rák','cute / lovely'],['หล่อ','làw','handsome'],
+    ['เก่ง','gèng','good at it / skilled','What people say when you try Thai.'],
+    ['ชอบ','châwp','to like'],['รัก','rák','to love'],['สนุก','sà-nùk','fun']
+  ]},
+  { id:'u7l2', title:'Talking about here', items:[
+    ['เมืองไทย','mʉang-thai','Thailand'],['อาหารไทย','aa-hǎan-thai','Thai food'],['คนไทย','khon-thai','Thai person / Thai people'],
+    ['จริง','jing','true / really'],['นะ','ná','softener (friendly ending)','Makes a sentence warm: gèng mâak ná.'],
+    ['ด้วย','dûay','too / also'],['วันนี้','wan-níi','today'],['ร้อน','ráwn','hot (weather, food temperature)']
+  ]},
+  { id:'u7l3', title:'Say something nice', items:[
+    ['คุณ สวย มาก ครับ','khun sǔay mâak khráp','You are very beautiful'],
+    ['คุณ น่ารัก มาก ครับ','khun nâa-rák mâak khráp','You are very cute'],
+    ['ผม ชอบ เมืองไทย มาก ครับ','phǒm châwp mʉang-thai mâak khráp','I like Thailand a lot'],
+    ['ผม ชอบ อาหารไทย ครับ','phǒm châwp aa-hǎan-thai khráp','I like Thai food'],
+    ['สนุก มาก ครับ','sà-nùk mâak khráp','It is a lot of fun'],
+    ['คุณ เก่ง มาก นะ','khun gèng mâak ná','You are really good at it!'],
+    ['วันนี้ ร้อน มาก ครับ','wan-níi ráwn mâak khráp','It is very hot today']
+  ]}
+], talk:{ title:'Small talk at a bar', scene:'A friendly chat on a hot evening.', lines:[
+  {who:'app', th:'ชอบ เมืองไทย ไหม คะ', ro:'châwp mʉang-thai mǎi khá', en:'Do you like Thailand?'},
+  {who:'you', th:'ชอบ มาก ครับ อาหารไทย อร่อย มาก', ro:'châwp mâak khráp, aa-hǎan-thai à-ràwy mâak', en:'I like it a lot. Thai food is very good.'},
+  {who:'app', th:'พูด ไทย เก่ง นะ คะ', ro:'phûut thai gèng ná khá', en:'You speak Thai well!'},
+  {who:'you', th:'นิดหน่อย ครับ คุณ สวย มาก นะ ครับ', ro:'nít-nàwy khráp, khun sǔay mâak ná khráp', en:'Just a little. You are very beautiful.'},
+  {who:'app', th:'ขอบคุณ ค่ะ', ro:'khàwp-khun khà', en:'Thank you.'}
+]}},
+
+{ id:'u8', title:'Getting by', sub:'When you do not understand, and when it matters', lessons:[
+  { id:'u8l1', title:'Understanding', items:[
+    ['เข้าใจ','khâo-jai','to understand'],['ไม่ เข้าใจ','mâi khâo-jai','do not understand'],['พูด','phûut','to speak'],
+    ['ภาษาไทย','phaa-sǎa-thai','Thai language'],['ภาษาอังกฤษ','phaa-sǎa-ang-grìt','English language'],
+    ['นิดหน่อย','nít-nàwy','a little','Nitnoy. The name of this app.'],
+    ['ช้าๆ','cháa-cháa','slowly']
+  ]},
+  { id:'u8l2', title:'Help', items:[
+    ['ช่วย ด้วย','chûay dûay','help!'],['หมอ','mǎw','doctor'],['โรงพยาบาล','roong-phá-yaa-baan','hospital'],['ตำรวจ','tam-rùat','police'],
+    ['อีก ครั้ง','ìik khráng','again / once more'],['พรุ่งนี้','phrûng-níi','tomorrow'],['เจ็บ','jèp','to hurt / painful']
+  ]},
+  { id:'u8l3', title:'Survival sentences', items:[
+    ['ผม ไม่ เข้าใจ ครับ','phǒm mâi khâo-jai khráp','I do not understand'],
+    ['พูด ช้าๆ หน่อย ครับ','phûut cháa-cháa nàwy khráp','Please speak slowly'],
+    ['พูด ภาษาอังกฤษ ได้ ไหม ครับ','phûut phaa-sǎa-ang-grìt dâai mǎi khráp','Can you speak English?'],
+    ['ผม พูด ภาษาไทย นิดหน่อย ครับ','phǒm phûut phaa-sǎa-thai nít-nàwy khráp','I speak a little Thai'],
+    ['พูด อีก ครั้ง ได้ ไหม ครับ','phûut ìik khráng dâai mǎi khráp','Can you say that again?'],
+    ['ช่วย ด้วย ครับ','chûay dûay khráp','Help, please!'],
+    ['ไป โรงพยาบาล ครับ','pai roong-phá-yaa-baan khráp','To the hospital, please']
+  ]}
+], talk:{ title:'Too fast', scene:'Someone asks you a long question, fast.', lines:[
+  {who:'app', th:'คุณ มา เชียงใหม่ นาน แค่ไหน แล้ว คะ', ro:'khun maa chiang-mài naan khàe-nǎi láew khá', en:'How long have you been in Chiang Mai?'},
+  {who:'you', th:'ขอโทษ ครับ ผม ไม่ เข้าใจ พูด ช้าๆ หน่อย ครับ', ro:'khǎw-thôot khráp, phǒm mâi khâo-jai, phûut cháa-cháa nàwy khráp', en:'Sorry, I do not understand. Please speak slowly.'},
+  {who:'app', th:'อยู่ เชียงใหม่ นาน ไหม คะ', ro:'yùu chiang-mài naan mǎi khá', en:'(slowly) In Chiang Mai long?'},
+  {who:'you', th:'ผม พูด ภาษาไทย นิดหน่อย ครับ พูด ภาษาอังกฤษ ได้ ไหม ครับ', ro:'phǒm phûut phaa-sǎa-thai nít-nàwy khráp, phûut phaa-sǎa-ang-grìt dâai mǎi khráp', en:'I speak a little Thai. Can you speak English?'},
+  {who:'app', th:'ได้ ค่ะ นิดหน่อย', ro:'dâai khà, nít-nàwy', en:'Yes, a little.'},
+  {who:'you', th:'ขอบคุณ มาก ครับ', ro:'khàwp-khun mâak khráp', en:'Thank you very much.'}
+]}}
+];
+
+/* ---------- derived content ---------- */
+const ITEMS = []; const ITEM_BY_ID = {}; const LESSONS = []; const LESSON_BY_ID = {}; const UNIT_BY_ID = {};
+UNITS.forEach((u, ui) => {
+  UNIT_BY_ID[u.id] = u; u.index = ui;
+  u.lessons.forEach((l, li) => {
+    l.unit = u; l.index = li; LESSONS.push(l); LESSON_BY_ID[l.id] = l;
+    l.items = l.items.map((a, k) => {
+      const it = { id: `${l.id}i${k}`, th: a[0], ro: a[1], en: a[2], note: a[3] || '', unit: u, lesson: l };
+      it.phrase = it.ro.split(' ').length >= 3;
+      ITEMS.push(it); ITEM_BY_ID[it.id] = it; return it;
+    });
+  });
+  u.talk.id = u.id + 'talk'; u.talk.unit = u;
+});
+
+/* ---------- state ---------- */
+const KEY = 'nitnoy.v1';
+const today = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; };
+const yesterday = () => { const d = new Date(); d.setDate(d.getDate()-1); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; };
+const fresh = () => ({ v:1, name:'Kevin', xp:0, streak:{count:0,last:null}, today:{day:today(),lessons:0}, lessons:{}, talks:{}, items:{}, settings:{gender:'m', rom:true, autoplay:true, rate:0.85, speakSkip:false} });
+let S = fresh();
+function load(){ try { const raw = localStorage.getItem(KEY); if (raw) { const o = JSON.parse(raw); S = Object.assign(fresh(), o); S.settings = Object.assign(fresh().settings, o.settings||{}); } } catch(e){} if (S.today.day !== today()) { S.today = {day:today(), lessons:0}; } }
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} }
+load();
+
+/* ---------- helpers ---------- */
+const $ = (s, r=document) => r.querySelector(s);
+const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const shuffle = a => { a = a.slice(); for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+const pick = (a, n) => shuffle(a).slice(0, n);
+const joinTh = th => th.replace(/ /g, '');
+const ICON = {
+  play:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>',
+  mic:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg>',
+  check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>',
+  x:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6 6 18"/></svg>',
+  lock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>',
+  star:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg>',
+  talk:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg>',
+  flame:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 4 5 5.5 5 11a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5 0 1.5.7 2.5 2 2.5 0-3-1-5 1-9z"/></svg>',
+  bolt:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>',
+  search:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>'
+};
+
+/* gender: men say khráp / phǒm, women say khà / chǎn */
+function adapt(it){
+  if (S.settings.gender !== 'f') return it;
+  const th = it.th.split(' ').map(t => t === 'ครับ' ? 'ค่ะ' : t === 'ผม' ? 'ฉัน' : t).join(' ');
+  const ro = it.ro.split(' ').map(t => t === 'khráp' ? 'khà' : t === 'phǒm' ? 'chǎn' : t).join(' ');
+  return Object.assign({}, it, { th, ro });
+}
+
+/* ---------- audio ---------- */
+let voices = [];
+function refreshVoices(){ try { voices = speechSynthesis.getVoices() || []; } catch(e){ voices = []; } }
+if ('speechSynthesis' in window) { refreshVoices(); speechSynthesis.onvoiceschanged = refreshVoices; }
+const thaiVoice = () => voices.find(v => /^th/i.test(v.lang)) || null;
+const hasThaiVoice = () => !!thaiVoice();
+function speak(th){
+  if (!('speechSynthesis' in window)) return false;
+  try {
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(joinTh(th).replace(/ๆ/g, ''));
+    u.lang = 'th-TH'; const v = thaiVoice(); if (v) u.voice = v; u.rate = S.settings.rate || 0.85;
+    speechSynthesis.speak(u); return true;
+  } catch(e){ return false; }
+}
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition || null;
+let micBlocked = false;
+function listen(onStatus){
+  return new Promise(resolve => {
+    if (!SR || micBlocked) return resolve(null);
+    let r; try { r = new SR(); } catch(e){ return resolve(null); }
+    r.lang = 'th-TH'; r.interimResults = false; r.maxAlternatives = 3;
+    let done = false; const finish = v => { if (!done) { done = true; resolve(v); } };
+    r.onresult = e => { const alts = []; for (const res of e.results) for (const a of res) alts.push(a.transcript); finish(alts); };
+    r.onerror = e => { if (e.error === 'not-allowed' || e.error === 'service-not-allowed' || e.error === 'audio-capture') micBlocked = true; finish(null); };
+    r.onend = () => finish(null);
+    try { r.start(); onStatus && onStatus('Listening...'); } catch(e){ finish(null); }
+    setTimeout(() => { try { r.stop(); } catch(e){} }, 7000);
+  });
+}
+function similarity(a, b){
+  a = joinTh(a).replace(/[^฀-๿]/g, ''); b = joinTh(b).replace(/[^฀-๿]/g, '');
+  if (!a.length || !b.length) return 0;
+  if (a.includes(b) || b.includes(a)) return 1;
+  const m = a.length, n = b.length; let prev = Array.from({length:n+1}, (_, j) => j);
+  for (let i=1;i<=m;i++){ const cur=[i]; for (let j=1;j<=n;j++){ cur[j] = Math.min(prev[j]+1, cur[j-1]+1, prev[j-1] + (a[i-1]===b[j-1]?0:1)); } prev = cur; }
+  return 1 - prev[n] / Math.max(m, n);
+}
+const stripParticles = th => th.split(' ').filter(t => !['ครับ','ค่ะ','คะ','นะ'].includes(t)).join(' ');
+
+/* ---------- progress ---------- */
+function itemStat(id){ return S.items[id] || (S.items[id] = {seen:0,right:0,wrong:0,last:0}); }
+function markItem(id, ok){ const s = itemStat(id); s.seen++; if (ok) s.right++; else s.wrong++; s.last = Date.now(); }
+function lessonDone(id){ return (S.lessons[id] && S.lessons[id].times) || 0; }
+function unitLessonsDone(u){ return u.lessons.filter(l => lessonDone(l.id) > 0).length; }
+function isUnlocked(lesson){ const i = LESSONS.indexOf(lesson); if (i === 0) return true; return lessonDone(LESSONS[i-1].id) > 0; }
+function talkUnlocked(u){ return unitLessonsDone(u) === u.lessons.length; }
+function talkDone(u){ return !!S.talks[u.talk.id]; }
+function currentLesson(){ return LESSONS.find(l => lessonDone(l.id) === 0 && isUnlocked(l)) || null; }
+function touchStreak(){
+  const t = today();
+  if (S.streak.last === t) return false;
+  S.streak.count = (S.streak.last === yesterday()) ? S.streak.count + 1 : 1;
+  S.streak.last = t; return true;
+}
+function streakAlive(){ return S.streak.last === today() || S.streak.last === yesterday(); }
+function wordsKnown(){ return Object.keys(S.items).filter(id => S.items[id].right > 0).length; }
+
+/* ---------- exercise generation ---------- */
+function distractors(item, n, pool){
+  const seenEn = new Set([item.en.toLowerCase()]); const seenTh = new Set([joinTh(item.th)]);
+  const out = [];
+  const take = list => { for (const c of shuffle(list)) { if (out.length >= n) break; if (c.id === item.id) continue; if (seenEn.has(c.en.toLowerCase()) || seenTh.has(joinTh(c.th))) continue; if (c.phrase !== item.phrase) continue; out.push(c); seenEn.add(c.en.toLowerCase()); seenTh.add(joinTh(c.th)); } };
+  take(pool); if (out.length < n) take(ITEMS.filter(c => c.phrase === item.phrase)); if (out.length < n) take(ITEMS);
+  return out;
+}
+function quizStep(type, item, pool){
+  if (type === 'listen' && !hasThaiVoice()) type = 'mc-th';
+  if (type === 'build' && !item.phrase) type = 'mc-en';
+  const step = { type, item };
+  if (type === 'mc-th' || type === 'mc-en' || type === 'listen') step.options = shuffle([item, ...distractors(item, 3, pool)]);
+  if (type === 'build') {
+    const toks = adapt(item).ro.split(' ');
+    const extras = []; const others = shuffle(pool.filter(p => p.id !== item.id));
+    for (const o of others) { for (const t of adapt(o).ro.split(' ')) { if (extras.length >= 2) break; if (!toks.includes(t) && !extras.includes(t)) extras.push(t); } if (extras.length >= 2) break; }
+    step.bank = shuffle(toks.concat(extras));
+  }
+  return step;
+}
+function buildLesson(lesson){
+  const items = lesson.items, steps = []; const pool = lesson.unit.lessons.flatMap(l => l.items);
+  const quizTypes = items.some(i => i.phrase) ? ['mc-en','build','listen','mc-th','build','mc-en'] : ['mc-th','mc-en','listen','mc-th','mc-en','listen'];
+  items.forEach((it, k) => { steps.push({ type:'intro', item: it }); if (k % 2 === 1 || k === items.length - 1) { steps.push(quizStep(quizTypes[k % quizTypes.length], it, pool)); if (k > 0) steps.push(quizStep(quizTypes[(k+3) % quizTypes.length], items[k-1], pool)); } });
+  if (!items.some(i => i.phrase) && items.length >= 4) steps.push({ type:'match', pairs: pick(items, 4) });
+  const phrases = items.filter(i => i.phrase); const sayPool = phrases.length ? phrases : items;
+  pick(sayPool, Math.min(2, sayPool.length)).forEach(it => steps.push({ type:'say', item: it }));
+  return steps;
+}
+function buildPractice(){
+  const learned = ITEMS.filter(i => S.items[i.id] && S.items[i.id].seen > 0);
+  const base = learned.length >= 4 ? learned : ITEMS.slice(0, 12);
+  const score = i => { const s = S.items[i.id] || {seen:0,right:0,wrong:0,last:0}; return (s.right - s.wrong * 2) * 1000 + (s.last ? (Date.now() - s.last) / -36e5 : 0); };
+  const chosen = base.slice().sort((a,b) => score(a) - score(b)).slice(0, 8);
+  const pool = ITEMS.filter(i => S.items[i.id]);
+  const steps = chosen.map((it, k) => quizStep(['mc-th','mc-en','listen','build'][k % 4], it, pool.length >= 4 ? pool : ITEMS));
+  const ph = chosen.filter(i => i.phrase); if (ph.length) steps.push({ type:'say', item: ph[0] });
+  return steps;
+}
+
+/* ---------- views ---------- */
+let tab = 'home';
+const app = $('#app'), overlay = $('#overlay'), sheet = $('#sheet'), toastEl = $('#toast');
+let toastT; function toast(msg){ toastEl.textContent = msg; toastEl.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => toastEl.classList.remove('show'), 1800); }
+
+$('#nav').addEventListener('click', e => { const b = e.target.closest('button[data-tab]'); if (!b) return; tab = b.dataset.tab; render(); });
+
+function render(){
+  document.querySelectorAll('#nav button').forEach(b => b.dataset.tab === tab ? b.setAttribute('aria-current','page') : b.removeAttribute('aria-current'));
+  app.innerHTML = '';
+  app.appendChild(topbar());
+  ({home, practice, phrases, me})[tab]();
+  window.scrollTo(0, 0);
+}
+function topbar(){
+  const t = el('header', 'topbar');
+  t.innerHTML = `<div class="brand">nitnoy <small>นิดหน่อย</small></div>
+  <div class="pills"><span class="pill streak" title="Day streak">${ICON.flame}<span>${streakAlive() ? S.streak.count : 0}</span><span class="sr"> day streak</span></span>
+  <span class="pill xp" title="XP">${ICON.bolt}<span>${S.xp}</span><span class="sr"> XP</span></span></div>`;
+  return t;
+}
+function home(){
+  const cur = currentLesson();
+  const hello = el('section', 'hello');
+  hello.innerHTML = `<h1><span class="thai">สวัสดี</span> ${esc(S.name || 'there')}</h1><p class="muted">${cur ? `Next up: ${esc(cur.unit.title)}, ${esc(cur.title)}.` : 'You finished the whole path. Keep the words warm in Practice.'}</p>`;
+  app.appendChild(hello);
+  const st = el('section', 'stats');
+  const goalPct = Math.min(100, S.today.lessons * 100);
+  st.innerHTML = `<div class="stat"><b>${streakAlive() ? S.streak.count : 0}</b><span>day streak</span></div>
+  <div class="stat"><b>${wordsKnown()}</b><span>words known</span></div>
+  <div class="stat"><b>${S.today.lessons}/1</b><span>lesson today</span><div class="goal"><i style="width:${goalPct}%"></i></div></div>`;
+  app.appendChild(st);
+  UNITS.forEach(u => {
+    const done = unitLessonsDone(u); const total = u.lessons.length + 1; const doneCount = done + (talkDone(u) ? 1 : 0);
+    const isCurrent = cur ? cur.unit === u : (!talkDone(u) && talkUnlocked(u));
+    const locked = !isUnlocked(u.lessons[0]);
+    const sec = el('section', 'unit');
+    sec.innerHTML = `<div class="unit-head ${isCurrent ? 'current' : locked ? 'locked' : ''}"><div><div class="u-num">Unit ${u.index+1}</div><div class="u-title">${esc(u.title)}</div><div class="u-sub">${esc(u.sub)}</div></div><div class="u-prog">${doneCount}/${total}</div></div>`;
+    const path = el('div', 'path');
+    const sides = ['c','l','c','r'];
+    u.lessons.forEach((l, i) => {
+      const row = el('div', `node-row ${sides[i % 4]}`);
+      const times = lessonDone(l.id); const unlocked = isUnlocked(l); const state = times > 0 ? 'done' : (unlocked ? 'current' : 'locked');
+      const b = el('button', `node ${state}`);
+      b.setAttribute('aria-label', `Unit ${u.index+1}, lesson ${i+1}: ${l.title}. ${state === 'done' ? `Done, level ${Math.min(times,3)}` : state === 'current' ? 'Start' : 'Locked'}`);
+      b.disabled = !unlocked;
+      b.innerHTML = `<span class="disc">${state === 'locked' ? ICON.lock : state === 'done' ? ICON.star : `<span class="thai" style="font-size:26px">${i+1}</span>`}</span><span class="lab">${esc(l.title)}</span><span class="lvl"><i class="${times>=1?'on':''}"></i><i class="${times>=2?'on':''}"></i><i class="${times>=3?'on':''}"></i></span>`;
+      b.addEventListener('click', () => startLesson(l));
+      row.appendChild(b); path.appendChild(row);
+    });
+    const row = el('div', `node-row ${sides[u.lessons.length % 4]}`);
+    const tu = talkUnlocked(u), td = talkDone(u);
+    const tb = el('button', `node ${td ? 'done' : tu ? 'current' : 'locked'}`);
+    tb.disabled = !tu; tb.setAttribute('aria-label', `Unit ${u.index+1} talk: ${u.talk.title}. ${td ? 'Done' : tu ? 'Start' : 'Locked, finish the lessons first'}`);
+    tb.innerHTML = `<span class="disc">${tu || td ? ICON.talk : ICON.lock}</span><span class="lab">Talk: ${esc(u.talk.title)}</span>`;
+    tb.addEventListener('click', () => startTalk(u));
+    row.appendChild(tb); path.appendChild(row);
+    sec.appendChild(path); app.appendChild(sec);
+  });
+}
+function practice(){
+  const learned = ITEMS.filter(i => S.items[i.id] && S.items[i.id].seen > 0);
+  app.appendChild(el('h2', 'section-title', 'Practice'));
+  app.appendChild(el('p', 'lead', 'Eight words you got wrong or have not seen for a while, in one quick round. It does not move you along the path.'));
+  if (learned.length < 4) { app.appendChild(el('div', 'empty', 'Finish your first lesson, then come back here to review.')); return; }
+  const weak = learned.filter(i => S.items[i.id].wrong > S.items[i.id].right);
+  const st = el('section', 'stats'); st.innerHTML = `<div class="stat"><b>${learned.length}</b><span>words seen</span></div><div class="stat"><b>${weak.length}</b><span>need work</span></div><div class="stat"><b>${S.xp}</b><span>XP total</span></div>`;
+  app.appendChild(st);
+  const b = el('button', 'btn primary', `${ICON.play} Start a practice round`); b.addEventListener('click', () => startSession({ kind:'practice', title:'Practice', steps: buildPractice() })); app.appendChild(b);
+  if (weak.length) { const g = el('section', 'group'); g.appendChild(el('h3', null, 'Words to work on')); weak.slice(0, 12).forEach(i => g.appendChild(phraseRow(i))); app.appendChild(g); }
+}
+function phraseRow(i){
+  const a = adapt(i); const row = el('div', 'row');
+  const known = S.items[i.id] && S.items[i.id].right > 0;
+  row.innerHTML = `<div class="txt"><div class="th">${esc(joinTh(a.th))}${known ? '<span class="tag">known</span>' : ''}</div>${S.settings.rom ? `<div class="ro">${esc(a.ro)}</div>` : ''}<div class="en">${esc(a.en)}</div></div>`;
+  const p = el('button', 'iconbtn', ICON.play); p.setAttribute('aria-label', `Play ${a.en}`); p.addEventListener('click', () => { if (!speak(a.th)) toast('No voice on this device'); });
+  row.appendChild(p); return row;
+}
+function phrases(){
+  app.appendChild(el('h2', 'section-title', 'Phrasebook'));
+  app.appendChild(el('p', 'lead', 'Every word and sentence in the course, with audio. Search in English, Thai or romanisation.'));
+  const sw = el('div', 'search'); sw.innerHTML = `${ICON.search}<input type="search" id="q" placeholder="toilet, how much, ขอ..." aria-label="Search phrases" autocomplete="off">`;
+  app.appendChild(sw);
+  const list = el('div'); app.appendChild(list);
+  const draw = q => {
+    list.innerHTML = ''; q = (q || '').trim().toLowerCase(); const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    let any = false;
+    UNITS.forEach(u => {
+      const items = u.lessons.flatMap(l => l.items).filter(i => !q || i.en.toLowerCase().includes(q) || joinTh(i.th).includes(q) || norm(i.ro).includes(norm(q)) || i.ro.toLowerCase().includes(q));
+      if (!items.length) return; any = true;
+      const g = el('section', 'group'); g.appendChild(el('h3', null, `Unit ${u.index+1}. ${esc(u.title)}`)); items.forEach(i => g.appendChild(phraseRow(i))); list.appendChild(g);
+    });
+    if (!any) list.appendChild(el('div', 'empty', `Nothing for "${esc(q)}". Try an English word, like "water".`));
+  };
+  draw(''); $('#q').addEventListener('input', e => draw(e.target.value));
+}
+function me(){
+  app.appendChild(el('h2', 'section-title', esc(S.name || 'You')));
+  const lessonsDone = Object.values(S.lessons).filter(l => l.times > 0).length;
+  const st = el('section', 'stats'); st.innerHTML = `<div class="stat"><b>${S.xp}</b><span>XP</span></div><div class="stat"><b>${lessonsDone}/${LESSONS.length}</b><span>lessons done</span></div><div class="stat"><b>${S.streak.count}</b><span>best streak day${S.streak.count === 1 ? '' : 's'}</span></div>`;
+  app.appendChild(st);
+  const wrap = el('section');
+  const row = (label, sub, control) => { const d = el('div', 'setting'); d.innerHTML = `<div class="l"><b>${label}</b><span>${sub}</span></div>`; d.appendChild(control); wrap.appendChild(d); };
+  const nameIn = el('input'); nameIn.type = 'text'; nameIn.id = 'name'; nameIn.value = S.name; nameIn.setAttribute('aria-label', 'Your name'); nameIn.addEventListener('change', () => { S.name = nameIn.value.trim().slice(0, 24) || 'Kevin'; save(); });
+  row('Your name', 'Shown on the home screen', nameIn);
+  const seg = el('div', 'seg'); seg.setAttribute('role', 'group'); seg.setAttribute('aria-label', 'Speaker');
+  seg.innerHTML = `<button aria-pressed="${S.settings.gender==='m'}" data-g="m">khráp / phǒm</button><button aria-pressed="${S.settings.gender==='f'}" data-g="f">khà / chǎn</button>`;
+  seg.addEventListener('click', e => { const b = e.target.closest('button[data-g]'); if (!b) return; S.settings.gender = b.dataset.g; save(); me_(); toast(b.dataset.g === 'm' ? 'Speaking as a man' : 'Speaking as a woman'); });
+  row('I speak as', 'Changes the polite word and "I" in every phrase', seg);
+  const sw = (key, on) => { const b = el('button', 'switch'); b.setAttribute('role','switch'); b.setAttribute('aria-checked', String(S.settings[key])); b.addEventListener('click', () => { S.settings[key] = !S.settings[key]; b.setAttribute('aria-checked', String(S.settings[key])); save(); on && on(); }); return b; };
+  row('Show romanisation', 'Turn it off once you can read Thai script', sw('rom'));
+  row('Auto-play audio', 'Hear each new word as it appears', sw('autoplay'));
+  const rate = el('div', 'seg'); rate.setAttribute('role','group'); rate.setAttribute('aria-label','Voice speed');
+  [['0.7','Slow'],['0.85','Normal'],['1','Fast']].forEach(([v, l]) => { const b = el('button', null, l); b.setAttribute('aria-pressed', String(Number(S.settings.rate) === Number(v))); b.addEventListener('click', () => { S.settings.rate = Number(v); save(); me_(); speak('สวัสดีครับ'); }); rate.appendChild(b); });
+  row('Voice speed', hasThaiVoice() ? `Thai voice: ${esc(thaiVoice().name)}` : 'No Thai voice found on this device yet', rate);
+  row('Microphone', SR ? (micBlocked ? 'Refused here. Open the file in Safari or Chrome to speak.' : 'Speech recognition available') : 'Not supported in this browser. You still get listen-and-repeat.', el('span', 'muted', SR && !micBlocked ? ICON.mic : ICON.x));
+  app.appendChild(wrap);
+  const danger = el('section'); const rb = el('button', 'btn secondary', 'Reset all progress');
+  rb.addEventListener('click', () => { danger.innerHTML = ''; const p = el('p', 'lead', 'This wipes XP, streak and every lesson. There is no undo.'); const yes = el('button', 'btn danger', 'Yes, reset everything'); const no = el('button', 'btn ghost', 'Keep my progress'); yes.addEventListener('click', () => { const name = S.name; S = fresh(); S.name = name; save(); toast('Progress reset'); render(); }); no.addEventListener('click', render); danger.append(p, yes, no); });
+  danger.appendChild(rb); app.appendChild(danger);
+  app.appendChild(el('p', 'lead', 'Nitnoy keeps everything on this device. Nothing is sent anywhere.'));
+  function me_(){ render(); }
+}
+
+/* ---------- lesson session ---------- */
+let session = null;
+function startLesson(lesson){ startSession({ kind:'lesson', lesson, title: lesson.title, steps: buildLesson(lesson) }); }
+function startSession(cfg){
+  session = Object.assign({ i:0, right:0, wrong:0, firstTry:0, total:0, requeued:new Set(), xp:0, speakOff:S.settings.speakSkip }, cfg);
+  session.total = session.steps.length;
+  overlay.innerHTML = ''; const sc = el('div', 'screen'); sc.id = 'lesson';
+  sc.innerHTML = `<div class="screen-in"><div class="lesson-top"><button class="close" id="close" aria-label="Quit this lesson">${ICON.x}</button><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Lesson progress"><i id="barfill"></i></div></div><div class="ex" id="ex"></div><div class="footer" id="foot"></div></div>`;
+  overlay.appendChild(sc);
+  $('#close').addEventListener('click', () => quitPrompt());
+  document.body.style.overflow = 'hidden';
+  showStep();
+}
+function quitPrompt(){
+  const ex = $('#ex'), foot = $('#foot'); if (!ex) return;
+  ex.innerHTML = `<h2 class="prompt">Quit now?</h2><p class="lead">You will lose this lesson's progress, but every word you got right is already remembered.</p>`;
+  foot.innerHTML = ''; const stay = el('button', 'btn primary', 'Keep going'); const go = el('button', 'btn ghost', 'Quit'); stay.addEventListener('click', showStep); go.addEventListener('click', closeOverlay); foot.append(stay, go);
+}
+function closeOverlay(){ overlay.innerHTML = ''; hideSheet(); document.body.style.overflow = ''; session = null; render(); }
+function progressPct(){ return Math.round(100 * session.i / session.steps.length); }
+function setFooter(label, onClick, disabled){ const f = $('#foot'); f.innerHTML = ''; const b = el('button', 'btn primary', label); b.id = 'main'; b.disabled = !!disabled; b.addEventListener('click', onClick); f.appendChild(b); return b; }
+function showStep(){
+  hideSheet();
+  if (session.i >= session.steps.length) return finishSession();
+  const step = session.steps[session.i]; const ex = $('#ex'); ex.innerHTML = '';
+  $('#barfill').style.width = progressPct() + '%'; $('.bar').setAttribute('aria-valuenow', progressPct());
+  const r = { intro: stepIntro, 'mc-th': stepMC, 'mc-en': stepMC, listen: stepListen, build: stepBuild, match: stepMatch, say: stepSay }[step.type];
+  r(step, ex);
+}
+function playBtn(th, big){ const b = el('button', `iconbtn ${big ? 'big' : ''} play`, ICON.play); b.setAttribute('aria-label', 'Play audio'); b.addEventListener('click', () => { if (!speak(th)) toast('No voice on this device'); }); return b; }
+function stepIntro(step, ex){
+  const a = adapt(step.item);
+  ex.appendChild(el('h2', 'prompt', `<small>New ${a.phrase ? 'sentence' : 'word'}</small>${esc(a.en)}`));
+  const c = el('div', 'card'); c.innerHTML = `<div class="big thai">${esc(joinTh(a.th))}</div>${S.settings.rom ? `<div class="ro">${esc(a.ro)}</div>` : ''}${a.note ? `<div class="note">${esc(a.note)}</div>` : ''}`;
+  c.appendChild(playBtn(a.th, true)); ex.appendChild(c);
+  if (S.settings.autoplay) setTimeout(() => speak(a.th), 150);
+  setFooter('Continue', () => { session.i++; showStep(); });
+}
+function optionButton(a, dir, k){
+  const b = el('button', 'opt'); b.setAttribute('aria-pressed', 'false');
+  b.innerHTML = `<span class="k" aria-hidden="true">${k+1}</span><span class="t">${dir === 'en' ? `<span class="en">${esc(a.en)}</span>` : `<span class="th">${esc(joinTh(a.th))}</span>${S.settings.rom ? `<span class="ro">${esc(a.ro)}</span>` : ''}`}</span>`;
+  return b;
+}
+function stepMC(step, ex){
+  const a = adapt(step.item); const toEn = step.type === 'mc-th';
+  const h = el('h2', 'prompt', `<small>${toEn ? 'What does this mean?' : 'Pick the Thai for'}</small>${toEn ? `<span class="thai">${esc(joinTh(a.th))}</span>${S.settings.rom ? ` <span class="muted" style="font-size:16px;font-family:var(--body)">${esc(a.ro)}</span>` : ''}` : esc(a.en)}`);
+  ex.appendChild(h); if (toEn) { const pb = playBtn(a.th); ex.appendChild(pb); if (S.settings.autoplay) setTimeout(() => speak(a.th), 150); }
+  const opts = el('div', 'opts'); let chosen = null;
+  step.options.forEach((o, k) => { const b = optionButton(adapt(o), toEn ? 'en' : 'th', k); b.addEventListener('click', () => { if (chosen && chosen.disabled) return; opts.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-pressed','false')); b.setAttribute('aria-pressed','true'); chosen = b; chosen.item = o; $('#main').disabled = false; }); opts.appendChild(b); });
+  ex.appendChild(opts);
+  setFooter('Check', () => { const ok = chosen.item.id === step.item.id; opts.querySelectorAll('.opt').forEach(x => { x.disabled = true; }); chosen.classList.add(ok ? 'correct' : 'wrong'); if (!ok) { [...opts.children][step.options.findIndex(o => o.id === step.item.id)].classList.add('correct'); } grade(step, ok, a); }, true);
+}
+function stepListen(step, ex){
+  const a = adapt(step.item);
+  ex.appendChild(el('h2', 'prompt', '<small>Listen</small>Tap what you hear'));
+  const c = el('div', 'speak'); c.appendChild(playBtn(a.th, true)); c.appendChild(el('p', 'hint', 'Play it as many times as you like.')); ex.appendChild(c);
+  if (S.settings.autoplay) setTimeout(() => speak(a.th), 200);
+  const opts = el('div', 'opts'); let chosen = null;
+  step.options.forEach((o, k) => { const b = optionButton(adapt(o), 'th', k); b.addEventListener('click', () => { if (b.disabled) return; opts.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-pressed','false')); b.setAttribute('aria-pressed','true'); chosen = b; chosen.item = o; $('#main').disabled = false; }); opts.appendChild(b); });
+  ex.appendChild(opts);
+  setFooter('Check', () => { const ok = chosen.item.id === step.item.id; opts.querySelectorAll('.opt').forEach(x => x.disabled = true); chosen.classList.add(ok ? 'correct' : 'wrong'); if (!ok) [...opts.children][step.options.findIndex(o => o.id === step.item.id)].classList.add('correct'); grade(step, ok, a); }, true);
+}
+function stepBuild(step, ex){
+  const a = adapt(step.item); const target = a.ro.split(' '); const thToks = a.th.split(' ');
+  const thFor = t => { const i = target.indexOf(t); if (i >= 0) return thToks[i]; const it = ITEMS.map(adapt).find(x => x.ro.split(' ').includes(t)); if (!it) return ''; const j = it.ro.split(' ').indexOf(t); return it.th.split(' ')[j] || ''; };
+  ex.appendChild(el('h2', 'prompt', `<small>Build the sentence</small>${esc(a.en)}`));
+  const answer = el('div', 'tiles'); answer.setAttribute('aria-label', 'Your sentence'); const bank = el('div', 'tiles bank'); bank.setAttribute('aria-label', 'Word tiles');
+  const placed = [];
+  const tile = (t) => { const b = el('button', 'tile'); b.innerHTML = `<span class="ro">${esc(t)}</span>${S.settings.rom ? '' : ''}<span class="th">${esc(thFor(t))}</span>`; b.dataset.t = t; return b; };
+  const refresh = () => { answer.innerHTML = ''; placed.forEach(p => { const b = tile(p.t); b.addEventListener('click', () => { placed.splice(placed.indexOf(p), 1); p.src.classList.remove('ghosted'); refresh(); }); answer.appendChild(b); }); $('#main').disabled = placed.length === 0; };
+  step.bank.forEach(t => { const b = tile(t); b.addEventListener('click', () => { if (b.classList.contains('ghosted')) return; b.classList.add('ghosted'); placed.push({ t, src: b }); refresh(); }); bank.appendChild(b); });
+  ex.append(answer, bank);
+  const pb = playBtn(a.th); pb.setAttribute('aria-label', 'Hear the sentence'); ex.appendChild(pb);
+  setFooter('Check', () => { const got = placed.map(p => p.t); const ok = got.length === target.length && got.every((t, i) => t === target[i]); answer.querySelectorAll('.tile').forEach(x => x.disabled = true); bank.querySelectorAll('.tile').forEach(x => x.disabled = true); grade(step, ok, a); }, true);
+}
+function stepMatch(step, ex){
+  ex.appendChild(el('h2', 'prompt', '<small>Match the pairs</small>Tap a Thai word, then its meaning'));
+  const left = el('div', 'col'), right = el('div', 'col'); const grid = el('div', 'pairs'); grid.append(left, right); ex.appendChild(grid);
+  let selL = null, selR = null, locked = 0, mistakes = 0;
+  const mk = (o, side) => { const a = adapt(o); const b = el('button', 'opt'); b.setAttribute('aria-pressed','false'); b.innerHTML = `<span class="t">${side === 'L' ? `<span class="th">${esc(joinTh(a.th))}</span>${S.settings.rom ? `<span class="ro">${esc(a.ro)}</span>` : ''}` : `<span class="en">${esc(a.en)}</span>`}</span>`; b.item = o; return b; };
+  const check = () => { if (!selL || !selR) return; const ok = selL.item.id === selR.item.id; const L = selL, R = selR; selL = selR = null; if (ok) { L.classList.add('locked'); R.classList.add('locked'); L.disabled = R.disabled = true; L.setAttribute('aria-pressed','false'); R.setAttribute('aria-pressed','false'); markItem(L.item.id, true); locked++; if (locked === step.pairs.length) { session.right++; if (!mistakes) session.firstTry++; session.xp += mistakes ? 1 : 2; $('#main').disabled = false; showSheet(true, mistakes ? `All matched, ${mistakes} slip${mistakes>1?'s':''}.` : 'All matched, first try.', null); } } else { mistakes++; L.classList.add('wrong'); R.classList.add('wrong'); markItem(L.item.id, false); setTimeout(() => { L.classList.remove('wrong'); R.classList.remove('wrong'); L.setAttribute('aria-pressed','false'); R.setAttribute('aria-pressed','false'); }, 500); } };
+  shuffle(step.pairs).forEach(o => { const b = mk(o, 'L'); b.addEventListener('click', () => { if (b.disabled) return; left.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-pressed','false')); b.setAttribute('aria-pressed','true'); selL = b; speak(adapt(o).th); check(); }); left.appendChild(b); });
+  shuffle(step.pairs).forEach(o => { const b = mk(o, 'R'); b.addEventListener('click', () => { if (b.disabled) return; right.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-pressed','false')); b.setAttribute('aria-pressed','true'); selR = b; check(); }); right.appendChild(b); });
+  setFooter('Continue', () => { session.i++; showStep(); }, true);
+}
+function stepSay(step, ex){
+  const a = adapt(step.item);
+  if (session.speakOff) { session.i++; return showStep(); }
+  ex.appendChild(el('h2', 'prompt', `<small>Say it out loud</small>${esc(a.en)}`));
+  const c = el('div', 'card'); c.innerHTML = `<div class="big thai">${esc(joinTh(a.th))}</div>${S.settings.rom ? `<div class="ro">${esc(a.ro)}</div>` : ''}`; c.appendChild(playBtn(a.th)); ex.appendChild(c);
+  if (S.settings.autoplay) setTimeout(() => speak(a.th), 150);
+  const sp = el('div', 'speak'); ex.appendChild(sp);
+  const canMic = !!SR && !micBlocked;
+  const status = el('p', 'status'); const heard = el('p', 'heard thai');
+  if (canMic) {
+    const mic = el('button', 'mic', ICON.mic); mic.setAttribute('aria-label', 'Record yourself');
+    status.textContent = 'Tap the microphone, then say it.';
+    sp.append(mic, status, heard);
+    mic.addEventListener('click', async () => { if (mic.classList.contains('listening')) return; mic.classList.add('listening'); status.textContent = 'Listening...'; heard.textContent = ''; const alts = await listen(); mic.classList.remove('listening');
+      if (!alts) { if (micBlocked) { status.textContent = 'The microphone is not available here. Use listen and repeat instead.'; renderFallback(); } else { status.textContent = 'Nothing heard. Try again, a bit louder.'; } return; }
+      const best = Math.max(...alts.map(t => Math.max(similarity(t, a.th), similarity(t, stripParticles(a.th)))));
+      heard.textContent = alts[0]; const ok = best >= 0.55;
+      status.textContent = ok ? (best >= 0.85 ? 'Clear. That is it.' : 'Close enough. Nice.') : 'Not quite the same. Listen again and retry, or continue.';
+      if (ok) { grade(step, true, a, 'Said it'); } else { $('#main').disabled = false; $('#main').textContent = 'Continue anyway'; markItem(a.id, false); }
+    });
+    const skip = el('button', 'btn ghost', 'Cannot speak right now'); skip.addEventListener('click', () => { session.speakOff = true; session.i++; showStep(); }); sp.appendChild(skip);
+    setFooter('Say it first', null, true);
+  } else { renderFallback(); }
+  function renderFallback(){
+    sp.innerHTML = ''; sp.appendChild(el('p', 'hint', micBlocked ? 'The microphone is blocked in this view. Play it, say it out loud three times, then tap "I said it".' : 'Play it, say it out loud three times, then tap "I said it".'));
+    sp.appendChild(playBtn(a.th, true));
+    const skip = el('button', 'btn ghost', 'Cannot speak right now'); skip.addEventListener('click', () => { session.speakOff = true; session.i++; showStep(); }); sp.appendChild(skip);
+    setFooter('I said it', () => grade(step, true, a, 'Said it'));
+  }
+}
+function grade(step, ok, a, okTitle){
+  if (step.type !== 'match') markItem(step.item.id, ok);
+  if (ok) { session.right++; if (!session.requeued.has(step.item.id)) session.firstTry++; session.xp += session.requeued.has(step.item.id) ? 1 : 2; }
+  else { session.wrong++; if (!session.requeued.has(step.item.id)) { session.requeued.add(step.item.id); const pool = (session.lesson ? session.lesson.unit.lessons.flatMap(l => l.items) : ITEMS); const t = step.type === 'mc-th' ? 'mc-en' : step.type === 'build' ? 'build' : 'mc-th'; session.steps.push(quizStep(t, step.item, pool)); } }
+  save();
+  const praise = ['Nice.', 'Correct.', 'Yes.', 'Good ear.', 'That is it.'];
+  showSheet(ok, ok ? (okTitle || praise[Math.floor(Math.random()*praise.length)]) : 'Not quite', ok ? null : `<div class="ans">${esc(joinTh(a.th))}<small>${S.settings.rom ? esc(a.ro) + ' · ' : ''}${esc(a.en)}</small></div>`);
+  if (!ok) speak(a.th);
+}
+function showSheet(ok, title, bodyHtml){
+  sheet.className = `sheet show ${ok ? 'ok' : 'bad'}`;
+  sheet.innerHTML = `<div class="sheet-in"><h3>${ok ? ICON.check : ICON.x} ${esc(title)}</h3>${bodyHtml || ''}</div>`;
+  const b = el('button', `btn ${ok ? 'ok' : 'bad'}`, 'Continue'); b.id = 'cont'; b.addEventListener('click', () => { session.i++; showStep(); }); $('.sheet-in').appendChild(b);
+  const main = $('#main'); if (main) { main.disabled = true; }
+  setTimeout(() => b.focus(), 50);
+}
+function hideSheet(){ sheet.className = 'sheet'; sheet.innerHTML = ''; }
+function finishSession(){
+  const ex = $('#ex'), foot = $('#foot'); hideSheet();
+  const bonus = session.kind === 'lesson' ? 10 : 5; const total = session.xp + bonus;
+  S.xp += total; const extended = touchStreak();
+  if (session.kind === 'lesson') { const L = S.lessons[session.lesson.id] || (S.lessons[session.lesson.id] = {times:0,best:0}); L.times++; L.best = Math.max(L.best, session.firstTry); S.today.lessons++; }
+  save();
+  const acc = session.total ? Math.round(100 * session.firstTry / Math.max(1, session.steps.filter(s => s.type !== 'intro').length)) : 0;
+  $('#barfill').style.width = '100%';
+  ex.innerHTML = `<div class="done-wrap"><div><span class="thai">เก่งมาก</span><h2>${session.kind === 'lesson' ? 'Lesson done' : 'Round done'}</h2><p class="muted">gèng mâak. You are good at this.</p></div>
+  <div class="done-stats"><div class="stat"><b>+${total}</b><span>XP</span></div><div class="stat"><b>${Math.min(100, acc)}%</b><span>first try</span></div><div class="stat"><b>${S.streak.count}</b><span>${extended ? 'day streak, extended' : 'day streak'}</span></div></div>
+  ${session.wrong ? `<p class="hint">${session.wrong} mistake${session.wrong>1?'s':''} came back at the end and you cleared them.</p>` : '<p class="hint">No mistakes. Try the same lesson again tomorrow to lock it in.</p>'}</div>`;
+  foot.innerHTML = ''; const b = el('button', 'btn primary', 'Continue'); b.addEventListener('click', closeOverlay); foot.appendChild(b); b.focus();
+}
+
+/* ---------- talk (roleplay) ---------- */
+function startTalk(u){
+  const t = u.talk; const lines = t.lines.map(l => ({ who:l.who, th: l.who === 'you' ? adapt({th:l.th, ro:l.ro}).th : l.th, ro: l.who === 'you' ? adapt({th:l.th, ro:l.ro}).ro : l.ro, en:l.en }));
+  session = { kind:'talk', unit:u, i:0, said:0, lines, speakOff:S.settings.speakSkip };
+  overlay.innerHTML = ''; const sc = el('div', 'screen'); sc.id = 'talk';
+  sc.innerHTML = `<div class="screen-in"><div class="lesson-top"><button class="close" id="close" aria-label="Quit this conversation">${ICON.x}</button><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Conversation progress"><i id="barfill"></i></div></div><div class="ex" id="ex"><h2 class="prompt"><small>Talk</small>${esc(t.title)}</h2><p class="lead">${esc(t.scene)} Say every line that is yours.</p><div class="chat" id="chat"></div><div class="speak" id="sp"></div></div><div class="footer" id="foot"></div></div>`;
+  overlay.appendChild(sc); document.body.style.overflow = 'hidden';
+  $('#close').addEventListener('click', closeOverlay);
+  talkStep();
+}
+function talkStep(){
+  const chat = $('#chat'), sp = $('#sp'), foot = $('#foot'); if (!chat) return;
+  const L = session.lines; const i = session.i;
+  $('#barfill').style.width = Math.round(100 * i / L.length) + '%';
+  chat.innerHTML = '';
+  L.slice(0, i + 1).forEach((l, k) => {
+    const b = el('div', `bub ${l.who} ${k === i ? 'now' : ''} ${l.who === 'you' && k < i ? 'said' : ''}`);
+    b.innerHTML = `<span class="who">${l.who === 'you' ? 'You' : 'Them'}</span><span class="th">${esc(joinTh(l.th))}</span>${S.settings.rom ? `<span class="ro">${esc(l.ro)}</span>` : ''}<span class="en">${esc(l.en)}</span>`;
+    const tools = el('div', 'tools'); tools.appendChild(playBtn(l.th)); b.appendChild(tools); chat.appendChild(b);
+  });
+  sp.innerHTML = ''; foot.innerHTML = '';
+  if (i >= L.length) return finishTalk();
+  const line = L[i];
+  if (line.who === 'app') {
+    if (S.settings.autoplay) setTimeout(() => speak(line.th), 200);
+    const b = el('button', 'btn primary', 'Continue'); b.addEventListener('click', () => { session.i++; talkStep(); }); foot.appendChild(b); b.focus();
+  } else {
+    const canMic = !!SR && !micBlocked && !session.speakOff;
+    const status = el('p', 'status'); const heard = el('p', 'heard thai');
+    if (canMic) {
+      const mic = el('button', 'mic', ICON.mic); mic.setAttribute('aria-label', 'Say your line'); status.textContent = 'Your turn. Tap the microphone and say the line.';
+      sp.append(mic, status, heard);
+      mic.addEventListener('click', async () => { if (mic.classList.contains('listening')) return; mic.classList.add('listening'); status.textContent = 'Listening...'; const alts = await listen(); mic.classList.remove('listening');
+        if (!alts) { if (micBlocked) { status.textContent = 'Microphone not available here.'; fallback(); } else status.textContent = 'Nothing heard. Try again.'; return; }
+        const best = Math.max(...alts.map(t => Math.max(similarity(t, line.th), similarity(t, stripParticles(line.th)))));
+        heard.textContent = alts[0];
+        if (best >= 0.55) { status.textContent = best >= 0.85 ? 'Clear.' : 'Close enough.'; session.said++; const b = el('button', 'btn ok', 'Continue'); b.addEventListener('click', () => { session.i++; talkStep(); }); foot.innerHTML = ''; foot.appendChild(b); b.focus(); }
+        else { status.textContent = 'Not quite. Listen and try again.'; const b = el('button', 'btn ghost', 'Skip this line'); b.addEventListener('click', () => { session.i++; talkStep(); }); foot.innerHTML = ''; foot.appendChild(b); }
+      });
+      const b = el('button', 'btn ghost', 'Cannot speak right now'); b.addEventListener('click', () => { session.speakOff = true; talkStep(); }); foot.appendChild(b);
+    } else fallback();
+    function fallback(){ sp.innerHTML = ''; foot.innerHTML = ''; sp.appendChild(el('p', 'hint', 'Your turn. Play the line, say it out loud, then continue.')); sp.appendChild(playBtn(line.th, true)); if (S.settings.autoplay) setTimeout(() => speak(line.th), 200); const b = el('button', 'btn primary', 'I said it'); b.addEventListener('click', () => { session.said++; session.i++; talkStep(); }); foot.appendChild(b); }
+  }
+  requestAnimationFrame(() => { const ex = $('#ex'); if (ex) ex.scrollTop = ex.scrollHeight; });
+}
+function finishTalk(){
+  const ex = $('#ex'), foot = $('#foot'); const xp = 15; S.xp += xp; const extended = touchStreak(); S.talks[session.unit.talk.id] = (S.talks[session.unit.talk.id] || 0) + 1; save();
+  $('#barfill').style.width = '100%';
+  ex.innerHTML = `<div class="done-wrap"><div><span class="thai">เก่งมาก</span><h2>Conversation done</h2><p class="muted">You said ${session.said} line${session.said===1?'':'s'} out loud. That is the whole point.</p></div><div class="done-stats"><div class="stat"><b>+${xp}</b><span>XP</span></div><div class="stat"><b>${session.said}/${session.lines.filter(l=>l.who==='you').length}</b><span>lines said</span></div><div class="stat"><b>${S.streak.count}</b><span>${extended ? 'day streak, extended' : 'day streak'}</span></div></div></div>`;
+  foot.innerHTML = ''; const b = el('button', 'btn primary', 'Continue'); b.addEventListener('click', closeOverlay); foot.appendChild(b); b.focus();
+}
+
+/* ---------- keyboard: Enter = main button ---------- */
+document.addEventListener('keydown', e => { if (e.key !== 'Enter' || e.target.tagName === 'INPUT') return; const c = $('#cont'); if (c) { c.click(); return; } const m = $('#main'); if (m && !m.disabled) m.click(); });
+
+/* ---------- boot ---------- */
+function start(){ render(); }
+if (window.claude && window.claude.hot && window.claude.hot.ready) window.claude.hot.ready(start); else start();
+window.NITNOY = { get session(){ return session; }, UNITS, ITEMS, buildLesson, buildPractice, similarity };
+</script>
+</body>
+</html>

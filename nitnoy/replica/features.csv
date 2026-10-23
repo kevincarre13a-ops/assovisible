@@ -1,0 +1,36 @@
+feature,area,priority,original,clone,notes
+Vertical path of lessons grouped by units,path,must,yes,yes,
+Lessons unlock in order,path,must,yes,yes,
+New word card with script and meaning,lesson,must,yes,yes,
+Pick the meaning (multiple choice),lesson,must,yes,yes,
+Pick the target language (multiple choice),lesson,must,yes,yes,
+Tap what you hear (audio),lesson,must,yes,yes,
+Build the sentence from word tiles,lesson,must,yes,yes,
+Wrong answers come back at the end of the lesson,lesson,must,yes,yes,
+Instant feedback with the correct answer,lesson,must,yes,yes,
+XP per lesson and per correct answer,progress,must,yes,yes,
+Daily streak,progress,must,yes,yes,
+Lesson complete screen with rewards,progress,must,yes,yes,
+Say it out loud with a microphone and a match score,speaking,must,yes,yes,Speak core
+Roleplay a short conversation line by line,speaking,must,yes,yes,Speak core
+Audio for every phrase (text to speech),lesson,should,yes,yes,
+Listen and repeat fallback when no microphone,speaking,should,yes,yes,Speak drill mode
+Match pairs exercise,lesson,should,yes,yes,
+Practice weak words outside the path,practice,should,yes,yes,Duolingo practice hub
+Repeat a finished lesson to level it up,path,should,yes,yes,Duolingo lesson levels
+Progress saved on the device,progress,should,yes,yes,
+Daily goal shown on home,progress,should,yes,yes,
+Works offline after first load,platform,should,yes,yes,
+Light and dark theme,platform,could,yes,yes,
+Skip speaking for this session,speaking,could,yes,yes,
+Reset progress,settings,could,yes,yes,
+Speed of the voice,settings,could,yes,yes,
+Mistakes count shown at the end,progress,could,yes,yes,
+Phrasebook with search and audio,phrasebook,could,no,yes,added: survival use in the street
+Speaker gender switch (khráp / khà),settings,could,no,yes,added: Thai specific
+Hearts (limited mistakes),monetisation,could,yes,skip,top user complaint; left out on purpose
+Leaderboards and leagues,social,could,yes,skip,social layer; not the learning loop
+Friends and streak society,social,could,yes,skip,social layer
+Open-ended AI tutor chat,speaking,should,yes,skip,backend service; replaced by scripted roleplay
+Accounts and cross-device sync,platform,should,yes,skip,no backend by design
+40 languages,content,must,yes,skip,Thai only by design
