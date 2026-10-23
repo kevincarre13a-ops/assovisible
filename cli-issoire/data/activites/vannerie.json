@@ -1,0 +1,21 @@
+{
+  "ordre": 8, "slug": "vannerie", "theme": "ateliers", "titre": "Vannerie", "icone": "basket",
+  "resume": "Tresser l'osier : trois créneaux par semaine pour apprendre et créer.",
+  "description": [
+    "L'atelier de vannerie se pratique trois fois par semaine. Un calendrier de l'année en cours précise les dates des séances."
+  ],
+  "seances": [
+    {
+      "intitule": "Atelier vannerie",
+      "description": null,
+      "jours": "Jeudi, vendredi et samedi",
+      "horaires": "Jeudi 8h45–11h45 · Vendredi 8h45–11h45 · Samedi 9h00–12h00",
+      "lieu": null, "animateur": null, "tarif": null, "note": null
+    }
+  ],
+  "photos": [],
+  "liens": [
+    { "texte": "Calendrier vannerie 2025-2026 (PDF, archive)", "url": "https://web.archive.org/web/2025/https://www.cli63.com/documents/calendrier-vannerie-2025-26.pdf" }
+  ],
+  "source": "Ancien site cli63.com (archives web). Lieu, animateur et tarif à renseigner."
+}

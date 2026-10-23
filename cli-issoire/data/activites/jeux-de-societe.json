@@ -1,0 +1,22 @@
+{
+  "ordre": 4, "slug": "jeux-de-societe", "theme": "convivialite", "titre": "Jeux de société", "icone": "dice",
+  "resume": "Belote, scrabble, rummikub… un après-midi convivial chaque vendredi.",
+  "description": [
+    "Un moment convivial autour de jeux de société : belote, scrabble, rummikub chiffres, rummikub lettres, Blokus, Chromino, Triolet, Skip-Bo (cartes), Topword, Motus, Yams, Tic tac boum, et bien d'autres."
+  ],
+  "seances": [
+    {
+      "intitule": "Jeux de société",
+      "description": null,
+      "jours": "Vendredi",
+      "horaires": "14h00–16h30",
+      "lieu": "Salle Tournesol, Maison des associations",
+      "animateur": "Régine Lemoine",
+      "tarif": null,
+      "note": null
+    }
+  ],
+  "photos": ["j/jeu/Jeux-Societe-1-.JPG", "j/jeu/Jeux-Societe-6-.JPG", "j/jeu/Jeux-Societe-13-.JPG", "j/jeu/Jeux-Societe-9-.JPG", "j/jeu/Jeux-Societe-18-.JPG", "j/jeu/Jeux-Societe-4-.JPG"],
+  "liens": [],
+  "source": "Ancien site cli63.com (archives web), page « Jeux de société »."
+}

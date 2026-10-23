@@ -1,0 +1,15 @@
+{
+  "bureau": [
+    { "role": "Présidence", "nom": null },
+    { "role": "Secrétariat", "nom": null },
+    { "role": "Trésorerie", "nom": null }
+  ],
+  "responsables": [
+    { "activite": "informatique", "nom": "Pierre Rossi", "role": "Responsable de l'activité informatique" },
+    { "activite": "peinture-sur-soie", "nom": "Monique Schena", "role": "Responsable de l'activité peinture sur soie" },
+    { "activite": "jeux-de-societe", "nom": "Régine Lemoine", "role": "Animatrice des jeux de société" },
+    { "activite": "gymnastique", "nom": "Betty Soares et Chantal Rique", "role": "Animatrices de gymnastique (USI)" },
+    { "activite": "poterie-modelage", "nom": "Joëlle, Henri et Aliette", "role": "Conseillers poterie et modelage" }
+  ],
+  "informatique": ["Chantal Mangold", "Roberte Veyrat", "Bernard Dunesme", "Philippe Combe", "Martine Dehors", "Jean-François Robert", "Didier Rebollo", "Pierre Rossi"]
+}

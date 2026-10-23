@@ -1,0 +1,22 @@
+{
+  "ordre": 10, "slug": "peinture-sur-soie", "theme": "ateliers", "titre": "Peinture sur soie", "icone": "brush",
+  "resume": "Gutta, anti-fusant et couleurs : un atelier d'entraide où chacune avance à son rythme.",
+  "description": [
+    "L'activité fonctionne sous forme d'atelier : les personnes les plus expérimentées donnent des explications et aident celles qui ont des difficultés.",
+    "Deux techniques de peinture sont pratiquées. Avec la gutta, on cerne le dessin par des lignes fermées qui bloquent la peinture. Avec l'anti-fusant (mélange de gutta et d'essence F) appliqué sur la soie, les couleurs ne fusent plus et on peut peindre normalement."
+  ],
+  "seances": [
+    {
+      "intitule": "Atelier peinture sur soie",
+      "description": null,
+      "jours": "Mardi et jeudi", "horaires": "14h00–17h00 (après-midi)",
+      "lieu": "Salle Tournesol, 1er étage de la Maison des associations",
+      "animateur": "Monique Schena (responsable)",
+      "tarif": "Couleurs, gutta et 50/50 fournis gratuitement par le CLI",
+      "note": "Matériel à apporter : ses pinceaux et une boîte de rangement pour les petits pots de couleur."
+    }
+  ],
+  "photos": [],
+  "liens": [],
+  "source": "Ancien site cli63.com (archives web), page « Peinture sur soie »."
+}

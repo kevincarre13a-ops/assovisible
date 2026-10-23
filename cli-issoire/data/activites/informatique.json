@@ -1,0 +1,43 @@
+{
+  "ordre": 14, "slug": "informatique", "theme": "nouvelles-technologies", "titre": "Informatique", "icone": "laptop",
+  "resume": "Ateliers et modules du lundi au vendredi, animés par des bénévoles patients.",
+  "description": [
+    "Le numérique est aujourd'hui incontournable. Les ateliers s'adressent à toutes les personnes qui souhaitent le découvrir ou mieux le comprendre. Une initiation progressive aux outils essentiels (ordinateur, smartphone, internet, messagerie, démarches en ligne) permet de gagner en autonomie et en confiance : rester en lien avec ses proches, accéder à l'information, simplifier certaines démarches, protéger ses données et découvrir de nouveaux loisirs.",
+    "Un groupe d'animateurs bénévoles anime du lundi au vendredi des séances de différents niveaux. L'inscription se fait de fin août à fin septembre ; les séances commencent en septembre-octobre et se terminent fin juin. Les ateliers durent toute l'année, ou se suivent par modules trimestriels.",
+    "Chaque adhérent bénéficie d'un mois d'essai (jusqu'aux vacances de Toussaint), puis choisit de poursuivre, de changer de groupe ou d'arrêter et de récupérer sa participation."
+  ],
+  "seances": [
+    {
+      "intitule": "Ateliers et modules d'informatique",
+      "description": "Séances à la Maison des associations, salles Hélianthe, Tournesol et Danube. On peut venir avec ses propres appareils et on apporte une clé USB personnelle pour conserver son travail.",
+      "jours": "Du lundi au vendredi",
+      "horaires": "Voir le tableau des ateliers ci-dessous",
+      "lieu": "Maison des associations : salles Hélianthe, Tournesol et Danube",
+      "animateur": "Responsable de l'activité : Pierre Rossi",
+      "tarif": "Participation de 10 € par an pour couvrir l'achat de matériel, de logiciels et les réparations",
+      "note": null
+    }
+  ],
+  "tableauTitre": "Les ateliers et modules",
+  "tableau": {
+    "colonnes": ["Atelier ou module", "Pour qui, pour quoi", "Intervenants", "Quand et où"],
+    "lignes": [
+      ["Débutants", "Les bases de l'usage de votre PC. Spécifiquement destiné aux débutants.", "Chantal Mangold, Roberte Veyrat", "Mercredi matin, 9h, salle Hélianthe (code DEB)"],
+      ["Perfectionnement 1 et 2", "Pour celles et ceux qui utilisent assez régulièrement leur PC : bureautique, navigation, messagerie. Perfectionnement 1 est très orienté tableur.", "Bernard Dunesme, Philippe Combe", "Perf. 1 : lundi matin, 10h30, salle Hélianthe · Perf. 2 : mardi matin, 9h, salle Hélianthe"],
+      ["Photo numérique", "Pour les amateurs de photo numérique.", "Bernard Dunesme", "Lundi matin, 9h, salle Hélianthe (code PN)"],
+      ["Diaporama", "Pour les amateurs de photo numérique et de montage vidéo.", "Martine Dehors", "Lundi matin, 9h, salle Tournesol (code DIA)"],
+      ["Système", "Pour utilisateurs plus avertis : système Windows, fonctionnement d'internet.", "Pierre Rossi, Jean-François Robert", "Jeudi après-midi, 16h, salle Danube (code SYS)"],
+      ["Modules trimestriels : Sécurité et sauvegardes · Smartphone et tablette · Réseaux sociaux", "Préserver sa confidentialité et ses données, approfondir l'usage du smartphone, se connecter aux services en ligne.", "Pierre Rossi, Martine Dehors, Jean-François Robert, Didier Rebollo", "Mardi matin, 9h, salle Tournesol (codes M1, M2, M3)"],
+      ["Module Intelligence artificielle", "Comprendre et utiliser l'IA.", "Pierre Rossi", "Mercredi matin, 9h, salle Tournesol (code MIA)"],
+      ["Module Bureautique et multimédia", "Utiliser les logiciels courants.", "Pierre Rossi", "Jeudi après-midi, 14h, salle Danube (code MBM)"],
+      ["Forum", "Dépannage, diagnostic, conseils personnalisés.", "Jean-François Robert, Pierre Rossi", "Vendredi matin, 9h, salle Tournesol"]
+    ]
+  },
+  "photos": ["f/for/formation-numerique-cli.jpeg", "c/cli/Cli-Info_Presentation_2-Thumbnail-1-.jpg", "g/gro/grok-image-3f3e05f4-0caf-43d8-b653-99702755cb97.png", "7/77c/77-ccf9ccc4-0a96-4399-8987-c7efdc8d873f.jpeg"],
+  "liens": [
+    { "texte": "Présentation vidéo des ateliers informatiques (YouTube)", "url": "https://youtu.be/TYiCmOHqBXU" },
+    { "texte": "Exemples de créations par intelligence artificielle (YouTube)", "url": "https://youtu.be/fJI_NRbINAk" },
+    { "texte": "Description détaillée des ateliers (PDF, archive)", "url": "https://web.archive.org/web/2025/https://www.cli63.com/documents/ateliers-info.pdf" }
+  ],
+  "source": "Ancien site cli63.com (archives web), pages « Atelier informatique pour tous » (février 2026) et « Actualités »."
+}

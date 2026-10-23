@@ -1,0 +1,17 @@
+[
+  {
+    "id": "club-permanence",
+    "date": "2026-05-15",
+    "dateLabel": "Toute l'année",
+    "titre": "Une permanence chaque samedi matin",
+    "texte": "Pour rencontrer le club, poser vos questions ou vous inscrire : permanence le samedi de 10h à 11h30, salle Tournesol (1er étage de la Maison des associations, 20 rue du Palais, Issoire). Téléphone : 04 73 96 33 53.",
+    "lien": { "texte": "Nous contacter", "url": "contact.html" }
+  },
+  {
+    "id": "club-inscriptions-2025",
+    "date": "2025-08-30",
+    "dateLabel": "Rentrée 2025-2026",
+    "titre": "Inscriptions et réinscriptions 2025-2026",
+    "texte": "Les samedis 30 août et 6 septembre de 9h30 à 12h en salle Wallis, puis le samedi 13 septembre de 9h30 à 12h en salle Tournesol."
+  }
+]

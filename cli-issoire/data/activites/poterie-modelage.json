@@ -1,0 +1,29 @@
+{
+  "ordre": 9, "slug": "poterie-modelage", "theme": "ateliers", "titre": "Poterie et modelage", "icone": "vase",
+  "resume": "Pots, plats, sculptures : le plaisir de transformer l'argile, au four de la Maison des associations.",
+  "description": [
+    "Le travail de l'argile traverse les millénaires et tous les pays du monde. Modestement mais avec passion, le groupe essaie de retrouver les gestes et les techniques de nos lointains ancêtres, mais aussi ceux des céramistes et sculpteurs contemporains.",
+    "Guidés par les plus expérimentés, les participants découvrent le plaisir de transformer des blocs d'argile au gré de leurs envies, avec des surprises, des succès, et parfois des déceptions : réussites ou échecs donnent envie de recommencer. Toutes les séances réunissent débutants et anciens, dans l'entraide et la bonne humeur.",
+    "Chaque année, le groupe progresse en participant à un stage de céramique Raku chez un potier de la région et/ou à un stage de sculpture avec un sculpteur professionnel et un modèle vivant. Ces stages sont payants et facultatifs."
+  ],
+  "seances": [
+    {
+      "intitule": "Poterie",
+      "description": "Pots, plats, coupes, boîtes et objets décoratifs : plaques, colombins, tournage, moulage… Après séchage, les pièces sont cuites puis émaillées dans le four de la Maison des associations.",
+      "jours": "Jeudi et/ou vendredi",
+      "horaires": "Jeudi 13h30–17h30 · Vendredi 14h00–18h00",
+      "lieu": "Salle Atelier, Maison des associations",
+      "animateur": "Joëlle et Henri (conseillers)", "tarif": null, "note": null
+    },
+    {
+      "intitule": "Modelage",
+      "description": "Sculptures plus ou moins figuratives : figures humaines, animaux réalistes ou fabuleux. Après séchage, les œuvres sont cuites, puis le plus souvent patinées et cirées.",
+      "jours": "Lundi", "horaires": "9h00–12h00",
+      "lieu": "Salle Atelier, Maison des associations",
+      "animateur": "Aliette", "tarif": null, "note": null
+    }
+  ],
+  "photos": ["e/exp/Expo-MDA-12042024-1.jpg"],
+  "liens": [],
+  "source": "Ancien site cli63.com (archives web), page « Activités poterie et modelage »."
+}

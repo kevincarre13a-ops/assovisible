@@ -1,0 +1,34 @@
+[
+  {
+    "id": "info-ia-2025-2026",
+    "date": "2026-05-15",
+    "dateLabel": "Année 2025-2026",
+    "titre": "Créations par intelligence artificielle des adhérents",
+    "texte": "Images, animations, chansons et musiques créées par les adhérents de la section informatique avec des outils d'IA générative. Une belle vitrine du travail du module « IA ».",
+    "lien": { "texte": "Découvrir les créations", "url": "https://web.archive.org/web/2026/https://www.cli63.com/production-ia-2026.php" }
+  },
+  {
+    "id": "info-rentree-2025",
+    "date": "2025-08-30",
+    "dateLabel": "Rentrée 2025-2026",
+    "titre": "Rentrée informatique : un nouveau module « Bureautique et multimédia »",
+    "texte": "Réunion d'accueil des adhérents le 18 septembre à 17h, salle Wallis : présentation des animations, des ateliers, des modules et de leurs animateurs. Un nouveau module « Bureautique et multimédia » est mis en place cette année.",
+    "lien": { "texte": "Tableau des animations informatiques (PDF)", "url": "https://web.archive.org/web/2025/https://www.cli63.com/documents/ateliers-info.pdf" }
+  },
+  {
+    "id": "info-ia-trimestre-2",
+    "date": "2025-03-01",
+    "dateLabel": "2024-2025 · 2e trimestre",
+    "titre": "Module IA : les productions du 2e trimestre",
+    "texte": "Fichiers multimédias créés par les adhérents qui ont suivi le module « Intelligence artificielle » au deuxième trimestre.",
+    "lien": { "texte": "Voir les productions", "url": "https://web.archive.org/web/2025/https://www.cli63.com/production-ia-2.php" }
+  },
+  {
+    "id": "info-ia-trimestre-1",
+    "date": "2024-12-15",
+    "dateLabel": "2024-2025 · 1er trimestre",
+    "titre": "Module IA : les productions du 1er trimestre",
+    "texte": "Fichiers multimédias créés par les adhérents qui ont suivi le module « Intelligence artificielle » au premier trimestre.",
+    "lien": { "texte": "Voir les productions", "url": "https://web.archive.org/web/2025/https://www.cli63.com/productions-ia.php" }
+  }
+]

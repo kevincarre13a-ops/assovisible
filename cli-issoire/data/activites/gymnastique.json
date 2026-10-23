@@ -1,0 +1,32 @@
+{
+  "ordre": 1, "slug": "gymnastique", "theme": "convivialite", "titre": "Gymnastique", "icone": "dumbbell",
+  "resume": "Gym d'entretien et gym douce : renforcement, équilibre, souplesse, dans la bonne humeur.",
+  "description": [
+    "Deux formules pour entretenir son corps à son rythme. La séance commence par une mise en condition et un échauffement, et se termine toujours par des étirements et de la relaxation."
+  ],
+  "seances": [
+    {
+      "intitule": "Gym d'entretien",
+      "description": "Renforcement musculaire, coordination, équilibre et mémoire, avec un matériel varié.",
+      "jours": "Lundi, mardi, jeudi et vendredi",
+      "horaires": "Lundi 9h15–10h15 · Mardi 10h30–11h30 · Jeudi 9h15–10h15 et 10h30–11h30 · Vendredi 10h30–11h30",
+      "lieu": "Salle du Parquet, Maison des associations",
+      "animateur": "Betty Soares (USI)",
+      "tarif": "24 € par trimestre pour un cours · 45 € par trimestre pour 2 cours",
+      "note": "20 personnes maximum par groupe. Tenue confortable, chaussons et bouteille d'eau."
+    },
+    {
+      "intitule": "Gym douce",
+      "description": "Garder et augmenter la souplesse articulaire, l'équilibre et le tonus musculaire, de façon ludique.",
+      "jours": "Jeudi",
+      "horaires": "14h00–15h00",
+      "lieu": "Salle du Parquet, Maison des associations",
+      "animateur": "Chantal Rique (USI)",
+      "tarif": "24 € par trimestre pour un cours",
+      "note": "Tenue confortable, chaussons et bouteille d'eau."
+    }
+  ],
+  "photos": [],
+  "liens": [],
+  "source": "Horaires et tarifs relevés sur l'ancien site (saison 2024-2025). À vérifier et mettre à jour pour la saison en cours."
+}

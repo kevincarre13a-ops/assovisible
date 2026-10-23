@@ -1,0 +1,36 @@
+{
+  "ordre": 7,
+  "slug": "randonnee-cycliste",
+  "theme": "sorties",
+  "titre": "Randonnée cycliste",
+  "icone": "bike",
+  "resume": "Sorties à vélo entre amis et séjours de plusieurs jours.",
+  "description": [
+    "La section randonnée cycliste du CLI organise des sorties et des séjours à vélo.",
+    "Elle propose notamment un séjour annuel : en 2026, du 18 au 22 mai, à Mauriac, dans le Cantal. Un clip vidéo en garde le souvenir.",
+    "Les jours, horaires, lieux de rendez-vous et règles de la section sont à compléter par son responsable."
+  ],
+  "seances": [
+    {
+      "intitule": "Sorties à vélo",
+      "description": null,
+      "jours": null,
+      "horaires": null,
+      "lieu": null,
+      "animateur": null,
+      "tarif": null,
+      "note": null
+    }
+  ],
+  "photos": [
+    "c/cli/cli-section-velo-sejour-2026-cantal.jpg",
+    "v/vel/velo-page-00.jpg"
+  ],
+  "liens": [
+    {
+      "texte": "Clip du séjour vélo en Cantal (YouTube)",
+      "url": "https://youtu.be/9U1uh0BSjiQ"
+    }
+  ],
+  "source": "Ancien site cli63.com : les règles de la section n'y figuraient que sous forme d'image. Informations pratiques à renseigner."
+}

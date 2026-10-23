@@ -1,0 +1,21 @@
+{
+  "ordre": 13, "slug": "marqueterie", "theme": "ateliers", "titre": "Marqueterie", "icone": "ruler",
+  "resume": "Le sciage conique de bois de placage : à chaque découpe, une pièce unique.",
+  "description": [
+    "La marqueterie se pratique à la Maison des associations, avec du matériel mû à la force du poignet : scie à chantourner, grattoir, cutter…",
+    "Les matériaux sont des bois de placage en diverses essences et épaisseurs, assemblés avec de la colle à l'ancienne (deux tiers d'os, un tiers de nerf). La technique employée est le sciage conique : à chaque découpe, une seule pièce unique est réalisée."
+  ],
+  "seances": [
+    {
+      "intitule": "Atelier marqueterie",
+      "description": null,
+      "jours": "Lundi et mardi (jours non fériés)", "horaires": "14h00–18h00 (après-midi)",
+      "lieu": "Maison des associations", "animateur": null, "tarif": null, "note": null
+    }
+  ],
+  "photos": [],
+  "liens": [
+    { "texte": "Calendrier marqueterie saison 2025-2026 (PDF, archive)", "url": "https://web.archive.org/web/2026/https://www.cli63.com/documents/calendrier-marqueterie-2025-26.pdf" }
+  ],
+  "source": "Ancien site cli63.com (archives web), page « La Marqueterie ». Animateur et tarif à renseigner."
+}

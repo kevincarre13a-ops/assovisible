@@ -1,0 +1,30 @@
+{
+  "ordre": 12,
+  "slug": "dessin-peinture",
+  "theme": "ateliers",
+  "titre": "Dessin et peinture",
+  "icone": "brush",
+  "resume": "Un atelier le lundi après-midi, dans la lumière de la salle Tournesol.",
+  "description": [
+    "L’activité peinture se déroule au premier étage de la Maison des associations, en salle Tournesol, le lundi après-midi."
+  ],
+  "seances": [
+    {
+      "intitule": "Atelier dessin et peinture",
+      "description": null,
+      "jours": "Lundi",
+      "horaires": "14h00–17h30 (après-midi)",
+      "lieu": "Salle Tournesol, 1er étage de la Maison des associations",
+      "animateur": null,
+      "tarif": null,
+      "note": null
+    }
+  ],
+  "photos": [
+    "a/ala/a-l-action1.jpg",
+    "a/ala/a-l-action2.jpg",
+    "l/las/la-salle-tournesol.jpg"
+  ],
+  "liens": [],
+  "source": "Ancien site cli63.com (archives web), page « L'activité peinture ». Animateur et tarif à renseigner."
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "id": "rando-vercors-2026",
+    "date": "2026-06-21",
+    "dateLabel": "21 au 27 juin 2026",
+    "titre": "Voyage dans le Vercors : Vassieux-en-Vercors",
+    "texte": "Voyage annuel proposé aux randonneurs R1 et R2 : une semaine dans le Vercors (Drôme), au village de vacances Le Piroulet (CAP France), à Vassieux-en-Vercors.",
+    "lien": {
+      "texte": "Présentation du voyage (PDF)",
+      "url": "https://web.archive.org/web/2025/https://www.cli63.com/documents/presentation-vassieux-en-vercors-2026.pdf"
+    }
+  },
+  {
+    "id": "rando-programmes-2026",
+    "date": "2026-03-01",
+    "dateLabel": "Mars-avril 2026",
+    "titre": "Programmes des randonnées R1 et R2",
+    "texte": "Deux balades chaque mercredi, et une randonnée rapide par mois. Le programme est sous réserve de modification en cas d'imprévu météo.",
+    "lien": {
+      "texte": "Programme mars-avril 2026 (PDF)",
+      "url": "https://web.archive.org/web/2026/https://www.cli63.com/documents/programme-randos-84-mars-avril-2026.pdf"
+    }
+  },
+  {
+    "id": "rando-voyage-2025",
+    "date": "2025-06-15",
+    "dateLabel": "Voyage 2025",
+    "titre": "Album photo du voyage 2025",
+    "texte": "Du monastère royal de Brou à la Dôle, du Mont Fier à Yvoire, des lacs et cascades du Hérisson au musée de la Boissellerie des Rousses : une semaine de randonnées et de découvertes, racontée jour par jour en photos.",
+    "liens": [
+      {
+        "texte": "1er jour : monastère royal de Brou",
+        "url": "https://photos.app.goo.gl/hu8mFmBfwFweLgcU6"
+      },
+      {
+        "texte": "2e jour : la Dôle",
+        "url": "https://photos.app.goo.gl/SB2cy3nVCWghb5n87"
+      },
+      {
+        "texte": "3e jour : le Mont Fier",
+        "url": "https://photos.app.goo.gl/1rqqokiqTnyN5JnJA"
+      },
+      {
+        "texte": "4e jour : Les Rousses",
+        "url": "https://photos.app.goo.gl/JadnCmMhaqxMqv7F8"
+      },
+      {
+        "texte": "5e jour : escapade à Yvoire",
+        "url": "https://photos.app.goo.gl/Ljyp12y2Did3Sf18A"
+      },
+      {
+        "texte": "6e jour : lacs et cascades du Hérisson",
+        "url": "https://photos.app.goo.gl/9tnhR8ykUE67Unk87"
+      }
+    ]
+  },
+  {
+    "id": "rando-voyage-2024",
+    "date": "2024-06-17",
+    "dateLabel": "17 au 23 juin 2024",
+    "titre": "Voyage 2024 dans les Alpes du Sud",
+    "texte": "Grenoble, le lac de Serre-Ponçon, Réallon, Gap, Embrun, Chorges : sept jours de sorties dans les Alpes du Sud.",
+    "liens": [
+      {
+        "texte": "1er jour : Grenoble",
+        "url": "https://photos.app.goo.gl/eeMjkzwwkYDdsVcd7"
+      },
+      {
+        "texte": "2e jour : lac de Serre-Ponçon",
+        "url": "https://photos.app.goo.gl/C9LgqvS5rAABhsSU8"
+      },
+      {
+        "texte": "3e jour : lac Saint-Apollinaire, Réallon",
+        "url": "https://photos.app.goo.gl/7DxjgU7WCeRnorJF6"
+      },
+      {
+        "texte": "4e jour : barrage et Gap",
+        "url": "https://photos.app.goo.gl/WfqPzj36wKgDBzXp7"
+      },
+      {
+        "texte": "5e jour : Embrun et Chorges",
+        "url": "https://photos.app.goo.gl/qiq4CxxSHcQ2c3m17"
+      },
+      {
+        "texte": "Dernier jour : marché de Chorges",
+        "url": "https://photos.app.goo.gl/dU1CHjMj7HSAJ6H39"
+      }
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "ordre": 5, "slug": "voix-d-yss", "theme": "solidarite", "titre": "Les Voix d'Yss", "icone": "mic",
+  "resume": "Enregistrer des livres audio pour les personnes malvoyantes ou empêchées de lire.",
+  "description": [
+    "Les Voix d'Yss sont au service des personnes, jeunes ou adultes, empêchées de lire en raison d'un handicap visuel, moteur, cognitif ou d'un trouble « dys ». Elles enregistrent des ouvrages destinés exclusivement à la Bibliothèque Sonore de Chamalières, qui fait partie du réseau des 120 Bibliothèques Sonores de France, au sein de l'Association des Donneurs de Voix, reconnue d'utilité publique depuis 1977.",
+    "Cette activité du CLI a été créée en mars 2004, à l'initiative d'Andrée Malet, avec l'aide logistique de Michel Denoux."
+  ],
+  "faits": [
+    { "valeur": 2004, "label": "année de création", "format": "annee" },
+    { "valeur": 19, "label": "membres" },
+    { "valeur": 2, "label": "groupes d'enregistrement" },
+    { "valeur": 120, "label": "bibliothèques sonores en France" }
+  ],
+  "seances": [
+    {
+      "intitule": "Groupe du mardi",
+      "description": "Enregistrement collectif à plusieurs voix.",
+      "jours": "Mardi", "horaires": "10h00–12h00", "lieu": "Salle Danube, Maison des associations",
+      "animateur": null, "tarif": null, "note": null
+    },
+    {
+      "intitule": "Groupe du vendredi",
+      "description": "Enregistrement collectif à plusieurs voix.",
+      "jours": "Vendredi", "horaires": "14h00–17h00", "lieu": "Salle Danube, Maison des associations",
+      "animateur": null, "tarif": null, "note": null
+    }
+  ],
+  "points": [
+    "Contrairement à la plupart des donneurs de voix, Les Voix d'Yss enregistrent à plusieurs voix : cela rompt la monotonie et donne plus de rythme au récit.",
+    "Chaque groupe choisit son livre, à condition que le titre ne figure pas déjà au catalogue de la Bibliothèque Sonore.",
+    "L'enregistrement se fait avec 8 micros reliés à une table de mixage et à un ordinateur portable. Le logiciel libre Audacity sert à enregistrer, nettoyer et monter les enregistrements.",
+    "Une heure d'écoute représente environ 3 heures d'enregistrement brut et 12 heures de montage. Le montage est fait par certains lecteurs, chez eux, sur leur propre ordinateur.",
+    "Le livre terminé est transmis à la Bibliothèque Sonore au format MP3.",
+    "Le mardi de 9h à 10h, en marge des Bibliothèques Sonores, une institutrice fait enregistrer à ses élèves des ouvrages destinés aux jeunes."
+  ],
+  "participer": {
+    "titre": "Comment participer ou en bénéficier ?",
+    "participer": "Vous aimez lire à voix haute, ou le montage audio vous intéresse ? Venez rencontrer le groupe : écrivez-nous depuis la page Contact en choisissant « Les Voix d'Yss », ou passez à la permanence du samedi.",
+    "beneficier": "Les livres enregistrés sont destinés exclusivement aux adhérents de la Bibliothèque Sonore de Chamalières. Pour en bénéficier, renseignez-vous auprès d'elle ou de l'Association des Donneurs de Voix."
+  },
+  "photos": ["l/log/LOGO_BSF_2019_BRIQUE_MD_420Ko.jpg"],
+  "liens": [
+    { "texte": "Bibliothèque Sonore de Chamalières", "url": "https://www.bibliothequesonore63-chamalieres.fr/" },
+    { "texte": "Association des Donneurs de Voix", "url": "https://lesbibliothequessonores.org/" }
+  ],
+  "source": "Ancien site cli63.com (archives web), pages « Les Voix d'Yss »."
+}

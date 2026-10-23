@@ -1,0 +1,26 @@
+{
+  "ordre": 2,
+  "slug": "pilates",
+  "theme": "convivialite",
+  "titre": "Pilates",
+  "icone": "leaf",
+  "resume": "Activité à présenter : fiche en attente du responsable.",
+  "description": [
+    "La présentation du pilates est à rédiger par le responsable de l’activité : contenu de la séance, public, matériel à apporter."
+  ],
+  "seances": [
+    {
+      "intitule": "Pilates",
+      "description": null,
+      "jours": null,
+      "horaires": null,
+      "lieu": null,
+      "animateur": null,
+      "tarif": null,
+      "note": null
+    }
+  ],
+  "photos": [],
+  "liens": [],
+  "source": "Activité absente de l'ancien site : toutes les informations pratiques sont à renseigner par le responsable (fichier data/activites/pilates.json)."
+}

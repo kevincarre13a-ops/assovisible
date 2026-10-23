@@ -1,0 +1,10 @@
+{
+  "rythme": [
+    { "activite": "randonnee-pedestre", "quand": "Chaque mercredi", "quoi": "Deux balades, essentiellement l'après-midi, et une randonnée rapide par mois." }
+  ],
+  "evenements": [
+    { "date": "2026-06-21", "fin": "2026-06-27", "activite": "randonnee-pedestre", "titre": "Voyage dans le Vercors", "lieu": "Vassieux-en-Vercors (Drôme), Le Piroulet", "lien": { "texte": "Présentation (PDF)", "url": "https://web.archive.org/web/2025/https://www.cli63.com/documents/presentation-vassieux-en-vercors-2026.pdf" } },
+    { "date": "2026-05-18", "fin": "2026-05-22", "activite": "randonnee-cycliste", "titre": "Séjour vélo", "lieu": "Mauriac (Cantal)", "lien": { "texte": "Clip du séjour", "url": "https://youtu.be/9U1uh0BSjiQ" } },
+    { "date": "2024-06-17", "fin": "2024-06-23", "activite": "randonnee-pedestre", "titre": "Voyage dans les Alpes du Sud", "lieu": "Isère et Hautes-Alpes", "lien": null }
+  ]
+}

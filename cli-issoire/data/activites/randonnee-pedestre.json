@@ -1,0 +1,104 @@
+{
+  "ordre": 6,
+  "slug": "randonnee-pedestre",
+  "theme": "sorties",
+  "titre": "Randonnée pédestre",
+  "icone": "mountain",
+  "resume": "Quatre groupes de niveau, deux balades chaque mercredi, covoiturage et bonne humeur.",
+  "description": [
+    "Deux balades sont proposées chaque mercredi, essentiellement l'après-midi, mais aussi en journée. Une troisième balade a lieu une fois par mois : une randonnée rapide sans pause « pomme ».",
+    "Les circuits sont repérés à l'avance par les animateurs. Ils viennent soit de guides, soit de circuits réalisés par le CLI. En cas de changement (météo, imprévu), les participants sont prévenus sur place avant le départ, ou la veille.",
+    "Pour permettre à tous de participer, le trajet se fait en covoiturage, dans un esprit de convivialité et de respect de l'environnement. Une participation est demandée pour dédommager les conducteurs ; son montant figure dans la dernière colonne du programme."
+  ],
+  "niveauxTitre": "Quatre groupes de niveau",
+  "niveauxIntro": "Le niveau de difficulté diminue de R1 à R4 : il dépend de la longueur du parcours, de l'allure de marche et du dénivelé.",
+  "niveaux": [
+    {
+      "nom": "R1",
+      "titre": "Le plus soutenu des quatre",
+      "details": [
+        "Jusqu'à 16 km",
+        "600 m de dénivelé maximum",
+        "Départ : parking de la salle Animatis, Issoire"
+      ],
+      "rang": 4
+    },
+    {
+      "nom": "R2",
+      "titre": "Soutenu, parcours plus courts",
+      "details": [
+        "Jusqu'à 12 km (balades d'après-midi)",
+        "400 m de dénivelé maximum",
+        "Départ : parking de la salle Animatis, Issoire"
+      ],
+      "rang": 3
+    },
+    {
+      "nom": "R3",
+      "titre": "Niveau intermédiaire",
+      "details": [
+        "Moins difficile que R1 et R2, plus exigeant que R4",
+        "Longueurs et dénivelés indiqués sur le programme",
+        "Départ : parking « des Frères Lumière », Issoire"
+      ],
+      "rang": 2
+    },
+    {
+      "nom": "R4",
+      "titre": "Le plus accessible",
+      "details": [
+        "Le niveau le plus accessible",
+        "Longueurs et dénivelés indiqués sur le programme",
+        "Départ : parking « des Frères Lumière », Issoire"
+      ],
+      "rang": 1
+    }
+  ],
+  "seances": [
+    {
+      "intitule": "Randonnées R1 et R2",
+      "description": "Programme par période de deux mois (par exemple mars-avril), sous réserve de modification en cas d'imprévu météo.",
+      "jours": "Mercredi",
+      "horaires": "Horaire de départ indiqué sur le programme",
+      "lieu": "Rendez-vous : parking de la salle Animatis, Issoire",
+      "animateur": null,
+      "tarif": null,
+      "note": null
+    },
+    {
+      "intitule": "Randonnées R3 et R4",
+      "description": "Deux balades chaque mercredi.",
+      "jours": "Mercredi",
+      "horaires": "Horaire de départ indiqué sur le programme",
+      "lieu": "Rendez-vous : parking « des Frères Lumière », Issoire",
+      "animateur": null,
+      "tarif": null,
+      "note": null
+    }
+  ],
+  "points": [
+    "Autres formats : RC (randonnée commune), R0 (longueur et dénivelé variables, marche rapide) et RJ (randonnée à la journée).",
+    "Les consignes de sécurité à respecter lorsqu'on marche en groupe sont détaillées dans un document dédié (voir liens)."
+  ],
+  "photos": [
+    "r/r1v/R1-vielle-brioude-5.jpg",
+    "l/lem/le-Mont-fier-44.jpg",
+    "p/pho/photo-de-groupe-1.jpg",
+    "p/pho/photos-de-groupe.jpg"
+  ],
+  "liens": [
+    {
+      "texte": "Programme des randos R1 et R2, mars-avril 2026 (PDF, archive)",
+      "url": "https://web.archive.org/web/2026/https://www.cli63.com/documents/programme-randos-84-mars-avril-2026.pdf"
+    },
+    {
+      "texte": "Programme des randos R3 et R4, mai-juin 2025 (PDF, archive)",
+      "url": "https://web.archive.org/web/2025/https://www.cli63.com/documents/prog-mai-juin-25.pdf"
+    },
+    {
+      "texte": "Consignes de sécurité du randonneur (PDF, archive)",
+      "url": "https://web.archive.org/web/2025/https://www.cli63.com/documents/rando-les-pietons-que-nous-sommes-ont-des-droits-et-des-devoirs.pdf"
+    }
+  ],
+  "source": "Ancien site cli63.com (archives web), pages « Rando 1 et 2 » et « Randos 3 et 4 ». Animateurs à renseigner."
+}

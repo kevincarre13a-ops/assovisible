@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "convivialite",
+    "page": "convivialite.html",
+    "nom": "La Convivialité",
+    "court": "Convivialité",
+    "couleur": "#C2410C",
+    "teinte": "#FFEDD5",
+    "icone": "smile",
+    "accroche": "Bouger, danser, jouer : le plaisir d'être ensemble.",
+    "intro": "Gymnastique, pilates, danse et jeux de société : des moments joyeux, à son rythme, où l'on rencontre du monde.",
+    "image": "d/dan/Danse-groupe1.png"
+  },
+  {
+    "slug": "solidarite",
+    "page": "solidarite.html",
+    "nom": "La Solidarité",
+    "court": "Solidarité",
+    "couleur": "#BE185D",
+    "teinte": "#FCE7F3",
+    "icone": "heart",
+    "accroche": "Prêter sa voix à ceux qui ne peuvent pas lire.",
+    "intro": "Les Voix d'Yss enregistrent des livres audio pour les personnes empêchées de lire.",
+    "image": null
+  },
+  {
+    "slug": "sorties",
+    "page": "sorties.html",
+    "nom": "Les Sorties",
+    "court": "Sorties",
+    "couleur": "#15803D",
+    "teinte": "#DCFCE7",
+    "icone": "mountain",
+    "accroche": "Les volcans d'Auvergne et bien au-delà, à pied ou à vélo.",
+    "intro": "Randonnée pédestre en quatre groupes de niveau, randonnée cycliste, voyages et séjours.",
+    "image": "r/r1v/R1-vielle-brioude-5.jpg"
+  },
+  {
+    "slug": "ateliers",
+    "page": "ateliers.html",
+    "nom": "Les Ateliers",
+    "court": "Ateliers",
+    "couleur": "#A16207",
+    "teinte": "#FEF3C7",
+    "icone": "palette",
+    "accroche": "Créer de ses mains, et faire travailler sa tête.",
+    "intro": "Vannerie, poterie, peinture sur soie, dessin, marqueterie et exercices pour la mémoire.",
+    "image": "a/ala/a-l-action1.jpg"
+  },
+  {
+    "slug": "nouvelles-technologies",
+    "page": "nouvelles-technologies.html",
+    "nom": "Les Nouvelles Technologies",
+    "court": "Nouvelles technologies",
+    "couleur": "#1D4ED8",
+    "teinte": "#DBEAFE",
+    "icone": "laptop",
+    "accroche": "Le numérique sans stress, entre bénévoles patients.",
+    "intro": "Des ateliers d'informatique, de smartphone et d'intelligence artificielle, du lundi au vendredi.",
+    "image": "f/for/formation-numerique-cli.jpeg"
+  }
+]

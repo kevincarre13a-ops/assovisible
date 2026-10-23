@@ -1,0 +1,26 @@
+{
+  "ordre": 11, "slug": "remue-meninges", "theme": "ateliers", "titre": "Remue-méninges", "icone": "bulb",
+  "resume": "Une joyeuse gymnastique pour les neurones, sans compétition.",
+  "description": [
+    "Le but de cet atelier est d'entretenir ses fonctions intellectuelles, de soutenir son attention et sa concentration à travers différents exercices.",
+    "Au programme : orthographe, mots coupés, anagrammes, suites logiques de nombres, de cartes ou de figures géométriques, énigmes, charades, exercices sur les chiffres, chercher l'intrus, petits exercices de mémoire auditive ou visuelle, mots codés…"
+  ],
+  "points": [
+    "Faire faire une joyeuse gymnastique à nos neurones, sans se prendre au sérieux.",
+    "Souffler les réponses à son voisin, si elles sont exactes !",
+    "Apporter sa convivialité et sa bonne humeur.",
+    "Pas de compétition : chacun à son rythme."
+  ],
+  "pointsTitre": "Les règles du jeu",
+  "seances": [
+    {
+      "intitule": "Remue-méninges",
+      "description": null,
+      "jours": "Tous les mardis", "horaires": "9h30–11h00",
+      "lieu": "Salle Futuna", "animateur": null, "tarif": null, "note": null
+    }
+  ],
+  "photos": ["g/grp/grptrav3.jpg", "g/grp/grptrav4.jpg", "a/aaa/aaaath1.jpg"],
+  "liens": [],
+  "source": "Ancien site cli63.com (archives web), page « Remue-méninges »."
+}

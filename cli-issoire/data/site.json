@@ -1,0 +1,41 @@
+{
+  "nom": "Club Culture et Loisirs Issoirien",
+  "sigle": "CLI",
+  "baseline": "Culture et loisirs à Issoire",
+  "url": "https://cli-issoire.netlify.app",
+  "imageBase": "https://web.archive.org/web/2025im_/https://www.cli63.com/images/",
+  "logo": "l/log/logocli.png",
+  "panorama": "p/pan/panorama-issoire.jpg",
+  "adresse": {
+    "lieu": "Maison des associations",
+    "rue": "20 rue du Palais",
+    "codePostal": "63500",
+    "ville": "Issoire",
+    "region": "Puy-de-Dôme, Auvergne-Rhône-Alpes",
+    "latitude": 45.5436,
+    "longitude": 3.2484
+  },
+  "telephone": "04 73 96 33 50",
+  "telephonePermanence": "04 73 96 33 53",
+  "email": "cli.issoire@gmail.com",
+  "permanence": "le samedi de 10h à 11h30, salle Tournesol (1er étage de la Maison des associations)",
+  "espaceAdherent": {
+    "url": "https://cli63.org/connexion.php",
+    "note": "Lien repris de l'ancien site. À remplacer ici si l'adresse de l'espace adhérent change."
+  },
+  "contactPrincipal": { "nom": "Pierre Rossi", "role": "Responsable de l'activité informatique" },
+  "chiffres": { "adherents": 502, "activites": 14, "themes": 5, "niveauxRando": 4 },
+  "pagesMenu": [
+    ["index.html", "Accueil"],
+    ["le-club.html", "Le club"],
+    ["convivialite.html", "Convivialité"],
+    ["solidarite.html", "Solidarité"],
+    ["sorties.html", "Sorties"],
+    ["ateliers.html", "Ateliers"],
+    ["nouvelles-technologies.html", "Nouvelles technologies"],
+    ["actualites.html", "Actualités"],
+    ["galerie.html", "Galerie"],
+    ["contact.html", "Contact"],
+    ["mentions-legales.html", "Mentions légales"]
+  ]
+}
