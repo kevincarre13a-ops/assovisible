@@ -1,0 +1,2671 @@
+{
+  "_aide": "Un reportage = un bloc. Voir LISEZMOI.md. Catégories possibles : patrimoine, evenement, culture, sport.",
+  "categories": [
+    {
+      "id": "patrimoine",
+      "nom": "Patrimoine"
+    },
+    {
+      "id": "evenement",
+      "nom": "Événement"
+    },
+    {
+      "id": "culture",
+      "nom": "Expos & culture"
+    },
+    {
+      "id": "sport",
+      "nom": "Sport"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-09-26_concert-phylos-musique",
+      "titre": "Concert Phylos Musique",
+      "date": "2026-09-26",
+      "lieu": "Morestel",
+      "categorie": "evenement",
+      "auteurs": [
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2026-09-26_concert-phylos-musique",
+      "vignettes": true,
+      "total": 88,
+      "lien": "https://photomorestel.com/v2/reportages/2026/2026-09-26_concert-phylos-musique",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 575,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1347,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 601,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 601,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1347,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 1347,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 1347,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 1347,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 1
+    },
+    {
+      "id": "2026-09-04_forum-associations",
+      "titre": "Forum des Associations 2026",
+      "date": "2026-09-04",
+      "lieu": "Morestel",
+      "categorie": "evenement",
+      "auteurs": [
+        "denis-madaule"
+      ],
+      "dossier": "assets/img/reportages/2026-09-04_forum-associations",
+      "vignettes": true,
+      "total": 79,
+      "lien": "https://photomorestel.com/v2/reportages/2026/2026-09-04_forum-associations",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "02.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "03.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "04.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "05.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "06.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "07.webp",
+          "w": 900,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "08.webp",
+          "w": 900,
+          "h": 1353,
+          "a": "denis-madaule"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2026-08-29_nuit-blanche",
+      "titre": "Nuit Blanche 2026",
+      "date": "2026-08-29",
+      "lieu": "Morestel",
+      "categorie": "evenement",
+      "auteurs": [
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2026-08-29_nuit-blanche",
+      "vignettes": true,
+      "total": 231,
+      "lien": "https://photomorestel.com/v2/reportages/2026/2026-08-29_nuit-blanche",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 900,
+          "h": 1347,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 900,
+          "h": 1384,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 1400,
+          "h": 803,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 900,
+          "h": 993,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1347,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 1312,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 1347,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 900,
+          "h": 941,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 2
+    },
+    {
+      "id": "2026-06-21_fete-de-la-musique",
+      "titre": "Fête de la musique 2026",
+      "date": "2026-06-21",
+      "lieu": "Morestel",
+      "categorie": "evenement",
+      "auteurs": [
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2026-06-21_fete-de-la-musique",
+      "vignettes": true,
+      "total": 186,
+      "lien": "https://photomorestel.com/v2/reportages/2026/2026-06-21_fete-de-la-musique",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1290,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 913,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 1347,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 1400,
+          "h": 893,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1400,
+          "h": 743,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 1362,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 1347,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 1347,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2026-05-08_commemoration",
+      "titre": "Commémoration du 8 mai 1945",
+      "date": "2026-05-08",
+      "lieu": "Morestel",
+      "categorie": "patrimoine",
+      "auteurs": [
+        "jacques-vanneuville",
+        "gerard-bangy",
+        "eric-fabre"
+      ],
+      "dossier": "assets/img/reportages/2026-05-08_commemoration",
+      "vignettes": true,
+      "total": 153,
+      "lien": "https://photomorestel.com/v2/reportages/2026/2026-05-08_commemoration",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 647,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1290,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 1287,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 1150,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "gerard-bangy"
+        },
+        {
+          "f": "06.webp",
+          "w": 1400,
+          "h": 788,
+          "a": "eric-fabre"
+        },
+        {
+          "f": "07.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "eric-fabre"
+        },
+        {
+          "f": "08.webp",
+          "w": 1400,
+          "h": 788,
+          "a": "eric-fabre"
+        }
+      ],
+      "couverture": 1
+    },
+    {
+      "id": "2026-01-31_vernissage-hivernales",
+      "titre": "Vernissage des Hivernales",
+      "date": "2026-01-31",
+      "lieu": "Morestel",
+      "categorie": "culture",
+      "auteurs": [
+        "gerard-bangy",
+        "denis-madaule"
+      ],
+      "dossier": "assets/img/reportages/2026-01-31_vernissage-hivernales",
+      "vignettes": true,
+      "total": 71,
+      "lien": "https://photomorestel.com/v2/reportages/2026/2026-01-31_vernissage-hivernales",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1279,
+          "h": 900,
+          "a": "gerard-bangy"
+        },
+        {
+          "f": "02.webp",
+          "w": 1293,
+          "h": 900,
+          "a": "gerard-bangy"
+        },
+        {
+          "f": "03.webp",
+          "w": 1400,
+          "h": 890,
+          "a": "gerard-bangy"
+        },
+        {
+          "f": "04.webp",
+          "w": 1378,
+          "h": 900,
+          "a": "gerard-bangy"
+        },
+        {
+          "f": "05.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "06.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "07.webp",
+          "w": 1392,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "08.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2026-01-04_voeux-maire-morestel",
+      "titre": "Vœux du Maire",
+      "date": "2026-01-04",
+      "lieu": "Morestel",
+      "categorie": "evenement",
+      "auteurs": [
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2026-01-04_voeux-maire-morestel",
+      "vignettes": true,
+      "total": 161,
+      "lien": "https://photomorestel.com/v2/reportages/2026/2026-01-04_voeux-maire-morestel",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 900,
+          "h": 1347,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1355,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 900,
+          "h": 1125,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 1347,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1347,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 1347,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 1400,
+          "h": 670,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 937,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 1
+    },
+    {
+      "id": "2025-12-05_telethon",
+      "titre": "Soirée du téléthon",
+      "date": "2025-12-05",
+      "lieu": "Morestel",
+      "categorie": "evenement",
+      "auteurs": [
+        "denis-madaule",
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2025-12-05_telethon",
+      "vignettes": true,
+      "total": 647,
+      "lien": "https://photomorestel.com/v2/reportages/2025/2025-12-05_telethon",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1265,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "02.webp",
+          "w": 995,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "03.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "04.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "05.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "06.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "07.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "08.webp",
+          "w": 900,
+          "h": 1350,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "09.webp",
+          "w": 900,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2025-11-11_commemoration",
+      "titre": "Commémoration du 11 novembre 1918",
+      "date": "2025-11-11",
+      "lieu": "Morestel",
+      "categorie": "patrimoine",
+      "auteurs": [
+        "jacques-vanneuville",
+        "gerard-bangy",
+        "mariette-daudre",
+        "laurent-mathieu"
+      ],
+      "dossier": "assets/img/reportages/2025-11-11_commemoration",
+      "vignettes": true,
+      "total": 141,
+      "lien": "https://photomorestel.com/v2/reportages/2025/2025-11-11_commemoration",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1346,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1400,
+          "h": 750,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "gerard-bangy"
+        },
+        {
+          "f": "04.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "gerard-bangy"
+        },
+        {
+          "f": "05.webp",
+          "w": 900,
+          "h": 1001,
+          "a": "mariette-daudre"
+        },
+        {
+          "f": "06.webp",
+          "w": 900,
+          "h": 900,
+          "a": "mariette-daudre"
+        },
+        {
+          "f": "07.webp",
+          "w": 1192,
+          "h": 900,
+          "a": "laurent-mathieu"
+        },
+        {
+          "f": "08.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "laurent-mathieu"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2025-09-20_patrimoine",
+      "titre": "Journées du Patrimoine",
+      "date": "2025-09-20",
+      "lieu": "Morestel",
+      "categorie": "patrimoine",
+      "auteurs": [
+        "denis-madaule"
+      ],
+      "dossier": "assets/img/reportages/2025-09-20_patrimoine",
+      "vignettes": true,
+      "total": 144,
+      "lien": "https://photomorestel.com/v2/reportages/2025/2025-09-20_patrimoine",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "02.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "03.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "04.webp",
+          "w": 1286,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "05.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "06.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "07.webp",
+          "w": 900,
+          "h": 1350,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "08.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2025-09-13_concert",
+      "titre": "Soirée concert",
+      "date": "2025-09-13",
+      "lieu": "Saint-Victor-de-Morestel",
+      "categorie": "evenement",
+      "auteurs": [
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2025-09-13_concert",
+      "vignettes": true,
+      "total": 88,
+      "lien": "https://photomorestel.com/v2/reportages/2025/2025-09-13_concert",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1346,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1346,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 900,
+          "h": 1065,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 900,
+          "h": 1346,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 900,
+          "h": 1346,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 900,
+          "h": 1303,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 1346,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 900,
+          "h": 1349,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2025-09-12_vernissages-aaccp",
+      "titre": "Vernissages AACCP",
+      "date": "2025-09-12",
+      "lieu": "Morestel",
+      "categorie": "culture",
+      "auteurs": [
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2025-09-12_vernissages-aaccp",
+      "vignettes": true,
+      "total": 50,
+      "lien": "https://photomorestel.com/v2/reportages/2025/2025-09-12_vernissages-aaccp",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1346,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1346,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 1346,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1346,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 1346,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 900,
+          "h": 1346,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2025-09-05_forum-associations",
+      "titre": "Forum des associations",
+      "date": "2025-09-05",
+      "lieu": "Morestel",
+      "categorie": "evenement",
+      "auteurs": [
+        "jacques-vanneuville",
+        "denis-madaule"
+      ],
+      "dossier": "assets/img/reportages/2025-09-05_forum-associations",
+      "vignettes": true,
+      "total": 202,
+      "lien": "https://photomorestel.com/v2/reportages/2025/2025-09-05_forum-associations",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1317,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1346,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 1346,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 1346,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 900,
+          "h": 936,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "07.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "08.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2025-08-30_nuit-blanche",
+      "titre": "La nuit blanche",
+      "date": "2025-08-30",
+      "lieu": "Morestel",
+      "categorie": "evenement",
+      "auteurs": [
+        "laurent-mathieu",
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2025-08-30_nuit-blanche",
+      "vignettes": true,
+      "total": 297,
+      "lien": "https://photomorestel.com/v2/reportages/2025/2025-08-30_nuit-blanche",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1172,
+          "h": 900,
+          "a": "laurent-mathieu"
+        },
+        {
+          "f": "02.webp",
+          "w": 1147,
+          "h": 900,
+          "a": "laurent-mathieu"
+        },
+        {
+          "f": "03.webp",
+          "w": 1400,
+          "h": 753,
+          "a": "laurent-mathieu"
+        },
+        {
+          "f": "04.webp",
+          "w": 900,
+          "h": 1349,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 1352,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 900,
+          "h": 1352,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2025-07-27_peintres",
+      "titre": "Peintres en liberté",
+      "date": "2025-07-27",
+      "lieu": "Morestel",
+      "categorie": "patrimoine",
+      "auteurs": [
+        "denis-madaule",
+        "gerard-bangy",
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2025-07-27_peintres",
+      "vignettes": true,
+      "total": 486,
+      "lien": "https://photomorestel.com/v2/reportages/2025/2025-07-27_peintres",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "02.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "03.webp",
+          "w": 1213,
+          "h": 900,
+          "a": "gerard-bangy"
+        },
+        {
+          "f": "04.webp",
+          "w": 1154,
+          "h": 900,
+          "a": "gerard-bangy"
+        },
+        {
+          "f": "05.webp",
+          "w": 897,
+          "h": 1400,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 1351,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 1352,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2025-07-14_celebrations",
+      "titre": "Célébrations du 14 juillet",
+      "date": "2025-07-14",
+      "lieu": "Morestel",
+      "categorie": "evenement",
+      "auteurs": [
+        "jacques-vanneuville",
+        "gerard-bangy"
+      ],
+      "dossier": "assets/img/reportages/2025-07-14_celebrations",
+      "vignettes": true,
+      "total": 348,
+      "lien": "https://photomorestel.com/v2/reportages/2025/2025-07-14_celebrations",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 900,
+          "h": 1068,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 900,
+          "h": 1349,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1199,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 1199,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 900,
+          "h": 1221,
+          "a": "gerard-bangy"
+        },
+        {
+          "f": "08.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "gerard-bangy"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2025-07-10_valromey-tour",
+      "titre": "Ain Bugey Valromey Tour 2025",
+      "date": "2025-07-10",
+      "lieu": "Morestel",
+      "categorie": "sport",
+      "auteurs": [
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2025-07-10_valromey-tour",
+      "vignettes": true,
+      "total": 240,
+      "lien": "https://photomorestel.com/v2/reportages/2025/2025-07-10_valromey-tour",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 900,
+          "h": 1352,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 900,
+          "h": 1352,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 1352,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1203,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 900,
+          "h": 1349,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 1352,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 2
+    },
+    {
+      "id": "2025-07-08_vernissage",
+      "titre": "Vernissage de l’exposition « Le corps à l’épreuve » à la Maison Ravier",
+      "date": "2025-07-08",
+      "lieu": "Morestel",
+      "categorie": "culture",
+      "auteurs": [
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2025-07-08_vernissage",
+      "vignettes": true,
+      "total": 78,
+      "lien": "https://photomorestel.com/v2/reportages/2025/2025-07-08_vernissage",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 900,
+          "h": 1349,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1352,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 1352,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1352,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 900,
+          "h": 1349,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 900,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 900,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 1
+    },
+    {
+      "id": "2025-06-28_feria-st-victor",
+      "titre": "La Féria",
+      "date": "2025-06-28",
+      "lieu": "St-Victor-de-Morestel",
+      "categorie": "evenement",
+      "auteurs": [
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2025-06-28_feria-st-victor",
+      "vignettes": true,
+      "total": 97,
+      "lien": "https://photomorestel.com/v2/reportages/2025/2025-06-28_feria-st-victor",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1124,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1124,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 1124,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 1125,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1125,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 900,
+          "h": 1349,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2025-06-21_fete-musique-creys",
+      "titre": "Fête de la musique à Creys",
+      "date": "2025-06-21",
+      "lieu": "Creys",
+      "categorie": "evenement",
+      "auteurs": [
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2025-06-21_fete-musique-creys",
+      "vignettes": true,
+      "total": 193,
+      "lien": "https://photomorestel.com/v2/reportages/2025/2025-06-21_fete-musique-creys",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1352,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 900,
+          "h": 986,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 900,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 900,
+          "h": 989,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 900,
+          "h": 1349,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 900,
+          "h": 1349,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 900,
+          "h": 1349,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2025-06-22_triathlons",
+      "titre": "Triathlons des Balcons du Dauphiné (Green Tour)",
+      "date": "2025-06-21",
+      "lieu": "la Vallée Bleue (Montalieu-Vercieu)",
+      "categorie": "sport",
+      "auteurs": [
+        "jacques-vanneuville",
+        "laurent-mathieu",
+        "gerard-bangy"
+      ],
+      "dossier": "assets/img/reportages/2025-06-22_triathlons",
+      "vignettes": true,
+      "total": 416,
+      "lien": "https://photomorestel.com/v2/reportages/2025/2025-06-22_triathlons",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1352,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 1352,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1347,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 900,
+          "h": 1350,
+          "a": "laurent-mathieu"
+        },
+        {
+          "f": "07.webp",
+          "w": 900,
+          "h": 907,
+          "a": "laurent-mathieu"
+        },
+        {
+          "f": "08.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "gerard-bangy"
+        },
+        {
+          "f": "09.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "gerard-bangy"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2025-06-14_fete-musique",
+      "titre": "Fête de la musique à Morestel",
+      "date": "2025-06-14",
+      "lieu": "Morestel",
+      "categorie": "evenement",
+      "auteurs": [
+        "jacques-vanneuville",
+        "laurent-mathieu"
+      ],
+      "dossier": "assets/img/reportages/2025-06-14_fete-musique",
+      "vignettes": true,
+      "total": 281,
+      "lien": "https://photomorestel.com/v2/reportages/2025/2025-06-14_fete-musique",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1352,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 1400,
+          "h": 887,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 1352,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 900,
+          "h": 1349,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 1169,
+          "h": 900,
+          "a": "laurent-mathieu"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2025-05-08_commemoration",
+      "titre": "Commémoration du 8 mai 1945",
+      "date": "2025-05-08",
+      "lieu": "",
+      "categorie": "patrimoine",
+      "auteurs": [
+        "laurent-mathieu"
+      ],
+      "dossier": "assets/img/reportages/2025-05-08_commemoration",
+      "vignettes": true,
+      "total": 35,
+      "lien": "https://photomorestel.com/v2/reportages/2025/2025-05-08_commemoration",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1400,
+          "h": 759,
+          "a": "laurent-mathieu"
+        },
+        {
+          "f": "02.webp",
+          "w": 1400,
+          "h": 870,
+          "a": "laurent-mathieu"
+        },
+        {
+          "f": "03.webp",
+          "w": 1178,
+          "h": 1400,
+          "a": "laurent-mathieu"
+        },
+        {
+          "f": "04.webp",
+          "w": 1400,
+          "h": 933,
+          "a": "laurent-mathieu"
+        },
+        {
+          "f": "05.webp",
+          "w": 1400,
+          "h": 923,
+          "a": "laurent-mathieu"
+        },
+        {
+          "f": "06.webp",
+          "w": 839,
+          "h": 1400,
+          "a": "laurent-mathieu"
+        },
+        {
+          "f": "07.webp",
+          "w": 1247,
+          "h": 1400,
+          "a": "laurent-mathieu"
+        },
+        {
+          "f": "08.webp",
+          "w": 1400,
+          "h": 989,
+          "a": "laurent-mathieu"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2024-09-06_forum-des-asso",
+      "titre": "Forum des associations",
+      "date": "2024-09-06",
+      "lieu": "",
+      "categorie": "evenement",
+      "auteurs": [
+        "denis-madaule"
+      ],
+      "dossier": "assets/img/reportages/2024-09-06_forum-des-asso",
+      "vignettes": true,
+      "total": 96,
+      "lien": "https://photomorestel.com/v2/reportages/2024/2024-09-06_forum-des-asso",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "02.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "03.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "04.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "05.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "06.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "07.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "08.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2024-08-31_nuit-blanche",
+      "titre": "Nuit blanche 2024",
+      "date": "2024-08-31",
+      "lieu": "",
+      "categorie": "evenement",
+      "auteurs": [
+        "denis-madaule"
+      ],
+      "dossier": "assets/img/reportages/2024-08-31_nuit-blanche",
+      "vignettes": true,
+      "total": 98,
+      "lien": "https://photomorestel.com/v2/reportages/2024/2024-08-31_nuit-blanche",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "02.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "03.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "04.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "05.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "06.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "07.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "08.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2024-07-28_peintres-en-liberte",
+      "titre": "Les peintres en liberté",
+      "date": "2024-07-28",
+      "lieu": "",
+      "categorie": "patrimoine",
+      "auteurs": [
+        "denis-madaule",
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2024-07-28_peintres-en-liberte",
+      "vignettes": true,
+      "total": 306,
+      "lien": "https://photomorestel.com/v2/reportages/2024/2024-07-28_peintres-en-liberte",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "02.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "03.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "04.webp",
+          "w": 900,
+          "h": 1347,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 900,
+          "h": 1347,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 900,
+          "h": 1347,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 900,
+          "h": 1347,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2024-06-15_fete-de-la-musique",
+      "titre": "Fête de la musique",
+      "date": "2024-06-21",
+      "lieu": "",
+      "categorie": "evenement",
+      "auteurs": [
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2024-06-15_fete-de-la-musique",
+      "vignettes": true,
+      "total": 160,
+      "lien": "https://photomorestel.com/v2/reportages/2024/2024-06-15_fete-de-la-musique",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1335,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1338,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 900,
+          "h": 1335,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 1338,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1338,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 1335,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 1335,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 900,
+          "h": 1335,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2024-05-08_commemoration",
+      "titre": "Commémoration du 8 mai 1945",
+      "date": "2024-05-08",
+      "lieu": "",
+      "categorie": "patrimoine",
+      "auteurs": [
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2024-05-08_commemoration",
+      "vignettes": true,
+      "total": 115,
+      "lien": "https://photomorestel.com/v2/reportages/2024/2024-05-08_commemoration",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1335,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1335,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 900,
+          "h": 1335,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 1338,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 900,
+          "h": 1335,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 900,
+          "h": 1335,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 900,
+          "h": 1337,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 900,
+          "h": 1277,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2024-04-05_vernissage_aaccp",
+      "titre": "Vernissage de l'AACCP",
+      "date": "2024-04-05",
+      "lieu": "",
+      "categorie": "culture",
+      "auteurs": [
+        "denis-madaule"
+      ],
+      "dossier": "assets/img/reportages/2024-04-05_vernissage_aaccp",
+      "vignettes": true,
+      "total": 81,
+      "lien": "https://photomorestel.com/v2/reportages/2024/2024-04-05_vernissage_aaccp",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "02.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "03.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "04.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "05.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "06.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "07.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "08.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2024-03-23_jugement-monochrome-ur11",
+      "titre": "Jugement du concours monochrome de l'UR11",
+      "date": "2024-03-23",
+      "lieu": "Morestel",
+      "categorie": "culture",
+      "auteurs": [
+        "denis-madaule"
+      ],
+      "dossier": "assets/img/reportages/2024-03-23_jugement-monochrome-ur11",
+      "vignettes": true,
+      "total": 38,
+      "lien": "https://photomorestel.com/v2/reportages/2024/2024-03-23_jugement-monochrome-ur11",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1024,
+          "h": 681,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "02.webp",
+          "w": 1024,
+          "h": 681,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "03.webp",
+          "w": 1400,
+          "h": 931,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "04.webp",
+          "w": 1024,
+          "h": 681,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "05.webp",
+          "w": 1024,
+          "h": 681,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "06.webp",
+          "w": 1024,
+          "h": 681,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "07.webp",
+          "w": 1024,
+          "h": 681,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "08.webp",
+          "w": 1024,
+          "h": 681,
+          "a": "denis-madaule"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2024-01-13_vernissage-hivernales",
+      "titre": "Vernissage de l'exposition Les Hivernales",
+      "date": "2024-01-13",
+      "lieu": "Morestel",
+      "categorie": "culture",
+      "auteurs": [
+        "denis-madaule",
+        "patrice-laine"
+      ],
+      "dossier": "assets/img/reportages/2024-01-13_vernissage-hivernales",
+      "vignettes": true,
+      "total": 78,
+      "lien": "https://photomorestel.com/v2/reportages/2024/2024-01-13_vernissage-hivernales",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "02.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "03.webp",
+          "w": 1200,
+          "h": 800,
+          "a": "patrice-laine"
+        },
+        {
+          "f": "04.webp",
+          "w": 900,
+          "h": 1200,
+          "a": "patrice-laine"
+        },
+        {
+          "f": "05.webp",
+          "w": 1200,
+          "h": 1200,
+          "a": "patrice-laine"
+        },
+        {
+          "f": "06.webp",
+          "w": 1200,
+          "h": 800,
+          "a": "patrice-laine"
+        },
+        {
+          "f": "07.webp",
+          "w": 800,
+          "h": 1200,
+          "a": "patrice-laine"
+        },
+        {
+          "f": "08.webp",
+          "w": 1200,
+          "h": 800,
+          "a": "patrice-laine"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2024-01-07_voeux-maire-morestel_jv",
+      "titre": "Cérémonie des Vœux du Maire de Morestel",
+      "date": "2024-01-07",
+      "lieu": "",
+      "categorie": "evenement",
+      "auteurs": [
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2024-01-07_voeux-maire-morestel_jv",
+      "vignettes": true,
+      "total": 59,
+      "lien": "https://photomorestel.com/v2/reportages/2024/2024-01-07_voeux-maire-morestel_jv",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1331,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1334,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 1334,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 1331,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1331,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 609,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 1331,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 609,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2023-07-30_peintres-en-liberte",
+      "titre": "Les peintres en liberté",
+      "date": "2023-07-30",
+      "lieu": "Morestel",
+      "categorie": "patrimoine",
+      "auteurs": [
+        "denis-madaule",
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2023-07-30_peintres-en-liberte",
+      "vignettes": true,
+      "total": 339,
+      "lien": "https://photomorestel.com/v2/reportages/2023/2023-07-30_peintres-en-liberte",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "02.webp",
+          "w": 600,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "03.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "04.webp",
+          "w": 1337,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 705,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 1334,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 836,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 1334,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2023-06-24_telethonnades",
+      "titre": "Les téléthonnades",
+      "date": "2023-06-24",
+      "lieu": "Morestel",
+      "categorie": "evenement",
+      "auteurs": [
+        "denis-madaule"
+      ],
+      "dossier": "assets/img/reportages/2023-06-24_telethonnades",
+      "vignettes": true,
+      "total": 301,
+      "lien": "https://photomorestel.com/v2/reportages/2023/2023-06-24_telethonnades",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "02.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "03.webp",
+          "w": 600,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "04.webp",
+          "w": 600,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "05.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "06.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "07.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "08.webp",
+          "w": 600,
+          "h": 900,
+          "a": "denis-madaule"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2023-05-08_commemoration",
+      "titre": "Commémoration du 8 Mai 1945",
+      "date": "2023-05-08",
+      "lieu": "Morestel",
+      "categorie": "patrimoine",
+      "auteurs": [
+        "jacques-vanneuville",
+        "laurent-mathieu",
+        "jimmy-garcia"
+      ],
+      "dossier": "assets/img/reportages/2023-05-08_commemoration",
+      "vignettes": true,
+      "total": 113,
+      "lien": "https://photomorestel.com/v2/reportages/2023/2023-05-08_commemoration",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1344,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1341,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 1341,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 1341,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1292,
+          "h": 900,
+          "a": "laurent-mathieu"
+        },
+        {
+          "f": "06.webp",
+          "w": 538,
+          "h": 900,
+          "a": "laurent-mathieu"
+        },
+        {
+          "f": "07.webp",
+          "w": 450,
+          "h": 900,
+          "a": "jimmy-garcia"
+        },
+        {
+          "f": "08.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "jimmy-garcia"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2023-03-05_kayak",
+      "titre": "National 2 slalom de canoë-kayak",
+      "date": "2023-04-04",
+      "lieu": "Sault-Brenaz",
+      "categorie": "sport",
+      "auteurs": [
+        "jacques-vanneuville",
+        "mariette-daudre",
+        "patrice-laine",
+        "aurelie-ducros",
+        "bernard-chavanne",
+        "carole-noue",
+        "lionel-martin",
+        "dominique-baptiste",
+        "laurent-mathieu"
+      ],
+      "dossier": "assets/img/reportages/2023-03-05_kayak",
+      "vignettes": true,
+      "total": 264,
+      "lien": "https://photomorestel.com/v2/reportages/2023/2023-03-05_kayak",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1265,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "mariette-daudre"
+        },
+        {
+          "f": "03.webp",
+          "w": 1200,
+          "h": 900,
+          "a": "patrice-laine"
+        },
+        {
+          "f": "04.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "aurelie-ducros"
+        },
+        {
+          "f": "05.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "bernard-chavanne"
+        },
+        {
+          "f": "06.webp",
+          "w": 1226,
+          "h": 900,
+          "a": "carole-noue"
+        },
+        {
+          "f": "07.webp",
+          "w": 1400,
+          "h": 887,
+          "a": "lionel-martin"
+        },
+        {
+          "f": "08.webp",
+          "w": 1311,
+          "h": 900,
+          "a": "dominique-baptiste"
+        },
+        {
+          "f": "09.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "laurent-mathieu"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2023-04-01_marche",
+      "titre": "Marche contre les violences faites aux femmes",
+      "date": "2023-04-01",
+      "lieu": "Branges et Morestel",
+      "categorie": "evenement",
+      "auteurs": [
+        "denis-madaule",
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2023-04-01_marche",
+      "vignettes": true,
+      "total": 287,
+      "lien": "https://photomorestel.com/v2/reportages/2023/2023-04-01_marche",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1024,
+          "h": 683,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "02.webp",
+          "w": 1024,
+          "h": 683,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "03.webp",
+          "w": 1024,
+          "h": 683,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "04.webp",
+          "w": 1024,
+          "h": 683,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "05.webp",
+          "w": 1070,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 1400,
+          "h": 860,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 1343,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 1304,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2023-03-19_commemoration",
+      "titre": "Commémoration du 19 mars",
+      "date": "2023-03-19",
+      "lieu": "Morestel",
+      "categorie": "patrimoine",
+      "auteurs": [
+        "jimmy-garcia"
+      ],
+      "dossier": "assets/img/reportages/2023-03-19_commemoration",
+      "vignettes": true,
+      "total": 17,
+      "lien": "https://photomorestel.com/v2/reportages/2023/2023-03-19_commemoration",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 600,
+          "h": 900,
+          "a": "jimmy-garcia"
+        },
+        {
+          "f": "02.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "jimmy-garcia"
+        },
+        {
+          "f": "03.webp",
+          "w": 600,
+          "h": 900,
+          "a": "jimmy-garcia"
+        },
+        {
+          "f": "04.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "jimmy-garcia"
+        },
+        {
+          "f": "05.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "jimmy-garcia"
+        },
+        {
+          "f": "06.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "jimmy-garcia"
+        },
+        {
+          "f": "07.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "jimmy-garcia"
+        },
+        {
+          "f": "08.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "jimmy-garcia"
+        }
+      ],
+      "couverture": 1
+    },
+    {
+      "id": "2023-01-14_vernissage-hivernales",
+      "titre": "Vernissage de l'exposition Les Hivernales",
+      "date": "2023-01-14",
+      "lieu": "Morestel",
+      "categorie": "culture",
+      "auteurs": [
+        "denis-madaule",
+        "jimmy-garcia"
+      ],
+      "dossier": "assets/img/reportages/2023-01-14_vernissage-hivernales",
+      "vignettes": true,
+      "total": 65,
+      "lien": "https://photomorestel.com/v2/reportages/2023/2023-01-14_vernissage-hivernales",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 600,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "02.webp",
+          "w": 1024,
+          "h": 683,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "03.webp",
+          "w": 1024,
+          "h": 683,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "04.webp",
+          "w": 600,
+          "h": 900,
+          "a": "jimmy-garcia"
+        },
+        {
+          "f": "05.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "jimmy-garcia"
+        },
+        {
+          "f": "06.webp",
+          "w": 600,
+          "h": 900,
+          "a": "jimmy-garcia"
+        },
+        {
+          "f": "07.webp",
+          "w": 1400,
+          "h": 571,
+          "a": "jimmy-garcia"
+        },
+        {
+          "f": "08.webp",
+          "w": 600,
+          "h": 900,
+          "a": "jimmy-garcia"
+        }
+      ],
+      "couverture": 1
+    },
+    {
+      "id": "2023-01-08_voeux-maire-morestel",
+      "titre": "Cérémonie des Vœux du Maire de Morestel",
+      "date": "2023-01-08",
+      "lieu": "Morestel",
+      "categorie": "evenement",
+      "auteurs": [
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/reportages/2023-01-08_voeux-maire-morestel",
+      "vignettes": true,
+      "total": 73,
+      "lien": "https://photomorestel.com/v2/reportages/2023/2023-01-08_voeux-maire-morestel",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1400,
+          "h": 658,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 1344,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 1400,
+          "h": 851,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 1344,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1344,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 1400,
+          "h": 785,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "07.webp",
+          "w": 1132,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "08.webp",
+          "w": 1055,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        }
+      ],
+      "couverture": 0
+    }
+  ]
+}

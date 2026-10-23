@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le club — Club Photo de Morestel</title>
+<meta name="description" content="Histoire, valeurs, bureau et auteurs du Club Photo de Morestel, association loi 1901 fondée en 1983 à Morestel (Isère).">
+<meta name="theme-color" content="#0a0d13">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Club Photo de Morestel">
+<meta property="og:title" content="Le club — Club Photo de Morestel">
+<meta property="og:description" content="Histoire, valeurs, bureau et auteurs du Club Photo de Morestel, association loi 1901 fondée en 1983 à Morestel (Isère).">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<!-- ===== EN-TÊTE COMMUN (identique sur les 5 pages) ===== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Club Photo de Morestel, retour à l’accueil"><img src="assets/img/logo/logo-clair.webp" alt="Club Photo de Morestel" width="104" height="40"></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    <nav id="menu" class="nav" aria-label="Menu principal">
+      <a href="index.html">Accueil</a>
+      <a href="le-club.html" aria-current="page">Le club</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+      <a href="adherent.html" class="nav__member">Adhérent</a>
+    </nav>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="page-hero__bg"><img src="assets/img/sorties/2024-06-05_sortie_club/04.webp" alt="" width="1350" height="900" fetchpriority="high"></div>
+  <div class="wrap">
+    <p class="eyebrow">Association loi 1901 · depuis 1983</p>
+    <h1>Le club</h1>
+    <p class="lead">Des photographes de tous niveaux, un local, des soirées, une exposition annuelle et un regard sur Morestel.</p>
+  </div>
+</div>
+<nav class="subnav" aria-label="Rubriques de la page">
+  <div class="wrap">
+    <a href="#presentation">Présentation</a>
+    <a href="#histoire">Histoire</a>
+    <a href="#valeurs">Valeurs</a>
+    <a href="#bureau">Bureau</a>
+    <a href="#auteurs">Nos auteurs</a>
+  </div>
+</nav>
+<main id="contenu">
+  <noscript><p class="ns">Cette page charge ses contenus avec JavaScript. Activez-le, ou retrouvez les photos du club sur <a href="https://photomorestel.com/">l’ancien site</a>.</p></noscript>
+  <section class="section" id="presentation">
+    <div class="wrap">
+      <div class="split">
+        <div class="prose reveal" id="presentation-texte">
+          <p class="eyebrow">Présentation</p>
+          <h2>Regarder, partager, progresser</h2>
+          <p>Le Club Photo de Morestel réunit des passionnés de photographie, débutants comme confirmés, autour d’une même envie : regarder, partager, progresser.</p><p>Chaque mercredi soir, nous nous retrouvons à la Maison Claret pour des thèmes techniques ou créatifs : réglages de l’appareil, composition, macrophotographie, portrait en studio, focus stacking, droit à l’image…</p><p>Au fil de l’année, nous couvrons la vie de Morestel et de ses alentours en reportages, partons en sortie (nature, nuit, rue), participons aux concours de la Fédération Photographique de France et montrons nos tirages papier lors de notre exposition annuelle, Les Hivernales.</p>
+        </div>
+        <div class="split__media reveal"><img src="assets/img/sorties/2024-05-25_sortie-choranche/06.webp" alt="Cascade photographiée lors de la sortie aux grottes de Choranche" width="1350" height="900" loading="lazy"></div>
+      </div>
+      <div class="acts" id="activites"></div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="histoire">
+    <div class="wrap">
+      <div class="section__head reveal"><div><p class="eyebrow">Histoire</p><h2>De Creys-Malville aux Hivernales</h2></div></div>
+      <ol class="timeline" id="timeline"></ol>
+    </div>
+  </section>
+
+  <section class="section" id="valeurs">
+    <div class="wrap">
+      <div class="section__head reveal"><div><p class="eyebrow">Valeurs</p><h2>Ce qui nous réunit</h2></div></div>
+      <div class="values" id="values"></div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="bureau">
+    <div class="wrap">
+      <div class="section__head reveal"><div><p class="eyebrow">Bureau</p><h2>Ceux qui font vivre le club</h2></div></div>
+      <div class="bureau" id="bureau-liste"></div>
+    </div>
+  </section>
+
+  <section class="section" id="auteurs">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <div><p class="eyebrow">Nos auteurs</p><h2>Des regards, des signatures</h2>
+        <p class="lead" style="margin:.6em 0 0">Cliquez sur un auteur pour afficher tous ses reportages et ses sorties.</p></div>
+        <a class="link-arrow" href="galerie.html">Toute la galerie</a>
+      </div>
+      <div class="authors" id="authors-grid"></div>
+    </div>
+  </section>
+</main>
+<!-- ===== PIED DE PAGE COMMUN (identique sur les 5 pages ; textes dans data/club.json) ===== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <img src="assets/img/logo/logo-clair.webp" alt="" width="140" height="54" loading="lazy">
+        <p data-bind="statut">Association loi 1901 affiliée à la Fédération Photographique de France</p>
+      </div>
+      <div>
+        <h2>Coordonnées</h2>
+        <address>
+          <strong>Club Photo de Morestel</strong><br>
+          Maison Claret<br>101 rue Jean-Baptiste Corot<br>38510 Morestel
+        </address>
+        <p><a href="mailto:club@photomorestel.com" data-bind-href="email">club@photomorestel.com</a></p>
+        <p data-bind="rejoindre.reunions">Tous les mercredis soir, de 20h à 22h, à la Maison Claret (Morestel).</p>
+      </div>
+      <div>
+        <h2>Les 5 pages</h2>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="le-club.html">Le club</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="adherent.html">Adhérent</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Liens &amp; réseaux</h2>
+        <ul id="footer-reseaux">
+          <li><a href="https://federation-photo.fr/" target="_blank" rel="noopener">Fédération Photographique de France</a></li>
+          <li><a href="https://photomorestel.com/" target="_blank" rel="noopener">Ancien site du club (archives)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="annee">2026</span> Club Photo de Morestel · Photos © leurs auteurs</span>
+      <details class="legal">
+        <summary>Mentions légales</summary>
+        <div>
+          <p><strong>Éditeur.</strong> Club Photo de Morestel, association loi 1901 — Maison Claret, 101 rue Jean-Baptiste Corot, 38510 Morestel. Directeur de la publication : le président du club.</p>
+          <p><strong>Hébergeur.</strong> Netlify, Inc. — 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis.</p>
+          <p><strong>Droits.</strong> Les photographies sont la propriété de leurs auteurs, membres du club, et ne peuvent être réutilisées sans leur accord.</p>
+          <p><strong>Données personnelles.</strong> Les informations saisies dans le formulaire de contact ne servent qu’à répondre à votre message ; elles ne sont ni revendues ni transmises à des tiers.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/common.js" defer></script>
+<script src="assets/js/club.js" defer></script>
+</body>
+</html>

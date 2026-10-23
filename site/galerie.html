@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galerie : reportages et sorties — Club Photo de Morestel</title>
+<meta name="description" content="Reportages (patrimoine, événements, expositions, sport) et sorties photo du Club Photo de Morestel, filtrables par catégorie et par auteur.">
+<meta name="theme-color" content="#0a0d13">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Club Photo de Morestel">
+<meta property="og:title" content="Galerie : reportages et sorties — Club Photo de Morestel">
+<meta property="og:description" content="Reportages (patrimoine, événements, expositions, sport) et sorties photo du Club Photo de Morestel, filtrables par catégorie et par auteur.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<!-- ===== EN-TÊTE COMMUN (identique sur les 5 pages) ===== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Club Photo de Morestel, retour à l’accueil"><img src="assets/img/logo/logo-clair.webp" alt="Club Photo de Morestel" width="104" height="40"></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    <nav id="menu" class="nav" aria-label="Menu principal">
+      <a href="index.html">Accueil</a>
+      <a href="le-club.html">Le club</a>
+      <a href="galerie.html" aria-current="page">Galerie</a>
+      <a href="contact.html">Contact</a>
+      <a href="adherent.html" class="nav__member">Adhérent</a>
+    </nav>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="page-hero__bg"><img src="assets/img/sorties/2025-12-03_sortie-nuit-morestel/01.webp" alt="" width="1350" height="900" fetchpriority="high"></div>
+  <div class="wrap">
+    <p class="eyebrow">Reportages &amp; sorties</p>
+    <h1>La galerie</h1>
+    <p class="lead">Les reportages sur la vie de Morestel et les sorties photo du club, à parcourir en mosaïque et en plein écran.</p>
+  </div>
+</div>
+<main id="contenu">
+  <section class="section" style="padding-top:clamp(28px,4vw,56px)">
+    <div class="wrap" id="galerie-app">
+      <noscript><p class="ns">Cette page charge ses contenus avec JavaScript. Activez-le, ou retrouvez les photos du club sur <a href="https://photomorestel.com/">l’ancien site</a>.</p></noscript>
+      <div class="tabs" role="tablist" aria-label="Galerie">
+        <button class="tab" role="tab" id="tab-reportages" aria-controls="panel" aria-selected="true" data-tab="reportages">Reportages<small id="n-reportages"></small></button>
+        <button class="tab" role="tab" id="tab-sorties" aria-controls="panel" aria-selected="false" data-tab="sorties" tabindex="-1">Sorties<small id="n-sorties"></small></button>
+      </div>
+      <div id="panel" role="tabpanel" aria-live="polite"></div>
+    </div>
+  </section>
+</main>
+<!-- ===== PIED DE PAGE COMMUN (identique sur les 5 pages ; textes dans data/club.json) ===== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <img src="assets/img/logo/logo-clair.webp" alt="" width="140" height="54" loading="lazy">
+        <p data-bind="statut">Association loi 1901 affiliée à la Fédération Photographique de France</p>
+      </div>
+      <div>
+        <h2>Coordonnées</h2>
+        <address>
+          <strong>Club Photo de Morestel</strong><br>
+          Maison Claret<br>101 rue Jean-Baptiste Corot<br>38510 Morestel
+        </address>
+        <p><a href="mailto:club@photomorestel.com" data-bind-href="email">club@photomorestel.com</a></p>
+        <p data-bind="rejoindre.reunions">Tous les mercredis soir, de 20h à 22h, à la Maison Claret (Morestel).</p>
+      </div>
+      <div>
+        <h2>Les 5 pages</h2>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="le-club.html">Le club</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="adherent.html">Adhérent</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Liens &amp; réseaux</h2>
+        <ul id="footer-reseaux">
+          <li><a href="https://federation-photo.fr/" target="_blank" rel="noopener">Fédération Photographique de France</a></li>
+          <li><a href="https://photomorestel.com/" target="_blank" rel="noopener">Ancien site du club (archives)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="annee">2026</span> Club Photo de Morestel · Photos © leurs auteurs</span>
+      <details class="legal">
+        <summary>Mentions légales</summary>
+        <div>
+          <p><strong>Éditeur.</strong> Club Photo de Morestel, association loi 1901 — Maison Claret, 101 rue Jean-Baptiste Corot, 38510 Morestel. Directeur de la publication : le président du club.</p>
+          <p><strong>Hébergeur.</strong> Netlify, Inc. — 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis.</p>
+          <p><strong>Droits.</strong> Les photographies sont la propriété de leurs auteurs, membres du club, et ne peuvent être réutilisées sans leur accord.</p>
+          <p><strong>Données personnelles.</strong> Les informations saisies dans le formulaire de contact ne servent qu’à répondre à votre message ; elles ne sont ni revendues ni transmises à des tiers.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/common.js" defer></script>
+<script src="assets/js/galerie.js" defer></script>
+</body>
+</html>

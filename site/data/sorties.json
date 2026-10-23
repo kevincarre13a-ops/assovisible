@@ -1,0 +1,901 @@
+{
+  "_aide": "Une sortie = un bloc. Voir LISEZMOI.md. Catégories possibles : nature, nuit, visites.",
+  "categories": [
+    {
+      "id": "nature",
+      "nom": "Nature"
+    },
+    {
+      "id": "nuit",
+      "nom": "Nuit"
+    },
+    {
+      "id": "visites",
+      "nom": "Visites & patrimoine"
+    }
+  ],
+  "items": [
+    {
+      "id": "2025-12-03_sortie-nuit-morestel",
+      "titre": "Sortie club : photos de nuit",
+      "date": "2025-12-03",
+      "lieu": "Morestel",
+      "categorie": "nuit",
+      "auteurs": [
+        "jacques-vanneuville",
+        "denis-madaule"
+      ],
+      "dossier": "assets/img/sorties/2025-12-03_sortie-nuit-morestel",
+      "vignettes": true,
+      "total": 120,
+      "lien": "https://photomorestel.com/v2/reportages/2025/2025-12-03_sortie-nuit-morestel",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1346,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "02.webp",
+          "w": 900,
+          "h": 1346,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "03.webp",
+          "w": 1346,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "04.webp",
+          "w": 1349,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "05.webp",
+          "w": 1346,
+          "h": 900,
+          "a": "jacques-vanneuville"
+        },
+        {
+          "f": "06.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "07.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "08.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2024-06-05_sortie_club",
+      "titre": "Sortie club",
+      "date": "2024-06-05",
+      "lieu": "",
+      "categorie": "visites",
+      "auteurs": [
+        "denis-madaule"
+      ],
+      "dossier": "assets/img/sorties/2024-06-05_sortie_club",
+      "vignettes": true,
+      "total": 16,
+      "lien": "https://photomorestel.com/v2/reportages/2024/2024-06-05_sortie_club",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 900,
+          "h": 1078,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "02.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "03.webp",
+          "w": 900,
+          "h": 1353,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "04.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "05.webp",
+          "w": 900,
+          "h": 1353,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "06.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "07.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        },
+        {
+          "f": "08.webp",
+          "w": 1353,
+          "h": 900,
+          "a": "denis-madaule"
+        }
+      ],
+      "couverture": 1
+    },
+    {
+      "id": "2024-05-25_sortie-choranche",
+      "titre": "Sortie club aux grottes de Choranche",
+      "date": "2024-05-25",
+      "lieu": "",
+      "categorie": "nature",
+      "auteurs": [
+        "laurent-mathieu"
+      ],
+      "dossier": "assets/img/sorties/2024-05-25_sortie-choranche",
+      "vignettes": true,
+      "total": 47,
+      "lien": "https://photomorestel.com/v2/reportages/2024/2024-05-25_sortie-choranche",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 900,
+          "h": 1350,
+          "a": "laurent-mathieu",
+          "l": "La grotte"
+        },
+        {
+          "f": "02.webp",
+          "w": 1240,
+          "h": 900,
+          "a": "laurent-mathieu",
+          "l": "La grotte"
+        },
+        {
+          "f": "03.webp",
+          "w": 900,
+          "h": 1187,
+          "a": "laurent-mathieu",
+          "l": "La grotte"
+        },
+        {
+          "f": "04.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "laurent-mathieu",
+          "l": "La grotte"
+        },
+        {
+          "f": "05.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "laurent-mathieu",
+          "l": "Les fontaines pétrifiantes"
+        },
+        {
+          "f": "06.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "laurent-mathieu",
+          "l": "Les fontaines pétrifiantes"
+        },
+        {
+          "f": "07.webp",
+          "w": 1369,
+          "h": 900,
+          "a": "laurent-mathieu",
+          "l": "Les fontaines pétrifiantes"
+        },
+        {
+          "f": "08.webp",
+          "w": 1350,
+          "h": 900,
+          "a": "laurent-mathieu",
+          "l": "Les fontaines pétrifiantes"
+        }
+      ],
+      "couverture": 1
+    },
+    {
+      "id": "2019-11-13_sortie-nocturne-a-morestel",
+      "titre": "Sortie nocturne à Morestel",
+      "date": "2019-11-13",
+      "lieu": "",
+      "categorie": "nature",
+      "auteurs": [
+        "jacques-vanneuville",
+        "eric-fabre",
+        "paul-petit",
+        "christine-houdart",
+        "jean-pierre-goethals",
+        "laurent-mathieu",
+        "patrick-nallet",
+        "richard-houdart",
+        "jacques-chabanne",
+        "vincent-thomas"
+      ],
+      "dossier": "assets/img/sorties/2019-11-13_sortie-nocturne-a-morestel",
+      "vignettes": true,
+      "total": 126,
+      "lien": "https://photomorestel.com/saison-2019-2020.html",
+      "note": "",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 1024,
+          "h": 619
+        },
+        {
+          "f": "02.webp",
+          "w": 800,
+          "h": 450
+        },
+        {
+          "f": "03.webp",
+          "w": 800,
+          "h": 455
+        },
+        {
+          "f": "04.webp",
+          "w": 800,
+          "h": 536
+        },
+        {
+          "f": "05.webp",
+          "w": 800,
+          "h": 535
+        },
+        {
+          "f": "06.webp",
+          "w": 800,
+          "h": 537
+        },
+        {
+          "f": "07.webp",
+          "w": 800,
+          "h": 489
+        },
+        {
+          "f": "08.webp",
+          "w": 797,
+          "h": 600
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2019-06-22_sortie-grotte-de-choranche",
+      "titre": "Sortie grotte de Choranche",
+      "date": "2019-06-22",
+      "lieu": "",
+      "categorie": "nature",
+      "auteurs": [
+        "jean-pierre-goethals",
+        "laurent-mathieu",
+        "eric-fabre",
+        "jerome-theobald"
+      ],
+      "dossier": "assets/img/sorties/2019-06-22_sortie-grotte-de-choranche",
+      "vignettes": true,
+      "total": 87,
+      "lien": "https://photomorestel.com/saison-2018-2019.html",
+      "note": "",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 800,
+          "h": 537
+        },
+        {
+          "f": "02.webp",
+          "w": 800,
+          "h": 537
+        },
+        {
+          "f": "03.webp",
+          "w": 779,
+          "h": 600
+        },
+        {
+          "f": "04.webp",
+          "w": 800,
+          "h": 506
+        },
+        {
+          "f": "05.webp",
+          "w": 800,
+          "h": 539
+        },
+        {
+          "f": "06.webp",
+          "w": 800,
+          "h": 539
+        },
+        {
+          "f": "07.webp",
+          "w": 800,
+          "h": 539
+        },
+        {
+          "f": "08.webp",
+          "w": 406,
+          "h": 600
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2019-06-07_sortie-sabots-de-venus-en-chartreuse",
+      "titre": "Sortie sabots de Vénus en Chartreuse",
+      "date": "2019-06-07",
+      "lieu": "",
+      "categorie": "nature",
+      "auteurs": [
+        "dominique-baptiste"
+      ],
+      "dossier": "assets/img/sorties/2019-06-07_sortie-sabots-de-venus-en-chartreuse",
+      "vignettes": true,
+      "total": 26,
+      "lien": "https://photomorestel.com/saison-2018-2019.html",
+      "note": "",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 484,
+          "h": 600
+        },
+        {
+          "f": "02.webp",
+          "w": 688,
+          "h": 600
+        },
+        {
+          "f": "03.webp",
+          "w": 752,
+          "h": 600
+        },
+        {
+          "f": "04.webp",
+          "w": 800,
+          "h": 312
+        },
+        {
+          "f": "05.webp",
+          "w": 800,
+          "h": 444
+        },
+        {
+          "f": "06.webp",
+          "w": 800,
+          "h": 539
+        },
+        {
+          "f": "07.webp",
+          "w": 800,
+          "h": 578
+        },
+        {
+          "f": "08.webp",
+          "w": 800,
+          "h": 539
+        }
+      ],
+      "couverture": 2
+    },
+    {
+      "id": "2019-05-25_sortie-nature-a-l-etang-de-marsa",
+      "titre": "Sortie Nature à l'étang de Marsa",
+      "date": "2019-05-25",
+      "lieu": "",
+      "categorie": "nature",
+      "auteurs": [
+        "paul-petit",
+        "jacques-vanneuville",
+        "eric-fabre",
+        "patrick-nallet",
+        "jean-claude-guerry",
+        "patrick-bessy",
+        "vincent-thomas"
+      ],
+      "dossier": "assets/img/sorties/2019-05-25_sortie-nature-a-l-etang-de-marsa",
+      "vignettes": true,
+      "total": 109,
+      "lien": "https://photomorestel.com/saison-2018-2019.html",
+      "note": "",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 800,
+          "h": 541
+        },
+        {
+          "f": "02.webp",
+          "w": 430,
+          "h": 600
+        },
+        {
+          "f": "03.webp",
+          "w": 486,
+          "h": 600
+        },
+        {
+          "f": "04.webp",
+          "w": 800,
+          "h": 539
+        },
+        {
+          "f": "05.webp",
+          "w": 600,
+          "h": 600
+        },
+        {
+          "f": "06.webp",
+          "w": 340,
+          "h": 600
+        },
+        {
+          "f": "07.webp",
+          "w": 800,
+          "h": 537
+        },
+        {
+          "f": "08.webp",
+          "w": 350,
+          "h": 600
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2019-04-06_sortie-au-musee-des-sapeurs-pompiers-de-lyon",
+      "titre": "Sortie au Musée des sapeurs pompiers de Lyon",
+      "date": "2019-04-06",
+      "lieu": "",
+      "categorie": "visites",
+      "auteurs": [
+        "vincent-thomas",
+        "dominique-baptiste",
+        "paul-petit"
+      ],
+      "dossier": "assets/img/sorties/2019-04-06_sortie-au-musee-des-sapeurs-pompiers-de-lyon",
+      "vignettes": true,
+      "total": 64,
+      "lien": "https://photomorestel.com/saison-2018-2019.html",
+      "note": "",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 800,
+          "h": 536
+        },
+        {
+          "f": "02.webp",
+          "w": 800,
+          "h": 547
+        },
+        {
+          "f": "03.webp",
+          "w": 800,
+          "h": 547
+        },
+        {
+          "f": "04.webp",
+          "w": 800,
+          "h": 547
+        },
+        {
+          "f": "05.webp",
+          "w": 692,
+          "h": 600
+        },
+        {
+          "f": "06.webp",
+          "w": 800,
+          "h": 534
+        },
+        {
+          "f": "07.webp",
+          "w": 800,
+          "h": 388
+        },
+        {
+          "f": "08.webp",
+          "w": 800,
+          "h": 307
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2018-11-28_sortie-de-nuit-a-morestel",
+      "titre": "Sortie de nuit à Morestel",
+      "date": "2018-11-28",
+      "lieu": "",
+      "categorie": "nuit",
+      "auteurs": [
+        "laurent-mathieu",
+        "denis-madaule",
+        "didier-segura",
+        "laurent-bignaud",
+        "vincent-thomas",
+        "paul-petit"
+      ],
+      "dossier": "assets/img/sorties/2018-11-28_sortie-de-nuit-a-morestel",
+      "vignettes": true,
+      "total": 43,
+      "lien": "https://photomorestel.com/saison-2018-2019.html",
+      "note": "",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 800,
+          "h": 534
+        },
+        {
+          "f": "02.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "f": "03.webp",
+          "w": 800,
+          "h": 490
+        },
+        {
+          "f": "04.webp",
+          "w": 800,
+          "h": 412
+        },
+        {
+          "f": "05.webp",
+          "w": 800,
+          "h": 450
+        },
+        {
+          "f": "06.webp",
+          "w": 800,
+          "h": 501
+        },
+        {
+          "f": "07.webp",
+          "w": 779,
+          "h": 600
+        },
+        {
+          "f": "08.webp",
+          "w": 779,
+          "h": 600
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2017-10-01_sortie-courses-de-levriers-au-cynodrome-des-brot",
+      "titre": "Sortie courses de lévriers au cynodrome des Brotteaux",
+      "date": "2017-10-01",
+      "lieu": "",
+      "categorie": "visites",
+      "auteurs": [
+        "paul-petit",
+        "dominique-baptiste",
+        "jean-pierre-guerra",
+        "jerome-theobald"
+      ],
+      "dossier": "assets/img/sorties/2017-10-01_sortie-courses-de-levriers-au-cynodrome-des-brot",
+      "vignettes": true,
+      "total": 51,
+      "lien": "https://photomorestel.com/saison-2017-2018.html",
+      "note": "",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 800,
+          "h": 545
+        },
+        {
+          "f": "02.webp",
+          "w": 800,
+          "h": 548
+        },
+        {
+          "f": "03.webp",
+          "w": 800,
+          "h": 440
+        },
+        {
+          "f": "04.webp",
+          "w": 476,
+          "h": 600
+        },
+        {
+          "f": "05.webp",
+          "w": 800,
+          "h": 399
+        },
+        {
+          "f": "06.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "f": "07.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "f": "08.webp",
+          "w": 800,
+          "h": 442
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2017-06-08_sortie-parc-des-oiseaux-a-villars-les-dombes",
+      "titre": "Sortie parc des oiseaux à Villars-les-Dombes",
+      "date": "2017-06-08",
+      "lieu": "",
+      "categorie": "nature",
+      "auteurs": [
+        "paul-petit",
+        "jacques-vanneuville",
+        "dana-berthelot",
+        "eric-fabre"
+      ],
+      "dossier": "assets/img/sorties/2017-06-08_sortie-parc-des-oiseaux-a-villars-les-dombes",
+      "vignettes": true,
+      "total": 94,
+      "lien": "https://photomorestel.com/saison-2016-2017.html",
+      "note": "",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 740,
+          "h": 600
+        },
+        {
+          "f": "02.webp",
+          "w": 799,
+          "h": 600
+        },
+        {
+          "f": "03.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "f": "04.webp",
+          "w": 784,
+          "h": 600
+        },
+        {
+          "f": "05.webp",
+          "w": 800,
+          "h": 549
+        },
+        {
+          "f": "06.webp",
+          "w": 800,
+          "h": 533
+        },
+        {
+          "f": "07.webp",
+          "w": 800,
+          "h": 600
+        },
+        {
+          "f": "08.webp",
+          "w": 800,
+          "h": 475
+        }
+      ],
+      "couverture": 0
+    },
+    {
+      "id": "2017-05-26_sortie-sabots-de-venus",
+      "titre": "Sortie sabots de Vénus",
+      "date": "2017-05-26",
+      "lieu": "",
+      "categorie": "nature",
+      "auteurs": [
+        "dominique-baptiste",
+        "laurent-mathieu",
+        "eric-fabre"
+      ],
+      "dossier": "assets/img/sorties/2017-05-26_sortie-sabots-de-venus",
+      "vignettes": true,
+      "total": 43,
+      "lien": "https://photomorestel.com/saison-2017-2018.html",
+      "note": "Guide : Dominique Baptiste",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 400,
+          "h": 600
+        },
+        {
+          "f": "02.webp",
+          "w": 400,
+          "h": 600
+        },
+        {
+          "f": "03.webp",
+          "w": 800,
+          "h": 534
+        },
+        {
+          "f": "04.webp",
+          "w": 800,
+          "h": 522
+        },
+        {
+          "f": "05.webp",
+          "w": 800,
+          "h": 600
+        },
+        {
+          "f": "06.webp",
+          "w": 398,
+          "h": 600
+        },
+        {
+          "f": "07.webp",
+          "w": 445,
+          "h": 600
+        },
+        {
+          "f": "08.webp",
+          "w": 800,
+          "h": 600
+        }
+      ],
+      "couverture": 2
+    },
+    {
+      "id": "2017-04-29_sortie-nature-a-optevoz",
+      "titre": "Sortie nature à Optevoz",
+      "date": "2017-04-29",
+      "lieu": "",
+      "categorie": "nature",
+      "auteurs": [
+        "patrick-nallet",
+        "jacques-vanneuville",
+        "dana-berthelot",
+        "dominique-baptiste"
+      ],
+      "dossier": "assets/img/sorties/2017-04-29_sortie-nature-a-optevoz",
+      "vignettes": true,
+      "total": 54,
+      "lien": "https://photomorestel.com/saison-2016-2017.html",
+      "note": "",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 402,
+          "h": 600
+        },
+        {
+          "f": "02.webp",
+          "w": 600,
+          "h": 600
+        },
+        {
+          "f": "03.webp",
+          "w": 341,
+          "h": 600
+        },
+        {
+          "f": "04.webp",
+          "w": 670,
+          "h": 600
+        },
+        {
+          "f": "05.webp",
+          "w": 600,
+          "h": 600
+        },
+        {
+          "f": "06.webp",
+          "w": 394,
+          "h": 600
+        },
+        {
+          "f": "07.webp",
+          "w": 757,
+          "h": 600
+        },
+        {
+          "f": "08.webp",
+          "w": 710,
+          "h": 600
+        }
+      ],
+      "couverture": 6
+    },
+    {
+      "id": "2016-11-19_les-grottes-de-choranche",
+      "titre": "Les grottes de Choranche",
+      "date": "2016-11-19",
+      "lieu": "",
+      "categorie": "nature",
+      "auteurs": [
+        "denis-madaule",
+        "paul-petit",
+        "daniel-bertrand",
+        "didier-segura",
+        "jacques-vanneuville"
+      ],
+      "dossier": "assets/img/sorties/2016-11-19_les-grottes-de-choranche",
+      "vignettes": true,
+      "total": 72,
+      "lien": "https://photomorestel.com/saison-2016-2017.html",
+      "note": "",
+      "photos": [
+        {
+          "f": "01.webp",
+          "w": 800,
+          "h": 547
+        },
+        {
+          "f": "02.webp",
+          "w": 800,
+          "h": 547
+        },
+        {
+          "f": "03.webp",
+          "w": 787,
+          "h": 600
+        },
+        {
+          "f": "04.webp",
+          "w": 800,
+          "h": 535
+        },
+        {
+          "f": "05.webp",
+          "w": 398,
+          "h": 600
+        },
+        {
+          "f": "06.webp",
+          "w": 400,
+          "h": 600
+        },
+        {
+          "f": "07.webp",
+          "w": 800,
+          "h": 534
+        },
+        {
+          "f": "08.webp",
+          "w": 800,
+          "h": 534
+        }
+      ],
+      "couverture": 0
+    }
+  ]
+}

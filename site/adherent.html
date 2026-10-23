@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Espace adhérents — Club Photo de Morestel</title>
+<meta name="description" content="Espace réservé aux adhérents du Club Photo de Morestel : cours et supports téléchargeables (PDF, PPTX).">
+<meta name="theme-color" content="#0a0d13">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Club Photo de Morestel">
+<meta property="og:title" content="Espace adhérents — Club Photo de Morestel">
+<meta property="og:description" content="Espace réservé aux adhérents du Club Photo de Morestel : cours et supports téléchargeables (PDF, PPTX).">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<!-- ===== EN-TÊTE COMMUN (identique sur les 5 pages) ===== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Club Photo de Morestel, retour à l’accueil"><img src="assets/img/logo/logo-clair.webp" alt="Club Photo de Morestel" width="104" height="40"></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    <nav id="menu" class="nav" aria-label="Menu principal">
+      <a href="index.html">Accueil</a>
+      <a href="le-club.html">Le club</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+      <a href="adherent.html" class="nav__member" aria-current="page">Adhérent</a>
+    </nav>
+  </div>
+</header>
+<div class="page-hero">
+  <div class="page-hero__bg"><img src="assets/img/sorties/2025-12-03_sortie-nuit-morestel/04.webp" alt="" width="1350" height="900" fetchpriority="high"></div>
+  <div class="wrap">
+    <p class="eyebrow">Réservé aux adhérents</p>
+    <h1>Espace adhérents</h1>
+    <p class="lead">Les cours et supports du club, à télécharger : fichiers PDF et diaporamas PPTX, classés par thème ou par date.</p>
+  </div>
+</div>
+<main id="contenu">
+  <section class="section" style="padding-top:clamp(36px,5vw,70px)">
+    <div class="wrap">
+      <div class="lock reveal" role="note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+        <div><h2>Accès réservé aux adhérents</h2>
+        <p>Cet espace est protégé par un mot de passe, demandé par l’hébergement du site. Le mot de passe est communiqué aux adhérents à jour de leur cotisation. Les documents sont destinés à un usage personnel.</p></div>
+      </div>
+      <noscript><p class="ns">Cette page charge ses contenus avec JavaScript. Activez-le, ou retrouvez les photos du club sur <a href="https://photomorestel.com/">l’ancien site</a>.</p></noscript>
+      <div class="docs-tools reveal">
+        <button class="chip" type="button" data-view="theme" aria-pressed="true">Par thème</button>
+        <button class="chip" type="button" data-view="date" aria-pressed="false">Par date</button>
+        <label class="search"><span class="sr-only">Rechercher un cours</span><input type="search" id="docs-search" placeholder="Rechercher un cours ou un support…"></label>
+      </div>
+      <div id="docs-root" aria-live="polite"></div>
+    </div>
+  </section>
+</main>
+<!-- ===== PIED DE PAGE COMMUN (identique sur les 5 pages ; textes dans data/club.json) ===== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <img src="assets/img/logo/logo-clair.webp" alt="" width="140" height="54" loading="lazy">
+        <p data-bind="statut">Association loi 1901 affiliée à la Fédération Photographique de France</p>
+      </div>
+      <div>
+        <h2>Coordonnées</h2>
+        <address>
+          <strong>Club Photo de Morestel</strong><br>
+          Maison Claret<br>101 rue Jean-Baptiste Corot<br>38510 Morestel
+        </address>
+        <p><a href="mailto:club@photomorestel.com" data-bind-href="email">club@photomorestel.com</a></p>
+        <p data-bind="rejoindre.reunions">Tous les mercredis soir, de 20h à 22h, à la Maison Claret (Morestel).</p>
+      </div>
+      <div>
+        <h2>Les 5 pages</h2>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="le-club.html">Le club</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="adherent.html">Adhérent</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Liens &amp; réseaux</h2>
+        <ul id="footer-reseaux">
+          <li><a href="https://federation-photo.fr/" target="_blank" rel="noopener">Fédération Photographique de France</a></li>
+          <li><a href="https://photomorestel.com/" target="_blank" rel="noopener">Ancien site du club (archives)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="annee">2026</span> Club Photo de Morestel · Photos © leurs auteurs</span>
+      <details class="legal">
+        <summary>Mentions légales</summary>
+        <div>
+          <p><strong>Éditeur.</strong> Club Photo de Morestel, association loi 1901 — Maison Claret, 101 rue Jean-Baptiste Corot, 38510 Morestel. Directeur de la publication : le président du club.</p>
+          <p><strong>Hébergeur.</strong> Netlify, Inc. — 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis.</p>
+          <p><strong>Droits.</strong> Les photographies sont la propriété de leurs auteurs, membres du club, et ne peuvent être réutilisées sans leur accord.</p>
+          <p><strong>Données personnelles.</strong> Les informations saisies dans le formulaire de contact ne servent qu’à répondre à votre message ; elles ne sont ni revendues ni transmises à des tiers.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/common.js" defer></script>
+<script src="assets/js/adherent.js" defer></script>
+</body>
+</html>

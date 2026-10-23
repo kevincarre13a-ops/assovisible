@@ -1,0 +1,263 @@
+[
+  {
+    "id": "jacques-vanneuville",
+    "nom": "Jacques Vanneuville",
+    "role": "Vice-président",
+    "bio": "Membre du tout premier bureau en 1982, distingué M.FIAP en 2002. Il signe la majorité des reportages du club.",
+    "portrait": "assets/img/auteurs/jacques-vanneuville.webp",
+    "site": "https://jv38.photomorestel.com/",
+    "vedette": true
+  },
+  {
+    "id": "denis-madaule",
+    "nom": "Denis Madaule",
+    "role": "Membre du bureau",
+    "bio": "Sa galerie explore des séries : autoportraits, fleurs, paysages, monochromes et photographie de nuit.",
+    "portrait": "assets/img/auteurs/denis-madaule.webp",
+    "site": "",
+    "vedette": true
+  },
+  {
+    "id": "laurent-mathieu",
+    "nom": "Laurent Mathieu",
+    "role": "Président",
+    "bio": "Photographe de reportages et de sorties, il est le premier contact du club.",
+    "portrait": "assets/img/auteurs/laurent-mathieu.webp",
+    "site": "",
+    "vedette": true
+  },
+  {
+    "id": "eric-fabre",
+    "nom": "Eric Fabre",
+    "role": "Trésorier",
+    "bio": "Auteur de la série « Un hiver d’ocre et de gris ».",
+    "portrait": "assets/img/auteurs/eric-fabre.webp",
+    "site": "",
+    "vedette": true
+  },
+  {
+    "id": "patrice-laine",
+    "nom": "Patrice Lainé",
+    "role": "Membre du bureau",
+    "bio": "",
+    "portrait": "assets/img/auteurs/patrice-laine.webp",
+    "site": "",
+    "vedette": true
+  },
+  {
+    "id": "dominique-baptiste",
+    "nom": "Dominique Baptiste",
+    "role": "Membre du bureau",
+    "bio": "Guide de la sortie « sabots de Vénus » en 2017.",
+    "portrait": "assets/img/auteurs/dominique-baptiste.webp",
+    "site": "",
+    "vedette": true
+  },
+  {
+    "id": "vincent-thomas",
+    "nom": "Vincent Thomas",
+    "role": "Membre du bureau",
+    "bio": "",
+    "portrait": "assets/img/auteurs/vincent-thomas.webp",
+    "site": "",
+    "vedette": true
+  },
+  {
+    "id": "paul-petit",
+    "nom": "Paul Petit",
+    "role": "Cofondateur et président",
+    "bio": "Il a créé la section photo à l’origine du club, en 1982. Disparu fin 2020, il reste très présent dans la mémoire du club.",
+    "portrait": "assets/img/auteurs/paul-petit.webp",
+    "site": "https://paul.photomorestel.com/",
+    "vedette": true
+  },
+  {
+    "id": "patrick-nallet",
+    "nom": "Patrick Nallet",
+    "role": "Auteur du club",
+    "bio": "",
+    "portrait": "assets/img/auteurs/patrick-nallet.webp",
+    "site": "",
+    "vedette": true
+  },
+  {
+    "id": "jean-pierre-goethals",
+    "nom": "Jean-Pierre Goethals",
+    "role": "Auteur du club",
+    "bio": "",
+    "portrait": "assets/img/auteurs/jean-pierre-goethals.webp",
+    "site": "",
+    "vedette": true
+  },
+  {
+    "id": "christine-houdart",
+    "nom": "Christine Houdart",
+    "role": "Auteur du club",
+    "bio": "",
+    "portrait": "assets/img/auteurs/christine-houdart.webp",
+    "site": "",
+    "vedette": true
+  },
+  {
+    "id": "bernard-chavanne",
+    "nom": "Bernard Chavanne",
+    "role": "Auteur du club",
+    "bio": "",
+    "portrait": "assets/img/auteurs/bernard-chavanne.webp",
+    "site": "",
+    "vedette": true
+  },
+  {
+    "id": "aurelie-ducros",
+    "nom": "Aurélie Ducros",
+    "role": "",
+    "bio": "",
+    "portrait": "",
+    "site": "",
+    "vedette": false
+  },
+  {
+    "id": "carole-noue",
+    "nom": "Carole Noué",
+    "role": "",
+    "bio": "",
+    "portrait": "",
+    "site": "",
+    "vedette": false
+  },
+  {
+    "id": "cassandra-bellot",
+    "nom": "Cassandra Bellot",
+    "role": "",
+    "bio": "",
+    "portrait": "assets/img/auteurs/cassandra-bellot.webp",
+    "site": "",
+    "vedette": false
+  },
+  {
+    "id": "dana-berthelot",
+    "nom": "Dana Berthelot",
+    "role": "",
+    "bio": "",
+    "portrait": "assets/img/auteurs/dana-berthelot.webp",
+    "site": "",
+    "vedette": false
+  },
+  {
+    "id": "daniel-bertrand",
+    "nom": "Daniel Bertrand",
+    "role": "",
+    "bio": "",
+    "portrait": "assets/img/auteurs/daniel-bertrand.webp",
+    "site": "",
+    "vedette": false
+  },
+  {
+    "id": "didier-segura",
+    "nom": "Didier Segura",
+    "role": "",
+    "bio": "",
+    "portrait": "assets/img/auteurs/didier-segura.webp",
+    "site": "",
+    "vedette": false
+  },
+  {
+    "id": "gerard-bangy",
+    "nom": "Gérard Bangy",
+    "role": "",
+    "bio": "",
+    "portrait": "",
+    "site": "",
+    "vedette": false
+  },
+  {
+    "id": "jacques-chabanne",
+    "nom": "Jacques Chabanne",
+    "role": "",
+    "bio": "",
+    "portrait": "assets/img/auteurs/jacques-chabanne.webp",
+    "site": "",
+    "vedette": false
+  },
+  {
+    "id": "jean-claude-guerry",
+    "nom": "Jean-Claude Guerry",
+    "role": "",
+    "bio": "",
+    "portrait": "assets/img/auteurs/jean-claude-guerry.webp",
+    "site": "",
+    "vedette": false
+  },
+  {
+    "id": "jean-pierre-guerra",
+    "nom": "Jean-Pierre Guerra",
+    "role": "",
+    "bio": "",
+    "portrait": "assets/img/auteurs/jean-pierre-guerra.webp",
+    "site": "",
+    "vedette": false
+  },
+  {
+    "id": "jimmy-garcia",
+    "nom": "Jimmy Garcia",
+    "role": "",
+    "bio": "",
+    "portrait": "",
+    "site": "",
+    "vedette": false
+  },
+  {
+    "id": "jerome-theobald",
+    "nom": "Jérôme Theobald",
+    "role": "",
+    "bio": "",
+    "portrait": "assets/img/auteurs/jerome-theobald.webp",
+    "site": "",
+    "vedette": false
+  },
+  {
+    "id": "laurent-bignaud",
+    "nom": "Laurent Bignaud",
+    "role": "",
+    "bio": "",
+    "portrait": "assets/img/auteurs/laurent-bignaud.webp",
+    "site": "",
+    "vedette": false
+  },
+  {
+    "id": "lionel-martin",
+    "nom": "Lionel Martin",
+    "role": "",
+    "bio": "",
+    "portrait": "",
+    "site": "",
+    "vedette": false
+  },
+  {
+    "id": "mariette-daudre",
+    "nom": "Mariette Daudré",
+    "role": "",
+    "bio": "",
+    "portrait": "",
+    "site": "",
+    "vedette": false
+  },
+  {
+    "id": "patrick-bessy",
+    "nom": "Patrick Bessy",
+    "role": "",
+    "bio": "",
+    "portrait": "assets/img/auteurs/patrick-bessy.webp",
+    "site": "",
+    "vedette": false
+  },
+  {
+    "id": "richard-houdart",
+    "nom": "Richard Houdart",
+    "role": "",
+    "bio": "",
+    "portrait": "assets/img/auteurs/richard-houdart.webp",
+    "site": "",
+    "vedette": false
+  }
+]

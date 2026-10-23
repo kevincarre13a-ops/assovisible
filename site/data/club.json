@@ -1,0 +1,262 @@
+{
+  "_aide": "Textes du site. Modifiez uniquement ce qui est entre guillemets. Voir LISEZMOI.md.",
+  "nom": "Club Photo de Morestel",
+  "accroche": "Reportages, sorties et soirées photo, dans le Nord-Isère.",
+  "adresse": {
+    "lieu": "Maison Claret",
+    "rue": "101 rue Jean-Baptiste Corot",
+    "ville": "38510 Morestel",
+    "details": "Morestel (Isère) · Balcons du Dauphiné",
+    "latitude": 45.6798485,
+    "longitude": 5.4691222
+  },
+  "email": "club@photomorestel.com",
+  "telephone": "",
+  "contact": {
+    "nom": "Laurent Mathieu",
+    "role": "Président"
+  },
+  "statut": "Association loi 1901 affiliée à la Fédération Photographique de France",
+  "reseaux": [
+    {
+      "nom": "Fédération Photographique de France",
+      "url": "https://federation-photo.fr/"
+    },
+    {
+      "nom": "Ancien site du club (archives)",
+      "url": "https://photomorestel.com/"
+    }
+  ],
+  "visuels": {
+    "club": {
+      "src": "assets/img/sorties/2024-06-05_sortie_club/04.webp",
+      "alt": "Ciel orangé au-dessus des toits de Morestel"
+    },
+    "galerie": {
+      "src": "assets/img/sorties/2025-12-03_sortie-nuit-morestel/01.webp",
+      "alt": "Photographie de nuit à Morestel, traînées de lumière"
+    },
+    "contact": {
+      "src": "assets/img/reportages/2024-08-31_nuit-blanche/04.webp",
+      "alt": "Toit et vue sur les Balcons du Dauphiné"
+    },
+    "adherent": {
+      "src": "assets/img/sorties/2025-12-03_sortie-nuit-morestel/04.webp",
+      "alt": "Rue de Morestel la nuit, poses longues"
+    },
+    "apercu": {
+      "src": "assets/img/sorties/2024-05-25_sortie-choranche/06.webp",
+      "alt": "Cascade photographiée lors de la sortie aux grottes de Choranche"
+    }
+  },
+  "hero": [
+    {
+      "src": "assets/img/sorties/2025-12-03_sortie-nuit-morestel/03.webp",
+      "w": 1346,
+      "h": 900,
+      "legende": "Sortie club : photos de nuit",
+      "credit": "Jacques Vanneuville",
+      "lien": "galerie.html#/sortie/2025-12-03_sortie-nuit-morestel"
+    },
+    {
+      "src": "assets/img/sorties/2024-06-05_sortie_club/07.webp",
+      "w": 1353,
+      "h": 900,
+      "legende": "Sortie club",
+      "credit": "Denis Madaule",
+      "lien": "galerie.html#/sortie/2024-06-05_sortie_club"
+    },
+    {
+      "src": "assets/img/sorties/2024-05-25_sortie-choranche/06.webp",
+      "w": 1350,
+      "h": 900,
+      "legende": "Sortie club aux grottes de Choranche",
+      "credit": "Laurent Mathieu",
+      "lien": "galerie.html#/sortie/2024-05-25_sortie-choranche"
+    },
+    {
+      "src": "assets/img/reportages/2023-03-05_kayak/04.webp",
+      "w": 1350,
+      "h": 900,
+      "legende": "National 2 slalom de canoë-kayak",
+      "credit": "Aurélie Ducros",
+      "lien": "galerie.html#/reportage/2023-03-05_kayak"
+    },
+    {
+      "src": "assets/img/reportages/2025-06-22_triathlons/04.webp",
+      "w": 1349,
+      "h": 900,
+      "legende": "Triathlons des Balcons du Dauphiné (Green Tour)",
+      "credit": "Jacques Vanneuville",
+      "lien": "galerie.html#/reportage/2025-06-22_triathlons"
+    },
+    {
+      "src": "assets/img/reportages/2025-09-12_vernissages-aaccp/03.webp",
+      "w": 1346,
+      "h": 900,
+      "legende": "Vernissages AACCP",
+      "credit": "Jacques Vanneuville",
+      "lien": "galerie.html#/reportage/2025-09-12_vernissages-aaccp"
+    },
+    {
+      "src": "assets/img/reportages/2026-06-21_fete-de-la-musique/08.webp",
+      "w": 1347,
+      "h": 900,
+      "legende": "Fête de la musique 2026",
+      "credit": "Jacques Vanneuville",
+      "lien": "galerie.html#/reportage/2026-06-21_fete-de-la-musique"
+    },
+    {
+      "src": "assets/img/sorties/2025-12-03_sortie-nuit-morestel/08.webp",
+      "w": 1353,
+      "h": 900,
+      "legende": "Sortie club : photos de nuit",
+      "credit": "Denis Madaule",
+      "lien": "galerie.html#/sortie/2025-12-03_sortie-nuit-morestel"
+    }
+  ],
+  "chiffres": {
+    "annee_creation": 1983,
+    "hivernales": 17,
+    "hivernales_libelle": "éditions des Hivernales (2010-2026)",
+    "adherents": null
+  },
+  "presentation": [
+    "Le Club Photo de Morestel réunit des passionnés de photographie, débutants comme confirmés, autour d’une même envie : regarder, partager, progresser.",
+    "Chaque mercredi soir, nous nous retrouvons à la Maison Claret pour des thèmes techniques ou créatifs : réglages de l’appareil, composition, macrophotographie, portrait en studio, focus stacking, droit à l’image…",
+    "Au fil de l’année, nous couvrons la vie de Morestel et de ses alentours en reportages, partons en sortie (nature, nuit, rue), participons aux concours de la Fédération Photographique de France et montrons nos tirages papier lors de notre exposition annuelle, Les Hivernales."
+  ],
+  "activites": [
+    {
+      "titre": "Soirées du mercredi",
+      "texte": "Réunions hebdomadaires, de 20h à 22h, avec des thèmes ouverts à tous les niveaux."
+    },
+    {
+      "titre": "Pause culture",
+      "texte": "Chaque mois, une présentation autour du thème du concours mensuel de l’Union Régionale, avec un photographe célèbre à l’honneur."
+    },
+    {
+      "titre": "Concours",
+      "texte": "Participation aux concours de la Fédération Photographique de France, en régional et en national : monochrome, couleur, nature, quadrimage…"
+    },
+    {
+      "titre": "Sorties à thèmes",
+      "texte": "Plusieurs sorties dans l’année : photo de nuit, nature, rue."
+    },
+    {
+      "titre": "Reportages",
+      "texte": "Couverture régulière des événements de la ville : cérémonies, fêtes, concerts, vernissages, sport."
+    },
+    {
+      "titre": "Les Hivernales",
+      "texte": "Notre exposition annuelle d’adhérents, en tirages papier, à l’Espace Pictur’Halles de Morestel."
+    }
+  ],
+  "histoire": [
+    {
+      "annee": "1982",
+      "titre": "Une section photo naît à Creys-Malville",
+      "texte": "Paul Petit crée une section photo au sein du comité d’entreprise de la centrale de Creys-Malville. Le maire de Morestel, Théodore Durand, propose un local à une condition : que la section devienne une association loi 1901. L’assemblée constitutive a lieu en novembre 1982 ; Paul Petit et Jacques Vanneuville composent le premier bureau."
+    },
+    {
+      "annee": "1983",
+      "titre": "Le club s’installe",
+      "texte": "Le club investit un petit local du Centre Social. On y pratique l’argentique, avec développement et tirages faits maison. Des expositions annuelles, associées à des concours nationaux, se tiennent jusqu’en 1991, et les photos du club paraissent dans la revue municipale."
+    },
+    {
+      "annee": "1985",
+      "titre": "Le comice agricole, premier grand reportage",
+      "texte": "Une dizaine de photographes couvrent le comice agricole de Morestel, suivi d’une projection publique (un DVD de 1 500 photos en sera tiré en 2009). Le club déménage dans de nouveaux locaux : studio, labo film, salle de tirages noir et blanc et couleur."
+    },
+    {
+      "annee": "1993",
+      "titre": "10 ans et premier Salon international",
+      "texte": "Pour ses dix ans, le club organise son premier Salon international ; le maire demande un thème sur le paysage, sujet favori du peintre François-Auguste Ravier. Les salons reviendront ensuite tous les trois ans. Avec l’arrivée du numérique, le club crée son site internet pour publier ses reportages."
+    },
+    {
+      "annee": "2002",
+      "titre": "Une distinction internationale",
+      "texte": "Jacques Vanneuville obtient la distinction M.FIAP (Maître de la Fédération Internationale de l’Art Photographique). Le club fournit des images au site de la commune et réalise la rétrospective projetée lors des vœux du maire."
+    },
+    {
+      "annee": "2010",
+      "titre": "Les Hivernales",
+      "texte": "Grâce à l’Espace Pictur’Halles, mis à disposition de janvier à mars, le club lance sa première exposition, Les Hivernales. Choix assumé : des tirages papier plutôt que de la projection, pour que les visiteurs observent, comparent et discutent avec les photographes."
+    },
+    {
+      "annee": "2020",
+      "titre": "Hommage à Paul Petit",
+      "texte": "Paul Petit, président et cofondateur, disparaît pendant le deuxième confinement. Un hommage lui est rendu le 7 février 2021 à Pictur’Halles, et Les Hivernales 2021 lui consacrent l’entrée de la salle."
+    },
+    {
+      "annee": "2023",
+      "titre": "40 ans du club",
+      "texte": "Les Hivernales 2023, 14e édition, fêtent les 40 ans du club à l’Espace Pictur’Halles, du 7 janvier au 19 mars."
+    },
+    {
+      "annee": "2026",
+      "titre": "Toujours sur le terrain",
+      "texte": "Vœux du maire, Fête de la musique, Nuit Blanche, concerts, vernissage des Hivernales : le club poursuit ses reportages sur toute la saison."
+    }
+  ],
+  "valeurs": [
+    {
+      "titre": "Partager",
+      "texte": "Des soirées ouvertes à tous les niveaux : on apprend les uns des autres, du débutant au confirmé."
+    },
+    {
+      "titre": "Transmettre",
+      "texte": "Thèmes techniques, stages portrait, pause culture : le club forme ses adhérents à la pratique photographique."
+    },
+    {
+      "titre": "Exposer",
+      "texte": "Le tirage papier d’abord. Les Hivernales permettent de regarder, comparer et échanger avec les auteurs."
+    },
+    {
+      "titre": "Témoigner",
+      "texte": "Un regard local : reportages sur la vie de Morestel, de ses associations et de ses fêtes, en lien avec la commune."
+    }
+  ],
+  "bureau": [
+    {
+      "id": "laurent-mathieu",
+      "role": "Président"
+    },
+    {
+      "id": "jacques-vanneuville",
+      "role": "Vice-président"
+    },
+    {
+      "id": "eric-fabre",
+      "role": "Trésorier"
+    },
+    {
+      "id": "dominique-baptiste",
+      "role": "Membre du bureau"
+    },
+    {
+      "id": "patrice-laine",
+      "role": "Membre du bureau"
+    },
+    {
+      "id": "denis-madaule",
+      "role": "Membre du bureau"
+    },
+    {
+      "id": "vincent-thomas",
+      "role": "Membre du bureau"
+    }
+  ],
+  "rejoindre": {
+    "cotisation": "60 € à l’année, adhésion à la Fédération Photographique de France (FPF) comprise.",
+    "cotisation_detail": "Adhésion à la Fédération Photographique de France (FPF) comprise.",
+    "reunions": "Tous les mercredis soir, de 20h à 22h, à la Maison Claret (Morestel).",
+    "modalites": "Modalités d’inscription : texte à compléter (documents à fournir, essai possible, etc.). En attendant, écrivez-nous via le formulaire de contact."
+  },
+  "mentions": {
+    "editeur": "Club Photo de Morestel, association loi 1901 — Maison Claret, 101 rue Jean-Baptiste Corot, 38510 Morestel. Directeur de la publication : le président du club.",
+    "hebergeur": "Netlify, Inc. — 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis.",
+    "droits": "Les photographies sont la propriété de leurs auteurs, membres du club, et ne peuvent être réutilisées sans leur accord.",
+    "donnees": "Les informations saisies dans le formulaire de contact ne servent qu’à répondre à votre message ; elles ne sont ni revendues ni transmises à des tiers."
+  }
+}

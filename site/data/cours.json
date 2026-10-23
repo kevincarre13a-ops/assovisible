@@ -1,0 +1,33 @@
+{
+  "_aide": "Cours et supports réservés aux adhérents. Voir LISEZMOI.md. Supprimez les deux exemples quand vous ajoutez vos vrais supports.",
+  "themes": [
+    "Prise de vue",
+    "Retouche et traitement",
+    "Culture photographique",
+    "Autres"
+  ],
+  "items": [
+    {
+      "id": "exemple-pdf",
+      "titre": "Exemple de support de cours (modèle)",
+      "theme": "Autres",
+      "date": "2026-10-23",
+      "fichier": "supports/exemple-support-de-cours.pdf",
+      "type": "pdf",
+      "taille": "2 Ko",
+      "description": "Fichier d’exemple : à remplacer par un vrai support de cours.",
+      "exemple": true
+    },
+    {
+      "id": "exemple-pptx",
+      "titre": "Exemple de diaporama (modèle)",
+      "theme": "Autres",
+      "date": "2026-10-23",
+      "fichier": "supports/exemple-diaporama.pptx",
+      "type": "pptx",
+      "taille": "28 Ko",
+      "description": "Fichier d’exemple : à remplacer par une vraie présentation.",
+      "exemple": true
+    }
+  ]
+}

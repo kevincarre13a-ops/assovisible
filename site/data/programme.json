@@ -1,0 +1,37 @@
+{
+  "_aide": "Programme du mercredi soir et prochaine sortie. Voir LISEZMOI.md (section « Changer le programme du mercredi »).",
+  "mercredi": {
+    "titre": "Programme du mercredi soir",
+    "lieu": "Maison Claret, 101 rue Jean-Baptiste Corot, 38510 Morestel",
+    "horaire": "20h00 – 22h00",
+    "attente": {
+      "date": "Date à confirmer",
+      "theme": "Thème à annoncer",
+      "intervenant": "Intervenant à annoncer",
+      "texte": "Le club se réunit chaque mercredi soir. Le programme détaillé de la prochaine soirée sera publié ici : revenez vite, ou écrivez-nous."
+    },
+    "types_de_soirees": [
+      "Réglages de l’appareil",
+      "Composition",
+      "Macrophotographie",
+      "Portrait en studio",
+      "Focus stacking",
+      "Droit à l’image"
+    ],
+    "soirees": [
+      {
+        "date": "2026-09-30",
+        "theme": "Choix des photos du calendrier 2027-2028",
+        "intervenant": "Les adhérents (chacun apporte ses fichiers)",
+        "texte": "Thèmes : photos locales et non locales."
+      }
+    ]
+  },
+  "prochaine_sortie": {
+    "titre": "Prochaine sortie photo",
+    "date": "",
+    "lieu": "",
+    "theme": "",
+    "attente": "Date, lieu et thème de la prochaine sortie : à annoncer. Nature, nuit ou rue, les sorties ont lieu plusieurs fois dans l’année."
+  }
+}
