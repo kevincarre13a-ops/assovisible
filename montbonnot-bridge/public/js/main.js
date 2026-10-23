@@ -18,7 +18,7 @@
     toggle.addEventListener("click", function () { setMenu(toggle.getAttribute("aria-expanded") !== "true"); });
     doc.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
     nav.addEventListener("click", function (e) { if (e.target.closest("a")) setMenu(false); });
-    window.matchMedia("(min-width:1200px)").addEventListener("change", function () { setMenu(false); });
+    window.matchMedia("(min-width:1340px)").addEventListener("change", function () { setMenu(false); });
   }
 
   /* ---- Ombre de l'en-tête ---- */

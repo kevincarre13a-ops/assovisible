@@ -301,11 +301,16 @@ def page_index():
 
 <section aria-labelledby="titre-photos" style="padding-top:0">
 <div class="wrap">
-<div class="sec-head reveal"><span class="kicker">{suit('diamond')} Ambiance</span><h2 id="titre-photos">Le Tournoi des Dindes, en quelques sourires</h2></div>
+<div class="sec-head reveal"><span class="kicker">{suit('diamond')} Ambiance</span><h2 id="titre-photos">Le club en quelques sourires</h2></div>
 <div class="thumbs reveal" style="grid-template-columns:repeat(auto-fill,minmax(min(100%,210px),1fr))">
 """ + "".join(
-        f'<a href="galerie.html" style="display:block;aspect-ratio:4/3;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)"><img src="img/dindes-{n:02d}.png" alt="Joueurs lors du Tournoi des Dindes 2024" loading="lazy" style="width:100%;height:100%;object-fit:cover"></a>'
-        for n in (2, 3, 6, 7)
+        f'<a href="galerie.html" style="display:block;aspect-ratio:4/3;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)"><img src="img/{src}" alt="{alt}" loading="lazy" style="width:100%;height:100%;object-fit:cover"></a>'
+        for src, alt in (
+            ("dindes-02.png", "Joueuses attablées lors du Tournoi des Dindes 2024"),
+            ("partie-conviviale.jpg", "Joueurs souriants autour d’une table de bridge"),
+            ("sortie-rando.jpg", "Groupe de membres du club en randonnée lors d’une sortie"),
+            ("dindes-07.png", "Convives réunis pour le repas du Tournoi des Dindes 2024"),
+        )
     ) + f"""
 </div>
 <div class="btn-row"><a class="btn btn-outline" href="galerie.html">Toute la galerie</a></div>
@@ -392,6 +397,7 @@ def page_club():
 <section class="alt" aria-labelledby="t-bureau">
 <div class="wrap">
 {sec_head('Bureau et comité', 'Les bénévoles qui font vivre le club', 'club').replace('<h2>', '<h2 id="t-bureau">')}
+<div class="split" style="margin-bottom:34px"><figure class="photo reveal"><img src="img/equipe-ffb.jpg" alt="Six bénévoles du club en T-shirts assortis devant l’entrée de la Fédération Française de Bridge" width="426" height="504" loading="lazy" style="max-height:520px;object-fit:cover;width:100%"><figcaption>Des bénévoles du club, en T-shirts aux couleurs de Montbonnot, devant la Fédération Française de Bridge.</figcaption></figure><div class="reveal" data-d="1"><p style="font-size:1.25rem">Derrière chaque tournoi, chaque cours et chaque sortie, il y a une équipe de bénévoles qui donne de son temps avec le sourire.</p><p>Envie de nous donner un coup de main ou simplement de faire connaissance ? Venez nous voir un lundi ou un mercredi après-midi.</p><div class="btn-row"><a class="btn btn-red" href="adherer-contact.html#essayer">Venir nous voir</a></div></div></div>
 <div class="team">{team_html}</div>
 <div class="person reveal" style="margin-top:16px"><small>Enseignants de l’école de bridge</small><b>{teachers}</b></div>
 <p style="margin-top:1.4rem" class="reveal">Composition du conseil d’administration 2023-2024, telle que publiée par le club. Pour joindre l’équipe : <a href="adherer-contact.html">page Contact</a>.</p>
@@ -482,7 +488,7 @@ def page_jouer():
 </ul>
 <div class="btn-row"><a class="btn btn-red" href="adherer-contact.html#essayer">Je viens essayer</a><a class="btn btn-outline" href="cours.html">Voir les cours</a></div>
 </div>
-<figure class="photo reveal" data-d="1"><img src="img/cartes.jpg" alt="Une main de cartes de bridge tenue en éventail sur un tapis vert" width="361" height="241" loading="lazy"><figcaption>Du plaisir des cartes, dès le premier jour.</figcaption></figure>
+<figure class="photo reveal" data-d="1"><img src="img/partie-conviviale.jpg" alt="Joueurs souriants autour d’une table de bridge, avec boîtes d’enchères rouges et tapis vert" width="419" height="313" loading="lazy"><figcaption>Du plaisir des cartes et de la bonne compagnie, dès le premier jour.</figcaption></figure>
 </div>
 </section>
 """
@@ -523,7 +529,7 @@ def page_cours():
 <p>Les séances durent <strong>2 heures</strong>, en petits groupes, dans une ambiance bienveillante.</p>
 <div class="btn-row"><a class="btn btn-red" href="adherer-contact.html?sujet=cours#contact">S’inscrire ou poser une question</a></div>
 </div>
-<figure class="photo reveal" data-d="1"><img src="img/competition.jpg" alt="Joueurs de bridge autour d’une table avec un écran de séparation" width="500" height="500" loading="lazy"><figcaption>Du cours à la compétition : chacun avance à son rythme.</figcaption></figure>
+<figure class="photo reveal" data-d="1"><img src="img/ecole-bridge.jpg" alt="Un animateur devant un tableau blanc face à des enfants attablés autour de tables de bridge" width="418" height="309" loading="lazy"><figcaption>À l’école de bridge, on apprend dans la bonne humeur — même les plus jeunes !</figcaption></figure>
 </div>
 </section>
 
@@ -692,8 +698,14 @@ def page_galerie():
         ("img/salle-3.jpg", "Bardage en acier patiné du bâtiment, avec parking", "Le parking à côté de la salle"),
     ]
     compet = [
+        ("img/ecole-bridge.jpg", "Un animateur devant un tableau blanc face à des enfants attablés", "À l’école de bridge"),
         ("img/competition.jpg", "Équipes de bridge en compétition, avec écran de séparation sur la table", "Compétition par équipes"),
         ("img/cartes.jpg", "Main de cartes de bridge sur tapis vert", "Les cartes, au cours de bridge"),
+    ]
+    convivial = [
+        ("img/partie-conviviale.jpg", "Joueurs souriants autour d’une table de bridge avec boîtes d’enchères rouges", "Une partie entre amis"),
+        ("img/sortie-rando.jpg", "Groupe de membres du club en randonnée dans la forêt", "En balade avec le club"),
+        ("img/equipe-ffb.jpg", "Six bénévoles du club en T-shirts assortis devant la Fédération Française de Bridge", "Des bénévoles du club devant la Fédération Française de Bridge"),
     ]
     espoir = [("img/affiche-espoir.jpg", "Affiche du tournoi de bridge au profit d’Espoir Isère contre le Cancer", "Tournoi au profit d’Espoir Isère contre le Cancer — 29 mars 2025")]
     body = page_hero(
@@ -708,6 +720,7 @@ def page_galerie():
 <button type="button" data-filter="all" aria-pressed="true">Tout voir</button>
 <button type="button" data-filter="dindes" aria-pressed="false">Tournoi des Dindes</button>
 <button type="button" data-filter="salle" aria-pressed="false">Notre salle</button>
+<button type="button" data-filter="convivial" aria-pressed="false">Convivialité &amp; sorties</button>
 <button type="button" data-filter="compet" aria-pressed="false">Cours &amp; compétitions</button>
 <button type="button" data-filter="espoir" aria-pressed="false">Tournoi solidaire</button>
 </div>
@@ -722,6 +735,12 @@ def page_galerie():
 <h3>{suit('spade')} Notre salle — Saint-Exupéry</h3>
 <p class="meta">Au cœur du village de Montbonnot, derrière la maison des Arts.</p>
 <div class="thumbs">{thumbs(salle)}</div>
+</div>
+
+<div class="album reveal" data-album="convivial">
+<h3>{suit('heart', 'red')} Convivialité &amp; sorties</h3>
+<p class="meta">Parties entre amis, balades en montagne, bénévoles : le club, c’est d’abord une bande de copains.</p>
+<div class="thumbs">{thumbs(convivial)}</div>
 </div>
 
 <div class="album reveal" data-album="compet">
@@ -751,7 +770,7 @@ def page_galerie():
     build_page(
         "galerie.html",
         "Galerie photos",
-        "Photos du Club de Bridge de Montbonnot : Tournoi des Dindes, salle Saint-Exupéry, compétitions et tournoi solidaire.",
+        "Photos du Club de Bridge de Montbonnot : Tournoi des Dindes, sorties, école de bridge, salle Saint-Exupéry, compétitions et tournoi solidaire.",
         body,
     )
 
