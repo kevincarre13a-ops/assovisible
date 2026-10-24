@@ -1,0 +1,16 @@
+{
+  "name": "Nitnoy",
+  "short_name": "Nitnoy",
+  "description": "A little Thai every day, said out loud.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#eef3ee",
+  "theme_color": "#f0a030",
+  "lang": "en",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

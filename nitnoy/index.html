@@ -3,6 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#eef3ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10211d" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Nitnoy">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
@@ -247,6 +256,8 @@ p{margin:0}
 .switch::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:var(--surface);transition:transform .15s;box-shadow:0 1px 2px rgba(0,0,0,.2)}
 .switch[aria-checked="true"]{background:var(--success)}
 .switch[aria-checked="true"]::after{transform:translateX(20px)}
+textarea{font:inherit;color:inherit;background:var(--bg);border:1px solid var(--border-input);border-radius:var(--r-sm);padding:8px 10px;width:100%;min-height:72px;resize:vertical}
+.stack{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
 input[type=text]{font:inherit;color:inherit;background:var(--bg);border:1px solid var(--border-input);border-radius:var(--r-sm);padding:8px 10px;width:120px;max-width:40vw}
 .toast{position:fixed;left:50%;bottom:calc(var(--nav-h) + 16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(20px);background:var(--text);color:var(--bg);padding:10px 16px;border-radius:999px;font-weight:700;opacity:0;transition:all .2s;z-index:40;pointer-events:none;white-space:nowrap}
 .toast.show{opacity:1;transform:translateX(-50%)}
@@ -786,6 +797,27 @@ function me(){
   row('Voice speed', hasThaiVoice() ? `Thai voice: ${esc(thaiVoice().name)}` : 'No Thai voice found on this device yet', rate);
   row('Microphone', SR ? (micBlocked ? 'Refused here. Open the file in Safari or Chrome to speak.' : 'Speech recognition available') : 'Not supported in this browser. You still get listen-and-repeat.', el('span', 'muted', SR && !micBlocked ? ICON.mic : ICON.x));
   app.appendChild(wrap);
+  // install on the phone
+  const standalone = (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || window.navigator.standalone === true;
+  const inArtifact = /claude\.ai|claudeusercontent/.test(location.hostname) || (window.top !== window);
+  if (!standalone) {
+    const ins = el('section'); ins.appendChild(el('h3', 'section-title', 'Put it on your phone'));
+    const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+    ins.appendChild(el('p', 'lead', inArtifact ? 'Open the Netlify link of this app in Safari or Chrome first, then:' : (isIOS ? 'In Safari: tap the Share button, then "Add to Home Screen". Nitnoy then opens full screen like an app, works offline, and keeps your progress.' : 'In Chrome: tap the three-dot menu, then "Add to Home screen" or "Install app". Nitnoy then opens like an app and works offline.')));
+    if (inArtifact) ins.appendChild(el('p', 'lead', 'iPhone: Share, then Add to Home Screen. Android: Chrome menu, then Install app.'));
+    app.appendChild(ins);
+  }
+  // backup and restore
+  const bk = el('section'); bk.appendChild(el('h3', 'section-title', 'Backup'));
+  bk.appendChild(el('p', 'lead', 'Your progress lives in this browser only. Copy a backup code now and then, and paste it on a new phone or after clearing the browser.'));
+  const code = () => 'NITNOY1.' + btoa(unescape(encodeURIComponent(JSON.stringify(S))));
+  const out = el('div', 'stack');
+  const copyBtn = el('button', 'btn secondary', 'Copy backup code');
+  const area = el('textarea'); area.id = 'backup'; area.setAttribute('aria-label', 'Backup code'); area.placeholder = 'Paste a backup code here to restore'; area.spellcheck = false;
+  copyBtn.addEventListener('click', async () => { const c = code(); area.value = c; try { await navigator.clipboard.writeText(c); toast('Backup code copied'); } catch(e) { area.focus(); area.select(); toast('Select the code and copy it'); } });
+  const restoreBtn = el('button', 'btn secondary', 'Restore from code');
+  restoreBtn.addEventListener('click', () => { const v = area.value.trim(); if (!v.startsWith('NITNOY1.')) { toast('That is not a Nitnoy backup code'); return; } try { const o = JSON.parse(decodeURIComponent(escape(atob(v.slice(8))))); if (!o || o.v !== 1) throw 0; S = Object.assign(fresh(), o); S.settings = Object.assign(fresh().settings, o.settings || {}); if (S.today.day !== today()) S.today = { day: today(), lessons: 0 }; save(); toast('Progress restored'); render(); } catch(e) { toast('Could not read that code'); } });
+  out.append(copyBtn, area, restoreBtn); bk.appendChild(out); app.appendChild(bk);
   const danger = el('section'); const rb = el('button', 'btn secondary', 'Reset all progress');
   rb.addEventListener('click', () => { danger.innerHTML = ''; const p = el('p', 'lead', 'This wipes XP, streak and every lesson. There is no undo.'); const yes = el('button', 'btn danger', 'Yes, reset everything'); const no = el('button', 'btn ghost', 'Keep my progress'); yes.addEventListener('click', () => { const name = S.name; S = fresh(); S.name = name; save(); toast('Progress reset'); render(); }); no.addEventListener('click', render); danger.append(p, yes, no); });
   danger.appendChild(rb); app.appendChild(danger);
@@ -993,6 +1025,9 @@ function finishTalk(){
 
 /* ---------- keyboard: Enter = main button ---------- */
 document.addEventListener('keydown', e => { if (e.key !== 'Enter' || e.target.tagName === 'INPUT') return; const c = $('#cont'); if (c) { c.click(); return; } const m = $('#main'); if (m && !m.disabled) m.click(); });
+
+/* ---------- offline ---------- */
+if ('serviceWorker' in navigator && location.protocol === 'https:' && window.top === window) { window.addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(() => {}); }); }
 
 /* ---------- boot ---------- */
 function start(){ render(); }

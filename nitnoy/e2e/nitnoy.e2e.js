@@ -113,6 +113,18 @@ const shots = process.argv[3] || __dirname + '/../replica/clone-screens';
   await page.getByRole('button', { name: /Unit 1, lesson 1/ }).click(); await page.waitForTimeout(200);
   await page.getByRole('button', { name: 'Quit this lesson' }).click(); await page.getByRole('button', { name: 'Quit', exact: true }).click();
   console.log('F01-E1 quit works, overlay gone:', (await page.locator('#lesson').count()) === 0);
+  // F07 backup and restore
+  await page.getByRole('button', { name: 'Me', exact: true }).click(); await page.waitForTimeout(200);
+  await page.getByRole('button', { name: 'Copy backup code' }).click(); await page.waitForTimeout(100);
+  const codeVal = await page.locator('#backup').inputValue(); console.log('F07 backup code starts with NITNOY1:', codeVal.startsWith('NITNOY1.'), 'length', codeVal.length);
+  await page.evaluate(() => { localStorage.removeItem('nitnoy.v1'); }); await page.reload(); await page.waitForTimeout(400);
+  const xpBefore = await page.evaluate(() => (JSON.parse(localStorage.getItem('nitnoy.v1') || '{"xp":0}')).xp); console.log('F07 xp after wipe:', xpBefore);
+  await page.getByRole('button', { name: 'Me', exact: true }).click(); await page.waitForTimeout(200);
+  await page.locator('#backup').fill(codeVal); await page.getByRole('button', { name: 'Restore from code' }).click(); await page.waitForTimeout(300);
+  const xpAfter = await page.evaluate(() => JSON.parse(localStorage.getItem('nitnoy.v1')).xp); console.log('F07 xp after restore:', xpAfter);
+  await page.locator('#backup').fill('garbage'); await page.getByRole('button', { name: 'Restore from code' }).click(); await page.waitForTimeout(100); console.log('F07 bad code toast:', await page.locator('#toast').innerText());
+  await page.screenshot({ path: shots + '/S06-backup.png' });
+  await page.getByRole('button', { name: 'Learn', exact: true }).click(); await page.waitForTimeout(200);
   // dark mode screenshot
   await page.emulateMedia({ colorScheme: 'dark' }); await page.waitForTimeout(200); await page.screenshot({ path: shots + '/S01-dark.png' });
   // desktop width

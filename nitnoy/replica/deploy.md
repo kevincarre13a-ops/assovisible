@@ -15,7 +15,8 @@
 
 - claude.ai Artifact (private to Kevin's account): https://claude.ai/artifact/9HisopXZHqSBEo7TkpB2mZ
   Known limit: the artifact frame refuses the microphone, so speaking steps use listen-and-repeat there.
-- For microphone scoring, open `nitnoy/index.html` from a real https host: drop the `nitnoy/` folder on Netlify (as the coteaux-chaponost site is), or enable GitHub Pages on this repo. Nothing to configure, no build.
+- Netlify project `nitnoy-thai` created on 2026-10-24 (https://app.netlify.com/projects/nitnoy-thai, team kevincarre1994). The deploy itself needs Kevin's go: either drag the `nitnoy/` folder onto the project's Deploys page, or connect this GitHub repo with base directory `nitnoy` and publish directory `nitnoy` (no build command). Live URL once deployed: https://nitnoy-thai.netlify.app
+- The app is installable (manifest, icons, service worker): Safari Share > Add to Home Screen on iPhone, Chrome menu > Install app on Android. Progress stays on the phone; the Me screen has a backup code to copy and paste on another phone.
 
 ## Not done on purpose
 
