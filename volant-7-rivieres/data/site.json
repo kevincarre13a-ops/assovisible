@@ -1,0 +1,54 @@
+{
+  "name": "Le Volant des 7 Rivières",
+  "short": "V7R",
+  "baseline": "Club de badminton · Bédarrides · Courthézon · Châteauneuf-du-Pape",
+  "season": "2026-2027",
+  "founded": 2016,
+  "siteUrl": "https://volant-des-7-rivieres.netlify.app",
+  "contact": {
+    "email": "secretariat@v7r-badminton.com",
+    "phone": "06 60 15 00 88",
+    "phoneHref": "+33660150088",
+    "referent": { "name": "Céline", "role": "Secrétaire, contact jeunes et jeu libre", "phone": "06 98 65 61 78", "phoneHref": "+33698656178" },
+    "address": "Boulevard Jean Henri Fabre, 84350 Courthézon",
+    "addressNote": "Siège social de l'association (loi 1901, RNA W842006493)"
+  },
+  "socials": [
+    { "label": "Facebook", "url": "https://www.facebook.com/bedarrides.volantdes7rivieres" },
+    { "label": "Site officiel actuel", "url": "https://www.badminton-v7r.com/" }
+  ],
+  "partners": [
+    { "name": "Domaine de Saje", "role": "Producteur à Châteauneuf-du-Pape", "url": "https://www.domaine-de-saje.fr" },
+    { "name": "Lardesports", "role": "Boutique de badminton, squash, tennis", "url": "https://www.lardesports.com" }
+  ],
+  "federation": [
+    { "label": "FFBaD", "url": "https://www.ffbad.org/" },
+    { "label": "Comité de Vaucluse", "url": "https://www.facebook.com/Codep84" }
+  ],
+  "gym": {
+    "name": "Salle Dufays",
+    "town": "Châteauneuf-du-Pape",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d602.7815050645885!2d4.833733808007693!3d44.05593071170982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b593c22ba13643%3A0xe053f199854f6f96!2sSalle%20DUFAYS!5e0!3m2!1sfr!2sfr!4v1720814583054!5m2!1sfr!2sfr",
+    "mapLink": "https://www.google.com/maps/search/?api=1&query=Salle+Dufays+Ch%C3%A2teauneuf-du-Pape"
+  },
+  "stats": [
+    { "value": 10, "suffix": " ans", "label": "d'existence", "note": "Association créée en 2016" },
+    { "value": 3, "suffix": "", "label": "communes réunies", "note": "Bédarrides, Courthézon, Châteauneuf-du-Pape" },
+    { "value": 90, "suffix": "", "label": "jeunes sur notre tournoi de Bédarrides", "note": "TDJ du 11 janvier 2026, 147 matchs en simple" },
+    { "value": 25, "suffix": "+", "label": "jeunes du club engagés", "note": "sur ce même tournoi" }
+  ],
+  "statsNote": "Chiffres issus des publications du club. Le nombre de licenciés et de créneaux hebdomadaires sera ajouté dès confirmation par le bureau.",
+  "hero": {
+    "kicker": "Saison 2026-2027",
+    "title": "Le Volant des 7 Rivières",
+    "tagline": "Du jeu libre aux podiums, le badminton qui coule de source."
+  },
+  "nextEvent": {
+    "label": "Prochain rendez-vous",
+    "title": "Jeu libre adultes, chaque mercredi",
+    "when": "Mercredi · 18h30 – 20h30",
+    "where": "Salle Dufays, Châteauneuf-du-Pape",
+    "text": "Sur demande, via le groupe WhatsApp des joueurs : écrivez à Céline pour venir essayer.",
+    "cta": { "label": "Demander une séance d'essai", "href": "contact.html#essai" }
+  }
+}

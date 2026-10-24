@@ -1,0 +1,39 @@
+{
+  "note": "Photos issues du site officiel et des publications du club. Légendes et nouvelles photos à ajouter par le bureau.",
+  "albums": [
+    { "id": "jeu", "title": "Jeu libre & gymnases", "photos": [
+      { "src": "jeu-gymnase.webp", "alt": "Joueurs sur les terrains du gymnase", "caption": "Journée d'intégration, Bédarrides" },
+      { "src": "tournoi-panorama.webp", "alt": "Vue d'ensemble des terrains lors d'un tournoi", "caption": "Terrains en pleine action" },
+      { "src": "noel-jeunes.webp", "alt": "Jeunes jouant à la salle Dufays", "caption": "Goûter de Noël, salle Dufays" },
+      { "src": "noel-jeunes-2.webp", "alt": "Jeunes déguisés jouant au badminton", "caption": "Noël à Châteauneuf-du-Pape" }
+    ] },
+    { "id": "tournois", "title": "Tournois & podiums", "photos": [
+      { "src": "smash-podium-sarah-aurelie.webp", "alt": "Podium du Smash du Triomphe", "caption": "Smash du Triomphe, Orange", "portrait": true },
+      { "src": "smash-podium-aurelien.webp", "alt": "Joueur sur la première marche du podium", "caption": "Smash du Triomphe, Orange" },
+      { "src": "smash-podium-duo.webp", "alt": "Duo victorieux sur le podium", "caption": "Smash du Triomphe, Orange", "portrait": true },
+      { "src": "champion-regional.webp", "alt": "Podium du championnat régional", "caption": "Champion régional" },
+      { "src": "smash-lucas-aurelien.webp", "alt": "Joueurs au Smash du Triomphe", "caption": "Smash du Triomphe, Orange", "portrait": true },
+      { "src": "smash-bryan-florian.webp", "alt": "Deux joueurs au Smash du Triomphe", "caption": "Smash du Triomphe, Orange", "portrait": true }
+    ] },
+    { "id": "jeunes", "title": "Jeunes & TDJ", "photos": [
+      { "src": "podium-tdj-bedarrides.webp", "alt": "Podiums du tournoi jeunes de Bédarrides", "caption": "TDJ de Bédarrides, janvier 2026" },
+      { "src": "jeunes-tdj.webp", "alt": "Jeunes joueurs du V7R en maillots turquoise", "caption": "TDJ d'Apt" },
+      { "src": "jeunes-tdj-2.webp", "alt": "Équipe jeunes du V7R", "caption": "L'équipe jeunes" },
+      { "src": "tdj-carpentras-gauthier.webp", "alt": "Podium du TDJ de Carpentras", "caption": "TDJ de Carpentras" }
+    ] },
+    { "id": "interclubs", "title": "Interclubs", "photos": [
+      { "src": "interclub-groupe.webp", "alt": "Groupe de joueurs du V7R en interclub", "caption": "Interclub, janvier 2026" },
+      { "src": "equipe-r4.webp", "alt": "Équipe R4 du V7R", "caption": "Équipe R4", "portrait": true },
+      { "src": "equipe-r4-2.webp", "alt": "Photo de groupe, régionale 4", "caption": "Régionale 4", "portrait": true },
+      { "src": "equipe-d4.webp", "alt": "Équipe D4-A du V7R", "caption": "Équipe D4-A", "portrait": true },
+      { "src": "equipe-d4-victoire.webp", "alt": "Équipe victorieuse 8-0", "caption": "Victoire 8-0", "portrait": true }
+    ] },
+    { "id": "convivialite", "title": "Convivialité", "photos": [
+      { "src": "raclette-groupe.webp", "alt": "Tablée de la soirée raclette", "caption": "Soirée raclette 2026" },
+      { "src": "raclette-1.webp", "alt": "Joueurs à table pendant la soirée raclette", "caption": "Raclette" },
+      { "src": "galette-1.webp", "alt": "Galette des rois du club", "caption": "Galette des rois", "portrait": true },
+      { "src": "galette-buffet.webp", "alt": "Buffet de galettes", "caption": "Buffet de galettes", "portrait": true },
+      { "src": "raclette-loto.webp", "alt": "Gagnant du loto", "caption": "Loto du club", "portrait": true }
+    ] }
+  ]
+}

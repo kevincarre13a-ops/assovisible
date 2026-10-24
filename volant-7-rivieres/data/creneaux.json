@@ -1,0 +1,90 @@
+{
+  "season": "2026-2027",
+  "alert": {
+    "title": "Travaux du gymnase de Bédarrides",
+    "text": "En raison de la reconstruction complète du gymnase, les créneaux du mardi, jeudi, samedi et dimanche sont temporairement suspendus pour toute la saison 2026-2027. Les activités sont maintenues à Châteauneuf-du-Pape le mercredi. Retour dans un gymnase entièrement neuf : date à confirmer."
+  },
+  "slots": [
+    {
+      "id": "adultes-libre",
+      "category": "Adultes · Loisir",
+      "title": "Jeu libre adultes",
+      "day": "Mercredi",
+      "time": "18h30 – 20h30",
+      "place": "Salle Dufays, Châteauneuf-du-Pape",
+      "audience": "18 à 99 ans",
+      "status": "open",
+      "statusLabel": "Sur demande",
+      "details": [
+        "Pratique libre : les joueurs s'organisent entre eux pour leurs matchs.",
+        "Maintenu sur la base du volontariat.",
+        "Chacun apporte ses propres volants (le club n'en fournit pas sur ce créneau).",
+        "Places attribuées en priorité aux licenciés V7R de la saison 2025-2026."
+      ],
+      "cta": { "label": "Rejoindre le groupe WhatsApp", "href": "contact.html#essai" }
+    },
+    {
+      "id": "jeunes",
+      "category": "Jeunes",
+      "title": "Créneau jeunes",
+      "day": "Mercredi",
+      "time": "—",
+      "place": "Châteauneuf-du-Pape",
+      "audience": "Jeunes",
+      "status": "paused",
+      "statusLabel": "Suspendu cette saison",
+      "details": [
+        "Pas de créneau jeunes à Châteauneuf cette saison : trop peu de jeunes intéressés et surtout un manque de bénévoles pour les encadrer dans de bonnes conditions.",
+        "Le club préfère attendre de pouvoir proposer un fonctionnement à la hauteur de ses ambitions.",
+        "Des clubs voisins (Avignon, Pernes, Vaison, Carpentras) peuvent accueillir des adhérents en licence 2."
+      ],
+      "cta": { "label": "Poser une question", "href": "contact.html#message" }
+    },
+    {
+      "id": "competition",
+      "category": "Compétition",
+      "title": "Interclubs & tournois",
+      "day": "À confirmer",
+      "time": "À confirmer",
+      "place": "À confirmer",
+      "audience": "Adultes et jeunes",
+      "status": "pending",
+      "statusLabel": "Texte d'attente",
+      "details": [
+        "Le club engage des équipes en interclubs (R4, D3, D4) et des jeunes sur les tournois départementaux jeunes (TDJ).",
+        "Jours et horaires d'entraînement dirigé : à compléter par le bureau.",
+        "Encadrement jeunes : Dorian Duplan, coach."
+      ],
+      "cta": { "label": "Se renseigner", "href": "contact.html#message" }
+    },
+    {
+      "id": "bedarrides",
+      "category": "Gymnase de Bédarrides",
+      "title": "Mardi, jeudi, samedi, dimanche",
+      "day": "Mardi · Jeudi · Samedi · Dimanche",
+      "time": "Mardi 18h30 – 20h30",
+      "place": "Gymnase de Bédarrides",
+      "audience": "Tous publics",
+      "status": "paused",
+      "statusLabel": "Gymnase en travaux",
+      "details": [
+        "Créneaux temporairement suspendus pour la saison 2026-2027.",
+        "Nous avons hâte de vous retrouver dans un gymnase entièrement neuf. Merci pour votre compréhension et votre soutien."
+      ],
+      "cta": { "label": "Suivre l'actualité", "href": "actualites.html" }
+    }
+  ],
+  "tarifs": [
+    { "price": 70, "unit": "€", "label": "Adulte (18-99 ans)", "note": "Saison 2026-2027 : seule la part reversée à la FFBaD est demandée, mesure exceptionnelle liée aux travaux et à la réduction des créneaux." },
+    { "price": 20, "unit": "€", "label": "Licence 2 au V7R", "note": "Vous êtes licencié dans un autre club (Avignon, Carpentras...) et gardez un lien avec le V7R : participer à certaines activités, soutenir son club de cœur." }
+  ],
+  "tarifsPending": "Tarif jeunes : à confirmer par le bureau.",
+  "inscription": {
+    "title": "Comment s'inscrire ou se relicencier",
+    "steps": [
+      "Déjà licencié : connectez-vous à votre espace MyFFBaD, ouvrez le menu déroulant et cliquez sur « Renouveler ma licence » au Volant des 7 Rivières, puis suivez les étapes.",
+      "Nouveau joueur : demandez d'abord une séance d'essai via le formulaire de contact ou auprès de Céline.",
+      "Pour les tournois : l'inscription se fait sur l'application eBad (guide disponible sur le site officiel du club)."
+    ]
+  }
+}

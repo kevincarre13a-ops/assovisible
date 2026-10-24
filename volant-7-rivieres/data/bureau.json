@@ -1,0 +1,24 @@
+{
+  "intro": "Une équipe de bénévoles répartie sur les trois communes. Les photos et fonctions du bureau seront complétées avec le club.",
+  "members": [
+    { "role": "Co-présidents", "names": ["Bryan", "Delphine"], "photo": "presidents.webp" },
+    { "role": "Trésorier", "names": ["Grégory"] },
+    { "role": "Secrétaires", "names": ["Céline", "Gaëlle"] },
+    { "role": "Conseil d'administration", "names": ["Antony", "Julia", "Dorian", "Arnault"] }
+  ],
+  "coaches": [
+    { "name": "Dorian Duplan", "role": "Coach", "text": "Félicité par le club pour le travail mené auprès des jeunes (TDJ Bédarrides, janvier 2026)." }
+  ],
+  "valeurs": [
+    { "title": "Convivialité", "text": "Galette des rois, soirée raclette, tournoi de Noël, goûter des jeunes : on joue, mais on se retrouve aussi autour d'une table." },
+    { "title": "Progression", "text": "Interclubs, tournois jeunes, stages avec les clubs voisins : chacun avance à son rythme, du loisir à la compétition." },
+    { "title": "Esprit d'équipe", "text": "« Une équipe soudée, motivée et pleine de promesses » : l'état d'esprit compte autant que le score." },
+    { "title": "Ancrage local", "text": "Trois communes, une seule équipe, et des partenaires de la région comme le Domaine de Saje." }
+  ],
+  "histoire": [
+    { "year": "2016", "text": "Création de l'association, pour pratiquer et développer le badminton à Bédarrides, Courthézon et Châteauneuf-du-Pape." },
+    { "year": "2024-2025", "text": "Interclubs en D1, D3 et Division Découverte, tournois jeunes, événements toute l'année (rétrospective disponible sur le site officiel)." },
+    { "year": "2025-2026", "text": "Équipes en R4, D3 et D4, tournoi départemental jeunes organisé à Bédarrides (90 jeunes), podiums au Smash du Triomphe à Orange." },
+    { "year": "2026-2027", "text": "Reconstruction du gymnase de Bédarrides : le club maintient le jeu libre à Châteauneuf-du-Pape et s'appuie sur des clubs partenaires." }
+  ]
+}

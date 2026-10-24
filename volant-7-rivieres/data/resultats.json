@@ -1,0 +1,41 @@
+{
+  "season": "2025-2026",
+  "note": "Résultats issus des publications du club pour la saison 2025-2026. Les résultats 2026-2027 seront ajoutés au fil de la saison.",
+  "source": { "label": "Voir les comptes rendus détaillés sur le site officiel du club", "url": "https://www.badminton-v7r.com/retrospectives/" },
+  "highlights": [
+    { "title": "Smash du Triomphe", "meta": "Orange · 31 janvier – 1er février 2026", "image": "smash-podium-duo.webp", "medals": [
+      { "rank": 1, "text": "Double dames S1 : Aurélie et Sarah" },
+      { "rank": 1, "text": "Double hommes S2 : Aurélien et Jérémi" },
+      { "rank": 1, "text": "Mixte S2 : Sarah et Lorne Julien" },
+      { "rank": 2, "text": "Double dames S3 : Sabrina et Caroline" },
+      { "rank": 3, "text": "Double hommes S3 : Gregory et Olivier" }
+    ] },
+    { "title": "TDJ de Bédarrides", "meta": "Organisé par le V7R · 11 janvier 2026", "image": "podium-tdj-bedarrides.webp", "medals": [
+      { "rank": 1, "text": "Benjamin : Maxime" },
+      { "rank": 1, "text": "Minime : Sacha" },
+      { "rank": 1, "text": "Cadet : Mathieu" },
+      { "rank": 1, "text": "Cadette : Chloé" },
+      { "rank": 1, "text": "Junior : Romain" },
+      { "rank": 2, "text": "Poussin : Keziah · Benjamin : Owen · Cadette : Alia · Junior : Florian" }
+    ] },
+    { "title": "TDJ de Pernes-les-Fontaines", "meta": "Début 2026", "image": "tdj-pernes.webp", "medals": [
+      { "rank": 1, "text": "Simple minime A : Gauthier" },
+      { "rank": 1, "text": "Simple minime C : Antonin" },
+      { "rank": 2, "text": "Simple poussin B : Kéziah" },
+      { "rank": 3, "text": "Owen, Mathieu, Liam, Célian" }
+    ] },
+    { "title": "TDJ de Carpentras et Vaison-la-Romaine", "meta": "Fin 2025", "image": "tdj-carpentras-gauthier.webp", "medals": [
+      { "rank": 1, "text": "Carpentras : Asra, Gauthier, Louca" },
+      { "rank": 2, "text": "Carpentras : Alia, Jérémie" },
+      { "rank": 1, "text": "Vaison : Asra, Robin, Gauthier" },
+      { "rank": 2, "text": "Vaison : Liam, Romain, Owen, Keziah" }
+    ] }
+  ],
+  "interclubs": [
+    { "team": "D4-A", "image": "equipe-d4.webp", "text": "Victoires 8-0 contre Carpentras, 5-3 contre Calavon et contre un autre adversaire, égalité 4-4. Une rencontre gagnée 8-0 sur le terrain a été enregistrée 0-8 après le reclassement administratif voulu par le comité départemental : l'équipe jeune est montée en D3." },
+    { "team": "D3", "image": "interclub-carte-d3.webp", "text": "Victoires 7-1 (deux fois) et 8-0 face à Avignon, défaites contre BOP 6-2 et Apt 7-1. L'équipe jeune, d'abord engagée en D4-A, a été mutée en D3." },
+    { "team": "R4", "image": "equipe-r4.webp", "text": "Victoire 5-3 contre Pernes, deux égalités 4-4, des défaites accrochées 6-2 et 5-3 contre Apt, 8-0 contre Vitrolles." },
+    { "team": "Jeunes", "image": "interclub-carte-jeunes.webp", "text": "Une équipe jeunes engagée en interclubs départementaux, victoire 8-0 contre BCVA, d'après la carte de match publiée par le club." }
+  ],
+  "regional": { "title": "Champion régional", "text": "Aurélien, mis à l'honneur dans la rétrospective 2024-2025 du club.", "image": "champion-regional.webp" }
+}

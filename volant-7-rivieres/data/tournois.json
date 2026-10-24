@@ -1,0 +1,43 @@
+{
+  "upcomingNote": "Les dates de la saison 2026-2027 ne sont pas encore publiées. Cette section sera mise à jour par le bureau.",
+  "upcoming": [
+    {
+      "title": "Dates 2026-2027 à confirmer",
+      "date": null,
+      "dateLabel": "À confirmer",
+      "place": "À confirmer",
+      "text": "Tournois, soirées et événements du club : le calendrier de la saison sera ajouté ici dès sa validation.",
+      "tag": "Texte d'attente",
+      "placeholder": true
+    }
+  ],
+  "seasonRhythm": {
+    "title": "Le rythme d'une saison au V7R",
+    "note": "Calendrier de la saison 2024-2025, donné à titre indicatif : le club se réserve le droit de modifier ou d'annuler les événements.",
+    "months": [
+      { "month": "Octobre", "items": ["Journée d'intégration", "Tournoi Promobad : Octobre rose", "Soirée déguisée Halloween"] },
+      { "month": "Novembre", "items": ["Vide-grenier à Bédarrides"] },
+      { "month": "Décembre", "items": ["Tournoi de Noël"] },
+      { "month": "Janvier", "items": ["Galette des rois", "Loto du club"] },
+      { "month": "Février", "items": ["Vide-grenier à Châteauneuf-du-Pape", "Bad & raclette"] },
+      { "month": "Mars", "items": ["Tournois adultes"] },
+      { "month": "Avril", "items": ["Vide-grenier à Courthézon"] },
+      { "month": "Mai", "items": ["Tournois jeunes"] },
+      { "month": "Juin", "items": ["Journée convivialité"] }
+    ]
+  },
+  "archives": [
+    { "date": "2026-02", "dateLabel": "Février 2026", "title": "Soirée raclette", "type": "Convivialité", "text": "Près de 10 kg de fromage, 14 kg de pommes de terre et 7 kg de charcuterie : bilan officiel d'une soirée où personne n'est reparti avec la faim.", "image": "raclette-groupe.webp" },
+    { "date": "2026-01-31", "dateLabel": "31 janvier – 1er février 2026", "title": "Smash du Triomphe, Orange", "type": "Tournoi adultes", "text": "Trois victoires, une finale et une demi-finale pour les joueurs du V7R sur le week-end.", "image": "smash-podium-sarah-aurelie.webp" },
+    { "date": "2026-01-15", "dateLabel": "Janvier 2026", "title": "Galette des rois", "type": "Convivialité", "text": "Le rendez-vous gourmand de début d'année, entre deux matchs.", "image": "galette-1.webp" },
+    { "date": "2026-01-11", "dateLabel": "11 janvier 2026", "title": "Tournoi départemental jeunes, Bédarrides", "type": "Tournoi jeunes", "text": "Organisé par le V7R au gymnase du collège : 90 jeunes joueurs et 147 matchs en simple.", "image": "podium-tdj-bedarrides.webp" },
+    { "date": "2025-12", "dateLabel": "Fin 2025", "title": "TDJ de Vaison-la-Romaine", "type": "Tournoi jeunes", "text": "15 jeunes du club engagés, trois victoires en simple.", "image": "tdj-vaison-asra.webp" },
+    { "date": "2025-12", "dateLabel": "Fin 2025", "title": "TDJ de Carpentras", "type": "Tournoi jeunes", "text": "Trois premières places et deux finales.", "image": "tdj-carpentras-gauthier.webp" },
+    { "date": "2025-12", "dateLabel": "Fin 2025", "title": "Tournoi jeunes d'Apt", "type": "Tournoi jeunes", "text": "12 participants et plusieurs podiums.", "image": "tdj-apt-owen.webp" },
+    { "date": "2024-12-17", "dateLabel": "17 décembre 2024", "title": "Soirée et tournoi de Noël", "type": "Convivialité", "text": "Au gymnase du collège de Bédarrides, organisé par le V7R.", "image": "noel-jeunes.webp" },
+    { "date": "2024-12-18", "dateLabel": "18 décembre 2024", "title": "Goûter de Noël des jeunes", "type": "Jeunes", "text": "Salle Dufays, à Châteauneuf-du-Pape.", "image": "noel-jeunes-2.webp" },
+    { "date": "2024-11-29", "dateLabel": "29 novembre 2024", "title": "Soirée théâtre : match d'impro", "type": "Convivialité", "text": "Avec la troupe En Cours de Rénovation, au château de Châteauneuf-du-Pape.", "image": null },
+    { "date": "2024-10-13", "dateLabel": "13 octobre 2024", "title": "Tournoi de badminton solidaire", "type": "Tournoi", "text": "Smash ton cancer, Octobre rose, au gymnase du collège de Bédarrides.", "image": null },
+    { "date": "2024-10-05", "dateLabel": "5 octobre 2024", "title": "Journée d'intégration", "type": "Club", "text": "Pour bien démarrer la saison, au gymnase du collège de Bédarrides.", "image": "jeu-gymnase.webp" }
+  ]
+}
