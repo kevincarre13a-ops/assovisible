@@ -1,0 +1,22 @@
+{
+  "note": "Photos et vidéos de cours : texte d'attente, l'association pourra les ajouter ici (dossier assets/img + ce fichier).",
+  "albums": [
+    {
+      "id": "affiches",
+      "titre": "Affiches de la saison",
+      "items": [
+        { "src": "assets/img/affiche-reprise-2026.jpg", "legende": "Reprise des cours, saison 2026/2027" },
+        { "src": "assets/img/affiche-portes-ouvertes-2026.jpg", "legende": "Portes ouvertes 2026" }
+      ]
+    },
+    {
+      "id": "energie",
+      "titre": "Ça saute, ça danse !",
+      "items": [
+        { "src": "assets/img/danseuse.jpg", "legende": "Danse : tous styles, plaisir, énergie" },
+        { "src": "assets/img/sauteur.jpg", "legende": "Jumping fitness : fun, cardio, dépassement de soi" },
+        { "src": "assets/img/hero-saut.jpg", "legende": "Des sauts pleins d'énergie" }
+      ]
+    }
+  ]
+}

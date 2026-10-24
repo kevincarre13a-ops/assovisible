@@ -1,0 +1,43 @@
+{
+  "a_venir": [
+    {
+      "titre": "Cours d'essai : venez essayer !",
+      "date_affichee": "Dès maintenant, toute la saison",
+      "categorie": "Cours d'essai",
+      "texte": "Débutants et curieux sont les bienvenus pour une séance de danse ou de jumping fitness. Contactez l'association pour choisir votre créneau.",
+      "lien": "contact.html",
+      "lien_texte": "Réserver mon essai"
+    },
+    {
+      "titre": "Gala / spectacle de fin d'année",
+      "date_affichee": "Date à annoncer",
+      "categorie": "Spectacle",
+      "texte": "Texte d'attente : l'association n'a pas encore communiqué de date. Suivez-la sur Facebook pour être prévenu(e).",
+      "lien": "contact.html",
+      "lien_texte": "Être prévenu(e)"
+    }
+  ],
+  "archives": [
+    {
+      "annee": "2026",
+      "titre": "Démonstration lors du passage du Tour de France à Chaux",
+      "date_affichee": "Vendredi 17 juillet 2026",
+      "texte": "Place de l'Église : démonstration « Dance and Jump en énergie », au milieu des jeux gonflables pour les enfants.",
+      "categorie": "Démonstration"
+    },
+    {
+      "annee": "2026",
+      "titre": "Portes ouvertes jumping fitness",
+      "date_affichee": "Vendredi 26 juin 2026, 19h00",
+      "texte": "Une séance découverte de jumping fitness (fun, cardio, dépassement de soi) pour la saison 2026/2027.",
+      "categorie": "Portes ouvertes"
+    },
+    {
+      "annee": "2026",
+      "titre": "Portes ouvertes danse",
+      "date_affichee": "Lundi 15 juin 2026, 19h00",
+      "texte": "Une séance découverte de danse, tous styles, plaisir et énergie, ouverte aux enfants, ados et adultes.",
+      "categorie": "Portes ouvertes"
+    }
+  ]
+}

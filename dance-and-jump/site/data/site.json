@@ -1,0 +1,17 @@
+{
+  "nom": "Dance & Jump",
+  "slogan": "Bougez, dansez, vibrez !",
+  "ville": "Chaux (90330), Territoire de Belfort",
+  "fondation": 2015,
+  "telephone": "06 89 04 81 43",
+  "telephone_lien": "+33689048143",
+  "email": "laura.bulliard@hotmail.fr",
+  "facebook": "https://www.facebook.com/p/Association-Dance-and-Jump-100054577384773/",
+  "saison": "2026/2027",
+  "chiffres": [
+    { "valeur": 11, "suffixe": " ans", "texte": "d'existence, depuis 2015" },
+    { "valeur": 3, "suffixe": "", "texte": "créneaux par semaine : lundi, mercredi, vendredi" },
+    { "valeur": 2, "suffixe": "", "texte": "disciplines : danse et jumping fitness" },
+    { "valeur": 5, "suffixe": " ans", "texte": "âge d'accueil des plus jeunes (6 ans selon le niveau)" }
+  ]
+}

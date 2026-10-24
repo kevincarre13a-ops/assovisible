@@ -1,0 +1,10 @@
+{
+  "note": "Horaires exacts et salle : texte d'attente à compléter. Contactez l'association pour confirmer avant votre venue.",
+  "jours": [
+    { "jour": "Lundi", "cours": [ { "titre": "Danse ados & adultes", "couleur": "rose", "heure": "Soir (horaire à confirmer)" } ] },
+    { "jour": "Mardi", "cours": [] },
+    { "jour": "Mercredi", "cours": [ { "titre": "Danse enfants", "couleur": "rose", "heure": "Après-midi (horaire à confirmer)" } ] },
+    { "jour": "Jeudi", "cours": [] },
+    { "jour": "Vendredi", "cours": [ { "titre": "Jumping fitness adultes", "couleur": "vert", "heure": "Soir (horaire à confirmer)" } ] }
+  ]
+}

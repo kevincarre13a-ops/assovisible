@@ -1,0 +1,41 @@
+[
+  {
+    "id": "danse-enfants",
+    "titre": "Danse enfants",
+    "couleur": "rose",
+    "emoji": "💃",
+    "resume": "Un cours hebdomadaire adapté à chaque tranche d'âge : on bouge, on s'amuse, on apprend les bases et on prend confiance.",
+    "public": "Enfants, dès 5 ans (6 ans selon le niveau)",
+    "niveau": "Tous niveaux, débutants bienvenus",
+    "jours": "Mercredi après-midi",
+    "horaires": "Horaire à confirmer auprès de l'association",
+    "lieu": "Chaux (90330) — salle à confirmer",
+    "professeur": "Laura, animatrice bénévole"
+  },
+  {
+    "id": "danse-ados-adultes",
+    "titre": "Danse ados & adultes",
+    "couleur": "rose",
+    "emoji": "✨",
+    "resume": "Tous styles, plaisir et énergie : un cours pour se défouler, travailler la coordination et partager un moment convivial.",
+    "public": "Ados et adultes",
+    "niveau": "Tous niveaux, débutants bienvenus",
+    "jours": "Lundi (portes ouvertes à 19h00 en juin 2026)",
+    "horaires": "Horaire à confirmer auprès de l'association",
+    "lieu": "Chaux (90330) — salle à confirmer",
+    "professeur": "Laura, animatrice bénévole"
+  },
+  {
+    "id": "jumping-fitness",
+    "titre": "Jumping fitness",
+    "couleur": "vert",
+    "emoji": "🤸",
+    "resume": "Fun, cardio et dépassement de soi : du fitness sur mini-trampoline, en musique, dans une ambiance chaleureuse et conviviale.",
+    "public": "Adultes",
+    "niveau": "Débutants et curieux bienvenus",
+    "jours": "Vendredi (portes ouvertes à 19h00 en juin 2026)",
+    "horaires": "Horaire à confirmer auprès de l'association",
+    "lieu": "Chaux (90330) — salle à confirmer",
+    "professeur": "Laura, formée au Jumping Fitness au centre officiel de Mulhouse"
+  }
+]

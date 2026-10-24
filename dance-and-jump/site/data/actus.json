@@ -1,0 +1,30 @@
+[
+  {
+    "date": "2026-10-23",
+    "date_affichee": "23 octobre 2026",
+    "titre": "Nouveaux créneaux : les enfants dansent le mercredi après-midi",
+    "texte": "L'association a repris ses séances de danse et de jumping fitness. Les enfants ont désormais leur créneau le mercredi après-midi. Débutants et curieux sont les bienvenus !",
+    "image": "assets/img/affiche-reprise-2026.jpg"
+  },
+  {
+    "date": "2026-09-07",
+    "date_affichee": "7 septembre 2026",
+    "titre": "C'est la reprise !",
+    "texte": "Les cours de danse et de jumping fitness reprennent pour la saison 2026/2027. Inscriptions et informations par téléphone ou par e-mail.",
+    "image": "assets/img/affiche-reprise-2026.jpg"
+  },
+  {
+    "date": "2026-07-17",
+    "date_affichee": "17 juillet 2026",
+    "titre": "Dance and Jump sur la place de l'Église",
+    "texte": "À l'occasion du passage du Tour de France à Chaux, l'association a proposé une démonstration « Dance and Jump en énergie ».",
+    "image": "assets/img/danseuse.jpg"
+  },
+  {
+    "date": "2026-06-15",
+    "date_affichee": "15 et 26 juin 2026",
+    "titre": "Portes ouvertes de fin de saison",
+    "texte": "Deux soirées pour essayer : danse le lundi 15 juin et jumping fitness le vendredi 26 juin, à 19h00, à Chaux.",
+    "image": "assets/img/affiche-portes-ouvertes-2026.jpg"
+  }
+]
