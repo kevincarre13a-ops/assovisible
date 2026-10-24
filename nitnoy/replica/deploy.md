@@ -15,7 +15,7 @@
 
 - claude.ai Artifact (private to Kevin's account): https://claude.ai/artifact/9HisopXZHqSBEo7TkpB2mZ
   Known limit: the artifact frame refuses the microphone, so speaking steps use listen-and-repeat there.
-- Netlify project `nitnoy-thai` created on 2026-10-24 (https://app.netlify.com/projects/nitnoy-thai, team kevincarre1994). The deploy itself needs Kevin's go: either drag the `nitnoy/` folder onto the project's Deploys page, or connect this GitHub repo with base directory `nitnoy` and publish directory `nitnoy` (no build command). Live URL once deployed: https://nitnoy-thai.netlify.app
+- Netlify project `nitnoy-thai` created on 2026-10-24 (https://app.netlify.com/projects/nitnoy-thai, team kevincarre1994). Deployed on Kevin's go the same day (deploy 6adcc61e35ad5f1b630cc52f), team-login protection removed. Live: https://nitnoy-thai.netlify.app. Checked after deploy: index, manifest, service worker and icons answer 200, the service worker activates, a lesson opens, no console errors. To redeploy after a change: from `nitnoy/`, `npx netlify deploy --prod --dir .` (site nitnoy-thai), or drag the folder onto the Deploys page.
 - The app is installable (manifest, icons, service worker): Safari Share > Add to Home Screen on iPhone, Chrome menu > Install app on Android. Progress stays on the phone; the Me screen has a backup code to copy and paste on another phone.
 
 ## Not done on purpose
