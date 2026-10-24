@@ -1,0 +1,34 @@
+{
+  "name": "Préparateurs Pharmaceutiques Solidaires",
+  "short": "PrépaPharmaSolidaires",
+  "url": "https://prepapharmasolidaires.netlify.app",
+  "tagline": "Des préparateurs en pharmacie qui donnent de leur temps, de leur savoir-faire et de leur cœur.",
+  "heroTitle": "Quand la pharmacie devient solidaire",
+  "heroText": "Des préparateurs en pharmacie qui collectent, trient et redistribuent produits de santé, d'hygiène et de première nécessité à celles et ceux qui en ont besoin.",
+  "heroImage": "assets/img/hero.svg",
+  "creationDate": "2024-10-08",
+  "contact": {
+    "president": "Samira Serri",
+    "role": "Présidente",
+    "email": "prepapharmasolidaires@hotmail.com",
+    "phone": "06 12 96 25 71",
+    "phoneHref": "+33612962571",
+    "address": "31 avenue Jean Jaurès, 69150 Décines-Charpieu"
+  },
+  "legal": {
+    "form": "Association loi 1901 déclarée",
+    "rna": "W691110097",
+    "siren": "942055393",
+    "declared": "8 octobre 2024",
+    "joPublication": "22 octobre 2024",
+    "object": "Favoriser le réemploi des dispositifs médicaux et le don de produits de parapharmacie."
+  },
+  "donationUrl": "",
+  "socials": [],
+  "stats": [
+    { "key": "years", "label": "d'existence", "suffix": " ans", "fromDate": "2024-10-08" },
+    { "key": "colis", "label": "colis distribués", "value": null },
+    { "key": "pays", "label": "pays d'action", "value": null },
+    { "key": "benevoles", "label": "bénévoles", "value": null }
+  ]
+}

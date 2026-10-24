@@ -1,0 +1,24 @@
+{
+  "collectes": [
+    {
+      "title": "Collecte permanente de produits de parapharmacie et d'hygiène",
+      "status": "À confirmer",
+      "dates": "Dates à renseigner",
+      "where": "Décines-Charpieu (Rhône) – lieu exact à confirmer",
+      "text": "Texte d'attente : l'association précisera ici les collectes en cours, leurs dates et leurs points de dépôt.",
+      "placeholder": true
+    }
+  ],
+  "besoins": [
+    { "cat": "Hygiène", "items": ["Savons, gels douche, shampoings", "Brosses à dents, dentifrices", "Protections périodiques", "Couches et produits pour bébé"], "placeholder": true },
+    { "cat": "Parapharmacie", "items": ["Produits de soin et de pansement non ouverts", "Compléments et produits d'hygiène de la vie courante"], "placeholder": true },
+    { "cat": "Dispositifs médicaux", "items": ["Matériel de réemploi (liste à valider par l'association)"], "placeholder": true }
+  ],
+  "deposit": {
+    "how": "Texte d'attente : modalités de dépôt (sur rendez-vous, permanence, point relais) à confirmer par l'association.",
+    "where": "31 avenue Jean Jaurès, 69150 Décines-Charpieu – à confirmer avant tout dépôt. Contactez-nous au 06 12 96 25 71.",
+    "accepted": ["Produits neufs ou en parfait état, emballages d'origine fermés", "Produits dont la date de péremption est suffisamment lointaine"],
+    "refused": ["Médicaments (règles de la pharmacie et de la filière Cyclamed)", "Produits ouverts, entamés ou périmés", "Matériel souillé ou endommagé"],
+    "note": "Texte d'attente à valider par l'association : la liste des produits de santé acceptés ou refusés doit être confirmée avant publication définitive."
+  }
+}

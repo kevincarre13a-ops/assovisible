@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://prepapharmasolidaires.netlify.app/sitemap.xml

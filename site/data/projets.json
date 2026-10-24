@@ -1,0 +1,14 @@
+{
+  "next": {
+    "title": "Prochaine collecte",
+    "text": "Les dates de la prochaine collecte seront annoncées ici. Contactez-nous pour être prévenu(e).",
+    "placeholder": true
+  },
+  "projets": [
+    { "id": "voyage-1", "type": "Voyage humanitaire", "status": "À venir", "title": "Premier voyage humanitaire", "text": "Texte d'attente : destination, dates, objectifs et besoins du projet à renseigner par l'association.", "placeholder": true },
+    { "id": "collecte-grande", "type": "Collecte", "status": "À venir", "title": "Grande collecte solidaire", "text": "Texte d'attente : objectifs, partenaires et calendrier à renseigner.", "placeholder": true }
+  ],
+  "voyages": [
+    { "year": "À renseigner", "title": "Voyages passés", "text": "Aucun voyage passé n'est publié pour le moment. L'association ajoutera ici ses retours d'expérience.", "placeholder": true }
+  ]
+}

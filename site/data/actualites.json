@@ -1,0 +1,22 @@
+{
+  "categories": ["Collectes", "Distributions", "Voyages humanitaires", "Vie de l'association"],
+  "posts": [
+    {
+      "date": "2024-10-08",
+      "category": "Vie de l'association",
+      "title": "Création de l'association",
+      "text": "Les Préparateurs Pharmaceutiques Solidaires sont déclarés en préfecture le 8 octobre 2024 (publication au Journal officiel des associations le 22 octobre 2024), à Décines-Charpieu.",
+      "image": "",
+      "alt": ""
+    },
+    {
+      "date": "",
+      "category": "Collectes",
+      "title": "Vos actualités arrivent ici",
+      "text": "Texte d'attente : photos et récits de collectes, de distributions et de voyages seront ajoutés par l'association (gestes, mains, colis — jamais de visages sans accord).",
+      "image": "",
+      "alt": "",
+      "placeholder": true
+    }
+  ]
+}

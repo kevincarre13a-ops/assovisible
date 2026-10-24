@@ -1,0 +1,42 @@
+[
+  {
+    "id": "collecte-hygiene",
+    "title": "Collecte de produits d'hygiène et de parapharmacie",
+    "scope": "France",
+    "place": "Lyon et métropole",
+    "lat": 45.76, "lon": 4.84,
+    "summary": "Collecter des produits d'hygiène, de parapharmacie et de première nécessité pour les redistribuer.",
+    "text": "L'association rassemble des dons de produits de parapharmacie et d'hygiène afin de leur donner une seconde vie auprès de personnes qui en ont besoin.",
+    "placeholder": false
+  },
+  {
+    "id": "reemploi-dm",
+    "title": "Réemploi de dispositifs médicaux",
+    "scope": "France",
+    "place": "Décines-Charpieu (Rhône)",
+    "lat": 45.77, "lon": 4.96,
+    "summary": "Favoriser le réemploi des dispositifs médicaux, dans une logique d'économie circulaire.",
+    "text": "Objet déclaré de l'association : favoriser le réemploi des dispositifs médicaux. Les types de matériels acceptés seront précisés par l'association.",
+    "placeholder": false
+  },
+  {
+    "id": "distribution-precarite",
+    "title": "Distributions aux personnes en situation de précarité",
+    "scope": "France",
+    "place": "Métropole de Lyon",
+    "lat": 45.74, "lon": 4.80,
+    "summary": "Distribuer des kits et produits aux personnes sans-abri, en précarité et aux étudiants en difficulté.",
+    "text": "À compléter par l'association : lieux, fréquence et structures partenaires des distributions.",
+    "placeholder": true
+  },
+  {
+    "id": "international",
+    "title": "Actions à l'international",
+    "scope": "International",
+    "place": "Pays à renseigner",
+    "lat": null, "lon": null,
+    "summary": "Envois de matériel et missions humanitaires à l'étranger.",
+    "text": "À compléter par l'association : pays, partenaires locaux et nature des envois.",
+    "placeholder": true
+  }
+]
