@@ -1,0 +1,50 @@
+{
+  "_aide": "Coordonnées, liens et chiffres clés du club. Modifiez ce fichier pour mettre à jour tout le site.",
+  "nom": "Asnières Digital Fighting Jitsu",
+  "sigle": "ADFJ",
+  "accroche": "Chez nous, il y aura toujours de la place pour vous !",
+  "devise": "Inclusion is limitless",
+  "contact": {
+    "telephone": "06 87 75 74 82",
+    "telephone_lien": "+33687757482",
+    "email": "adfj@orange.fr",
+    "adresse": "30 avenue de la Lauzière, 92600 Asnières-sur-Seine"
+  },
+  "reseaux": {
+    "facebook": "https://www.facebook.com/digitalfighting",
+    "instagram": "https://www.instagram.com/adfj_asnieres/"
+  },
+  "rentree": {
+    "texte": "Reprise la semaine du 14 septembre pour toutes les sections et tous les gymnases.",
+    "saison": "2026-2027",
+    "valable_jusqu_au": "2026-09-20",
+    "texte_apres": "La saison 2026-2027 est lancée : tous les créneaux sont ouverts, venez faire une séance d'essai !"
+  },
+  "chiffres": [
+    { "valeur": 2015, "format": "annee", "libelle": "Année de création", "note": "Club fondé en juin 2015 (source : SportMag, 2023)" },
+    { "calcul": "creneaux", "libelle": "Séances par semaine", "note": "Calculé automatiquement à partir des horaires" },
+    { "calcul": "activites", "libelle": "Activités", "note": "Judo, ju-jitsu, self-défense, taiso, cardio/fitness" },
+    { "calcul": "gymnases", "libelle": "Gymnases", "note": "Les Bruyères, Assia El Hannouni, Teddy Riner" },
+    { "valeur": 115, "suffixe": "+", "libelle": "Adhérents", "note": "Chiffre de mars 2023 (SportMag) — À METTRE À JOUR" }
+  ],
+  "inscription": {
+    "_attention": "Aucun tarif n'est publié sur le site actuel ni en ligne : à compléter par le club.",
+    "tarifs_texte_attente": "Les tarifs de la saison 2026-2027 seront publiés ici très prochainement. En attendant, contactez-nous par téléphone ou par e-mail : nous vous répondons avec plaisir.",
+    "tarifs": [],
+    "aides": [
+      "Pass'Sport (50 €)",
+      "Ticket Loisir CAF 92",
+      "Pass+ Hauts-de-Seine",
+      "Chèques ANCV et Chèques Sport",
+      "Remise famille de 20 % sur la cotisation (hors licence) — d'après le dossier 2023, à vérifier",
+      "Paiement en plusieurs chèques — d'après le dossier 2023, à vérifier"
+    ],
+    "page_actuelle": "https://adfj.fr/inscription-2/"
+  },
+  "mentions": {
+    "editeur": "Asnières Digital Fighting Jitsu (ADFJ), association",
+    "directeur_publication": "Tarek Rouis, président",
+    "adresse": "30 avenue de la Lauzière, 92600 Asnières-sur-Seine",
+    "hebergeur": "Netlify, Inc. — 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis"
+  }
+}

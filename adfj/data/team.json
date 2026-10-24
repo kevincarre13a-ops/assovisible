@@ -1,0 +1,18 @@
+{
+  "_aide": "Bureau et éducateurs. Seules les informations publiées sur le site actuel ou dans la presse figurent ici ; tout le reste est à compléter par le club (diplômes, photos).",
+  "bureau": [
+    { "nom": "Tarek Rouis", "role": "Président et fondateur", "texte": "Enseignant et formateur judo sur le thème du handicap, membre du comité directeur de la Ligue Île-de-France de judo et du Comité des Hauts-de-Seine. Il a voulu « un club inclusif ».", "diplomes": "Diplômes à renseigner" },
+    { "nom": "Autres membres du bureau", "role": "Secrétariat, trésorerie…", "texte": "La composition du bureau n'est pas publiée : texte à compléter par le club.", "diplomes": "", "attente": true }
+  ],
+  "educateurs": [
+    { "nom": "Tarek Rouis", "role": "Enseignant judo, formateur Para Judo", "diplomes": "Diplômes à renseigner" },
+    { "nom": "Jacques Henaff", "role": "Enseignant de judo et ju-jitsu", "diplomes": "Médaille d'or de la Fédération Française de Judo (2023) pour services rendus au judo" },
+    { "nom": "Éducateurs des cours de cardio et de self-défense", "role": "À compléter", "diplomes": "Noms et diplômes à renseigner", "attente": true }
+  ],
+  "valeurs": [
+    { "titre": "Inclusion", "texte": "Un club ouvert à toutes et à tous, avec ou sans handicap. Chez nous, il y a toujours de la place pour vous." },
+    { "titre": "Respect", "texte": "Le code moral du judo : politesse, courage, sincérité, honneur, modestie, respect, contrôle de soi et amitié." },
+    { "titre": "Plaisir", "texte": "Une pratique loisir, ludique et progressive, à son rythme : « à votre rythme »." },
+    { "titre": "Innovation", "texte": "Le « Digital » du nom : des outils numériques et la capture de mouvement pour mieux apprendre." }
+  ]
+}

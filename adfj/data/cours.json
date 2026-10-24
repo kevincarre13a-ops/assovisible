@@ -1,0 +1,38 @@
+{
+  "_aide": "Horaires des cours. Pour changer un horaire, modifiez 'jour', 'debut', 'fin', 'gymnase' (identifiant de venues.json) ou 'educateur'. Pour ajouter un cours, copiez un bloc.",
+  "educateur_defaut": "Éducateur·rice à renseigner",
+  "enfants": {
+    "intro": "Le judo pour les plus jeunes, dès 3 ans et demi : on apprend à tomber, à se relever, à respecter l'autre et à prendre confiance, dans la bonne humeur.",
+    "ages": [
+      { "label": "Éveil judo", "age": "Moins de 6 ans", "texte": "Jeux, motricité, premiers équilibres et premières chutes en douceur. Dès 3 ans et demi." },
+      { "label": "Judo enfants", "age": "6 ans et plus", "texte": "Techniques de base, ceintures, esprit d'équipe et respect du code moral du judo." }
+    ],
+    "creneaux": [
+      { "jour": "Mercredi", "debut": "13h00", "fin": "14h00", "discipline": "Judo enfants", "age": "Plus de 6 ans", "gymnase": "bruyeres" },
+      { "jour": "Samedi", "debut": "10h45", "fin": "11h45", "discipline": "Éveil judo", "age": "Moins de 6 ans", "gymnase": "bruyeres" },
+      { "jour": "Samedi", "debut": "11h45", "fin": "12h45", "discipline": "Judo enfants", "age": "Plus de 6 ans", "gymnase": "bruyeres" },
+      { "jour": "Samedi", "debut": "15h00", "fin": "16h00", "discipline": "Éveil judo", "age": "Moins de 6 ans", "gymnase": "teddy-riner" },
+      { "jour": "Samedi", "debut": "16h00", "fin": "17h00", "discipline": "Judo enfants", "age": "Plus de 6 ans", "gymnase": "teddy-riner" },
+      { "jour": "Samedi", "debut": "18h00", "fin": "19h00", "discipline": "Éveil judo", "age": "Moins de 6 ans", "gymnase": "assia-el-hannouni" },
+      { "jour": "Samedi", "debut": "19h00", "fin": "20h00", "discipline": "Judo enfants", "age": "Plus de 6 ans", "gymnase": "assia-el-hannouni" }
+    ]
+  },
+  "adultes": {
+    "intro": "Se dépasser, se défendre, se faire du bien : des cours pour tous les niveaux, ouverts aux ados dès 11 ans pour le ju-jitsu et la self-défense.",
+    "disciplines": [
+      { "nom": "Judo", "texte": "Techniques de projection et de contrôle, randoris variés et progression à son rythme.", "image": "judo-cottonbro" },
+      { "nom": "Ju-jitsu", "texte": "Un art martial complet : frappes, clés, projections. À partir de 11 ans.", "image": "cours-self" },
+      { "nom": "Self-défense", "texte": "Apprendre à garder son calme, à se protéger et à gérer un conflit. À partir de 11 ans.", "image": "cours-self-2" },
+      { "nom": "Taiso", "texte": "Préparation physique et remise en forme du judo : souplesse, force, équilibre.", "image": "cours-ballon" },
+      { "nom": "Cardio / fitness", "texte": "Cardio Rythmic Swiss Ball : on bouge en musique sur ballon, même en famille le dimanche !", "image": "cours-ballon-2" }
+    ],
+    "creneaux": [
+      { "jour": "Mardi", "debut": "19h30", "fin": "20h30", "discipline": "Cardio Rythmic Swiss Ball", "age": "Adultes", "gymnase": "bruyeres" },
+      { "jour": "Mardi", "debut": "20h30", "fin": "21h45", "discipline": "Techniques Judo – Ju-jitsu", "age": "Ados / adultes", "gymnase": "bruyeres" },
+      { "jour": "Mardi", "debut": "21h45", "fin": "22h30", "discipline": "Randoris variés", "age": "Ados / adultes", "gymnase": "bruyeres" },
+      { "jour": "Samedi", "debut": "10h30", "fin": "11h30", "discipline": "Cardio Rythmic Swiss Ball", "age": "Adultes", "gymnase": "bruyeres" },
+      { "jour": "Samedi", "debut": "20h00", "fin": "21h00", "discipline": "Ju-jitsu / Self-défense", "age": "Ados / adultes", "gymnase": "assia-el-hannouni" },
+      { "jour": "Dimanche", "debut": "10h30", "fin": "11h30", "discipline": "Cardio Rythmic Swiss Ball en famille", "age": "Toute la famille", "gymnase": "bruyeres" }
+    ]
+  }
+}

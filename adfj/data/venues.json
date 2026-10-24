@@ -1,0 +1,54 @@
+{
+  "_aide": "Les trois gymnases. 'adresse' et 'acces' sont affichés sur la page Nos lieux de pratique, avec le plan.",
+  "gymnases": [
+    {
+      "id": "bruyeres",
+      "nom": "Gymnase Les Bruyères",
+      "quartier": "Bac – Flachat – Bruyères",
+      "adresse": "30 avenue de la Lauzière, 92600 Asnières-sur-Seine",
+      "acces": "À renseigner (transports et stationnement) : vérifiez l'itinéraire avec le plan ci-dessous.",
+      "photos": [
+        "lieu-bruyeres-1",
+        "lieu-bruyeres-2"
+      ],
+      "lien_carte": "https://www.openstreetmap.org/search?query=30%20avenue%20de%20la%20Lauzi%C3%A8re%2092600%20Asni%C3%A8res-sur-Seine",
+      "lien_itineraire": "https://www.google.com/maps/dir/?api=1&destination=30+avenue+de+la+Lauzi%C3%A8re+92600+Asni%C3%A8res-sur-Seine",
+      "lat": 48.9069,
+      "lon": 2.2783,
+      "plan_note": "Plan indicatif centré sur la rue : utilisez « Itinéraire » pour le guidage exact."
+    },
+    {
+      "id": "assia-el-hannouni",
+      "nom": "Gymnase Assia El Hannouni",
+      "quartier": "Les Grésillons – Bords de Seine",
+      "adresse": "2 rue Pierre Curie, 92600 Asnières-sur-Seine",
+      "acces": "À renseigner (transports et stationnement).",
+      "photos": [
+        "lieu-assia-1",
+        "lieu-assia-2"
+      ],
+      "lien_carte": "https://www.openstreetmap.org/search?query=2%20rue%20Pierre%20Curie%2092600%20Asni%C3%A8res-sur-Seine",
+      "lien_itineraire": "https://www.google.com/maps/dir/?api=1&destination=2+rue+Pierre+Curie+92600+Asni%C3%A8res-sur-Seine",
+      "lat": 48.9189,
+      "lon": 2.314,
+      "plan_note": "Plan indicatif centré sur la rue : utilisez « Itinéraire » pour le guidage exact."
+    },
+    {
+      "id": "teddy-riner",
+      "nom": "Gymnase Teddy Riner (Arena)",
+      "quartier": "Courtilles",
+      "adresse": "103 avenue de la Redoute, 92600 Asnières-sur-Seine",
+      "acces": "Métro ligne 13, station Courtilles (indiqué sur les affiches du club).",
+      "remarque": "Certaines affiches indiquent le 107 avenue de la Redoute : adresse à confirmer.",
+      "photos": [
+        "lieu-teddy-riner-1",
+        "lieu-teddy-riner-2"
+      ],
+      "lien_carte": "https://www.openstreetmap.org/search?query=103%20avenue%20de%20la%20Redoute%2092600%20Asni%C3%A8res-sur-Seine",
+      "lien_itineraire": "https://www.google.com/maps/dir/?api=1&destination=103+avenue+de+la+Redoute+92600+Asni%C3%A8res-sur-Seine",
+      "lat": 48.9297,
+      "lon": 2.2826,
+      "plan_note": "Plan indicatif centré sur la rue : utilisez « Itinéraire » pour le guidage exact."
+    }
+  ]
+}

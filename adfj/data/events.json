@@ -1,0 +1,200 @@
+{
+  "_aide": "Événements. 'prochain' pilote le compte à rebours de l'accueil : mettez la date de début (format AAAA-MM-JJTHH:MM) de la prochaine édition. Si la date est passée, le site affiche automatiquement « date à annoncer ».",
+  "prochain": {
+    "titre": "Ninja Challenge",
+    "date_debut": "2026-09-11T12:00:00+02:00",
+    "date_fin": "2026-09-13T12:00:00+02:00",
+    "lieu": "Stade d'athlétisme Ladji Doucouré, 103 avenue de la Redoute, Asnières-sur-Seine",
+    "lien": "evenements.html#ninja-challenge",
+    "texte_si_passe": "Merci à toutes et tous pour cette saison 2 ! La prochaine édition sera annoncée très bientôt."
+  },
+  "ninja": {
+    "saison": "Saison 2",
+    "dates": "11, 12 et 13 septembre 2026",
+    "lieu": "Stade d'athlétisme Ladji Doucouré — 103 avenue de la Redoute, 92600 Asnières-sur-Seine (métro ligne 13, Courtilles)",
+    "programme": [
+      {
+        "jour": "Vendredi 11 septembre",
+        "horaire": "12h – 18h",
+        "titre": "Sélections"
+      },
+      {
+        "jour": "Samedi 12 septembre",
+        "horaire": "10h – 18h",
+        "titre": "Sélections"
+      },
+      {
+        "jour": "Dimanche 13 septembre",
+        "horaire": "9h30 – 12h",
+        "titre": "Finales"
+      }
+    ],
+    "attendus": "Environ 800 personnes attendues sur ces deux jours (annonce du club).",
+    "soutiens": "Avec le soutien de la Mairie d'Asnières-sur-Seine et de la Préfecture des Hauts-de-Seine. Parcours : Ninja Box.",
+    "affiche": "affiche-ninja-2026"
+  },
+  "frise": [
+    {
+      "date": "Juin 2015",
+      "annee": 2015,
+      "titre": "Naissance du club",
+      "texte": "Tarek Rouis fonde l'Asnières Digital Fighting Jitsu avec une idée forte : un club ouvert à toutes et à tous, personnes en situation de handicap comprises.",
+      "type": "club"
+    },
+    {
+      "date": "27 avril 2022",
+      "annee": 2022,
+      "titre": "Sport Inclusion",
+      "texte": "Grand événement du club au gymnase Laura Flessel, parrainé par Helios Latchoumanaya, champion paralympique. Plus de 80 participants des Hauts-de-Seine.",
+      "type": "evenement",
+      "image": "event-2022-groupe"
+    },
+    {
+      "date": "22 février 2023",
+      "annee": 2023,
+      "titre": "Sport Inclusion à l'Arena Teddy Riner",
+      "texte": "Para judo, chanbara, boxe thaïlandaise, ateliers et jeux : 450 personnes dont une centaine d'éducateurs sur le tapis.",
+      "type": "evenement",
+      "image": "event-2023-salle"
+    },
+    {
+      "date": "Juin 2023",
+      "annee": 2023,
+      "titre": "Label Club Argent France Judo",
+      "texte": "La Fédération Française de Judo distingue le club pour son offre de pratiques, la qualité d'enseignement et son dynamisme.",
+      "type": "label",
+      "image": "label-argent"
+    },
+    {
+      "date": "14 et 15 février 2024",
+      "annee": 2024,
+      "titre": "Les Victoires — 5e édition",
+      "texte": "« Tous sportifs, tous égaux » : judo, chanbara, boxe thaï, ceci foot, hip hop, concert et battle de breakdance à l'Arena Teddy Riner.",
+      "type": "evenement",
+      "image": "affiche-victoires-2024"
+    },
+    {
+      "date": "23 avril 2025",
+      "annee": 2025,
+      "titre": "Les Victoires — saison 6",
+      "texte": "Ateliers de 9h à 16h à l'Arena Teddy Riner : judo, chanbara, boxe thaï, poull-ball, ceci foot, boccia, avec deux concerts.",
+      "type": "evenement",
+      "image": "affiche-victoires-2025"
+    },
+    {
+      "date": "18 et 19 octobre 2025",
+      "annee": 2025,
+      "titre": "Ninja Challenge — saison 1",
+      "texte": "Premier Ninja Challenge à l'Arena Teddy Riner : sélections le samedi, finales et remise des récompenses le dimanche, ouvert au public dès 6 ans.",
+      "type": "ninja",
+      "image": "affiche-ninja-2025"
+    },
+    {
+      "date": "22 avril 2026",
+      "annee": 2026,
+      "titre": "Les Victoires — saison 7",
+      "texte": "Avec Sébastien Le Meaux, champion du monde de para ju-jitsu et vice-champion paralympique de judo, à l'Arena Teddy Riner.",
+      "type": "evenement",
+      "image": "affiche-victoires-2026"
+    },
+    {
+      "date": "11, 12 et 13 septembre 2026",
+      "annee": 2026,
+      "titre": "Ninja Challenge — saison 2",
+      "texte": "Le parcours ninja revient au stade Ladji Doucouré, avec environ 800 personnes attendues.",
+      "type": "ninja",
+      "image": "affiche-ninja-2026"
+    }
+  ],
+  "autres": [
+    {
+      "titre": "Sport Inclusion — avec Helios Latchoumanaya",
+      "date": "27 avril 2022",
+      "texte": "Un grand événement sur le thème du handicap dans le sport, parrainé par Helios Latchoumanaya, champion paralympique : « un athlète heureux et fier de participer à ce projet d'inclusion ». Initiation au judo adapté, chanbara et activités pour tous, au gymnase Laura Flessel.",
+      "image": "event-helios",
+      "alt": "Helios Latchoumanaya, parrain de l'événement Sport Inclusion, avec l'équipe d'ADFJ"
+    },
+    {
+      "titre": "Les Victoires",
+      "date": "Une édition par saison (février ou avril)",
+      "texte": "Une journée pour fêter le sport pour tous à l'Arena Teddy Riner : sports adaptés, démonstrations, musique et athlètes de haut niveau. Inscriptions des établissements par e-mail ou par téléphone.",
+      "image": "affiche-victoires-2026",
+      "alt": "Affiche Les Victoires, saison 7"
+    },
+    {
+      "titre": "Stages et rencontres",
+      "date": "Toute l'année",
+      "texte": "Stage d'initiation au Pencak Silat (janvier 2024), journée Handi-Partage à Courbevoie (octobre 2022), formations para judo : le club ouvre régulièrement ses tatamis à d'autres pratiques.",
+      "image": "pencak-1",
+      "alt": "Stage de Pencak Silat au gymnase Assia El Hannouni"
+    }
+  ],
+  "seances": [
+    {
+      "titre": "Échanges avec des personnalités",
+      "texte": "Rencontres avec des acteurs du monde sportif ou d'autres domaines."
+    },
+    {
+      "titre": "Concentration collective",
+      "texte": "Des séances pour apprendre à se centrer, ensemble."
+    },
+    {
+      "titre": "Séminaires",
+      "texte": "Temps de formation et d'approfondissement pour les adhérents."
+    },
+    {
+      "titre": "Maîtrise des conflits",
+      "texte": "Gérer la tension, désamorcer, rester maître de soi."
+    },
+    {
+      "titre": "Affirmation de soi & leadership",
+      "texte": "Oser prendre sa place, avec bienveillance."
+    },
+    {
+      "titre": "Aide à l'intégration",
+      "texte": "Faciliter l'intégration ou la réintégration dans la société civile."
+    }
+  ],
+  "galerie_editions": [
+    {
+      "image": "event-2022-groupe",
+      "alt": "Photo de groupe de l'événement Sport Inclusion du 27 avril 2022",
+      "legende": "Sport Inclusion, 27 avril 2022"
+    },
+    {
+      "image": "event-2023-judo",
+      "alt": "Démonstration de judo à l'Arena Teddy Riner, Sport Inclusion 2023",
+      "legende": "Sport Inclusion, 22 février 2023"
+    },
+    {
+      "image": "event-2023-handi",
+      "alt": "Pratiquant en kimono lors de Sport Inclusion 2023",
+      "legende": "Sport Inclusion, 22 février 2023"
+    },
+    {
+      "image": "event-2023-foot",
+      "alt": "Ceci foot lors de Sport Inclusion 2023",
+      "legende": "Sport Inclusion, 22 février 2023"
+    },
+    {
+      "image": "event-2023-fauteuil",
+      "alt": "Judoka en fauteuil roulant et son partenaire à l'Arena Teddy Riner",
+      "legende": "Sport Inclusion, 22 février 2023"
+    },
+    {
+      "image": "affiche-victoires-2024",
+      "alt": "Affiche Les Victoires, 5e édition, 14 et 15 février 2024",
+      "legende": "Les Victoires, février 2024"
+    },
+    {
+      "image": "affiche-ninja-2025",
+      "alt": "Affiche du Ninja Challenge des 18 et 19 octobre 2025",
+      "legende": "Ninja Challenge, octobre 2025"
+    },
+    {
+      "image": "affiche-ninja-2026",
+      "alt": "Affiche du Ninja Challenge saison 2, 11 au 13 septembre 2026",
+      "legende": "Ninja Challenge, septembre 2026"
+    }
+  ]
+}

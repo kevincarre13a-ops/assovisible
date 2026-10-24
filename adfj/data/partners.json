@@ -1,0 +1,19 @@
+{
+  "_aide": "Partenaires et soutiens. 'logo' = fichier de assets/logos. Ajoutez 'lien' pour rendre le logo cliquable.",
+  "partenaires": [
+    { "nom": "Ville d'Asnières-sur-Seine", "logo": "ville-asnieres.webp", "lien": "https://asnieres-sur-seine.fr" },
+    { "nom": "Ligue Île-de-France de Judo", "logo": "ligue-idf-judo.webp", "lien": "http://www.idfjudo.com" },
+    { "nom": "Judo 92 (Comité des Hauts-de-Seine)", "logo": "judo-92.webp", "lien": "http://www.judo92.com" },
+    { "nom": "APEI Boucle de Seine", "logo": "apei.webp" },
+    { "nom": "Région Île-de-France", "logo": "region-idf.webp" },
+    { "nom": "Préfet des Hauts-de-Seine", "logo": "prefet-92.webp" },
+    { "nom": "CDOS 92", "logo": "cdos-92.webp", "lien": "https://www.cdos92.fr" },
+    { "nom": "CROS Île-de-France", "logo": "cros-idf.webp", "lien": "https://www.crosif.fr" },
+    { "nom": "Agence Nationale du Sport", "logo": "ans.webp" },
+    { "nom": "ANCT", "logo": "anct.webp" },
+    { "nom": "Handisport", "logo": "handisport.webp" },
+    { "nom": "Seven Keys", "logo": "" },
+    { "nom": "Unit Thaï 92", "logo": "unit-thai.webp", "lien": "https://www.unit-thai-boxingclub.fr" },
+    { "nom": "Académie Club Asnières", "logo": "aca.webp", "lien": "https://academie-club.fr" }
+  ]
+}
