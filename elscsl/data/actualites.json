@@ -1,0 +1,12 @@
+{
+  "elements": [
+    {"id": "saison-2026-2027", "date": "2026-10-04", "type": "actu", "titre": "La saison 2026-2027 est lancée", "extrait": "Les équipes seniors ont repris le chemin des stades début octobre : Critérium 45 ans pour la M1, CDM D2 et Coupe 77 pour la M2.", "attente": false},
+    {"id": "inscriptions", "date": "2026-10-24", "type": "actu", "titre": "Inscriptions et licences", "extrait": "Texte d'attente : le club précisera ici les modalités d'inscription, les pièces à fournir et les tarifs.", "attente": true},
+    {"id": "evt-tournoi", "date": null, "type": "evenement", "titre": "Tournoi de l'entente", "extrait": "Texte d'attente : date, lieu et programme du tournoi à renseigner par le club.", "attente": true},
+    {"id": "evt-soiree", "date": null, "type": "evenement", "titre": "Soirée et loto du club", "extrait": "Texte d'attente : le club annoncera ici ses temps conviviaux de la saison.", "attente": true}
+  ],
+  "archives": [
+    {"annee": 2012, "texte": "Déclaration de l'association au Journal officiel (3 juillet 2012)."},
+    {"annee": 2014, "texte": "Les anciennes actualités du club sont archivées sur l'ancien site Footeo."}
+  ]
+}

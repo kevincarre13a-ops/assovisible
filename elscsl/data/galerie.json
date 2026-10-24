@@ -1,0 +1,10 @@
+{
+  "note": "Aucune photo n'a pu être récupérée librement. Déposer les images dans assets/photos/ et les déclarer ci-dessous (champ src).",
+  "albums": [
+    {"id": "seniors", "titre": "Seniors", "categorie": "Équipes", "photos": []},
+    {"id": "jeunes", "titre": "Jeunes & école de foot", "categorie": "Équipes", "photos": []},
+    {"id": "stades", "titre": "Nos trois stades", "categorie": "Lieux", "photos": []},
+    {"id": "evenements", "titre": "Tournois & soirées", "categorie": "Événements", "photos": []},
+    {"id": "benevoles", "titre": "Bénévoles & supporters", "categorie": "Vie du club", "photos": []}
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "note": "Catégories et compétitions relevées sur les sites FFF / Score'n'co / SportCorico. Éducateurs, jours, horaires et lieux d'entraînement : à compléter par le club.",
+  "groupes": [
+    {
+      "id": "ecole",
+      "titre": "École de foot",
+      "intro": "Le football d'animation : découvrir le jeu, le plaisir du ballon et la vie de groupe.",
+      "equipes": [
+        {"nom": "Football d'animation", "categorie": "École de foot", "competition": "Plateaux et rassemblements du district", "educateur": null, "jours": null, "horaires": null, "lieu": null}
+      ]
+    },
+    {
+      "id": "jeunes",
+      "titre": "Jeunes",
+      "intro": "Les catégories jeunes de l'entente, pour progresser et jouer ensemble.",
+      "equipes": [
+        {"nom": "U12-U13 · équipe 1", "categorie": "U13 – U12", "competition": "Championnat jeunes (district 77)", "educateur": null, "jours": null, "horaires": null, "lieu": null},
+        {"nom": "U12-U13 · équipe 2", "categorie": "U13 – U12", "competition": "Championnat jeunes (district 77)", "educateur": null, "jours": null, "horaires": null, "lieu": null},
+        {"nom": "U14 M1", "categorie": "U14", "competition": "Championnat jeunes (district 77)", "educateur": null, "jours": null, "horaires": null, "lieu": null}
+      ]
+    },
+    {
+      "id": "feminines",
+      "titre": "Féminines",
+      "intro": "Le football féminin a sa place dans l'entente.",
+      "equipes": [
+        {"nom": "U15 Féminines 1", "categorie": "U15 F – U14 F", "competition": "Critérium féminin U15 · poule D", "educateur": null, "jours": null, "horaires": null, "lieu": null}
+      ]
+    },
+    {
+      "id": "seniors",
+      "titre": "Seniors & vétérans",
+      "intro": "Les équipes qui portent les couleurs de l'entente le dimanche matin.",
+      "equipes": [
+        {"nom": "Senior M1", "categorie": "Seniors", "competition": "Critérium 45 ans · poule E", "educateur": null, "jours": null, "horaires": null, "lieu": null},
+        {"nom": "Senior M2", "categorie": "Seniors", "competition": "CDM D2 · poule B · Coupe 77", "educateur": null, "jours": null, "horaires": null, "lieu": null},
+        {"nom": "Vétérans", "categorie": "Vétérans", "competition": "À confirmer", "educateur": null, "jours": null, "horaires": null, "lieu": null}
+      ]
+    }
+  ]
+}

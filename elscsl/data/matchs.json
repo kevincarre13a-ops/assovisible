@@ -1,0 +1,17 @@
+{
+  "prochainMatch": null,
+  "noteProchainMatch": "Dès qu'une date est renseignée dans data/matchs.json (champ prochainMatch), le compte à rebours démarre automatiquement.",
+  "rencontres": [
+    {"date": "2026-10-04", "equipe": "Senior M1", "competition": "Critérium 45 ans · poule E", "adversaire": null, "score": null, "statut": "joue"},
+    {"date": "2026-10-11", "equipe": "Senior M2", "competition": "Coupe 77 CDM · tour 1", "adversaire": "Héricy-Vulaines-Samoreau FC", "score": null, "statut": "joue"},
+    {"date": "2026-10-18", "equipe": "Senior M1", "competition": "Critérium 45 ans · poule E", "adversaire": null, "score": null, "statut": "joue"},
+    {"date": "2026-10-18", "equipe": "Senior M2", "competition": "CDM D2 · poule B · journée 1", "adversaire": "Ponthierry US", "score": null, "statut": "joue"}
+  ],
+  "classement": {
+    "texte": "Les classements officiels sont tenus par la FFF et le district de Seine-et-Marne. Ils seront affichés ici dès que le club aura choisi la source à relier.",
+    "liens": [
+      {"label": "Fiche du club sur la FFF", "url": "https://epreuves.fff.fr/competition/club/563706-longueville-ste-colombe-st-loup-de-naud-soisy-bouy/information.html"},
+      {"label": "Résultats sur Score'n'co", "url": "https://scorenco.com/football/clubs/longueville-ste-colombe-st-loup-de-naud-soisy-bouy-2ulh"}
+    ]
+  }
+}

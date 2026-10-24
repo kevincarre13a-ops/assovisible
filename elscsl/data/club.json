@@ -1,0 +1,41 @@
+{
+  "sigle": "ELSCSL",
+  "nom": "Entente sportive Longueville – Sainte-Colombe – Saint-Loup-de-Naud",
+  "nomOfficiel": "Entente Longueville – Sainte-Colombe – Saint-Loup-de-Naud – Soisy-Bouy",
+  "sport": "Football",
+  "district": "District de Seine-et-Marne de football",
+  "fondation": 2012,
+  "president": "Marc Magliano",
+  "rna": "W773001628",
+  "siren": "789 622 701",
+  "dateDeclaration": "03/07/2012",
+  "heroPhoto": "",
+  "contact": {
+    "adresse": "Mairie de Longueville, 13 rue Henri Fouilleret, 77650 Longueville",
+    "telephone": null,
+    "email": null
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/profile.php?id=61578689666976",
+    "footeo": "https://elscsl.footeo.com/",
+    "fff": "https://epreuves.fff.fr/competition/club/563706-longueville-ste-colombe-st-loup-de-naud-soisy-bouy/information.html",
+    "scorenco": "https://scorenco.com/football/clubs/longueville-ste-colombe-st-loup-de-naud-soisy-bouy-2ulh"
+  },
+  "communes": [
+    {"nom": "Longueville", "role": "Siège de l'entente", "texte": "Commune du siège social de l'association, à la mairie de Longueville (77650)."},
+    {"nom": "Sainte-Colombe", "role": "Stade de la Baude", "texte": "Le stade de la Baude accueille les rencontres de l'entente sur la commune de Sainte-Colombe."},
+    {"nom": "Saint-Loup-de-Naud", "role": "Stade Rémy Damande", "texte": "Pelouse naturelle, rue de Trainel, au pied de la célèbre église romane du village."},
+    {"nom": "Soisy-Bouy", "role": "Stade André Huguet", "texte": "Quatrième commune inscrite dans le nom officiel de l'entente, avec le stade André Huguet."}
+  ],
+  "stades": [
+    {"nom": "Stade Rémy Damande", "commune": "Saint-Loup-de-Naud", "adresse": "Rue de Trainel, 77650 Saint-Loup-de-Naud", "surface": "Pelouse naturelle", "carte": "https://www.openstreetmap.org/search?query=Rue%20de%20Trainel%2077650%20Saint-Loup-de-Naud"},
+    {"nom": "Stade de la Baude", "commune": "Sainte-Colombe", "adresse": "Sainte-Colombe, 77650 (adresse précise à compléter)", "surface": null, "carte": "https://www.openstreetmap.org/search?query=Stade%20de%20la%20Baude%20Sainte-Colombe%2077650"},
+    {"nom": "Stade André Huguet", "commune": "Soisy-Bouy", "adresse": "Soisy-Bouy, 77650 (adresse précise à compléter)", "surface": null, "carte": "https://www.openstreetmap.org/search?query=Stade%20Andr%C3%A9%20Huguet%20Soisy-Bouy"}
+  ],
+  "chiffres": [
+    {"valeur": 14, "label": "années d'existence", "note": "Association déclarée en 2012"},
+    {"valeur": 4, "label": "communes réunies", "note": "Longueville, Sainte-Colombe, Saint-Loup-de-Naud, Soisy-Bouy"},
+    {"valeur": 8, "label": "équipes engagées", "note": "Saison 2025-2026, d'après SportCorico"},
+    {"valeur": 3, "label": "stades", "note": "Rémy Damande, la Baude, André Huguet"}
+  ]
+}
