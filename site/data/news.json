@@ -1,0 +1,33 @@
+{
+  "_aide": "Chaque actualité : titre, période (texte libre, ex. « 13 octobre 2023 »), résumé, image (facultative) et lien (facultatif). L'ordre du fichier est l'ordre d'affichage : mettez les plus récentes en premier.",
+  "actualites": [
+    {
+      "titre": "Nouveaux horaires : l'Hôtel-Dieu ouvre du mercredi au samedi",
+      "resume": "Depuis 2026, l'Hôtel-Dieu est ouvert du mercredi après-midi au samedi, avec des visites guidées le jeudi et le samedi. Fermeture hivernale du 25 décembre 2026 au 2 février 2027.",
+      "image": "assets/img/salle-malades-grille.jpg",
+      "lien": "visites.html",
+      "periode": "Saison 2026"
+    },
+    {
+      "titre": "Fouilles archéologiques dans la cour de l'Hôtel-Dieu",
+      "resume": "Des fouilles archéologiques ont eu lieu dans la cour de l'Hôtel-Dieu. Retrouvez le dossier sur le site du musée.",
+      "image": "assets/img/vue-aerienne.jpg",
+      "lien": "https://hoteldieu-belleville.fr/hello-world-3-2/",
+      "periode": "Date à préciser"
+    },
+    {
+      "titre": "Un sureau « Arbre remarquable » dans le jardin de simples",
+      "resume": "Le sureau de la cour Saint-Antoine, voisin du jardin de plantes médicinales créé par l'Albarelle, porte le label « Arbre remarquable » depuis 2023.",
+      "image": "assets/img/jardin-sureau.jpg",
+      "lien": "https://hoteldieu-belleville.fr/le-musee/le-jardin-de-simples/",
+      "periode": "2023"
+    },
+    {
+      "titre": "L'Albarelle fête ses 30 ans",
+      "resume": "Le 13 octobre 2023, l'association a célébré trente ans d'engagement pour l'Hôtel-Dieu, avec une vingtaine de bénévoles actifs.",
+      "image": "assets/img/salle-malades-perspective.jpg",
+      "lien": "https://mesinfos.fr/69220-belleville/l-albarelle-oeuvre-pour-la-mise-en-valeur-de-l-hotel-dieu-a-belleville-186128.html",
+      "periode": "13 octobre 2023"
+    }
+  ]
+}

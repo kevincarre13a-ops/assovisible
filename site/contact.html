@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact · L’Albarelle</title>
+<meta name="description" content="Contactez l’Albarelle, association de l’Hôtel-Dieu de Belleville-en-Beaujolais : formulaire, courriel, adresses et plan d’accès.">
+<meta name="theme-color" content="#102a52">
+<link rel="canonical" href="https://lalbarelle-hotel-dieu.netlify.app/contact.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Contact · L’Albarelle">
+<meta property="og:description" content="Contactez l’Albarelle, association de l’Hôtel-Dieu de Belleville-en-Beaujolais : formulaire, courriel, adresses et plan d’accès.">
+<meta property="og:image" content="https://lalbarelle-hotel-dieu.netlify.app/assets/img/vue-aerienne.jpg">
+<meta property="og:url" content="https://lalbarelle-hotel-dieu.netlify.app/contact.html">
+<link rel="preload" href="assets/fonts/cormorant.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="marque" href="index.html" aria-label="L’Albarelle, retour à l’accueil">
+      <img src="assets/img/logo-albarelle.png" width="52" height="45" alt="">
+      <span class="marque-nom">L’Albarelle<small>Hôtel-Dieu de Belleville</small></span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <ul class="menu" id="menu-principal">
+        <li><a href="index.html">Accueil</a></li><li><a href="association.html">L’association</a></li><li><a href="hotel-dieu.html">L’Hôtel-Dieu</a></li><li><a href="visites.html">Visites &amp; infos</a></li><li><a href="evenements.html">Événements &amp; expositions</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="actualites.html">Actualités</a></li><li><a href="soutenir.html">Nous soutenir</a></li><li><a href="contact.html" aria-current="page">Contact</a></li><li><a href="mentions-legales.html">Mentions légales</a></li>
+      </ul>
+    </nav>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Ouvrir le menu"><span></span></button>
+  </div>
+</header>
+<main id="contenu">
+<section class="page-hero">
+  <img src="assets/img/salle-du-conseil.jpg" alt="" fetchpriority="high">
+  <div class="wrap"><span class="eyebrow">Contact</span><h1>Nous contacter</h1><p>Une question, un projet, l’envie de rejoindre l’équipe ? Écrivez-nous.</p></div>
+</section>
+
+<section class="section">
+  <div class="wrap deux-col" style="align-items:start">
+    <div class="reveal">
+      <span class="eyebrow">Écrivez-nous</span>
+      <h2>Une question, une envie de nous rejoindre ?</h2>
+      <form class="formulaire" name="contact" method="POST" action="/merci" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="subject" value="Message du site L’Albarelle (%{formName})">
+        <p class="cache"><label>Ne pas remplir : <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="ligne">
+          <div><label for="nom">Nom <span class="requis" aria-hidden="true">*</span></label><input id="nom" name="nom" type="text" autocomplete="name" required></div>
+          <div><label for="email">Courriel <span class="requis" aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div><label for="sujet">Sujet</label>
+          <select id="sujet" name="sujet">
+            <option value="information">Une information</option>
+            <option value="visite">Une visite ou un groupe</option>
+            <option value="adhesion">Adhérer à l’association</option>
+            <option value="benevolat">Devenir bénévole</option>
+            <option value="mecenat">Don ou mécénat</option>
+            <option value="autre">Autre</option>
+          </select></div>
+        <div><label for="message">Message <span class="requis" aria-hidden="true">*</span></label><textarea id="message" name="message" required></textarea></div>
+        <label class="coche"><input type="checkbox" name="consentement" required> <span>J’accepte que mes données soient utilisées par l’association pour répondre à ma demande (voir les <a href="mentions-legales.html#donnees">mentions légales</a>). <span class="requis" aria-hidden="true">*</span></span></label>
+        <div><button class="btn btn-primaire" type="submit">Envoyer le message</button></div>
+        <p id="statut-formulaire" class="statut" role="status" tabindex="-1"></p>
+      </form>
+    </div>
+    <div class="reveal" data-d="1">
+      <span class="eyebrow">Coordonnées</span>
+      <h2>L’association</h2>
+      <ul class="coordonnees">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><strong>Courriel</strong><a href="mailto:lalbarelle@wanadoo.fr">lalbarelle@wanadoo.fr</a></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg><div><strong>Hôtel-Dieu</strong>68 rue de la République<br>69220 Belleville-en-Beaujolais</div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg><div><strong>Adresse postale</strong>27 rue du Moulin<br>69220 Belleville-en-Beaujolais</div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg><div><strong>Accueil du musée (visites)</strong><a href="tel:+33474664467">04 74 66 44 67</a></div></li>
+      </ul>
+      <p class="attente" style="margin-top:1rem"><strong>À compléter :</strong> prénom du contact de l’association et éventuel numéro de téléphone.</p>
+      <iframe class="carte-osm" title="Plan : Hôtel-Dieu de Belleville-en-Beaujolais" loading="lazy" style="margin-top:1.2rem;min-height:300px" src="https://www.openstreetmap.org/export/embed.html?bbox=4.7425%2C46.1065%2C4.7525%2C46.1117&amp;layer=mapnik&amp;marker=46.109184%2C4.747553"></iframe>
+    </div>
+  </div>
+</section>
+<script>
+(function(){var p=new URLSearchParams(location.search).get("sujet");document.addEventListener("DOMContentLoaded",function(){
+var s=document.getElementById("sujet");if(p&&s&&s.querySelector('option[value="'+p+'"]'))s.value=p;
+});})();
+</script>
+
+</main>
+<footer class="site-footer">
+  <div class="frise" role="presentation"></div>
+  <div class="wrap">
+    <div class="pied-grille">
+      <div>
+        <div class="pied-marque"><img src="assets/img/logo-albarelle.png" width="64" height="55" alt="" loading="lazy"><strong>L’Albarelle</strong></div>
+        <p>Association pour la mise en valeur de l’Hôtel-Dieu de Belleville-en-Beaujolais.</p>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:lalbarelle@wanadoo.fr">lalbarelle@wanadoo.fr</a></li>
+          <li>Hôtel-Dieu<br>68 rue de la République<br>69220 Belleville-en-Beaujolais</li>
+          <li>Adresse postale :<br>27 rue du Moulin<br>69220 Belleville-en-Beaujolais</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Le site</h2>
+        <ul><li><a href="index.html">Accueil</a></li><li><a href="association.html">L’association</a></li><li><a href="hotel-dieu.html">L’Hôtel-Dieu</a></li><li><a href="visites.html">Visites &amp; infos</a></li><li><a href="evenements.html">Événements &amp; expositions</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="actualites.html">Actualités</a></li><li><a href="soutenir.html">Nous soutenir</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div>
+        <h2>Suivre l’Hôtel-Dieu</h2>
+        <ul>
+          <li><a href="https://www.facebook.com/hoteldieudebelleville/" target="_blank" rel="noopener">Facebook<span class="sr-only"> (nouvelle fenêtre)</span></a></li>
+          <li><a href="https://www.instagram.com/hotel_dieu_belleville/" target="_blank" rel="noopener">Instagram<span class="sr-only"> (nouvelle fenêtre)</span></a></li>
+          <li><a href="https://hoteldieu-belleville.fr/" target="_blank" rel="noopener">Site du musée<span class="sr-only"> (nouvelle fenêtre)</span></a></li>
+        </ul>
+        <p style="margin-top:.8rem;font-size:.9rem">Comptes du musée de l’Hôtel-Dieu ; l’association n’a pas encore de compte propre référencé.</p>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 L’Albarelle, association loi 1901</span>
+      <a href="mentions-legales.html">Mentions légales</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

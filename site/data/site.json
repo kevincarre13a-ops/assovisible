@@ -1,0 +1,84 @@
+{
+  "_aide": "Coordonnées, horaires, tarifs et bureau. Modifiez les textes entre guillemets puis enregistrez. Les champs marqués [À COMPLÉTER] sont des textes d'attente.",
+  "nom": "L'Albarelle",
+  "baseline": "Association pour la mise en valeur de l'Hôtel-Dieu de Belleville-en-Beaujolais",
+  "email": "lalbarelle@wanadoo.fr",
+  "contact_prenom": "[À COMPLÉTER : prénom du contact]",
+  "adresse_hotel_dieu": "Hôtel-Dieu, 68 rue de la République, 69220 Belleville-en-Beaujolais",
+  "adresse_postale": "27 rue du Moulin, 69220 Belleville-en-Beaujolais",
+  "musee": {
+    "nom": "Musée de l'Hôtel-Dieu (commune de Belleville-en-Beaujolais)",
+    "telephone": "04 74 66 44 67",
+    "email": "hotel-dieu@belleville-en-beaujolais.fr",
+    "site": "https://hoteldieu-belleville.fr/"
+  },
+  "reseaux": [
+    { "nom": "Facebook (Hôtel-Dieu)", "url": "https://www.facebook.com/hoteldieudebelleville/" },
+    { "nom": "Instagram (Hôtel-Dieu)", "url": "https://www.instagram.com/hotel_dieu_belleville/" }
+  ],
+  "gps": { "lat": 46.109184, "lon": 4.747553 },
+  "horaires": {
+    "annee_note": "Nouveau en 2026 : ouverture du mercredi après-midi au samedi.",
+    "hors_vacances": [
+      { "jour": "Mercredi", "heures": "14h30 – 17h30 (fermé le matin)" },
+      { "jour": "Jeudi", "heures": "10h – 12h30 puis 15h30 – 17h30" },
+      { "jour": "Vendredi", "heures": "10h – 12h30 puis 14h30 – 17h30" },
+      { "jour": "Samedi", "heures": "11h – 12h30 puis 14h30 – 17h30" }
+    ],
+    "visite_guidee_hors_vacances": "Jeudi de 14h30 à 15h30 et samedi de 10h à 11h.",
+    "vacances_zone_a": [
+      { "jour": "Mardi et jeudi", "heures": "10h – 12h30 puis 15h30 – 17h30" },
+      { "jour": "Mercredi et vendredi", "heures": "10h – 12h30 puis 14h30 – 17h30" },
+      { "jour": "Samedi", "heures": "11h – 12h30 puis 14h30 – 17h30" }
+    ],
+    "visite_guidee_vacances": "Mardi et jeudi de 14h30 à 15h30 et samedi de 10h à 11h.",
+    "fermeture": "Fermeture hivernale du 25 décembre 2026 au 2 février 2027."
+  },
+  "tarifs": {
+    "individuels": [
+      { "libelle": "Visite libre ou « visite libre + exposition temporaire »", "normal": "5 €", "reduit": "4 €", "moins10": "Gratuit" },
+      { "libelle": "Visite guidée", "normal": "7 €", "reduit": "5 €", "moins10": "Gratuit" },
+      { "libelle": "Conférence", "normal": "Gratuit", "reduit": "Gratuit", "moins10": "Gratuit" }
+    ],
+    "reduit_conditions": "Tarif réduit : plus de 65 ans, moins de 26 ans, personnes à mobilité réduite, familles nombreuses, demandeurs d'emploi.",
+    "famille": [
+      "Jeu de piste Sœur Martinière : 5 € par participant",
+      "Visite-atelier accompagnée : 6 € par enfant, 1er accompagnant gratuit",
+      "Visite-atelier en autonomie : 2 € par enfant, 1er accompagnant gratuit"
+    ],
+    "bon_plan": "Habitants de Belleville-en-Beaujolais : payez une visite par an en devenant Ambassadeur de l'Hôtel-Dieu (renseignements à l'accueil du musée).",
+    "groupes": [
+      "Visite guidée de l'Hôtel-Dieu, de 5 à 10 personnes : 7 € par personne, 1 gratuité",
+      "De 11 à 20 personnes : 7 € par personne, 2 gratuités",
+      "Plus de 20 personnes : 6 € par personne, 2 gratuités",
+      "Moins de 25 personnes, dimanche et jours fériés : forfait 170 €",
+      "Réservation obligatoire, minimum 5 personnes, règlement en une seule fois",
+      "Associations de Belleville-en-Beaujolais : 20 % de remise"
+    ],
+    "scolaires": [
+      "Visite guidée de l'Hôtel-Dieu : 3 € par élève (établissements de Belleville-en-Beaujolais), 3,50 € (hors commune)",
+      "Visite + atelier : 5 € par élève (Belleville-en-Beaujolais), 6 € (hors commune)",
+      "Exposition temporaire : accès libre et gratuit sans médiation, réservation d'un créneau obligatoire"
+    ]
+  },
+  "bureau_date": "Composition communiquée par la presse locale en octobre 2023 : à confirmer par l'association.",
+  "bureau": [
+    { "nom": "Janine Hugand", "role": "Présidente" },
+    { "nom": "Yves Bernard", "role": "Secrétaire" },
+    { "nom": "Christine Dutreve", "role": "Vice-secrétaire" },
+    { "nom": "Mireille Broyer", "role": "Trésorière" },
+    { "nom": "Aline Mallet", "role": "Vice-trésorière" }
+  ],
+  "partenaires": [
+    "Commune de Belleville-en-Beaujolais",
+    "Communauté de communes Saône-Beaujolais (CCSB)",
+    "Fondation du patrimoine",
+    "Ligue pour la protection des oiseaux (LPO)"
+  ],
+  "soutien": {
+    "adhesion_lien": "",
+    "adhesion_montant": "[À COMPLÉTER : montant de la cotisation annuelle]",
+    "don_lien": "",
+    "benevolat_contact": "lalbarelle@wanadoo.fr"
+  }
+}

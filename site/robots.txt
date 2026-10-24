@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lalbarelle-hotel-dieu.netlify.app/sitemap.xml

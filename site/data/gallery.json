@@ -1,0 +1,38 @@
+{
+  "_aide": "Photos de la galerie, classées par thème : batiment, apothicairerie, expositions, evenements. Ajoutez le fichier image dans assets/img puis un bloc ici.",
+  "themes": [
+    { "id": "batiment", "nom": "Le bâtiment" },
+    { "id": "apothicairerie", "nom": "Apothicairerie" },
+    { "id": "expositions", "nom": "Expositions" },
+    { "id": "evenements", "nom": "Événements" }
+  ],
+  "photos": [
+    { "theme": "batiment", "src": "assets/img/vue-aerienne.jpg", "alt": "Vue aérienne de l’Hôtel-Dieu et de ses cours", "legende": "L’Hôtel-Dieu vu du ciel" },
+    { "theme": "batiment", "src": "assets/img/salle-malades-perspective.jpg", "alt": "Perspective d'une salle de malades avec ses lits à ruelle", "legende": "Une salle de malades" },
+    { "theme": "batiment", "src": "assets/img/salle-malades-poele.jpg", "alt": "Salle de malades avec poêle en fonte et lits à rideaux", "legende": "Le poêle de la salle de malades" },
+    { "theme": "batiment", "src": "assets/img/salle-malades-grille.jpg", "alt": "Salle de malades séparée par une grille en fer forgé", "legende": "La grille de la salle de malades" },
+    { "theme": "batiment", "src": "assets/img/salle-malades-lit.jpg", "alt": "Lit à rideaux et mortier dans une salle de malades", "legende": "Lit à ruelle et mortier" },
+    { "theme": "batiment", "src": "assets/img/salle-du-conseil.jpg", "alt": "La salle du conseil, boiseries et lustre", "legende": "La salle du conseil" },
+    { "theme": "batiment", "src": "assets/img/abbatiale-vue-aerienne.jpg", "alt": "Vue aérienne de l'abbatiale Notre-Dame de Belleville", "legende": "L'abbatiale Notre-Dame, voisine de l'Hôtel-Dieu" },
+    { "theme": "batiment", "src": "assets/img/abbatiale-chapiteau.jpg", "alt": "Chapiteau sculpté de l'abbatiale", "legende": "Chapiteau sculpté de l'abbatiale" },
+    { "theme": "batiment", "src": "assets/img/jardin-cour.jpg", "alt": "Le sureau et le jardin de simples dans la cour", "legende": "Le jardin de simples" },
+    { "theme": "batiment", "src": "assets/img/jardin-sureau.jpg", "alt": "Le sureau remarquable de la cour Saint-Antoine", "legende": "Le sureau, arbre remarquable" },
+    { "theme": "batiment", "src": "assets/img/jardin-bugle.jpg", "alt": "Bugle fleuri, étiqueté, dans le jardin de simples", "legende": "Bugle rampante" },
+    { "theme": "batiment", "src": "assets/img/jardin-pulmonaire.jpg", "alt": "Pulmonaire en fleurs dans le jardin de simples", "legende": "Pulmonaire" },
+    { "theme": "apothicairerie", "src": "assets/img/apothicairerie-panorama.jpg", "alt": "L'apothicairerie et ses boiseries remplies de pots", "legende": "L'apothicairerie" },
+    { "theme": "apothicairerie", "src": "assets/img/apothicairerie-pots.jpg", "alt": "Pots de faïence bleue et portrait d'une sœur hospitalière", "legende": "Pots de faïence et portrait d'une sœur" },
+    { "theme": "apothicairerie", "src": "assets/img/apothicairerie-balance.jpg", "alt": "Balance, poids et flacons de l'apothicairerie", "legende": "Balance et flacons" },
+    { "theme": "expositions", "src": "assets/img/expo-visiteurs.jpg", "alt": "Visiteurs dans la grande salle transformée en salle d'exposition", "legende": "Une exposition dans la salle de malades" },
+    { "theme": "expositions", "src": "assets/img/expo-cerveau-salle.jpg", "alt": "Salle d'exposition aux couleurs vives", "legende": "Exposition interactive" },
+    { "theme": "expositions", "src": "assets/img/expo-insectes-salle.jpg", "alt": "Exposition sur les insectes dans la salle de malades", "legende": "Exposition sur les insectes" },
+    { "theme": "expositions", "src": "assets/img/expo-mante.jpg", "alt": "Mante religieuse géante dans l'escalier", "legende": "Mante religieuse géante" },
+    { "theme": "expositions", "src": "assets/img/expo-araignee.jpg", "alt": "Araignée en métal sur le carrelage de l'Hôtel-Dieu", "legende": "« Ceci n'est pas un insecte »" },
+    { "theme": "expositions", "src": "assets/img/expo-vitrines.jpg", "alt": "Vitrines d'exposition dans la salle de malades", "legende": "Vitrines d'exposition" },
+    { "theme": "expositions", "src": "assets/img/expo-pharmacie.jpg", "alt": "Exposition de flacons de pharmacie sur une table lumineuse", "legende": "Flacons de pharmacie" },
+    { "theme": "expositions", "src": "assets/img/expo-pele-mele.jpg", "alt": "Œuvres exposées lors du Pêle-Mêle des Arts", "legende": "Pêle-Mêle des Arts" },
+    { "theme": "expositions", "src": "assets/img/expo-borne-numerique.jpg", "alt": "Visiteuse devant une borne numérique", "legende": "Borne numérique" },
+    { "theme": "evenements", "src": "assets/img/atelier-ecriture.jpg", "alt": "Une main écrit à la plume sur une feuille", "legende": "Atelier d'écriture" },
+    { "theme": "evenements", "src": "assets/img/atelier-haie-seche.jpg", "alt": "Haie sèche le long d'un sentier", "legende": "Atelier haies sèches avec la LPO" },
+    { "theme": "evenements", "src": "assets/img/affiche-conference-albarelle.jpg", "alt": "Affiche de la conférence de l'Albarelle sur les Sœurs hospitalières", "legende": "Conférence de l'Albarelle" }
+  ]
+}

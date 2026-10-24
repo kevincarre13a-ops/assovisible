@@ -1,0 +1,82 @@
+{
+  "_aide": "Les « collections » présentées sur la page L'Hôtel-Dieu. Ajoutez un bloc par ensemble d'objets ou de lieux.",
+  "collections": [
+    {
+      "titre": "L'apothicairerie",
+      "texte": "Ancienne pharmacie de l'hôpital, datée de 1754 selon le musée (une pharmacie est mentionnée dès 1749). Elle conserve une riche collection de pots en faïence, en verre et en porcelaine, ainsi que les instruments nécessaires à la fabrication des remèdes : appareil à cachets, pilulier, balances… Elle se visite uniquement en visite guidée.",
+      "image": "assets/img/apothicairerie-panorama.jpg"
+    },
+    {
+      "titre": "Les salles de malades",
+      "texte": "Trois salles garnies de leurs lits à ruelle, avec poêles, armoire à linge et objets du quotidien et de soin, racontent la vie hospitalière du XVIIIe siècle jusqu'en 1991.",
+      "image": "assets/img/salle-malades-poele.jpg"
+    },
+    {
+      "titre": "Les chapelles",
+      "texte": "Deux chapelles, celle des malades (1826) et celle des Sœurs (1851), accueillent aussi des expositions d'art sacré.",
+      "image": "assets/img/salle-malades-perspective.jpg"
+    },
+    {
+      "titre": "La salle du conseil et ses archives",
+      "texte": "Les archives conservées sur place permettent aux bénévoles de l'Albarelle de mener des recherches et de nourrir le discours des visites.",
+      "image": "assets/img/salle-du-conseil.jpg"
+    },
+    {
+      "titre": "Le bloc opératoire",
+      "texte": "Un bloc chirurgical du début du XXe siècle, visible uniquement en visite guidée.",
+      "image": "assets/img/apothicairerie-balance.jpg"
+    },
+    {
+      "titre": "Le jardin de simples",
+      "texte": "Dans la cour Saint-Antoine, dix massifs présentent les plantes autrefois cultivées par les Sœurs de Sainte-Marthe, regroupées par vertus : fébrifuges, toniques, dépuratives, anti-douleurs… Accès libre aux horaires du musée.",
+      "image": "assets/img/jardin-bugle.jpg"
+    }
+  ],
+  "chronologie": [
+    {
+      "annee": "1733",
+      "titre": "Ouverture de l'Hôtel-Dieu",
+      "texte": "Les premiers locaux sont inaugurés pour accueillir les pauvres de Belleville et des paroisses environnantes."
+    },
+    {
+      "annee": "1749-1754",
+      "titre": "La pharmacie",
+      "texte": "La pharmacie est construite en 1749 ; l'apothicairerie est datée de 1754 par le musée."
+    },
+    {
+      "annee": "1826",
+      "titre": "Deuxième salle et chapelle des malades",
+      "texte": "L'hôpital s'agrandit au XIXe siècle."
+    },
+    {
+      "annee": "1850-1851",
+      "titre": "Troisième salle et chapelle des Sœurs",
+      "texte": "L'ensemble prend la forme que l'on visite aujourd'hui."
+    },
+    {
+      "annee": "XXe siècle",
+      "titre": "Un bloc chirurgical",
+      "texte": "Un bloc opératoire est aménagé au début du XXe siècle."
+    },
+    {
+      "annee": "1991",
+      "titre": "Fermeture de l'hospice",
+      "texte": "L'hôpital a fonctionné jusqu'en 1991."
+    },
+    {
+      "annee": "1993",
+      "titre": "Naissance de l'Albarelle",
+      "texte": "Des Bellevillois créent l'association pour sauver ce patrimoine."
+    },
+    {
+      "annee": "2020",
+      "titre": "Ouverture au public",
+      "texte": "L'Hôtel-Dieu rouvre ses portes comme musée le 12 mai 2020."
+    },
+    {
+      "annee": "Aujourd'hui",
+      "titre": "Monument historique",
+      "texte": "Expositions, conférences, concerts et visites animent le lieu toute l'année."
+    }
+  ]
+}
