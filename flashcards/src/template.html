@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1C2541">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Flashcards d'anglais</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Toutes mes flashcards d'anglais réunies : petits paquets, révision du jour, voix britannique.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#1C2541;--bg-deep:#141B33;--bg-soft:#2A3768;
+  --paper:#F4ECD8;--paper-line:#D9CDAF;--ink:#2A2330;
+  --amber:#E3A23C;--coral:#D9534F;--mint:#5FAE7E;--sky:#7FA8D9;--muted:#8A93B8;--purple:#9B72CF;
+  --card-bg:rgba(255,255,255,.05);--card-line:rgba(255,255,255,.1);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html,body{margin:0;padding:0;}
+html{color-scheme:dark;}
+body{background:var(--bg) radial-gradient(circle at 50% -10%,var(--bg-soft) 0%,var(--bg) 45%,var(--bg-deep) 100%);background-attachment:fixed;font-family:'Inter',system-ui,sans-serif;color:var(--paper);min-height:100vh;padding-block:16px 90px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden;line-height:1.45;}
+button{font-family:inherit;color:inherit;}
+.wrap{max-width:560px;margin:0 auto;}
+.mono{font-family:'Space Mono',ui-monospace,monospace;}
+.serif{font-family:'Fraunces',Georgia,serif;}
+.eyebrow{font-family:'Space Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);}
+h1{font-family:'Fraunces',Georgia,serif;font-weight:900;font-size:clamp(24px,6vw,34px);margin:4px 0 4px;line-height:1.1;}
+h2{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:18px;margin:22px 0 10px;}
+p.sub{color:var(--muted);font-size:13.5px;margin:0 0 8px;}
+.hidden{display:none!important;}
+
+/* top bar */
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;min-height:40px;}
+.topbar .title{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:17px;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center;}
+.icon-btn{width:40px;height:40px;border-radius:12px;border:1px solid var(--card-line);background:var(--card-bg);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+.icon-btn:active{transform:scale(.94);}
+
+/* mode toggle */
+.mode-toggle{display:flex;background:rgba(255,255,255,.06);border-radius:999px;padding:4px;width:fit-content;margin:10px auto 0;}
+.mode-btn{font-family:'Space Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;border:none;border-radius:999px;padding:8px 14px;cursor:pointer;color:var(--muted);background:transparent;transition:all .2s;}
+.mode-btn.active{background:var(--paper);color:var(--ink);font-weight:700;}
+
+/* today panel */
+.panel{background:var(--card-bg);border:1px solid var(--card-line);border-radius:18px;padding:16px;margin-top:16px;}
+.today-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;}
+.streak{font-family:'Space Mono',ui-monospace,monospace;font-size:12px;color:var(--amber);}
+.goal{display:flex;align-items:center;gap:12px;margin:10px 0 14px;}
+.ring{width:54px;height:54px;border-radius:50%;background:conic-gradient(var(--mint) calc(var(--p)*1%),rgba(255,255,255,.1) 0);display:grid;place-items:center;flex:0 0 auto;}
+.ring span{width:42px;height:42px;border-radius:50%;background:var(--bg);display:grid;place-items:center;font-family:'Space Mono',ui-monospace,monospace;font-size:12px;font-weight:700;}
+.goal .txt{font-size:13.5px;color:var(--muted);}
+.goal .txt b{color:var(--paper);font-weight:600;}
+.big-btn{width:100%;border:none;border-radius:14px;padding:14px 16px;cursor:pointer;text-align:left;display:flex;align-items:center;gap:12px;margin-top:8px;transition:transform .1s;}
+.big-btn:active{transform:scale(.98);}
+.big-btn .ic{font-size:22px;flex:0 0 auto;}
+.big-btn .lb{flex:1;min-width:0;}
+.big-btn .lb b{display:block;font-family:'Fraunces',Georgia,serif;font-size:16px;font-weight:700;}
+.big-btn .lb small{display:block;font-size:12px;opacity:.75;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.big-btn.primary{background:var(--amber);color:var(--ink);}
+.big-btn.secondary{background:rgba(255,255,255,.08);color:var(--paper);border:1px solid var(--card-line);}
+.big-btn.ghost{background:transparent;color:var(--muted);border:1px dashed var(--card-line);}
+.big-btn:disabled{opacity:.45;cursor:default;}
+
+/* collection rows */
+.group-title{display:flex;align-items:center;gap:8px;margin:26px 0 8px;font-family:'Space Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);}
+.row{display:flex;align-items:center;gap:12px;width:100%;background:var(--card-bg);border:1px solid var(--card-line);border-radius:16px;padding:12px 14px;margin-bottom:8px;cursor:pointer;text-align:left;transition:background .15s,transform .1s;}
+.row:hover{background:rgba(255,255,255,.08);}
+.row:active{transform:scale(.99);}
+.row .ic{font-size:24px;width:34px;text-align:center;flex:0 0 auto;}
+.row .body{flex:1;min-width:0;}
+.row .name{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:15.5px;line-height:1.2;}
+.row .meta{font-size:12px;color:var(--muted);margin-top:3px;display:flex;gap:8px;align-items:center;}
+.row .chev{color:var(--muted);font-size:18px;flex:0 0 auto;}
+.bar{height:5px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden;margin-top:7px;}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--amber),var(--mint));border-radius:999px;transition:width .35s;}
+.bar.learn i{background:var(--sky);}
+.due-pill{font-family:'Space Mono',ui-monospace,monospace;font-size:10.5px;color:var(--coral);background:rgba(217,83,79,.14);border-radius:999px;padding:1px 7px;}
+.ok-pill{font-family:'Space Mono',ui-monospace,monospace;font-size:10.5px;color:var(--mint);background:rgba(95,174,126,.14);border-radius:999px;padding:1px 7px;}
+
+/* deck list */
+.deck{background:var(--card-bg);border:1px solid var(--card-line);border-radius:16px;padding:12px 14px;margin-bottom:10px;}
+.deck-head{display:flex;align-items:center;gap:10px;}
+.deck-num{font-family:'Space Mono',ui-monospace,monospace;font-size:11px;color:var(--amber);width:22px;flex:0 0 auto;}
+.deck-name{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:15px;flex:1;}
+.deck-count{font-family:'Space Mono',ui-monospace,monospace;font-size:11px;color:var(--muted);}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+.chip{font-family:'Space Mono',ui-monospace,monospace;font-size:12px;border-radius:999px;padding:7px 12px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--paper);cursor:pointer;display:flex;align-items:center;gap:6px;transition:all .15s;}
+.chip:active{transform:scale(.96);}
+.chip.done{border-color:rgba(95,174,126,.5);color:#9be0b8;background:rgba(95,174,126,.12);}
+.chip.learn{border-color:rgba(127,168,217,.5);color:#bcd6f5;background:rgba(127,168,217,.12);}
+.chip.due{border-color:rgba(217,83,79,.5);color:#f3a3a0;background:rgba(217,83,79,.12);}
+.chip.next{border-color:var(--amber);color:var(--amber);background:rgba(227,162,60,.12);}
+.chip small{opacity:.7;font-size:10px;}
+
+/* session */
+.sess-top{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.sess-top .counter{font-family:'Space Mono',ui-monospace,monospace;font-size:12px;color:var(--muted);}
+.progress-track{height:6px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden;margin:4px 0 14px;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--amber),var(--mint));border-radius:999px;width:0%;transition:width .35s ease;}
+.stage{perspective:1400px;margin:6px 0 14px;touch-action:pan-y;}
+.card{position:relative;width:100%;min-height:min(54vh,400px);cursor:pointer;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.4,.2,.2,1);}
+.card.dragging{transition:none;}
+.card.flipped{transform:rotateY(180deg);}
+.card.pop{animation:pop .3s ease;}
+@keyframes pop{0%{transform:scale(1);}40%{transform:scale(1.03);}100%{transform:scale(1);}}
+.face{position:absolute;inset:0;border-radius:20px;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 22px 44px;box-shadow:0 12px 0 0 rgba(0,0,0,.18),0 20px 40px rgba(0,0,0,.25);overflow:hidden;}
+.face.front{background:var(--paper);color:var(--ink);border:2px solid var(--paper-line);}
+.face.back{background:linear-gradient(160deg,#2C3B6E,#1F2C50);color:var(--paper);border:2px solid rgba(255,255,255,.12);transform:rotateY(180deg);}
+.card-tag{font-family:'Space Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.55;position:absolute;top:16px;left:18px;right:64px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.badges{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;}
+.badge{display:inline-block;font-family:'Space Mono',ui-monospace,monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:999px;font-weight:700;background:rgba(42,35,48,.08);color:#5a4f63;}
+.face.back .badge{background:rgba(255,255,255,.12);color:#d7dcef;}
+.badge.lvl1{background:rgba(95,174,126,.18);color:#2f6b45;}.badge.lvl2{background:rgba(127,168,217,.22);color:#2a4d75;}.badge.lvl3{background:rgba(217,83,79,.16);color:#a33632;}
+.face.back .badge.lvl1{color:#9be0b8;}.face.back .badge.lvl2{color:#bcd6f5;}.face.back .badge.lvl3{color:#f3a3a0;}
+.badge.comp{background:rgba(155,114,207,.18);color:#6a4a9c;}.face.back .badge.comp{color:#d3bff2;}
+.main{font-family:'Fraunces',Georgia,serif;font-weight:900;font-size:clamp(20px,5.6vw,30px);line-height:1.22;margin:0 0 10px;max-width:100%;overflow-wrap:anywhere;}
+.main.small{font-size:clamp(17px,4.6vw,24px);font-weight:700;}
+.face.back .main{color:var(--amber);}
+.face.back .main.mint{color:var(--mint);}
+.main.huge{font-size:clamp(40px,14vw,72px);letter-spacing:.02em;}
+.main.bad{color:#a33632;text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:rgba(217,83,79,.6);}
+.ipa{font-family:'Space Mono',ui-monospace,monospace;font-size:14px;opacity:.7;margin-bottom:8px;}
+.pho{font-family:'Space Mono',ui-monospace,monospace;font-size:13px;color:var(--sky);margin-bottom:8px;}
+.example{font-size:13.5px;line-height:1.55;font-style:italic;opacity:.75;max-width:360px;}
+.example-fr{font-size:13px;line-height:1.55;opacity:.65;max-width:360px;margin-top:6px;padding-top:8px;border-top:1px solid rgba(255,255,255,.12);}
+.face.front .example-fr{border-color:rgba(42,35,48,.15);}
+.note{font-size:12.5px;line-height:1.5;max-width:360px;margin-top:10px;padding:8px 12px;border-radius:10px;background:rgba(227,162,60,.14);color:#f5d9a3;text-align:left;}
+.face.front .note{background:rgba(42,35,48,.07);color:#5a4f63;}
+.forms{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:4px 0 10px;}
+.forms div{background:rgba(255,255,255,.08);border-radius:10px;padding:6px 10px;min-width:80px;}
+.forms small{display:block;font-family:'Space Mono',ui-monospace,monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;opacity:.6;}
+.forms b{font-family:'Fraunces',Georgia,serif;font-size:16px;}
+.hint{font-family:'Space Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--sky);position:absolute;bottom:14px;left:0;right:0;opacity:.7;}
+.face.front .hint{color:#7a86b0;}
+.img-wrap{width:100%;max-width:300px;height:150px;border-radius:12px;overflow:hidden;background:rgba(0,0,0,.25);margin:0 auto 10px;display:grid;place-items:center;position:relative;}
+.img-wrap img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .4s;}
+.img-wrap img.on{opacity:1;}
+.img-wrap .ph{position:absolute;font-size:28px;opacity:.5;}
+.speak-btn{position:absolute;top:12px;right:12px;width:42px;height:42px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;transition:transform .15s,background .15s;z-index:2;}
+.face.front .speak-btn{background:rgba(42,35,48,.08);color:var(--ink);}
+.face.back .speak-btn{background:rgba(255,255,255,.12);color:var(--paper);}
+.speak-btn:active{transform:scale(.9);}
+.speak-btn.playing{animation:pulse .6s ease-in-out infinite;background:var(--amber)!important;color:var(--ink)!important;}
+@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.12);}}
+.mini-speak{border:none;background:transparent;cursor:pointer;font-size:14px;opacity:.7;padding:2px 6px;vertical-align:middle;}
+.controls{display:flex;gap:10px;}
+.action{flex:1;font-family:'Space Mono',ui-monospace,monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;border:none;border-radius:12px;padding:15px 10px;cursor:pointer;transition:transform .1s,opacity .15s;display:flex;align-items:center;justify-content:center;gap:8px;}
+.action:active{transform:scale(.97);}
+.btn-review{background:rgba(217,83,79,.16);color:#f3a3a0;border:1px solid rgba(217,83,79,.4);}
+.btn-known{background:rgba(95,174,126,.18);color:#9be0b8;border:1px solid rgba(95,174,126,.45);}
+.swipe-hint{text-align:center;font-family:'Space Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:12px;opacity:.8;}
+.drag-left .face.front,.drag-left .face.back{box-shadow:0 0 0 3px rgba(217,83,79,.6),0 20px 40px rgba(0,0,0,.25);}
+.drag-right .face.front,.drag-right .face.back{box-shadow:0 0 0 3px rgba(95,174,126,.6),0 20px 40px rgba(0,0,0,.25);}
+
+/* end screen */
+.end{text-align:center;padding:36px 20px;background:var(--card-bg);border:1px solid var(--card-line);border-radius:20px;animation:fadein .35s ease;}
+@keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.end .emoji{font-size:52px;display:block;margin-bottom:6px;}
+.end h2{margin:0 0 6px;font-size:24px;font-weight:900;}
+.end p{color:var(--muted);font-size:13.5px;margin:0 0 20px;line-height:1.6;}
+.end .stack{display:flex;flex-direction:column;gap:10px;max-width:320px;margin:0 auto;}
+.end .stack button{font-family:'Space Mono',ui-monospace,monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;border:none;border-radius:12px;padding:14px;cursor:pointer;}
+.btn-primary{background:var(--amber);color:var(--ink);font-weight:700;}
+.btn-secondary{background:transparent;border:1px solid rgba(255,255,255,.2)!important;color:var(--paper);}
+
+/* settings sheet */
+.sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:40;display:flex;align-items:flex-end;justify-content:center;animation:fadein .2s;}
+.sheet{background:#1F2A4F;border-radius:22px 22px 0 0;width:100%;max-width:560px;max-height:88vh;overflow:auto;padding:18px 18px max(24px,env(safe-area-inset-bottom));border-top:1px solid var(--card-line);}
+.sheet h3{font-family:'Fraunces',Georgia,serif;margin:0 0 14px;font-size:20px;}
+.setting{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--card-line);}
+.setting .lbl b{display:block;font-size:14px;font-weight:600;}
+.setting .lbl small{color:var(--muted);font-size:12px;}
+.seg{display:flex;background:rgba(255,255,255,.06);border-radius:999px;padding:3px;flex:0 0 auto;}
+.seg button{border:none;background:transparent;color:var(--muted);font-family:'Space Mono',ui-monospace,monospace;font-size:11px;padding:6px 11px;border-radius:999px;cursor:pointer;}
+.seg button.active{background:var(--paper);color:var(--ink);font-weight:700;}
+select,textarea{font-family:inherit;font-size:13px;background:rgba(255,255,255,.08);color:var(--paper);border:1px solid var(--card-line);border-radius:10px;padding:8px;max-width:100%;}
+select{max-width:200px;}
+.small-btn{font-family:'Space Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--card-line);background:rgba(255,255,255,.06);color:var(--paper);border-radius:10px;padding:8px 12px;cursor:pointer;}
+.small-btn.danger{color:#f3a3a0;border-color:rgba(217,83,79,.4);}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--paper);color:var(--ink);font-size:13px;padding:10px 16px;border-radius:999px;z-index:60;box-shadow:0 10px 30px rgba(0,0,0,.3);animation:fadein .2s;max-width:90vw;text-align:center;}
+.confetti{position:fixed;top:-10px;width:10px;height:14px;opacity:.9;border-radius:2px;animation:fall linear forwards;z-index:50;pointer-events:none;}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg);opacity:.2;}}
+.stats-line{font-family:'Space Mono',ui-monospace,monospace;font-size:11px;color:var(--muted);text-align:center;margin-top:6px;}
+.empty{color:var(--muted);font-size:13px;text-align:center;padding:20px;}
+footer{text-align:center;color:var(--muted);font-size:11px;margin-top:40px;opacity:.7;}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+const DATA = /*__DATA__*/null;
+</script>
+<script>
+/* ===================== DONNÉES ===================== */
+const CARDS = DATA.cards;
+const COLS = DATA.collections;
+const GROUPS = DATA.groups;
+const THUMBS = DATA.thumbs||{};
+const COL = Object.fromEntries(COLS.map(c=>[c.id,c]));
+const CARD = Object.fromEntries(CARDS.map(c=>[c.id,c]));
+const BY_DECK = {};
+for(const c of CARDS){ const k=c.col+':'+c.deck; (BY_DECK[k]=BY_DECK[k]||[]).push(c); }
+const LVL = {1:'débutant',2:'intermédiaire',3:'avancé'};
+const INTERVALS = [0,1,3,7,14,30,60];
+const MASTER_BOX = 4;
+
+/* ===================== ÉTAT PERSISTANT ===================== */
+const KEY='flashcards-anglais-v1';
+const DEFAULTS={mode:'fr',size:8,goal:10,auto:true,rate:0.92,voice:''};
+let S = load();
+function load(){
+  try{ const raw=localStorage.getItem(KEY); if(raw){ const s=JSON.parse(raw); s.settings={...DEFAULTS,...(s.settings||{})}; s.prog=s.prog||{}; s.days=s.days||{}; return s; } }catch(e){}
+  return {settings:{...DEFAULTS},prog:{},days:{},last:null};
+}
+let saveT=null;
+function save(){ clearTimeout(saveT); saveT=setTimeout(()=>{ try{ localStorage.setItem(KEY,JSON.stringify(S)); }catch(e){} },150); }
+function todayIdx(){ const d=new Date(); return Math.floor((d.getTime()-d.getTimezoneOffset()*60000)/86400000); }
+function todayKey(){ return String(todayIdx()); }
+
+/* ===================== PROGRESSION ===================== */
+function prog(id){ return S.prog[id]; }
+function isMastered(id){ const p=S.prog[id]; return !!p && p.b>=MASTER_BOX; }
+function isSeen(id){ const p=S.prog[id]; return !!p && p.b>=1; }
+function isDue(id){ const p=S.prog[id]; return !!p && p.b>=1 && p.d<=todayIdx(); }
+function dueCards(filter){ return CARDS.filter(c=>isDue(c.id) && (!filter||filter(c))); }
+function markKnown(id,failedThisSession){
+  const t=todayIdx(); let p=S.prog[id];
+  if(!p){ p={b:1,d:t+1,s:0,l:0}; }
+  else if(failedThisSession){ p.b=1; p.d=t+1; }
+  else { p.b=Math.min(p.b+1,INTERVALS.length-1); p.d=t+INTERVALS[p.b]; }
+  p.s=(p.s||0)+1; S.prog[id]=p; save();
+}
+function markFail(id){
+  const t=todayIdx(); let p=S.prog[id]||{b:0,d:t,s:0,l:0};
+  p.b=0; p.d=t; p.l=(p.l||0)+1; p.s=(p.s||0)+1; S.prog[id]=p; save();
+}
+function bumpToday(){ S.days[todayKey()]=(S.days[todayKey()]||0)+1; save(); }
+function streak(){
+  let n=0,t=todayIdx(); if(!S.days[String(t)]) t--; while(S.days[String(t)]){ n++; t--; } return n;
+}
+
+/* ===================== PAQUETS ===================== */
+function deckCards(col,deck){ return BY_DECK[col+':'+deck]||[]; }
+function groupsOf(col,deck){
+  const cards=deckCards(col,deck); const size=S.settings.size; const n=cards.length;
+  if(!n) return [];
+  const k=Math.ceil(n/size); const base=Math.floor(n/k); const rem=n%k;
+  const out=[]; let i=0;
+  for(let g=0; g<k; g++){ const len=base+(g<rem?1:0); out.push(cards.slice(i,i+len)); i+=len; }
+  return out;
+}
+function groupState(cards){
+  const m=cards.filter(c=>isMastered(c.id)).length, s=cards.filter(c=>isSeen(c.id)).length, d=cards.filter(c=>isDue(c.id)).length;
+  if(d) return 'due';
+  if(s===cards.length) return 'done';
+  if(s>0) return 'learn';
+  return 'new';
+}
+function colStats(colId){
+  const cs=CARDS.filter(c=>c.col===colId);
+  return {total:cs.length, mastered:cs.filter(c=>isMastered(c.id)).length, seen:cs.filter(c=>isSeen(c.id)).length, due:cs.filter(c=>isDue(c.id)).length};
+}
+function nextGroup(from){
+  // prochain paquet non terminé après "from" {col,deck,g} ; sinon premier non terminé de la collection ; sinon null
+  const order=[]; for(const col of COLS){ col.decks.forEach((_,di)=>{ groupsOf(col.id,di+1).forEach((cards,gi)=>order.push({col:col.id,deck:di+1,g:gi,cards})); }); }
+  let start=0;
+  if(from){ const i=order.findIndex(o=>o.col===from.col&&o.deck===from.deck&&o.g===from.g); if(i>=0) start=i+1; }
+  for(let i=0;i<order.length;i++){ const o=order[(start+i)%order.length]; if(from && o.col!==from.col && i>0 && (start+i)>=order.length) break; if(groupState(o.cards)!=='done') return o; }
+  for(const o of order){ if(groupState(o.cards)!=='done') return o; }
+  return null;
+}
+function randomGroup(){
+  const pool=[]; for(const col of COLS){ col.decks.forEach((_,di)=>{ groupsOf(col.id,di+1).forEach((cards,gi)=>{ if(groupState(cards)!=='done') pool.push({col:col.id,deck:di+1,g:gi,cards}); }); }); }
+  if(!pool.length) return null; return pool[Math.floor(Math.random()*pool.length)];
+}
+
+/* ===================== UTILITAIRES ===================== */
+const $=sel=>document.querySelector(sel);
+const app=$('#app');
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+function shuffle(a){ a=a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function fmtNum(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' '); }
+function toast(msg,ms=1800){ const t=document.createElement('div'); t.className='toast'; t.textContent=msg; document.body.appendChild(t); setTimeout(()=>t.remove(),ms); }
+function confetti(n=36){ const colors=['#E3A23C','#5FAE7E','#D9534F','#7FA8D9','#F4ECD8']; for(let i=0;i<n;i++){ const el=document.createElement('div'); el.className='confetti'; el.style.left=Math.random()*100+'vw'; el.style.background=colors[i%colors.length]; el.style.animationDuration=(2.2+Math.random()*1.6)+'s'; el.style.transform=`rotate(${Math.random()*360}deg)`; document.body.appendChild(el); setTimeout(()=>el.remove(),4200); } }
+function pluriel(n,s,p){ return n+' '+(n>1?(p||s+'s'):s); }
+
+/* ===================== VOIX (anglais britannique) ===================== */
+let voices=[];
+function loadVoices(){ try{ voices=speechSynthesis.getVoices()||[]; }catch(e){ voices=[]; } }
+if('speechSynthesis' in window){ loadVoices(); speechSynthesis.onvoiceschanged=loadVoices; }
+function englishVoices(){ return voices.filter(v=>/^en([-_]|$)/i.test(v.lang)); }
+function pickVoice(){
+  const want=S.settings.voice; if(want){ const v=voices.find(v=>v.name===want); if(v) return v; }
+  const en=englishVoices(); const gb=en.filter(v=>/en[-_]GB/i.test(v.lang));
+  return gb.find(v=>/Google UK English Female/i.test(v.name)) || gb.find(v=>/Google/i.test(v.name)) || gb.find(v=>/Daniel|Serena|Kate|Martha|Arthur|Sonia|Libby|Hazel|Susan/i.test(v.name)) || gb[0]
+      || en.find(v=>/Google/i.test(v.name)) || en[0] || null;
+}
+let speakingBtns=[];
+function speak(text){
+  if(!text) return;
+  if(!('speechSynthesis' in window)){ toast('Synthèse vocale non disponible sur ce navigateur'); return; }
+  try{ speechSynthesis.cancel(); }catch(e){}
+  const u=new SpeechSynthesisUtterance(text);
+  const v=pickVoice(); if(v){ u.voice=v; u.lang=v.lang; } else u.lang='en-GB';
+  u.rate=S.settings.rate; u.pitch=1;
+  const on=()=>document.querySelectorAll('.speak-btn').forEach(b=>b.classList.add('playing'));
+  const off=()=>document.querySelectorAll('.speak-btn').forEach(b=>b.classList.remove('playing'));
+  u.onstart=on; u.onend=off; u.onerror=off;
+  setTimeout(()=>{ try{ speechSynthesis.speak(u); }catch(e){ off(); } },40);
+}
+function speechText(c){
+  switch(c.type){
+    case 'verb': return `${c.en}, ${c.pret.replace(/\s*\/\s*/g,', ')}, ${c.pp.replace(/\s*\(.*?\)/g,'').replace(/\s*\/\s*/g,', ')}`;
+    case 'alpha': return c.en;
+    case 'err': return c.en;
+    case 'rule': return c.en.replace(/[≠—]/g,' ... ');
+    default: return c.en.replace(/\s*\/\s*/g,' ... ');
+  }
+}
+
+/* ===================== IMAGES WIKIPÉDIA ===================== */
+const imgCache={};
+async function wikiImage(c){
+  if(!c.wiki) return c.fb||null;
+  if(imgCache[c.wiki]!==undefined) return imgCache[c.wiki];
+  try{
+    const url=`https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(c.wiki)}&prop=pageimages&format=json&pithumbsize=600&pilicense=any&redirects=1&origin=*`;
+    const r=await fetch(url); const j=await r.json(); const page=Object.values(j.query.pages)[0];
+    imgCache[c.wiki]=(page&&page.thumbnail&&page.thumbnail.source)||c.fb||null;
+  }catch(e){ imgCache[c.wiki]=c.fb||null; }
+  return imgCache[c.wiki];
+}
+
+/* ===================== ROUTAGE ===================== */
+let view={name:'home'};
+let sess=null;
+function go(v){ view=v; window.scrollTo({top:0}); render(); }
+
+function render(){
+  if(view.name==='home') renderHome();
+  else if(view.name==='col') renderCol(view.col);
+  else if(view.name==='session') renderSession();
+  else if(view.name==='end') renderEnd();
+}
+
+/* ---------- ACCUEIL ---------- */
+function renderHome(){
+  const due=dueCards().length; const today=S.days[todayKey()]||0; const goal=S.settings.goal; const st=streak();
+  const nxt=nextGroup(S.last); const totalM=CARDS.filter(c=>isMastered(c.id)).length;
+  const nxtLabel=nxt?`${COL[nxt.col].title} · ${COL[nxt.col].decks[nxt.deck-1]} · paquet ${nxt.g+1}`:'Tout est terminé 🎉';
+  let html=`
+  <div class="topbar"><div style="width:40px"></div><div class="eyebrow" style="flex:1;text-align:center">Flashcards · anglais</div><button class="icon-btn" data-action="settings" title="Réglages">⚙️</button></div>
+  <header style="text-align:center">
+    <h1>Mes flashcards d'anglais</h1>
+    <p class="sub">${fmtNum(CARDS.length)} cartes · ${COLS.length} thèmes · ${fmtNum(totalM)} acquises</p>
+    <div class="mode-toggle"><button class="mode-btn ${S.settings.mode==='fr'?'active':''}" data-action="mode" data-v="fr">🇫🇷 FR → EN</button><button class="mode-btn ${S.settings.mode==='en'?'active':''}" data-action="mode" data-v="en">🇬🇧 EN → FR</button></div>
+  </header>
+  <section class="panel">
+    <div class="today-head"><div class="eyebrow">Aujourd'hui</div><div class="streak">🔥 ${pluriel(st,'jour')} de suite</div></div>
+    <div class="goal"><div class="ring" style="--p:${Math.min(100,Math.round(100*today/goal))}"><span>${today}</span></div><div class="txt"><b>${today>=goal?'Objectif atteint !':`${today} / ${goal} cartes`}</b><br>${today>=goal?'Tu peux continuer, ou revenir demain.':'Quelques cartes par jour suffisent.'}</div></div>
+    <button class="big-btn primary" data-action="review" ${due?'':'disabled'}><span class="ic">🔁</span><span class="lb"><b>${due?`Réviser · ${pluriel(due,'carte')} à revoir`:'Rien à réviser pour l\'instant'}</b><small>${due?'Les cartes que tu as déjà vues et qui reviennent aujourd\'hui':'Apprends un nouveau paquet, elles reviendront demain'}</small></span></button>
+    <button class="big-btn secondary" data-action="next" ${nxt?'':'disabled'}><span class="ic">▶️</span><span class="lb"><b>${S.last?'Continuer':'Commencer'}</b><small>${esc(nxtLabel)}</small></span></button>
+    <button class="big-btn ghost" data-action="random"><span class="ic">🎲</span><span class="lb"><b>Paquet surprise</b><small>Un petit paquet au hasard parmi ceux qu'il te reste</small></span></button>
+  </section>`;
+  for(const g of GROUPS){
+    const cols=COLS.filter(c=>c.group===g.id); if(!cols.length) continue;
+    html+=`<div class="group-title"><span>${g.icon}</span><span>${esc(g.title)}</span></div>`;
+    for(const c of cols){ const s=colStats(c.id); const pct=s.total?Math.round(100*s.mastered/s.total):0; const pctSeen=s.total?Math.round(100*s.seen/s.total):0;
+      html+=`<button class="row" data-action="col" data-col="${c.id}"><span class="ic">${c.icon}</span><span class="body"><span class="name">${esc(c.title)}</span><span class="meta"><span>${s.mastered}/${s.total} acquises</span>${s.due?`<span class="due-pill">${s.due} à revoir</span>`:''}${s.mastered===s.total&&s.total?'<span class="ok-pill">terminé</span>':''}</span><span class="bar"><i style="width:${pct}%"></i></span></span><span class="chev">›</span></button>`;
+    }
+  }
+  html+=`<footer>Astuce : glisse la carte à droite = « je savais », à gauche = « à revoir ». Clavier : espace, ←, →, S.</footer>`;
+  app.innerHTML=html;
+}
+
+/* ---------- COLLECTION ---------- */
+function renderCol(colId){
+  const c=COL[colId]; const s=colStats(colId); const due=s.due;
+  let html=`<div class="topbar"><button class="icon-btn" data-action="home" title="Accueil">←</button><div class="title">${esc(c.title)}</div><button class="icon-btn" data-action="settings">⚙️</button></div>
+  <header style="text-align:center"><div style="font-size:40px">${c.icon}</div><h1 style="font-size:24px">${esc(c.title)}</h1><p class="sub">${esc(c.sub||'')}</p>
+  <p class="stats-line">${s.mastered}/${s.total} acquises · ${s.seen} vues · ${c.decks.length} catégories</p>
+  <div class="mode-toggle"><button class="mode-btn ${S.settings.mode==='fr'?'active':''}" data-action="mode" data-v="fr">🇫🇷 FR → EN</button><button class="mode-btn ${S.settings.mode==='en'?'active':''}" data-action="mode" data-v="en">🇬🇧 EN → FR</button></div></header>`;
+  if(due) html+=`<button class="big-btn primary" data-action="review" data-col="${colId}"><span class="ic">🔁</span><span class="lb"><b>Réviser ce thème · ${pluriel(due,'carte')}</b><small>Seulement les cartes de ce thème qui reviennent aujourd'hui</small></span></button>`;
+  html+=`<h2>Catégories</h2>`;
+  const nxt=nextGroup(S.last&&S.last.col===colId?S.last:null);
+  c.decks.forEach((name,di)=>{
+    const deck=di+1; const cards=deckCards(colId,deck); const groups=groupsOf(colId,deck);
+    const m=cards.filter(x=>isMastered(x.id)).length;
+    html+=`<div class="deck"><div class="deck-head"><span class="deck-num">${String(deck).padStart(2,'0')}</span><span class="deck-name">${esc(name)}</span><span class="deck-count">${m}/${cards.length}</span></div>
+    <div class="bar"><i style="width:${cards.length?Math.round(100*m/cards.length):0}%"></i></div><div class="chips">`;
+    groups.forEach((g,gi)=>{ const st=groupState(g); const isNext=nxt&&nxt.col===colId&&nxt.deck===deck&&nxt.g===gi;
+      const ico=st==='done'?'✓':st==='due'?'↻':st==='learn'?'●':'○';
+      html+=`<button class="chip ${st} ${isNext?'next':''}" data-action="group" data-col="${colId}" data-deck="${deck}" data-g="${gi}">${ico} Paquet ${gi+1} <small>${g.length}</small></button>`;
+    });
+    html+=`</div></div>`;
+  });
+  app.innerHTML=html;
+}
+
+/* ---------- SESSION ---------- */
+function startGroup(col,deck,g){
+  const groups=groupsOf(col,deck); const cards=groups[g]; if(!cards) return;
+  S.last={col,deck,g}; save();
+  sess={kind:'group',col,deck,g,title:`${COL[col].decks[deck-1]} · paquet ${g+1}/${groups.length}`,queue:shuffle(cards),pos:0,total:cards.length,failed:new Set(),answered:new Set(),firstTry:0,flipped:false};
+  go({name:'session'});
+}
+function startReview(colId){
+  let due=dueCards(colId?c=>c.col===colId:null);
+  if(!due.length){ toast('Rien à réviser pour le moment'); return; }
+  due.sort((a,b)=>S.prog[a.id].d-S.prog[b.id].d);
+  const remaining=due.length; const batch=shuffle(due.slice(0,Math.max(S.settings.size,Math.min(10,due.length))).slice(0,S.settings.size));
+  sess={kind:'review',col:colId||null,title:colId?`Révision · ${COL[colId].title}`:'Révision du jour',queue:batch,pos:0,total:batch.length,remaining,failed:new Set(),answered:new Set(),firstTry:0,flipped:false};
+  go({name:'session'});
+}
+function current(){ return sess&&sess.queue[sess.pos]; }
+
+function renderSession(){
+  const c=current(); if(!c){ finish(); return; }
+  const mode=S.settings.mode; const done=sess.answered.size; const left=sess.queue.length-sess.pos;
+  const front=face(c,'front',mode), back=face(c,'back',mode);
+  app.innerHTML=`
+  <div class="sess-top"><button class="icon-btn" data-action="quit" title="Quitter">✕</button><div class="title" style="flex:1;text-align:center;font-family:Fraunces,serif;font-weight:700;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(sess.title)}</div><div class="counter">${done}/${sess.total}${left>sess.total-done?` <span style="opacity:.6">(+${left-(sess.total-done)})</span>`:''}</div></div>
+  <div class="progress-track"><div class="progress-fill" style="width:${Math.round(100*done/sess.total)}%"></div></div>
+  <div class="stage"><div class="card ${sess.flipped?'flipped':''}" id="card">
+    <div class="face front">${front}</div>
+    <div class="face back">${back}</div>
+  </div></div>
+  <div class="controls"><button class="action btn-review" data-action="fail">↻ À revoir</button><button class="action btn-known" data-action="known">✓ Je savais</button></div>
+  <div class="swipe-hint">← glisse à gauche · à droite →</div>`;
+  attachCard();
+  if(c.type==='noun') loadCardImage(c);
+  if(sess.pos+1<sess.queue.length && sess.queue[sess.pos+1].type==='noun') wikiImage(sess.queue[sess.pos+1]);
+  if(S.settings.auto && !sess.flipped && speaksOnFront(c,mode)) setTimeout(()=>speak(speechText(c)),350);
+}
+function speaksOnFront(c,mode){ if(c.type==='err'||c.type==='pron') return false; if(c.type==='num'||c.type==='alpha') return mode==='en'; return mode==='en'; }
+
+function badges(c,colId){
+  const col=COL[colId]; let b='';
+  const tl=col.tagLabels&&col.tagLabels[c.tag]; if(tl) b+=`<span class="badge">${esc(tl)}</span>`;
+  if(c.lvl&&colId==='mine') b+=`<span class="badge lvl${c.lvl}">${LVL[c.lvl]}</span>`;
+  if(c.src==='comp') b+=`<span class="badge comp">exemple complémentaire</span>`;
+  return b?`<div class="badges">${b}</div>`:'';
+}
+function face(c,side,mode){
+  const col=COL[c.col]; const deckName=col.decks[c.deck-1];
+  const tag=`<div class="card-tag">${esc(deckName)}</div>`;
+  const spk=`<button class="speak-btn" data-action="speak" title="Écouter (S)" aria-label="Écouter">🔊</button>`;
+  const hint=side==='front'?`<div class="hint">Touche pour retourner</div>`:'';
+  const exEn=c.ex?`<div class="example">« ${esc(c.ex)} » <button class="mini-speak" data-action="speak-ex" title="Écouter l'exemple">🔊</button></div>`:'';
+  const exFr=c.exFr?`<div class="example-fr">${esc(c.exFr)}</div>`:'';
+  const note=c.note?`<div class="note">💡 ${esc(c.note)}</div>`:'';
+  const B=badges(c,c.col);
+  const frontIsFr = mode==='fr';
+  switch(c.type){
+    case 'noun': {
+      const img=`<div class="img-wrap" id="imgwrap"><span class="ph">📷</span><img id="cardimg" alt=""></div>`;
+      if(side==='front') return frontIsFr? `${tag}${B}<div class="main">${esc(c.fr)}</div>${hint}` : `${tag}${spk}${B}<div class="main">${esc(c.en)}</div><div class="ipa">${esc(c.ph||'')}</div>${hint}`;
+      return frontIsFr? `${tag}${spk}${img}<div class="main mint">${esc(c.en)}</div><div class="ipa">${esc(c.ph||'')}</div>${exEn}${note}` : `${tag}${spk}${img}<div class="main">${esc(c.fr)}</div>${exEn}${note}`;
+    }
+    case 'verb': {
+      const forms=`<div class="forms"><div><small>infinitif</small><b>${esc(c.en)}</b></div><div><small>prétérit</small><b>${esc(c.pret)}</b></div><div><small>participe</small><b>${esc(c.pp)}</b></div></div>`;
+      if(side==='front') return frontIsFr? `${tag}${B}<div class="main">${esc(c.fr)}</div><div class="ipa">verbe irrégulier</div>${hint}` : `${tag}${spk}${B}<div class="main">${esc(c.en)}</div><div class="ipa">prétérit ? participe passé ?</div>${hint}`;
+      return frontIsFr? `${tag}${spk}${forms}${exEn}${exFr}` : `${tag}${spk}<div class="main">${esc(c.fr)}</div>${forms}${exEn}${exFr}`;
+    }
+    case 'num': {
+      const phon=col.phon?c.en.split(/[\s,]+/).map(w=>w.split('-').map(p=>col.phon[p.toLowerCase()]||p).join('-')).join(' '):'';
+      if(side==='front') return frontIsFr? `${tag}${B}<div class="main huge">${fmtNum(c.num)}</div><div class="ipa">${esc(c.fr)}</div>${hint}` : `${tag}${spk}${B}<div class="main small">${esc(c.en)}</div>${hint}`;
+      return frontIsFr? `${tag}${spk}<div class="main mint small">${esc(c.en)}</div><div class="pho">${esc(phon)}</div>` : `${tag}${spk}<div class="main huge">${fmtNum(c.num)}</div><div class="ipa">${esc(c.fr)}</div><div class="pho">${esc(phon)}</div>`;
+    }
+    case 'alpha': {
+      if(side==='front') return `${tag}${B}<div class="main huge">${esc(c.en)}</div><div class="ipa">comment ça se dit ?</div>${hint}`;
+      return `${tag}${spk}<div class="main huge mint">${esc(c.en)}</div><div class="main small">« ${esc(c.fr)} »</div><div class="ipa">${esc(c.ph||'')}</div>${exEn}${exFr}`;
+    }
+    case 'err': {
+      if(side==='front') return `${tag}${B}<div class="ipa">❌ Corrige la phrase</div><div class="main bad small">${esc(c.bad)}</div><div class="example-fr">${esc(c.fr)}</div>${hint}`;
+      return `${tag}${spk}<div class="ipa">✅ Correct</div><div class="main mint">${esc(c.en)}</div><div class="example-fr">${esc(c.fr)}</div>${note}`;
+    }
+    case 'pron': {
+      if(side==='front') return `${tag}${B}<div class="ipa">Comment prononcer ?</div><div class="main">${esc(c.en)}</div><div class="example-fr">${esc(c.fr)}</div>${hint}`;
+      return `${tag}${spk}<div class="main mint">${esc(c.en)}</div><div class="ipa">${esc(c.ph||'')}</div><div class="pho">≈ « ${esc(c.pho||'')} »</div>${note}`;
+    }
+    case 'rule': {
+      if(side==='front') return frontIsFr? `${tag}${B}<div class="main small">${esc(c.fr)}</div>${c.exFr?`<div class="example-fr">${esc(c.exFr)}</div>`:''}${hint}` : `${tag}${spk}${B}<div class="main small">${esc(c.en)}</div>${hint}`;
+      return frontIsFr? `${tag}${spk}<div class="main mint small">${esc(c.en)}</div>${c.pho?`<div class="pho">${esc(c.pho)}</div>`:''}${exEn}${exFr}${note}` : `${tag}${spk}<div class="main small">${esc(c.fr)}</div>${exEn}${exFr}${note}`;
+    }
+    default: { // phrase
+      if(side==='front') return frontIsFr? `${tag}${B}<div class="main">${esc(c.fr)}</div>${c.exFr?`<div class="example">« ${esc(c.exFr)} »</div>`:''}${hint}` : `${tag}${spk}${B}<div class="main">${esc(c.en)}</div>${c.pho?`<div class="pho">${esc(c.pho)}</div>`:''}${exEn}${hint}`;
+      return frontIsFr? `${tag}${spk}<div class="main mint">${esc(c.en)}</div>${c.pho?`<div class="pho">${esc(c.pho)}</div>`:''}${exEn}${exFr}${note}` : `${tag}${spk}<div class="main">${esc(c.fr)}</div>${exFr}${exEn}${note}`;
+    }
+  }
+}
+async function loadCardImage(c){
+  const img=document.getElementById('cardimg'); const wrap=document.getElementById('imgwrap'); if(!img||!wrap) return;
+  const show=()=>{ img.classList.add('on'); const ph=wrap.querySelector('.ph'); if(ph) ph.remove(); };
+  const emb=THUMBS[c.wiki];
+  if(emb){ img.onload=show; img.src=emb; }
+  // puis, si le réseau le permet, une image plus grande
+  const src=await wikiImage(c); if(!src||current()!==c) return;
+  const hi=new Image(); hi.onload=()=>{ if(current()!==c) return; img.src=src; show(); }; hi.src=src;
+}
+function flip(){ if(!sess) return; sess.flipped=!sess.flipped; const el=document.getElementById('card'); if(el) el.classList.toggle('flipped',sess.flipped); const c=current(); if(sess.flipped && S.settings.auto && c && !speaksOnFront(c,S.settings.mode)) speak(speechText(c)); }
+function answer(known){
+  const c=current(); if(!c) return;
+  const first=!sess.answered.has(c.id);
+  if(first){ sess.answered.add(c.id); bumpToday(); }
+  if(known){ markKnown(c.id,sess.failed.has(c.id)); if(first&&!sess.failed.has(c.id)) sess.firstTry++; sess.pos++; }
+  else { markFail(c.id); sess.failed.add(c.id); sess.pos++; const at=Math.min(sess.pos+3,sess.queue.length); sess.queue.splice(at,0,c); toast('On la reverra dans un instant ↻',1200); }
+  sess.flipped=false;
+  if(sess.pos>=sess.queue.length) finish(); else { renderSession(); const el=document.getElementById('card'); if(el){ el.classList.add('pop'); setTimeout(()=>el.classList.remove('pop'),300); } }
+}
+function finish(){ try{ speechSynthesis.cancel(); }catch(e){} go({name:'end'}); }
+function renderEnd(){
+  const unique=sess.total, ft=sess.firstTry; const perfect=ft===unique;
+  let title,sub,emoji;
+  if(sess.kind==='review'){ const left=dueCards(sess.col?c=>c.col===sess.col:null).length; title=left?'Bien joué !':'Révision terminée 🏆'; emoji=left?'💪':'🎉'; sub=`${unique} cartes revues, ${ft} du premier coup.${left?` Il en reste ${left} à revoir aujourd'hui.`:' Plus rien à revoir aujourd\'hui !'}`; }
+  else { title=perfect?'Paquet maîtrisé !':'Paquet terminé !'; emoji=perfect?'🏆':'🎉'; sub=`${unique} cartes · ${ft} du premier coup${perfect?' · sans faute !':''}. Elles reviendront dans la révision du jour.`; }
+  const nxt=sess.kind==='group'?nextGroup({col:sess.col,deck:sess.deck,g:sess.g}):null;
+  const left=sess.kind==='review'?dueCards(sess.col?c=>c.col===sess.col:null).length:0;
+  const today=S.days[todayKey()]||0;
+  app.innerHTML=`<div class="end"><span class="emoji">${emoji}</span><h2>${title}</h2><p>${esc(sub)}<br><span class="mono" style="font-size:11px">Aujourd'hui : ${today} cartes · 🔥 ${pluriel(streak(),'jour')}</span></p>
+  <div class="stack">
+    ${left?`<button class="btn-primary" data-action="review" data-col="${sess.col||''}">Continuer la révision (${left})</button>`:''}
+    ${nxt?`<button class="btn-primary" data-action="go-group" data-col="${nxt.col}" data-deck="${nxt.deck}" data-g="${nxt.g}">Paquet suivant → ${esc(COL[nxt.col].decks[nxt.deck-1])} ${nxt.g+1}</button>`:''}
+    ${sess.kind==='group'?`<button class="btn-secondary" data-action="go-group" data-col="${sess.col}" data-deck="${sess.deck}" data-g="${sess.g}">Refaire ce paquet</button>`:''}
+    <button class="btn-secondary" data-action="${sess.kind==='group'?'col':'home'}" data-col="${sess.col||''}">${sess.kind==='group'?'Retour au thème':'Retour à l\'accueil'}</button>
+  </div></div>`;
+  if(perfect||sess.kind==='review') confetti(perfect?40:18);
+}
+
+/* ---------- GESTES SUR LA CARTE ---------- */
+function attachCard(){
+  const el=document.getElementById('card'); if(!el) return;
+  let sx=0,sy=0,dx=0,dragging=false,moved=false,pid=null;
+  el.addEventListener('pointerdown',e=>{ if(e.target.closest('button')) return; sx=e.clientX; sy=e.clientY; dx=0; dragging=true; moved=false; pid=e.pointerId; try{ el.setPointerCapture(pid); }catch(err){} });
+  el.addEventListener('pointermove',e=>{ if(!dragging) return; dx=e.clientX-sx; const dy=e.clientY-sy; if(Math.abs(dx)>8||Math.abs(dy)>8) moved=true; if(Math.abs(dx)>Math.abs(dy)){ el.classList.add('dragging'); el.style.transform=`translateX(${dx}px) rotate(${dx/30}deg) ${sess.flipped?'rotateY(180deg)':''}`; el.classList.toggle('drag-right',dx>60); el.classList.toggle('drag-left',dx<-60); } });
+  const end=e=>{ if(!dragging) return; dragging=false; el.classList.remove('dragging','drag-left','drag-right'); el.style.transform='';
+    if(Math.abs(dx)>80){ answer(dx>0); return; }
+    if(!moved && !e.target.closest('button')) flip(); };
+  el.addEventListener('pointerup',end); el.addEventListener('pointercancel',end);
+}
+
+/* ---------- RÉGLAGES ---------- */
+function openSettings(){
+  const s=S.settings; const en=englishVoices(); const cur=pickVoice();
+  const bg=document.createElement('div'); bg.className='sheet-bg'; bg.id='sheet';
+  const opt=en.map(v=>`<option value="${esc(v.name)}" ${cur&&cur.name===v.name?'selected':''}>${esc(v.name)} (${esc(v.lang)})</option>`).join('');
+  bg.innerHTML=`<div class="sheet">
+    <div style="display:flex;justify-content:space-between;align-items:center"><h3>Réglages</h3><button class="icon-btn" data-action="close-sheet">✕</button></div>
+    <div class="setting"><div class="lbl"><b>Sens des cartes</b><small>FR → EN : tu dois trouver l'anglais (recommandé)</small></div><div class="seg"><button data-set="mode" data-v="fr" class="${s.mode==='fr'?'active':''}">FR→EN</button><button data-set="mode" data-v="en" class="${s.mode==='en'?'active':''}">EN→FR</button></div></div>
+    <div class="setting"><div class="lbl"><b>Taille des paquets</b><small>Nombre de cartes par petit paquet</small></div><div class="seg">${[5,8,10].map(n=>`<button data-set="size" data-v="${n}" class="${s.size===n?'active':''}">${n}</button>`).join('')}</div></div>
+    <div class="setting"><div class="lbl"><b>Objectif du jour</b><small>Cartes à faire chaque jour</small></div><div class="seg">${[5,10,20,30].map(n=>`<button data-set="goal" data-v="${n}" class="${s.goal===n?'active':''}">${n}</button>`).join('')}</div></div>
+    <div class="setting"><div class="lbl"><b>Lecture automatique</b><small>Prononce l'anglais dès qu'il apparaît</small></div><div class="seg"><button data-set="auto" data-v="1" class="${s.auto?'active':''}">Oui</button><button data-set="auto" data-v="0" class="${!s.auto?'active':''}">Non</button></div></div>
+    <div class="setting"><div class="lbl"><b>Vitesse de la voix</b></div><div class="seg"><button data-set="rate" data-v="0.8" class="${s.rate===0.8?'active':''}">Lente</button><button data-set="rate" data-v="0.92" class="${s.rate===0.92?'active':''}">Normale</button><button data-set="rate" data-v="1.05" class="${s.rate===1.05?'active':''}">Rapide</button></div></div>
+    <div class="setting"><div class="lbl"><b>Voix anglaise</b><small>${en.length?`${en.length} voix anglaises disponibles · britannique choisie par défaut`:'Aucune voix anglaise trouvée : installe-en une dans les réglages du téléphone (Synthèse vocale → anglais Royaume-Uni)'}</small></div><div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end">${en.length?`<select data-set="voice"><option value="">Automatique (en-GB)</option>${opt}</select>`:''}<button class="small-btn" data-action="test-voice">▶ Tester</button></div></div>
+    <div class="setting"><div class="lbl"><b>Progression</b><small>Sauvegardée dans ce navigateur. Exporte-la pour changer d'appareil.</small></div><div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end"><button class="small-btn" data-action="export">Exporter</button><button class="small-btn" data-action="import">Importer</button><button class="small-btn danger" data-action="reset">Effacer</button></div></div>
+    <div id="io" class="hidden" style="padding:10px 0"><textarea id="iotext" rows="4" style="width:100%" placeholder="Colle ici ta sauvegarde exportée, puis « Charger »."></textarea><div style="display:flex;gap:6px;margin-top:6px;justify-content:flex-end"><button class="small-btn" data-action="copy">Copier</button><button class="small-btn" data-action="load">Charger</button></div></div>
+    <p class="sub" style="margin-top:14px">Raccourcis clavier : espace = retourner · → je savais · ← à revoir · S = écouter · Échap = quitter.</p>
+  </div>`;
+  document.body.appendChild(bg);
+  bg.addEventListener('click',e=>{ if(e.target===bg) closeSettings(); });
+  bg.addEventListener('change',e=>{ const t=e.target; if(t.dataset.set==='voice'){ S.settings.voice=t.value; save(); } });
+}
+function closeSettings(){ const el=document.getElementById('sheet'); if(el) el.remove(); render(); }
+function setSetting(k,v){
+  if(k==='mode') S.settings.mode=v; else if(k==='size') S.settings.size=+v; else if(k==='goal') S.settings.goal=+v; else if(k==='auto') S.settings.auto=v==='1'; else if(k==='rate') S.settings.rate=+v;
+  save(); const sheet=document.getElementById('sheet'); if(sheet){ sheet.remove(); openSettings(); }
+}
+
+/* ---------- ÉVÉNEMENTS ---------- */
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-action],[data-set]'); if(!b) return;
+  if(b.dataset.set){ setSetting(b.dataset.set,b.dataset.v); return; }
+  const a=b.dataset.action; const d=b.dataset;
+  switch(a){
+    case 'settings': openSettings(); break;
+    case 'close-sheet': closeSettings(); break;
+    case 'mode': S.settings.mode=d.v; save(); render(); break;
+    case 'col': go({name:'col',col:d.col}); break;
+    case 'home': sess=null; go({name:'home'}); break;
+    case 'group': case 'go-group': startGroup(d.col,+d.deck,+d.g); break;
+    case 'next': { const n=nextGroup(S.last); if(n) startGroup(n.col,n.deck,n.g); break; }
+    case 'random': { const n=randomGroup(); if(n) startGroup(n.col,n.deck,n.g); else toast('Tout est terminé !'); break; }
+    case 'review': startReview(d.col||null); break;
+    case 'quit': { try{speechSynthesis.cancel();}catch(err){} const col=sess&&sess.kind==='group'?sess.col:null; sess=null; go(col?{name:'col',col}:{name:'home'}); break; }
+    case 'fail': answer(false); break;
+    case 'known': answer(true); break;
+    case 'speak': e.stopPropagation(); { const c=current(); if(c) speak(speechText(c)); } break;
+    case 'speak-ex': e.stopPropagation(); { const c=current(); if(c&&c.ex) speak(c.ex); } break;
+    case 'test-voice': speak("Hello! I've been travelling around Asia for three years. Do you fancy grabbing a coffee?"); break;
+    case 'export': { const io=document.getElementById('io'); io.classList.remove('hidden'); document.getElementById('iotext').value=JSON.stringify(S); break; }
+    case 'import': { const io=document.getElementById('io'); io.classList.remove('hidden'); document.getElementById('iotext').value=''; document.getElementById('iotext').focus(); break; }
+    case 'copy': { const t=document.getElementById('iotext'); t.select(); try{ navigator.clipboard.writeText(t.value); toast('Copié !'); }catch(err){ document.execCommand('copy'); toast('Copié !'); } break; }
+    case 'load': { try{ const v=JSON.parse(document.getElementById('iotext').value); if(!v||!v.prog) throw 0; S={...S,...v,settings:{...DEFAULTS,...(v.settings||{})}}; save(); toast('Progression chargée ✓'); closeSettings(); }catch(err){ toast('Sauvegarde invalide'); } break; }
+    case 'reset': { if(b.dataset.armed){ S.prog={}; S.days={}; S.last=null; save(); toast('Progression effacée'); closeSettings(); } else { b.dataset.armed='1'; b.textContent='Confirmer ?'; setTimeout(()=>{ if(b.isConnected){ delete b.dataset.armed; b.textContent='Effacer'; } },4000); } break; }
+  }
+});
+document.addEventListener('keydown',e=>{
+  if(document.getElementById('sheet')){ if(e.key==='Escape') closeSettings(); return; }
+  if(view.name!=='session') return;
+  if(e.code==='Space'){ e.preventDefault(); flip(); }
+  else if(e.code==='ArrowRight') answer(true);
+  else if(e.code==='ArrowLeft') answer(false);
+  else if(e.code==='KeyS'){ const c=current(); if(c) speak(speechText(c)); }
+  else if(e.key==='Escape'){ const col=sess&&sess.kind==='group'?sess.col:null; sess=null; go(col?{name:'col',col}:{name:'home'}); }
+});
+window.addEventListener('beforeunload',()=>{ try{ localStorage.setItem(KEY,JSON.stringify(S)); }catch(e){} });
+
+render();
+</script>
+</body>
+</html>

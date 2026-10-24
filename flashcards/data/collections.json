@@ -1,0 +1,660 @@
+{
+ "groups": [
+  {
+   "id": "mes",
+   "title": "Mes phrases",
+   "icon": "⭐"
+  },
+  {
+   "id": "parler",
+   "title": "Parler & rencontrer",
+   "icon": "💬"
+  },
+  {
+   "id": "gram",
+   "title": "Grammaire & structures",
+   "icon": "📐"
+  },
+  {
+   "id": "voc",
+   "title": "Vocabulaire",
+   "icon": "📚"
+  },
+  {
+   "id": "img",
+   "title": "Mots en images",
+   "icon": "🖼️"
+  }
+ ],
+ "collections": [
+  {
+   "id": "mine",
+   "group": "mes",
+   "icon": "⭐",
+   "title": "Mes phrases & mes règles",
+   "sub": "Tout ce qui vient de ton prompt : présentation, business, motivation, connecteurs, erreurs corrigées, salle de sport…",
+   "decks": [
+    "Présentation & conversation",
+    "Travail, entreprise & prospection",
+    "Motivation & développement perso",
+    "Voyage, liberté & quotidien",
+    "Conditions & conséquences",
+    "Connecteurs à connaître",
+    "Les confusions à ne plus faire (WANT / WILL / WON'T…)",
+    "Règles de grammaire & structures",
+    "Mes erreurs corrigées",
+    "Expressions & phrasal verbs",
+    "Salle de sport & rencontres",
+    "Phrases complètes (B2)",
+    "Dialogue : à la salle de sport",
+    "Prononciation britannique"
+   ],
+   "tagLabels": {
+    "phrase": "phrase",
+    "link": "connecteur",
+    "rule": "règle",
+    "err": "erreur corrigée",
+    "verb": "expression",
+    "pron": "prononciation"
+   }
+  },
+  {
+   "id": "daily",
+   "group": "mes",
+   "icon": "🌴",
+   "title": "Anglais du quotidien à Chiang Mai",
+   "sub": "Ta liste : gagner du temps, rencontrer des gens, restaurant, logement, scooter, salle, travail, pièges…",
+   "decks": [
+    "Gagner du temps & clarifier",
+    "Rencontrer des gens",
+    "Raconter une histoire",
+    "Phrasal verbs du quotidien",
+    "Nuance & opinion",
+    "Au restaurant",
+    "Logement",
+    "Scooter & transport",
+    "À la salle",
+    "Courses & services",
+    "Travail",
+    "Voyage",
+    "Imprévus & santé",
+    "Ressenti & confiance",
+    "Anglais naturel",
+    "Pièges & faux amis"
+   ],
+   "tagLabels": {
+    "phrase": "phrase",
+    "verb": "phrasal verb",
+    "rule": "piège"
+   }
+  },
+  {
+   "id": "travel",
+   "group": "parler",
+   "icon": "🧳",
+   "title": "Anglais pour voyager",
+   "sub": "Démarrer, relancer, raconter ton parcours, clôturer une conversation de voyageur.",
+   "decks": [
+    "Démarrer",
+    "Relancer",
+    "Creuser",
+    "Clôturer",
+    "Se présenter",
+    "Pourquoi je suis parti",
+    "Mon parcours",
+    "Maintenant",
+    "Relancer vers l'autre",
+    "Dialogue complet"
+   ],
+   "tagLabels": {
+    "greet": "salutation",
+    "ask": "question",
+    "say": "réplique",
+    "misc": "expression"
+   }
+  },
+  {
+   "id": "expr",
+   "group": "parler",
+   "icon": "👋",
+   "title": "Expressions de base",
+   "sub": "Salutations, présentations, inviter, accepter, refuser, prendre congé.",
+   "decks": [
+    "Salutations",
+    "Présentations",
+    "Coordonnées",
+    "Inviter",
+    "Accepter",
+    "Refuser",
+    "Accueillir",
+    "Prendre congé",
+    "Démarrer une conv."
+   ],
+   "tagLabels": {
+    "greet": "salutation",
+    "ask": "question",
+    "say": "réplique",
+    "misc": "expression"
+   }
+  },
+  {
+   "id": "gymp",
+   "group": "parler",
+   "icon": "🏋️",
+   "title": "Anglais en salle de sport",
+   "sub": "Phrases, abréviations, conseils, faire connaissance, dialogue complet.",
+   "decks": [
+    "Général",
+    "Entraînement",
+    "Musculation",
+    "Cardio",
+    "Motivation",
+    "Abréviations",
+    "Gym bro",
+    "Faire connaissance",
+    "Conseils",
+    "Parler entraînement",
+    "Demander de l'aide",
+    "Conversation +",
+    "Contacts",
+    "Dialogue complet"
+   ],
+   "tagLabels": {
+    "greet": "salutation",
+    "ask": "question",
+    "say": "réplique",
+    "misc": "expression"
+   }
+  },
+  {
+   "id": "adj",
+   "group": "parler",
+   "icon": "🎭",
+   "title": "100 adjectifs pour parler de toi",
+   "sub": "Te décrire, les gens, les lieux, la bouffe, les émotions, ton parcours.",
+   "decks": [
+    "Te décrire",
+    "Gens sympas",
+    "Gens & galères",
+    "Lieux",
+    "Nourriture",
+    "Logement",
+    "Émotions",
+    "Expériences",
+    "Taf & quotidien",
+    "Ton parcours"
+   ],
+   "tagLabels": {
+    "greet": "positif",
+    "ask": "descriptif",
+    "say": "quotidien",
+    "misc": "négatif"
+   }
+  },
+  {
+   "id": "voc",
+   "group": "parler",
+   "icon": "🎒",
+   "title": "Vocabulaire backpacker",
+   "sub": "Phrasal verbs, connecteurs oraux, émotions, mots de remplissage.",
+   "decks": [
+    "Phrasal verbs",
+    "Connecteurs",
+    "Émotion / opinion",
+    "Backpacker",
+    "Mots de remplissage"
+   ],
+   "tagLabels": {
+    "verb": "phrasal verb",
+    "link": "connecteur",
+    "mood": "émotion/opinion",
+    "trip": "voyage",
+    "filler": "remplissage"
+   }
+  },
+  {
+   "id": "con",
+   "group": "gram",
+   "icon": "🔗",
+   "title": "80 connecteurs logiques",
+   "sub": "Ajout, opposition, cause, conséquence, temps, condition, exemple, comparaison, conclusion, but.",
+   "decks": [
+    "Ajout",
+    "Opposition",
+    "Cause",
+    "Conséquence",
+    "Temps",
+    "Condition",
+    "Exemple",
+    "Comparaison",
+    "Conclusion",
+    "But"
+   ],
+   "tagLabels": {
+    "add": "ajout",
+    "time": "temps",
+    "cause": "cause",
+    "opp": "opposition"
+   }
+  },
+  {
+   "id": "forsince",
+   "group": "gram",
+   "icon": "⏳",
+   "title": "FOR vs SINCE",
+   "sub": "Durée ou point de départ ? Avec un deck piège à trous.",
+   "decks": [
+    "FOR (durée)",
+    "SINCE (point de départ)",
+    "Phrases perso",
+    "Le piège"
+   ],
+   "tagLabels": {
+    "greet": "FOR — durée",
+    "ask": "SINCE — point de départ",
+    "say": "à toi de choisir",
+    "misc": "expression"
+   }
+  },
+  {
+   "id": "fdw",
+   "group": "gram",
+   "icon": "⏱️",
+   "title": "FOR / DURING / WHILE",
+   "sub": "for + durée, during + nom, while + phrase.",
+   "decks": [
+    "FOR (durée)",
+    "DURING (+ nom)",
+    "WHILE (+ phrase)",
+    "Mélange (test)"
+   ],
+   "tagLabels": {
+    "greet": "for + durée",
+    "ask": "during + nom",
+    "say": "while + phrase",
+    "misc": "mélange"
+   }
+  },
+  {
+   "id": "pps",
+   "group": "gram",
+   "icon": "✅",
+   "title": "Present perfect simple",
+   "sub": "Expériences, parcours pro, rencontres, changements.",
+   "decks": [
+    "Expériences de voyage",
+    "Ton parcours pro",
+    "Rencontres",
+    "Changements"
+   ],
+   "tagLabels": {
+    "greet": "salutation",
+    "ask": "question",
+    "say": "réplique",
+    "misc": "expression"
+   }
+  },
+  {
+   "id": "ppc",
+   "group": "gram",
+   "icon": "🔄",
+   "title": "Present perfect continuous",
+   "sub": "Actions toujours en cours : voyage, travail, apprentissage.",
+   "decks": [
+    "Voyage en cours",
+    "Travail en cours",
+    "Apprentissage",
+    "Rencontres en cours"
+   ],
+   "tagLabels": {
+    "greet": "salutation",
+    "ask": "question",
+    "say": "réplique",
+    "misc": "expression"
+   }
+  },
+  {
+   "id": "vocess",
+   "group": "voc",
+   "icon": "📚",
+   "title": "Mots les plus courants",
+   "sub": "Verbes, noms, adjectifs et mots de liaison les plus fréquents.",
+   "decks": [
+    "Verbes",
+    "Noms",
+    "Adjectifs",
+    "Mots de liaison"
+   ],
+   "tagLabels": {
+    "verb": "verbe",
+    "noun": "nom",
+    "adj": "adjectif",
+    "func": "mot de liaison"
+   }
+  },
+  {
+   "id": "phv",
+   "group": "gram",
+   "icon": "🧩",
+   "title": "141 phrasal verbs",
+   "sub": "Routine, problèmes, relations, get/go/come/look/set/bring/put/take/turn/run/hold, communication, verbes en UP.",
+   "decks": [
+    "Routine",
+    "Problèmes",
+    "Relations",
+    "Quotidien",
+    "Get & Go",
+    "Come/Look/Set",
+    "Bring/Put/Take",
+    "Turn/Run/Hold",
+    "Communication",
+    "Verbes en UP"
+   ],
+   "tagLabels": {
+    "verb": "phrasal verb"
+   }
+  },
+  {
+   "id": "irr",
+   "group": "gram",
+   "icon": "🔁",
+   "title": "100 verbes irréguliers",
+   "sub": "Infinitif, prétérit, participe passé, avec une phrase d'exemple.",
+   "decks": [
+    "be → break",
+    "bring → cost",
+    "cut → feed",
+    "feel → give",
+    "go → keep",
+    "know → mean",
+    "meet → say",
+    "see → sit",
+    "sleep → take",
+    "teach → write"
+   ],
+   "tagLabels": {
+    "verb": "verbe irrégulier"
+   }
+  },
+  {
+   "id": "num",
+   "group": "gram",
+   "icon": "🔢",
+   "title": "Les nombres",
+   "sub": "De 0 aux milliards, à l'anglaise britannique (« a hundred and five »).",
+   "decks": [
+    "0 à 100",
+    "Centaines",
+    "Milliers",
+    "Centaines de milliers",
+    "Millions",
+    "Grands nombres (défi)"
+   ],
+   "tagLabels": {
+    "num": "nombre"
+   },
+   "phon": {
+    "zero": "zi-rôou",
+    "one": "ouann",
+    "two": "tou",
+    "three": "s'ri",
+    "four": "for",
+    "five": "faïv",
+    "six": "siks",
+    "seven": "sèv'n",
+    "eight": "éït",
+    "nine": "naïn",
+    "ten": "tènne",
+    "eleven": "i-lèv'n",
+    "twelve": "tou-èlv",
+    "thirteen": "seur-tîne",
+    "fourteen": "for-tîne",
+    "fifteen": "fif-tîne",
+    "sixteen": "siks-tîne",
+    "seventeen": "sèv'n-tîne",
+    "eighteen": "éï-tîne",
+    "nineteen": "naïn-tîne",
+    "twenty": "touènn-ti",
+    "thirty": "seur-ti",
+    "forty": "for-ti",
+    "fifty": "fif-ti",
+    "sixty": "siks-ti",
+    "seventy": "sèv'n-ti",
+    "eighty": "éï-ti",
+    "ninety": "naïn-ti",
+    "hundred": "hann-dreud",
+    "thousand": "saou-z'nd",
+    "million": "mil-y'n",
+    "billion": "bil-y'n",
+    "and": "annde"
+   }
+  },
+  {
+   "id": "alpha",
+   "group": "gram",
+   "icon": "🔤",
+   "title": "L'alphabet",
+   "sub": "Épeler ton nom, ton email, une adresse.",
+   "decks": [
+    "A → I",
+    "J → R",
+    "S → Z"
+   ],
+   "tagLabels": {
+    "letter": "lettre"
+   }
+  },
+  {
+   "id": "n1",
+   "group": "img",
+   "icon": "🖼️",
+   "title": "300 noms essentiels · vol. 1",
+   "sub": "Animaux, nourriture, objets, lieux, corps, nature… avec photo.",
+   "decks": [
+    "Animaux I",
+    "Animaux II",
+    "Fruits & légumes",
+    "Nourriture & boissons",
+    "Cuisine",
+    "Tech & objets",
+    "Vêtements",
+    "Transports",
+    "Nature",
+    "Lieux",
+    "Corps",
+    "Chambre",
+    "Outils",
+    "Terre & ciel",
+    "Vie marine",
+    "Insectes",
+    "Ville",
+    "Santé",
+    "Voyage",
+    "Divers",
+    "Maison",
+    "École",
+    "Sport",
+    "Nourriture II",
+    "Animaux III",
+    "Nature II",
+    "Lieux II",
+    "Vêtements II",
+    "Tech II",
+    "Vie quotidienne"
+   ],
+   "tagLabels": {
+    "animal": "animal",
+    "food": "nourriture",
+    "object": "objet",
+    "place": "lieu",
+    "nature": "nature",
+    "body": "corps",
+    "clothes": "vêtement",
+    "transport": "transport",
+    "person": "personne",
+    "machine": "machine",
+    "weight": "poids libre",
+    "cardio": "cardio",
+    "accessory": "accessoire",
+    "bodypart": "muscle",
+    "exercise": "exercice",
+    "clothing": "tenue",
+    "nutrition": "nutrition"
+   }
+  },
+  {
+   "id": "n2",
+   "group": "img",
+   "icon": "🌾",
+   "title": "300 noms · vol. 2",
+   "sub": "Ferme, océan, oiseaux, maison, métiers, fêtes, matières…",
+   "decks": [
+    "Ferme",
+    "Fruits tropicaux",
+    "Poisson & viande",
+    "Boissons & snacks",
+    "Océan",
+    "Montagne & plein air",
+    "Animaux sauvages",
+    "Oiseaux",
+    "Pièces de la maison",
+    "Salle de bain",
+    "Jardin",
+    "Bricolage",
+    "Art & musique",
+    "Ville & routes",
+    "Équipement sportif",
+    "École",
+    "Voyage",
+    "Météo & ciel",
+    "Métiers",
+    "Expressions du visage",
+    "Intérieur du corps",
+    "Fêtes",
+    "Monuments & religion",
+    "Électroménager",
+    "Phénomènes naturels",
+    "Véhicules & engins",
+    "Matières",
+    "Formes & concepts",
+    "Temps",
+    "Petits objets"
+   ],
+   "tagLabels": {
+    "animal": "animal",
+    "food": "nourriture",
+    "object": "objet",
+    "place": "lieu",
+    "nature": "nature",
+    "body": "corps",
+    "clothes": "vêtement",
+    "transport": "transport",
+    "person": "personne",
+    "machine": "machine",
+    "weight": "poids libre",
+    "cardio": "cardio",
+    "accessory": "accessoire",
+    "bodypart": "muscle",
+    "exercise": "exercice",
+    "clothing": "tenue",
+    "nutrition": "nutrition"
+   }
+  },
+  {
+   "id": "n3",
+   "group": "img",
+   "icon": "🐡",
+   "title": "300 noms · vol. 3",
+   "sub": "Créatures, cuisine du monde, espace, cinéma, finance, architecture…",
+   "decks": [
+    "Créatures aquatiques",
+    "Reptiles & amphibiens",
+    "Insectes",
+    "Mammifères",
+    "Animaux d'Asie",
+    "Légumes & herbes",
+    "Boulangerie & sucré",
+    "Cuisine du monde",
+    "Épices & ingrédients",
+    "Pierres & minéraux",
+    "Espace",
+    "Plantes & arbres",
+    "Photo & art",
+    "Cinéma",
+    "Internet & tech",
+    "Médical & science",
+    "Argent & finance",
+    "Météo & climat",
+    "Métiers II",
+    "Déco maison",
+    "Voyage II",
+    "Architecture",
+    "Accessoires & vêtements",
+    "Sport",
+    "Paysages du monde",
+    "Véhicules insolites",
+    "Musique",
+    "Formes & curiosités",
+    "Sports nautiques",
+    "Vie quotidienne"
+   ],
+   "tagLabels": {
+    "animal": "animal",
+    "food": "nourriture",
+    "object": "objet",
+    "place": "lieu",
+    "nature": "nature",
+    "body": "corps",
+    "clothes": "vêtement",
+    "transport": "transport",
+    "person": "personne",
+    "machine": "machine",
+    "weight": "poids libre",
+    "cardio": "cardio",
+    "accessory": "accessoire",
+    "bodypart": "muscle",
+    "exercise": "exercice",
+    "clothing": "tenue",
+    "nutrition": "nutrition"
+   }
+  },
+  {
+   "id": "gymw",
+   "group": "img",
+   "icon": "💪",
+   "title": "100 mots de la salle",
+   "sub": "Matériel, machines, exercices, muscles, nutrition.",
+   "decks": [
+    "Poids libres",
+    "Cardio",
+    "Machines",
+    "Bancs & racks",
+    "Accessoires",
+    "Tenue",
+    "Exercices",
+    "Muscles",
+    "Nutrition & récup",
+    "La salle"
+   ],
+   "tagLabels": {
+    "animal": "animal",
+    "food": "nourriture",
+    "object": "objet",
+    "place": "lieu",
+    "nature": "nature",
+    "body": "corps",
+    "clothes": "vêtement",
+    "transport": "transport",
+    "person": "personne",
+    "machine": "machine",
+    "weight": "poids libre",
+    "cardio": "cardio",
+    "accessory": "accessoire",
+    "bodypart": "muscle",
+    "exercise": "exercice",
+    "clothing": "tenue",
+    "nutrition": "nutrition"
+   }
+  }
+ ]
+}
