@@ -326,9 +326,8 @@ async function wikiImage(c){
   if(!c.wiki) return c.fb||null;
   if(imgCache[c.wiki]!==undefined) return imgCache[c.wiki];
   try{
-    const url=`https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(c.wiki)}&prop=pageimages&format=json&pithumbsize=600&pilicense=any&redirects=1&origin=*`;
-    const r=await fetch(url); const j=await r.json(); const page=Object.values(j.query.pages)[0];
-    imgCache[c.wiki]=(page&&page.thumbnail&&page.thumbnail.source)||c.fb||null;
+    const r=await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(c.wiki)}`); if(!r.ok) throw 0; const j=await r.json();
+    imgCache[c.wiki]=(j.thumbnail&&j.thumbnail.source)||null;
   }catch(e){ imgCache[c.wiki]=c.fb||null; }
   return imgCache[c.wiki];
 }
