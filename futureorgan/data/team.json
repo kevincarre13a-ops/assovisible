@@ -1,0 +1,14 @@
+{
+  "_aide": "Bureau et équipe. Le bureau officiel (président, trésorier…) n'est pas publié sur l'ancien site : complétez 'office' dès que vous avez les noms.",
+  "people": [
+    {"name": "Pascal Leray", "role": "Fondateur · organiste", "photo": "assets/img/mariage-cuers.webp",
+     "bio": "Ingénieur de l'École Centrale de Paris et docteur ès sciences, organiste liturgique depuis plus de 30 ans. Il a conçu, construit et financé seul le grand orgue de Rians, et développe l'électronique de commande de l'instrument."},
+    {"name": "Anne-Marie Leray", "role": "Soprano · chantre liturgique", "photo": "assets/img/anne-marie-3.webp",
+     "bio": "Soprano léger à l'étendue de trois octaves, du grégorien au romantique. Elle a donné plus de 200 concerts en France et à l'étranger et anime les mariages avec Pascal."}
+  ],
+  "office": [
+    {"role": "Président·e", "name": "À compléter"},
+    {"role": "Secrétaire", "name": "À compléter"},
+    {"role": "Trésorier·ère", "name": "À compléter"}
+  ]
+}

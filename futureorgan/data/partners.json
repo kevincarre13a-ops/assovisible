@@ -1,0 +1,31 @@
+{
+  "_aide": "Partenaires, soutiens et relais presse. 'url' est optionnel.",
+  "partners": [
+    {"name": "Digital Organ Systems", "kind": "Partenaire technique", "url": "https://digitalorgansystems.fr", "text": "Collaborateur cité sur l'ancien site pour les systèmes d'orgue numérique."},
+    {"name": "Organova Music", "kind": "Électronique pour orgue", "url": "https://www.organova.music/fr/post/r%C3%A9nover-ou-construire-un-orgue-%C3%A0-tuyaux-cartes-%C3%A9lectroniques", "text": "Article consacré à la rénovation et à la construction d'orgues avec cartes électroniques."},
+    {"name": "Diocèse de Fréjus-Toulon", "kind": "Soutien moral", "url": "", "text": "Orgue béni par Mgr Rey, Ordre du Mérite diocésain."},
+    {"name": "MAIF", "kind": "Assurance", "url": "", "text": "L'association est assurée comme membre sociétaire de la MAIF."}
+  ],
+  "contributors": [
+    "Sculptures des plates-faces et tourelles : M. Pulcini",
+    "Transport des éléments lourds : M. J.-L. Goyffont",
+    "Tourelles et plates-faces de montre : M. Villermet",
+    "Réparation des tuyaux de façade et sommier de contrebasse : M. M. Panaccione",
+    "Aide pour la contrebasse : Marcel Lafoli",
+    "Sculpture et pédalier en impression 3D : M. Jean-Marie Leclerc"
+  ],
+  "press": [
+    {"name": "Var-Matin", "text": "Articles de janvier et juin 2011."},
+    {"name": "France Inter — Carnets de campagne", "text": "Émission de Philippe Bertrand, 4 mai 2011."},
+    {"name": "TV83", "text": "Reportage de la web TV, octobre 2011."},
+    {"name": "Bulletin du Conseil général du Var", "text": "Numéro de 2007."},
+    {"name": "Bulletin municipal de Rians", "text": "Articles sur l'orgue."}
+  ],
+  "visitors": [
+    "Olivier Latry, titulaire du grand orgue de Notre-Dame de Paris",
+    "Pierre Bardon, titulaire du grand orgue de Saint-Maximin",
+    "Jean-Paul Imbert, ancien organiste de Saint-Eustache",
+    "Frantisek Vanicek, organiste tchèque",
+    "Paolo Oreni, concertiste italien"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "_aide": "Ajoutez un événement en copiant un bloc. 'date' au format AAAA-MM-JJ. Les événements passés passent automatiquement dans les archives. 'recurring' = chaque dimanche.",
+  "recurring": [
+    {"id": "dimanche", "title": "Conférence, démonstration et récital du grand orgue", "weekday": 0, "start": "15:00", "end": "18:00", "place": "Église de Rians", "free": true,
+     "text": "Chaque dimanche toute l'année. Merci de prévenir au préalable par mail ou SMS.", "image": "assets/img/facade-2016.webp"},
+    {"id": "messe", "title": "Messe animée à l'orgue", "weekday": 0, "start": "10:30", "end": "", "place": "Église de Rians", "free": true,
+     "text": "Service liturgique du dimanche matin. Horaire à vérifier auprès de la paroisse.", "image": "assets/img/eglise-nef.webp", "verify": true}
+  ],
+  "events": [
+    {"title": "Week-end portes ouvertes du grand orgue", "date": "2026-10-10", "date_end": "2026-10-11", "start": "14:00", "end": "18:00", "place": "Église de Rians",
+     "text": "Samedi 10 et dimanche 11 octobre, de 14 h à 18 h : conférence et démonstration de l'orgue.", "verify": "Annonce relevée sans année sur l'ancien site : année supposée, à confirmer."}
+  ]
+}

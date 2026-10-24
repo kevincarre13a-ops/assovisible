@@ -1,0 +1,36 @@
+{
+  "_aide": "Chaque catégorie contient des photos. 'src' = fichier dans assets/img. Ajoutez 'alt' pour l'accessibilité.",
+  "categories": [
+    {"id": "orgue", "label": "Le grand orgue", "photos": [
+      {"src": "assets/img/orgue-rians-motzkeit.webp", "alt": "Façade du grand orgue de Rians sous la rosace", "caption": "Le grand orgue sous la rosace"},
+      {"src": "assets/img/facade-2016.webp", "alt": "Façade centrée du grand orgue, 2016", "caption": "La façade (2016)"},
+      {"src": "assets/img/orgue-744.webp", "alt": "Tourelles et plates-faces dorées du grand orgue", "caption": "Tourelles et plates-faces"},
+      {"src": "assets/img/claviers-eustache.webp", "alt": "Anciens claviers de Saint-Eustache équipés de cartes électroniques", "caption": "Anciens claviers de Saint-Eustache, équipés de la technologie de Rians"},
+      {"src": "assets/img/vue-generale.webp", "alt": "Vue intérieure de l'orgue, tuyaux et charpente", "caption": "Dans les entrailles de l'orgue"}
+    ]},
+    {"id": "construction", "label": "Construction", "photos": [
+      {"src": "assets/img/tribune-2004.webp", "alt": "La tribune vide en 2004", "caption": "La tribune avant l'orgue (2004)"},
+      {"src": "assets/img/orgue-rians-facade.webp", "alt": "Façade du grand orgue en 2008", "caption": "La façade en 2008"}
+    ]},
+    {"id": "eglise", "label": "L'église de Rians", "photos": [
+      {"src": "assets/img/eglise-nef.webp", "alt": "La nef de l'église de Rians", "caption": "La nef"},
+      {"src": "assets/img/eglise-voutes.webp", "alt": "Les voûtes de l'église", "caption": "Les voûtes"},
+      {"src": "assets/img/eglise-autel.webp", "alt": "Le maître-autel", "caption": "Le maître-autel"},
+      {"src": "assets/img/eglise-vitraux.webp", "alt": "Les vitraux du chœur", "caption": "Les vitraux du chœur"},
+      {"src": "assets/img/rose.webp", "alt": "La rosace de l'église de Rians", "caption": "La rosace"}
+    ]},
+    {"id": "mariages", "label": "Mariages & concerts", "photos": [
+      {"src": "assets/img/mariage-rians.webp", "alt": "Mariage à l'église de Rians vu de l'orgue", "caption": "Un mariage à Rians"},
+      {"src": "assets/img/mariage-pernes.webp", "alt": "Mariage à Pernes-les-Fontaines", "caption": "Pernes-les-Fontaines"},
+      {"src": "assets/img/mariage-cuers.webp", "alt": "Pascal Leray à la console lors d'un mariage à Cuers", "caption": "Cuers, mai 2014"},
+      {"src": "assets/img/pontigny-2.webp", "alt": "Anne-Marie Leray chantant à l'abbaye de Pontigny", "caption": "Abbaye de Pontigny"},
+      {"src": "assets/img/st-maximin.webp", "alt": "Orgue de la basilique de Saint-Maximin", "caption": "Saint-Maximin"},
+      {"src": "assets/img/draguignan.webp", "alt": "Grand orgue de Draguignan", "caption": "Draguignan"}
+    ]},
+    {"id": "instruments", "label": "Instruments & électronique", "photos": [
+      {"src": "assets/img/orgue-transportable.webp", "alt": "Orgue liturgique transportable", "caption": "Orgue liturgique transportable"},
+      {"src": "assets/img/amadeus.webp", "alt": "Orgue positif à tuyaux Amadeus", "caption": "Orgue positif Amadeus"},
+      {"src": "assets/img/cartes-midi.webp", "alt": "Cartes électroniques KIH32 et KI7 MIDI USB sur un clavier", "caption": "Cartes MIDI/USB sur un clavier à capteurs Hall"}
+    ]}
+  ]
+}

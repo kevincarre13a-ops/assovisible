@@ -1,0 +1,22 @@
+[
+  {"id": "recitals", "title": "Récitals & visites du grand orgue", "icon": "♪", "image": "assets/img/orgue-rians-motzkeit.webp",
+   "summary": "Chaque dimanche de 15 h à 18 h, toute l'année : conférence sur l'orgue, démonstration et récital. Entrée gratuite.",
+   "details": ["Visites personnalisées en semaine sur demande.", "Merci de prévenir au préalable par mail ou SMS."],
+   "when": "Chaque dimanche, 15 h – 18 h", "where": "Église de Rians (Var)", "price": "Entrée gratuite", "cta": {"label": "Prévenir de votre visite", "href": "contact.html"}},
+  {"id": "mariages", "title": "Mariages avec orgue et soprano", "icon": "♡", "image": "assets/img/mariage-rians.webp",
+   "summary": "Anne-Marie (soprano, chantre liturgique) et Pascal (orgue) animent votre cérémonie, à Rians ou dans toute la France, messe ou bénédiction.",
+   "details": ["Rites catholique, protestant, anglican, gospel.", "Rencontre pour choisir vos musiques à Rians, dans votre église, ou par vidéo.", "Un orgue liturgique numérique transportable est apporté si l'église n'a pas d'orgue.", "Tarifs sur demande : les dons des mariés financent l'orgue et sont déductibles à 66 %."],
+   "when": "Sur réservation", "where": "Rians et toute la France", "price": "Dons déductibles (voir page Rejoindre)", "cta": {"label": "Préparer mon mariage", "href": "contact.html#mariage"}},
+  {"id": "liturgie", "title": "Service liturgique", "icon": "✦", "image": "assets/img/eglise-nef.webp",
+   "summary": "Pascal Leray, organiste liturgique depuis plus de 30 ans, assure l'orgue à la messe du dimanche matin à 10 h 30.",
+   "details": ["Horaire à vérifier auprès de la paroisse avant de vous déplacer."],
+   "when": "Dimanche, 10 h 30 (à vérifier)", "where": "Église de Rians", "price": "", "cta": {"label": "Se renseigner", "href": "contact.html"}},
+  {"id": "construction", "title": "Construire ou restaurer un orgue", "icon": "⚙", "image": "assets/img/claviers-eustache.webp",
+   "summary": "Une technologie conçue à Rians (cartes MIDI/USB, claviers à capteurs, commande de tuyaux) pour rénover ou bâtir un orgue numérique, à tuyaux ou hybride.",
+   "details": ["Cartes électroniques fournies montées ou en kit, compatibles Hauptwerk et Grand Orgue.", "Démarche non commerciale, au service des organistes amateurs et professionnels.", "Réalisations d'utilisateurs documentées sur l'ancien site."],
+   "when": "Sur demande", "where": "Contact par mail ou téléphone", "price": "Tarifs sur demande", "cta": {"label": "Voir la documentation technique", "href": "https://futureorgan.org/web_org/organ_components_fr.html", "external": true}},
+  {"id": "instruments", "title": "Instruments pour concerts & cérémonies", "icon": "♬", "image": "assets/img/orgue-transportable.webp",
+   "summary": "Orgue positif à tuyaux Amadeus III (3 jeux réels), clavecins, console transportable, orgue liturgique aux sonorités d'orgue d'église, piano Yamaha.",
+   "details": ["Tout est transportable sur demande (sauf le grand orgue), accordé sur place.", "L'orgue positif demande au moins deux personnes pour son transport."],
+   "when": "Sur demande", "where": "Toute la France", "price": "Tarifs sur demande", "cta": {"label": "Demander un devis", "href": "contact.html"}}
+]

@@ -1,0 +1,13 @@
+{
+  "_aide": "Ajoutez une actualité en haut de la liste. 'date' libre (ex. 2025 ou 2025-06-12). 'verify' : laissez un message si l'info doit être confirmée.",
+  "items": [
+    {"title": "Le grand orgue de Rians à l'honneur dans Infos Villages 83", "date": "2025", "tag": "Presse", "image": "assets/img/orgue-rians-motzkeit.webp",
+     "text": "Un article de la presse locale consacré à l'orgue de Rians est référencé sur l'ancien site.", "verify": "Date et contenu de l'article à confirmer ; ajouter le lien ou la copie."},
+    {"title": "Une console mobile pour jouer depuis la nef", "date": "2020", "tag": "Orgue", "image": "assets/img/claviers-eustache.webp",
+     "text": "Le cinquième clavier, déplaçable, permet de commander l'orgue depuis la nef. Une extension de l'instrument est documentée pour 2020.", "verify": "Détails de l'extension 2020 à compléter."},
+    {"title": "Bénédiction du grand orgue par Mgr Rey", "date": "2011-04-10", "tag": "Histoire", "image": "assets/img/facade-2016.webp",
+     "text": "L'évêque de Fréjus-Toulon bénit l'instrument et remet à Pascal Leray l'Ordre du Mérite diocésain.", "verify": "Une page de l'ancien site indique 2014 : 2011 semble correct, à confirmer."},
+    {"title": "Nomination au prix Chéreau-Lavet", "date": "2008", "tag": "Distinction", "image": "assets/img/orgue-rians-facade.webp",
+     "text": "Ce prix récompense chaque année un inventeur français : le projet de Rians a été nominé.", "verify": ""}
+  ]
+}

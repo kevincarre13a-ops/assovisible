@@ -1,0 +1,22 @@
+{
+  "_aide": "Coordonnées et réseaux de l'association. Modifiez ce fichier puis republiez le site : le pied de page et la page Contact se mettent à jour partout.",
+  "name": "Future Organ",
+  "tagline": "Association des Amis de l'Orgue de Rians",
+  "city": "Rians (Var)",
+  "address": "Église de Rians, Var (83) — adresse postale du siège : à compléter",
+  "presbytery_phone": "04 94 80 30 71",
+  "contacts": [
+    {"name": "Pascal Leray", "role": "Organiste, concepteur et constructeur de l'orgue", "phones": ["06 87 46 55 85", "07 68 70 61 04"], "emails": ["futureorgan@protonmail.com", "pascalleray.ftrd@free.fr"]},
+    {"name": "Anne-Marie Leray", "role": "Soprano et chantre liturgique", "phones": ["06 08 87 13 71"], "emails": ["ameorgue@free.fr"]}
+  ],
+  "main_email": "futureorgan@protonmail.com",
+  "main_phone": "06 87 46 55 85",
+  "email_note": "Les adresses Gmail arrivent parfois mal : privilégiez l'adresse ProtonMail.",
+  "social": [
+    {"label": "YouTube", "url": "https://www.youtube.com/channel/UCEFGgg8aHZZQPVbuXIKmygA"}
+  ],
+  "old_sites": [
+    {"label": "Documentation technique (ancien site Future Organ)", "url": "https://futureorgan.org/"},
+    {"label": "Anciennes pages mariages", "url": "https://mariageeglise.org/"}
+  ]
+}
