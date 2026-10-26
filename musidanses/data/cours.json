@@ -1,0 +1,113 @@
+[
+  {
+    "id": "claquettes-irlandaises",
+    "nom": "Claquettes irlandaises",
+    "couleur": "teal",
+    "photo": "assets/img/claquettes-irlandaises.jpg",
+    "resume": "Les rythmes de l'Irlande par les pieds : un atelier hebdomadaire par niveau.",
+    "public": "Adultes (à confirmer)",
+    "niveau": "Débutants et intermédiaires",
+    "creneaux": [
+      { "jour": "Mardi", "debut": "19:15", "fin": "20:15", "niveau": "Débutants" },
+      { "jour": "Mardi", "debut": "20:15", "fin": "21:45", "niveau": "Intermédiaires" }
+    ],
+    "frequence": "Chaque semaine",
+    "lieu": "Salle à la Roue, Chilly-Mazarin",
+    "animateur": "À renseigner",
+    "tarif": "290 € l'année, adhésion comprise (tarif 2024-2025, à confirmer)",
+    "statut": "actif"
+  },
+  {
+    "id": "flamenco",
+    "nom": "Flamenco",
+    "couleur": "rose",
+    "photo": "assets/img/flamenco-1600.jpg",
+    "resume": "Du flamenco pour les adultes, les ados et les enfants dès 5 ans, du débutant à l'intermédiaire.",
+    "public": "Adultes, ados et enfants à partir de 5 ans",
+    "niveau": "Débutants à intermédiaires",
+    "creneaux": [
+      { "jour": "Jeudi", "debut": "18:00", "fin": "19:30", "niveau": "Adultes" },
+      { "jour": "Jeudi", "debut": "19:30", "fin": "21:00", "niveau": "Adultes" },
+      { "jour": "Jeudi", "debut": "21:00", "fin": "22:30", "niveau": "Adultes" },
+      { "jour": "Samedi", "debut": "09:30", "fin": "10:30", "niveau": "Adultes débutants" },
+      { "jour": "Samedi", "debut": "10:30", "fin": "11:15", "niveau": "Enfants et ados" },
+      { "jour": "Samedi", "debut": "11:15", "fin": "12:00", "niveau": "Enfants et ados" },
+      { "jour": "Samedi", "debut": "12:00", "fin": "13:30", "niveau": "Adultes" },
+      { "jour": "Samedi", "debut": "13:30", "fin": "15:00", "niveau": "Adultes" }
+    ],
+    "frequence": "Chaque semaine",
+    "lieu": "Salle à la Roue, Chilly-Mazarin",
+    "animateur": "À renseigner",
+    "tarif": "290 € l'année, adhésion comprise (tarif 2024-2025, à confirmer)",
+    "note": "Le créneau du samedi matin des débutants est indiqué 9h30-10h30 sur la page Flamenco et 9h-10h30 sur l'accueil de l'ancien site : à confirmer.",
+    "statut": "actif"
+  },
+  {
+    "id": "salsa",
+    "nom": "Salsa / Lady style",
+    "couleur": "sun",
+    "photo": "assets/img/salsa-1347.jpg",
+    "resume": "Un atelier salsa et lady style le vendredi soir pour bouger au rythme des Caraïbes.",
+    "public": "Adultes (à confirmer)",
+    "niveau": "À confirmer",
+    "creneaux": [
+      { "jour": "Vendredi", "debut": "18:30", "fin": "19:30", "niveau": "Salsa / Lady style" }
+    ],
+    "frequence": "Chaque semaine",
+    "lieu": "Salle à la Roue, Chilly-Mazarin",
+    "animateur": "À renseigner",
+    "tarif": "205 € l'année, adhésion comprise (tarif 2024-2025, à confirmer)",
+    "statut": "actif"
+  },
+  {
+    "id": "danses-irlandaises",
+    "nom": "Danses irlandaises",
+    "couleur": "teal",
+    "photo": "assets/img/spectacle-irlandais.jpg",
+    "resume": "Un atelier de 2 heures, une fois par mois, pour découvrir et pratiquer les danses irlandaises.",
+    "public": "Ouvert à tous (à confirmer)",
+    "niveau": "À confirmer",
+    "creneaux": [
+      { "jour": "Vendredi", "debut": "20:30", "fin": "22:30", "niveau": "Un vendredi par mois" }
+    ],
+    "frequence": "Une fois par mois. Planning 2026 en cours d'élaboration",
+    "lieu": "Salle à la Roue, Chilly-Mazarin",
+    "animateur": "À renseigner",
+    "tarif": "10 € la séance de 2 h (tarif 2024-2025, à confirmer)",
+    "statut": "actif",
+    "hebdo": false
+  },
+  {
+    "id": "chants-irlandais",
+    "nom": "Chants irlandais",
+    "couleur": "plum",
+    "photo": "assets/img/spectacle-irlandais.jpg",
+    "resume": "Des ateliers de chant pour partager les airs traditionnels d'Irlande.",
+    "public": "Ouvert à tous (à confirmer)",
+    "niveau": "À confirmer",
+    "creneaux": [
+      { "jour": "Vendredi", "debut": "20:30", "fin": "22:30", "niveau": "Deux vendredis par mois" }
+    ],
+    "frequence": "Deux fois par mois. Planning 2026 en cours d'élaboration",
+    "lieu": "Salle à la Roue, Chilly-Mazarin",
+    "animateur": "À renseigner",
+    "tarif": "À renseigner",
+    "statut": "actif",
+    "hebdo": false
+  },
+  {
+    "id": "claquettes-americaines",
+    "nom": "Claquettes américaines",
+    "couleur": "plum",
+    "photo": "assets/img/claquettes-americaines-1.jpg",
+    "resume": "Pas de cours actuellement. Écrivez-nous pour être prévenu(e) d'une réouverture.",
+    "public": "-",
+    "niveau": "-",
+    "creneaux": [],
+    "frequence": "Pas de cours actuellement",
+    "lieu": "Salle à la Roue, Chilly-Mazarin",
+    "animateur": "À renseigner",
+    "tarif": "290 € l'année pour les claquettes, adhésion comprise (tarif 2024-2025, à confirmer)",
+    "statut": "pause"
+  }
+]

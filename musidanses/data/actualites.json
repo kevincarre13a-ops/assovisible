@@ -1,0 +1,38 @@
+[
+  {
+    "id": "forum-2026",
+    "label": "Septembre 2026",
+    "titre": "Rendez-vous au Forum des associations",
+    "resume": "Samedi 5 septembre 2026, de 10h à 16h. Présentation de claquettes irlandaises de 11h20 à 11h30.",
+    "texte": "Retrouvez Musidanses au Forum des associations de Chilly-Mazarin, samedi 5 septembre 2026 de 10h à 16h. Une présentation de claquettes irlandaises est prévue de 11h20 à 11h30. Venez nous rencontrer, poser vos questions et découvrir les ateliers.",
+    "image": "assets/img/spectacle-irlandais.jpg",
+    "tag": "Événement"
+  },
+  {
+    "id": "saison-2026-2027",
+    "label": "Saison 2026-2027",
+    "titre": "Les ateliers de la saison",
+    "resume": "Claquettes irlandaises le mardi, flamenco le jeudi et le samedi, salsa le vendredi.",
+    "texte": "Claquettes irlandaises le mardi (débutants 19h15-20h15, intermédiaires 20h15-21h45). Flamenco le jeudi soir et le samedi, pour adultes, ados et enfants. Salsa / lady style le vendredi de 18h30 à 19h30.",
+    "image": "assets/img/flamenco-1600.jpg",
+    "tag": "Cours"
+  },
+  {
+    "id": "irlandais-2026",
+    "label": "Saison 2026-2027",
+    "titre": "Danses et chants irlandais : planning en cours",
+    "resume": "Les dates des ateliers du vendredi soir seront annoncées ici dès qu'elles sont fixées.",
+    "texte": "Les ateliers de danses irlandaises (une fois par mois) et de chants irlandais (deux fois par mois) ont lieu le vendredi de 20h30 à 22h30. Le planning 2026 est en cours d'élaboration.",
+    "image": "assets/img/claquettes-irlandaises.jpg",
+    "tag": "Cours"
+  },
+  {
+    "id": "claquettes-americaines",
+    "label": "Information",
+    "titre": "Claquettes américaines : pas de cours actuellement",
+    "resume": "Écrivez-nous si vous souhaitez être prévenu(e) d'une réouverture.",
+    "texte": "Il n'y a pas de cours de claquettes américaines pour le moment. Écrivez-nous à infosmusidanses@yahoo.fr pour être prévenu(e) en cas de réouverture.",
+    "image": "assets/img/claquettes-americaines-1.jpg",
+    "tag": "Information"
+  }
+]

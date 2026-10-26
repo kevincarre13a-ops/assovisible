@@ -1,0 +1,16 @@
+{
+  "categories": [
+    { "id": "flamenco", "nom": "Flamenco" },
+    { "id": "salsa", "nom": "Salsa" },
+    { "id": "claquettes-irlandaises", "nom": "Claquettes irlandaises" },
+    { "id": "claquettes-americaines", "nom": "Claquettes américaines" }
+  ],
+  "medias": [
+    { "type": "photo", "categorie": "flamenco", "fichier": "assets/img/flamenco-1600.jpg", "legende": "Initiation au flamenco en plein air" },
+    { "type": "photo", "categorie": "salsa", "fichier": "assets/img/salsa-1347.jpg", "legende": "Démonstration de salsa devant la fresque" },
+    { "type": "photo", "categorie": "claquettes-irlandaises", "fichier": "assets/img/spectacle-irlandais.jpg", "legende": "Spectacle de claquettes irlandaises" },
+    { "type": "photo", "categorie": "claquettes-irlandaises", "fichier": "assets/img/claquettes-irlandaises.jpg", "legende": "Atelier de claquettes irlandaises" },
+    { "type": "photo", "categorie": "claquettes-americaines", "fichier": "assets/img/claquettes-americaines-1.jpg", "legende": "Claquettes américaines" },
+    { "type": "photo", "categorie": "claquettes-americaines", "fichier": "assets/img/claquettes-americaines-2.jpg", "legende": "Claquettes américaines" }
+  ]
+}

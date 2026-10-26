@@ -1,0 +1,13 @@
+{
+  "bureau": [
+    { "nom": "Jean-Daniel Lanos", "role": "Président" },
+    { "nom": "À renseigner", "role": "Trésorier(e)" },
+    { "nom": "À renseigner", "role": "Secrétaire" }
+  ],
+  "animateurs": [
+    { "nom": "À renseigner", "discipline": "Flamenco" },
+    { "nom": "À renseigner", "discipline": "Claquettes irlandaises" },
+    { "nom": "À renseigner", "discipline": "Salsa / Lady style" },
+    { "nom": "À renseigner", "discipline": "Danses et chants irlandais" }
+  ]
+}
