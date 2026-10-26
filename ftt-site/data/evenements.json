@@ -1,0 +1,49 @@
+{
+  "_aide": "Un evenement = date ISO avec fuseau (+01:00 hiver, +02:00 ete). 'affiche' optionnel. Les evenements passes passent seuls dans les archives.",
+  "evenements": [
+    {
+      "id": "loto-lavilledieu-2026",
+      "type": "Loto",
+      "titre": "Loto du club",
+      "date": "2026-10-22T21:00:00+02:00",
+      "lieu": "Salle des fêtes, Lavilledieu-du-Temple",
+      "texte": "3 000 € de bons d'achat Leclerc + bingo. Buvette, restauration et parking gratuit."
+    },
+    {
+      "id": "loto-meauzac-2026",
+      "type": "Loto",
+      "titre": "Loto du club",
+      "date": "2026-11-13T21:00:00+01:00",
+      "lieu": "Salle des fêtes, Meauzac",
+      "texte": "Bons d'achat Intermarché et tombola. Buvette et pâtisseries, carte bancaire acceptée.",
+      "affiche": "assets/img/affiche-evenements-oct-nov-2026.jpg"
+    },
+    {
+      "id": "vide-grenier-2026",
+      "type": "Vide-grenier",
+      "titre": "Vide-grenier et bourse aux jouets",
+      "date": "2026-11-15T08:00:00+01:00",
+      "fin": "17h",
+      "lieu": "Salle polyvalente, 7 place de la Halle, Lafrançaise",
+      "texte": "En intérieur uniquement. Emplacement 5 € (une table de 2 m + une chaise). Réservation et paiement obligatoires. Buvette et restauration toute la journée.",
+      "affiche": "assets/img/affiche-evenements-oct-nov-2026.jpg"
+    },
+    {
+      "id": "octobre-rose-2026",
+      "type": "Solidarité",
+      "titre": "Octobre Rose",
+      "date": "2026-10-01T09:00:00+02:00",
+      "fin_date": "2026-10-31",
+      "lieu": "Dans tout le club",
+      "texte": "Le FTT soutient la lutte contre le cancer du sein : pack 1 (bracelet, stylo, porte-clés, trousse) 10 €, pack 2 (bracelet et pin's) 10 €, les deux packs 15 €. Commandes : Jenny au 06 86 04 49 88."
+    },
+    {
+      "id": "ag-decouverte-2018",
+      "type": "Assemblée générale",
+      "titre": "Assemblée générale et après-midi découverte",
+      "date": "2018-06-30T10:00:00+02:00",
+      "lieu": "Labastide-du-Temple",
+      "texte": "AG de 10h à 12h, puis après-midi découverte garçons et filles dès 15h avec goûter offert. Archive du site historique du club."
+    }
+  ]
+}

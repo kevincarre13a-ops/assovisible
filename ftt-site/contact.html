@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nous rejoindre / Contact | Football Terrasses du Tarn</title>
+<meta name="description" content="Rejoindre le Football Terrasses du Tarn : inscriptions, séance d&#x27;essai, contact du président, formulaire et plan des stades (Labastide-du-Temple, 82).">
+<meta name="theme-color" content="#061a3f">
+<meta property="og:title" content="Nous rejoindre / Contact | Football Terrasses du Tarn">
+<meta property="og:description" content="Rejoindre le Football Terrasses du Tarn : inscriptions, séance d&#x27;essai, contact du président, formulaire et plan des stades (Labastide-du-Temple, 82).">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/logo.png">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Football Terrasses du Tarn, accueil"><img src="assets/img/logo.png" alt="" width="40" height="44"><span><b>F.T.T</b><small>Terrasses du Tarn</small></span></a>
+  <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span></span></button>
+  <nav class="nav" id="nav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="le-club.html">Le club</a><a href="equipes.html">Équipes</a><a href="matchs-resultats.html">Matchs &amp; résultats</a><a href="actualites-evenements.html">Actualités &amp; événements</a><a href="galerie.html">Galerie</a><a href="partenaires.html">Partenaires</a><a href="contact.html" class="nav-cta" aria-current="page">Nous rejoindre</a><a href="mentions-legales.html" class="nav-minor">Mentions légales</a></nav>
+</header>
+<main id="main">
+<section class="page-hero"><div class="container"><p class="eyebrow">Nous rejoindre</p><h1>Viens essayer le foot !</h1><p>Une question, une inscription, un partenariat ? Écris-nous ou appelle le président.</p></div><div class="pitch-line"></div></section>
+
+<section class="block">
+  <div class="container cols-2">
+    <div class="reveal prose">
+      <p class="eyebrow" style="color:var(--blue)">Inscriptions et licences</p>
+      <h2>Rejoindre le FTT</h2>
+      <div data-render="inscription"></div>
+      <h3>Coordonnées</h3>
+      <ul class="info-list">
+        <li><b>Président</b>Jérémy Mothes</li>
+        <li><b>Téléphone</b><a href="tel:+33686526824">06 86 52 68 24</a></li>
+        <li><b>E-mail</b><a href="mailto:jeremy.mothes@sfr.fr">jeremy.mothes@sfr.fr</a></li>
+        <li><b>Adresse</b>9 Rue Grand-rue, 82100 Labastide-du-Temple</li>
+        <li><b>Facebook</b><a href="https://www.facebook.com/FootballTerrassesduTarn/" target="_blank" rel="noopener">Football Terrasses du Tarn</a></li>
+      </ul>
+    </div>
+    <div class="reveal card" id="formulaire">
+      <h3>Écrivez-nous</h3>
+      <form class="contact" name="contact" method="POST" action="merci.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hp"><label>Ne pas remplir : <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <label>Nom et prénom<input name="nom" required autocomplete="name"></label>
+        <label>E-mail<input type="email" name="email" required autocomplete="email"></label>
+        <label>Téléphone (facultatif)<input type="tel" name="telephone" autocomplete="tel"></label>
+        <label>Votre demande
+          <select name="sujet" id="sujet">
+            <option value="inscription">Inscription / séance d'essai</option>
+            <option value="veterans">Rejoindre les vétérans</option>
+            <option value="partenaire">Devenir partenaire</option>
+            <option value="benevole">Devenir bénévole ou éducateur</option>
+            <option value="autre">Autre question</option>
+          </select>
+        </label>
+        <label>Message<textarea name="message" required></textarea></label>
+        <label class="check"><input type="checkbox" name="consentement" required> J'accepte que le club utilise ces informations pour répondre à ma demande (aucune autre utilisation).</label>
+        <button class="btn btn-dark" type="submit">Envoyer</button>
+      </form>
+    </div>
+  </div>
+</section>
+<section class="block alt" id="stades">
+  <div class="container">
+    <div class="section-head reveal"><p class="eyebrow" style="color:var(--blue)">Plan des stades</p><h2>Où nous trouver ?</h2><p>Siège : 9 Rue Grand-rue, Labastide-du-Temple. Les entraînements ont lieu sur plusieurs terrains selon les catégories.</p></div>
+    <div class="card reveal" data-render="stades"></div>
+    <p class="hint" style="margin-top:1rem">Liens de plan générés par adresse : le club peut confirmer ou corriger chaque lieu dans <code>data/club.json</code>.</p>
+  </div>
+</section>
+<script>
+  (function(){ try { var s=new URLSearchParams(location.search).get("sujet"); if(s) document.getElementById("sujet").value=s; } catch(e){} })();
+</script>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <div class="fbrand"><img src="assets/img/logo.png" alt="" width="56" height="61"><b>Football Terrasses du Tarn</b></div>
+        <p>« Ensemble, pour le club ! » Un club de football qui réunit 9 communes du Tarn-et-Garonne depuis 2005.</p>
+        <div class="social"><a href="https://www.facebook.com/FootballTerrassesduTarn/" target="_blank" rel="noopener">Facebook</a><a href="https://ftt.sportsregions.fr/" target="_blank" rel="noopener">Site actuel du club</a></div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Jérémy Mothes, président</li>
+          <li><a href="tel:+33686526824">06 86 52 68 24</a></li>
+          <li><a href="mailto:jeremy.mothes@sfr.fr">jeremy.mothes@sfr.fr</a></li>
+          <li>9 Rue Grand-rue<br>82100 Labastide-du-Temple</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Le site</h4>
+        <ul>
+          <li><a href="le-club.html">Le club</a></li><li><a href="equipes.html">Équipes</a></li><li><a href="matchs-resultats.html">Matchs &amp; résultats</a></li>
+          <li><a href="actualites-evenements.html">Actualités &amp; événements</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="partenaires.html">Partenaires</a></li>
+          <li><a href="contact.html">Nous rejoindre</a></li><li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal"><span>© Football Terrasses du Tarn · Photos et visuels : club, crédits indiqués</span><span>Maquette réalisée par <a href="https://assovisible.fr" target="_blank" rel="noopener">AssoVisible</a></span></div>
+  </div>
+</footer>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>

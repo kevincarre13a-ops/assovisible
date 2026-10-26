@@ -1,0 +1,24 @@
+{
+  "_aide": "Ajouter une photo : {\"src\":\"assets/img/photos/xxx.jpg\",\"titre\":\"...\",\"groupe\":\"U13\",\"credit\":\"Photo : Nom\"}. Toujours indiquer l'auteur ou la source.",
+  "credit_defaut": "Photo : Football Terrasses du Tarn (site officiel du club)",
+  "groupes": ["École de foot", "U10 · U11", "U12 · U13", "U14 · U15", "U16 · U17", "Féminines", "Affiches"],
+  "photos": [
+    {"src": "assets/img/photos/feminines-u9-u11.jpg", "titre": "Nos féminines U9-U11", "groupe": "Féminines"},
+    {"src": "assets/img/photos/feminines-u12-u13.jpg", "titre": "Féminines U12-U13 · 10 octobre 2026", "groupe": "Féminines"},
+    {"src": "assets/img/photos/u6-u7-septembre.jpg", "titre": "U6-U7 · 26 septembre", "groupe": "École de foot"},
+    {"src": "assets/img/photos/u8-u9-20-septembre.jpg", "titre": "U8-U9 · 20 septembre 2026", "groupe": "École de foot"},
+    {"src": "assets/img/photos/u9.jpg", "titre": "Les U9", "groupe": "École de foot"},
+    {"src": "assets/img/photos/u10-u11-equipe1.jpg", "titre": "U10-U11 · équipe 1", "groupe": "U10 · U11"},
+    {"src": "assets/img/photos/u10-u11-plateau-10-octobre.jpg", "titre": "U10-U11 · plateau du 10 octobre", "groupe": "U10 · U11"},
+    {"src": "assets/img/photos/u13-equipe1.jpg", "titre": "U13 · équipe 1", "groupe": "U12 · U13"},
+    {"src": "assets/img/photos/u13-equipe2.jpg", "titre": "U13 · équipe 2", "groupe": "U12 · U13"},
+    {"src": "assets/img/photos/u12-u13-plateau-10-octobre.jpg", "titre": "U12-U13 · plateau du 10 octobre", "groupe": "U12 · U13"},
+    {"src": "assets/img/photos/u12-u13-parents-plateau.jpg", "titre": "U12-U13 · les parents au plateau", "groupe": "U12 · U13"},
+    {"src": "assets/img/photos/u15-equipe1.jpg", "titre": "U15 · équipe 1", "groupe": "U14 · U15"},
+    {"src": "assets/img/photos/u15-equipe2.jpg", "titre": "U15 · équipe 2", "groupe": "U14 · U15"},
+    {"src": "assets/img/photos/u14-u15-match-10-octobre.jpg", "titre": "U14-U15 · match du 10 octobre", "groupe": "U14 · U15"},
+    {"src": "assets/img/photos/u16-u17.jpg", "titre": "Les U16-U17", "groupe": "U16 · U17"},
+    {"src": "assets/img/affiche-evenements-oct-nov-2026.jpg", "titre": "Affiche des évènements du club, octobre-novembre 2026", "groupe": "Affiches", "credit": "Visuel : Football Terrasses du Tarn", "tall": true},
+    {"src": "assets/img/planning-2026-2027.jpg", "titre": "Planning des entraînements 2026-2027", "groupe": "Affiches", "credit": "Visuel : Football Terrasses du Tarn"}
+  ]
+}

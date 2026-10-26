@@ -1,0 +1,7 @@
+{
+  "_aide": "Ajouter un partenaire : {\"nom\":\"Entreprise\",\"logo\":\"assets/img/partenaires/logo.png\",\"url\":\"https://...\",\"niveau\":\"Maillot\"}. Tant que la liste est vide, des emplacements d'attente s'affichent.",
+  "partenaires": [],
+  "attente": "Les logos des partenaires et sponsors du club seront ajoutés ici. Aucun partenaire n'a été identifié publiquement pour cette maquette.",
+  "soutiens": ["Albefeuille-Lagarde", "Barry-d'Islemade", "Les Barthes", "Labastide-du-Temple", "Lafrançaise", "Lavilledieu-du-Temple", "Meauzac", "Saint-Porquier", "Villemade"],
+  "contact_sponsoring": "Michael Porta Benache, responsable sponsoring"
+}

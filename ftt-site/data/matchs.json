@@ -1,0 +1,14 @@
+{
+  "_aide": "Ajouter un match a venir dans 'prochains' : {\"date\":\"2026-11-21T14:30:00+01:00\",\"categorie\":\"U13\",\"domicile\":\"FTT\",\"exterieur\":\"Adversaire\",\"lieu\":\"Stade ...\",\"competition\":\"Plateau\"}. Il alimentera aussi le compte a rebours.",
+  "prochains": [],
+  "prochains_attente": "Le calendrier des prochaines rencontres sera publié ici par le club. Retrouvez en attendant les plannings officiels sur Footclubs/FFF.",
+  "resultats": [
+    {"date": "2026-06-06", "saison": "2025-2026", "categorie": "U17 · D1 phase 2", "equipes": "FTT U17 1 – Castel Gandalou U17 1", "score": "2 – 6", "source": "SportCorico"},
+    {"date": "2026-05-09", "saison": "2025-2026", "categorie": "U17 · D1 phase 2", "equipes": "FCMP U17 1 – FTT U17 1", "score": "1 – 1", "source": "SportCorico"}
+  ],
+  "classement_attente": "Le classement de la saison 2026-2027 sera affiché ici dès qu'il sera disponible auprès du District de Tarn-et-Garonne.",
+  "liens": [
+    {"label": "Calendrier & résultats officiels (FFF)", "url": "https://epreuves.fff.fr/competition/club/561232-football-terrasses-du-tarn/resultats-et-calendrier.html"},
+    {"label": "Les équipes sur SportCorico", "url": "https://www.sportcorico.com/clubs/football-terrasses-du-tarn"}
+  ]
+}

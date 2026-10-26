@@ -1,0 +1,136 @@
+{
+  "_aide": "Fichier modifiable par le club. Les champs a null ou 'A completer' s'affichent comme textes d'attente. Pour afficher un compteur licencies, ajoutez {\"label\":\"Licenciés\",\"value\":123} dans 'compteurs'.",
+  "nom": "Football Terrasses du Tarn",
+  "sigle": "F.T.T",
+  "slogan": "Ensemble, pour le club !",
+  "fondation": 2005,
+  "adresse": "9 Rue Grand-rue, 82100 Labastide-du-Temple",
+  "telephone": "06 86 52 68 24",
+  "telephone_lien": "+33686526824",
+  "email": "jeremy.mothes@sfr.fr",
+  "president": "Jérémy Mothes",
+  "facebook": "https://www.facebook.com/FootballTerrassesduTarn/",
+  "site_actuel": "https://ftt.sportsregions.fr/",
+  "communes": [
+    "Albefeuille-Lagarde",
+    "Barry-d'Islemade",
+    "Les Barthes",
+    "Labastide-du-Temple",
+    "Lafrançaise",
+    "Lavilledieu-du-Temple",
+    "Meauzac",
+    "Saint-Porquier",
+    "Villemade"
+  ],
+  "compteurs": [
+    {
+      "label": "années d'existence",
+      "calcul": "annees_depuis_fondation"
+    },
+    {
+      "label": "communes unies",
+      "value": 9
+    },
+    {
+      "label": "équipes cette saison",
+      "value": 8
+    },
+    {
+      "label": "terrains d'entraînement",
+      "value": 4
+    }
+  ],
+  "valeurs": [
+    {
+      "titre": "Dévoués",
+      "texte": "Bénévoles, éducateurs, accompagnateurs : le club tient grâce à celles et ceux qui donnent de leur temps."
+    },
+    {
+      "titre": "Disponibles",
+      "texte": "Présents aux entraînements, sur les plateaux et dans les salles des fêtes, toute la saison."
+    },
+    {
+      "titre": "Désintéressés",
+      "texte": "Pour les enfants des villages : le plaisir du jeu et l'esprit d'équipe d'abord."
+    },
+    {
+      "titre": "Ensemble",
+      "texte": "Neuf communes unies autour du même ballon, pour que chaque enfant puisse jouer près de chez lui."
+    }
+  ],
+  "bureau": [
+    {
+      "nom": "Jérémy Mothes",
+      "role": "Président"
+    },
+    {
+      "nom": "Lucie Costa",
+      "role": "Trésorière"
+    },
+    {
+      "nom": "Adeline Mothes",
+      "role": "Trésorière adjointe"
+    },
+    {
+      "nom": "Valérie Lascourreges Berdeu",
+      "role": "Secrétaire générale"
+    },
+    {
+      "nom": "Géraldine Mailhe",
+      "role": "Secrétaire adjointe"
+    },
+    {
+      "nom": "Michael Porta Benache",
+      "role": "Responsable sponsoring"
+    },
+    {
+      "nom": "Jérôme Alladio",
+      "role": "Responsable jeunes"
+    },
+    {
+      "nom": "Jennifer Laduye",
+      "role": "Responsable événementiel"
+    }
+  ],
+  "educateurs": null,
+  "educateurs_attente": "La liste des éducateurs sera ajoutée ici par le club (nom, catégorie, diplôme).",
+  "inscription": {
+    "statut": "attente",
+    "texte": "Les modalités d'inscription, le montant de la licence et les pièces à fournir seront précisés ici par le club.",
+    "essai": "Pour les nouveaux : venez essayer le foot et rejoindre la famille du FTT. Les séances d'essai sont possibles pendant les entraînements, contactez le club pour convenir d'un créneau.",
+    "tarifs": null
+  },
+  "boutique": "Pour toute commande de la boutique du club : 06 09 30 16 03",
+  "stades": [
+    {
+      "nom": "Stade d'Albefeuille",
+      "commune": "Albefeuille-Lagarde",
+      "requete": "Stade Yvan Garrigues Albefeuille-Lagarde",
+      "note": "Stade Yvan Garrigues (référence FFF)"
+    },
+    {
+      "nom": "Stade de Meauzac",
+      "commune": "Meauzac",
+      "requete": "Stade Meauzac 82290",
+      "note": ""
+    },
+    {
+      "nom": "Stade de Labastide",
+      "commune": "Labastide-du-Temple",
+      "requete": "Stade Laurent Macabiau Labastide-du-Temple",
+      "note": "Stade Laurent Macabiau (référence FFF)"
+    },
+    {
+      "nom": "Terrain de Lunel",
+      "commune": "À préciser",
+      "requete": "",
+      "note": "Indiqué sur le planning officiel, adresse à confirmer par le club"
+    },
+    {
+      "nom": "Stade de Lafrançaise",
+      "commune": "Lafrançaise",
+      "requete": "Stade Gouzes Boutal Lafrançaise",
+      "note": "Stade Gouzes Boutal (référence FFF), lieu de matchs"
+    }
+  ]
+}

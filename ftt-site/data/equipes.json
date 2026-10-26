@@ -1,0 +1,23 @@
+{
+  "_aide": "Une entree par equipe. 'educateur' vide = texte d'attente. 'seances' = jours, heures et lieu. Groupes : ecole, jeunes, seniors, veterans.",
+  "saison": "2026-2027",
+  "planning_image": "assets/img/planning-2026-2027.jpg",
+  "groupes": [
+    {"id": "ecole", "titre": "École de foot", "sous": "U6 à U9 · découvrir, jouer, sourire"},
+    {"id": "jeunes", "titre": "Catégories jeunes", "sous": "U10 à U17 · filles et garçons"},
+    {"id": "seniors", "titre": "Seniors", "sous": "À confirmer par le club"},
+    {"id": "veterans", "titre": "Vétérans", "sous": "Le foot, la rigolade, les copains"}
+  ],
+  "equipes": [
+    {"id": "u6-u7", "groupe": "ecole", "nom": "U6 · U7", "photo": "assets/img/photos/u6-u7-septembre.jpg", "educateur": "", "seances": [{"jour": "Mercredi", "heure": "17h30 – 18h30", "lieu": "Stade de Meauzac"}], "note": "Premiers pas avec le ballon."},
+    {"id": "u8-u9", "groupe": "ecole", "nom": "U8 · U9", "photo": "assets/img/photos/u8-u9-20-septembre.jpg", "educateur": "", "seances": [{"jour": "Mercredi", "heure": "17h30 – 18h30", "lieu": "Stade de Meauzac"}], "note": "Plateaux et premiers matchs."},
+    {"id": "u10-u11", "groupe": "jeunes", "nom": "U10 · U11", "photo": "assets/img/photos/u10-u11-equipe1.jpg", "educateur": "", "seances": [{"jour": "Lundi", "heure": "18h – 19h30", "lieu": "Stade d'Albefeuille"}, {"jour": "Mercredi", "heure": "18h – 18h30", "lieu": "Stade d'Albefeuille", "note": "horaire à confirmer"}], "note": "Équipe 1."},
+    {"id": "u12-u13", "groupe": "jeunes", "nom": "U12 · U13", "photo": "assets/img/photos/u13-equipe1.jpg", "educateur": "", "seances": [{"jour": "Lundi", "heure": "18h – 19h30", "lieu": "Stade d'Albefeuille"}, {"jour": "Mercredi", "heure": "18h30 – 20h", "lieu": "Lunel"}], "note": "Deux équipes U13 cette saison."},
+    {"id": "u14-u15-garcons", "groupe": "jeunes", "nom": "U14 · U15 garçons", "photo": "assets/img/photos/u14-u15-match-10-octobre.jpg", "educateur": "", "seances": [{"jour": "Lundi", "heure": "18h15 – 20h", "lieu": "Stade de Meauzac"}, {"jour": "Jeudi", "heure": "18h15 – 20h", "lieu": "Stade de Meauzac", "note": "FTT 1"}, {"jour": "Jeudi", "heure": "18h15 – 20h", "lieu": "Stade de Labastide", "note": "FTT 2"}], "note": "Deux équipes engagées."},
+    {"id": "u14-u15-feminines", "groupe": "jeunes", "nom": "U14 · U15 féminines", "photo": "assets/img/photos/feminines-u9-u11.jpg", "educateur": "", "seances": [], "note": "Section féminine ouverte des U9 aux U17. Horaires à confirmer avec le club."},
+    {"id": "u16-u17-1", "groupe": "jeunes", "nom": "U16 · U17 · équipe 1", "photo": "assets/img/photos/u16-u17.jpg", "educateur": "", "seances": [{"jour": "Mercredi", "heure": "18h15 – 19h45", "lieu": "Stade d'Albefeuille"}, {"jour": "Vendredi", "heure": "18h15 – 19h45", "lieu": "Stade d'Albefeuille"}], "note": "Engagée en championnat U17 du Tarn-et-Garonne."},
+    {"id": "u16-u17-2", "groupe": "jeunes", "nom": "U16 · U17 · équipe 2", "photo": "", "educateur": "", "seances": [{"jour": "Mercredi", "heure": "18h15 – 19h45", "lieu": "Stade d'Albefeuille"}, {"jour": "Vendredi", "heure": "18h15 – 19h45", "lieu": "Stade d'Albefeuille"}], "note": "Seconde équipe de la catégorie."},
+    {"id": "seniors", "groupe": "seniors", "nom": "Seniors", "photo": "", "educateur": "", "seances": [], "attente": true, "note": "Information à compléter par le club (existence d'une équipe seniors, entraînements, niveau)."},
+    {"id": "veterans", "groupe": "veterans", "nom": "Vétérans", "photo": "", "educateur": "", "seances": [{"jour": "Vendredi soir", "heure": "À préciser", "lieu": "Matchs amicaux"}], "note": "Le foot, la rigolade, les copains. Ambiance garantie : venez rejoindre l'équipe."}
+  ]
+}
