@@ -1,0 +1,46 @@
+{
+  "_aide": "Les photos sont classées par album. Ajoutez une photo dans un album avec 'src' (chemin) et 'legende'. 'format' : 'large' (par défaut), 'haut' pour une photo verticale.",
+  "albums": [
+    {
+      "id": "saison-2025-2026",
+      "titre": "Saison 2025 – 2026",
+      "photos": [
+        { "src": "assets/img/affiche-noel-2025.jpg", "legende": "Affiche du concert de Noël, 21 décembre 2025", "format": "haut" },
+        { "src": "assets/img/cheffe.jpg", "legende": "Sophie Sebbah, cheffe de chœur" }
+      ]
+    },
+    {
+      "id": "printemps-2025",
+      "titre": "Printemps 2025",
+      "photos": [
+        { "src": "assets/img/parvis-1.jpg", "legende": "Sur le parvis de l'église de Saint-Jean-de-Monts" },
+        { "src": "assets/img/parvis-2.jpg", "legende": "Le chœur en écharpes rouges" },
+        { "src": "assets/img/eglise-saint-jean.jpg", "legende": "Devant l'église de Saint-Jean-de-Monts", "format": "haut" },
+        { "src": "assets/img/concert-nef.jpg", "legende": "En concert dans la nef" },
+        { "src": "assets/img/concert-mai-2025.jpg", "legende": "Concert du 18 mai 2025" },
+        { "src": "assets/img/public.jpg", "legende": "Le public dans l’église" },
+        { "src": "assets/img/pupitres.jpg", "legende": "Les choristes en concert" },
+        { "src": "assets/img/concert-choeur.jpg", "legende": "Concert sous la direction de la cheffe de chœur" }
+      ]
+    },
+    {
+      "id": "concerts-2022-2023",
+      "titre": "Concerts 2022 – 2023",
+      "photos": [
+        { "src": "assets/img/concert-2022-a.jpg", "legende": "Concert d'octobre 2022" },
+        { "src": "assets/img/concert-2023-a.jpg", "legende": "Concert de 2023" },
+        { "src": "assets/img/concert-2023-b.jpg", "legende": "Concert dans une église de la région" },
+        { "src": "assets/img/concert-2023-c.jpg", "legende": "Les choristes réunis" }
+      ]
+    },
+    {
+      "id": "presse",
+      "titre": "Dans la presse",
+      "photos": [
+        { "src": "assets/img/presse-mai-2025.jpg", "legende": "Ouest-France, concert du 18 mai 2025", "format": "haut" },
+        { "src": "assets/img/presse-juin-2025.jpg", "legende": "Ouest-France, concert pour les Restos du Cœur", "format": "haut" },
+        { "src": "assets/img/presse-oct-2022.jpg", "legende": "Annonce du concert au profit de la SNSM, octobre 2022" }
+      ]
+    }
+  ]
+}

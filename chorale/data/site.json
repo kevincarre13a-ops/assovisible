@@ -1,0 +1,33 @@
+{
+  "_aide": "Coordonnées et infos générales du site. Modifiez ici : elles se mettent à jour sur toutes les pages.",
+  "nom": "Chorale Polyphonique À Chœur Ouvert",
+  "nomCourt": "À Chœur Ouvert",
+  "fondation": 1999,
+  "slogan": "Écoutez-les, Regardez-les, Vivez-les.",
+  "adresseContact": "1 passage des Pêcheurs, 85690 Notre-Dame-de-Monts",
+  "contact": {
+    "nom": "Jean Gonnord",
+    "role": "Co-président",
+    "telephone": "06 20 24 52 55",
+    "email": "achoeurouvert85270@gmail.com"
+  },
+  "repetition": {
+    "jour": "Mercredi",
+    "horaire": "19h30 – 21h30",
+    "periode": "de septembre à juin",
+    "lieu": "Mairie annexe",
+    "adresse": "70 avenue des Azalées, 85270 Saint-Hilaire-de-Riez",
+    "essaisGratuits": 2
+  },
+  "chefDeChoeur": "Sophie Sebbah",
+  "siret": "794 389 262 00013",
+  "reseaux": {
+    "youtube": "https://www.youtube.com/@ChoraleACHOEUROUVERT",
+    "facebook": "https://www.facebook.com/profile.php?id=61574828766723",
+    "ancienSite": "https://63dcf01a424bd.site123.me/"
+  },
+  "video": {
+    "youtubeId": "g58UQMPs1cs",
+    "titre": "Agnus Dei — À Chœur Ouvert"
+  }
+}

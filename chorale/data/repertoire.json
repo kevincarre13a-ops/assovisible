@@ -1,0 +1,27 @@
+{
+  "_aide": "Ajoutez un morceau dans 'morceaux'. 'type' = sacre | chanson | monde | autre. Pour une vidéo YouTube, renseignez 'youtube' (identifiant). Pour un enregistrement Google Drive, renseignez 'drive' (identifiant du fichier).",
+  "univers": [
+    { "titre": "Classique et sacré", "texte": "Des pièces sacrées et classiques, chantées à plusieurs voix dans les églises de la côte." },
+    { "titre": "Chanson et pop", "texte": "De la chanson française contemporaine aux standards, pour chanter avec le sourire." },
+    { "titre": "Musiques du monde", "texte": "Des mélodies venues d'Irlande, d'Europe et d'ailleurs, à découvrir à plusieurs voix." }
+  ],
+  "citation": {
+    "texte": "Du moment que ce soit bien écrit et que ça exprime quelque chose.",
+    "auteur": "Sophie Sebbah, cheffe de chœur"
+  },
+  "morceaux": [
+    { "titre": "Agnus Dei", "type": "sacre", "note": "Enregistrement vidéo", "youtube": "g58UQMPs1cs" },
+    { "titre": "Laudate Dominum", "type": "sacre", "note": "Concert de Saint-Jean-de-Monts, mai 2025", "drive": "1HTT-6PqXVMoVbsO_zqdACaofAn4LkrG0" },
+    { "titre": "Ultreia", "type": "monde", "note": "Enregistrement", "drive": "1xHZpyVfnhK27AzZK-BHoOYk6irQY6C1n" },
+    { "titre": "Armstrong (Claude Nogaro)", "type": "chanson", "note": "Concert du 1er juin 2025, Saint-Hilaire-de-Riez", "drive": "1sFwk3hTkNcvgaOlWg_ijQe7K10IeL2xX" },
+    { "titre": "Le Mambo", "type": "autre", "note": "Concert du 1er juin 2025, Saint-Hilaire-de-Riez", "drive": "1SX_m4RY2X8G1jyw1q8P3B4j-M9__4hLH" },
+    { "titre": "À la claire fontaine / Dormez la belle", "type": "chanson", "note": "Concert de Brétignolles, 27 avril 2025", "drive": "1c0td5oTyOcdOYcXW4qn2Dg4vJjfPA5O_" },
+    { "titre": "La ballade nord-irlandaise", "type": "monde", "note": "Avec les chorales Harmonia et La Clé des Chants, 27 avril 2025", "drive": "1TDlwZB_1xYLtWlIlnDmg_vuNIJfewMSK" },
+    { "titre": "Tulla Baba", "type": "monde", "note": "Concert de Brétignolles, avril 2025", "drive": "1qxIR3OEN1-7EEvloBYMpnULEwqiXRLkB" },
+    { "titre": "Midnight Blue", "type": "autre", "note": "Enregistrement du 29 janvier 2023", "drive": "1bHACYcfpu-Mz5Zfs40GO9V1yFib_U1Ap" },
+    { "titre": "Le chœur des murmures", "type": "autre", "note": "Enregistrement du 29 janvier 2023", "drive": "1vP-zTGKWCIb_SCpAw6S-u9uPoRGsxdHE" },
+    { "titre": "When a Child", "type": "autre", "note": "Enregistrement", "drive": "1oj-7eeZ2fSXtyoianw5Rtwj_L1W2NqGu" },
+    { "titre": "La Marseillaise", "type": "autre", "note": "Commémoration du 11 novembre 2022, Saint-Jean-de-Monts", "drive": "1TQVQZS9pjtm5X-sNFtS7Br-3nqmwQY92" },
+    { "titre": "Somewhere", "type": "autre", "note": "Concert au profit de RETINA, 2022" }
+  ]
+}

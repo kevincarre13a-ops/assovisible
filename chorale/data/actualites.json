@@ -1,0 +1,48 @@
+{
+  "_aide": "Ajoutez une actualité en haut de la liste : date (AAAA-MM-JJ), titre, texte, et éventuellement image (chemin) et lien.",
+  "actualites": [
+    {
+      "date": "2026-10-26",
+      "titre": "Le site de la chorale est en ligne",
+      "texte": "Retrouvez ici les concerts, le répertoire, les répétitions et les photos de la chorale. Les informations marquées « à confirmer » seront complétées au fil de la saison.",
+      "image": "assets/img/hero-eglise.jpg"
+    },
+    {
+      "date": "2026-05-12",
+      "titre": "Premier concert à Notre-Dame-de-Monts le 31 mai",
+      "texte": "La chorale a donné son concert de printemps à l'église Notre-Dame-de-l'Assomption, pour la première fois à Notre-Dame-de-Monts, avec un nouveau programme. Entrée libre au profit de l'AVLC.",
+      "image": "assets/img/concert-mai-2025.jpg",
+      "lien": { "url": "https://novmaradio.fr/index.php/news/a-choeur-ouvert-fin-mai-a-notre-dame-de-monts-373", "texte": "Lire l'annonce de Nov Ma Radio" }
+    },
+    {
+      "date": "2026-04-26",
+      "titre": "« Mille Chœurs pour un regard » avec RETINA France",
+      "texte": "Concert avec Le Chœur des Cœurs de Machecoul, au profit de la recherche sur les maladies de la rétine.",
+      "image": "assets/img/concert-nef.jpg"
+    },
+    {
+      "date": "2026-01-18",
+      "titre": "Concert du Nouvel An à Saint-Hilaire-de-Riez",
+      "texte": "La chorale a chanté l'année nouvelle à l'église Saint-Hilaire, avec le Chœur La Vie de Saint-Gilles-Croix-de-Vie.",
+      "image": "assets/img/pupitres.jpg"
+    },
+    {
+      "date": "2025-12-21",
+      "titre": "Concert de Noël à Saint-Jean-de-Monts",
+      "texte": "Concert polyphonique de Noël à l'église de Saint-Jean-de-Monts. Gratuit, participation libre.",
+      "image": "assets/img/affiche-noel-2025.jpg"
+    },
+    {
+      "date": "2025-06-01",
+      "titre": "Un concert pour les Restos du Cœur",
+      "texte": "Concert de printemps avec la chorale « Chantons » de Longeville-sur-Mer, au profit des Restos du Cœur de Givrand.",
+      "image": "assets/img/presse-juin-2025.jpg"
+    },
+    {
+      "date": "2024-09-01",
+      "titre": "Une nouvelle cheffe de chœur : Sophie Sebbah",
+      "texte": "Depuis la rentrée 2024/2025, Sophie Sebbah dirige la chorale, avec un répertoire entièrement renouvelé.",
+      "image": "assets/img/cheffe.jpg"
+    }
+  ]
+}

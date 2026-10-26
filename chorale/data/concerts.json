@@ -1,0 +1,115 @@
+{
+  "_aide": "PROCHAIN CONCERT : renseignez 'date' au format AAAA-MM-JJTHH:MM (ex. 2026-12-20T16:00) et les autres champs. Le compte à rebours et le bandeau de l'accueil se mettent à jour tout seuls. Laissez 'date' à null tant que rien n'est confirmé. ARCHIVES / À VENIR : ajoutez un bloc dans 'concerts' ; il passe tout seul de 'à venir' à 'archives' une fois la date passée.",
+  "prochain": {
+    "date": null,
+    "titre": "Prochain concert : date à confirmer",
+    "lieu": "Lieu à confirmer",
+    "ville": "",
+    "details": "Date, lieu et programme seront annoncés ici dès qu'ils sont arrêtés. Les concerts sont généralement gratuits, à participation libre.",
+    "affiche": ""
+  },
+  "concerts": [
+    {
+      "date": "2026-05-31T16:00",
+      "titre": "Concert de printemps — une première à Notre-Dame-de-Monts",
+      "lieu": "Église Notre-Dame-de-l'Assomption",
+      "ville": "Notre-Dame-de-Monts",
+      "avec": "En première partie : la chorale de Bourgneuf-en-Retz dirigée par Dominique Chauvet",
+      "details": "Nouveau programme sous la direction de Sophie Sebbah. Entrée libre, collecte au profit de l'AVLC (Association vendéenne de lutte contre le cancer).",
+      "source": "Nov Ma Radio, office de tourisme du Pays de Saint-Jean-de-Monts"
+    },
+    {
+      "date": "2026-04-26T16:00",
+      "titre": "« Mille Chœurs pour un regard » — au profit de RETINA France",
+      "lieu": "Saint-Hilaire-de-Riez",
+      "ville": "Saint-Hilaire-de-Riez",
+      "avec": "Avec Le Chœur des Cœurs de Machecoul",
+      "details": "Programme de chants sacrés et de variétés, en faveur de la recherche sur les maladies de la rétine.",
+      "source": "Agenda de Saint-Hilaire-de-Riez"
+    },
+    {
+      "date": "2026-01-18T16:00",
+      "titre": "Concert du Nouvel An",
+      "lieu": "Église Saint-Hilaire",
+      "ville": "Saint-Hilaire-de-Riez",
+      "avec": "Avec le Chœur La Vie de Saint-Gilles-Croix-de-Vie",
+      "details": "Entrée libre, participation libre.",
+      "source": "Agenda de Saint-Hilaire-de-Riez"
+    },
+    {
+      "date": "2025-12-21T16:00",
+      "titre": "Concert polyphonique de Noël",
+      "lieu": "Église de Saint-Jean-de-Monts",
+      "ville": "Saint-Jean-de-Monts",
+      "avec": "",
+      "details": "Concert gratuit, participation libre.",
+      "affiche": "assets/img/affiche-noel-2025.jpg"
+    },
+    {
+      "date": "2025-06-01T16:00",
+      "titre": "Concert de printemps au profit des Restos du Cœur",
+      "lieu": "Saint-Hilaire-de-Riez",
+      "ville": "Saint-Hilaire-de-Riez",
+      "avec": "Avec la chorale « Chantons » de Longeville-sur-Mer",
+      "details": "Au profit des Restos du Cœur, antenne de Givrand."
+    },
+    {
+      "date": "2025-05-18T16:00",
+      "titre": "Concert de printemps",
+      "lieu": "Église de Saint-Jean-de-Monts",
+      "ville": "Saint-Jean-de-Monts",
+      "avec": "Avec la chorale Cantare (Les Achards)",
+      "details": "Programme de chants modernes, sacrés et de chansons à parts égales."
+    },
+    {
+      "date": "2025-04-27T16:00",
+      "titre": "Concert de printemps pour les sapeurs-pompiers",
+      "lieu": "Brétignolles-sur-Mer",
+      "ville": "Brétignolles-sur-Mer",
+      "avec": "Avec les chorales Harmonia et La Clé des Chants",
+      "details": "Entrée libre, au profit des sapeurs-pompiers de Brem-sur-Mer."
+    },
+    {
+      "date": "2023-06-25T16:00",
+      "titre": "Concert avec la chorale « De si de là »",
+      "lieu": "Jard-sur-Mer",
+      "ville": "Jard-sur-Mer",
+      "avec": "Avec la chorale « De si de là »",
+      "details": "",
+      "heure": false
+    },
+    {
+      "date": "2023-05-14T16:00",
+      "titre": "Concert au profit de RETINA France",
+      "lieu": "Coëx",
+      "ville": "Coëx",
+      "avec": "",
+      "details": "Au profit de RETINA France, association reconnue d'utilité publique.",
+      "heure": false
+    },
+    {
+      "date": "2023-05-13T16:00",
+      "titre": "Concert à trois voix : deux chorales, puis ensemble",
+      "lieu": "Église Saint-Jean-Baptiste",
+      "ville": "Givrand",
+      "avec": "Avec la chorale L'Écho du Jaunay",
+      "details": "Trois temps : l'Écho du Jaunay, puis À Chœur Ouvert, puis les deux chorales réunies. Participation libre.",
+      "heure": false
+    },
+    {
+      "date": "2022-10-16T16:00",
+      "titre": "Concert au profit de la SNSM",
+      "lieu": "Église de Saint-Hilaire-de-Riez",
+      "ville": "Saint-Hilaire-de-Riez",
+      "avec": "",
+      "details": "Concert solidaire au profit de la station SNSM de Saint-Gilles-Croix-de-Vie.",
+      "heure": false
+    }
+  ],
+  "infosPratiques": [
+    { "titre": "Entrée", "texte": "Les concerts sont habituellement gratuits, avec une participation libre au profit d'une association caritative." },
+    { "titre": "Horaire habituel", "texte": "Souvent 16 h, un dimanche. Vérifiez la date et l'heure sur l'affiche de chaque concert." },
+    { "titre": "Lieux", "texte": "Églises de Saint-Jean-de-Monts, de Saint-Hilaire-de-Riez et des communes voisines, parfois sur invitation d'une autre chorale." },
+    { "titre": "Accessibilité", "texte": "Informations d'accessibilité à confirmer pour chaque lieu : contactez-nous avant de venir si besoin." }
+  ]
+}
