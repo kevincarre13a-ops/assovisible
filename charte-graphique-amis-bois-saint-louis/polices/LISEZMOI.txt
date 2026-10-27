@@ -1,6 +1,7 @@
-Polices de la charte (libres de droits, licence SIL OFL) :
-- Titres : Lora (Bold)            https://fonts.google.com/specimen/Lora
-- Texte  : Nunito Sans (Regular, Bold)  https://fonts.google.com/specimen/Nunito+Sans
-Installer les fichiers telecharges sur l'ordinateur pour les utiliser dans Word, Canva, etc.
-A defaut : Georgia (titres) et Arial ou Calibri (texte).
-Le nom de l'association dans le logo est dessine : ne jamais le retaper.
+Polices de la charte (libres de droits, licence SIL Open Font License) :
+- Titres : Quicksand (Bold)               https://fonts.google.com/specimen/Quicksand
+- Labels, boutons, horaires : Poppins (Medium)   https://fonts.google.com/specimen/Poppins
+- Texte courant : Nunito Sans (Regular, Bold)    https://fonts.google.com/specimen/Nunito+Sans
+Installer les fichiers telecharges sur l'ordinateur pour les utiliser dans Word, LibreOffice, etc.
+Les trois polices existent aussi dans Canva.
+A defaut : Arial (titres et labels) et Arial ou Calibri (texte). En e-mail : Arial.

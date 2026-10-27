@@ -1,11 +1,14 @@
-Charte graphique - Les Amis du Bois Saint Louis et du Val d'Or - v1.0
+Charte graphique v2.0 - Les Amis du Bois Saint Louis et du Val d'Or
+Palette "Vert nature sur fond blanc" (proposition n°2, octobre 2026)
 Valeurs ecran (HEX / RVB). Le CMJN est a caler avec l'imprimeur sur epreuve.
 
-Vert Sapin    #1E4212  RVB 30 66 18     Couleur principale
-Vert Nuit     #0B2A06  RVB 11 42 6      Texte courant
-Vert Mousse   #728A06  RVB 114 138 6    Accents
-Vert Pousse   #8AA206  RVB 138 162 6    Decor (pas de texte)
-Orange Soleil #F18A13  RVB 241 138 19   Touche d'energie
-Brun Ecorce   #652B06  RVB 101 43 6     Details
-Creme         #F6F2E4  RVB 246 242 228  Fond neutre chaud
-Vert Brume    #E8EFD6  RVB 232 239 214  Fond doux
+Vert profond       #3C5A3C  RVB 60 90 60     Titres, texte
+Vert feuille       #6F8B58  RVB 111 139 88   Pictos, filets
+Vert tendre        #A8B88A  RVB 168 184 138  Fonds de blocs
+Brun tronc         #8A6A4A  RVB 138 106 74   Illustrations
+Terracotta profond #A65A2E  RVB 166 90 46    Boutons, liens
+Orange soleil      #E8A868  RVB 232 168 104  Soleil, details (jamais du texte)
+Creme              #F4EFE3  RVB 244 239 227  Cartouches
+Blanc              #FFFFFF  RVB 255 255 255  Fond des pages
+
+Contrastes sur fond blanc : Vert profond 7,7 ; Terracotta 5,1 ; Brun tronc 5,0 ; Vert feuille 3,8 (grands titres) ; Orange soleil 2,1 (decor seulement).
