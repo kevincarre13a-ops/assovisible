@@ -1,0 +1,11 @@
+Charte graphique - Les Amis du Bois Saint Louis et du Val d'Or - v1.0
+Valeurs ecran (HEX / RVB). Le CMJN est a caler avec l'imprimeur sur epreuve.
+
+Vert Sapin    #1E4212  RVB 30 66 18     Couleur principale
+Vert Nuit     #0B2A06  RVB 11 42 6      Texte courant
+Vert Mousse   #728A06  RVB 114 138 6    Accents
+Vert Pousse   #8AA206  RVB 138 162 6    Decor (pas de texte)
+Orange Soleil #F18A13  RVB 241 138 19   Touche d'energie
+Brun Ecorce   #652B06  RVB 101 43 6     Details
+Creme         #F6F2E4  RVB 246 242 228  Fond neutre chaud
+Vert Brume    #E8EFD6  RVB 232 239 214  Fond doux
