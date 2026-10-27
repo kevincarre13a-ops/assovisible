@@ -1,0 +1,39 @@
+{
+  "nom": "ATLACE",
+  "nomComplet": "Association Tous Loisirs, les Ambassades Culturelles et les Expéditions",
+  "accroche": "Voyages d'exception, week-ends insolites, bien-être et culture : vivez le merveilleux, ensemble.",
+  "creation": 1994,
+  "contact": {
+    "responsable": "Denice Moreau",
+    "email": "atlace@orange.fr",
+    "mobile": "06 17 74 76 04",
+    "mobileLien": "+33617747604",
+    "fixe": "01 46 81 16 30",
+    "fixeLien": "+33146811630",
+    "horaires": "De préférence le matin, en semaine."
+  },
+  "adresses": [
+    { "ville": "Boulogne-Billancourt", "adresse": "66/72 rue de Sèvres", "cp": "92100" },
+    { "ville": "Bondy", "adresse": "115 rue Édouard Vaillant", "cp": "93140" },
+    { "ville": "Thiais", "adresse": "20 rue de la Fraternité", "cp": "94320" }
+  ],
+  "reseaux": [
+    { "nom": "Instagram", "url": "https://www.instagram.com/association.atlace/", "icone": "instagram" },
+    { "nom": "Ancien site ATLACE", "url": "https://www.atlace.com", "icone": "globe" }
+  ],
+  "menu": [
+    { "titre": "Accueil", "page": "index.html" },
+    { "titre": "L'association", "page": "association.html" },
+    { "titre": "Activités", "page": "activites.html" },
+    { "titre": "Agenda & événements", "page": "agenda.html" },
+    { "titre": "Galerie", "page": "galerie.html" },
+    { "titre": "Actualités", "page": "actualites.html" },
+    { "titre": "Nous rejoindre", "page": "contact.html" }
+  ],
+  "chiffres": [
+    { "valeur": "AUTO_ANNEES", "suffixe": " ans", "libelle": "d'aventures partagées depuis Noël 1994" },
+    { "valeur": 17, "suffixe": "", "libelle": "expéditions avec notre conseiller scientifique" },
+    { "valeur": 30, "suffixe": " ans", "libelle": "de collaboration avec J.-M. Bardintzeff" },
+    { "valeur": 3, "suffixe": "", "libelle": "villes pour les cours : Paris, Bondy, Thiais" }
+  ]
+}

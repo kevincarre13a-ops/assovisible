@@ -1,0 +1,154 @@
+{
+  "_aide": "Ajoutez un bloc { ... } par événement. 'date' (AAAA-MM-JJ) sert à classer et à passer automatiquement l'événement en archives. 'image' = fichier dans assets/img/.",
+  "evenements": [
+    {
+      "id": "italie-2027",
+      "titre": "Grand voyage d'exception : Italie, Culture & Nature",
+      "date": "2027-05-01",
+      "dateTexte": "Mai 2027 (dates à confirmer)",
+      "lieu": "Entre Florence et Modène (Italie)",
+      "categorie": "Voyage d'exception",
+      "image": "etna.jpg",
+      "resume": "Volcans de boue, géothermie et bains thermaux avec le géologue-volcanologue Jacques-Marie Bardintzeff : 30 ans de collaboration et 17 expéditions déjà réalisées ensemble à travers le monde.",
+      "tarif": "Programme détaillé et tarif sur demande",
+      "lien": "contact.html"
+    },
+    {
+      "id": "malte-2022",
+      "titre": "Expédition à Malte : naissance d'une île",
+      "date": "2022-02-27",
+      "dateTexte": "Du 27 février au 6 mars 2022",
+      "lieu": "Malte",
+      "categorie": "Voyage d'exception",
+      "resume": "Un circuit complet de 8 jours mêlant histoire et paysages, avec Jacques-Marie Bardintzeff, en hôtel 4* avec spa et pension complète.",
+      "tarif": "Budget 1 600 € (base 15 participants)"
+    },
+    {
+      "id": "we-campagne-2022",
+      "titre": "Week-end bien-être à la campagne",
+      "date": "2022-07-01",
+      "dateTexte": "Du 1er au 3 juillet 2022",
+      "lieu": "Champagne",
+      "categorie": "Week-end",
+      "resume": "Trois jours au vert dans une métairie du XVIIe siècle, au cœur de la forêt : cuisine bio, locale et végétarienne. Stage Réflexion-Décision-Action en option.",
+      "tarif": "230 ou 250 € en pension complète (chambre double) ; stage 150 €"
+    },
+    {
+      "id": "roscoff-2021",
+      "titre": "Séjour thalasso & bien-être anti-stress",
+      "date": "2021-08-22",
+      "dateTexte": "Du 22 au 27 août 2021",
+      "lieu": "Roscoff (Bretagne)",
+      "categorie": "Séjour",
+      "resume": "Là où la thalasso est née : hôtel 4* relié à l'institut, stage de gestion des émotions et outils à pratiquer chez soi.",
+      "tarif": "695 € en demi-pension (chambre double) + stage 260 €"
+    },
+    {
+      "id": "bourgogne-2020",
+      "titre": "Week-end à la campagne dans un moulin",
+      "date": "2020-07-03",
+      "dateTexte": "Du 3 au 5 juillet 2020",
+      "lieu": "Bourgogne",
+      "categorie": "Week-end",
+      "resume": "Un week-end de détente au bord de l'eau, dans un beau moulin, après le confinement : une délivrance joyeuse et bienfaisante."
+    },
+    {
+      "id": "norvege-2019",
+      "titre": "Norvège : Cap Nord et îles Lofoten",
+      "date": "2019-07-18",
+      "dateTexte": "Du 18 au 29 juillet 2019",
+      "lieu": "Norvège",
+      "categorie": "Voyage d'exception",
+      "image": "cap-nord.jpg",
+      "resume": "Croisières, routes splendides, soleil de minuit et îles Lofoten avec Jacques-Marie Bardintzeff. Expédition complète.",
+      "lien": "assets/doc/compte-rendu-norvege-2019.pdf",
+      "lienTexte": "Lire le compte rendu (PDF)"
+    },
+    {
+      "id": "japon-2017",
+      "titre": "Japon : volcans, temples & jardins",
+      "date": "2017-07-20",
+      "dateTexte": "Du 20 juillet au 2 août 2017",
+      "lieu": "Hokkaido et Honshu (Japon)",
+      "categorie": "Voyage d'exception",
+      "image": "japon-asahidake.jpg",
+      "resume": "22 participants du nord au sud du pays : volcans, singes des neiges, temples et bains chauds."
+    },
+    {
+      "id": "inde-2016",
+      "titre": "Croisière de charme en Inde",
+      "date": "2016-01-01",
+      "dateTexte": "2016",
+      "lieu": "Inde",
+      "categorie": "Croisière",
+      "resume": "Une croisière de charme sur un bateau historique privatisé."
+    },
+    {
+      "id": "ardeche-2015",
+      "titre": "Volcans et thermalisme en Ardèche",
+      "date": "2015-01-01",
+      "dateTexte": "2015",
+      "lieu": "Ardèche",
+      "categorie": "Voyage d'exception",
+      "resume": "Expédition volcanique avec Jacques-Marie Bardintzeff."
+    },
+    {
+      "id": "jardins-2014",
+      "titre": "Jardins anglais du Kent",
+      "date": "2014-01-01",
+      "dateTexte": "2014",
+      "lieu": "Kent (Angleterre)",
+      "categorie": "Voyage d'exception",
+      "resume": "Les jardins anglais du Kent."
+    },
+    {
+      "id": "usa-hawai-2013",
+      "titre": "États-Unis & Hawaï",
+      "date": "2013-01-01",
+      "dateTexte": "2013",
+      "lieu": "États-Unis, Hawaï",
+      "categorie": "Voyage d'exception",
+      "image": "yellowstone.jpg",
+      "resume": "Grands paysages et volcans actifs avec Jacques-Marie Bardintzeff."
+    },
+    {
+      "id": "madere-2011",
+      "titre": "Madère, fleurs et volcans",
+      "date": "2011-01-01",
+      "dateTexte": "2011",
+      "lieu": "Madère",
+      "categorie": "Voyage d'exception",
+      "resume": "La douce Madère, entre fleurs et volcans."
+    },
+    {
+      "id": "nz-2009",
+      "titre": "Nouvelle-Zélande : volcans, faune & flore",
+      "date": "2009-01-01",
+      "dateTexte": "2009",
+      "lieu": "Nouvelle-Zélande",
+      "categorie": "Voyage d'exception",
+      "image": "nouvelle-zelande.jpg",
+      "resume": "Une nature restée intacte : volcans, faune et flore."
+    },
+    {
+      "id": "usa-2000",
+      "titre": "La Terre en mouvement dans l'Ouest américain",
+      "date": "2000-01-01",
+      "dateTexte": "2000",
+      "lieu": "Ouest américain",
+      "categorie": "Voyage d'exception",
+      "image": "old-faithful.jpg",
+      "resume": "Yellowstone, Vallée de la Mort, geysers et déserts avec Jacques-Marie Bardintzeff."
+    },
+    {
+      "id": "reunion-1998",
+      "titre": "Éruption au Piton de la Fournaise",
+      "date": "1998-01-01",
+      "dateTexte": "1998",
+      "lieu": "La Réunion et île Maurice",
+      "categorie": "Voyage d'exception",
+      "image": "reunion-fournaise-1.jpg",
+      "resume": "La chance unique de marcher de nuit sur le volcan pour admirer la lave en fusion."
+    }
+  ]
+}

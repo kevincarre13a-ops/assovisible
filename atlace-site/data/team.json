@@ -1,0 +1,14 @@
+{
+  "_aide": "Bureau et équipe. Ajoutez ou modifiez les personnes ici.",
+  "equipe": [
+    { "nom": "Denice Moreau", "role": "Responsable d'ATLACE", "texte": "Imagine, organise et accompagne les voyages, week-ends et sorties.", "photo": "" },
+    { "nom": "Jacques-Marie Bardintzeff", "role": "Conseiller scientifique et pédagogique", "texte": "Géologue et volcanologue de renommée internationale, il guide une expédition avec ATLACE depuis 1996.", "photo": "etna.jpg" },
+    { "nom": "Gisèle Vergnaud", "role": "Artiste peintre", "texte": "Auteure du logo d'ATLACE.", "photo": "" },
+    { "nom": "Président(e), trésorier(e), secrétaire", "role": "Bureau — à compléter", "texte": "Noms des membres du bureau à renseigner par l'association.", "photo": "" }
+  ],
+  "partenaires": [
+    { "nom": "Théâtre de l'Ouest Parisien (TOP), Boulogne", "texte": "Réductions sur tous les spectacles pour les atlaciens.", "url": "http://www.top-bb.fr/" },
+    { "nom": "Le Bal de Versailles", "texte": "Association partenaire pour les festivités costumées.", "url": "http://lebaldeversailles.com" },
+    { "nom": "Association Volcanologique Européenne (L.A.V.E.)", "texte": "Passionnés de volcans, avec Jacques-Marie Bardintzeff.", "url": "https://www.lave-volcans.com" }
+  ]
+}

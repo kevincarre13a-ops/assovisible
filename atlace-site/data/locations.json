@@ -1,0 +1,18 @@
+{
+  "_aide": "Locations proposées par des adhérents et partenaires (prix associatifs).",
+  "locations": [
+    { "lieu": "Beaune (Bourgogne)", "type": "Campagne", "capacite": "2/3 couchages", "prix": "120 € la nuit", "texte": "Très beau château près de Dijon et Beaune, très belles chambres, à deux pas de l'abbaye de Cîteaux." },
+    { "lieu": "Périgord", "type": "Bulle sous les étoiles", "capacite": "2/3 couchages", "prix": "120 € la nuit", "texte": "La tête dans les étoiles dans une bulle transparente, balade à cheval possible." },
+    { "lieu": "Périgord (Terrasson, Sarlat)", "type": "Pigeonnier", "capacite": "2/3 personnes", "prix": "80 € la nuit", "texte": "Près de Lascaux, avec piscine, super petits déjeuners et ferme auberge gourmande." },
+    { "lieu": "Carcassonne", "type": "Chambre d'hôte", "capacite": "2/3 personnes", "prix": "120 € la nuit", "texte": "Belle maison provençale avec piscine boisée, très bon brunch et grande chambre." },
+    { "lieu": "Nevers (La Charité-sur-Loire)", "type": "Château", "capacite": "2/3 couchages", "prix": "80 € la nuit", "texte": "Chambre spacieuse, grand parc, beau château et nombreuses adresses gourmandes." },
+    { "lieu": "Nîmes", "type": "Chambre de charme", "capacite": "2 couchages", "prix": "150 €", "texte": "Décoration d'antiquités, jardin privatif et piscine." },
+    { "lieu": "Le Mans", "type": "Chambre d'hôte au château", "capacite": "2/4 couchages", "prix": "120 € la nuit", "texte": "De bonnes adresses dans plusieurs régions de France : au château, à la ferme ou plus original." },
+    { "lieu": "Les Orres (Alpes du Sud)", "type": "Studio montagne", "capacite": "4 personnes", "prix": "385 € la semaine en hiver", "texte": "Beau studio plein sud avec balcon et parking." },
+    { "lieu": "Sorrente (Italie)", "type": "Mer", "capacite": "2/3 personnes", "prix": "800 € la semaine pour 2", "texte": "Établissement où nous avons séjourné lors de l'expédition Pompéi-Capri : vue sur Capri, piscine et spa." },
+    { "lieu": "Villes d'art italiennes", "type": "Appartements", "capacite": "À partir de 2 personnes", "prix": "Nous consulter", "texte": "Appartements dès 3 nuits à Venise, Florence, Rome et Naples via notre partenaire italien." },
+    { "lieu": "Guadeloupe (Deshaies)", "type": "Gîte ou cabane dans les arbres", "capacite": "2 à 5 couchages", "prix": "120 € la nuit / nous consulter", "texte": "Gîtes créoles avec spa privé, cabane dans les arbres avec vue magnifique." },
+    { "lieu": "Martinique (presqu'île de la Caravelle)", "type": "Mer", "capacite": "2/4 personnes", "prix": "À partir de 70 € la nuit pour 2", "texte": "Très belle vue dans le parc naturel, plage à 300 m." },
+    { "lieu": "Madère", "type": "Pension d'hôtes 4*", "capacite": "Toutes possibilités", "prix": "Nous consulter", "texte": "Très belle Quinta, ancienne demeure seigneuriale." }
+  ]
+}

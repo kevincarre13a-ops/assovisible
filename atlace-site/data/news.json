@@ -1,0 +1,41 @@
+{
+  "_aide": "Une actualité = un bloc, les plus récentes en premier. Ajoutez au besoin \"date\": \"AAAA-MM-JJ\" pour l'afficher.",
+  "actualites": [
+    {
+      "titre": "Grand voyage d'exception en mai 2027 : l'Italie, Culture & Nature",
+      "texte": "Avec Jacques-Marie Bardintzeff, nous fêtons 30 ans de collaboration et 17 expéditions à travers le monde. Cap sur les volcans de boue, la géothermie et les bains thermaux, entre Florence et Modène. Contactez-nous pour recevoir le programme.",
+      "image": "etna.jpg",
+      "categorie": "Voyage"
+    },
+    {
+      "titre": "Le programme de l'automne est en ligne",
+      "texte": "Cours de bien-être toute l'année : Paris le lundi 17h30, Bondy le mercredi 18h30 et le jeudi 11h, Thiais le vendredi 17h30 et 18h30. Chaque mois, un stage bien-être le dimanche après-midi : demandez le programme !",
+      "image": "",
+      "categorie": "Bien-être"
+    },
+    {
+      "titre": "Invitations réservées aux adhérents",
+      "texte": "Afterwork au Novotel Paris Centre Tour Eiffel (22 octobre 2026), exposition « Vive la mariée » à l'Institut du Monde arabe, expositions à la Cité de l'architecture et du patrimoine… Pour recevoir les invitations, contactez-nous.",
+      "image": "",
+      "categorie": "Sorties"
+    },
+    {
+      "titre": "Voyage d'exception 2026 : Madère Carpe Diem",
+      "texte": "Grand voyage d'exception 2026 : Madère Carpe Diem, avec un géologue et un jardinier.",
+      "image": "",
+      "categorie": "Voyage"
+    },
+    {
+      "titre": "ATLACE fête ses 30 ans",
+      "texte": "Une magnifique croisière de charme en Égypte, en bateau historique privatisé, et un très beau week-end thématique à Beauval pour célébrer nos 30 ans.",
+      "image": "",
+      "categorie": "Vie de l'association"
+    },
+    {
+      "titre": "Retrouvez-nous sur Instagram",
+      "texte": "Les photos des derniers événements sont sur notre compte association.atlace. Pour recevoir les newsletters, écrivez-nous.",
+      "image": "",
+      "categorie": "Vie de l'association"
+    }
+  ]
+}

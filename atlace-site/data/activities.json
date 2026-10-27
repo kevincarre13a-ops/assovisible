@@ -1,0 +1,65 @@
+{
+  "_aide": "Chaque bloc = une carte d'activité. Modifiez les textes, jours, horaires, lieux et tarifs ici.",
+  "activites": [
+    {
+      "id": "voyages",
+      "titre": "Voyages d'exception",
+      "icone": "compass",
+      "image": "hero-capnord.jpg",
+      "texte": "Chaque année, une expédition découverte thématique, souvent en lien avec la nature, en compagnie d'un scientifique ou de passionnés qui partagent leur savoir. Accessible à tous, du junior au senior : aucune difficulté physique ni connaissance requise.",
+      "quand": "1 grand voyage par an",
+      "lieu": "Monde entier",
+      "tarif": "Selon le programme (ex. Malte 2022 : 1 600 €)"
+    },
+    {
+      "id": "weekends",
+      "titre": "Week-ends & moments d'exception",
+      "icone": "star",
+      "image": "hero-balade.jpg",
+      "texte": "Dormir dans un tipi, un château ou une ferme, sculpter ou peindre avec un artiste, forger avec un forgeron, fauconnerie, vallée des singes, atelier vitrail avec un maître verrier… et même un week-end igloo !",
+      "quand": "Plusieurs fois par an",
+      "lieu": "Campagne, châteaux, ateliers d'artistes",
+      "tarif": "Ex. week-end campagne en pension complète : 230 à 250 €"
+    },
+    {
+      "id": "bien-etre",
+      "titre": "Bien-être & remise en forme",
+      "icone": "leaf",
+      "image": "hero-sunset.jpg",
+      "texte": "Cours collectifs de bien-être et remise en forme toute l'année, tous les jours sauf le mardi, et un stage bien-être & découverte du corps chaque mois, le dimanche après-midi.",
+      "quand": "Paris : lundi 17h30 · Bondy : mercredi 18h30, jeudi 11h · Thiais : vendredi 17h30 et 18h30",
+      "lieu": "Paris, Bondy, Thiais",
+      "tarif": "Tarif des cours : nous consulter"
+    },
+    {
+      "id": "sorties",
+      "titre": "Sorties culturelles & loisirs",
+      "icone": "ticket",
+      "image": "hero-yellowstone.jpg",
+      "texte": "Théâtre, spectacles, expositions, soirées bowling, goûter anglais, restaurant immersif, visite d'ateliers insolites à Paris, fêtes en costume d'époque ou carnaval de Venise. Des invitations exclusives sont aussi proposées aux adhérents.",
+      "quand": "Calendrier des sorties sur demande",
+      "lieu": "Paris et Île-de-France",
+      "tarif": "Invités non adhérents : petit supplément"
+    },
+    {
+      "id": "vacances",
+      "titre": "Vacances à prix associatifs",
+      "icone": "sun",
+      "image": "hero-dunes.jpg",
+      "texte": "Réductions chez de grands tour-opérateurs, séjours à thèmes, location de voitures et locations de vacances proposées par des adhérents et partenaires. Demande à faire au moins 2 semaines à l'avance.",
+      "quand": "Toute l'année",
+      "lieu": "France et étranger",
+      "tarif": "Avantages réservés aux adhérents"
+    },
+    {
+      "id": "diaporamas",
+      "titre": "Diaporamas & carnets de voyage",
+      "icone": "film",
+      "image": "hero-glacier.jpg",
+      "texte": "Des textes et photos des participants pour revivre chaque expédition. Les diaporamas peuvent être reprogrammés à la demande, et les voyages déjà réalisés peuvent se refaire.",
+      "quand": "Sur demande",
+      "lieu": "Paris et Île-de-France",
+      "tarif": "Nous consulter"
+    }
+  ]
+}

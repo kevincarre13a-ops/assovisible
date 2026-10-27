@@ -1,0 +1,31 @@
+{
+  "_aide": "Chaque groupe = un événement ou une activité. Ajoutez une photo avec son fichier (dossier assets/img) et une légende.",
+  "groupes": [
+    { "id": "norvege", "titre": "Norvège 2019", "photos": [ { "fichier": "cap-nord.jpg", "legende": "Cap Nord, soleil de minuit" } ] },
+    { "id": "japon", "titre": "Japon 2017", "photos": [
+      { "fichier": "japon-asahidake.jpg", "legende": "Volcan Asahidake, Hokkaido (© Joël Boyer)" },
+      { "fichier": "japon-macaque.jpg", "legende": "Macaque japonais, Jigokudani (© Joël Boyer)" } ] },
+    { "id": "usa", "titre": "Ouest américain", "photos": [
+      { "fichier": "yellowstone.jpg", "legende": "Yellowstone" },
+      { "fichier": "old-faithful.jpg", "legende": "Old Faithful" },
+      { "fichier": "dunes-usa.jpg", "legende": "Dunes de Stovepipe Wells" },
+      { "fichier": "hanksville.jpg", "legende": "Hanksville" } ] },
+    { "id": "reunion", "titre": "Éruption à La Réunion (1998)", "photos": [
+      { "fichier": "reunion-fournaise-1.jpg", "legende": "Marche vers le cratère du Piton de la Fournaise" },
+      { "fichier": "reunion-fournaise-2.jpg", "legende": "Sur le volcan" } ] },
+    { "id": "nature", "titre": "Nature & faune", "photos": [
+      { "fichier": "nouvelle-zelande.jpg", "legende": "Nouvelle-Zélande" },
+      { "fichier": "elephant.jpg", "legende": "Éléphant d'Afrique" },
+      { "fichier": "otarie.jpg", "legende": "Otarie" },
+      { "fichier": "glacier-upsala.jpg", "legende": "Glacier Upsala" },
+      { "fichier": "grandes-jorasses.jpg", "legende": "Grandes Jorasses" },
+      { "fichier": "mont-blanc.jpg", "legende": "Massif du Mont-Blanc" } ] },
+    { "id": "loisirs", "titre": "Week-ends & loisirs", "photos": [
+      { "fichier": "balade-ane.jpg", "legende": "Balade avec un âne" },
+      { "fichier": "bowling.jpg", "legende": "Soirée bowling" },
+      { "fichier": "atelier-broderie.jpg", "legende": "Visite d'un atelier de broderie" },
+      { "fichier": "hebergement-broderie.jpg", "legende": "Hébergement du stage broderie" },
+      { "fichier": "vitrail.png", "legende": "Atelier vitrail" },
+      { "fichier": "igloo.jpg", "legende": "Week-end igloo (illustration)" } ] }
+  ]
+}
