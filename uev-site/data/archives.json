@@ -1,0 +1,52 @@
+[
+  {
+    "annee": 2026,
+    "items": [
+      { "type": "evenement", "titre": "Fête du Ballon d'Alsace — rencontres littéraires au sommet", "date": "2026-08-16", "lieu": "Clairière des Démineurs, Ballon d'Alsace", "texte": "Volet culturel de la fête artisanale du Ballon, présenté par l'UEV et RECRE. Treize auteurs de la région, des ateliers d'écriture passants, des musiciens et des artistes.", "lien": "https://lesecritsvains.canalblog.com/2026/08/a-la-fete-du-ballon-le-16-aout-rencontres-au-sommet-de-la-litterature-regionale.html", "source": "Blog officiel de l'UEV" },
+      { "type": "evenement", "titre": "Village des auteurs régionaux", "date": "", "periode": "Juin 2026", "lieu": "Le Thillot", "texte": "Seize écrivains vosgiens présents, dont plusieurs membres de l'UEV.", "lien": "https://lesecritsvains.canalblog.com/2026/06/les-ecrivains-vosgiens-au-village-des-auteurs-regionaux-dimanche.html", "source": "Blog officiel de l'UEV" },
+      { "type": "evenement", "titre": "Atelier d'écriture « Faisons cinéma avec le territoire »", "date": "2026-05-30", "lieu": "Médiathèque de Saulxures-sur-Moselotte", "texte": "Séance d'écriture gratuite autour des films tournés dans les Vosges, en hommage au musicien Christophe Toussaint et à son disque « Terra Incognita ».", "lien": "https://lesecritsvains.canalblog.com/2026/05/faisons-cinema-avec-le-territoire.html", "source": "Blog officiel de l'UEV" },
+      { "type": "evenement", "titre": "Les Imaginales — stand de l'UEV", "date": "", "periode": "Mai 2026", "lieu": "Épinal", "texte": "Treize auteurs de l'UEV sur le stand du festival : Delphine Arnould, André Balaud, Jérôme Bonnet, Nicolas Cassagnau, Élodie Déelle, Coralie Desgranges, Micheline Faliguerho, Ludovic Jacquemer, Sébastien Klein, Philippe Mengin, Marjolaine Pauchet, Thierry Schmaltz et Céleste Torino.", "lien": "https://lesecritsvains.canalblog.com/2026/05/les-auteurs-de-l-union-des-ecrivains-vosgiens-aux-imaginal.html", "source": "Blog officiel de l'UEV" }
+    ]
+  },
+  {
+    "annee": 2025,
+    "items": [
+      { "type": "evenement", "titre": "Veillée d'hiver — la Compagnie Le Plateau Ivre", "date": "2025-12-12", "lieu": "Théâtre de Verdure, Vagney", "texte": "L'UEV y participe avec des poèmes écrits lors de deux ateliers d'écriture, à Vagney et à Épinal. Hommage à Michel Villaume, créateur du Village des auteurs régionaux du Thillot.", "lien": "https://lesecritsvains.canalblog.com/2025/12/ce-soir.html", "source": "Blog officiel de l'UEV" },
+      { "type": "evenement", "titre": "Fête du tiers-lieu « Ailleurs », Journée des auteurs et inauguration de la Vosgiothèque", "date": "2025-11-09", "lieu": "Tiers-lieu « Ailleurs », Épinal", "texte": "Du 7 au 9 novembre : scène ouverte, lectures, trombinoscope des auteurs, forum avec ventes et signatures, concert de JePh. La Vosgiothèque — bibliothèque vosgienne où plus de quarante auteurs de l'UEV ont confié leurs ouvrages — est inaugurée le 9 novembre.", "lien": "https://lesecritsvains.canalblog.com/2025/11/fete-du-tiers-lieu-ailleurs-l-eau-qui-mord-et-la-vosgiotheque.html", "source": "Blog officiel de l'UEV" },
+      { "type": "evenement", "titre": "Fête du Ballon d'Alsace", "date": "2025-08-17", "lieu": "Ballon d'Alsace", "texte": "Rencontres littéraires au sommet, dans le cadre du jubilé des 130 ans du Théâtre du Peuple de Bussang.", "lien": "https://lesecritsvains.canalblog.com/2025/08/fete-du-ballon-le-17-aout.html", "source": "Blog officiel de l'UEV" },
+      { "type": "evenement", "titre": "5e Village des auteurs régionaux", "date": "2025-06-01", "lieu": "Le Thillot", "texte": "Cinquième édition du village des auteurs régionaux, au sein de la foire du Thillot.", "lien": "https://lesecritsvains.canalblog.com/2025/05/5e-village-des-auteurs-regionaux-au-thillot-ce-1er-juin.html", "source": "Blog officiel de l'UEV" },
+      { "type": "evenement", "titre": "Les Imaginales — stand de l'UEV", "date": "2025-05-23", "dateFin": "2025-05-25", "lieu": "Épinal, près de la Moselle", "texte": "Les écrivains vosgiens de l'UEV se relaient sur le stand pendant trois jours : Micheline Faliguerho, Marjolaine Pauchet, Nicolas Cassagnau, Olivier d'Icarie, Thierry Schmaltz, René-Vincent Viry, Céleste Torino, Jérôme Bonnet, Laurent Joly.", "lien": "https://lesecritsvains.canalblog.com/2025/05/l-union-des-ecrivains-vosgiens-aux-imaginales.html", "source": "Blog officiel de l'UEV" },
+      { "type": "evenement", "titre": "Atelier d'écriture à Azerailles", "date": "2025-01-22", "lieu": "Azerailles", "texte": "Atelier d'écriture annoncé sur le blog fin décembre 2024.", "lien": "https://lesecritsvains.canalblog.com/2024/12/atelier-d-ecriture-azerailles-22-janvier.html", "source": "Blog officiel de l'UEV" }
+    ]
+  },
+  {
+    "annee": 2020,
+    "items": [
+      { "type": "evenement", "titre": "Naissance du Village des auteurs régionaux au Thillot", "date": "", "periode": "2020", "lieu": "Le Thillot", "texte": "À la sortie du confinement, Michel Villaume contacte l'UEV pour créer un Village des auteurs régionaux au Thillot, à la place de la Foire aux Beignets non autorisée. Le Village s'est développé chaque année depuis.", "lien": "https://lesecritsvains.canalblog.com/2025/12/ce-soir.html", "source": "Blog officiel de l'UEV" }
+    ]
+  },
+  {
+    "annee": 2019,
+    "items": [
+      { "type": "action", "titre": "Jumelage littéraire avec l'Auberge littéraire belge de Waterloo", "date": "", "periode": "Depuis 2019", "lieu": "Vosges — Waterloo (Belgique)", "texte": "L'UEV entretient des relations suivies avec les écrivains de l'Auberge littéraire belge, de Waterloo, depuis 2019.", "lien": "https://lesecritsvains.canalblog.com/2025/11/fete-du-tiers-lieu-ailleurs-l-eau-qui-mord-et-la-vosgiotheque.html", "source": "Blog officiel de l'UEV" }
+    ]
+  },
+  {
+    "annee": 2006,
+    "items": [
+      { "type": "repere", "titre": "Immatriculation de l'association", "date": "2006-03-24", "lieu": "Épinal", "texte": "Date de création indiquée au répertoire des entreprises (SIREN 492 610 944), siège à Épinal.", "lien": "https://www.societe.com/societe/union-des-ecrivains-vosgiens-492610944.html", "source": "societe.com" }
+    ]
+  },
+  {
+    "annee": 1998,
+    "items": [
+      { "type": "action", "titre": "Premiers rendez-vous littéraires de la fête du Ballon", "date": "", "periode": "Depuis 1998", "lieu": "Ballon d'Alsace", "texte": "L'UEV et RECRE « Vivre et Créer à la Montagne » présentent chaque année, depuis 1998, le volet culturel de la fête artisanale du Ballon.", "lien": "https://lesecritsvains.canalblog.com/2026/08/a-la-fete-du-ballon-le-16-aout-rencontres-au-sommet-de-la-litterature-regionale.html", "source": "Blog officiel de l'UEV" }
+    ]
+  },
+  {
+    "annee": 1968,
+    "items": [
+      { "type": "publication", "titre": "Les Cahiers vosgiens", "date": "", "periode": "Depuis 1968", "lieu": "Vosges", "texte": "Revue semestrielle de poèmes, nouvelles et textes d'amateurs, illustrée de dessins, publiée par le groupement vosgien de l'Union des écrivains de l'Est, fondé en mars 1968 par François Matenet (fiche CTHS). Lien historique avec l'UEV actuelle à confirmer par le bureau.", "lien": "http://cths.fr/an/societe.php?id=2157", "source": "CTHS" }
+    ]
+  }
+]

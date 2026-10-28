@@ -1,0 +1,48 @@
+title: Contact, forum et FAQ — Union des Écrivains Vosgiens
+description: Contactez l'Union des Écrivains Vosgiens, trouvez les réponses aux questions fréquentes (adhésion, inscription, achat, publication) et rejoignez l'espace d'échange.
+rubrique: Contact
+h1: Écrivez-nous, posez vos questions
+lead: Un message, une question, une idée d'atelier ? Le bureau vous répond. En dessous : la FAQ et l'espace d'échange.
+fil: Contact, forum &amp; FAQ
+scripts: contact.js
+---
+<section class="section">
+  <div class="container contact-grid">
+    <div class="card reveal">
+      <h2>Formulaire de contact</h2>
+      <form class="form" name="contact" method="POST" action="/merci" data-netlify="true" netlify-honeypot="bot-field" data-ajax>
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hp"><label>Ne pas remplir : <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="row2"><label>Nom et prénom<input name="nom" required autocomplete="name"></label><label>Adresse e-mail<input type="email" name="email" required autocomplete="email"></label></div>
+        <label>Sujet<select name="sujet"><option>Question générale</option><option>Adhésion</option><option>Inscription à un événement</option><option>Ajouter mon ouvrage au catalogue</option><option>Publier un livre</option><option>Presse &amp; médias</option><option>Autre</option></select></label>
+        <label>Message<textarea name="message" required></textarea></label>
+        <button class="btn ambre" type="submit">Envoyer le message</button>
+        <p class="form-ok" role="status">Merci ! Votre message a bien été envoyé.</p>
+        <p class="form-err" role="alert">L'envoi a échoué. Réessayez ou écrivez directement à Nicolascassagnau88@gmail.com.</p>
+      </form>
+    </div>
+    <aside class="card reveal" aria-label="Coordonnées">
+      <h2>Coordonnées</h2>
+      <ul class="coords">
+        <li><svg class="ico"><use href="#i-mail"/></svg><span><strong>Contact :</strong> N. Cassagnau<br><a href="mailto:Nicolascassagnau88@gmail.com">Nicolascassagnau88@gmail.com</a></span></li>
+        <li><svg class="ico"><use href="#i-pin"/></svg><span><strong>Siège :</strong> Épinal (Vosges)<br><span class="muted">Adresse postale à renseigner</span></span></li>
+        <li><svg class="ico"><use href="#i-plume"/></svg><span><strong>Blog officiel :</strong><br><a href="https://lesecritsvains.canalblog.com/" rel="noopener">lesecritsvains.canalblog.com</a></span></li>
+        <li><svg class="ico"><use href="#i-users"/></svg><span><strong>Présidence :</strong> Vincent Decombis</span></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="section alt" id="forum" aria-labelledby="h-forum">
+  <div class="container split">
+    <div class="reveal"><p class="eyebrow">Forum</p><h2 id="h-forum">Un espace pour échanger</h2><p class="lead" id="forum-texte">Un lien vers un forum ou un groupe d'échange sera proposé ici.</p></div>
+    <div class="card reveal"><h3>Rejoindre la conversation</h3><p class="muted">Texte d'attente : lien à renseigner dans <code>data/site.json</code> (rubrique « forum »), vers un groupe Facebook, un forum, une liste de diffusion…</p><a class="btn" id="forum-lien" href="#forum" aria-disabled="true">Forum à venir</a></div>
+  </div>
+</section>
+
+<section class="section" id="faq" aria-labelledby="h-faq">
+  <div class="container" style="max-width:860px">
+    <div class="sec-head reveal"><p class="eyebrow">Questions fréquentes</p><h2 id="h-faq">FAQ</h2></div>
+    <div class="faq" id="faq-liste"><p class="empty">Chargement…</p></div>
+  </div>
+</section>

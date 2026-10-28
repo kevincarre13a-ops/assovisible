@@ -1,0 +1,21 @@
+title: Auteurs — Union des Écrivains Vosgiens
+description: Le trombinoscope des auteurs de l'Union des Écrivains Vosgiens : recherche par nom, filtres par genre littéraire et par ville, fiche et ouvrages de chaque auteur.
+rubrique: Auteurs
+h1: Ceux qui écrivent les Vosges
+lead: Passez la souris sur une carte pour la retourner, ou ouvrez la fiche d'un auteur pour découvrir sa biographie et ses ouvrages.
+fil: Auteurs
+scripts: auteurs.js
+---
+<section class="section">
+  <div class="container">
+    <form class="tools" role="search" onsubmit="return false" aria-label="Rechercher un auteur">
+      <label>Nom<input type="search" id="q" placeholder="Rechercher un auteur" autocomplete="off"></label>
+      <label>Genre littéraire<select id="genre"><option value="">Tous les genres</option></select></label>
+      <label>Ville<select id="ville"><option value="">Toutes les villes</option></select></label>
+      <button class="btn fantome" type="button" id="raz">Réinitialiser</button>
+    </form>
+    <p class="result-count" id="compte" aria-live="polite"></p>
+    <div class="grid-auteurs" id="grille-auteurs"></div>
+    <p class="note" style="margin-top:30px">Les portraits ne sont affichés qu'avec l'accord de l'auteur·e et un crédit photo : en attendant, une carte à monogramme les remplace. Genres et villes se renseignent dans <code>data/auteurs.json</code> ; les filtres se remplissent automatiquement.</p>
+  </div>
+</section>

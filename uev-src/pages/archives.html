@@ -1,0 +1,19 @@
+title: Archives — Union des Écrivains Vosgiens
+description: Les archives de l'Union des Écrivains Vosgiens : événements, publications et actions passés, classés par année de 1968 à aujourd'hui.
+rubrique: Archives
+h1: La mémoire de l'UEV
+lead: Événements, publications et actions des années passées, classés par année.
+fil: Archives
+scripts: archives.js
+---
+<section class="section">
+  <div class="container">
+    <form class="tools" style="grid-template-columns:2fr 1fr" role="search" onsubmit="return false" aria-label="Rechercher dans les archives">
+      <label>Rechercher<input type="search" id="q" placeholder="Lieu, titre, mot-clé…" autocomplete="off"></label>
+      <label>Type<select id="type"><option value="">Tous</option><option value="evenement">Événements</option><option value="action">Actions</option><option value="publication">Publications</option><option value="repere">Repères</option></select></label>
+    </form>
+    <nav class="year-nav" id="annees" aria-label="Aller à une année"></nav>
+    <div id="archives"></div>
+    <p class="note" style="margin-top:24px">Archives reconstituées d'après le blog officiel de l'UEV (articles de 2017 à 2026 : <a href="https://lesecritsvains.canalblog.com/" rel="noopener">lesecritsvains.canalblog.com</a>), l'annuaire du Centre culturel d'Épinal, le CTHS et le répertoire des entreprises. Elles seront complétées par l'association (fichier <code>data/archives.json</code>).</p>
+  </div>
+</section>

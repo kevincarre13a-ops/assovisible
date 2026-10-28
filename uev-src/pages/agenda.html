@@ -1,0 +1,34 @@
+title: Agenda — Union des Écrivains Vosgiens
+description: Ateliers d'écriture, salons, dédicaces et rencontres de l'Union des Écrivains Vosgiens, avec inscription en ligne et filtre par type d'action.
+rubrique: Agenda
+h1: Les rendez-vous de l'UEV
+lead: Ateliers, salons, dédicaces, rencontres littéraires : inscrivez-vous en ligne en quelques secondes.
+fil: Agenda
+scripts: agenda.js
+---
+<section class="section">
+  <div class="container">
+    <div class="sec-head"><p class="eyebrow">Filtrer par type d'action</p><ul class="chips" id="filtres-type" aria-label="Filtrer l'agenda par type"></ul></div>
+    <div class="events" id="liste-evenements" aria-live="polite"><p class="empty">Chargement de l'agenda…</p></div>
+    <p class="note" style="margin-top:28px">Les événements passés rejoignent les <a href="archives.html">archives</a>. Pour ajouter une date, voir le fichier <code>data/evenements.json</code> (mode d'emploi dans LISEZMOI.md).</p>
+  </div>
+</section>
+
+<dialog id="dlg-inscription" aria-labelledby="dlg-titre">
+  <div class="dlg-head"><h2 id="dlg-titre">S'inscrire</h2><button class="dlg-x" data-close aria-label="Fermer">×</button></div>
+  <div class="dlg-body">
+    <p class="muted" id="dlg-titre-evt"></p>
+    <form class="form" id="form-inscription" name="inscription-evenement" method="POST" action="/merci" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="inscription-evenement">
+      <p class="hp"><label>Ne pas remplir : <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <input type="hidden" name="evenement" value="">
+      <label>Nom et prénom <input name="nom" required autocomplete="name"></label>
+      <label>Adresse e-mail <input type="email" name="email" required autocomplete="email"></label>
+      <label>Nombre de personnes <input type="number" name="personnes" min="1" max="20" value="1" required inputmode="numeric"></label>
+      <label>Message <span class="hint">(facultatif)</span><textarea name="message"></textarea></label>
+      <button class="btn ambre" type="submit">Envoyer mon inscription</button>
+      <p class="form-ok" role="status">Merci ! Votre inscription a bien été envoyée. L'UEV vous répondra par e-mail.</p>
+      <p class="form-err" role="alert">L'envoi a échoué. Réessayez, ou écrivez-nous à Nicolascassagnau88@gmail.com.</p>
+    </form>
+  </div>
+</dialog>

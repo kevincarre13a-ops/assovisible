@@ -1,0 +1,29 @@
+title: Adhérer à l'UEV — Union des Écrivains Vosgiens
+description: Rejoignez l'Union des Écrivains Vosgiens : formulaire d'adhésion pour tous ceux qui écrivent dans les Vosges, publiés ou non.
+rubrique: Adhérer
+h1: Rejoignez l'UEV
+lead: Vous écrivez dans les Vosges ? Publié ou en attente de l'être, vous avez votre place parmi nous.
+fil: Adhérer
+scripts: 
+---
+<section class="section">
+  <div class="container contact-grid">
+    <div class="card reveal">
+      <h2>Demande d'adhésion</h2>
+      <form class="form" name="adhesion" method="POST" action="/merci" data-netlify="true" netlify-honeypot="bot-field" data-ajax>
+        <input type="hidden" name="form-name" value="adhesion">
+        <p class="hp"><label>Ne pas remplir : <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="row2"><label>Nom<input name="nom" required autocomplete="family-name"></label><label>Prénom<input name="prenom" required autocomplete="given-name"></label></div>
+        <div class="row2"><label>Adresse e-mail<input type="email" name="email" required autocomplete="email"></label><label>Ville<input name="ville" autocomplete="address-level2"></label></div>
+        <label>Ce que vous écrivez<input name="genres" placeholder="Poésie, roman, histoire locale, contes…"></label>
+        <label>Avez-vous déjà publié ?<select name="publie"><option>Oui</option><option>Non, pas encore</option></select></label>
+        <label>Message<textarea name="message"></textarea></label>
+        <label style="display:flex;gap:10px;align-items:flex-start;font-weight:400"><input type="checkbox" name="consentement" required style="width:auto;min-height:0;margin-top:5px"> J'accepte que l'UEV utilise ces informations pour me répondre.</label>
+        <button class="btn ambre" type="submit">Envoyer ma demande</button>
+        <p class="form-ok" role="status">Merci ! Votre demande a bien été envoyée. Le bureau vous répondra.</p>
+        <p class="form-err" role="alert">L'envoi a échoué. Réessayez ou écrivez à Nicolascassagnau88@gmail.com.</p>
+      </form>
+    </div>
+    <aside class="card reveal"><h2>Avant de vous lancer</h2><ul class="coords"><li><svg class="ico"><use href="#i-coeur"/></svg><span>Tous les écrivains sont les bienvenus, publiés ou non.</span></li><li><svg class="ico"><use href="#i-plume"/></svg><span>Ateliers d'écriture, scènes ouvertes, lectures, salons.</span></li><li><svg class="ico"><use href="#i-livre"/></svg><span>Votre fiche auteur et vos ouvrages sur ce site, avec votre accord.</span></li></ul><p class="note" style="margin-top:18px">Cotisation : montant à renseigner par le bureau.</p></aside>
+  </div>
+</section>

@@ -1,0 +1,10 @@
+[
+  { "categorie": "Adhésion", "q": "Comment adhérer à l'UEV ?", "r": "Remplissez le formulaire de la page « Adhérer » ou écrivez-nous. Le bureau vous répond avec la marche à suivre. À l'UEV, on ne distingue pas les auteurs publiés des écrivants en attente de l'être : toute personne qui écrit est la bienvenue." },
+  { "categorie": "Adhésion", "q": "Quel est le montant de la cotisation ?", "r": "Montant de la cotisation à renseigner par le bureau (data/faq.json)." },
+  { "categorie": "Événements", "q": "Comment m'inscrire à un événement ?", "r": "Rendez-vous sur la page « Agenda », cliquez sur « S'inscrire » à côté de l'événement et remplissez le court formulaire : nom, e-mail, nombre de personnes, message. Beaucoup de rendez-vous sont libres et gratuits ; l'inscription aide simplement à bien vous accueillir." },
+  { "categorie": "Événements", "q": "Les ateliers d'écriture sont-ils payants ?", "r": "Cela dépend du lieu : l'atelier du 30 mai 2026 à Saulxures-sur-Moselotte était gratuit. Chaque annonce précise les conditions." },
+  { "categorie": "Ouvrages", "q": "Comment acheter un livre ?", "r": "Chaque fiche d'ouvrage comporte un bouton « Acheter » qui vous renvoie vers un lien externe (librairie en ligne, éditeur, site de l'auteur). Aucun paiement n'est géré sur ce site. Vous pouvez aussi acheter en direct auprès des auteurs lors des salons et dédicaces." },
+  { "categorie": "Ouvrages", "q": "Comment voir mon livre sur le site ?", "r": "Envoyez-nous la couverture (dont vous détenez les droits), le résumé, l'éditeur, le prix et un lien de commande. Nous ajoutons la fiche au catalogue." },
+  { "categorie": "Publication", "q": "Je souhaite publier un livre : l'UEV peut-elle m'aider ?", "r": "L'UEV accompagne ses membres : ateliers d'écriture, lectures, rencontres, présence sur les salons. Conditions d'un éventuel accompagnement éditorial à préciser par le bureau." },
+  { "categorie": "Publication", "q": "Puis-je faire figurer mon portrait sur le site ?", "r": "Oui, avec votre accord écrit et une photo dont vous détenez les droits. Le crédit de l'auteur de la photo est toujours affiché." }
+]

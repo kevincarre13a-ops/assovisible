@@ -1,0 +1,22 @@
+{
+  "nom": "Union des Écrivains Vosgiens",
+  "sigle": "UEV",
+  "accroche": "Ici, la forêt écrit des histoires.",
+  "depuis": 1968,
+  "depuisNote": "Date indiquée par l'annuaire du Centre culturel d'Épinal et le CTHS. À confirmer par le bureau.",
+  "siege": "Épinal (Vosges)",
+  "adressePostale": "Adresse postale à renseigner",
+  "email": "Nicolascassagnau88@gmail.com",
+  "contactNom": "N. Cassagnau",
+  "president": "Vincent Decombis",
+  "siren": "492 610 944",
+  "immatriculation": "24 mars 2006",
+  "blog": "https://lesecritsvains.canalblog.com/",
+  "reseaux": [
+    { "nom": "Blog officiel", "url": "https://lesecritsvains.canalblog.com/" }
+  ],
+  "forum": { "url": "", "texte": "Lien vers un forum ou un groupe d'échange (Facebook, Discord, groupe e-mail…) à renseigner." },
+  "chiffres": {
+    "vosgiotheque": 40
+  }
+}

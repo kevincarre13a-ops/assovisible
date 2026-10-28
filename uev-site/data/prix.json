@@ -1,0 +1,13 @@
+{
+  "intro": "Les prix et concours auxquels l'UEV participe ou qu'elle organise seront présentés ici. Les informations ci-dessous sont celles que l'association a déjà publiées ; le reste est à compléter par le bureau.",
+  "prix": [
+    { "id": "erckmann-chatrian", "nom": "Prix Erckmann-Chatrian", "statut": "Distinction citée par l'UEV", "texte": "Alixe Sylvestre, dont les ouvrages sont à la Vosgiothèque, est présentée par l'UEV comme lauréate du prix Erckmann-Chatrian. Organisateur et année à confirmer.", "lien": "https://lesecritsvains.canalblog.com/2025/11/fete-du-tiers-lieu-ailleurs-l-eau-qui-mord-et-la-vosgiotheque.html" }
+  ],
+  "concours": [
+    { "id": "attente-concours", "nom": "Concours d'écriture de l'UEV", "statut": "À renseigner", "texte": "Aucun concours en cours n'a été trouvé. Ajoutez ici le règlement, la date limite et les modalités d'envoi des textes.", "lien": "" }
+  ],
+  "scenes": [
+    { "nom": "Scènes ouvertes « Jeux de Plumes UEV »", "texte": "Poètes, slameurs, chanteurs et conteurs montent sur scène : un rendez-vous organisé au tiers-lieu « Ailleurs » à Épinal depuis trois ans." },
+    { "nom": "Ateliers d'écriture", "texte": "Des séances gratuites ou à petit prix dans les médiathèques : écrire seul·e, puis lire ensemble." }
+  ]
+}

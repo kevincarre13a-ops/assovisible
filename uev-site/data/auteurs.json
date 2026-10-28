@@ -1,0 +1,390 @@
+[
+  {
+    "id": "delphine-arnould",
+    "nom": "Delphine Arnould",
+    "initiales": "DA",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "Les Imaginales 2026 (Épinal)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "andre-balaud",
+    "nom": "André Balaud",
+    "initiales": "AB",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "Les Imaginales 2026 (Épinal)",
+      "Village des auteurs régionaux, Le Thillot (juin 2026)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "jerome-bonnet",
+    "nom": "Jérôme Bonnet",
+    "initiales": "JB",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "Les Imaginales 2025 (Épinal)",
+      "Les Imaginales 2026 (Épinal)",
+      "La Vosgiothèque (Épinal, nov. 2025)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "nicolas-cassagnau",
+    "nom": "Nicolas Cassagnau",
+    "initiales": "NC",
+    "role": "Contact du projet de site",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "Les Imaginales 2025 (Épinal)",
+      "Les Imaginales 2026 (Épinal)",
+      "La Vosgiothèque (Épinal, nov. 2025)",
+      "Village des auteurs régionaux, Le Thillot (juin 2026)",
+      "Fête du Ballon d'Alsace (16 août 2026)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "olivier-d-icarie",
+    "nom": "Olivier d'Icarie",
+    "initiales": "OD",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "Les Imaginales 2025 (Épinal)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "vincent-decombis",
+    "nom": "Vincent Decombis",
+    "initiales": "VD",
+    "role": "Président de l'UEV",
+    "genres": [],
+    "ville": "",
+    "bio": "Président de l'Union des Écrivains Vosgiens et auteur du blog officiel. Il défend une association où l'on ne distingue pas les auteurs publiés des écrivants en attente de l'être : « tous écrivains ! »",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "La Vosgiothèque (Épinal, nov. 2025)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "coralie-desgranges",
+    "nom": "Coralie Desgranges",
+    "initiales": "CD",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "Les Imaginales 2026 (Épinal)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "elodie-deelle",
+    "nom": "Élodie Déelle",
+    "initiales": "ÉD",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "Les Imaginales 2026 (Épinal)",
+      "La Vosgiothèque (Épinal, nov. 2025)",
+      "Fête du Ballon d'Alsace (16 août 2026)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "micheline-faliguerho",
+    "nom": "Micheline Faliguerho",
+    "initiales": "MF",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "Les Imaginales 2025 (Épinal)",
+      "Les Imaginales 2026 (Épinal)",
+      "La Vosgiothèque (Épinal, nov. 2025)",
+      "Village des auteurs régionaux, Le Thillot (juin 2026)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "marie-france-houlbreque",
+    "nom": "Marie-France Houlbreque",
+    "initiales": "MH",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "La Vosgiothèque (Épinal, nov. 2025)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "ludovic-jacquemer",
+    "nom": "Ludovic Jacquemer",
+    "initiales": "LJ",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "Les Imaginales 2026 (Épinal)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "jeph",
+    "nom": "Jeph",
+    "initiales": "J",
+    "role": "",
+    "genres": [
+      "Poésie",
+      "Chanson"
+    ],
+    "ville": "",
+    "bio": "Poète, slameur et chanteur sous le nom de JePh, après quinze ans comme chanteur du groupe « Tournée Générale ». Premier album « Mon Pays » (2020). Il a donné le concert final de la Journée des auteurs, le 9 novembre 2025 à Épinal.",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "La Vosgiothèque (Épinal, nov. 2025)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "laurent-joly",
+    "nom": "Laurent Joly",
+    "initiales": "LJ",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "Les Imaginales 2025 (Épinal)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "sebastien-klein",
+    "nom": "Sébastien Klein",
+    "initiales": "SK",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "Les Imaginales 2026 (Épinal)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "philippe-mengin",
+    "nom": "Philippe Mengin",
+    "initiales": "PM",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "Les Imaginales 2026 (Épinal)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "marjolaine-pauchet",
+    "nom": "Marjolaine Pauchet",
+    "initiales": "MP",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "Les Imaginales 2025 (Épinal)",
+      "Les Imaginales 2026 (Épinal)",
+      "Fête du Ballon d'Alsace (16 août 2026)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "pierre-olivier-poyard",
+    "nom": "Pierre-Olivier Poyard",
+    "initiales": "PP",
+    "role": "À l'initiative de la Journée des auteurs (9 nov. 2025)",
+    "genres": [],
+    "ville": "",
+    "bio": "À l'origine de la Journée des auteurs du 9 novembre 2025, pensée pour cerner et développer le pôle auteurs de l'UEV.",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "La Vosgiothèque (Épinal, nov. 2025)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "cedric-prevot",
+    "nom": "Cédric Prévot",
+    "initiales": "CP",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "La Vosgiothèque (Épinal, nov. 2025)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "thierry-schmaltz",
+    "nom": "Thierry Schmaltz",
+    "initiales": "TS",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "Les Imaginales 2025 (Épinal)",
+      "Les Imaginales 2026 (Épinal)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "alixe-sylvestre",
+    "nom": "Alixe Sylvestre",
+    "initiales": "AS",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "Citée par l'UEV comme lauréate du prix Erckmann-Chatrian.",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "La Vosgiothèque (Épinal, nov. 2025)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "celeste-torino",
+    "nom": "Céleste Torino",
+    "initiales": "CT",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "Les Imaginales 2025 (Épinal)",
+      "Les Imaginales 2026 (Épinal)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "rene-vincent-viry",
+    "nom": "René-Vincent Viry",
+    "initiales": "RV",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "Les Imaginales 2025 (Épinal)",
+      "Village des auteurs régionaux, Le Thillot (juin 2026)"
+    ],
+    "lien": ""
+  },
+  {
+    "id": "ginette-walter",
+    "nom": "Ginette Walter",
+    "initiales": "GW",
+    "role": "",
+    "genres": [],
+    "ville": "",
+    "bio": "",
+    "photo": null,
+    "photoCredit": "",
+    "ouvrages": [],
+    "presences": [
+      "La Vosgiothèque (Épinal, nov. 2025)"
+    ],
+    "lien": ""
+  }
+]

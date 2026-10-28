@@ -1,0 +1,12 @@
+[
+  { "nom": "Ville d'Épinal", "type": "Collectivité", "texte": "Siège de l'association et ville des Imaginales et du tiers-lieu « Ailleurs ».", "lien": "" },
+  { "nom": "Tiers-lieu « Ailleurs » (Épinal)", "type": "Lieu partenaire", "texte": "Accueille les scènes ouvertes « Jeux de Plumes », la Journée des auteurs et la Vosgiothèque.", "lien": "" },
+  { "nom": "RECRE « Vivre et Créer à la Montagne »", "type": "Association", "texte": "Co-organise avec l'UEV le volet culturel de la fête du Ballon d'Alsace depuis 1998.", "lien": "" },
+  { "nom": "Transhumance et Traditions (Giromagny)", "type": "Association", "texte": "Initiatrice de la fête artisanale du Ballon.", "lien": "" },
+  { "nom": "Auberge littéraire belge (Waterloo)", "type": "Association d'écrivains", "texte": "Relations suivies avec l'UEV depuis 2019.", "lien": "" },
+  { "nom": "Médiathèques des Vosges", "type": "Lieux de lecture", "texte": "Saulxures-sur-Moselotte, Le Thillot, Remiremont… accueillent ateliers et rencontres.", "lien": "" },
+  { "nom": "Compagnie Le Plateau Ivre (Vagney)", "type": "Compagnie de théâtre", "texte": "La veillée d'hiver accueille des poèmes issus des ateliers de l'UEV.", "lien": "" },
+  { "nom": "Radio RGM (107 MHz)", "type": "Média", "texte": "Émissions consacrées aux écrivains vosgiens et à leurs rendez-vous.", "lien": "https://radioguemezot.eu" },
+  { "nom": "Département des Vosges — « La Vie en Vosges »", "type": "Collectivité", "texte": "Logo présent parmi les partenaires de la fête du tiers-lieu 2025.", "lien": "" },
+  { "nom": "À renseigner", "type": "Votre structure ici", "texte": "Ajoutez un partenaire dans data/partenaires.json : nom, type, texte, lien.", "lien": "" }
+]

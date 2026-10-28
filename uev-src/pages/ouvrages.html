@@ -1,0 +1,22 @@
+title: Ouvrages — Union des Écrivains Vosgiens
+description: Le catalogue des ouvrages des auteurs de l'Union des Écrivains Vosgiens : recherche par titre, auteur, genre et année, fiche détaillée et lien d'achat.
+rubrique: Ouvrages
+h1: Le catalogue des auteurs vosgiens
+lead: Cherchez par titre, auteur, genre ou année. Chaque fiche renvoie vers un lien d'achat externe : aucun paiement sur ce site.
+fil: Ouvrages
+scripts: ouvrages.js
+---
+<section class="section">
+  <div class="container">
+    <form class="tools" style="grid-template-columns:2fr 1fr 1fr 1fr auto" role="search" onsubmit="return false" aria-label="Rechercher un ouvrage">
+      <label>Titre, auteur, mot-clé<input type="search" id="q" placeholder="Rechercher" autocomplete="off"></label>
+      <label>Genre<select id="genre"><option value="">Tous</option></select></label>
+      <label>Année<select id="annee"><option value="">Toutes</option></select></label>
+      <label>Auteur<select id="auteur"><option value="">Tous</option></select></label>
+      <button class="btn fantome" type="button" id="raz">Réinitialiser</button>
+    </form>
+    <p class="result-count" id="compte" aria-live="polite"></p>
+    <div class="list-books" id="grille-ouvrages"></div>
+    <p class="note" style="margin-top:30px">Catalogue en construction. Les fiches « Modèle » illustrent la mise en page ; la revue <em>Cahiers vosgiens</em> est référencée d'après la fiche du CTHS. Les couvertures n'apparaissent qu'avec l'accord de l'auteur ou de l'éditeur et un crédit. Ajout d'un ouvrage : <code>data/ouvrages.json</code>. À voir aussi : la Vosgiothèque à Épinal, où plus de quarante auteurs de l'UEV ont déposé leurs livres.</p>
+  </div>
+</section>

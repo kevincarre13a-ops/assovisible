@@ -1,0 +1,62 @@
+[
+  {
+    "id": "cahiers-vosgiens",
+    "titre": "Cahiers vosgiens",
+    "auteurId": "",
+    "auteurLabel": "Union des écrivains de l'Est – Groupement des Vosges (collectif)",
+    "genre": "Revue collective",
+    "annee": "",
+    "editeur": "À renseigner",
+    "prix": "",
+    "couverture": null,
+    "couvertureCredit": "",
+    "resume": "Revue semestrielle de poèmes, nouvelles et textes d'écrivains amateurs, illustrée de dessins (source : fiche CTHS du groupement, fondé en 1968). Le statut actuel de cette publication est à confirmer par l'UEV.",
+    "lienAchat": "",
+    "exemple": false
+  },
+  {
+    "id": "modele-poesie",
+    "titre": "Titre du recueil (modèle)",
+    "auteurId": "",
+    "auteurLabel": "Auteur·e à renseigner",
+    "genre": "Poésie",
+    "annee": "",
+    "editeur": "À renseigner",
+    "prix": "",
+    "couverture": null,
+    "couvertureCredit": "",
+    "resume": "Fiche modèle. Remplacez ce texte par le résumé de l'ouvrage (3 à 6 lignes).",
+    "lienAchat": "",
+    "exemple": true
+  },
+  {
+    "id": "modele-roman",
+    "titre": "Titre du roman (modèle)",
+    "auteurId": "",
+    "auteurLabel": "Auteur·e à renseigner",
+    "genre": "Roman",
+    "annee": "",
+    "editeur": "À renseigner",
+    "prix": "",
+    "couverture": null,
+    "couvertureCredit": "",
+    "resume": "Fiche modèle. Remplacez ce texte par le résumé de l'ouvrage (3 à 6 lignes).",
+    "lienAchat": "",
+    "exemple": true
+  },
+  {
+    "id": "modele-histoire",
+    "titre": "Titre du récit vosgien (modèle)",
+    "auteurId": "",
+    "auteurLabel": "Auteur·e à renseigner",
+    "genre": "Histoire locale",
+    "annee": "",
+    "editeur": "À renseigner",
+    "prix": "",
+    "couverture": null,
+    "couvertureCredit": "",
+    "resume": "Fiche modèle. Remplacez ce texte par le résumé de l'ouvrage (3 à 6 lignes).",
+    "lienAchat": "",
+    "exemple": true
+  }
+]

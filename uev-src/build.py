@@ -1,0 +1,195 @@
+#!/usr/bin/env python3
+"""Assemble les pages HTML du site UEV (en-tête, menu, pied de page communs).
+
+Usage :  python3 uev-src/build.py
+Lit     :  uev-src/pages/*.html   (métadonnées + contenu propre à chaque page)
+Écrit   :  uev-site/*.html        (pages complètes, prêtes à être publiées)
+Les données (auteurs, ouvrages, agenda…) vivent dans uev-site/data/*.json : pas besoin de ce script pour les mettre à jour.
+"""
+import pathlib, re, html
+
+RACINE = pathlib.Path(__file__).resolve().parent
+SORTIE = RACINE.parent / "uev-site"
+URL = "https://uev-vosges.netlify.app"  # remplacé par l'URL réelle au déploiement (voir LISEZMOI)
+
+MENU = [
+    ("index.html", "Accueil", ["index.html"]),
+    ("presentation.html", "L'UEV", ["presentation.html"]),
+    ("agenda.html", "Agenda", ["agenda.html"]),
+    ("auteurs.html", "Auteurs", ["auteurs.html", "auteur.html"]),
+    ("ouvrages.html", "Ouvrages", ["ouvrages.html", "ouvrage.html"]),
+    ("archives.html", "Archives", ["archives.html"]),
+    ("actualites.html", "Actualités", ["actualites.html"]),
+    ("prix-concours.html", "Prix & concours", ["prix-concours.html"]),
+    ("contact.html", "Contact & FAQ", ["contact.html"]),
+]
+CTA = ("adherer.html", "Adhérer", ["adherer.html"])
+
+SPRITE = """<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-plume" viewBox="0 0 24 24"><path d="M20 3C12 3 6 8 5 17l-2 4M9 15l6-6M20 3c0 9-5 15-14 15.500"/></symbol>
+<symbol id="i-livre" viewBox="0 0 24 24"><path d="M4 5.500A2.500 2.500 0 0 1 6.500 3H20v16H6.500A2.500 2.500 0 0 0 4 21.500zM4 5.500v16M9 7.500h6"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.500" y="5" width="17" height="15.500" rx="2.500"/><path d="M3.500 10h17M8 3v4M16 3v4"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.200 7-11.500A7 7 0 0 0 5 9.500C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></symbol>
+<symbol id="i-fleche" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+<symbol id="i-lien" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.500"/><path d="M2.500 20c0-3.600 2.900-6 6.500-6s6.500 2.400 6.500 6M16 4.500a3.500 3.500 0 0 1 0 7M18 14.300c2.100.7 3.500 2.600 3.500 5.700"/></symbol>
+<symbol id="i-archive" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="5" rx="1.500"/><path d="M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M10 13h4"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.500"/><path d="M3.500 7l8.500 6.500L20.500 7"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.500" y="10.500" width="15" height="10" rx="2.500"/><path d="M8 10.500V8a4 4 0 0 1 8 0v2.500M12 15v2"/></symbol>
+<symbol id="i-etoile" viewBox="0 0 24 24"><path d="M12 3l2.700 5.600 6.100.9-4.400 4.300 1 6.100L12 17l-5.400 2.900 1-6.100L3.200 9.500l6.100-.9z"/></symbol>
+<symbol id="i-feuille" viewBox="0 0 24 24"><path d="M12 3l-5 7h3l-4 6h4l-2 3h8l-2-3h4l-4-6h3z"/><path d="M12 19v2"/></symbol>
+<symbol id="i-coeur" viewBox="0 0 24 24"><path d="M12 20s-8-5-8-11a4.500 4.500 0 0 1 8-2.800A4.500 4.500 0 0 1 20 9c0 6-8 11-8 11z"/></symbol>
+<symbol id="i-micro" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.500 11a6.500 6.500 0 0 0 13 0M12 17.500V21"/></symbol>
+</defs></svg>"""
+
+LAYOUT = """<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<meta name="description" content="{description}">
+<meta name="theme-color" content="#14233f">
+{robots}<link rel="canonical" href="{url}/{fichier}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Union des Écrivains Vosgiens">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{description}">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/source-sans-3.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+{sprite}
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html" aria-label="Union des Écrivains Vosgiens — accueil">
+      <span class="brand-mark" aria-hidden="true">UEV<svg viewBox="0 0 24 24"><path d="M20 3C12 3 6 8 5 17l-2 4 1 .5 2-3c9-.5 14-6 14-15.5z"/></svg></span>
+      <span class="brand-name">Union des Écrivains<br>Vosgiens<small>Association d'auteurs · Vosges</small></span>
+    </a>
+    <button class="burger" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span></button>
+    <nav class="main-nav" id="menu" aria-label="Navigation principale">
+      <ul>
+{menu}
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="contenu">
+{hero}
+{contenu}
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">UEV</span><span class="brand-name">Union des Écrivains<br>Vosgiens<small>Association d'auteurs · Vosges</small></span></a>
+        <p>Celles et ceux qui écrivent dans les Vosges, publiés ou en attente de l'être : tous écrivains.</p>
+      </div>
+      <div>
+        <h2>Coordonnées</h2>
+        <ul>
+          <li>Siège : Épinal (Vosges)</li>
+          <li><a href="mailto:Nicolascassagnau88@gmail.com">Nicolascassagnau88@gmail.com</a></li>
+          <li><span class="tag-a-renseigner">Téléphone à renseigner</span></li>
+        </ul>
+        <h2 style="margin-top:22px">Suivre l'UEV</h2>
+        <ul>
+          <li><a href="https://lesecritsvains.canalblog.com/" rel="noopener">Blog officiel de l'UEV</a></li>
+          <li><span class="tag-a-renseigner">Facebook · Instagram · YouTube : à renseigner</span></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Le site</h2>
+        <ul>
+          <li><a href="presentation.html">Présentation</a></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="auteurs.html">Auteurs</a></li>
+          <li><a href="ouvrages.html">Ouvrages</a></li>
+          <li><a href="archives.html">Archives</a></li>
+          <li><a href="actualites.html">Actualités &amp; presse</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Participer</h2>
+        <ul>
+          <li><a href="adherer.html">Adhérer à l'UEV</a></li>
+          <li><a href="prix-concours.html">Prix &amp; concours</a></li>
+          <li><a href="partenaires.html">Partenaires</a></li>
+          <li><a href="contact.html">Contact, forum &amp; FAQ</a></li>
+          <li><a href="admin.html">Espace administrateur</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="annee">2026</span> Union des Écrivains Vosgiens. Textes et images : droits réservés à leurs auteurs.</span><span>Association loi 1901 · Épinal</span></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+{scripts}
+</body>
+</html>
+"""
+
+
+def parse(texte):
+    meta, _, corps = texte.partition("\n---\n")
+    d = {}
+    for ligne in meta.strip().splitlines():
+        k, _, v = ligne.partition(":")
+        d[k.strip()] = v.strip()
+    return d, corps.strip()
+
+
+def menu_html(courant):
+    out = []
+    for f, label, actifs in MENU:
+        cur = ' aria-current="page"' if courant in actifs else ""
+        out.append(f'        <li><a href="{f}"{cur}>{html.escape(label)}</a></li>')
+    f, label, actifs = CTA
+    cur = ' aria-current="page"' if courant in actifs else ""
+    out.append(f'        <li class="cta"><a href="{f}"{cur}>{label}</a></li>')
+    return "\n".join(out)
+
+
+def hero_html(m, fichier):
+    if m.get("hero") == "aucun":
+        return ""
+    ariane = (
+        f'<p class="crumbs"><a href="index.html">Accueil</a><span aria-hidden="true">/</span>{m["fil"]}</p>'
+        if m.get("fil")
+        else ""
+    )
+    photo = f' photo" style="--photo:url(/{m["photo"]})' if m.get("photo") else ""
+    return (
+        f'<section class="page-hero{photo}"><div class="container">{ariane}'
+        f'<p class="eyebrow">{m.get("rubrique", "")}</p><h1 id="titre-page">{m["h1"]}</h1>'
+        f'<p class="lead">{m.get("lead", "")}</p></div></section>'
+    )
+
+
+def main():
+    n = 0
+    for src in sorted((RACINE / "pages").glob("*.html")):
+        m, corps = parse(src.read_text(encoding="utf-8"))
+        fichier = src.name
+        scripts = "".join(f'<script src="js/{s.strip()}"></script>\n' for s in m.get("scripts", "").split(",") if s.strip())
+        robots = '<meta name="robots" content="noindex, nofollow">\n' if m.get("noindex") else ""
+        page = LAYOUT.format(
+            title=html.escape(m["title"]), description=html.escape(m["description"]), robots=robots,
+            url=URL, fichier="" if fichier == "index.html" else fichier, sprite=SPRITE,
+            menu=menu_html(m.get("actif", fichier)), hero=hero_html(m, fichier), contenu=corps, scripts=scripts,
+        )
+        if fichier == "404.html":
+            page = page.replace("<head>", '<head>\n<base href="/">', 1)
+        (SORTIE / fichier).write_text(page, encoding="utf-8")
+        n += 1
+    print(f"{n} pages générées dans {SORTIE}")
+
+
+if __name__ == "__main__":
+    main()

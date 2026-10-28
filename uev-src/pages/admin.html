@@ -1,0 +1,39 @@
+title: Espace administrateur — Union des Écrivains Vosgiens
+description: Espace réservé aux administrateurs de l'UEV : maquette de tableau de bord (statistiques, inscriptions, ventes) avec données fictives.
+noindex: 1
+rubrique: Accès réservé
+h1: Espace administrateur
+lead: Résultats, statistiques de visites, inscriptions aux événements et suivi des ventes. Maquette : connexion à brancher plus tard.
+fil: Espace administrateur
+scripts: admin.js
+---
+<section class="section">
+  <div class="container">
+    <div class="card login reveal">
+      <h2>Connexion</h2>
+      <form class="form" id="login-form">
+        <label>Identifiant<input name="user" autocomplete="username" required></label>
+        <label>Mot de passe<input type="password" name="pass" autocomplete="current-password" required></label>
+        <button class="btn" type="submit"><svg class="ico"><use href="#i-lock"/></svg> Se connecter</button>
+        <p class="form-ok" id="login-msg" role="status"></p>
+      </form>
+      <p class="note" style="margin-top:16px">Texte d'attente : aucune authentification n'est active. Aucune donnée n'est protégée sur cette page ; elle ne contient que des exemples.</p>
+    </div>
+  </div>
+</section>
+<section class="section alt" aria-labelledby="h-dash">
+  <div class="container">
+    <div class="sec-head"><p class="eyebrow">Aperçu du tableau de bord</p><h2 id="h-dash">Maquette</h2></div>
+    <p class="fake-banner" role="note">⚠ DONNÉES D'EXEMPLE FICTIVES — aucun chiffre ci-dessous n'est réel.</p>
+    <div class="dash">
+      <div class="panel"><span class="badge alerte fictif">Fictif</span><h3>Visites ce mois-ci</h3><div class="kpi" data-count="1340">0</div><p class="delta">+12 % vs mois précédent (exemple)</p></div>
+      <div class="panel"><span class="badge alerte fictif">Fictif</span><h3>Inscriptions aux événements</h3><div class="kpi" data-count="96">0</div><p class="delta">4 événements ouverts (exemple)</p></div>
+      <div class="panel"><span class="badge alerte fictif">Fictif</span><h3>Ventes suivies</h3><div class="kpi" data-count="67">0</div><p class="delta">1 194 € redirigés vers les points de vente (exemple)</p></div>
+      <div class="panel w8"><span class="badge alerte fictif">Fictif</span><h3>Visites par mois</h3><div class="bars" id="bars" role="img" aria-label="Histogramme de visites mensuelles fictives"></div><div class="bars-x" id="bars-x" aria-hidden="true"></div></div>
+      <div class="panel"><span class="badge alerte fictif">Fictif</span><h3>Pages les plus vues</h3><div class="hbar" id="hbar"></div></div>
+      <div class="panel w6"><span class="badge alerte fictif">Fictif</span><h3>Inscriptions par événement</h3><table class="table"><thead><tr><th>Événement</th><th>Inscrits</th><th>État</th></tr></thead><tbody id="inscr"></tbody></table></div>
+      <div class="panel w6"><span class="badge alerte fictif">Fictif</span><h3>Ventes par ouvrage</h3><table class="table"><thead><tr><th>Ouvrage</th><th>Clics « Acheter »</th><th>Montant estimé</th></tr></thead><tbody id="ventes"></tbody></table></div>
+    </div>
+    <p class="note" style="margin-top:20px">À brancher plus tard : authentification (Netlify Identity), lecture des inscriptions Netlify Forms et statistiques de visites.</p>
+  </div>
+</section>
