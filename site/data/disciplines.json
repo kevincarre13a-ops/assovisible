@@ -1,0 +1,10 @@
+[
+  {"nom": "Tir Beursault", "tag": "Tradition", "img": "img/allee-50m.jpg", "texte": "Pratiqué depuis plus de cinq siècles : deux buttes face à face à 50 m, 44 flèches, et des règles d'honneur et de courtoisie."},
+  {"nom": "Tir à l'arc extérieur", "tag": "Cible", "img": "img/d-exterieur.jpg", "texte": "Le tir sur cible en extérieur, aux distances de la discipline fédérale."},
+  {"nom": "Tir à 18 m", "tag": "En salle", "img": "img/d-18m.jpg", "texte": "Le tir en salle, idéal pour l'hiver. La compagnie dispose aussi d'un pas de tir à 18 m."},
+  {"nom": "Tir en campagne", "tag": "Terrain", "img": "img/d-campagne.jpg", "texte": "Un parcours en terrain varié, avec des cibles à distances inconnues ou connues."},
+  {"nom": "Parcours nature", "tag": "Nature", "img": "img/d-nature.jpg", "texte": "Marcher et tirer en pleine nature, de cible en cible."},
+  {"nom": "Tir 3D", "tag": "Animaux 3D", "img": "img/d-3d.jpg", "texte": "Des cibles en volume représentant des animaux, sur un parcours en extérieur."},
+  {"nom": "Para-tir à l'arc", "tag": "Pour tous", "img": "img/d-para.jpg", "texte": "La pratique adaptée, décrite par la Fédération Française de Tir à l'Arc."},
+  {"nom": "Run Archery", "tag": "Nouvelle pratique", "img": "img/d-run.webp", "texte": "Un enchaînement de course et de tir, l'une des nouvelles pratiques de la FFTA."}
+]

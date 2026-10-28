@@ -1,0 +1,112 @@
+[
+ {
+  "cat": "Terrain",
+  "src": "img/entree.jpg",
+  "legende": "Entrée de la compagnie, 15 rue des Archers"
+ },
+ {
+  "cat": "Terrain",
+  "src": "img/allee-chevaliers-1.jpg",
+  "legende": "Allée des Chevaliers"
+ },
+ {
+  "cat": "Terrain",
+  "src": "img/allee-chevaliers-2.jpg",
+  "legende": "Allée des Chevaliers"
+ },
+ {
+  "cat": "Terrain",
+  "src": "img/allee-50m.jpg",
+  "legende": "Allée des Connétables, pas de tir à 50 mètres"
+ },
+ {
+  "cat": "Terrain",
+  "src": "img/butte-1.jpg",
+  "legende": "Butte maîtresse de l'allée des Connétables"
+ },
+ {
+  "cat": "Terrain",
+  "src": "img/butte-2.jpg",
+  "legende": "Allée des Connétables, vue depuis la butte"
+ },
+ {
+  "cat": "Terrain",
+  "src": "img/pas-18m.jpg",
+  "legende": "Pas de tir à 18 mètres"
+ },
+ {
+  "cat": "Le logis",
+  "src": "img/logis-entree.jpg",
+  "legende": "Entrée du logis"
+ },
+ {
+  "cat": "Le logis",
+  "src": "img/logis-1.jpg",
+  "legende": "Le logis, cartes des tirs traditionnels"
+ },
+ {
+  "cat": "Le logis",
+  "src": "img/logis-2.jpg",
+  "legende": "Le logis"
+ },
+ {
+  "cat": "Événements 2026",
+  "src": "img/ev-bouquet.jpeg",
+  "legende": "Bouquet Provincial, 17 mai 2026"
+ },
+ {
+  "cat": "Événements 2026",
+  "src": "img/ev-jardin.jpeg",
+  "legende": "Partie de Jardin, 18 avril 2026"
+ },
+ {
+  "cat": "Événements 2026",
+  "src": "img/ev-abat.jpg",
+  "legende": "Abat l'Oiseau 2026"
+ },
+ {
+  "cat": "Événements 2026",
+  "src": "img/news-trophee-1.jpg",
+  "legende": "Trophées des champions, 29 mai 2026"
+ },
+ {
+  "cat": "Événements 2026",
+  "src": "img/news-trophee-2.jpeg",
+  "legende": "Trophées des champions, 29 mai 2026"
+ },
+ {
+  "cat": "Disciplines",
+  "src": "img/d-exterieur.jpg",
+  "legende": "Tir à l'arc extérieur"
+ },
+ {
+  "cat": "Disciplines",
+  "src": "img/d-18m.jpg",
+  "legende": "Tir à 18 m en salle"
+ },
+ {
+  "cat": "Disciplines",
+  "src": "img/d-campagne.jpg",
+  "legende": "Tir en campagne"
+ },
+ {
+  "cat": "Disciplines",
+  "src": "img/d-nature.jpg",
+  "legende": "Parcours nature"
+ },
+ {
+  "cat": "Disciplines",
+  "src": "img/d-3d.jpg",
+  "legende": "Tir 3D"
+ },
+ {
+  "cat": "Histoire",
+  "src": "img/abat-1905.jpg",
+  "legende": "Abat l'Oiseau, 1905 (photo d'archive)"
+ },
+ {
+  "cat": "Membres",
+  "src": "img/trombi.jpg",
+  "legende": "Les membres de la compagnie, 2026"
+ }
+]

@@ -1,0 +1,8 @@
+{
+  "note": "Montants publiés sur la page « Tarifs de la cotisation » du site officiel (page non datée). La grille officielle 2026-2027 est disponible en PDF : à vérifier avant toute inscription.",
+  "pdf": "https://cie-arc-chennevieres.net/wp-content/uploads/2026/06/Tarifs-Inscriptions-Licences-Saison-2026-2027.pdf",
+  "lignes": [
+    {"formule": "Première année", "detail": "Cours + prêt du matériel (arc, carquois, flèches)", "adulte": "305 €", "jeune": "255 € (dès 12 ans)"},
+    {"formule": "À partir de la 2e année", "detail": "Cotisation annuelle", "adulte": "172 €", "jeune": "124 €"}
+  ]
+}

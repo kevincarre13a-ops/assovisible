@@ -1,0 +1,9 @@
+{
+  "maj": "Source : site officiel de la compagnie (page « Les installations » et « Déroulement »). À confirmer avant chaque rentrée.",
+  "creneaux": [
+    {"jour": "Mercredi", "horaire": "18h – 20h", "public": "Jeunes (à partir de 12 ans)", "lieu": "Gymnase Maurice Rousseau", "adresse": "35 route du Plessis, 94430 Chennevières-sur-Marne", "periode": "De septembre à mars, hors vacances scolaires", "inclus": true},
+    {"jour": "Mercredi", "horaire": "20h – 22h", "public": "Adultes", "lieu": "Gymnase Maurice Rousseau", "adresse": "35 route du Plessis, 94430 Chennevières-sur-Marne", "periode": "De septembre à mars, hors vacances scolaires", "inclus": true},
+    {"jour": "Vendredi", "horaire": "20h – 22h", "public": "Tous", "lieu": "CTS – Centre Technique et Sportif de Tir à l'Arc", "adresse": "avenue Champlain, 94430 Chennevières-sur-Marne", "periode": "Accès individuel et payant, non inclus dans la cotisation", "inclus": false},
+    {"jour": "Mercredi et vendredi soir", "horaire": "Horaire à confirmer", "public": "Archers de la compagnie", "lieu": "Terrain de la compagnie (Beursault et pas de tir à 18 m)", "adresse": "15 rue des Archers, 94430 Chennevières-sur-Marne", "periode": "À partir du printemps", "inclus": true}
+  ]
+}

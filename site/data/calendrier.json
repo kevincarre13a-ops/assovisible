@@ -1,0 +1,163 @@
+{
+ "source": "Calendrier 2026 de la compagnie (PDF officiel). Les dates de 2027 ne sont pas encore publiées : ajouter les nouvelles lignes ci-dessous.",
+ "evenements": [
+  {
+   "date": "2026-01-17",
+   "titre": "Championnat départemental de salle (94)",
+   "categorie": "competition",
+   "fin": "2026-01-18",
+   "description": "Compétition en salle du Val-de-Marne."
+  },
+  {
+   "date": "2026-01-23",
+   "titre": "Tir de la Saint-Sébastien",
+   "categorie": "tradition",
+   "lieu": "Beursault de la compagnie",
+   "description": "Tir en l'honneur du saint patron des archers, vers fin janvier."
+  },
+  {
+   "date": "2026-01-24",
+   "titre": "Repas de la Saint-Sébastien",
+   "categorie": "convivialite",
+   "description": "Le repas qui prolonge la fête."
+  },
+  {
+   "date": "2026-02-07",
+   "titre": "Trophée départemental des mixtes",
+   "categorie": "competition"
+  },
+  {
+   "date": "2026-02-08",
+   "titre": "Coupe Pagès",
+   "categorie": "competition",
+   "description": "Première compétition de l'année pour les élèves de l'école de tir (début février)."
+  },
+  {
+   "date": "2026-03-08",
+   "titre": "Abat l'Oiseau",
+   "categorie": "tradition",
+   "lieu": "Beursault de la compagnie",
+   "description": "Tir du Roi de l'année. En 2026, Gilles conserve son titre pour la deuxième année consécutive."
+  },
+  {
+   "date": "2026-03-14",
+   "titre": "Championnat départemental de Beursault",
+   "categorie": "competition"
+  },
+  {
+   "date": "2026-03-15",
+   "titre": "Abat l'Oiseau des jeunes (Roitelet)",
+   "categorie": "tradition",
+   "description": "Version des jeunes, tirée à 30 m."
+  },
+  {
+   "date": "2026-04-11",
+   "titre": "Concours Le Floréal",
+   "categorie": "competition",
+   "fin": "2026-04-12",
+   "lieu": "Avec la Compagnie de Saint-Maur",
+   "description": "Concours de Beursault créé en 1993 avec Saint-Maur."
+  },
+  {
+   "date": "2026-04-18",
+   "titre": "Partie de Jardin avec Saint-Maur",
+   "categorie": "tradition",
+   "lieu": "Avec la Compagnie de Saint-Maur",
+   "description": "Oiseaux, colibris, pigeons et autruche sur câbles électriques, points positifs et négatifs, puis repas partagé."
+  },
+  {
+   "date": "2026-05-02",
+   "titre": "Ouverture des Prix Généraux",
+   "categorie": "competition",
+   "lieu": "Famille de Beauté"
+  },
+  {
+   "date": "2026-05-08",
+   "titre": "Championnat régional de Beursault",
+   "categorie": "competition"
+  },
+  {
+   "date": "2026-05-17",
+   "titre": "Bouquet Provincial",
+   "categorie": "tradition",
+   "lieu": "Chiry-Ourscamp (Oise)",
+   "description": "316 drapeaux présents. La compagnie se classe 22e."
+  },
+  {
+   "date": "2026-05-29",
+   "titre": "Trophées des champions",
+   "categorie": "vie",
+   "lieu": "Ville de Chennevières-sur-Marne",
+   "description": "Cérémonie organisée par la ville : Lou et Samuel, Delphine et Mario mis à l'honneur."
+  },
+  {
+   "date": "2026-05-31",
+   "titre": "Fermeture des Prix Généraux",
+   "categorie": "competition",
+   "lieu": "Famille de Beauté"
+  },
+  {
+   "date": "2026-06-13",
+   "titre": "Prix des Archers Carabiniers",
+   "categorie": "competition",
+   "fin": "2026-06-15",
+   "description": "Prix de printemps des Archers Carabiniers d'Île-de-France."
+  },
+  {
+   "date": "2026-06-21",
+   "titre": "Sortie de la compagnie",
+   "categorie": "convivialite"
+  },
+  {
+   "date": "2026-09-12",
+   "titre": "Entretien du jeu",
+   "categorie": "convivialite",
+   "lieu": "15 rue des Archers",
+   "description": "Journée de remise en état du terrain."
+  },
+  {
+   "date": "2026-09-19",
+   "titre": "Éliminatoires du Prix de la Famille",
+   "categorie": "competition",
+   "fin": "2026-09-20",
+   "lieu": "Famille de Beauté"
+  },
+  {
+   "date": "2026-09-26",
+   "titre": "Éliminatoires du Prix de la Famille",
+   "categorie": "competition",
+   "fin": "2026-09-27",
+   "lieu": "Famille de Beauté"
+  },
+  {
+   "date": "2026-10-04",
+   "titre": "Championnat de France de Beursault",
+   "categorie": "competition"
+  },
+  {
+   "date": "2026-10-11",
+   "titre": "Tir à la Pomme",
+   "categorie": "tradition"
+  },
+  {
+   "date": "2026-10-17",
+   "titre": "Finale du Prix de la Famille",
+   "categorie": "competition",
+   "fin": "2026-10-18",
+   "lieu": "Famille de Beauté"
+  },
+  {
+   "date": "2026-11-01",
+   "titre": "Prix du Roy et du Connétable",
+   "categorie": "tradition",
+   "lieu": "Beursault de la compagnie",
+   "description": "Tir traditionnel du Roi et du Connétable."
+  },
+  {
+   "date": "2026-11-08",
+   "titre": "Remise du Prix de la Famille",
+   "categorie": "tradition",
+   "lieu": "Famille de Beauté"
+  }
+ ]
+}

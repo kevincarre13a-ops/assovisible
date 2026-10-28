@@ -1,0 +1,17 @@
+{
+  "nom": "1ère Compagnie d'Arc de Chennevières-sur-Marne",
+  "nomCourt": "1ère Compagnie d'Arc",
+  "fondation": 1854,
+  "adresse": "15 rue des Archers, 94430 Chennevières-sur-Marne",
+  "telephone": "07 89 23 46 89",
+  "telephoneLien": "+33789234689",
+  "email": "",
+  "emailNote": "Adresse e-mail à compléter par la compagnie",
+  "siteOfficiel": "https://cie-arc-chennevieres.net/",
+  "liens": [
+    {"label": "Site officiel de la compagnie", "url": "https://cie-arc-chennevieres.net/"},
+    {"label": "Fédération Française de Tir à l'Arc", "url": "https://www.ffta.fr/"},
+    {"label": "Famille de Beauté", "url": "https://pxgen.familledebeaute.org/accueil.php"},
+    {"label": "Centre Technique et Sportif (CTS)", "url": "https://www.ctsarc94.com/"}
+  ]
+}

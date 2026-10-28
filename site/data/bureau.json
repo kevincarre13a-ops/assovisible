@@ -1,0 +1,19 @@
+{
+  "bureau": [
+    {"nom": "Michel Devaux", "role": "Capitaine · Président"},
+    {"nom": "Mario Correia", "role": "Premier Lieutenant · Vice-président"},
+    {"nom": "Gilles Herrera", "role": "Second Lieutenant · Vice-président · Greffier (secrétaire)"},
+    {"nom": "Fernando Pereira", "role": "Sous-lieutenant porte-drapeau"},
+    {"nom": "Laurent Leterrier", "role": "Trésorier"},
+    {"nom": "Julien Calvet", "role": "Censeur"}
+  ],
+  "entraineurs": [
+    {"nom": "Fernando Pereira", "role": "Entraîneur"},
+    {"nom": "Henri Kerbekian", "role": "Assistant entraîneur"},
+    {"nom": "Jean-Luc Dessolin", "role": "Assistant entraîneur"}
+  ],
+  "dignitaires": [
+    {"nom": "Lucien Tison", "role": "Connétable (depuis le 31/10/1987)"},
+    {"nom": "Laurent Leterrier", "role": "Empereur (depuis 2016)"}
+  ]
+}
