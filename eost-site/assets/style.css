@@ -113,3 +113,10 @@ nav{flex:none}
 .tag.o{background:var(--sun);color:var(--deep)}
 .date span{color:var(--sun)}
 .art img{display:block}
+
+/* galerie avec photos réelles */
+.gal figure a{display:block;width:100%;height:100%}.gal figcaption{font-size:.8rem;line-height:1.35}
+.gal[hidden],.gal figure[hidden]{display:none}
+.slot{max-width:calc(100% - 20px);white-space:normal;line-height:1.3;font-size:.72rem}
+figure.cover{float:right;margin:0 0 20px 28px;width:200px}figure.cover img{width:100%;height:auto;border-radius:6px;box-shadow:0 10px 28px rgba(8,42,68,.3)}figure.cover figcaption{font-size:.78rem;text-align:center;margin-top:8px;opacity:.8}
+@media(max-width:600px){figure.cover{float:none;margin:0 auto 24px}}

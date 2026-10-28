@@ -353,6 +353,7 @@ T.update({
 "Où nous trouver":"Pelec'h kavout ac'hanomp",
 "Ouvrir la carte en grand":"Digeriñ ar gartenn brasoc'h",
 })
+T.update({"Assemblées":"Bodadegoù meur","Conférences":"Prezegennoù"})
 # cles speciales: texte "Eost"/"eost" ambigus -> on ne garde que les noeuds exacts (voir build.cjs : cle entouree de > <)
 json.dump(T,open('br-textes.json','w'),ensure_ascii=False,indent=0)
 print(len(T))
