@@ -243,7 +243,7 @@ T.update({
 "Le moulin et le breton":"Ar vilin hag ar brezhoneg",
 "EOST incite la commune à acquérir le moulin de Luzéoc pour le restaurer ; naissance des après-midis de conversation en breton.":"Lakaat a ra EOST ar c'huzul ti-kêr da brenañ meilh-avel Penn-ar-Stank e-tal Lezuoc evit adsevel anezhi.<br>Abardaevezhioù brezhoneg kentañ.",
 "Un livre par an sur l'Occupation, la reconstruction, les voies romaine et ferrée, la vie d'antan.":"Ul levr bep bloaz diwar-benn an Okupasion, an adsevel, an hent-meur hag an hent-houarn, ar vuhez gwechall.",
-"Livres n° 14 en juin 2024 et n° 15 en juin 2026, films de Pierre D'Hervé, soutien à la classe maternelle bilingue et participation à la Redadeg, course pour la langue bretonne.":"Levr niv. 14 e miz Mezheven 2024 ha levr niv. 15 e miz Mezheven 2026, filmoù Pierre D'Hervé, skoazell ar c'hlas-vamm divyezhek hag ar Redadeg.",
+"Livres n° 14 en juin 2024 et n° 15 en juin 2026, films de Pierre D'Hervé, soutien à la classe maternelle bilingue et participation à la Redadeg, course pour la langue bretonne.":"Levr niv. 14 e miz Mezheven 2024 ha levr niv. 15 e miz Mezheven 2026, filmoù Pierre D'Hervé, skoazell ar c'hlas-mamm divyezhek hag ar Redadeg.",
 "Telgruc-sur-Mer, entre Ménez-Hom et baie de Douarnenez":"Terrug, etre Menez-Hom ha bae Douarnenez",
 "Commune de la presqu'île de Crozon (Finistère), Telgruc domine la baie de Douarnenez. Au XIXᵉ siècle, six des quatre-vingt-dix-sept moulins à vent de la presqu'île se trouvaient sur son territoire. EOST travaille avec la municipalité, la Cinémathèque de Bretagne, l'office de tourisme de Crozon et la Fondation du patrimoine.":"Ur gumun eus gourenez Kraozon (Penn-ar-Bed) eo Terrug digor war bae Douarnenez. En XIXvet kantved e oa c'hwec'h milin-avel war he zachenn diwar ar 97 a oa war ar c'hourenez. Kenlabourat a ra EOST gant ar c'huzul ti-kêr, Gwarez Filmoù Breizh, ofis an douristelezh e Kraozon ha fondezon ar Glad.",
 "Extraits des statuts fondateurs de 1997.":"Bommoù diwar statutoù diazez 1997.",
@@ -264,7 +264,7 @@ T.update({
 "Après-midis de conversation en breton":"Abardaevezhioù komz brezhoneg",
 "Depuis 2012, un mercredi par mois de novembre à juin, de 14 h à 17 h, au foyer des jeunes. Gratuit, ouvert à tous les niveaux, pour parler, écouter et partager.":"Abaoe 2012, ur merc'her bep miz eus miz Du da viz Mezheven, eus 14e da 17e, e ti ar re yaouank. Digoust, digor d'an holl liveoù, evit komz, selaou ha kemer perzh.",
 "Saison 2026-2027 :":"Bloaz 2026-2027 :"," 2 et 9 déc., 6 janv., 3 févr., 10 et 31 mars, 12 mai et 2 juin.":" 2 ha 9 a viz Kerzu, 6 a viz Genver, 3 a viz C'hwevrer, 10 hag 31 a viz Meurzh, 12 a viz Mae, 2 a viz Mezheven.",
-"EOST soutient aussi la classe maternelle bilingue et la Redadeg, la course pour la langue bretonne.":"Skoazellañ a ra EOST ar c'hlas-vamm divyezhek hag ar Redadeg evit ar brezhoneg.",
+"EOST soutient aussi la classe maternelle bilingue et la Redadeg, la course pour la langue bretonne.":"Skoazellañ a ra EOST ar c'hlas-mamm divyezhek hag ar Redadeg evit ar brezhoneg.",
 "Le moulin à vent de Luzéoc":"Milin-avel Penn-ar-Stank e-tal Lezuoc",
 "Racheté par la commune en 2012 à l'initiative d'EOST, le moulin a été entièrement reconstruit avec le soutien du Département, de la fondation du Patrimoine et de 150 donateurs. Ses ailes parées de toiles rouges tournent à nouveau face à la mer : c'est le seul moulin à vent ouvert au public de la presqu'île de Crozon.":"Prenet eo bet gant ar gomun e 2012 da heul kinnig EOST hag adsavet penn-da-benn gant skoazell an departamant, fondezon ar Glad ha 150 donezoner. Treiñ a ra adarre he bannoù gwisket gant lien ruz dirak ar mor : an hini nemeti eus milinoù-avel gourenez Kraozon a c'hall bezañ gweladennet.",
 " de mai à septembre, animations l'été et lors des journées du patrimoine (le moulin ne tourne que s'il y a du vent !). Possibilité de visite de groupes hors saison sur demande. En 2026 : 824 visiteurs accueillis par neuf bénévoles.":" eus miz Mae da viz Gwengolo, abadennoù en hañv ha da vare Devezhioù ar glad (ne dro ar milin nemet pa vez avel !). Bez e c'hall strolladoù tud bezañ degemeret forzh pedavare en ur pellgomz en a-raok. E 2026 : 824 gweladenner degemeret gant nav den a-youl-vat.",
@@ -333,12 +333,25 @@ T.update({
 "Fondée le 25 juin 1997, statuts signés le 5 juillet et déclarée à la sous-préfecture de Châteaulin en juillet 1997. Premières activités : fest-noz et randonnées pour rapprocher habitants et estivants autour du petit patrimoine.":"Krouet d'ar 25 a viz Mezheven 1997, statutoù sinet d'ar 5 a viz Gouere hag disklêriet e is-prefeti Kastellin e miz Gouere 1997. Oberiantizoù kentañ : festoù-noz ha baleadegoù evit dizoloiñ ar glad bihan gant an annezidi hag an estrenien.",
 "Séances avec la Cinémathèque de Bretagne : films des années 1920, de la guerre et du bombardement du bourg en 1944, films amateurs.":"Abadennoù gant Gwarez Filmoù Breizh : filmoù eus ar bloavezhioù 1920, eus ar brezel hag eus bombezadeg ar vorc'h e 1944, filmoù hiniennoù.",
 " en hiver et au printemps, un samedi en général, vers 15 h.":" er goañv hag en nevez-amzer, ur sadorn peurliesañ, war-dro 15e.",
-"EOST soutient aussi la classe maternelle bilingue et la Redadeg, la course pour la langue bretonne.":"Skoazellañ a ra EOST ar c'hlas-vamm divyezhek hag ar Redadeg evit ar brezhoneg.",
+"EOST soutient aussi la classe maternelle bilingue et la Redadeg, la course pour la langue bretonne.":"Skoazellañ a ra EOST ar c'hlas-mamm divyezhek hag ar Redadeg evit ar brezhoneg.",
 "Fours, lavoirs, fontaines, sablières, monuments ; journées d'entretien de la chapelle de Lanjulitte ; restauration de l'église.":"Fornioù, poulloù-kannañ, feunteunioù, sablerioù, monumantoù ; devezhioù kempenn chapel Lanjulit ; adkempenn an iliz.",
 "Mercredi 16 décembre, 15 h, foyer des jeunes. Préparation des activités. Goûter de Noël.":"Merc'her 16 a viz Kerzu, 15e, ti ar re yaouank. Prientiñ an oberiantizoù. Merenn-vihan Nedeleg.",
 "Conférence à la salle polyvalente":"Prezegenn e sal liesimplij","Chapelle de Lanjulitte":"Chapel Lanjulit",
 "Telgruc-sur-Mer, presqu'île de Crozon (Finistère). Le moulin de Luzéoc (Penn-ar-Stank) se trouve entre le bourg et la côte.":"Terrug, gourenez Kraozon (Penn-ar-Bed). Milin Lezuoc (Penn-ar-Stank) zo etre ar vorc'h hag an aod.",
 "Le formulaire de contact recueille nom, e-mail et message pour répondre à votre demande, sans autre usage. Ces données sont traitées via Netlify Forms. Vous pouvez demander leur accès, rectification ou suppression en écrivant à l'adresse ci-dessus. Le site ne dépose pas de cookies de suivi.":"Ar follenn zarempred a zastum an anv, ar postel hag ar gemennadenn evit respont d'ho koulenn, hep implij all. Ar roadennoù-se a vez hanterouriet dre Netlify Forms. Gallout a rit goulenn kaout, reizhañ pe lemel anezho en ur skrivañ d'ar chomlec'h a-us. Al lec'hienn ne laka cookies-heuliañ ebet.",
+})
+
+# ===== Remarques J.-P. Quemener (29 oct. 2026) =====
+for k in ["Les photos d'EOST se trouvent sur ","le blog de l'association",". Les cadres ci-dessous sont des emplacements prêts à recevoir vos clichés : remplacez le bloc "," d'une vignette par une balise ","&lt;svg&gt;","&lt;img&gt;"]:
+    T.pop(k,None)
+T.update({
+"Depuis 2012, un mercredi par mois, on parle breton au foyer des jeunes. Tous niveaux, goûter compris.":"Adalek 2012, ur merc'her bep miz, e komzer brezhoneg e ti ar re yaouank. Holl liveoù, ha merenn-vihan.",
+"Retrouvez aussi les photos d'EOST sur ":"Kavout a c'haller ivez skeudennoù EOST war ",
+"le blog de l'association":"blog ar gevredigezh",
+"EOST et le patrimoine de Telgruc-sur-Mer, repris par la mairie.":"EOST ha glad Terrug diwar lec'hienn an ti-kêr.",
+"Fiche sur l'annuaire de la presqu'île":"Follenn war bloaziataer ar c'hourenez",
+"Où nous trouver":"Pelec'h kavout ac'hanomp",
+"Ouvrir la carte en grand":"Digeriñ ar gartenn brasoc'h",
 })
 # cles speciales: texte "Eost"/"eost" ambigus -> on ne garde que les noeuds exacts (voir build.cjs : cle entouree de > <)
 json.dump(T,open('br-textes.json','w'),ensure_ascii=False,indent=0)
