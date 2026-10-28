@@ -1,0 +1,47 @@
+{
+  "nom": "Photo Ciné Club Sénonais",
+  "sigle": "PCCS",
+  "accroche": "Le club photo de Sens et du Sénonais",
+  "description": "Photo Ciné Club Sénonais, le club photo de Sens (Yonne) : réunions mensuelles, expositions, concours, stages et sorties techniques.",
+  "adresse": {
+    "ligne1": "Espace Saint Savinien",
+    "ligne2": "Entrée 3 place Étienne Dolet",
+    "cp": "89100",
+    "ville": "Sens"
+  },
+  "telephone": "06 30 68 94 77",
+  "telephone_note": "Le Président",
+  "email": "contact@photoclubsenonais.fr",
+  "permanence": "Le samedi matin, de 11 h à 12 h, au local du club, ou sur rendez-vous (téléphoner de préférence avant).",
+  "reunion": {
+    "regle": "dernier mercredi du mois",
+    "heure": "20:00",
+    "texte": "Réunion mensuelle : échanges sur les photos des membres, conseils techniques et nouveautés. Tous les derniers mercredis du mois à 20 h.",
+    "lieu": "Au club (Espace Saint Savinien, Sens) — à confirmer avant votre première venue"
+  },
+  "liens": {
+    "blog": "http://www.photoclubsenonais.fr/blog/",
+    "galerie": "http://photoclubsenonais.fr/galerie/",
+    "newsletter": "http://www.photoclubsenonais.fr/blog/index.php?pages/newsletter",
+    "fpf": "https://ur24.federation-photo.fr/club/1775/photo-cine-club-senonais",
+    "fpf_national": "http://www.federation-photo.fr/",
+    "paron": "https://www.paron.fr/photo-club-de-paron",
+    "joigny": "https://www.atelier-photos-passion-joigny.fr/"
+  },
+  "chiffres": [
+    { "valeur": 12000, "prefixe": "", "suffixe": "+", "libelle": "photos en ligne dans la galerie du club" },
+    { "valeur": 20, "prefixe": "", "suffixe": "", "libelle": "exposants à l'exposition d'automne 2026" },
+    { "valeur": 230, "prefixe": "", "suffixe": "", "libelle": "photos accrochées à l'automne 2026" },
+    { "valeur": 7, "prefixe": "6 à ", "suffixe": "", "libelle": "expositions par an, organisées par le club" }
+  ],
+  "bureau": [
+    { "nom": "Guy Eichelberger", "role": "Président", "note": "Contact du club et webmestre" },
+    { "nom": "Thierry Chazaud", "role": "Trésorier", "note": "" },
+    { "nom": "Dominique Pommier", "role": "Secrétaire", "note": "" }
+  ],
+  "bureau_note": "Composition indiquée par l'annuaire de la Fédération Photographique de France — à confirmer par le club.",
+  "adhesion": {
+    "tarif": "Tarif de la cotisation annuelle : à compléter par le club.",
+    "essai": "Séance d'essai : modalités à compléter par le club. En attendant, écrivez-nous ou venez à la permanence du samedi, de 11 h à 12 h."
+  }
+}

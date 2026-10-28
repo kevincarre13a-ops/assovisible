@@ -1,0 +1,5 @@
+{
+  "note": "Pour ajouter un film : copier le bloc 'modele' dans la liste 'films', renseigner 'plateforme' (youtube ou vimeo), 'id' (identifiant de la video, pas l'adresse complete), titre, auteur, annee, duree et resume. Les films apparaissent automatiquement sur la page Films & videos.",
+  "modele": { "titre": "Titre du film", "auteur": "Prénom Nom", "annee": 2026, "duree": "3 min", "plateforme": "youtube", "id": "IDENTIFIANT_VIDEO", "resume": "Une phrase de présentation.", "categorie": "Court-métrage" },
+  "films": []
+}

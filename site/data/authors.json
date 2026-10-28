@@ -1,0 +1,25 @@
+{
+  "note": "Pour ajouter un auteur : copier un bloc, renseigner nom, galerie (lien vers sa galerie en ligne), travaux et presentation. Le champ 'portrait' (chemin d'une image dans img/) est optionnel : sans portrait, des initiales s'affichent. Ne mettre un portrait qu'avec l'accord de la personne.",
+  "auteurs": [
+    { "nom": "Guy Eichelberger", "role": "Président", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/9", "photos_en_ligne": 531, "travaux": ["Baie de Somme", "Barcelone", "Gouttes rouges et bleues", "Cascades et eaux vives", "Danse et spectacles"], "presentation": "" },
+    { "nom": "Bruno Kapis", "role": "", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/29", "photos_en_ligne": 619, "travaux": ["Paysages d'Islande", "Animaux d'Afrique", "Oiseaux", "Collision de gouttes"], "presentation": "" },
+    { "nom": "Alain Couettant", "role": "", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/348", "photos_en_ligne": 419, "travaux": ["Cathédrale de Sens et ses vitraux", "Ville de Sens", "Bretagne, la vallée des Saints", "Carnaval d'Annecy"], "presentation": "" },
+    { "nom": "Jo Auclair", "role": "", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/235", "photos_en_ligne": 365, "travaux": ["Images d'Afrique", "Oiseaux", "Chevaux", "Paysages"], "presentation": "" },
+    { "nom": "Dominique Pommier", "role": "Secrétaire", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/281", "photos_en_ligne": 194, "travaux": ["Photos de rue", "Noir et blanc", "Paysages", "Photos de nuit"], "presentation": "" },
+    { "nom": "Jean-Paul Monier", "role": "", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/350", "photos_en_ligne": 190, "travaux": ["Bali", "Lisbonne", "Paysages", "Lignes, courbes, perspectives"], "presentation": "" },
+    { "nom": "Sonia Couettant", "role": "", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/349", "photos_en_ligne": 183, "travaux": ["Illumination de la cathédrale de Sens", "Panoramiques", "Reflets", "Fondation Louis Vuitton"], "presentation": "" },
+    { "nom": "Jean-Luc Boulard", "role": "", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/15", "photos_en_ligne": 170, "travaux": ["Sens imprévue…", "Parcs et jardins", "Entre ciel et mer", "Moissons vézeliennes"], "presentation": "" },
+    { "nom": "Daniel Guillier", "role": "", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/471", "photos_en_ligne": 127, "travaux": ["Spectacle à l'abbaye de Pontigny", "Étangs de Saint-Ange", "Paysages urbains"], "presentation": "" },
+    { "nom": "Olivier De Rosa", "role": "", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/201", "photos_en_ligne": 78, "travaux": ["Le Bourget 2015", "Faune", "Paysages", "Lignes et courbes"], "presentation": "" },
+    { "nom": "Marc Queyreix", "role": "", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/517", "photos_en_ligne": 48, "travaux": ["Roses et fleurs de mon jardin", "Montagne", "Hiver"], "presentation": "" },
+    { "nom": "Claude Trescartes", "role": "", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/551", "photos_en_ligne": 23, "travaux": ["Florilège argentique"], "presentation": "" },
+    { "nom": "Thierry Chazaud", "role": "Trésorier", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/676", "photos_en_ligne": 0, "travaux": ["Photos du mois 2026"], "presentation": "" },
+    { "nom": "Patrick Delostal", "role": "", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/676", "photos_en_ligne": 0, "travaux": ["Photos du mois 2026 : oiseaux et faune"], "presentation": "" },
+    { "nom": "Sophie Martins", "role": "", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/676", "photos_en_ligne": 0, "travaux": ["Photos du mois 2026 : fleurs et macro"], "presentation": "" },
+    { "nom": "Dominique Guillot", "role": "", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/676", "photos_en_ligne": 0, "travaux": ["Photos du mois 2026 : paysages"], "presentation": "" },
+    { "nom": "Jean-Michel Garnier", "role": "", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/676", "photos_en_ligne": 0, "travaux": ["Photos du mois 2026 : noir et blanc, rue"], "presentation": "" },
+    { "nom": "Philippe Sabater", "role": "", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/676", "photos_en_ligne": 0, "travaux": ["Photos du mois 2026 : abstractions"], "presentation": "" },
+    { "nom": "Francine Nabonne", "role": "", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/676", "photos_en_ligne": 0, "travaux": ["Photos du mois 2026 : paysages"], "presentation": "" },
+    { "nom": "Hervé Campenom", "role": "", "galerie": "http://photoclubsenonais.fr/galerie/index.php?/category/676", "photos_en_ligne": 0, "travaux": ["Photos du mois 2026"], "presentation": "" }
+  ]
+}
