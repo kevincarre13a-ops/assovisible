@@ -1,0 +1,13 @@
+[
+ {"id":"bh1","type":"bulletin","titre":"Bulletin historique n° 1","annee":"1995","auteur":"Société d'Histoire de Kingersheim","couverture":"assets/img/shk/bulletin-1.jpg","resume":"Premier numéro du bulletin « S'Kingerscherblättla ».","prix":"10 €","statut":"disponible"},
+ {"id":"bh2","type":"bulletin","titre":"Bulletin historique n° 2","annee":"2001","auteur":"Société d'Histoire de Kingersheim","couverture":"assets/img/shk/bulletin-2.jpg","resume":"","prix":"","statut":"épuisé"},
+ {"id":"bh3","type":"bulletin","titre":"Bulletin historique n° 3","annee":"2003","auteur":"Société d'Histoire de Kingersheim","couverture":"assets/img/shk/bulletin-3.jpg","resume":"","prix":"12 €","statut":"disponible"},
+ {"id":"bh4","type":"bulletin","titre":"Bulletin historique n° 4","annee":"2004","auteur":"Société d'Histoire de Kingersheim","couverture":"assets/img/shk/bulletin-4.jpg","resume":"","prix":"10 €","statut":"disponible"},
+ {"id":"bh5","type":"bulletin","titre":"Bulletin historique n° 5","annee":"2007","auteur":"Société d'Histoire de Kingersheim","couverture":"assets/img/shk/bulletin-5.jpg","resume":"","prix":"10 €","statut":"disponible"},
+ {"id":"bh6","type":"bulletin","titre":"Bulletin historique n° 6","annee":"2010","auteur":"Société d'Histoire de Kingersheim","couverture":"assets/img/shk/BH6-720x1024.jpeg","resume":"","prix":"10 €","statut":"disponible"},
+ {"id":"histoire","type":"ouvrage","titre":"Kingersheim et son histoire","annee":"Tomes 1 et 2","auteur":"Société d'Histoire de Kingersheim","couverture":"assets/img/shk/k-et-son-histoire-tome1.jpg","couverture2":"assets/img/shk/k-et-son-histoire-tome-2.jpg","resume":"","prix":"30 € par ouvrage","statut":"disponible"},
+ {"id":"39-45","type":"ouvrage","titre":"Kingersheim de 39 à 45","annee":"","auteur":"Jean Checinski","couverture":"assets/img/shk/kingersheim-de-39-a-45.jpg","resume":"L'histoire de Kingersheim pendant la Seconde Guerre mondiale.","prix":"30 €","statut":"disponible"},
+ {"id":"dollerbaechlein","type":"ouvrage","titre":"Le Dollerbaechlein","annee":"1994","auteur":"Jean Checinski","couverture":"assets/img/shk/le-dollerbaeschlein.jpg","resume":"Histoire et topographie d'un ruisseau.","prix":"30 €","statut":"disponible"},
+ {"id":"images","type":"ouvrage","titre":"Les images du passé","annee":"","auteur":"De Wittenheim et Kingersheim","couverture":"assets/img/shk/images-du-passe.jpg","resume":"","prix":"30 €","statut":"disponible"},
+ {"id":"commerce","type":"ouvrage","titre":"Regard sur le commerce","annee":"au XXe siècle","auteur":"Société d'Histoire de Kingersheim","couverture":"assets/img/shk/le-commerce.jpg","resume":"","prix":"30 €","statut":"disponible"}
+]

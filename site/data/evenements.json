@@ -1,0 +1,16 @@
+{
+ "recurrents":[
+  {"id":"permanence","titre":"Permanence de la société","jourSemaine":1,"heure":"9 h - 11 h","lieu":"Maison de la Citoyenneté, Kingersheim","texte":"Venez voir l'exposition en cours, consulter les archives ou poser vos questions. Horaires indiqués sur le site de la société pendant l'exposition « Les Monnaies » : à confirmer avant de vous déplacer.","type":"Permanence"},
+  {"id":"reunion","titre":"Réunion mensuelle de la société","premierLundi":true,"heure":"17 h","lieu":"Maison de la Citoyenneté, Kingersheim","texte":"Réunion le premier lundi de chaque mois, selon l'annuaire des associations de la ville. À confirmer auprès de la société.","type":"Réunion"}
+ ],
+ "avenir":[],
+ "archives":[
+  {"date":"2026-08-28","dateTexte":"28-30 août 2026","titre":"Stammtisch sur l'agriculture à Kingersheim","lieu":"Fête de l'Avenir, Les Sheds","type":"Conférence","texte":"Dans le cadre de la Fête de l'Avenir organisée par les Amis des Sheds, la société a présenté un diaporama retraçant l'évolution de l'agriculture à Kingersheim."},
+  {"date":"2026-05-05","dateTexte":"5 mai 2026","titre":"Atelier Mémoires & Archives","lieu":"Kingersheim","type":"Conférence","texte":"Avec la Région Grand Est : enrichir la base « Mémoires Grand Est » des Alsaciens et Mosellans morts ou disparus pendant la Seconde Guerre mondiale, et exposé de Martial Schwarzentruber sur Kingersheim de 1939 à 1945.","source":"Comité d'histoire régionale Grand Est","lien":"https://chr.grandest.fr/evenements/atelier-memoires-archives-a-kingersheim/"},
+  {"date":"2026-02-12","dateTexte":"12 février 2026","titre":"Visite de l'exposition « Les Monnaies » pour les aînés","lieu":"Maison de la Citoyenneté","type":"Visite","texte":"Visite organisée à 9 h, en lien avec la ville de Kingersheim."},
+  {"date":"2025-07-11","dateTexte":"Été 2025, pendant trois mois","titre":"Exposition « Les Monnaies »","lieu":"Maison de la Citoyenneté","type":"Exposition","texte":"Du troc aux coquillages, des pièces gauloises et romaines découvertes lors de fouilles aux pièces et billets du monde entier."},
+  {"date":"2022-08-09","dateTexte":"Toutes les deux semaines (2022)","titre":"Ateliers mémoriels","lieu":"Résidence l'Organdi (Domitys)","type":"Sortie","texte":"Les résidents partagent leurs souvenirs du temps passé avec Jean-Claude Louis et Martial Schwarzentruber."},
+  {"date":"2018-05-23","dateTexte":"23 mai 2018","titre":"Balade verte à la découverte de Kingersheim","lieu":"Kingersheim","type":"Sortie","texte":"Balade encadrée par la société dans le cadre de la campagne Sport et Santé de l'OMS.","source":"Kingersheim Magazine n° 127","lien":"https://www.ville-kingersheim.fr/wp-content/uploads/2025/03/Kingersheim-Magazine-n%C2%B0127.pdf"},
+  {"date":"2000-01-01","dateTexte":"3 juillet (année à confirmer)","titre":"Fête des rues à Hirschau","lieu":"Hirschau","type":"Sortie","texte":"La société s'est déplacée à Hirschau pour participer à la fête des rues organisée par la municipalité de Hirschau."}
+ ]
+}
