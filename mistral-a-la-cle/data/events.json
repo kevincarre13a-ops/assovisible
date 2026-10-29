@@ -1,0 +1,73 @@
+[
+  {
+    "id": "st-peray-2026-11-11",
+    "title": "Concert d'automne à Saint-Péray",
+    "subtitle": "Invités par l'Harmonie de Saint-Péray",
+    "date": "2026-11-11",
+    "time": "16:00",
+    "place": "CEP Le Prieuré, Saint-Péray",
+    "price": "Entrée gratuite, participation libre. Au profit des Amis de Malgazon.",
+    "description": "L'Harmonie de Saint-Péray invite Mistral à la Clé à participer à son concert d'automne.",
+    "image": "assets/img/ev/affiche-st-peray-2026.webp",
+    "tags": ["Concert", "Solidaire"]
+  },
+  {
+    "id": "palais-2026-05-16",
+    "title": "Concert anniversaire : les 40 ans",
+    "subtitle": "Palais des Congrès Charles Aznavour",
+    "date": "2026-05-16",
+    "time": "20:30",
+    "place": "Palais des Congrès, Montélimar",
+    "price": "Gratuit, à l'enveloppe libre : chacun donne ce qu'il veut ou ce qu'il peut.",
+    "description": "Quatre décennies de musique fêtées sur une scène d'exception, avec des reprises de Hans Zimmer, Ennio Morricone, Stromae, Queen et bien d'autres surprises.",
+    "image": "assets/img/ev/affiche-mai-2026.webp",
+    "link": { "url": "https://www.helloasso.com/associations/mistral-a-la-cle/evenements/concert-40-ans-mistral-a-la-cle", "label": "Voir la billetterie HelloAsso" },
+    "tags": ["Anniversaire", "Concert"]
+  },
+  {
+    "id": "allan-2026-03-21",
+    "title": "Concert au profit des Restos du Cœur",
+    "subtitle": "Commune d'Allan",
+    "date": "2026-03-21",
+    "time": "20:30",
+    "place": "Foyer rural, Allan",
+    "price": "10 € (gratuit pour les moins de 12 ans). Pas de réservation, buvette sur place.",
+    "description": "Les musiciens et leurs chefs jouent au profit des Restos du Cœur, un programme de musiques de films.",
+    "image": "assets/img/ev/affiche-allan-2026.webp",
+    "tags": ["Solidaire", "Concert"]
+  },
+  {
+    "id": "noel-2025-12-14",
+    "title": "Concert de Noël 2025",
+    "subtitle": "Avec l'Harmonie Sainte Cécile de Bourg de Péage",
+    "date": "2025-12-14",
+    "time": "16:00",
+    "place": "Théâtre de Montélimar",
+    "price": "Libre participation aux frais.",
+    "description": "Mistral à la Clé, dirigé par Christophe Mégueulle et Muriel Vayer, accompagné de l'Harmonie Sainte Cécile de Bourg de Péage dirigée par Ani Yakhinian.",
+    "image": "assets/img/ev/affiche-noel-2025.webp",
+    "tags": ["Noël", "Concert"]
+  },
+  {
+    "id": "printemps-2025-05-10",
+    "title": "Concert de printemps 2025",
+    "subtitle": "Théâtre de Montélimar",
+    "date": "2025-05-10",
+    "time": null,
+    "place": "Théâtre de Montélimar",
+    "price": null,
+    "description": "43 musiciens sur scène, un théâtre complet : il a fallu refuser du monde. Une solution a été cherchée pour 2026.",
+    "tags": ["Printemps", "Concert"]
+  },
+  {
+    "id": "spectacle-2024-05-18",
+    "title": "Grand concert spectacle 2024",
+    "subtitle": "Théâtre de Montélimar",
+    "date": "2024-05-18",
+    "time": "20:00",
+    "place": "Théâtre de Montélimar",
+    "price": "Libre participation aux frais.",
+    "description": "Le rendez-vous annuel de l'orchestre, préparé par les chefs Christophe Mégueulle et Muriel Vayer.",
+    "tags": ["Spectacle", "Concert"]
+  }
+]

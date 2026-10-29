@@ -1,0 +1,50 @@
+[
+  {
+    "id": "st-peray",
+    "date": "2026-10-29",
+    "tag": "Concert",
+    "title": "Mistral à la Clé sera à Saint-Péray le 11 novembre",
+    "text": "L'Harmonie de Saint-Péray nous invite à participer à son concert d'automne, le mercredi 11 novembre 2026 à 16 h au CEP Le Prieuré. Entrée gratuite, participation libre, au profit des Amis de Malgazon.",
+    "image": "assets/img/ev/affiche-st-peray-2026.webp"
+  },
+  {
+    "id": "nouveau-logo",
+    "date": "2026-09-19",
+    "tag": "Orchestre",
+    "title": "Un nouveau logo pour Mistral à la Clé",
+    "text": "Une nouvelle signature pour rassembler, inspirer et faire résonner l'Orchestre Mistral à la Clé.",
+    "image": "assets/img/logo.png"
+  },
+  {
+    "id": "40-ans",
+    "date": "2026-04-04",
+    "tag": "Anniversaire",
+    "title": "Mistral fête ses 40 ans !",
+    "text": "Pour célébrer quatre décennies d'aventure musicale, l'orchestre a investi le Palais des Congrès de Montélimar le samedi 16 mai à 20 h 30, avec des reprises de Hans Zimmer, Ennio Morricone, Stromae, Queen... Places gratuites, à l'enveloppe libre.",
+    "image": "assets/img/ev/affiche-mai-2026.webp"
+  },
+  {
+    "id": "allan",
+    "date": "2026-03-17",
+    "tag": "Solidaire",
+    "title": "Mistral est sur la commune d'Allan",
+    "text": "Les musiciens et leurs chefs ont joué au profit des Restos du Cœur le samedi 21 mars à 20 h 30 au foyer rural d'Allan.",
+    "image": "assets/img/ev/affiche-allan-2026.webp"
+  },
+  {
+    "id": "noel-2025",
+    "date": "2025-11-15",
+    "tag": "Noël",
+    "title": "Concert de Noël 2025",
+    "text": "Le dimanche 14 décembre à 16 h au Théâtre de Montélimar, avec l'Harmonie Sainte Cécile de Bourg de Péage. Nouveauté : réservation directe des places en ligne.",
+    "image": "assets/img/ev/affiche-noel-2025.webp"
+  },
+  {
+    "id": "retour-printemps-2025",
+    "date": "2025-05-11",
+    "tag": "Retour sur concert",
+    "title": "Retour sur le concert du 10 mai 2025",
+    "text": "43 musiciens, une prestation de très haut niveau et pas une seule place libre au théâtre de Montélimar. Faute de place, des spectateurs ont dû être refusés : l'orchestre s'est engagé à trouver une solution pour fêter ses 40 ans.",
+    "image": "assets/img/gal/noel-02.webp"
+  }
+]

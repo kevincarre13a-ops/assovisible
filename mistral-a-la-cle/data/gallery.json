@@ -1,0 +1,178 @@
+[
+  {
+    "id": "noel",
+    "title": "Concert de Noël 2023",
+    "sub": "Au Théâtre de Montélimar",
+    "photos": [
+      {
+        "src": "assets/img/gal/noel-00.webp",
+        "thumb": "assets/img/gal/noel-00-t.webp",
+        "alt": "L'orchestre en concert au Théâtre de Montélimar"
+      },
+      {
+        "src": "assets/img/gal/noel-01.webp",
+        "thumb": "assets/img/gal/noel-01-t.webp",
+        "alt": "L'orchestre en concert au Théâtre de Montélimar"
+      },
+      {
+        "src": "assets/img/gal/noel-02.webp",
+        "thumb": "assets/img/gal/noel-02-t.webp",
+        "alt": "L'orchestre en concert au Théâtre de Montélimar"
+      },
+      {
+        "src": "assets/img/gal/noel-03.webp",
+        "thumb": "assets/img/gal/noel-03-t.webp",
+        "alt": "L'orchestre en concert au Théâtre de Montélimar"
+      },
+      {
+        "src": "assets/img/gal/noel-04.webp",
+        "thumb": "assets/img/gal/noel-04-t.webp",
+        "alt": "L'orchestre en concert au Théâtre de Montélimar"
+      },
+      {
+        "src": "assets/img/gal/noel-05.webp",
+        "thumb": "assets/img/gal/noel-05-t.webp",
+        "alt": "L'orchestre en concert au Théâtre de Montélimar"
+      },
+      {
+        "src": "assets/img/gal/noel-06.webp",
+        "thumb": "assets/img/gal/noel-06-t.webp",
+        "alt": "L'orchestre en concert au Théâtre de Montélimar"
+      },
+      {
+        "src": "assets/img/gal/noel-07.webp",
+        "thumb": "assets/img/gal/noel-07-t.webp",
+        "alt": "L'orchestre en concert au Théâtre de Montélimar"
+      },
+      {
+        "src": "assets/img/gal/noel-08.webp",
+        "thumb": "assets/img/gal/noel-08-t.webp",
+        "alt": "L'orchestre en concert au Théâtre de Montélimar"
+      },
+      {
+        "src": "assets/img/gal/noel-09.webp",
+        "thumb": "assets/img/gal/noel-09-t.webp",
+        "alt": "L'orchestre en concert au Théâtre de Montélimar"
+      },
+      {
+        "src": "assets/img/gal/noel-10.webp",
+        "thumb": "assets/img/gal/noel-10-t.webp",
+        "alt": "L'orchestre en concert au Théâtre de Montélimar"
+      },
+      {
+        "src": "assets/img/gal/noel-11.webp",
+        "thumb": "assets/img/gal/noel-11-t.webp",
+        "alt": "L'orchestre en concert au Théâtre de Montélimar"
+      },
+      {
+        "src": "assets/img/gal/noel-12.webp",
+        "thumb": "assets/img/gal/noel-12-t.webp",
+        "alt": "L'orchestre en concert au Théâtre de Montélimar"
+      },
+      {
+        "src": "assets/img/gal/noel-13.webp",
+        "thumb": "assets/img/gal/noel-13-t.webp",
+        "alt": "L'orchestre en concert au Théâtre de Montélimar"
+      },
+      {
+        "src": "assets/img/gal/noel-14.webp",
+        "thumb": "assets/img/gal/noel-14-t.webp",
+        "alt": "L'orchestre en concert au Théâtre de Montélimar"
+      },
+      {
+        "src": "assets/img/gal/noel-15.webp",
+        "thumb": "assets/img/gal/noel-15-t.webp",
+        "alt": "L'orchestre en concert au Théâtre de Montélimar"
+      },
+      {
+        "src": "assets/img/gal/noel-16.webp",
+        "thumb": "assets/img/gal/noel-16-t.webp",
+        "alt": "L'orchestre en concert au Théâtre de Montélimar"
+      }
+    ]
+  },
+  {
+    "id": "vogue23",
+    "title": "Vogüé 2023",
+    "sub": "Travail, pauses et convivialité",
+    "photos": [
+      {
+        "src": "assets/img/gal/vogue23-00.webp",
+        "thumb": "assets/img/gal/vogue23-00-t.webp",
+        "alt": "L'orchestre en répétition à Vogüé"
+      },
+      {
+        "src": "assets/img/gal/vogue23-01.webp",
+        "thumb": "assets/img/gal/vogue23-01-t.webp",
+        "alt": "L'orchestre en répétition à Vogüé"
+      },
+      {
+        "src": "assets/img/gal/vogue23-02.webp",
+        "thumb": "assets/img/gal/vogue23-02-t.webp",
+        "alt": "L'orchestre en répétition à Vogüé"
+      },
+      {
+        "src": "assets/img/gal/vogue23-03.webp",
+        "thumb": "assets/img/gal/vogue23-03-t.webp",
+        "alt": "L'orchestre en répétition à Vogüé"
+      },
+      {
+        "src": "assets/img/gal/vogue23-04.webp",
+        "thumb": "assets/img/gal/vogue23-04-t.webp",
+        "alt": "L'orchestre en répétition à Vogüé"
+      },
+      {
+        "src": "assets/img/gal/vogue23-05.webp",
+        "thumb": "assets/img/gal/vogue23-05-t.webp",
+        "alt": "L'orchestre en répétition à Vogüé"
+      }
+    ]
+  },
+  {
+    "id": "vogue22",
+    "title": "Vogüé 2022",
+    "sub": "Répétitions et soirée dansante",
+    "photos": [
+      {
+        "src": "assets/img/gal/vogue22-00.webp",
+        "thumb": "assets/img/gal/vogue22-00-t.webp",
+        "alt": "L'orchestre à Vogüé en 2022"
+      },
+      {
+        "src": "assets/img/gal/vogue22-01.webp",
+        "thumb": "assets/img/gal/vogue22-01-t.webp",
+        "alt": "L'orchestre à Vogüé en 2022"
+      },
+      {
+        "src": "assets/img/gal/vogue22-02.webp",
+        "thumb": "assets/img/gal/vogue22-02-t.webp",
+        "alt": "L'orchestre à Vogüé en 2022"
+      },
+      {
+        "src": "assets/img/gal/vogue22-03.webp",
+        "thumb": "assets/img/gal/vogue22-03-t.webp",
+        "alt": "L'orchestre à Vogüé en 2022"
+      },
+      {
+        "src": "assets/img/gal/vogue22-04.webp",
+        "thumb": "assets/img/gal/vogue22-04-t.webp",
+        "alt": "L'orchestre à Vogüé en 2022"
+      },
+      {
+        "src": "assets/img/gal/vogue22-05.webp",
+        "thumb": "assets/img/gal/vogue22-05-t.webp",
+        "alt": "L'orchestre à Vogüé en 2022"
+      },
+      {
+        "src": "assets/img/gal/vogue22-06.webp",
+        "thumb": "assets/img/gal/vogue22-06-t.webp",
+        "alt": "L'orchestre à Vogüé en 2022"
+      },
+      {
+        "src": "assets/img/gal/vogue22-07.webp",
+        "thumb": "assets/img/gal/vogue22-07-t.webp",
+        "alt": "L'orchestre à Vogüé en 2022"
+      }
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "bureau": [
+    { "name": "Claudette Rebout", "role": "Présidente depuis 2010" }
+  ],
+  "direction": [
+    { "name": "Christophe Mégueulle", "role": "Chef d'orchestre, saxophoniste, à la direction depuis 2016" },
+    { "name": "Muriel Vayer", "role": "Cheffe d'orchestre, clarinettiste, codirige l'ensemble" }
+  ],
+  "histoire": [
+    { "name": "Hervé Argentin", "role": "Fondateur, chef de l'orchestre pendant 30 ans" },
+    { "name": "André Combel", "role": "Président de 1986 à 2007" },
+    { "name": "Jacques Chavanne", "role": "Président de 2007 à 2010" }
+  ],
+  "partenaires": ["Fédération Musicale de la Drôme", "Fédération Musicale Rhône-Alpes", "Confédération Musicale de France (CMF)"]
+}

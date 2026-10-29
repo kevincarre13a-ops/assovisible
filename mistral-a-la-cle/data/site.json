@@ -1,0 +1,24 @@
+{
+  "name": "Mistral à la Clé",
+  "baseline": "Orchestre d'harmonie de Montélimar",
+  "tagline": "Le vent du sud, la musique en partage.",
+  "founded": 1986,
+  "contact": {
+    "email": "mistralalacle@outlook.com",
+    "phone": "04 75 53 02 83",
+    "phoneChef": "06 83 85 16 08",
+    "postal": ["Orchestre Mistral à la Clé", "chez Claudette Rebout", "19 Allée du Vallon", "26200 Montélimar"],
+    "rehearsal": "Tous les vendredis, de 19 h 00 à 21 h 15, au Centre Culturel des Carmes à Montélimar"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/share/1JXYjz2j74//",
+    "helloasso": "https://www.helloasso.com/associations/mistral-a-la-cle",
+    "site": "https://www.mistralalacle.com"
+  },
+  "stats": [
+    { "value": 40, "suffix": " ans", "label": "de musique à Montélimar (1986-2026)" },
+    { "value": 43, "suffix": "", "label": "musiciens sur scène au printemps 2025" },
+    { "value": 600, "suffix": "+", "label": "morceaux dans la bibliothèque musicale" },
+    { "value": 3, "suffix": "", "label": "enregistrements : une cassette et deux CD" }
+  ]
+}

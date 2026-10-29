@@ -1,0 +1,52 @@
+[
+  {
+    "id": "repetitions",
+    "icon": "clef",
+    "title": "Répétitions hebdomadaires",
+    "short": "Chaque vendredi soir, on joue ensemble.",
+    "details": "Un orchestre d'harmonie amateur : bois, cuivres, percussions, guitare basse et synthétiseur. Venez nous écouter ou essayer avant de vous inscrire.",
+    "when": "Vendredi, 19 h 00 - 21 h 15",
+    "where": "Centre Culturel des Carmes, Montélimar",
+    "price": "Cotisation : à compléter par l'association"
+  },
+  {
+    "id": "concerts",
+    "icon": "note",
+    "title": "Concerts de printemps et de Noël",
+    "short": "Le grand rendez-vous annuel, au Théâtre de Montélimar.",
+    "details": "Un concert spectacle chaque printemps et un concert de Noël, ouverts à tous : l'entrée est en libre participation aux frais.",
+    "when": "Selon l'agenda",
+    "where": "Théâtre de Montélimar et autres salles",
+    "price": "Entrée libre, participation aux frais"
+  },
+  {
+    "id": "musique-de-film",
+    "icon": "film",
+    "title": "Musiques de films et répertoire éclectique",
+    "short": "Gladiator, Inception, Skyfall, Madagascar...",
+    "details": "Classique, contemporain, jazz, blues, rock, boogie, variété et musiques de films, avec des solistes mis en valeur, du sérieux, de l'humour et de la convivialité.",
+    "when": "Toute l'année",
+    "where": "En concert",
+    "price": ""
+  },
+  {
+    "id": "solidaire",
+    "icon": "heart",
+    "title": "Concerts solidaires et invitations",
+    "short": "On joue aussi pour les autres.",
+    "details": "Concerts au profit des Restos du Cœur ou des Amis de Malgazon, festivals, cérémonies officielles, carnavals, accompagnement de chœurs et de danse, mariages, échanges avec d'autres harmonies en France et à l'étranger.",
+    "when": "Sur invitation",
+    "where": "Drôme, Ardèche et au-delà",
+    "price": "Nous contacter"
+  },
+  {
+    "id": "rejoindre",
+    "icon": "wind",
+    "title": "Rejoindre l'orchestre",
+    "short": "Musiciens expérimentés, vous êtes attendus.",
+    "details": "Nous recherchons surtout des instruments à vent, mais aussi des percussionnistes ou batteurs. Plus de 4 ans de pratique et lecture des partitions indispensables.",
+    "when": "Toute l'année",
+    "where": "Répétitions du vendredi",
+    "price": "Cotisation : à compléter par l'association"
+  }
+]
