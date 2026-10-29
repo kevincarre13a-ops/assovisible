@@ -1,0 +1,22 @@
+{
+  "name": "Jeux de Tout Bois",
+  "tagline": "Des jeux en bois géants pour jouer ensemble, de 3 à 103 ans !",
+  "email": "jeuxdetoutbois@orange.fr",
+  "phone": null,
+  "address": "2 rue Jean Tassel",
+  "postalCode": "91430",
+  "city": "Igny",
+  "department": "Essonne (91)",
+  "siren": "101107027",
+  "president": "Alain Valembois",
+  "social": {
+    "facebook": null,
+    "instagram": null,
+    "helloasso": null
+  },
+  "heroPhoto": null,
+  "map": {
+    "lat": 48.7339,
+    "lon": 2.2268
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "categories": ["Tous", "Nos jeux", "Animations", "Événements"],
+  "items": [
+    { "title": "Photo à ajouter", "category": "Nos jeux", "art": "palets", "photo": null },
+    { "title": "Photo à ajouter", "category": "Nos jeux", "art": "pions", "photo": null },
+    { "title": "Photo à ajouter", "category": "Animations", "art": "cubes", "photo": null },
+    { "title": "Photo à ajouter", "category": "Animations", "art": "quilles", "photo": null },
+    { "title": "Photo à ajouter", "category": "Événements", "art": "cible", "photo": null },
+    { "title": "Photo à ajouter", "category": "Événements", "art": "des", "photo": null }
+  ]
+}

@@ -1,0 +1,6 @@
+[
+  { "value": 20, "suffix": "+", "label": "jeux en bois géants", "placeholder": true },
+  { "value": 12, "suffix": "", "label": "animations par an", "placeholder": true },
+  { "value": 100, "suffix": "%", "label": "bois et bonne humeur", "placeholder": false },
+  { "value": 1, "suffix": "", "label": "commune qui joue : Igny", "placeholder": false }
+]

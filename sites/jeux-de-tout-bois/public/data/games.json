@@ -1,0 +1,8 @@
+[
+  { "name": "Billard hollandais", "players": "2 à 4 joueurs", "age": "dès 5 ans", "art": "palets", "tag": "Adresse", "description": "On lance les palets de bois sur le plateau en visant les portes numérotées. Simple, bruyant et addictif.", "photo": null, "placeholder": true },
+  { "name": "Puissance 4 géant", "players": "2 joueurs", "age": "dès 4 ans", "art": "pions", "tag": "Stratégie", "description": "Aligner quatre jetons… en version géante, avec des jetons de bois qu'on lâche à bout de bras.", "photo": null, "placeholder": true },
+  { "name": "Tour qui chute", "players": "2 à 8 joueurs", "age": "dès 6 ans", "art": "cubes", "tag": "Équilibre", "description": "Retirer un bloc sans faire tomber la tour : le suspense est garanti et les fous rires aussi.", "photo": null, "placeholder": true },
+  { "name": "Jeu de quilles", "players": "2 à 10 joueurs", "age": "dès 3 ans", "art": "quilles", "tag": "Adresse", "description": "Des quilles en bois, une boule, et des équipes qui se défient en famille ou entre voisins.", "photo": null, "placeholder": true },
+  { "name": "Tir à la cible", "players": "1 à 6 joueurs", "age": "dès 4 ans", "art": "cible", "tag": "Précision", "description": "Palets, anneaux ou sacs : on vise juste pour marquer le plus de points.", "photo": null, "placeholder": true },
+  { "name": "Dés et dominos géants", "players": "2 à 6 joueurs", "age": "dès 5 ans", "art": "des", "tag": "Hasard", "description": "Des dés grands comme des briques et des dominos à poser par terre pour de grandes parties.", "photo": null, "placeholder": true }
+]
