@@ -1,0 +1,13 @@
+{
+  "prochain": {
+    "titre": "Prochain rendez-vous de l'association",
+    "date": "",
+    "lieu": "Flassan",
+    "texte": "Date et programme à annoncer. Pour afficher le compte à rebours, renseignez le champ « date » (format 2026-12-31T18:00:00) dans data/evenements.json."
+  },
+  "a_venir": [],
+  "archives": [
+    { "titre": "Atelier de lecture à voix haute avec Le TRAC", "date": "2025-03-07", "lieu": "Flassan", "type": "Lecture", "texte": "Lecture à voix haute consacrée à Camille Claudel et aux trente dernières années de sa vie, par quatre lecteurs du TRAC. Plus d'une trentaine de personnes présentes.", "lien": "https://www.le-trac.org/post/retour-sur-la-repr%C3%A9sentation-de-l-atelier-de-lecture-a-voix-haute-du-trac-%C3%A0-flassan" },
+    { "titre": "1ère édition du salon du livre « Le temps des cerises »", "date": "2023-07-02", "lieu": "Flassan", "type": "Salon du livre", "texte": "Premier salon du livre organisé à Flassan, présenté sur RTV FM par des membres de l'association.", "lien": "https://www.rtvfm.net/podcast/flassan-1ere-edition-du-salon-du-livre-le-temps-des-cerises-le-dimanche-2-juillet/" }
+  ]
+}

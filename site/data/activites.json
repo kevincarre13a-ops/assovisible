@@ -1,0 +1,6 @@
+[
+  { "titre": "Culture & lecture", "icone": "book", "texte": "Lectures à voix haute, salon du livre « Le temps des cerises », rencontres autour des mots et des auteurs.", "quand": "Jours et horaires à confirmer", "lieu": "Flassan", "tarif": "À confirmer" },
+  { "titre": "Vie sociale & convivialité", "icone": "people", "texte": "Un espace d'échanges et de réflexion pour mieux vivre ensemble au village.", "quand": "Jours et horaires à confirmer", "lieu": "Flassan", "tarif": "À confirmer" },
+  { "titre": "Loisirs & sports", "icone": "sun", "texte": "Les statuts prévoient des activités de loisirs et de sport. Détail des activités à compléter par l'association.", "quand": "À confirmer", "lieu": "À confirmer", "tarif": "À confirmer" },
+  { "titre": "Environnement", "icone": "leaf", "texte": "Les statuts prévoient aussi des actions autour de l'environnement. Détail à compléter par l'association.", "quand": "À confirmer", "lieu": "À confirmer", "tarif": "À confirmer" }
+]

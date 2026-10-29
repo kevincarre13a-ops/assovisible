@@ -1,0 +1,11 @@
+{
+  "categories": ["Lecture à voix haute", "Salon du livre", "Le village"],
+  "photos": [
+    { "cat": "Lecture à voix haute", "titre": "Atelier de lecture, 7 mars 2025", "src": "" },
+    { "cat": "Lecture à voix haute", "titre": "Les lecteurs du TRAC", "src": "" },
+    { "cat": "Salon du livre", "titre": "Le temps des cerises, 2023", "src": "" },
+    { "cat": "Salon du livre", "titre": "Les auteurs à Flassan", "src": "" },
+    { "cat": "Le village", "titre": "Flassan et le Ventoux", "src": "" },
+    { "cat": "Le village", "titre": "La fontaine du village", "src": "" }
+  ]
+}
