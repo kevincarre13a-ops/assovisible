@@ -1,0 +1,15 @@
+{
+  "nom": "Fontenay Cité Jeunes",
+  "adresse": "2 rue Émile-Roux, 94120 Fontenay-sous-Bois",
+  "telephone": "01 43 94 04 04",
+  "email": "cite-jeunes@orange.fr",
+  "facebook": "https://www.facebook.com/fontenay.cite.jeunes",
+  "contactNom": "Fatimatou Ba",
+  "presidente": "Brigitte Heimroth",
+  "compteurs": [
+    { "valeur": 29, "suffixe": "", "libelle": "ans d'existence (depuis 1997)" },
+    { "valeur": 4, "suffixe": "", "libelle": "quartiers où l'équipe est présente" },
+    { "valeur": 30, "suffixe": "", "libelle": "jeunes en chantiers éducatifs (projet 2026)" },
+    { "valeur": 21, "suffixe": " ans", "libelle": "âge maximum accompagné" }
+  ]
+}

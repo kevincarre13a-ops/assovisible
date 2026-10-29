@@ -1,0 +1,20 @@
+{
+  "prochains": [
+    {
+      "date": "",
+      "titre": "Prochain rendez-vous à annoncer",
+      "type": "Événement",
+      "lieu": "Fontenay-sous-Bois",
+      "texte": "Texte d'attente : l'association publiera ici ses prochaines sorties, séjours et rendez-vous. Suivez la page Facebook pour ne rien manquer."
+    }
+  ],
+  "archives": [
+    {
+      "date": "2024-06-06",
+      "titre": "Soirée avec l'association Sœurs des Cœurs",
+      "type": "Soirée partenaire",
+      "lieu": "Fontenay-sous-Bois",
+      "texte": "Une très belle soirée partagée avec l'association Sœurs des Cœurs, relayée sur la page Facebook de Fontenay Cité Jeunes."
+    }
+  ]
+}

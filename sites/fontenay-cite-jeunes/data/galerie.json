@@ -1,0 +1,19 @@
+{
+  "note": "Aucune photo n'est publiée tant que son origine et l'autorisation de diffusion ne sont pas confirmées (en particulier pour les mineurs). Pour ajouter une photo : déposez le fichier dans le dossier images/ et renseignez « src » et « alt ».",
+  "categories": [
+    { "id": "chantiers", "titre": "Chantiers éducatifs" },
+    { "id": "sejours", "titre": "Séjours" },
+    { "id": "evenements", "titre": "Événements" },
+    { "id": "quartiers", "titre": "Dans les quartiers" }
+  ],
+  "photos": [
+    { "cat": "chantiers", "titre": "Chantier : espaces verts", "src": "", "alt": "" },
+    { "cat": "chantiers", "titre": "Chantier : rénovation de locaux", "src": "", "alt": "" },
+    { "cat": "sejours", "titre": "Séjour : préparation avec les jeunes", "src": "", "alt": "" },
+    { "cat": "sejours", "titre": "Séjour : temps de groupe", "src": "", "alt": "" },
+    { "cat": "evenements", "titre": "Soirée du 6 juin 2024", "src": "", "alt": "" },
+    { "cat": "evenements", "titre": "Buvette lors d'un événement festif", "src": "", "alt": "" },
+    { "cat": "quartiers", "titre": "Rencontres aux Larris", "src": "", "alt": "" },
+    { "cat": "quartiers", "titre": "Rencontres à La Redoute", "src": "", "alt": "" }
+  ]
+}

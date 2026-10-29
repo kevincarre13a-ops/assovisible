@@ -1,0 +1,31 @@
+{
+  "note": "Horaires à confirmer par l'association : ce tableau est un texte d'attente. Modifiez simplement les lignes ci-dessous pour publier le vrai planning.",
+  "accueil": {
+    "lieu": "2 rue Émile-Roux, 94120 Fontenay-sous-Bois",
+    "telephone": "01 43 94 04 04",
+    "horaires": "Horaires d'ouverture du local à compléter. En attendant, appelez le 01 43 94 04 04."
+  },
+  "semaine": [
+    { "jour": "Lundi", "creneaux": [{ "heure": "À compléter", "titre": "Permanence / rencontres dans les quartiers", "lieu": "À confirmer" }] },
+    { "jour": "Mardi", "creneaux": [{ "heure": "À compléter", "titre": "Accompagnements individuels sur rendez-vous", "lieu": "2 rue Émile-Roux" }] },
+    { "jour": "Mercredi", "creneaux": [{ "heure": "À compléter", "titre": "Projets collectifs et chantiers éducatifs", "lieu": "À confirmer" }] },
+    { "jour": "Jeudi", "creneaux": [{ "heure": "À compléter", "titre": "Rencontres dans les quartiers", "lieu": "À confirmer" }] },
+    { "jour": "Vendredi", "creneaux": [{ "heure": "À compléter", "titre": "Permanence / préparation des projets", "lieu": "2 rue Émile-Roux" }] },
+    { "jour": "Samedi", "creneaux": [] },
+    { "jour": "Dimanche", "creneaux": [] }
+  ],
+  "tarifs": [
+    { "titre": "Accompagnement éducatif", "prix": "À confirmer", "detail": "Texte d'attente : l'action de prévention spécialisée est conduite par l'association auprès des jeunes ; les conditions précises (gratuité, participation éventuelle aux séjours) sont à confirmer." },
+    { "titre": "Séjours et sorties", "prix": "À confirmer", "detail": "Tarifs et aides possibles à communiquer par l'association pour chaque projet." }
+  ],
+  "inscription": [
+    "Prendre contact par téléphone au 01 43 94 04 04, par e-mail ou en venant au local.",
+    "Rencontrer un éducateur pour un premier échange, sans engagement.",
+    "Définir ensemble, si le jeune le souhaite, les projets et activités qui lui conviennent.",
+    "Pour un séjour ou un chantier : une inscription spécifique peut être demandée (modalités à confirmer)."
+  ],
+  "pieces": [
+    "Aucune pièce n'est exigée pour un premier contact (à confirmer par l'association).",
+    "Pour un séjour ou un chantier éducatif : autorisation parentale pour les mineurs et pièces à préciser par l'association."
+  ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "accompagnement",
+    "titre": "Accompagnement individuel",
+    "type": "Prévention spécialisée",
+    "ages": "12 – 21 ans",
+    "jours": "Sur rendez-vous ou lors des rencontres dans les quartiers (jours à confirmer)",
+    "horaires": "À confirmer par l'association",
+    "lieu": "2 rue Émile-Roux, Fontenay-sous-Bois, ou dans les quartiers",
+    "animateur": "Équipe éducative (noms à compléter)",
+    "texte": "Une écoute, un adulte de confiance, un projet construit pas à pas : scolarité, formation, emploi, démarches, santé, famille. Le jeune avance à son rythme, sans obligation.",
+    "couleur": "blue"
+  },
+  {
+    "id": "quartiers",
+    "titre": "Présence éducative dans les quartiers",
+    "type": "Prévention spécialisée",
+    "ages": "11 – 25 ans",
+    "jours": "Tournées régulières (jours à confirmer)",
+    "horaires": "À confirmer par l'association",
+    "lieu": "Les Larris, Jean-Zay, La Redoute, Bois Cadet",
+    "animateur": "Équipe éducative (noms à compléter)",
+    "texte": "Les éducateurs vont à la rencontre des jeunes là où ils sont : au pied des immeubles, dans les espaces publics, près des équipements de quartier.",
+    "couleur": "orange"
+  },
+  {
+    "id": "chantiers",
+    "titre": "Chantiers éducatifs",
+    "type": "Projet collectif",
+    "ages": "16 – 21 ans",
+    "jours": "Selon les chantiers (calendrier à compléter)",
+    "horaires": "À confirmer par l'association",
+    "lieu": "Fontenay-sous-Bois (espaces verts, parties communes, locaux à rénover)",
+    "animateur": "Éducateurs référents (noms à compléter)",
+    "texte": "Espaces verts, entretien des parties communes avec des bailleurs, rénovation de locaux, buvette lors d'événements festifs : une première expérience concrète, encadrée, qui donne confiance et ouvre des portes.",
+    "couleur": "yellow"
+  },
+  {
+    "id": "sejours",
+    "titre": "Séjours éducatifs",
+    "type": "Projet collectif",
+    "ages": "12 – 21 ans",
+    "jours": "Pendant les vacances (dates à annoncer)",
+    "horaires": "Selon le projet",
+    "lieu": "Destinations à annoncer",
+    "animateur": "Éducateurs référents (noms à compléter)",
+    "texte": "Construits avec les jeunes, de la préparation au retour : un temps pour souffler, découvrir, vivre en groupe et révéler d'autres facettes de soi.",
+    "couleur": "blue"
+  },
+  {
+    "id": "insertion",
+    "titre": "Parcours d'insertion et de formation",
+    "type": "Partenariat",
+    "ages": "À préciser",
+    "jours": "Selon le dispositif",
+    "horaires": "À confirmer par l'association",
+    "lieu": "Fontenay-sous-Bois",
+    "animateur": "Équipe éducative et partenaires",
+    "texte": "Un accompagnement vers la qualification, notamment avec Murfy Académie, pour un parcours conduisant à un certificat professionnel (RNCP 38119).",
+    "couleur": "orange"
+  },
+  {
+    "id": "scolaire",
+    "titre": "Soutien et accompagnement scolaire",
+    "type": "Projet collectif",
+    "ages": "À préciser",
+    "jours": "À confirmer",
+    "horaires": "À confirmer par l'association",
+    "lieu": "À confirmer",
+    "animateur": "À compléter",
+    "texte": "Un appui pour garder le fil de la scolarité et reprendre confiance, en lien avec les familles et les établissements.",
+    "couleur": "yellow"
+  }
+]
