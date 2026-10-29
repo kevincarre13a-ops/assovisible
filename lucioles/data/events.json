@@ -1,0 +1,25 @@
+{
+  "upcoming": [
+    {
+      "title": "Prochain rendez-vous à venir",
+      "date": "",
+      "place": "Aix-les-Bains et alentours",
+      "description": "Repas dansant, tournoi de foot, thé dansant… Les dates seront annoncées ici dès qu'elles sont fixées. (Texte d'attente à modifier.)",
+      "placeholder": true
+    }
+  ],
+  "archive": [
+    {
+      "title": "10 km d'Aix-les-Bains by Crédit Mutuel",
+      "dateLabel": "Édition engagée au profit de Lucioles",
+      "place": "Aix-les-Bains",
+      "description": "Pour la deuxième année, la course reverse 1 € par dossard à l'association Lucioles."
+    }
+  ],
+  "formats": [
+    { "icon": "💃", "title": "Repas dansants", "text": "Des soirées conviviales pour se retrouver et récolter des fonds." },
+    { "icon": "⚽", "title": "Tournois de foot", "text": "Du sport et de la bonne humeur au service des enfants." },
+    { "icon": "🎶", "title": "Thés dansants", "text": "Des après-midi festifs, ouverts à toutes les générations." },
+    { "icon": "🎭", "title": "Cabarets et spectacles", "text": "Des soirées en lumière pour soutenir nos projets." }
+  ]
+}

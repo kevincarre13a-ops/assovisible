@@ -1,0 +1,17 @@
+{
+  "hospitals": [
+    { "name": "Hôpital de Belley", "city": "Belley (Ain)" },
+    { "name": "Pédiatrie d'Albertville", "city": "Albertville (Savoie)" },
+    { "name": "Hôpital de Chambéry", "city": "Chambéry (Savoie)" },
+    { "name": "Hôpital d'Annecy", "city": "Annecy (Haute-Savoie)" },
+    { "name": "Hôpital Debrousse", "city": "Lyon (Rhône)" },
+    { "name": "HFME – Hôpital Femme Mère Enfant", "city": "Bron / Lyon (Rhône)" },
+    { "name": "IHOPe – Institut d'Hématologie et d'Oncologie Pédiatrique", "city": "Lyon (Rhône)" }
+  ],
+  "materials": [
+    { "icon": "🎨", "title": "Loisirs créatifs", "text": "Peinture, perles, fils pour bracelets brésiliens, crayons de couleur…" },
+    { "icon": "📚", "title": "Livres et jeux éducatifs", "text": "De quoi s'évader, apprendre et s'amuser depuis son lit ou en salle de jeux." },
+    { "icon": "🎮", "title": "Matériel numérique", "text": "Selon les besoins et les fonds : consoles, ordinateurs, téléviseurs, lecteurs DVD." },
+    { "icon": "🧸", "title": "Collectes de jouets", "text": "Des jouets neufs rassemblés, notamment pour les fêtes de fin d'année." }
+  ]
+}

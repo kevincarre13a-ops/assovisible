@@ -1,0 +1,8 @@
+{
+  "albums": [
+    { "id": "evenements", "title": "Nos événements", "photos": [] },
+    { "id": "hopitaux", "title": "Dans les hôpitaux", "photos": [] },
+    { "id": "benevoles", "title": "Les bénévoles", "photos": [] }
+  ],
+  "note": "Les photos seront ajoutées par l'association : renseignez le champ « src » (chemin de l'image) et « alt » dans data/gallery.json."
+}
