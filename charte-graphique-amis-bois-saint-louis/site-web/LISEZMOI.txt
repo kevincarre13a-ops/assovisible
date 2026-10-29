@@ -1,0 +1,12 @@
+LOGO POUR LE SITE (Lovable) - Les Amis du Bois Saint Louis et du Val d'Or
+
+logo-site-horizontal.png / .svg        Logo en long : emblème à gauche, nom à droite (fond transparent) - EN-TÊTE
+logo-site-horizontal-blanc.png / .svg  Même logo en blanc - PIED DE PAGE ou fond vert foncé
+logo-site-horizontal-grand.png         Haute définition (3094 x 774 px), pour réimprimer ou agrandir
+favicon.ico, favicon-32.png, favicon-180.png, favicon-512.png   Icône d'onglet et écran d'accueil du téléphone
+
+Réglages conseillés dans l'en-tête :
+- hauteur du logo : 48 à 52 px (ordinateur), 40 px (mobile) ; largeur automatique (ratio 4:1)
+- laisser au moins 32 px d'espace entre le logo et le menu
+- texte alternatif : "Les Amis du Bois Saint Louis et du Val d'Or - accueil"
+- sous environ 1100 px de large, passer le menu en menu burger
