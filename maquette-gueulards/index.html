@@ -1,0 +1,412 @@
+<title>Les Gueulards</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@500&display=swap">
+<style>
+/* Concept : affiche de manif. Gros titres Anton qui crient, bandes pleine largeur, un seul accent rouge mégaphone. */
+:root{
+  --paper:#fbf7ef; --ink:#14183a; --ink-soft:#4b4f73; --line:#14183a;
+  --shout:#e8321f; --on-shout:#fff; --sun:#ffc800; --on-sun:#14183a;
+  --card:#ffffff; --band:#14183a; --on-band:#fbf7ef; --ok:#1f8a4c;
+  --f-display:'Anton','Impact','Arial Narrow',sans-serif;
+  --f-body:'DM Sans',system-ui,sans-serif;
+  --f-mono:'DM Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0e1130; --ink:#fbf7ef; --ink-soft:#b8bbd8; --line:#fbf7ef;
+  --shout:#ff5a45; --on-shout:#14183a; --sun:#ffc800; --on-sun:#14183a;
+  --card:#181c45; --band:#050720; --on-band:#fbf7ef; --ok:#4fd18a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0e1130; --ink:#fbf7ef; --ink-soft:#b8bbd8; --line:#fbf7ef;
+  --shout:#ff5a45; --on-shout:#14183a; --sun:#ffc800; --on-sun:#14183a;
+  --card:#181c45; --band:#050720; --on-band:#fbf7ef; --ok:#4fd18a; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.55 var(--f-body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--shout);outline-offset:3px}
+.in{max-width:1120px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;text-transform:uppercase;line-height:.95;margin:0;text-wrap:balance;letter-spacing:.01em}
+h2{font-size:clamp(2.4rem,7vw,4.6rem)}
+h3{font-size:1.5rem}
+p{margin:0}
+.kicker{font:500 .8rem var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--shout)}
+section{padding-block:72px}
+.btn{display:inline-flex;align-items:center;gap:.5em;font:700 1rem var(--f-body);text-transform:uppercase;letter-spacing:.04em;padding:.85em 1.4em;border:3px solid var(--line);background:var(--shout);color:var(--on-shout);cursor:pointer;text-decoration:none;box-shadow:5px 5px 0 var(--line);transition:transform .1s,box-shadow .1s}
+.btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--line)}
+.btn:active{transform:translate(5px,5px);box-shadow:0 0 0 var(--line)}
+.btn.alt{background:var(--sun);color:var(--on-sun)}
+
+/* top bar */
+.demo{background:var(--sun);color:var(--on-sun);font:500 .78rem/1.3 var(--f-mono);text-align:center;padding:8px 0}
+.demo .in{padding-block:0}
+header.top{border-bottom:3px solid var(--line)}
+header.top .in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;flex-wrap:wrap}
+.logo{font:400 1.9rem var(--f-display);text-transform:uppercase;text-decoration:none;letter-spacing:.02em}
+.logo b{color:var(--shout);font-weight:400}
+nav{display:flex;gap:6px 18px;flex-wrap:wrap;font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:.05em}
+nav a{text-decoration:none;padding:4px 0;border-bottom:3px solid transparent}
+nav a:hover{border-color:var(--shout)}
+
+/* hero */
+.hero{padding-block:48px 64px;overflow:hidden}
+.hero .in{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(3.6rem,13vw,9.5rem);line-height:.85}
+.hero h1 span{color:var(--shout);display:inline-block;transform:rotate(-3deg);transform-origin:left bottom}
+.hero .lead{font-size:1.2rem;max-width:34ch;margin-block:24px 28px}
+.hero .cta{display:flex;gap:16px 20px;flex-wrap:wrap}
+.hero .tag{margin-top:18px;font:500 .85rem var(--f-mono);color:var(--ink-soft)}
+
+/* gueulomètre */
+.meter{background:var(--band);color:var(--on-band);border:3px solid var(--line);padding:24px;box-shadow:8px 8px 0 var(--shout);min-width:0}
+.meter .db{font:400 clamp(4rem,12vw,6.5rem)/1 var(--f-display);font-variant-numeric:tabular-nums}
+.meter .db small{font-size:1.6rem;color:var(--sun);margin-left:6px}
+.bar{height:26px;background:rgba(255,255,255,.14);margin-block:14px;overflow:hidden;border:2px solid var(--on-band)}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--sun),var(--shout));transition:width .08s}
+.verdict{min-height:3.2em;font-weight:500}
+.meter .btn{width:100%;justify-content:center;user-select:none;touch-action:none;margin-top:10px;border-color:var(--on-band);box-shadow:5px 5px 0 var(--sun)}
+.meter .hint{font:500 .75rem var(--f-mono);opacity:.75;margin-top:14px}
+
+/* ticker */
+.ticker{background:var(--shout);color:var(--on-shout);border-block:3px solid var(--line);overflow:hidden;white-space:nowrap}
+.ticker div{display:inline-block;padding-block:12px;font:400 1.5rem var(--f-display);text-transform:uppercase;letter-spacing:.04em;animation:run 38s linear infinite}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* agenda */
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:32px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font:700 .8rem var(--f-body);text-transform:uppercase;letter-spacing:.05em;padding:8px 14px;border:2px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.events{display:grid;gap:14px;padding:0;margin:0;list-style:none}
+.ev{display:grid;grid-template-columns:96px 1fr auto;gap:20px;align-items:center;background:var(--card);border:3px solid var(--line);padding:16px 20px;min-width:0}
+.ev .date{background:var(--sun);color:var(--on-sun);text-align:center;padding:8px 0;border:2px solid var(--line);font-family:var(--f-display);text-transform:uppercase;line-height:1}
+.ev .date b{display:block;font-weight:400;font-size:2.6rem}
+.ev .date span{font-size:1rem;letter-spacing:.06em}
+.ev h3{margin-bottom:6px;overflow-wrap:anywhere}
+.ev .meta{color:var(--ink-soft);font-size:.95rem}
+.ev .meta strong{color:var(--ink)}
+.badge{font:500 .72rem var(--f-mono);text-transform:uppercase;letter-spacing:.08em;padding:4px 9px;border:2px solid var(--line);white-space:nowrap;display:inline-block}
+.badge.mod{background:var(--shout);color:var(--on-shout);margin-left:8px;animation:pop .5s}
+@keyframes pop{from{transform:scale(1.6) rotate(-6deg)}to{transform:none}}
+.ev.flash{animation:flash 1.2s}
+@keyframes flash{from{background:var(--sun)}}
+.empty{padding:28px;border:3px dashed var(--line);text-align:center;font-weight:700}
+
+/* admin demo */
+.admin{background:var(--band);color:var(--on-band)}
+.admin .in{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.admin p.sub{margin-top:16px;max-width:42ch;opacity:.9}
+.panel{background:var(--paper);color:var(--ink);border:3px solid var(--on-band);padding:24px;box-shadow:8px 8px 0 var(--sun);min-width:0}
+.panel .bar-title{font:500 .75rem var(--f-mono);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-soft);margin-bottom:16px;display:flex;gap:6px;align-items:center}
+.panel .bar-title i{width:10px;height:10px;border-radius:50%;background:var(--shout);display:inline-block}
+label{display:block;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+input,select,textarea{width:100%;font:400 1rem var(--f-body);padding:.7em .8em;border:3px solid var(--line);background:var(--card);color:var(--ink);border-radius:0}
+textarea{min-height:110px;resize:vertical}
+.field{margin-bottom:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.toast{margin-top:16px;font-weight:700;color:var(--ok);min-height:1.5em}
+
+/* map */
+.mapgrid{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:stretch}
+.map{border:3px solid var(--line);background:var(--card);padding:0;min-width:0;overflow:hidden}
+.map svg{display:block;width:100%;height:auto}
+.addr{border:3px solid var(--line);padding:24px;background:var(--card);display:flex;flex-direction:column;gap:14px;min-width:0}
+.addr ol{margin:0;padding-left:1.2em;display:grid;gap:8px}
+.addr .mono{font:500 .95rem var(--f-mono)}
+.addr .btn{align-self:flex-start;font-size:.85rem;padding:.6em 1em}
+
+/* galerie */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ph{aspect-ratio:4/3;border:3px solid var(--line);position:relative;display:flex;align-items:flex-end;padding:14px;overflow:hidden;min-width:0;max-width:100%}
+.ph::before{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(20,24,58,.22) 22%,transparent 24%) 0 0/14px 14px}
+.ph span{position:relative;font:400 1.35rem/1 var(--f-display);text-transform:uppercase;background:var(--paper);color:var(--ink);padding:6px 10px;border:2px solid var(--line)}
+.ph.a{background:var(--shout)}.ph.b{background:var(--sun)}.ph.c{background:#5b7cfa}.ph.d{background:#ff8fb1}.ph.e{background:#38c58a}.ph.f{background:#ff9d2e}
+.ph em{position:absolute;top:10px;right:12px;font:500 .7rem var(--f-mono);color:#14183a;font-style:normal;background:rgba(255,255,255,.75);padding:2px 6px}
+.vids{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.vid{border:3px solid var(--line);background:var(--band);color:var(--on-band);aspect-ratio:16/8;display:flex;align-items:center;justify-content:center;position:relative;max-width:100%}
+.vid .play{width:68px;height:68px;border-radius:50%;background:var(--shout);border:3px solid var(--on-band);display:grid;place-items:center}
+.vid .play::after{content:"";border-left:22px solid var(--on-shout);border-block:13px solid transparent;margin-left:6px}
+.vid p{position:absolute;left:14px;bottom:10px;font:500 .8rem var(--f-mono)}
+.vid b{position:absolute;right:14px;bottom:10px;font:500 .8rem var(--f-mono)}
+
+/* conseils */
+.tips{background:var(--sun);color:var(--on-sun);border-block:3px solid var(--line)}
+.tips .kicker{color:var(--on-sun)}
+.tipgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+.tip{background:var(--paper);color:var(--ink);border:3px solid var(--line);padding:22px;min-width:0}
+.tip h3{margin-bottom:10px}
+.tip .n{font:500 .75rem var(--f-mono);color:var(--shout);display:block;margin-bottom:8px;letter-spacing:.1em}
+
+/* contact */
+.joingrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.join p.sub{margin-top:16px;max-width:40ch}
+.rules{margin-top:24px;padding:0;list-style:none;display:grid;gap:8px;font-weight:500}
+.rules li::before{content:"▸ ";color:var(--shout)}
+.form{background:var(--card);border:3px solid var(--line);padding:24px;box-shadow:8px 8px 0 var(--shout);min-width:0}
+
+footer{background:var(--band);color:var(--on-band);padding-block:36px;font-size:.9rem}
+footer .in{display:flex;justify-content:space-between;gap:16px 40px;flex-wrap:wrap}
+footer p{max-width:60ch;opacity:.9}
+footer a{color:var(--sun)}
+footer .logo{color:var(--on-band)}
+
+@media (max-width:860px){
+  .hero .in,.admin .in,.mapgrid,.joingrid{grid-template-columns:1fr}
+  .tipgrid,.gal{grid-template-columns:1fr 1fr}
+  section{padding-block:56px}
+}
+@media (max-width:560px){
+  .ev{grid-template-columns:76px 1fr}
+  .ev .badge.type{grid-column:1/-1;justify-self:start}
+  .tipgrid,.gal,.vids,.two{grid-template-columns:1fr}
+  .ev .date b{font-size:2rem}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="demo"><div class="in">MAQUETTE GRATUITE · réalisée par AssoVisible · association fictive, événements fictifs, tout est faux, sauf l'envie de gueuler</div></div>
+
+<header class="top"><div class="in">
+  <a class="logo" href="#haut">Les <b>Gueulards</b></a>
+  <nav aria-label="Navigation principale">
+    <a href="#agenda">Agenda</a><a href="#acces">Où gueuler</a><a href="#photos">Ambiance</a><a href="#conseils">Conseils</a><a href="#rejoindre">Rejoindre</a>
+  </nav>
+</div></header>
+
+<main id="haut">
+<section class="hero"><div class="in">
+  <div>
+    <p class="kicker">Association loi 1901 · Saint-Victoret (13)</p>
+    <h1>On se retrouve pour <span>gueuler.</span></h1>
+    <p class="lead">Des rassemblements, des ateliers et des concours de gueulante, dans la bonne humeur et sans rancune. Venez gueuler avec nous, personne ne vous demandera pourquoi.</p>
+    <div class="cta">
+      <a class="btn" href="#rejoindre">Je viens gueuler</a>
+      <a class="btn alt" href="#agenda">Voir les gueulées</a>
+    </div>
+    <p class="tag">142 gueulards inscrits · 11 gueulées par saison · 0 mal de gorge (si vous suivez nos conseils)</p>
+  </div>
+  <div class="meter" aria-label="Gueulomètre">
+    <p class="kicker" style="color:var(--sun)">Le gueulomètre</p>
+    <div class="db" aria-live="polite"><span id="db">40</span><small>dB</small></div>
+    <div class="bar" role="presentation"><i id="fill"></i></div>
+    <p class="verdict" id="verdict">Chuchotement de bibliothèque. On peut mieux faire.</p>
+    <button class="btn" id="gueule" type="button">Maintenir pour gueuler</button>
+    <p class="hint">Maintenez le bouton (ou la barre d'espace) enfoncé.</p>
+  </div>
+</div></section>
+
+<div class="ticker" aria-hidden="true"><div id="tick"></div></div>
+
+<section id="agenda"><div class="in">
+  <div class="head">
+    <div><p class="kicker">Agenda</p><h2>Les prochaines gueulées</h2></div>
+    <div class="chips" role="group" aria-label="Filtrer par type" id="chips">
+      <button class="chip" type="button" data-f="all" aria-pressed="true">Toutes</button>
+      <button class="chip" type="button" data-f="Rassemblement" aria-pressed="false">Rassemblements</button>
+      <button class="chip" type="button" data-f="Atelier" aria-pressed="false">Ateliers</button>
+      <button class="chip" type="button" data-f="Concours" aria-pressed="false">Concours</button>
+      <button class="chip" type="button" data-f="Convivial" aria-pressed="false">Convivial</button>
+    </div>
+  </div>
+  <ul class="events" id="events"></ul>
+</div></section>
+
+<section class="admin" id="admin"><div class="in">
+  <div>
+    <p class="kicker" style="color:var(--sun)">Côté bureau</p>
+    <h2>Un changement de lieu ? Deux minutes.</h2>
+    <p class="sub">Voici l'espace d'administration, tel que le verra votre bureau. Essayez : choisissez une gueulée, changez la date ou le lieu, puis cliquez. L'agenda ci-dessus se met à jour tout de suite, avec la mention « modifié » pour prévenir les gueulards.</p>
+    <p class="sub">Aucune compétence informatique. Si vous savez remplir un formulaire, vous savez gérer le site.</p>
+  </div>
+  <form class="panel" id="adminForm">
+    <div class="bar-title"><i></i> Espace bureau · modifier une gueulée</div>
+    <div class="field"><label for="aSel">Quelle gueulée ?</label><select id="aSel"></select></div>
+    <div class="two">
+      <div class="field"><label for="aDate">Nouvelle date</label><input id="aDate" type="date"></div>
+      <div class="field"><label for="aHeure">Heure</label><input id="aHeure" type="time"></div>
+    </div>
+    <div class="field"><label for="aLieu">Nouveau lieu</label><input id="aLieu" type="text"></div>
+    <button class="btn" type="submit">Annoncer le changement</button>
+    <p class="toast" id="toast" role="status"></p>
+  </form>
+</div></section>
+
+<section id="acces"><div class="in">
+  <div class="head"><div><p class="kicker">Où nous trouver</p><h2>Pour s'y retrouver et gueuler ensemble</h2></div></div>
+  <div class="mapgrid">
+    <div class="map">
+      <svg viewBox="0 0 640 400" role="img" aria-label="Plan stylisé de Saint-Victoret avec l'itinéraire de la gare à la Place des Platanes">
+        <rect width="640" height="400" fill="var(--card)"/>
+        <g fill="none" stroke="var(--ink-soft)" stroke-width="14" stroke-linecap="round" opacity=".25">
+          <path d="M0 300 L640 260"/><path d="M180 0 L240 400"/><path d="M0 120 L640 150"/><path d="M470 0 L430 400"/>
+        </g>
+        <g fill="none" stroke="var(--ink-soft)" stroke-width="5" opacity=".35"><path d="M60 0 L90 400"/><path d="M330 0 L350 400"/><path d="M0 210 L640 200"/><path d="M560 0 L580 400"/></g>
+        <rect x="262" y="164" width="52" height="30" fill="var(--sun)" stroke="var(--ink)" stroke-width="3"/>
+        <text x="288" y="184" text-anchor="middle" font-family="DM Mono,monospace" font-size="11" fill="var(--on-sun)">PARC</text>
+        <path d="M70 330 L180 292 L240 250 L300 215 L340 200 L400 168 L440 150" fill="none" stroke="var(--shout)" stroke-width="7" stroke-dasharray="3 14" stroke-linecap="round"/>
+        <circle cx="70" cy="330" r="13" fill="var(--ink)"/>
+        <text x="70" y="362" text-anchor="middle" font-family="DM Mono,monospace" font-size="12" fill="var(--ink)">Gare (départ)</text>
+        <g transform="translate(440 150)">
+          <circle r="26" fill="var(--shout)" stroke="var(--ink)" stroke-width="3"/>
+          <path d="M-9 -7 L5 -7 L13 -14 L13 14 L5 7 L-9 7 Z" fill="var(--on-shout)"/>
+        </g>
+        <text x="440" y="110" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="22" fill="var(--ink)" letter-spacing="1">PLACE DES PLATANES</text>
+        <text x="440" y="128" text-anchor="middle" font-family="DM Mono,monospace" font-size="11" fill="var(--ink-soft)">ici, on gueule</text>
+      </svg>
+    </div>
+    <div class="addr">
+      <h3>Place des Platanes</h3>
+      <p class="mono">13730 Saint-Victoret<br>(adresse fictive pour la maquette)</p>
+      <ol>
+        <li>Sortez de la gare, tournez à gauche.</li>
+        <li>Suivez les gens qui ont l'air d'avoir envie de crier.</li>
+        <li>Au parc, prenez à droite : la place est juste là, on vous entend déjà.</li>
+      </ol>
+      <p><strong>Accès :</strong> 8 min à pied · parking gratuit · pas de voisin dans un rayon de 40 m (on a vérifié).</p>
+      <button class="btn alt" type="button" id="copyAddr">Copier l'adresse</button>
+      <span class="toast" id="copyMsg" role="status" style="margin:0"></span>
+    </div>
+  </div>
+</div></section>
+
+<section id="photos" style="padding-top:0"><div class="in">
+  <div class="head"><div><p class="kicker">L'ambiance</p><h2>Ceux qui hésitent à venir, regardez ça</h2></div></div>
+  <div class="gal">
+    <div class="ph a"><em>PHOTO</em><span>La Grande Gueulée 2025</span></div>
+    <div class="ph b"><em>PHOTO</em><span>Chorale des râleurs</span></div>
+    <div class="ph c"><em>PHOTO</em><span>Atelier échauffement</span></div>
+    <div class="ph d"><em>PHOTO</em><span>Gueulée de Noël</span></div>
+    <div class="ph e"><em>PHOTO</em><span>Les enfants gueulent aussi</span></div>
+    <div class="ph f"><em>PHOTO</em><span>Pique-nique de la voix</span></div>
+  </div>
+  <div class="vids">
+    <div class="vid" role="img" aria-label="Vidéo : le cri collectif de la place des Platanes"><span class="play"></span><p>Le cri collectif, place des Platanes</p><b>1:47</b></div>
+    <div class="vid" role="img" aria-label="Vidéo : concours de gueulante, la finale"><span class="play"></span><p>Concours de gueulante : la finale</p><b>3:12</b></div>
+  </div>
+</div></section>
+
+<section class="tips" id="conseils"><div class="in">
+  <p class="kicker">Le coin des conseils</p>
+  <h2>Bien gueuler, mode d'emploi</h2>
+  <div class="tipgrid">
+    <article class="tip"><span class="n">CONSEIL 1</span><h3>Gueulez depuis le ventre</h3><p>La gorge fatigue, le ventre non. Posez la main sous les côtes, inspirez, et lâchez le « HEY » d'un seul bloc.</p></article>
+    <article class="tip"><span class="n">CONSEIL 2</span><h3>Buvez de l'eau tiède</h3><p>Pas de glaçons avant une gueulée. Votre voix aime le tiède, comme les grands-mères qui ont raison.</p></article>
+    <article class="tip"><span class="n">CONSEIL 3</span><h3>Gueulez ensemble</h3><p>Seul, on râle. À vingt, on chante. Calez-vous sur la voix de votre voisin, vous y gagnerez du volume et des amis.</p></article>
+    <article class="tip"><span class="n">CONSEIL 4</span><h3>Gueulez de joie</h3><p>On gueule contre le mistral, la file à la boulangerie et les tongs du voisin. Jamais contre les personnes.</p></article>
+    <article class="tip"><span class="n">CONSEIL 5</span><h3>Échauffez-vous</h3><p>Dix « OOOOUUUiii » en montant, dix en descendant. Oui, on a l'air bête. C'est le but.</p></article>
+    <article class="tip"><span class="n">CONSEIL 6</span><h3>Finissez par un sourire</h3><p>Chaque gueulée se termine par un apéro. Une gueule qui rit n'a jamais mal à la gorge.</p></article>
+  </div>
+</div></section>
+
+<section class="join" id="rejoindre"><div class="in joingrid">
+  <div>
+    <p class="kicker">Rejoindre</p>
+    <h2>Venez gueuler en toute convivialité</h2>
+    <p class="sub">Premier essai gratuit, sans cotisation, sans question. Écrivez-nous, on vous répond dans la journée avec la date de la prochaine gueulée.</p>
+    <ul class="rules"><li>Adhésion : 15 € par an, 5 € pour les moins de 18 ans</li><li>Aucun talent requis, une voix suffit</li><li>Bouchons d'oreilles prêtés sur demande</li></ul>
+  </div>
+  <form class="form" id="joinForm" novalidate>
+    <div class="field"><label for="jNom">Votre nom</label><input id="jNom" type="text" autocomplete="name" required></div>
+    <div class="field"><label for="jMail">Votre e-mail</label><input id="jMail" type="email" autocomplete="email" required></div>
+    <div class="field"><label for="jGueule">Votre niveau de gueule</label>
+      <select id="jGueule"><option>Débutant (je murmure)</option><option>Confirmé (je couvre la télé)</option><option>Légende (le quartier me connaît)</option></select></div>
+    <div class="field"><label for="jMsg">Un mot pour le bureau</label><textarea id="jMsg" placeholder="Ce qui vous donne envie de gueuler…"></textarea></div>
+    <button class="btn" type="submit">J'arrive et je gueule</button>
+    <p class="toast" id="joinMsg" role="status"></p>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="in">
+  <div><a class="logo" href="#haut">Les Gueulards</a>
+  <p style="margin-top:10px">Association loi 1901 fictive, imaginée pour cette maquette. Les lieux, dates, tarifs et personnes sont inventés. Toute ressemblance avec une vraie gueulée serait une heureuse coïncidence.</p></div>
+  <p>Site réalisé par <a href="https://www.assovisible.fr/realisations">AssoVisible</a>, l'agence qui crée des sites simples à gérer pour les associations.</p>
+</div></footer>
+
+<script>
+(function(){
+  /* ---- ticker ---- */
+  var words=['Gueulez ensemble','Pas de voisin à moins de 40 m','Hey ! Ho ! Hey !','Gueulée de Noël le 18 décembre','Apéro obligatoire','Gueulez tranquille','OOOOUUUiiiii'];
+  var line=words.map(function(w){return w+' ✺ '}).join('');
+  document.getElementById('tick').textContent=line+line+line+line;
+
+  /* ---- gueulomètre ---- */
+  var db=40, timer=null, dbEl=document.getElementById('db'), fill=document.getElementById('fill'), verdict=document.getElementById('verdict'), btn=document.getElementById('gueule');
+  var levels=[[50,'Chuchotement de bibliothèque. On peut mieux faire.'],[65,'Conversation de bureau. Respirez, ça vient.'],[80,'Marché du samedi. Vous êtes sur la bonne voie.'],[95,'Supporter de foot. Les pigeons s'+"'"+'en vont.'],[110,'Concert de rock. Le bureau vous adhère d'+"'"+'office.'],[999,'GUEULARD LÉGENDAIRE. Le mistral vous a entendu.']];
+  function show(){
+    dbEl.textContent=Math.round(db);
+    fill.style.width=Math.min(100,(db-40)/80*100)+'%';
+    for(var i=0;i<levels.length;i++){ if(db<levels[i][0]){verdict.textContent=levels[i][1];break;} }
+  }
+  function up(){ if(timer)return; timer=setInterval(function(){ db=Math.min(120,db+1.6); show(); },40); }
+  function down(){ clearInterval(timer); timer=null; var d=setInterval(function(){ db=Math.max(40,db-3); show(); if(db<=40||timer){clearInterval(d);} },40); }
+  btn.addEventListener('pointerdown',function(e){e.preventDefault();up();});
+  ['pointerup','pointerleave','pointercancel'].forEach(function(t){btn.addEventListener(t,down);});
+  btn.addEventListener('keydown',function(e){ if(e.key===' '||e.key==='Enter'){e.preventDefault();up();} });
+  btn.addEventListener('keyup',function(e){ if(e.key===' '||e.key==='Enter'){down();} });
+  show();
+
+  /* ---- agenda ---- */
+  var mois=['janv','févr','mars','avr','mai','juin','juil','août','sept','oct','nov','déc'];
+  var jours=['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+  var evs=[
+    {id:1,titre:'La Grande Gueulée d’automne',type:'Rassemblement',date:'2026-11-07',heure:'18:00',lieu:'Place des Platanes',desc:'Le cri collectif de la saison, avec chocolat chaud pour les voix fragiles.'},
+    {id:2,titre:'Atelier : gueuler sans s’enrouer',type:'Atelier',date:'2026-11-13',heure:'20:00',lieu:'Salle des Mimosas',desc:'Respiration, posture et échauffement avec Mireille, ancienne chanteuse de fanfare.'},
+    {id:3,titre:'Gueulée du dimanche matin',type:'Rassemblement',date:'2026-11-22',heure:'10:00',lieu:'Stade municipal, côté buvette',desc:'Une demi-heure de cris, puis café et croissants pour tout le monde.'},
+    {id:4,titre:'Le Grand Slam des Gueulards',type:'Concours',date:'2026-12-05',heure:'19:30',lieu:'Salle des Mimosas',desc:'Trois manches : le cri, la plainte et la chanson. Jury impitoyable, trophée en carton.'},
+    {id:5,titre:'Apéro-gueulante de l’Avent',type:'Convivial',date:'2026-12-12',heure:'17:00',lieu:'Le Bar du Mistral',desc:'On gueule moins fort mais on rit plus. Chacun apporte une spécialité.'},
+    {id:6,titre:'Gueulée de Noël et vin chaud',type:'Rassemblement',date:'2026-12-18',heure:'18:30',lieu:'Place des Platanes',desc:'Chants de Noël mal chantés, très fort, avec vin chaud et mandarines.'}
+  ];
+  var filtre='all', list=document.getElementById('events');
+  function fmt(iso){var p=iso.split('-');var d=new Date(+p[0],+p[1]-1,+p[2]);return {j:+p[2],m:mois[+p[1]-1],w:jours[d.getDay()]};}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function render(flashId){
+    var items=evs.filter(function(e){return filtre==='all'||e.type===filtre;}).sort(function(a,b){return (a.date+a.heure).localeCompare(b.date+b.heure);});
+    if(!items.length){list.innerHTML='<li class="empty">Aucune gueulée de ce type pour le moment. Ça ne durera pas.</li>';return;}
+    list.innerHTML=items.map(function(e){
+      var f=fmt(e.date);
+      return '<li class="ev'+(e.id===flashId?' flash':'')+'"><div class="date"><b>'+f.j+'</b><span>'+f.m+'</span></div>'+
+        '<div><h3>'+esc(e.titre)+(e.mod?'<span class="badge mod">Modifié</span>':'')+'</h3>'+
+        '<p class="meta"><strong>'+f.w+' à '+e.heure.replace(':','h')+'</strong> · '+esc(e.lieu)+'</p><p class="meta">'+esc(e.desc)+'</p></div>'+
+        '<span class="badge type">'+e.type+'</span></li>';
+    }).join('');
+  }
+  document.getElementById('chips').addEventListener('click',function(ev){
+    var b=ev.target.closest('.chip'); if(!b)return;
+    filtre=b.dataset.f;
+    document.querySelectorAll('.chip').forEach(function(c){c.setAttribute('aria-pressed',c===b?'true':'false');});
+    render();
+  });
+  render();
+
+  /* ---- admin ---- */
+  var sel=document.getElementById('aSel'), aD=document.getElementById('aDate'), aH=document.getElementById('aHeure'), aL=document.getElementById('aLieu'), toast=document.getElementById('toast');
+  sel.innerHTML=evs.map(function(e){return '<option value="'+e.id+'">'+esc(e.titre)+'</option>';}).join('');
+  function load(){var e=evs.filter(function(x){return x.id===+sel.value;})[0]; aD.value=e.date; aH.value=e.heure; aL.value=e.lieu; toast.textContent='';}
+  sel.addEventListener('change',load); load();
+  document.getElementById('adminForm').addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var e=evs.filter(function(x){return x.id===+sel.value;})[0];
+    if(!aD.value||!aH.value||!aL.value.trim()){toast.style.color='var(--shout)';toast.textContent='Remplissez la date, l’heure et le lieu.';return;}
+    e.date=aD.value; e.heure=aH.value; e.lieu=aL.value.trim(); e.mod=true;
+    toast.style.color='var(--ok)'; toast.textContent='C’est fait ! L’agenda est à jour.';
+    filtre='all'; document.querySelectorAll('.chip').forEach(function(c){c.setAttribute('aria-pressed',c.dataset.f==='all'?'true':'false');});
+    render(e.id);
+  });
+
+  /* ---- copie adresse ---- */
+  document.getElementById('copyAddr').addEventListener('click',function(){
+    var txt='Place des Platanes, 13730 Saint-Victoret', m=document.getElementById('copyMsg');
+    function ok(){m.style.color='var(--ok)';m.textContent='Adresse copiée.';}
+    function ko(){m.style.color='var(--ink-soft)';m.textContent=txt;}
+    try{ navigator.clipboard.writeText(txt).then(ok,ko); }catch(e){ ko(); }
+  });
+
+  /* ---- formulaire ---- */
+  document.getElementById('joinForm').addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var n=document.getElementById('jNom').value.trim(), m=document.getElementById('jMail').value.trim(), t=document.getElementById('joinMsg');
+    if(!n||m.indexOf('@')<1){t.style.color='var(--shout)';t.textContent='Indiquez votre nom et un e-mail valide.';return;}
+    t.style.color='var(--ok)'; t.textContent='Bienvenue '+n+' ! (Maquette : aucun message n’est envoyé.)';
+  });
+})();
+</script>
