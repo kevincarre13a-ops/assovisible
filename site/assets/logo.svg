@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Logo Les Amis d'Handimak">
+  <circle cx="32" cy="32" r="30" fill="#FFC93C"/>
+  <path d="M32 50C14 38 10 27 17 21c5-4 11-2 15 4 4-6 10-8 15-4 7 6 3 17-15 29z" fill="#E4572E"/>
+  <circle cx="32" cy="17" r="5" fill="#1D6FB8"/>
+  <path d="M20 40h24" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".0"/>
+</svg>

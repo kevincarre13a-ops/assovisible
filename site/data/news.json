@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "date": null,
+      "titre": "Le site des Amis d'Handimak ouvre ses portes",
+      "texte": "Retrouvez ici l'association, sa mission et, très bientôt, ses événements de collecte. Les actualités seront ajoutées au fil des mois.",
+      "tag": "L'association"
+    },
+    {
+      "date": null,
+      "titre": "Actualité à venir — à compléter par l'association",
+      "texte": "Texte d'attente : annoncez ici un événement, un remerciement ou un équipement financé (uniquement avec l'accord des familles pour toute mention d'un enfant).",
+      "tag": "À compléter"
+    }
+  ]
+}

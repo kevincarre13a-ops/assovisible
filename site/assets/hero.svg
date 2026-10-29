@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7CC4F2"/><stop offset=".65" stop-color="#CDEBFB"/><stop offset="1" stop-color="#FFF4D6"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#FFE27A"/><stop offset=".6" stop-color="#FFC93C"/><stop offset="1" stop-color="#FFC93C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1300" cy="210" r="260" fill="url(#sun)"/>
+  <circle cx="1300" cy="210" r="95" fill="#FFD75E"/>
+  <g fill="#fff" opacity=".9">
+    <ellipse cx="260" cy="170" rx="120" ry="34"/><ellipse cx="340" cy="150" rx="80" ry="30"/><ellipse cx="190" cy="152" rx="70" ry="26"/>
+    <ellipse cx="820" cy="270" rx="100" ry="28"/><ellipse cx="890" cy="252" rx="64" ry="24"/>
+  </g>
+  <g>
+    <g transform="translate(980 330)"><ellipse rx="34" ry="42" fill="#E4572E"/><path d="M0 42v70" stroke="#14263D" stroke-width="3"/></g>
+    <g transform="translate(1060 270)"><ellipse rx="30" ry="38" fill="#1D6FB8"/><path d="M0 38v66" stroke="#14263D" stroke-width="3"/></g>
+    <g transform="translate(1130 380)"><ellipse rx="28" ry="36" fill="#2E9E63"/><path d="M0 36v60" stroke="#14263D" stroke-width="3"/></g>
+    <g transform="translate(900 400)"><ellipse rx="26" ry="34" fill="#FFC93C"/><path d="M0 34v58" stroke="#14263D" stroke-width="3"/></g>
+  </g>
+  <path d="M0 640C220 560 430 590 640 640s470 60 680 -20 220 -40 280 -10V900H0z" fill="#9AD9A6"/>
+  <path d="M0 720C260 650 520 700 780 740s560 10 820 -50V900H0z" fill="#4DB37A"/>
+  <path d="M0 800C300 750 600 800 900 820s500 -20 700 -60V900H0z" fill="#2E8B57"/>
+  <g stroke="#14263D" stroke-width="3" fill="none" opacity=".55">
+    <path d="M0 40Q200 110 400 40T800 40T1200 40T1600 40"/>
+  </g>
+  <g>
+    <polygon points="60,50 120,50 90,115" fill="#E4572E"/><polygon points="200,76 260,76 230,141" fill="#FFC93C"/>
+    <polygon points="340,86 400,86 370,151" fill="#1D6FB8"/><polygon points="480,76 540,76 510,141" fill="#2E9E63"/>
+    <polygon points="620,50 680,50 650,115" fill="#E4572E"/><polygon points="760,40 820,40 790,105" fill="#FFC93C"/>
+  </g>
+</svg>

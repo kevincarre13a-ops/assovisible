@@ -1,0 +1,14 @@
+{
+  "upcoming": [
+    {
+      "titre": "Prochain événement de collecte",
+      "date": null,
+      "dateTexte": "Date à annoncer",
+      "lieu": "Rognac — lieu à confirmer",
+      "type": "À venir",
+      "description": "Le programme du prochain événement sera publié ici dès qu'il sera confirmé par l'association. Pour ne rien manquer, suivez-nous sur Facebook.",
+      "lien": ""
+    }
+  ],
+  "archive": []
+}

@@ -1,0 +1,7 @@
+{
+  "albums": [
+    { "titre": "Événements de collecte", "description": "Les photos des événements seront ajoutées ici (ambiance, installation, bénévoles de dos, matériel).", "photos": [] },
+    { "titre": "Bénévoles en action", "description": "Mains, matériel, coulisses : l'énergie de l'équipe, sans portraits d'enfants.", "photos": [] },
+    { "titre": "Équipements financés", "description": "Visuels d'équipements, uniquement avec l'accord des familles.", "photos": [] }
+  ]
+}

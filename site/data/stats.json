@@ -1,0 +1,14 @@
+{
+  "collecte": {
+    "montant": null,
+    "objectif": null,
+    "libelle": "Collecte en cours",
+    "textePlaceholder": "Montant collecté et objectif à renseigner par l'association."
+  },
+  "compteurs": [
+    { "label": "années d'existence", "depuis": "2023-01-05" },
+    { "label": "événements organisés", "valeur": null },
+    { "label": "équipements financés", "valeur": null },
+    { "label": "bénévoles engagés", "valeur": null }
+  ]
+}
