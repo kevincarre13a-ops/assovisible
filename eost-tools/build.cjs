@@ -8,8 +8,8 @@ const LEG={
  cin:"28.03.2026 : Séance de cinéma - Abadenn sinema.",
  loup:"9.03.2024 : conférence sur le loup en Bretagne par François de Beaulieu - Prezegenn diwar-benn ar bleiz e Breizh gant François de Beaulieu.",
  br:"10.12.2025 : après-midi de breton - Abardaevezh brezhoneg.",
- r1:"6.05.2026 : Promenade des brittophones à Rostellec - Pourmenadenn ar vrezhegerien e Rostelleg.",
- r2:"6.05.2026 : Promenade des brittophones à la pointe des Espagnols - Pourmenadenn ar vrezhegerien e beg ar Spagnoled.",
+ r1:"6.05.2026 : Promenade des brittophones à Rostellec - Pourmenadenn ar vrezhonegerien e Rostelleg.",
+ r2:"6.05.2026 : Promenade des brittophones à la pointe des Espagnols - Pourmenadenn ar vrezhonegerien e beg ar Spagnoled.",
  ag26:"7.02.2026 : Assemblée générale - Bodadeg-veur.",
  ag25:"1.02.2025 : Assemblée générale d'EOST - Bodadeg-veur EOST."
 };
@@ -103,7 +103,7 @@ const gcats=[['moulin','Moulin'],['livres','Livres'],['conf','Conférences'],['b
 const PH=[
  ['moulin','moulin-luzeoc',LEG.moulin,'Le moulin à vent de Luzéoc face à la baie de Douarnenez',true,1600,1067,''],
  ['livres','couverture-livre15',LEG.c15,'Couverture du livre n° 15, « Patrimoine breton – Glad Terrug »',true,770,1300,'object-fit:contain;background:#f7f3ea'],
- ['livres','gal-livre15-sortie-2026',LEG.s15,'Présentation du livre n° 15 devant le public',false,596,397,''],
+ ['livres','gal-livre15-sortie-2026',LEG.s15,'Sortie du livre n° 15 : des membres debout dans la salle, une personne prend la parole',true,1400,1050,''],
  ['livres','gal-livre14-2024',LEG.l14,'Lecteurs et auteurs tenant le livre n° 14',true,1400,1050,''],
  ['conf','gal-cinema-2026',LEG.cin,'Le public réuni pour la séance de cinéma',true,1400,1050,''],
  ['conf','gal-loup-2024',LEG.loup,'Conférence sur le loup en Bretagne devant une salle comble',true,1400,1050,''],

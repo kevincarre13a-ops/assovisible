@@ -2,7 +2,7 @@
 import json
 T={
 "Accueil · EOST, Études Ouvertes sur Telgruc":"Degemer · EOST, Études Ouvertes sur Telgruc",
-"Accueil":"Degemer","L'association":"Ar gevredigezh","Activités":"Oberiantizoù","Agenda":"Deiziadur","Galerie":"Skeudennoù","Actualités":"Keleier","Adhérer / Contact":"Emezelañ / Darempred","Mentions légales":"Menegoù lezennel",
+"Accueil":"Degemer","L'association":"Ar gevredigezh","Activités":"Oberiantizoù","Agenda":"Deiziataer","Galerie":"Skeudennoù","Actualités":"Keleier","Adhérer / Contact":"Emezelañ / Darempred","Mentions légales":"Menegoù lezennel",
 "Telgruc-sur-Mer · Presqu'île de Crozon · Depuis 1997":"Terrug · Gourenez Kraozon · Abaoe 1997",
 "Des études ouvertes":"Studiadennoù digor","sur Telgruc, pour tous.":"war Derrug, evit an holl.",
 "Livres, conférences, après-midis en breton, randonnées et moulin à vent : on cultive ici la ":"Levrioù, prezegennoù, abardevezhioù e brezhoneg, baleadegoù ha milin-avel : amañ e vez dastumet an ",
@@ -129,7 +129,7 @@ T={
 "Péripéties telgruciennes 1980-2000":"Eurioù ha dizeurioù Terrug 1980-2000","Eurioù ha dizeurioù Terrug · 2024":"Péripéties telgruciennes · 2024",
 "Patrimoine breton — Glad Terrug (annoncé le 13 juin)":"Glad Terrug — Patrimoine breton (d'an 13 a viz Mezheven)","132 pages · 2026":"132 pajenn · 2026",
 # agenda
-"Agenda · EOST, Études Ouvertes sur Telgruc":"Deiziadur · EOST, Études Ouvertes sur Telgruc",
+"Agenda · EOST, Études Ouvertes sur Telgruc":"Deiziataer · EOST, Études Ouvertes sur Telgruc",
 "Rendez-vous":"Emgavioù","Les prochains rendez-vous, et la mémoire de ceux qui ont eu lieu.":"An emgavioù da zont, ha memor ar re a zo bet.",
 "À venir":"Da zont","Prochains rendez-vous":"Emgavioù da zont","à fixer":"da fiñval","Régulier":"Reoliek",
 "14 h – 17 h, Foyer des jeunes. Gratuit. Dates de la saison 2026-2027 à confirmer.":"14e – 17e, Ti ar re yaouank. Digoust. Deizioù 2026-2027 da gadarnaat.",
@@ -337,7 +337,7 @@ T.update({
 "Fours, lavoirs, fontaines, sablières, monuments ; journées d'entretien de la chapelle de Lanjulitte ; restauration de l'église.":"Fornioù, poulloù-kannañ, feunteunioù, sablerioù, monumantoù ; devezhioù kempenn chapel Lanjulit ; adkempenn an iliz.",
 "Mercredi 16 décembre, 15 h, foyer des jeunes. Préparation des activités. Goûter de Noël.":"Merc'her 16 a viz Kerzu, 15e, ti ar re yaouank. Prientiñ an oberiantizoù. Merenn-vihan Nedeleg.",
 "Conférence à la salle polyvalente":"Prezegenn e sal liesimplij","Chapelle de Lanjulitte":"Chapel Lanjulit",
-"Telgruc-sur-Mer, presqu'île de Crozon (Finistère). Le moulin de Luzéoc (Penn-ar-Stank) se trouve entre le bourg et la côte.":"Terrug, gourenez Kraozon (Penn-ar-Bed). Milin Lezuoc (Penn-ar-Stank) zo etre ar vorc'h hag an aod.",
+"Telgruc-sur-Mer, presqu'île de Crozon (Finistère). Le moulin de Luzéoc (Penn-ar-Stank) se trouve entre le bourg et la côte.":"Terrug, gourenez Kraozon (Penn-ar-Bed). Emañ Milin Lezuoc (Penn-ar-Stank) etre ar vorc'h hag an aod.",
 "Le formulaire de contact recueille nom, e-mail et message pour répondre à votre demande, sans autre usage. Ces données sont traitées via Netlify Forms. Vous pouvez demander leur accès, rectification ou suppression en écrivant à l'adresse ci-dessus. Le site ne dépose pas de cookies de suivi.":"Ar follenn zarempred a zastum an anv, ar postel hag ar gemennadenn evit respont d'ho koulenn, hep implij all. Ar roadennoù-se a vez hanterouriet dre Netlify Forms. Gallout a rit goulenn kaout, reizhañ pe lemel anezho en ur skrivañ d'ar chomlec'h a-us. Al lec'hienn ne laka cookies-heuliañ ebet.",
 })
 
