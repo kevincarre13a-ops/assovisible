@@ -1,0 +1,6 @@
+{
+  "_aide": "Ajoutez un créneau par ligne dans « cours ». jour = lundi, mardi, mercredi, jeudi, vendredi ou samedi. famille = danse ou bien-etre. Exemple : { \"jour\": \"mardi\", \"debut\": \"18:15\", \"fin\": \"19:15\", \"activite\": \"Street-jazz\", \"famille\": \"danse\", \"public\": \"Ados\", \"prof\": \"Laetitia\", \"lieu\": \"Studio\" }",
+  "saison": "2026-2027",
+  "note": "Le planning détaillé de la saison est publié par l'association dans la story à la une « planning » de son compte Instagram. Les créneaux ci-dessous seront complétés dès confirmation.",
+  "cours": []
+}

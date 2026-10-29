@@ -1,0 +1,19 @@
+{
+  "_aide": "À venir : ajoutez un événement dans « avenir » (date au format AAAA-MM-JJ). Quand il est passé, déplacez-le dans « archives ». type = gala, stage, portes-ouvertes, sortie, autre.",
+  "avenir": [],
+  "attente": {
+    "gala": "Spectacle de fin d'année : date et lieu à annoncer.",
+    "stages": "Prochains stages : dates à annoncer.",
+    "portesOuvertes": "Portes ouvertes et cours d'essai : dates à annoncer (cours d'essai gratuit sur demande)."
+  },
+  "archives": [
+    {
+      "titre": "Week-end Center Parcs",
+      "type": "sortie",
+      "date": "2024-12-06",
+      "dateFin": "2024-12-09",
+      "lieu": "Domaine des Bois Francs",
+      "resume": "Un week-end danse en cottage : cours de street dance, street jazz, contempo, moderne, dancehall et cabaret, accès à la Bulle et repas du samedi. Tous niveaux, dès 18 ans, ouvert aussi aux non-adhérents. 220 € par personne."
+    }
+  ]
+}

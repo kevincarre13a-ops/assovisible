@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://akdance-mandres.netlify.app/sitemap.xml

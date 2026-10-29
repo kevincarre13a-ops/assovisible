@@ -1,0 +1,44 @@
+{
+  "name": "AK Dance",
+  "baseline": "Danse & bien-être à Mandres-les-Roses",
+  "tagline": "Un jour je suis née, depuis j'improvise…",
+  "taglineSource": "Bio Instagram @akdance9194",
+  "url": "https://akdance-mandres.netlify.app",
+  "contact": {
+    "president": "Catherine Moehrel",
+    "phone": "06 83 30 41 05",
+    "phoneHref": "+33683304105",
+    "email": "akdance9194@gmail.com",
+    "address": "22-24 rue François Coppée",
+    "zip": "94520",
+    "city": "Mandres-les-Roses",
+    "lat": 48.7069,
+    "lon": 2.5439
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/Akdance9194/",
+    "instagram": "https://www.instagram.com/akdance9194/"
+  },
+  "hero": {
+    "image": "",
+    "video": "",
+    "poster": ""
+  },
+  "stats": {
+    "adherents": 350,
+    "foundedYear": null,
+    "joursDeCours": 6
+  },
+  "nav": [
+    { "href": "index.html", "label": "Accueil" },
+    { "href": "association.html", "label": "L'association" },
+    { "href": "danse.html", "label": "Danse" },
+    { "href": "bien-etre.html", "label": "Bien-être" },
+    { "href": "planning-tarifs.html", "label": "Planning & tarifs" },
+    { "href": "evenements.html", "label": "Événements & gala" },
+    { "href": "galerie.html", "label": "Galerie" },
+    { "href": "actualites.html", "label": "Actualités" },
+    { "href": "contact.html", "label": "Nous rejoindre" }
+  ],
+  "placeholder": "À confirmer"
+}

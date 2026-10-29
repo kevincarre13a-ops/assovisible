@@ -1,0 +1,22 @@
+{
+  "_aide": "Ajoutez une actualité en tête de liste. Champs : titre, date (AAAA-MM-JJ), resume, lien (facultatif), libelleLien (facultatif).",
+  "items": [
+    {
+      "titre": "Le nouveau site d'AK Dance est en ligne",
+      "date": "2026-10-29",
+      "resume": "Disciplines, planning, tarifs, événements, galerie et contact : tout AK Dance au même endroit, en complément de nos réseaux sociaux."
+    },
+    {
+      "titre": "Planning de la saison à retrouver sur Instagram",
+      "date": "2026-10-29",
+      "resume": "Le planning de la saison et la présentation des professeurs sont épinglés en stories à la une sur notre compte Instagram.",
+      "lien": "https://www.instagram.com/akdance9194/",
+      "libelleLien": "Voir sur Instagram"
+    },
+    {
+      "titre": "Week-end Center Parcs, 6 au 9 décembre 2024",
+      "date": "2024-12-06",
+      "resume": "Un week-end de danse et de convivialité au Domaine des Bois Francs, ouvert aux adhérents et aux non-adhérents."
+    }
+  ]
+}

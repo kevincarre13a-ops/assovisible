@@ -1,0 +1,47 @@
+{
+  "_aide": "Tarifs repris de l'ancien site de l'association (saison 2024-2025). À vérifier et mettre à jour pour la saison en cours.",
+  "avertissement": "Tarifs annuels relevés sur l'ancien site (saison 2024-2025) : à confirmer auprès de l'association pour la saison en cours.",
+  "danse": [
+    { "duree": "45 min", "prix": 170 },
+    { "duree": "1 h", "prix": 220 },
+    { "duree": "1 h 15", "prix": 260 },
+    { "duree": "1 h 30", "prix": 305 },
+    { "duree": "2 h", "prix": 385 },
+    { "duree": "2 h 15", "prix": 430 },
+    { "duree": "2 h 30", "prix": 460 },
+    { "duree": "3 h", "prix": 535 },
+    { "duree": "3 h 15", "prix": 595 },
+    { "duree": "3 h 30", "prix": 625 },
+    { "duree": "3 h 45", "prix": 670 },
+    { "duree": "4 h 30", "prix": 764 }
+  ],
+  "bienEtre": [
+    { "duree": "1 h", "prix": 215 },
+    { "duree": "1 h 30", "prix": 255 },
+    { "duree": "Mix 2 h", "prix": 405 },
+    { "duree": "Mix 2 h 30", "prix": 445 }
+  ],
+  "coursOpen": { "titre": "Cours open (samedi)", "adherent": 10, "nonAdherent": 12, "detail": "Tarif à l'heure, pour les adhérents (10 €) et les non-adhérents (12 €)." },
+  "adhesion": [
+    { "label": "Adhésion annuelle", "prix": "25 €", "detail": "à ajouter à l'ensemble des tarifs" },
+    { "label": "Réinscription de la saison", "prix": "20 €", "detail": "" }
+  ],
+  "famille": {
+    "titre": "Réduction famille",
+    "detail": "À partir de 2 adhérents d'un même foyer fiscal (sur l'adhésion)",
+    "paliers": [
+      { "membres": "2 membres", "prix": "32 €" },
+      { "membres": "3 membres", "prix": "52 €" },
+      { "membres": "4 membres", "prix": "72 €" }
+    ]
+  },
+  "inscription": {
+    "etapes": [
+      "Venez essayer un cours gratuitement, sur simple prise de contact.",
+      "Demandez le dossier d'inscription par e-mail à l'association.",
+      "Retournez le dossier complet avec l'adhésion et le règlement."
+    ],
+    "attente": "Modalités de paiement (échelonnement, chèques, pass'sport…), pièces à fournir et dates d'inscription : à confirmer par l'association."
+  },
+  "essai": "Un cours d'essai gratuit est proposé (indiqué dans l'annuaire des associations de la mairie de Mandres-les-Roses)."
+}

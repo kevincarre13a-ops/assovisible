@@ -1,0 +1,13 @@
+{
+  "_aide": "Pour ajouter une photo : déposez le fichier dans assets/img/galerie/ puis ajoutez une ligne dans « photos » : { \"src\": \"assets/img/galerie/mon-fichier.jpg\", \"alt\": \"Description\", \"categorie\": \"gala\", \"credit\": \"Photo : …\" }. N'ajoutez des photos d'enfants que si leurs parents ont donné leur accord. Pour une vidéo : ajoutez-la dans « videos » avec son lien Instagram ou YouTube.",
+  "categories": [
+    { "id": "cours", "label": "Les cours" },
+    { "id": "gala", "label": "Gala & spectacles" },
+    { "id": "stages", "label": "Stages & week-ends" },
+    { "id": "equipe", "label": "L'équipe" }
+  ],
+  "photos": [],
+  "videos": [
+    { "titre": "Les vidéos du moment", "lien": "https://www.instagram.com/akdance9194/", "categorie": "cours", "legende": "Extraits de cours et de spectacles, publiés sur le compte Instagram de l'association." }
+  ]
+}

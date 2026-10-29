@@ -1,0 +1,23 @@
+{
+  "_aide": "Ajoutez ou modifiez les membres du bureau et les professeurs. Pas de photo obligatoire : une pastille avec l'initiale s'affiche. Champ « lien » facultatif.",
+  "bureau": [
+    { "nom": "Catherine Moehrel", "role": "Présidente" },
+    { "nom": "", "role": "Trésorier·ère" },
+    { "nom": "", "role": "Secrétaire" }
+  ],
+  "professeurs": [
+    { "nom": "Laetitia", "role": "Professeure", "discipline": "", "lien": "https://www.instagram.com/laetidanss/", "libelleLien": "Son Instagram" },
+    { "nom": "Isabelle", "role": "Professeure", "discipline": "" },
+    { "nom": "Mary", "role": "Professeure", "discipline": "" },
+    { "nom": "Marjorie", "role": "Professeure", "discipline": "" },
+    { "nom": "Lola", "role": "Professeure", "discipline": "" },
+    { "nom": "Juliette", "role": "Professeure", "discipline": "" },
+    { "nom": "Seb", "role": "Professeur", "discipline": "" }
+  ],
+  "valeurs": [
+    { "titre": "Une équipe motivée", "texte": "Des professeurs passionnés, une ambiance chaleureuse et des bénévoles engagés." },
+    { "titre": "Dès 4 ans, tous niveaux", "texte": "Débutants ou confirmés, petits ou grands : chacun trouve sa place." },
+    { "titre": "Danse & bien-être", "texte": "Bouger, s'exprimer, mais aussi prendre soin de soi : yoga, pilates, barre au sol…" },
+    { "titre": "Convivialité", "texte": "Cours d'essai gratuit, week-ends, spectacles : ici, on danse ensemble." }
+  ]
+}
