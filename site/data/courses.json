@@ -1,0 +1,26 @@
+{
+  "disciplines": [
+    { "name": "Taekwondo traditionnel", "desc": "Les fondamentaux : positions, blocages, frappes, respect de l'étiquette du dojang.", "icon": "kick" },
+    { "name": "Poomsé", "desc": "Enchaînements codifiés qui développent précision, équilibre et concentration.", "icon": "form" },
+    { "name": "Combat (kyorugi)", "desc": "Travail de distance, de timing et de contrôle, en sécurité et avec protections.", "icon": "fight" },
+    { "name": "Self-défense", "desc": "Réflexes et techniques simples pour gagner en confiance.", "icon": "shield" }
+  ],
+  "disciplinesNote": "Disciplines à confirmer par le club.",
+  "publics": [
+    { "name": "Baby taekwondo", "age": "À confirmer", "desc": "Éveil moteur et premiers pas sur le tatami, dans la bonne humeur." },
+    { "name": "Enfants", "age": "À confirmer", "desc": "Coordination, concentration et respect, en s'amusant." },
+    { "name": "Ados", "age": "À confirmer", "desc": "Dépassement de soi, technique et confiance." },
+    { "name": "Adultes", "age": "À confirmer", "desc": "Condition physique, technique, lâcher-prise." }
+  ],
+  "slots": [],
+  "slotsPlaceholder": "Les jours, horaires et salles seront publiés ici. Écrivez-nous à taekwondo_guyane@yahoo.fr pour les connaître.",
+  "tarifs": [],
+  "tarifsPlaceholder": "Tarifs de la cotisation et de la licence à compléter par le club.",
+  "inscription": "Modalités d'inscription à compléter. En attendant, contactez le dojang pour réserver un cours d'essai.",
+  "equipement": [
+    "Dobok (tenue de taekwondo) et ceinture, selon le niveau",
+    "Protections pour le combat (selon le niveau, à confirmer)",
+    "Bouteille d'eau et serviette",
+    "Pieds nus sur le tatami, ongles courts, bijoux retirés"
+  ]
+}

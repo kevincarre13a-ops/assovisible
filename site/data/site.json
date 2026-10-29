@@ -1,0 +1,15 @@
+{
+  "name": "Keumgang Dojang",
+  "tagline": "Le diamant se forge à l'entraînement.",
+  "email": "taekwondo_guyane@yahoo.fr",
+  "contactName": "Nom du contact à compléter",
+  "address": "7 impasse des Aciotis, Résidence Pako, 97351 Matoury, Guyane",
+  "city": "Matoury",
+  "declaredYear": 1987,
+  "rna": "W9C1002478",
+  "salle": "Maison des Arts Martiaux Lucie Decosse, Matoury (à confirmer par le club)",
+  "socials": [],
+  "links": [
+    { "label": "FFTDA", "url": "https://www.fftda.fr" }
+  ]
+}

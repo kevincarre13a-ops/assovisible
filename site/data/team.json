@@ -1,0 +1,9 @@
+{
+  "master": { "name": "Maître Isabelle", "role": "Maître / enseignante du dojang", "grade": "Grade (dan) à compléter", "bio": "Maître Isabelle anime les cours du Keumgang Dojang de Matoury et a conduit en 2022 une démonstration et initiation au taekwondo pour le GEM Atipa Autisme à Cayenne. Parcours et grade à compléter par le club.", "pending": true },
+  "coaches": [],
+  "board": [
+    { "role": "Président(e)", "name": "À compléter" },
+    { "role": "Secrétaire", "name": "À compléter" },
+    { "role": "Trésorier(e)", "name": "À compléter" }
+  ]
+}

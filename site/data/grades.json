@@ -1,0 +1,19 @@
+{
+  "belts": [
+    { "name": "Ceinture blanche", "color": "#f4f4f1", "meaning": "Le début du chemin : l'esprit du débutant." },
+    { "name": "Ceinture jaune", "color": "#f2c230", "meaning": "La terre où la graine prend racine." },
+    { "name": "Ceinture verte", "color": "#2e8b57", "meaning": "La plante qui pousse, la technique qui se développe." },
+    { "name": "Ceinture bleue", "color": "#1f5fbf", "meaning": "Le ciel vers lequel la plante grandit." },
+    { "name": "Ceinture rouge", "color": "#c8102e", "meaning": "Le danger : maîtrise de soi et vigilance." },
+    { "name": "Ceinture noire", "color": "#0a0a0f", "meaning": "La maîtrise des bases… et le vrai commencement." }
+  ],
+  "beltsNote": "Symbolique traditionnelle indicative ; les ceintures intermédiaires pratiquées au Keumgang Dojang sont à confirmer par le club.",
+  "passages": [],
+  "passagesPlaceholder": "Dates des prochains passages de grade à annoncer.",
+  "prepare": [
+    "Venir régulièrement aux cours : l'assiduité compte autant que la technique.",
+    "Réviser les poomsé et les techniques du programme de sa ceinture.",
+    "Soigner l'étiquette : salut, ponctualité, respect du maître et des partenaires.",
+    "Se reposer et bien s'hydrater la veille ; arriver en dobok propre."
+  ]
+}
