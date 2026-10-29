@@ -1,0 +1,61 @@
+{
+  "_aide": "Galerie. Ajoutez vos photos dans le dossier img/ puis un bloc ici. 'categorie' doit correspondre à un id de 'categories'. N'ajoutez que des photos dont vous avez le droit de diffusion, et jamais de visage identifiable sans accord.",
+  "categories": [
+    { "id": "patrimoine", "nom": "Patrimoine" },
+    { "id": "viosne", "nom": "La Viosne" },
+    { "id": "fetes", "nom": "Fêtes de quartier" },
+    { "id": "habitants", "nom": "Vie des habitants" }
+  ],
+  "photos": [
+    {
+      "categorie": "patrimoine",
+      "fichier": "img/hero-eglise-notre-dame.jpg",
+      "mini": "img/hero-eglise-notre-dame-m.jpg",
+      "alt": "Chevet et clocher de l'église Notre-Dame de Pontoise sous un ciel bleu",
+      "legende": "Le chevet de l'église Notre-Dame",
+      "credit": "GFreihalter, CC BY-SA 3.0, via Wikimedia Commons",
+      "credit_lien": "https://commons.wikimedia.org/wiki/File:Pontoise_%C3%89glise_Notre-Dame_004.jpg"
+    },
+    {
+      "categorie": "patrimoine",
+      "fichier": "img/place-notre-dame.jpg",
+      "mini": "img/place-notre-dame-m.jpg",
+      "alt": "L'église Notre-Dame vue depuis la place, avec son clocher à lanternon",
+      "legende": "La place Notre-Dame et l'église",
+      "credit": "GFreihalter, CC BY-SA 3.0, via Wikimedia Commons",
+      "credit_lien": "https://commons.wikimedia.org/wiki/File:Pontoise_%C3%89glise_Notre-Dame_003.jpg"
+    },
+    {
+      "categorie": "patrimoine",
+      "fichier": "img/eglise-clocher.jpg",
+      "mini": "img/eglise-clocher-m.jpg",
+      "alt": "Façades est et nord de l'église Notre-Dame et son clocher",
+      "legende": "Le clocher de l'église Notre-Dame",
+      "credit": "P.poschadel, CC BY-SA 2.0 fr, via Wikimedia Commons",
+      "credit_lien": "https://commons.wikimedia.org/wiki/File:Pontoise_(95),_%C3%A9glise_Notre-Dame,_fa%C3%A7ades_est_et_nord.jpg"
+    },
+    {
+      "categorie": "viosne",
+      "fichier": "img/lavoir-viosne.jpg",
+      "mini": "img/lavoir-viosne-m.jpg",
+      "alt": "Ancien lavoir au toit de tuiles rouges au bord de la Viosne, entouré de verdure",
+      "legende": "Un lavoir au bord de la Viosne, jardin des Lavandières",
+      "credit": "P.poschadel, CC BY-SA 2.0 fr, via Wikimedia Commons",
+      "credit_lien": "https://commons.wikimedia.org/wiki/File:Pontoise_(95),_lavoir_sud_la_Viosne,_jardin_des_Lavandi%C3%A8res.jpg"
+    },
+    {
+      "categorie": "fetes",
+      "fichier": "",
+      "alt": "",
+      "legende": "Fête de quartier : photos à venir",
+      "attente": true
+    },
+    {
+      "categorie": "habitants",
+      "fichier": "",
+      "alt": "",
+      "legende": "Vie des habitants : photos à venir",
+      "attente": true
+    }
+  ]
+}

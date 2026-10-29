@@ -1,0 +1,18 @@
+{
+  "_aide": "Coordonnées et textes communs du site. Modifiez ce fichier pour mettre à jour l'en-tête, le pied de page et la page Contact. Les champs marqués 'a_completer' s'affichent comme textes d'attente.",
+  "nom": "Habitants du Quartier Notre-Dame Viosne",
+  "nom_court": "Notre-Dame Viosne",
+  "ville": "Pontoise (Val-d'Oise)",
+  "contact": {
+    "email": "jfdupaquier@yahoo.fr",
+    "telephone": "06 18 66 51 58",
+    "telephone_lien": "+33618665158",
+    "source": "Coordonnées publiées par la Ville de Pontoise (annuaire des associations)",
+    "adresse": "a_completer"
+  },
+  "reseaux": {
+    "facebook": "",
+    "instagram": "",
+    "autre": ""
+  }
+}

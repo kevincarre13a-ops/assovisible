@@ -1,0 +1,37 @@
+{
+  "_aide": "Actualités. Ajoutez un bloc en tête de liste. 'date' au format AAAA-MM-JJ. 'type' : association, presse, ville. Les plus récentes s'affichent en premier.",
+  "actualites": [
+    {
+      "date": "2023-03-24",
+      "type": "ville",
+      "titre": "Tour de quartier Notre-Dame : le compte rendu est publié",
+      "resume": "Stationnement en double file place Notre-Dame et rue de Rouen, vitesse au passage à niveau de la rue Saint-Martin, devenir de locaux rue Pierre-Butin : la Ville a publié les réponses apportées aux habitants le 10 mars 2023.",
+      "lien": "https://ville-pontoise.fr/sites/default/files/2023-03/Depliant_ActuQuartier%20Notre%20Dame%2010%2003%202023.pdf",
+      "source": "Ville de Pontoise"
+    },
+    {
+      "date": "2022-10-30",
+      "type": "presse",
+      "titre": "Révision du PLU : l'association exprime ses inquiétudes",
+      "resume": "Après la réunion d'information du 20 octobre 2022, l'Association des habitants du quartier Notre-Dame-Viosne-Gare a demandé un procès-verbal clarifiant le « taux d'emprise » et l'extension des mesures de protection de l'Hermitage aux autres quartiers.",
+      "lien": "https://actu.fr/ile-de-france/pontoise_95500/pontoise-quartier-de-la-gare-400-logements-a-la-place-d-une-friche_54863225.html",
+      "source": "Actu.fr"
+    },
+    {
+      "date": "2022-04-15",
+      "type": "ville",
+      "titre": "Tour de quartier Notre-Dame / Les Pâtis : ce qu'ont dit les habitants",
+      "resume": "Déchets le long de la Viosne côté parking des Lavandières, entretien du jardin des Lavandières, stationnement rue des Étannets : retour sur les échanges avec la Ville.",
+      "lien": "https://ville-pontoise.fr/sites/default/files/2022-11/Depliant_ActusQuartierND-Patis.pdf",
+      "source": "Ville de Pontoise"
+    },
+    {
+      "date": "2012-12-20",
+      "type": "presse",
+      "titre": "Quartier Notre-Dame : inquiétude autour de l'ancien site de la Chambre de commerce",
+      "resume": "En 2012, un article de la presse locale rapportait la crainte de l'association d'un « bétonnage » du site de la rue de Rouen après le départ de la Chambre de commerce.",
+      "lien": "http://95.telif.tv/2012/12/20/pontoise-les-habitants-du-quartier-notre-dame-ne-veulent-pas-dun-betonnage/",
+      "source": "95.telif.tv"
+    }
+  ]
+}

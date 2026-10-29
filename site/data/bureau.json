@@ -1,0 +1,9 @@
+{
+  "_aide": "Bureau et équipe. Aucun nom n'a pu être confirmé publiquement : renseignez 'nom' pour chaque rôle.",
+  "membres": [
+    { "role": "Président·e", "nom": "a_completer" },
+    { "role": "Secrétaire", "nom": "a_completer" },
+    { "role": "Trésorier·ère", "nom": "a_completer" },
+    { "role": "Bénévoles et membres actifs", "nom": "a_completer" }
+  ]
+}

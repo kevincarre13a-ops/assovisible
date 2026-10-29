@@ -1,0 +1,12 @@
+{
+  "_aide": "Frise de l'histoire du quartier et de l'association.",
+  "repères": [
+    { "date": "XIIe siècle", "titre": "La Viosne est aménagée", "texte": "Le cours de la Viosne est aménagé à des fins économiques : moulins à blé, à tan et foulons. Le faubourg Notre-Dame, hors les murs, naît à cette époque.", "source": "Wikipédia, article « Pontoise »", "lien": "https://fr.wikipedia.org/wiki/Pontoise" },
+    { "date": "Au fil des siècles", "titre": "Un faubourg d'eau et de pierre", "texte": "Dérivations de la Viosne, anciens lavoirs privatifs le long de la rue de Rouen, église Notre-Dame et son clocher : le quartier garde les traces de son passé artisanal.", "source": "Wikipédia", "lien": "https://fr.wikipedia.org/wiki/Pontoise" },
+    { "date": "2006", "titre": "Pontoise, Ville d'art et d'histoire", "texte": "La ville obtient le label Ville d'art et d'histoire.", "source": "Plan local d'urbanisme de Pontoise", "lien": "https://ville-pontoise.fr/sites/default/files/2025-01/1._RAPPORT_DE_PRESENTATION.pdf" },
+    { "date": "2012", "titre": "L'association dans la presse locale", "texte": "Premier témoignage public retrouvé : l'association s'exprime sur l'avenir de l'ancien site de la Chambre de commerce, rue de Rouen.", "source": "95.telif.tv", "lien": "http://95.telif.tv/2012/12/20/pontoise-les-habitants-du-quartier-notre-dame-ne-veulent-pas-dun-betonnage/" },
+    { "date": "2022", "titre": "Nouveau quartier de la gare et révision du PLU", "texte": "Le nouveau quartier de la gare est livré ; l'association participe à la réunion d'information sur la révision du PLU et fait connaître ses demandes.", "source": "Actu.fr", "lien": "https://actu.fr/ile-de-france/pontoise_95500/pontoise-quartier-de-la-gare-400-logements-a-la-place-d-une-friche_54863225.html" },
+    { "date": "2023", "titre": "Tour de quartier Notre-Dame", "texte": "La Ville parcourt le quartier avec les habitants le 10 mars 2023.", "source": "Ville de Pontoise", "lien": "https://ville-pontoise.fr/sites/default/files/2023-03/Depliant_ActuQuartier%20Notre%20Dame%2010%2003%202023.pdf" },
+    { "date": "Date à compléter", "titre": "Création de l'association", "texte": "Texte d'attente : l'année de création et l'histoire de l'association sont à confirmer par ses membres.", "attente": true }
+  ]
+}

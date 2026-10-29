@@ -1,0 +1,67 @@
+{
+  "_aide": "Actions de l'association. Champ 'statut' : 'confirme' (information vérifiée) ou 'a_completer' (texte d'attente affiché avec une pastille). 'categorie' : fetes, vide-greniers, animations, solidarite, cadre-de-vie, projets.",
+  "categories": [
+    { "id": "fetes", "nom": "Fêtes de quartier", "icone": "fete" },
+    { "id": "vide-greniers", "nom": "Vide-greniers", "icone": "maison" },
+    { "id": "animations", "nom": "Animations", "icone": "note" },
+    { "id": "solidarite", "nom": "Solidarité", "icone": "coeur" },
+    { "id": "cadre-de-vie", "nom": "Cadre de vie", "icone": "arbre" },
+    { "id": "projets", "nom": "Projets en cours", "icone": "boussole" }
+  ],
+  "actions": [
+    {
+      "categorie": "cadre-de-vie",
+      "statut": "confirme",
+      "titre": "Protéger le cadre de vie du « quartier bas »",
+      "texte": "C'est l'objet de l'association tel que publié par la Ville de Pontoise : assurer la protection des Pontoisiens du « quartier bas », promouvoir la mixité sociale et défendre l'environnement.",
+      "lien": "https://ville-pontoise.fr/habitants-du-quartier-notre-dame-viosne",
+      "lien_texte": "Fiche officielle sur ville-pontoise.fr"
+    },
+    {
+      "categorie": "projets",
+      "statut": "confirme",
+      "titre": "Suivi de la révision du Plan local d'urbanisme",
+      "texte": "En octobre 2022, l'association a publiquement demandé qu'un procès-verbal de la réunion d'information clarifie le critère de « taux d'emprise », et que les mesures de protection dont bénéficient les habitants de l'Hermitage soient étendues à tous les quartiers. Elle a aussi fait part de ses inquiétudes sur la circulation et le stationnement. Position telle que relayée par Actu.fr.",
+      "lien": "https://actu.fr/ile-de-france/pontoise_95500/pontoise-quartier-de-la-gare-400-logements-a-la-place-d-une-friche_54863225.html",
+      "lien_texte": "Lire l'article d'Actu.fr"
+    },
+    {
+      "categorie": "cadre-de-vie",
+      "statut": "confirme",
+      "titre": "Dialogue avec la Ville : les tours de quartier",
+      "texte": "La Ville de Pontoise organise des « tours de quartier » avec les habitants (Notre-Dame en avril 2022 et mars 2023). Stationnement, voirie, propreté des abords de la Viosne : les sujets des habitants y sont consignés et reçoivent une réponse de la Ville.",
+      "lien": "https://ville-pontoise.fr/sites/default/files/2023-03/Depliant_ActuQuartier%20Notre%20Dame%2010%2003%202023.pdf",
+      "lien_texte": "Compte rendu du 10 mars 2023 (PDF)"
+    },
+    {
+      "categorie": "fetes",
+      "statut": "a_completer",
+      "titre": "Fête de quartier",
+      "texte": "Texte d'attente : présentez ici la fête de quartier (date habituelle, lieu, programme, partenaires)."
+    },
+    {
+      "categorie": "vide-greniers",
+      "statut": "a_completer",
+      "titre": "Vide-greniers",
+      "texte": "Texte d'attente : indiquez ici si l'association organise un vide-greniers, à quelle période, comment réserver un emplacement."
+    },
+    {
+      "categorie": "animations",
+      "statut": "a_completer",
+      "titre": "Animations et rencontres entre voisins",
+      "texte": "Texte d'attente : repas de quartier, concerts, balades le long de la Viosne, journées du patrimoine… à compléter par l'association."
+    },
+    {
+      "categorie": "solidarite",
+      "statut": "a_completer",
+      "titre": "Actions de solidarité et de mixité sociale",
+      "texte": "La mixité sociale fait partie de l'objet de l'association. Texte d'attente : décrivez ici les actions concrètes menées auprès des habitants."
+    },
+    {
+      "categorie": "cadre-de-vie",
+      "statut": "a_completer",
+      "titre": "Nettoyage et valorisation des abords de la Viosne",
+      "texte": "Texte d'attente : si l'association organise ou soutient des opérations de nettoyage ou de valorisation des berges, présentez-les ici."
+    }
+  ]
+}

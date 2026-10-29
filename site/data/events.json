@@ -1,0 +1,39 @@
+{
+  "_aide": "Agenda. Pour ajouter un rendez-vous, copiez un bloc dans 'prochains' avec une date au format AAAA-MM-JJTHH:MM (ex. 2026-12-05T10:00). Quand la date est passée, l'événement bascule automatiquement dans les archives. 'type' : reunion, fete, vide-greniers, solidarite, cadre-de-vie, patrimoine, autre.",
+  "prochains": [],
+  "archives": [
+    {
+      "date": "2023-03-10",
+      "titre": "Tour de quartier Notre-Dame avec la Ville",
+      "type": "cadre-de-vie",
+      "lieu": "Quartier Notre-Dame, Pontoise",
+      "description": "Parcours dans le quartier organisé par la Ville de Pontoise avec les habitants : stationnement place Notre-Dame et rue de Rouen, vitesse au passage à niveau, voirie. Compte rendu publié par la Ville.",
+      "lien": "https://ville-pontoise.fr/sites/default/files/2023-03/Depliant_ActuQuartier%20Notre%20Dame%2010%2003%202023.pdf",
+      "lien_texte": "Lire le compte rendu de la Ville (PDF)",
+      "source": "Ville de Pontoise"
+    },
+    {
+      "date": "2022-10-20",
+      "titre": "Réunion d'information sur la révision du PLU",
+      "type": "reunion",
+      "lieu": "Pontoise",
+      "description": "Réunion de la Ville sur la révision du Plan local d'urbanisme, à laquelle l'association a indiqué avoir assisté.",
+      "lien": "https://actu.fr/ile-de-france/pontoise_95500/pontoise-quartier-de-la-gare-400-logements-a-la-place-d-une-friche_54863225.html",
+      "lien_texte": "Lire l'article d'Actu.fr",
+      "source": "Actu.fr"
+    },
+    {
+      "date": "2022-04-15",
+      "titre": "Tour de quartier Notre-Dame / Les Pâtis",
+      "type": "cadre-de-vie",
+      "lieu": "Notre-Dame / Les Pâtis, Pontoise",
+      "description": "Tour de quartier de la Ville avec une vingtaine d'habitants : jardin des Lavandières, abords de la Viosne, voirie et stationnement.",
+      "lien": "https://ville-pontoise.fr/sites/default/files/2022-11/Depliant_ActusQuartierND-Patis.pdf",
+      "lien_texte": "Lire le compte rendu de la Ville (PDF)",
+      "source": "Ville de Pontoise"
+    }
+  ],
+  "reunions_regulieres": {
+    "texte": "Rythme et lieu des réunions de l'association : a_completer"
+  }
+}

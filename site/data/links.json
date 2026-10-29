@@ -1,0 +1,37 @@
+{
+  "_aide": "Liens utiles. Chaque groupe contient des liens externes. Champ 'attente' : true pour un texte d'attente.",
+  "groupes": [
+    {
+      "titre": "Ville de Pontoise",
+      "liens": [
+        { "nom": "Site de la Ville de Pontoise", "url": "https://www.ville-pontoise.fr/", "texte": "Actualités, agenda, services municipaux. Mairie : 2 rue Victor-Hugo, 95300 Pontoise, 01 34 43 34 43." },
+        { "nom": "Mes démarches en ligne", "url": "https://mesdemarches.ville-pontoise.fr/contacter-un-service", "texte": "Contacter un service municipal, effectuer des démarches." },
+        { "nom": "Annuaire des associations", "url": "https://ville-pontoise.fr/associations-0", "texte": "Toutes les associations pontoisiennes, dont 17 associations de quartier." },
+        { "nom": "Alertes SMS de la Ville", "url": "https://www.ville-pontoise.fr/formulaire/inscriptions-aux-alertes-sms-", "texte": "Recevoir les informations importantes par SMS." },
+        { "nom": "Plan local d'urbanisme", "url": "https://ville-pontoise.fr/sites/default/files/2025-01/1._RAPPORT_DE_PRESENTATION.pdf", "texte": "Rapport de présentation du PLU de Pontoise (PDF)." }
+      ]
+    },
+    {
+      "titre": "Signalements et sécurité",
+      "liens": [
+        { "nom": "Brigade de propreté", "url": "mailto:brigadeproprete@ville-pontoise.fr", "texte": "Signaler un dépôt sauvage ou un problème de propreté. Par téléphone : 01 34 33 30 30." },
+        { "nom": "Police municipale", "url": "https://www.ville-pontoise.fr/", "texte": "Mobilisable 7j/7 jusqu'à 23h, selon la Ville. Retrouvez les coordonnées sur le site de la Ville." },
+        { "nom": "Urgences", "url": "tel:112", "texte": "En cas d'urgence : 112 (numéro européen), 17 (police), 18 (pompiers), 15 (SAMU)." }
+      ]
+    },
+    {
+      "titre": "Agglomération et territoire",
+      "liens": [
+        { "nom": "Cergy-Pontoise Agglo", "url": "https://www.cergypontoise.fr/pontoise", "texte": "Communauté d'agglomération : transports, déchets, environnement." },
+        { "nom": "Syndicat de la vallée de la Viosne", "url": "https://cartes.uniondesmairesduvaldoise.fr/elus/syndicats/syndicat-intercommunal-pour-l-amnagement-de-la-valle-de-la-viosne", "texte": "Syndicat mixte pour l'aménagement de la vallée de la Viosne : 01 34 66 01 12." },
+        { "nom": "CAUE du Val-d'Oise", "url": "https://www.caue95.org/", "texte": "Conseil en architecture, urbanisme et environnement, installé au moulin de la Couleuvre à Pontoise." }
+      ]
+    },
+    {
+      "titre": "Pour aller plus loin",
+      "liens": [
+        { "nom": "Textes d'attente", "url": "", "texte": "Services de santé, aides sociales, transports : à compléter avec les liens que l'association juge les plus utiles à ses habitants.", "attente": true }
+      ]
+    }
+  ]
+}
