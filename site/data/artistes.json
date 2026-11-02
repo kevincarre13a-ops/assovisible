@@ -1,0 +1,424 @@
+{
+  "note": "Aucun portrait ni œuvre n'est publié sans accord : les cartes ci-dessous présentent les intervenants et artistes dont le rôle figure sur les sites du cercle. Le cercle peut ajouter un portrait, une bio et des œuvres en complétant ce fichier.",
+  "disciplines": [
+    "Gravure",
+    "Peinture / dessin",
+    "Sculpture / modelage",
+    "Carnets de croquis"
+  ],
+  "cartes": [
+    {
+      "nom": "Michel Haulard la Brière",
+      "disciplines": [
+        "Gravure"
+      ],
+      "role": "Graveur · intervenant stages",
+      "bio": "Anime de nombreux stages découverte de gravure au Point d'encrage depuis 2018 : carton gravé, plaques découpées, pointe sèche en couleur, vernis mou et sel, gravure & typographie, aquatinte, monotype.",
+      "oeuvres": [
+        "img/aff-aquatinte-2026-t.jpg",
+        "img/aff-gravure-surrealiste-2024-t.jpg",
+        "img/aff-vernis-mou-2021-t.jpg"
+      ],
+      "credit_oeuvres": "Affiches de stages du Cercle d'art de Gentilly"
+    },
+    {
+      "nom": "Laura Hirennau",
+      "disciplines": [
+        "Peinture / dessin",
+        "Gravure"
+      ],
+      "role": "Plasticienne · enseignante",
+      "bio": "Artiste qui grave, peint et dessine. Elle enseigne le dessin-peinture aux ados et adultes (mercredi 17h et 19h) et anime des stages : encaustique, kitchen litho, monotype, techniques mixtes.",
+      "oeuvres": [
+        "img/aff-encaustique-2019-t.jpg",
+        "img/aff-kitchen-litho-2018-t.jpg",
+        "img/aff-kitchen-litho-2020-t.jpg"
+      ],
+      "credit_oeuvres": "Affiches de stages du Cercle d'art de Gentilly"
+    },
+    {
+      "nom": "Magda Moraczewska",
+      "disciplines": [
+        "Peinture / dessin",
+        "Gravure",
+        "Carnets de croquis"
+      ],
+      "role": "Artiste multi-techniques · enseignante",
+      "bio": "Expose régulièrement. Elle conduit les ateliers de dessin-peinture des enfants, enseigne aussi la gravure et accompagne les sorties carnets de croquis.",
+      "oeuvres": [
+        "img/aff-carborundum-2018-t.jpg",
+        "img/aff-impressions-urbaines-2021-t.jpg"
+      ],
+      "credit_oeuvres": "Affiches de stages du Cercle d'art de Gentilly"
+    },
+    {
+      "nom": "Florence Salagnac",
+      "disciplines": [
+        "Sculpture / modelage"
+      ],
+      "role": "Sculptrice · enseignante",
+      "bio": "Anime les cours de modelage et de sculpture pour enfants, adolescents et adultes (lundi et vendredi) au CMAC.",
+      "oeuvres": [],
+      "credit_oeuvres": ""
+    },
+    {
+      "nom": "Marie-Sophie André",
+      "disciplines": [
+        "Carnets de croquis"
+      ],
+      "role": "Carnettiste · intervenante",
+      "bio": "Guide des sorties carnets de croquis : le carnet de voyage, « Le nez » de Giacometti, croquis au Gentil'Jardin.",
+      "oeuvres": [
+        "img/aff-orloff-2024-t.jpg"
+      ],
+      "credit_oeuvres": "Affiche du Cercle d'art de Gentilly"
+    },
+    {
+      "nom": "Clara Lang-Ezekiel",
+      "disciplines": [
+        "Peinture / dessin",
+        "Carnets de croquis"
+      ],
+      "role": "Intervenante dessin",
+      "bio": "Anime ateliers de dessin pour enfants (« drôles d'oiseaux » à La fête à Gentilly) et sorties carnets de croquis (musée Zadkine, Arts décoratifs).",
+      "oeuvres": [],
+      "credit_oeuvres": ""
+    },
+    {
+      "nom": "Bich Rosalie Nguyen",
+      "disciplines": [
+        "Gravure"
+      ],
+      "role": "Graveuse · intervenante stage",
+      "bio": "Anime le stage « La manière noire » au Point d'encrage (automne 2026, complet).",
+      "oeuvres": [
+        "img/aff-maniere-noire-2026-t.jpg"
+      ],
+      "credit_oeuvres": "Affiche du Cercle d'art de Gentilly"
+    },
+    {
+      "nom": "Amélie Vidgrain",
+      "disciplines": [
+        "Gravure"
+      ],
+      "role": "Intervenante stage",
+      "bio": "A animé le stage « Monotype, entre dessin et estampe » au Point d'encrage (mai 2022).",
+      "oeuvres": [
+        "img/aff-monotype-2022-t.jpg"
+      ],
+      "credit_oeuvres": "Affiche du Cercle d'art de Gentilly"
+    },
+    {
+      "nom": "James Benenson",
+      "disciplines": [
+        "Sculpture / modelage"
+      ],
+      "role": "Sculpteur · artiste du cercle",
+      "bio": "Figure dans la liste des artistes qui ont agi avec le cercle. Ses œuvres personnelles sont présentées sur son propre site.",
+      "url": "http://www.benenson.org",
+      "oeuvres": [],
+      "credit_oeuvres": ""
+    }
+  ],
+  "liste": [
+    {
+      "nom": "Paula Acuna Pig"
+    },
+    {
+      "nom": "Veronique Adler"
+    },
+    {
+      "nom": "Roger Albert"
+    },
+    {
+      "nom": "Annie Albert"
+    },
+    {
+      "nom": "Dominique Antony",
+      "url": "http://www.peinturemurale.com"
+    },
+    {
+      "nom": "Jennifer Antony"
+    },
+    {
+      "nom": "Laurence Audemar"
+    },
+    {
+      "nom": "Milija Belic"
+    },
+    {
+      "nom": "James Benenson",
+      "url": "http://www.benenson.org"
+    },
+    {
+      "nom": "Léandro Berra"
+    },
+    {
+      "nom": "François Bogros"
+    },
+    {
+      "nom": "Kossa Bokchan"
+    },
+    {
+      "nom": "Odile Bourdet"
+    },
+    {
+      "nom": "Humberto Buentello"
+    },
+    {
+      "nom": "Valérie Buffetaud"
+    },
+    {
+      "nom": "Catherine Burgues"
+    },
+    {
+      "nom": "Liliane Camier",
+      "url": "http://lilianecamier-peintre.fr/"
+    },
+    {
+      "nom": "Sylvie Cayon"
+    },
+    {
+      "nom": "Karima Celestin",
+      "url": "http://www.karimacelestin.com/"
+    },
+    {
+      "nom": "Robert Chardel"
+    },
+    {
+      "nom": "Céline Chagnard"
+    },
+    {
+      "nom": "Karine Bernard Charron"
+    },
+    {
+      "nom": "Michel Chauvin"
+    },
+    {
+      "nom": "Jean-Yves Colliaux"
+    },
+    {
+      "nom": "Etienne De Bary"
+    },
+    {
+      "nom": "Alfonso Diaz-Uribe"
+    },
+    {
+      "nom": "Olivier Dollinger"
+    },
+    {
+      "nom": "Vassilis Doropoulos"
+    },
+    {
+      "nom": "Dov"
+    },
+    {
+      "nom": "Thomas Dreyfuss"
+    },
+    {
+      "nom": "Julie Dulcamara"
+    },
+    {
+      "nom": "Jenny Ecoiffier"
+    },
+    {
+      "nom": "Arnaud Egger"
+    },
+    {
+      "nom": "Yvonne Finale"
+    },
+    {
+      "nom": "Natali Fortier",
+      "url": "http://natalifortier.autoportrait.com/"
+    },
+    {
+      "nom": "Marité Fournier"
+    },
+    {
+      "nom": "Stephane Fromm"
+    },
+    {
+      "nom": "Rozsa Futo"
+    },
+    {
+      "nom": "Fulcrand"
+    },
+    {
+      "nom": "Claude Galimard"
+    },
+    {
+      "nom": "Lisa Gardner",
+      "url": "http://lisagardner.free.fr"
+    },
+    {
+      "nom": "Nelly Gaska"
+    },
+    {
+      "nom": "Anne Goven"
+    },
+    {
+      "nom": "Gaston Gras"
+    },
+    {
+      "nom": "Chantal Guglielmone"
+    },
+    {
+      "nom": "Heinke"
+    },
+    {
+      "nom": "Pascale Hémery"
+    },
+    {
+      "nom": "Yoshinori Hosoki"
+    },
+    {
+      "nom": "Sophie Hovasse"
+    },
+    {
+      "nom": "Joan Ill"
+    },
+    {
+      "nom": "Guy Kayser",
+      "url": "http://guykayser.autoportrait.com/"
+    },
+    {
+      "nom": "Serguj Kljajic"
+    },
+    {
+      "nom": "Daniel Lacomme"
+    },
+    {
+      "nom": "Bernard Lafon"
+    },
+    {
+      "nom": "Claude Laguillaume"
+    },
+    {
+      "nom": "Maryse Lamigeon"
+    },
+    {
+      "nom": "Marie-Pierre Lepeintre"
+    },
+    {
+      "nom": "Fernand Longatte"
+    },
+    {
+      "nom": "Jean Marzelle"
+    },
+    {
+      "nom": "José Massano"
+    },
+    {
+      "nom": "Radica Milovanovic"
+    },
+    {
+      "nom": "Téresa Montero"
+    },
+    {
+      "nom": "Magda Moraczewska"
+    },
+    {
+      "nom": "Pierre Mouchet"
+    },
+    {
+      "nom": "Marcel Mouly"
+    },
+    {
+      "nom": "Pierre Mouly"
+    },
+    {
+      "nom": "Pierre Omcikous"
+    },
+    {
+      "nom": "Elisabeth Oulès"
+    },
+    {
+      "nom": "Gérard Paresys"
+    },
+    {
+      "nom": "Adriana Pessolato Assani"
+    },
+    {
+      "nom": "Benedicte Plaige"
+    },
+    {
+      "nom": "Fernando Puig Rosado"
+    },
+    {
+      "nom": "Natalie Razavet",
+      "url": "http://www.fluctuat.net/expos/galeries/ZigZag/Razavet.html"
+    },
+    {
+      "nom": "Julie Razavet"
+    },
+    {
+      "nom": "Charlotte Reine"
+    },
+    {
+      "nom": "Danielle Rivier"
+    },
+    {
+      "nom": "Pierre Sahel"
+    },
+    {
+      "nom": "Eizo Sakata"
+    },
+    {
+      "nom": "Florence Salagnac"
+    },
+    {
+      "nom": "Annie Salelles"
+    },
+    {
+      "nom": "Bungen Sato"
+    },
+    {
+      "nom": "Werner Schnater"
+    },
+    {
+      "nom": "John Senior"
+    },
+    {
+      "nom": "Michel Singeot"
+    },
+    {
+      "nom": "Eliane Soa"
+    },
+    {
+      "nom": "Christian Soclet"
+    },
+    {
+      "nom": "Henri Taîb"
+    },
+    {
+      "nom": "Jacqueline Taîb"
+    },
+    {
+      "nom": "Marie-Claude Talbot"
+    },
+    {
+      "nom": "Benoit Tandonet"
+    },
+    {
+      "nom": "Olivier Tellier"
+    },
+    {
+      "nom": "Jacques Toupet"
+    },
+    {
+      "nom": "François Vincent"
+    },
+    {
+      "nom": "Michelle Vionnet"
+    },
+    {
+      "nom": "Annie Walters"
+    },
+    {
+      "nom": "Robert Weinberger"
+    },
+    {
+      "nom": "Manuel Zapata"
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "note": "Horaires et tarifs d'après le dépliant 2025-2026 et les informations de la rentrée 2026-2027. À vérifier auprès du cercle avant publication définitive.",
+  "ateliers": [
+    {
+      "id": "peinture-dessin",
+      "discipline": "Peinture / dessin",
+      "intro": "Cours de dessin et de peinture pour tous les niveaux : regarder, essayer, oser. Les enfants exposent « comme les grands » au printemps pendant Zig-Zag.",
+      "lieu": "Salle Marcel Paul, 17 rue Raymond Lefèbvre",
+      "image": "img/croquis-musee-t.jpg",
+      "groupes": [
+        {
+          "public": "Enfants de 4 à 6 ans",
+          "jour": "Mercredi",
+          "horaire": "11h – 12h",
+          "animateur": "Magda Moraczewska",
+          "note": "Atelier collectif limité à 10 élèves"
+        },
+        {
+          "public": "Enfants de 6 à 11 ans",
+          "jour": "Mercredi",
+          "horaire": "13h – 14h30 (et selon inscrits 14h30 – 16h)",
+          "animateur": "Magda Moraczewska",
+          "note": "Groupes limités à 12 élèves"
+        },
+        {
+          "public": "Ados et adultes",
+          "jour": "Mercredi",
+          "horaire": "17h – 19h",
+          "animateur": "Laura Hirennau",
+          "note": "2026-27 : « Les fleurs – explorer son imaginaire à travers les techniques mixtes »",
+          "pdf": "docs/atelier-peinture-dessin-2026-2027.pdf"
+        },
+        {
+          "public": "Ados et adultes",
+          "jour": "Mercredi",
+          "horaire": "19h – 21h",
+          "animateur": "Laura Hirennau",
+          "note": "Même programme, second créneau",
+          "pdf": "docs/atelier-peinture-dessin-2026-2027.pdf"
+        },
+        {
+          "public": "Adultes (entreprises de Gentilly)",
+          "jour": "Mardi",
+          "horaire": "Atelier du midi",
+          "animateur": "À confirmer",
+          "note": "Cours de peinture / dessin sur le temps du midi"
+        }
+      ]
+    },
+    {
+      "id": "sculpture-modelage",
+      "discipline": "Modelage / sculpture",
+      "intro": "Du modelage de la terre à la sculpture : un atelier de volume pour les enfants dès 6 ans, les ados et les adultes.",
+      "lieu": "CMAC, 2 rue Jules Ferry (rez-de-jardin, entrée par le jardin du Conservatoire)",
+      "image": "img/fete-2019-t.jpg",
+      "groupes": [
+        {
+          "public": "Enfants dès 6 ans",
+          "jour": "Lundi",
+          "horaire": "17h – 18h30",
+          "animateur": "Florence Salagnac"
+        },
+        {
+          "public": "Jeunes adolescents",
+          "jour": "Lundi",
+          "horaire": "18h30 – 20h30",
+          "animateur": "Florence Salagnac"
+        },
+        {
+          "public": "Adultes et ados",
+          "jour": "Lundi",
+          "horaire": "19h – 22h",
+          "animateur": "Florence Salagnac"
+        },
+        {
+          "public": "Enfants dès 6 ans",
+          "jour": "Vendredi",
+          "horaire": "17h – 18h30",
+          "animateur": "Florence Salagnac"
+        },
+        {
+          "public": "Adolescents",
+          "jour": "Vendredi",
+          "horaire": "18h30 – 20h30",
+          "animateur": "Florence Salagnac"
+        },
+        {
+          "public": "Adultes",
+          "jour": "Vendredi",
+          "horaire": "19h30 – 22h30",
+          "animateur": "Florence Salagnac"
+        },
+        {
+          "public": "Atelier libre (sculpteurs du cours)",
+          "jour": "Jeudi",
+          "horaire": "16h30 – 22h hors vacances scolaires",
+          "animateur": "Atelier libre"
+        }
+      ]
+    },
+    {
+      "id": "gravure",
+      "discipline": "Gravure",
+      "intro": "Point d'encrage : deux presses, une boîte à grain, acides, rouleaux et encres. Un vrai atelier d'estampe au cœur de Gentilly, avec stages découverte toute l'année.",
+      "lieu": "Point d'encrage, 25 rue Jean Louis (cour de l'ancien collège Pierre Curie, entrée côté parking)",
+      "image": "img/invitation-esprit-atelier-1-t.jpg",
+      "groupes": [
+        {
+          "public": "Enfants dès 8 ans",
+          "jour": "Mardi ou jeudi (selon inscrits)",
+          "horaire": "17h – 18h30",
+          "animateur": "À confirmer"
+        },
+        {
+          "public": "Adultes et adolescents",
+          "jour": "Vendredi",
+          "horaire": "19h – 22h",
+          "animateur": "À confirmer"
+        },
+        {
+          "public": "Adultes et adolescents",
+          "jour": "Samedi",
+          "horaire": "10h – 13h",
+          "animateur": "À confirmer"
+        },
+        {
+          "public": "Atelier libre — artistes graveurs inscrits",
+          "jour": "Tous les jours",
+          "horaire": "9h – 22h, 11 mois sur 12 (sauf août)",
+          "animateur": "Atelier libre",
+          "note": "En dehors des cours et des stages"
+        }
+      ]
+    },
+    {
+      "id": "modele-vivant",
+      "discipline": "Modèle vivant",
+      "intro": "Atelier libre de croquis d'après modèles professionnels, poses de 2 à 10 minutes, dans une ambiance conviviale — depuis plus de 20 ans.",
+      "lieu": "Salle Marcel Paul, 17 rue Raymond Lefèbvre",
+      "image": "img/modele-vivant-atelier-t.jpg",
+      "groupes": [
+        {
+          "public": "Ados et adultes",
+          "jour": "1er dimanche du mois (sauf août)",
+          "horaire": "10h – 13h",
+          "animateur": "Atelier libre",
+          "note": "Matériel personnel à apporter"
+        }
+      ]
+    },
+    {
+      "id": "carnets-croquis",
+      "discipline": "Carnets de croquis",
+      "intro": "Sorties-croquis dans les musées, les expositions, la Ménagerie du Jardin des Plantes, l'aquarium tropical... et « rando-croquis » en plein air.",
+      "lieu": "Rendez-vous salle Marcel Paul, puis départ collectif",
+      "image": "img/croquis-montage-t.jpg",
+      "groupes": [
+        {
+          "public": "Tous, enfants dès 8 ans (dès 4 ans accompagnés)",
+          "jour": "Certains samedis, selon calendrier",
+          "horaire": "10h – 16h (sorties) · 10h – 13h ou 14h – 17h (rando-croquis)",
+          "animateur": "Magda Moraczewska, Danielle Rivier, Marie-Sophie André, Clara Lang-Ezekiel selon les sorties"
+        }
+      ]
+    }
+  ],
+  "tarifs": {
+    "saison": "Tarifs 2025-2026 (2026-2027 à confirmer)",
+    "adhesion": "Adhésion : 23 € par an (donne droit à des réductions sur les stages et le modèle vivant)",
+    "lignes": [
+      {
+        "label": "Enfant de moins de 6 ans (1h)",
+        "prix": "65 € × 3 trimestres = 195 €"
+      },
+      {
+        "label": "Enfant de 6 à 11 ans (1h30)",
+        "prix": "105 € × 3 = 315 €"
+      },
+      {
+        "label": "Ados et adultes (2h)",
+        "prix": "125 € × 3 = 375 €"
+      },
+      {
+        "label": "Adulte (3h)",
+        "prix": "160 € × 3 = 480 €"
+      },
+      {
+        "label": "Moins de 25 ans (3h)",
+        "prix": "140 € × 3 = 420 €"
+      },
+      {
+        "label": "Atelier libre de gravure",
+        "prix": "160 € le trimestre · 480 € l'année sauf août · juillet seul : 50 €"
+      },
+      {
+        "label": "Rando-croquis",
+        "prix": "50 € les 3 séances"
+      },
+      {
+        "label": "Modèle vivant",
+        "prix": "12 € la séance · adhérent 8 € · 5 séances : 50 €"
+      },
+      {
+        "label": "Stage découverte de 3h (peinture ou gravure)",
+        "prix": "30 € · adhérent 25 €"
+      }
+    ],
+    "reductions": [
+      "Plusieurs personnes d'une même famille : −10 % sur les inscriptions suivantes",
+      "Inscription à plusieurs cours : −10 % sur le 2e cours",
+      "Réductions non cumulables"
+    ],
+    "paiement": "Paiement en 3 chèques encaissés au début de chaque trimestre, ou par virement du montant total."
+  },
+  "stages": {
+    "titre": "Stages découverte de gravure et de peinture",
+    "texte": "Plusieurs fois par an, des artistes graveurs et peintres animent des stages de 3 heures le samedi ou le dimanche : lino, bois, plexi, carton, zinc, cuivre, monotype, aquatinte, manière noire... Dix participants maximum, une épreuve de chacun exposée un mois dans l'atelier.",
+    "prix": "30 € · 25 € pour les adhérents et les enfants",
+    "inscription": "Inscription par téléphone ou e-mail, chèque à l'ordre du « Cercle d'art de Gentilly »."
+  }
+}

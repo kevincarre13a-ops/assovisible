@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galerie — œuvres, fresques, estampes | Cercle d&#x27;art de Gentilly</title>
+<meta name="description" content="Galerie du Cercle d&#x27;art de Gentilly : fresques, calendrier des J.O., estampes, carnets de croquis. Visionneuse plein écran, œuvres créditées.">
+<meta name="theme-color" content="#16130f">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Cercle d&#x27;art de Gentilly">
+<meta property="og:title" content="Galerie — œuvres, fresques, estampes | Cercle d&#x27;art de Gentilly">
+<meta property="og:description" content="Galerie du Cercle d&#x27;art de Gentilly : fresques, calendrier des J.O., estampes, carnets de croquis. Visionneuse plein écran, œuvres créditées.">
+<meta property="og:image" content="img/fresque-2022.jpg">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="galerie">
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-header" data-hero="true">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Cercle d&#x27;art de Gentilly — accueil">
+      <img class="logo-b" src="img/logo.png" alt="" width="54" height="54"><img class="logo-w" src="img/logo-blanc.png" alt="" width="54" height="54">
+      <span>Cercle d'art<small>Gentilly · depuis 1966</small></span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale"><ul><li><a href="index.html">Accueil</a></li><li><a href="le-cercle.html">Le cercle</a></li><li><a href="artistes.html">Artistes</a></li><li><a href="ateliers.html">Ateliers &amp; activités</a></li><li><a href="expositions.html">Expositions &amp; événements</a></li><li><a href="galerie.html" aria-current="page">Galerie</a></li><li><a href="actualites.html">Actualités</a></li><li><a href="nous-rejoindre.html">Nous rejoindre</a></li></ul></nav>
+    <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="Menu mobile"><ul><li><a href="index.html"><span>01</span>Accueil</a></li><li><a href="le-cercle.html"><span>02</span>Le cercle</a></li><li><a href="artistes.html"><span>03</span>Artistes</a></li><li><a href="ateliers.html"><span>04</span>Ateliers &amp; activités</a></li><li><a href="expositions.html"><span>05</span>Expositions &amp; événements</a></li><li><a href="galerie.html" aria-current="page"><span>06</span>Galerie</a></li><li><a href="actualites.html"><span>07</span>Actualités</a></li><li><a href="nous-rejoindre.html"><span>08</span>Nous rejoindre</a></li><li><a href="mentions-legales.html"><span>09</span>Mentions légales</a></li></ul></nav>
+  <p class="mm-foot">cercledartdegentilly@free.fr<br>06 83 52 43 32<br>Gentilly (94)</p>
+</div>
+<section class="page-hero" aria-labelledby="titre-page">
+  <div class="bg"><img src="img/fresque-2018.jpg" alt="" fetchpriority="high"></div>
+  <div class="wrap">
+    <p class="kicker">Galerie</p>
+    <h1 id="titre-page">Les œuvres <em class="brush">en grand</em></h1>
+    <p>Fresques, estampes, carnets de croquis et expositions — classées par artiste, discipline ou exposition.</p>
+  </div>
+</section>
+<main id="contenu">
+<section class="section">
+  <div class="wrap">
+    <div class="filter-bar reveal" role="search" aria-label="Filtrer la galerie">
+      <div><label for="f-artiste">Par artiste</label><select id="f-artiste"></select></div>
+      <div><label for="f-disc">Par discipline</label><select id="f-disc"></select></div>
+      <div><label for="f-expo">Par exposition / série</label><select id="f-expo"></select></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap"><p class="count" id="g-count" aria-live="polite"></p><button class="chip" id="g-reset" type="button">Réinitialiser</button></div>
+    <div class="masonry" id="masonry"></div>
+    <p class="note" style="margin-top:2rem">Chaque œuvre est créditée dans la visionneuse. Les œuvres collectives sont signées du nom de l'atelier. Reproduction interdite sans l'accord des auteurs — voir les <a href="mentions-legales.html">mentions légales</a>.</p>
+  </div>
+</section>
+<section class="section dark cta-band">
+  <img class="bg-logo" src="img/logo-blanc.png" alt="" loading="lazy">
+  <div class="wrap reveal">
+    <p class="kicker" style="justify-content:center">Rejoindre le cercle</p>
+    <h2>Venez <em class="brush">créer</em> avec nous</h2>
+    <p class="lead" style="margin-inline:auto">Le Cercle d'art est un cercle ouvert : enfants dès 4 ans, ados, adultes, débutants ou initiés. Adhésion 23 € par an.</p>
+    <div class="btn-row"><a class="btn solid" href="nous-rejoindre.html">Adhérer ou essayer <span class="arr">→</span></a><a class="btn" href="ateliers.html">Voir les ateliers</a></div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="img/logo-blanc.png" alt="Logo du Cercle d'art de Gentilly" width="96" height="96" loading="lazy">
+        <p>Association loi 1901 fondée en 1966, reconnue d'intérêt général. Peinture, dessin, modelage, sculpture, gravure, modèle vivant et carnets de croquis à Gentilly.</p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul><li><a href="index.html">Accueil</a></li><li><a href="le-cercle.html">Le cercle</a></li><li><a href="artistes.html">Artistes</a></li><li><a href="ateliers.html">Ateliers &amp; activités</a></li><li><a href="expositions.html">Expositions &amp; événements</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="actualites.html">Actualités</a></li><li><a href="nous-rejoindre.html">Nous rejoindre</a></li><li><a href="mentions-legales.html">Mentions légales</a></li></ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:cercledartdegentilly@free.fr">cercledartdegentilly@free.fr</a></li>
+          <li><a href="tel:+33683524332">06 83 52 43 32</a></li>
+          <li>Siège : 70, rue d'Arcueil<br>94250 Gentilly</li>
+          <li>Point d'encrage : 25, rue Jean Louis<br>Salle Marcel Paul : 17, rue Raymond Lefèbvre</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Suivre le cercle</h2>
+        <ul>
+          <li><a href="https://www.facebook.com/cercledeartdegentilly" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="http://cercledartdegentilly.blogspot.com" target="_blank" rel="noopener">Blog « Blog-notes »</a></li>
+          <li><a href="https://zigzag-gentilly.com" target="_blank" rel="noopener">Zig-Zag à Gentilly</a></li>
+          <li><a href="http://cercledartdegentilly.free.fr" target="_blank" rel="noopener">Ancien site (archives)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr">2026</span> Cercle d'art de Gentilly — Œuvres et visuels © leurs auteurs</span>
+      <a href="mentions-legales.html">Mentions légales &amp; droits d'auteur</a>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

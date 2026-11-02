@@ -1,0 +1,230 @@
+{
+  "prochains": [
+    {
+      "id": "marche-noel-2026",
+      "titre": "4e Marché de Noël des graveurs et sculpteurs",
+      "type": "Marché de Noël",
+      "date": "Samedi 21 novembre 2026, de 11h à 19h",
+      "dateISO": "2026-11-21T11:00:00+01:00",
+      "lieu": "Salle Marcel Paul, 17 rue Raymond Lefèbvre, Gentilly",
+      "texte": "Vente et loterie de gravures de l'atelier Point d'encrage, créations de nos graveurs et sculpteurs. Entrée libre. Affiche à venir.",
+      "affiche": "",
+      "statut": "Confirmé"
+    },
+    {
+      "id": "rando-croquis-nov-2026",
+      "titre": "Sortie carnets de croquis — Ménagerie du Jardin des Plantes",
+      "type": "Sortie",
+      "date": "Dimanche 8 novembre 2026 (en principe)",
+      "dateISO": "2026-11-08T10:00:00+01:00",
+      "lieu": "Départ salle Marcel Paul — Ménagerie du Jardin des Plantes, Paris",
+      "texte": "La sortie du 24 octobre a été annulée pour raisons de sécurité dans Paris ; elle est reportée en principe au dimanche 8 novembre. À confirmer par le cercle.",
+      "affiche": "img/aff-menagerie-2026-t.jpg",
+      "statut": "À confirmer"
+    },
+    {
+      "id": "modele-vivant",
+      "titre": "Atelier libre de modèle vivant",
+      "type": "Atelier libre",
+      "date": "Chaque 1er dimanche du mois, 10h – 13h (prochain : dimanche 6 décembre 2026)",
+      "dateISO": "2026-12-06T10:00:00+01:00",
+      "lieu": "Salle Marcel Paul, 17 rue Raymond Lefèbvre",
+      "texte": "Croquis d'après modèle professionnel, poses de 2 à 10 minutes. Matériel personnel à apporter.",
+      "affiche": "img/aff-modele-vivant-2025-t.jpg",
+      "statut": "Récurrent"
+    },
+    {
+      "id": "zigzag-2027",
+      "titre": "Zig-Zag à Gentilly — ateliers d'artistes portes ouvertes",
+      "type": "Portes ouvertes",
+      "date": "Printemps 2027 (dates à confirmer)",
+      "dateISO": "",
+      "lieu": "Salle Marcel Paul et Point d'encrage",
+      "texte": "Les participants aux ateliers exposent leurs travaux ; démonstrations de gravure au Point d'encrage. Dates et programme à annoncer.",
+      "affiche": "img/aff-zigzag-2022-t.jpg",
+      "statut": "À venir"
+    }
+  ],
+  "archives": [
+    {
+      "annee": 2026,
+      "titre": "Stage « Le monotype »",
+      "date": "Samedi 31 octobre 2026",
+      "lieu": "Point d'encrage",
+      "type": "Stage",
+      "texte": "Avec Michel Haulard la Brière, dès 8 ans, 10 personnes maximum.",
+      "affiche": "img/aff-monotype-2026.jpg"
+    },
+    {
+      "annee": 2026,
+      "titre": "Stage « La manière noire »",
+      "date": "Dimanche 25 octobre 2026",
+      "lieu": "Point d'encrage",
+      "type": "Stage",
+      "texte": "Avec Bich Rosalie Nguyen — stage complet.",
+      "affiche": "img/aff-maniere-noire-2026.jpg"
+    },
+    {
+      "annee": 2026,
+      "titre": "Journées Nationales des Ateliers d'artistes",
+      "date": "2, 3 et 4 octobre 2026",
+      "lieu": "Point d'encrage, 25 rue Jean Louis",
+      "type": "Portes ouvertes",
+      "texte": "Atelier en activité et exposition d'estampes.",
+      "affiche": "img/aff-jna-2026.jpg"
+    },
+    {
+      "annee": 2026,
+      "titre": "Forum & Fête de rentrée",
+      "date": "Dimanche 6 septembre 2026",
+      "lieu": "Gentilly",
+      "type": "Événement",
+      "texte": "Stand du Cercle d'art : renseignements et inscriptions.",
+      "affiche": "img/aff-forum-2026.jpg"
+    },
+    {
+      "annee": 2026,
+      "titre": "Assemblée générale",
+      "date": "Samedi 16 mai 2026",
+      "lieu": "Gentilly",
+      "type": "Vie de l'association",
+      "texte": "Rapport moral et documents réservés aux membres.",
+      "affiche": ""
+    },
+    {
+      "annee": 2026,
+      "titre": "Zig-Zag à Gentilly + expo « Lisières »",
+      "date": "10, 11 et 12 avril 2026 · expo du 26 mars au 30 avril",
+      "lieu": "Gentilly, Centre culturel",
+      "type": "Portes ouvertes · Exposition",
+      "texte": "Artistes et élèves des ateliers bien représentés autour du thème « Lisières ».",
+      "affiche": ""
+    },
+    {
+      "annee": 2026,
+      "titre": "« Point d'encrage – Esprit d'atelier »",
+      "date": "Du 29 janvier au 14 mars 2026",
+      "lieu": "Service culturel de Gentilly",
+      "type": "Exposition",
+      "texte": "L'esprit de l'atelier de gravure en exposition.",
+      "affiche": "img/invitation-esprit-atelier-1.jpg"
+    },
+    {
+      "annee": 2026,
+      "titre": "Stage « Aquatinte et pastel gras »",
+      "date": "Samedi 3 janvier 2026",
+      "lieu": "Point d'encrage",
+      "type": "Stage",
+      "texte": "Le stage du Nouvel An avec Michel Haulard la Brière.",
+      "affiche": "img/aff-aquatinte-2026.jpg"
+    },
+    {
+      "annee": 2025,
+      "titre": "3e Marché de Noël",
+      "date": "Samedi 15 novembre 2025",
+      "lieu": "Salle Marcel Paul",
+      "type": "Marché de Noël",
+      "texte": "Vente et loterie de gravures de l'atelier Point d'encrage.",
+      "affiche": "img/aff-marche-noel-2025.jpg"
+    },
+    {
+      "annee": 2025,
+      "titre": "Journées Nationales des Ateliers d'artistes",
+      "date": "13 et 14 septembre 2025",
+      "lieu": "Point d'encrage",
+      "type": "Portes ouvertes",
+      "texte": "Découverte de l'atelier de gravure du Cercle d'art.",
+      "affiche": "img/aff-jna-2025.jpg"
+    },
+    {
+      "annee": 2025,
+      "titre": "Journées de l'estampe contemporaine",
+      "date": "Juin 2025",
+      "lieu": "Place Saint-Sulpice, Paris",
+      "type": "Salon",
+      "texte": "Exposition de dix graveurs du Point d'encrage.",
+      "affiche": ""
+    },
+    {
+      "annee": 2024,
+      "titre": "Exposition des graveurs à l'IMM",
+      "date": "Du 10 octobre au 19 décembre 2024",
+      "lieu": "Institut Mutualiste Montsouris, Paris 14e",
+      "type": "Exposition",
+      "texte": "Vernissage le jeudi 10 octobre ; présence des artistes les 7 novembre, 5 et 14 décembre.",
+      "affiche": "img/aff-imm-2024.jpg"
+    },
+    {
+      "annee": 2024,
+      "titre": "2e Marché de Noël",
+      "date": "Samedi 16 novembre 2024",
+      "lieu": "Salle Marcel Paul",
+      "type": "Marché de Noël",
+      "texte": "Vente et loterie de gravures.",
+      "affiche": "img/aff-marche-noel-2024.jpg"
+    },
+    {
+      "annee": 2024,
+      "titre": "« Gravir l'Olympe »",
+      "date": "Du 20 juin au 30 août 2024, puis à Freiberg",
+      "lieu": "Service culturel de Gentilly, puis Petrikirche de Freiberg (Saxe)",
+      "type": "Exposition",
+      "texte": "Œuvres des artistes du concours pour le calendrier J.O. 2024 Gentilly–Freiberg et d'autres artistes du thème.",
+      "affiche": "img/expo-freiberg.jpg"
+    },
+    {
+      "annee": 2024,
+      "titre": "Sortie carnets « Chana Orloff »",
+      "date": "Samedi 20 janvier 2024",
+      "lieu": "Musée Zadkine, Paris",
+      "type": "Sortie",
+      "texte": "Sculpter l'époque.",
+      "affiche": "img/aff-orloff-2024.jpg"
+    },
+    {
+      "annee": 2023,
+      "titre": "1er Marché de Noël",
+      "date": "Samedi 16 décembre 2023",
+      "lieu": "Salle Marcel Paul",
+      "type": "Marché de Noël",
+      "texte": "Premier marché de gravures du Point d'encrage.",
+      "affiche": "img/aff-marche-noel-2023.jpg"
+    },
+    {
+      "annee": 2023,
+      "titre": "Fresque « Les jeunes unis pour la paix »",
+      "date": "Juin 2023",
+      "lieu": "Fête de Gentilly, Parc Picasso",
+      "type": "Fresque",
+      "texte": "Réalisée avec les jeunes de l'école Käthe Kollwitz de Freiberg et l'atelier ados du cercle.",
+      "affiche": "img/fresque-2023.jpg"
+    },
+    {
+      "annee": 2022,
+      "titre": "Journée(s) de l'estampe contemporaine",
+      "date": "13 et 14 juin 2022",
+      "lieu": "Place Saint-Sulpice, Paris",
+      "type": "Salon",
+      "texte": "Stand collectif des graveurs de Point d'encrage.",
+      "affiche": "img/aff-st-sulpice-2022.jpg"
+    },
+    {
+      "annee": 2022,
+      "titre": "Zig-Zag à Gentilly",
+      "date": "8, 9 et 10 avril 2022",
+      "lieu": "Salle Marcel Paul et Point d'encrage",
+      "type": "Portes ouvertes",
+      "texte": "Ateliers du cercle ouverts, musique et démonstrations de gravure.",
+      "affiche": "img/aff-zigzag-2022.jpg"
+    },
+    {
+      "annee": 2022,
+      "titre": "Fresque « Le monde est ma maison »",
+      "date": "Fête de Gentilly 2022",
+      "lieu": "Gentilly",
+      "type": "Fresque",
+      "texte": "Avec les enfants de l'atelier dessin / peinture.",
+      "affiche": "img/fresque-2022.jpg"
+    }
+  ]
+}

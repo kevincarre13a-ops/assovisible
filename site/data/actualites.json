@@ -1,0 +1,103 @@
+{
+  "actualites": [
+    {
+      "id": "marche-noel-2026",
+      "date": "2026-11-21",
+      "dateLabel": "Samedi 21 novembre 2026",
+      "categorie": "Événement",
+      "titre": "4e Marché de Noël des graveurs et sculpteurs",
+      "texte": "De 11h à 19h, salle Marcel Paul (17 rue Raymond Lefèbvre) : vente et loterie de gravures de Point d'encrage, créations de nos sculpteurs. Affiche à venir.",
+      "image": "",
+      "imageAlt": "",
+      "lien": "expositions.html"
+    },
+    {
+      "id": "stage-monotype-2026",
+      "date": "2026-10-31",
+      "dateLabel": "Samedi 31 octobre 2026",
+      "categorie": "Stage",
+      "titre": "Stage « Le monotype » avec Michel Haulard la Brière",
+      "texte": "Au Point d'encrage, 25 rue Jean Louis. 10 personnes maximum, dès 8 ans. 30 € — 25 € pour les enfants et les adhérents. Inscription auprès de Danielle Rivier : 06 83 52 43 32.",
+      "image": "img/aff-monotype-2026-t.jpg",
+      "imageAlt": "Affiche du stage Le monotype",
+      "lien": "nous-rejoindre.html"
+    },
+    {
+      "id": "sortie-annulee",
+      "date": "2026-10-23",
+      "dateLabel": "Samedi 24 octobre 2026",
+      "categorie": "Sortie",
+      "titre": "Sortie carnets de croquis annulée, reportée",
+      "texte": "La sortie à la Ménagerie du Jardin des Plantes est annulée pour des raisons de sécurité dans Paris. La prochaine est en principe prévue le dimanche 8 novembre.",
+      "image": "",
+      "imageAlt": "",
+      "lien": "ateliers.html"
+    },
+    {
+      "id": "maniere-noire",
+      "date": "2026-10-25",
+      "dateLabel": "Dimanche 25 octobre 2026",
+      "categorie": "Stage",
+      "titre": "2e stage « La manière noire » avec Bich Rosalie Nguyen",
+      "texte": "Au Point d'encrage — le stage est déjà complet.",
+      "image": "img/aff-maniere-noire-2026-t.jpg",
+      "imageAlt": "Affiche du stage La manière noire",
+      "lien": "expositions.html"
+    },
+    {
+      "id": "jna-2026",
+      "date": "2026-10-02",
+      "dateLabel": "2, 3 et 4 octobre 2026",
+      "categorie": "Portes ouvertes",
+      "titre": "Journées Nationales des Ateliers d'artistes à Point d'encrage",
+      "texte": "Atelier en activité et exposition d'estampes : vendredi 19h–22h, samedi 10h–20h, dimanche 14h–20h, 25 rue Jean Louis (entrée côté parking, à 300 m du métro 14 Hôpital Bicêtre).",
+      "image": "img/aff-jna-2026-t.jpg",
+      "imageAlt": "Affiche des JNA 2026",
+      "lien": "expositions.html"
+    },
+    {
+      "id": "rentree-2026",
+      "date": "2026-09-06",
+      "dateLabel": "Rentrée 2026-2027",
+      "categorie": "Ateliers",
+      "titre": "Nos ateliers ont repris — il reste des places",
+      "texte": "Surtout pour les plus petits : peinture / dessin dès 4 ans, modelage / sculpture dès 6 ans, gravure dès 8 ans ; ados dès 12 ans, adultes tous âges. Cette année, Laura Hirennau propose « Les fleurs » dans ses ateliers du mercredi.",
+      "image": "img/aff-forum-2026-t.jpg",
+      "imageAlt": "Affiche du Forum de rentrée 2026",
+      "lien": "ateliers.html"
+    },
+    {
+      "id": "ag-2026",
+      "date": "2026-05-16",
+      "dateLabel": "Samedi 16 mai 2026",
+      "categorie": "Vie du cercle",
+      "titre": "Assemblée générale du Cercle d'art",
+      "texte": "L'AG a eu lieu le 16 mai 2026. Rapport moral et documents sont disponibles pour les membres.",
+      "image": "",
+      "imageAlt": "",
+      "lien": "le-cercle.html"
+    },
+    {
+      "id": "zigzag-2026",
+      "date": "2026-04-10",
+      "dateLabel": "10, 11 et 12 avril 2026",
+      "categorie": "Portes ouvertes",
+      "titre": "Zig-Zag à Gentilly et expo collective « Lisières »",
+      "texte": "Le week-end Zig-Zag s'est très bien passé, ainsi que l'exposition collective « Lisières » au Centre culturel (26 mars – 30 avril). Artistes et élèves des ateliers étaient bien représentés.",
+      "image": "",
+      "imageAlt": "",
+      "lien": "expositions.html"
+    },
+    {
+      "id": "esprit-atelier",
+      "date": "2026-01-29",
+      "dateLabel": "29 janvier – 14 mars 2026",
+      "categorie": "Exposition",
+      "titre": "« Point d'encrage – Esprit d'atelier »",
+      "texte": "Exposition au Service culturel de Gentilly consacrée à l'atelier de gravure du cercle.",
+      "image": "img/invitation-esprit-atelier-1-t.jpg",
+      "imageAlt": "Invitation à l'exposition Esprit d'atelier",
+      "lien": "galerie.html"
+    }
+  ]
+}

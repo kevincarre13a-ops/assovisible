@@ -1,0 +1,155 @@
+{
+  "nom": "Cercle d'art de Gentilly",
+  "annee_creation": 1966,
+  "slogan": "L'art à Gentilly, depuis 1966",
+  "contact": {
+    "email": "cercledartdegentilly@free.fr",
+    "telephone": "06 83 52 43 32",
+    "telephone_fixe": "01 46 64 30 59",
+    "siege": "70, rue d'Arcueil, 94250 Gentilly"
+  },
+  "reseaux": {
+    "facebook": "https://www.facebook.com/cercledeartdegentilly",
+    "blog": "http://cercledartdegentilly.blogspot.com",
+    "zigzag": "https://zigzag-gentilly.com",
+    "site_historique": "http://cercledartdegentilly.free.fr"
+  },
+  "lieux": [
+    {
+      "id": "marcel-paul",
+      "nom": "Salle Marcel Paul",
+      "adresse": "17, rue Raymond Lefèbvre, 94250 Gentilly",
+      "usage": "Peinture / dessin, carnets de croquis, modèle vivant, marchés de Noël"
+    },
+    {
+      "id": "point-dencrage",
+      "nom": "Point d'encrage — atelier de gravure",
+      "adresse": "25, rue Jean Louis, 94250 Gentilly (dans la cour de l'ancien collège Pierre Curie, entrée côté parking)",
+      "usage": "Gravure, stages découverte, expositions d'estampes",
+      "acces": "Métro 14, RER B, bus 57 · 184 · 186 — arrêt Hôpital Bicêtre (environ 300 m)"
+    },
+    {
+      "id": "cmac",
+      "nom": "Atelier modelage / sculpture (CMAC)",
+      "adresse": "2, rue Jules Ferry, 94250 Gentilly (rez-de-jardin du CMAC, entrée par le jardin du Conservatoire)",
+      "usage": "Modelage et sculpture"
+    }
+  ],
+  "chiffres": [
+    {
+      "id": "ans",
+      "label": "ans d'existence",
+      "calcul": "annees_depuis_creation"
+    },
+    {
+      "id": "artistes",
+      "label": "artistes à nos côtés",
+      "calcul": "nb_artistes"
+    },
+    {
+      "id": "disciplines",
+      "label": "disciplines pratiquées",
+      "valeur": 5,
+      "note": "peinture-dessin, modelage-sculpture, gravure, modèle vivant, carnets de croquis"
+    },
+    {
+      "id": "fresques",
+      "label": "ans de fresques pour la fête de la ville",
+      "valeur": 14
+    },
+    {
+      "id": "noel",
+      "label": "éditions du Marché de Noël",
+      "valeur": 4
+    }
+  ],
+  "adhesion": {
+    "saison": "2026-2027",
+    "montant": "23 €",
+    "detail": "L'adhésion donne droit à des tarifs réduits sur les stages et le modèle vivant. L'association est reconnue d'intérêt général depuis 2022 : les dons ouvrent droit à une réduction d'impôt de 66 %.",
+    "inscription_pdf": "docs/inscription-2026-2027.pdf"
+  },
+  "bureau": [
+    {
+      "nom": "Danielle Rivier",
+      "role": "Présidente",
+      "note": "Contact de l'association ; équipe actuelle aux commandes depuis 1984."
+    },
+    {
+      "nom": "À compléter",
+      "role": "Trésorerie",
+      "note": "Texte d'attente — à renseigner par le cercle."
+    },
+    {
+      "nom": "À compléter",
+      "role": "Secrétariat",
+      "note": "Texte d'attente — à renseigner par le cercle."
+    }
+  ],
+  "partenaires": [
+    {
+      "nom": "Ville de Gentilly",
+      "role": "Subvention et mise à disposition gracieuse des salles municipales"
+    },
+    {
+      "nom": "Département du Val-de-Marne",
+      "role": "Soutien (ancien « Conseil général »)"
+    },
+    {
+      "nom": "Zig-Zag à Gentilly",
+      "role": "Ateliers d'artistes portes ouvertes — initié par le cercle",
+      "url": "https://zigzag-gentilly.com"
+    },
+    {
+      "nom": "Comité de jumelage Gentilly – Freiberg",
+      "role": "Fresque 2023, calendrier JO 2024, exposition à Freiberg (Saxe)"
+    },
+    {
+      "nom": "Journées Nationales des Ateliers d'artistes",
+      "role": "Portes ouvertes de Point d'encrage",
+      "url": "https://www.lesjourneesnationalesdesartistes.fr/"
+    }
+  ],
+  "historique": [
+    {
+      "annee": "1966",
+      "texte": "Création de l'association loi 1901 pour maintenir, défendre et promouvoir les arts et son enseignement."
+    },
+    {
+      "annee": "1984",
+      "texte": "L'équipe actuelle prend en main le cercle."
+    },
+    {
+      "annee": "≈ 1996",
+      "texte": "Exposition-rencontre avec des artistes australiens pour fêter les 30 ans de l'association."
+    },
+    {
+      "annee": "2000",
+      "texte": "Calendrier du passage à l'an 2000 (exposition) et participation aux grandes manifestations de la ville."
+    },
+    {
+      "annee": "Zig-Zag",
+      "texte": "Le cercle initie « Zig-Zag », les portes ouvertes des ateliers d'artistes de Gentilly."
+    },
+    {
+      "annee": "2018",
+      "texte": "Premiers stages découverte de gravure au Point d'encrage, atelier de gravure du cercle (affiches conservées sur l'ancien site)."
+    },
+    {
+      "annee": "2022",
+      "texte": "Reconnaissance d'association d'intérêt général."
+    },
+    {
+      "annee": "2023",
+      "texte": "Premier Marché de Noël des graveurs et sculpteurs ; fresque « Les jeunes unis pour la paix » avec Freiberg."
+    },
+    {
+      "annee": "2024",
+      "texte": "Calendrier J.O. 2024 Gentilly–Freiberg, exposition « Gravir l'Olympe », exposition des graveurs à l'IMM (Paris 14e)."
+    },
+    {
+      "annee": "2026",
+      "texte": "Exposition « Point d'encrage – Esprit d'atelier » au Service culturel de Gentilly, puis Zig-Zag et « Lisières »."
+    }
+  ]
+}
