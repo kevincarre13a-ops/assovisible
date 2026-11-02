@@ -1,0 +1,9 @@
+[
+  {"nom": "Mairie de Rognac", "type": "Institution", "detail": "Mise à disposition du local municipal (Centre d'Animation Municipal) pour les ateliers et rencontres."},
+  {"nom": "Association Nostamar", "type": "Association", "detail": "À l'origine du cerisier planté au port de Rognac."},
+  {"nom": "Gaëlle Olivares", "type": "Intervenante", "detail": "Médiation animale lors des ateliers."},
+  {"nom": "Médiathèque de Rognac", "type": "Équipement public", "detail": "Accueil et soutien de l'équipe de la médiathèque."},
+  {"nom": "Commerçants de Rognac et alentours", "type": "Commerces", "detail": "Relais de la vente des sachets de blé de la Sainte-Barbe. Liste nominative à renseigner."},
+  {"nom": "Association de parents d'élèves", "type": "Association", "detail": "Relais de la vente des sachets de blé. Nom à préciser."},
+  {"nom": "Naestro", "type": "Parrain", "detail": "Chanteur, parrain de l'association."}
+]
