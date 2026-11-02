@@ -80,7 +80,7 @@ def footer():
 <a href="mailto:lesamisdhandimak@hotmail.com">lesamisdhandimak@hotmail.com</a><br>
 <a href="tel:+33627033080">06 27 03 30 80</a> · <a href="tel:+33631840521">06 31 84 05 21</a> · <a href="tel:+33651861335">06 51 86 13 35</a></address>
 <h2 style="margin-top:1rem">Suivez-nous</h2>
-<ul><li><a href="https://www.facebook.com/search/top?q=Les%20Amis%20d%27Handimak%20Rognac" rel="noopener" target="_blank">Facebook (nouvel onglet)</a></li></ul></div>
+<ul><li><a href="https://www.facebook.com/p/Les-Amis-dHandiMak-100090082867432/" rel="noopener" target="_blank">Facebook (nouvel onglet)</a></li></ul></div>
 <div><h2>Le site</h2><ul>{links}</ul></div>
 </div>
 <small>© <span id="an">2026</span> Les Amis d'Handimak · Association loi 1901 · RNA W134010967 · Rognac (Bouches-du-Rhône) · <a href="mentions-legales.html">Mentions légales et confidentialité</a></small>
@@ -254,7 +254,7 @@ write("galerie.html","Galerie","Galerie des Amis d'Handimak classée par événe
 # ---------- ACTUALITES
 act = pagehead("Les dernières nouvelles","Assemblée générale, projets, médias : suivez la vie de l'association.","Actualités") + '''
 <section><div class="wrap"><div class="grid" data-news></div>
-<p class="wait-txt" style="margin-top:1.5rem">Plus d'actualités sur notre <a href="https://www.facebook.com/search/top?q=Les%20Amis%20d%27Handimak%20Rognac" target="_blank" rel="noopener">page Facebook</a> (lien à remplacer par l'adresse exacte de la page).</p></div></section>
+<p class="wait-txt" style="margin-top:1.5rem">Plus d'actualités sur notre <a href="https://www.facebook.com/p/Les-Amis-dHandiMak-100090082867432/" target="_blank" rel="noopener">page Facebook</a>.</p></div></section>
 ''' + don_strip()
 write("actualites.html","Actualités","Les dernières nouvelles des Amis d'Handimak : assemblée générale, projets, médias et vie de l'association à Rognac.",act)
 
@@ -316,7 +316,7 @@ con = pagehead("Rejoignez l'aventure","Bénévole, adhérent, partenaire ou simp
 <ul class="list"><li><strong>Adresse :</strong> Centre d'Animation Municipal, 120 boulevard des Jeunes, 13340 Rognac</li>
 <li><strong>E-mail :</strong> <a href="mailto:lesamisdhandimak@hotmail.com">lesamisdhandimak@hotmail.com</a></li>
 <li><strong>Téléphone :</strong> <a href="tel:+33627033080">06 27 03 30 80</a> · <a href="tel:+33631840521">06 31 84 05 21</a> · <a href="tel:+33651861335">06 51 86 13 35</a></li>
-<li><strong>Facebook :</strong> <a href="https://www.facebook.com/search/top?q=Les%20Amis%20d%27Handimak%20Rognac" target="_blank" rel="noopener">Notre page (nouvel onglet)</a></li></ul>
+<li><strong>Facebook :</strong> <a href="https://www.facebook.com/p/Les-Amis-dHandiMak-100090082867432/" target="_blank" rel="noopener">Notre page (nouvel onglet)</a></li></ul>
 <p class="meta">Local accessible en fauteuil roulant, cour sécurisée.</p></div>
 <div class="map reveal"><iframe title="Plan : Rognac" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=5.2150%2C43.4830%2C5.2420%2C43.4980&amp;layer=mapnik&amp;marker=43.4905%2C5.2285"></iframe>
 <p style="margin:10px 14px"><a href="https://www.openstreetmap.org/?mlat=43.4905&amp;mlon=5.2285#map=15/43.4905/5.2285" target="_blank" rel="noopener">Agrandir le plan (nouvel onglet)</a></p></div>
