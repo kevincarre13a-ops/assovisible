@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://eost-telgruc.fr/sitemap.xml

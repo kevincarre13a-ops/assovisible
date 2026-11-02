@@ -1,5 +1,5 @@
 const fs=require('fs'),path=require('path');
-const OUT=path.join(__dirname,'..','eost-site');const SITE='https://eost-telgruc.netlify.app/';
+const OUT=path.join(__dirname,'..','eost-site');const SITE='https://eost-telgruc.fr/';
 const LEG={
  moulin:"Le moulin de Luzéoc, ailes rouges",
  c15:"Livre n° 15 - Levr niverenn 15.",
@@ -153,15 +153,19 @@ fs.mkdirSync(path.join(OUT,'br'),{recursive:true});
 const banner='<div class="trad-note" role="note"><b>Troidigezh gentañ da wiriekaat gant ar gevredigezh.</b> Première traduction en breton, en cours de relecture par l\'association.</div>';
 const lab=(s,l)=>`<span class="lf">${l}</span><span class="ls">${s}</span>`;
 const sw=(lang,f)=>`<div class="langsw" role="group" aria-label="Langue / Yezh"><a${lang==='fr'?' class="on" aria-current="true"':''} href="/${f}" hreflang="fr" lang="fr" title="Français">${lab('FR','Français')}</a><a${lang==='br'?' class="on" aria-current="true"':''} href="/br/${f}" hreflang="br" lang="br" title="Brezhoneg">${lab('BR','Brezhoneg')}</a></div>`;
-const alt=f=>`<link rel="alternate" hreflang="fr" href="${SITE}${f}"><link rel="alternate" hreflang="br" href="${SITE}br/${f}">`;
+const pu=f=>f==='index.html'?'':f.replace(/\.html$/,'');
+const alt=(f,lang)=>`<link rel="canonical" href="${SITE}${lang==='br'?'br/':''}${pu(f)}"><link rel="alternate" hreflang="fr" href="${SITE}${pu(f)}"><link rel="alternate" hreflang="br" href="${SITE}br/${pu(f)}"><link rel="alternate" hreflang="x-default" href="${SITE}${pu(f)}">`;
 for(const f of fs.readdirSync(OUT).filter(x=>x.endsWith('.html')&&x!=='404.html')){
  const fr=fs.readFileSync(path.join(OUT,f),'utf8');
- fs.writeFileSync(path.join(OUT,f),nb(fr.replace('__LANGSW__',sw('fr',f)).replace('__ALT__',alt(f))));
- let h=fr.replace('__LANGSW__',sw('br',f)).replace('__ALT__',alt(f)).split('assets/').join('../assets/').replace('<html lang="fr">','<html lang="br">');
+ fs.writeFileSync(path.join(OUT,f),nb(fr.replace('__LANGSW__',sw('fr',f)).replace('__ALT__',alt(f,'fr'))));
+ let h=fr.replace('__LANGSW__',sw('br',f)).replace('__ALT__',alt(f,'br')).split('assets/').join('../assets/').replace('<html lang="fr">','<html lang="br">');
  for(const [k,v] of dict)h=h.split(k).join(v);
  h=h.replace(/>([^<>]+)</g,(m,t)=>Object.prototype.hasOwnProperty.call(txt,t)?'>'+txt[t]+'<':m);
  if(!done.has(f))h=h.replace('</section>','</section>'+banner);
  fs.writeFileSync(path.join(OUT,'br',f),nb(h));
 }
 let n=fs.readFileSync(path.join(OUT,'404.html'),'utf8').replace('__LANGSW__','').replace('__ALT__','');fs.writeFileSync(path.join(OUT,'404.html'),n);
+const pg=pages.map(p=>p[0]);const urls=[];pg.forEach(f=>{urls.push(SITE+pu(f));urls.push(SITE+'br/'+pu(f))});
+fs.writeFileSync(path.join(OUT,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+urls.map(u=>'<url><loc>'+u+'</loc></url>').join('\n')+'\n</urlset>\n');
+fs.writeFileSync(path.join(OUT,'robots.txt'),'User-agent: *\nAllow: /\nSitemap: '+SITE+'sitemap.xml\n');
 console.log('built');
