@@ -59,6 +59,11 @@
     }).catch(function(){if(nextEl)nextEl.innerHTML='<p>Retrouvez bientôt nos prochains rendez-vous.</p>'})
   }
 
+  // Partners
+  var pt=$('#partners');
+  if(pt){getJSON('data/partners.json').then(function(d){
+    pt.innerHTML=d.partners.length?d.partners.map(function(p){var in_=p.logo?'<img loading="lazy" src="'+esc(p.logo)+'" alt="'+esc(p.name)+'">':esc(p.name);return p.url?'<a class="partner reveal" href="'+esc(p.url)+'" target="_blank" rel="noopener">'+in_+'</a>':'<div class="partner reveal">'+in_+'</div>'}).join(''):'<p class="notice">Les partenaires des Lucioles seront présentés ici : <strong>espace à compléter par l\'association</strong> (nom, logo, lien).</p>';watch(pt)}).catch(function(){})}
+
   // Projects
   var hs=$('#hospitals');
   if(hs||$('#materials')){getJSON('data/projects.json').then(function(p){
@@ -85,6 +90,7 @@
 
   // Contact form (Netlify Forms, AJAX)
   var form=$('#contact-form');
+  if(form){var qo=new URLSearchParams(location.search).get('objet');if(qo==='partenariat')$('#o').value='Devenir partenaire des Lucioles'}
   if(form){form.addEventListener('submit',function(e){
     e.preventDefault();var st=$('#form-status');st.textContent='Envoi en cours…';
     fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()})
