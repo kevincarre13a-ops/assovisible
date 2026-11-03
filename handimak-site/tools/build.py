@@ -34,7 +34,7 @@ def icon(name, cls="c1"):
     return f'<div class="ico {cls}"><svg aria-hidden="true"><use href="#i-{name}"/></svg></div>'
 
 def head(file, title, desc):
-    full = f"{title} | Les Amis d'Handimak, Rognac"
+    full = f"{title} | Les Amis d'handiMak, Rognac"
     return f'''<!doctype html>
 <html lang="fr">
 <head>
@@ -59,7 +59,7 @@ def header(file):
         f'<li><a href="{h}"{" aria-current=\"page\"" if h==file else ""}>{t}</a></li>' for h,t in NAV_HEADER)
     items += "".join(f'<li class="only-mob"><a href="{h}"{" aria-current=\"page\"" if h==file else ""}>{t}</a></li>' for h,t in NAV if h in ("faire-un-don.html","mentions-legales.html"))
     return f'''<header class="hdr"><div class="wrap">
-<a class="brand" href="index.html" aria-label="Les Amis d'Handimak, accueil"><img src="assets/logo.png" alt="Les Amis d'Handimak" width="88" height="52"></a>
+<a class="brand" href="index.html" aria-label="Les Amis d'handiMak, accueil"><img src="assets/logo.png" alt="Les Amis d'handiMak" width="88" height="52"></a>
 <nav class="nav" id="nav" aria-label="Navigation principale"><ul>{items}</ul></nav>
 <a class="btn coral sm" data-don href="faire-un-don.html"{' aria-current="page"' if file=="faire-un-don.html" else ""}>♥ Faire un don</a>
 <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -72,18 +72,18 @@ def footer():
     return f'''</main>
 <footer class="ftr"><div class="wrap">
 <div class="cols">
-<div><img class="logo" src="assets/logo.png" alt="Les Amis d'Handimak" width="210" height="111" loading="lazy">
+<div><img class="logo" src="assets/logo.png" alt="Les Amis d'handiMak" width="210" height="111" loading="lazy">
 <p>« La différence nous rend plus riches »</p>
 <a class="btn sm" data-don href="faire-un-don.html">♥ Faire un don</a></div>
 <div><h2>Nous contacter</h2>
-<address style="font-style:normal">Centre d'Animation Municipal<br>120 boulevard des Jeunes<br>13340 Rognac<br>
-<a href="mailto:lesamisdhandimak@hotmail.com">lesamisdhandimak@hotmail.com</a><br>
-<a href="tel:+33627033080">06 27 03 30 80</a> · <a href="tel:+33631840521">06 31 84 05 21</a> · <a href="tel:+33651861335">06 51 86 13 35</a></address>
+<address style="font-style:normal"><strong>Local et rencontres :</strong><br>88 avenue Jean Jaurès, 13340 Rognac<br><strong>Adresse postale :</strong><br>CAM, 120 boulevard des Jeunes, 13340 Rognac<br>
+<a href="mailto:l.a.d.handimak@gmail.com">l.a.d.handimak@gmail.com</a><br>
+Laurie Marafico, présidente : <a href="tel:+33651861335">06 51 86 13 35</a><br>Lorraine Corral, trésorière : <a href="tel:+33631840521">06 31 84 05 21</a></address>
 <h2 style="margin-top:1rem">Suivez-nous</h2>
 <ul><li><a href="https://www.facebook.com/p/Les-Amis-dHandiMak-100090082867432/" rel="noopener" target="_blank">Facebook (nouvel onglet)</a></li></ul></div>
 <div><h2>Le site</h2><ul>{links}</ul></div>
 </div>
-<small>© <span id="an">2026</span> Les Amis d'Handimak · Association loi 1901 · RNA W134010967 · Rognac (Bouches-du-Rhône) · <a href="mentions-legales.html">Mentions légales et confidentialité</a></small>
+<small>© <span id="an">2026</span> Les Amis d'handiMak · Association loi 1901 · RNA W134010967 · Rognac (Bouches-du-Rhône) · <a href="mentions-legales.html">Mentions légales et confidentialité</a></small>
 </div></footer>
 <script src="assets/app.js" defer></script>
 <script>document.getElementById('an').textContent=new Date().getFullYear()</script>
@@ -96,7 +96,7 @@ def pagehead(title, lead, crumb):
 '''
 
 def don_strip(txt="Chaque geste compte : un don, du temps, un partage."):
-    return f'''<section style="padding-top:0"><div class="wrap"><div class="strip reveal"><div><h2>{txt}</h2><p>Ensemble, finançons les équipements qui changent le quotidien d'un enfant.</p></div>
+    return f'''<section style="padding-top:0"><div class="wrap"><div class="strip reveal"><div><h2>{txt}</h2><p>Ensemble, faisons vivre l'inclusion à Rognac.</p></div>
 <div class="cta" style="margin:0"><a class="btn" data-don href="faire-un-don.html">♥ Faire un don</a><a class="btn alt" href="contact.html#benevole">Devenir bénévole</a></div></div></div></section>
 '''
 
@@ -108,8 +108,6 @@ HERO_SVG = '''<svg class="scene" viewBox="0 0 1440 800" preserveAspectRatio="xMi
 <circle cx="1230" cy="150" r="90" fill="#f6b81a"/><circle cx="1230" cy="150" r="125" fill="#f6b81a" opacity=".25"/>
 <g class="cloud"><path d="M60 170h190a38 38 0 0 0-8-72 50 50 0 0 0-96-8 42 42 0 0 0-86 80z" fill="#fff" opacity=".95"/></g>
 <g class="cloud b"><path d="M560 120h210a36 36 0 0 0-6-66 54 54 0 0 0-104-4 40 40 0 0 0-100 70z" fill="#fff" opacity=".9"/></g>
-<g fill="none" stroke-width="22" opacity=".9" stroke-linecap="round"><path d="M820 600a380 380 0 0 1 760 0" stroke="#d23a2b" transform="translate(-130 0)"/><path d="M842 600a358 358 0 0 1 716 0" stroke="#f6b81a" transform="translate(-130 0)"/><path d="M864 600a336 336 0 0 1 672 0" stroke="#0b8a63" transform="translate(-130 0)"/><path d="M886 600a314 314 0 0 1 628 0" stroke="#1d5aa6" transform="translate(-130 0)"/></g>
-<g transform="translate(1040 300) rotate(35)"><g class="rocket"><ellipse cx="0" cy="0" rx="46" ry="110" fill="#1d5aa6" stroke="#16243b" stroke-width="6"/><path d="M-46 -20C-40 -80 -20 -110 0 -125C20 -110 40 -80 46 -20z" fill="#d23a2b" stroke="#16243b" stroke-width="6"/><circle cx="0" cy="10" r="24" fill="#f4f7fb" stroke="#0b8a63" stroke-width="8"/><path d="M-44 60l-34 44 34-8zM44 60l34 44-34-8z" fill="#0b8a63" stroke="#16243b" stroke-width="6"/><path d="M-22 108q22 70 44 0z" fill="#f6b81a" stroke="#d23a2b" stroke-width="6"/></g></g>
 <path d="M0 640c180-60 360-40 560 10s420 60 880-30V800H0z" fill="#9be3c6"/>
 <path d="M0 700c240-50 460-20 700 20s520 20 740-30V800H0z" fill="#0b8a63" opacity=".9"/>
 <path d="M0 760c300-30 600-10 900 10s360 0 540-14V800H0z" fill="#fff"/>
@@ -117,18 +115,74 @@ HERO_SVG = '''<svg class="scene" viewBox="0 0 1440 800" preserveAspectRatio="xMi
 <g fill="#d23a2b"><circle cx="620" cy="728" r="8"/><circle cx="1300" cy="722" r="7"/></g>
 </svg>'''
 
+
+def kid(x, skin, hair, shirt, pants, style, wheel=False, h=1.0):
+    g=[]
+    if wheel:
+        g.append(f'<g transform="translate({x} 0)">')
+        g.append(f'<path d="M-30 236V312H46" fill="none" stroke="#16243b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>')
+        g.append(f'<rect x="-20" y="246" width="40" height="62" rx="16" fill="{shirt}" stroke="#16243b" stroke-width="5"/>')
+        g.append(f'<rect x="-14" y="296" width="62" height="22" rx="10" fill="{pants}" stroke="#16243b" stroke-width="5"/>')
+        g.append(f'<rect x="38" y="304" width="20" height="62" rx="9" fill="{pants}" stroke="#16243b" stroke-width="5"/><rect x="32" y="360" width="36" height="14" rx="7" fill="#16243b"/>')
+        g.append(f'<circle cx="-6" cy="332" r="46" fill="#fff" fill-opacity=".55" stroke="#16243b" stroke-width="7"/><circle cx="-6" cy="332" r="38" fill="none" stroke="#16243b" stroke-width="3" opacity=".5"/><circle cx="-6" cy="332" r="6" fill="#16243b"/>')
+        g.append(f'<circle cx="62" cy="372" r="11" fill="#16243b"/>')
+        g.append(f'<circle cx="0" cy="214" r="28" fill="{skin}" stroke="#16243b" stroke-width="5"/>')
+        g.append(hair(0,214)); g.append('<circle cx="-9" cy="212" r="3" fill="#16243b"/><circle cx="9" cy="212" r="3" fill="#16243b"/><path d="M-8 224q8 7 16 0" fill="none" stroke="#16243b" stroke-width="3" stroke-linecap="round"/>')
+        g.append('</g>')
+    else:
+        g.append(f'<g transform="translate({x} 0)">')
+        g.append(f'<rect x="-17" y="300" width="14" height="74" rx="7" fill="{pants}" stroke="#16243b" stroke-width="5"/><rect x="3" y="300" width="14" height="74" rx="7" fill="{pants}" stroke="#16243b" stroke-width="5"/>')
+        g.append(f'<rect x="-20" y="360" width="20" height="14" rx="7" fill="#16243b"/><rect x="2" y="360" width="20" height="14" rx="7" fill="#16243b"/>')
+        g.append(f'<rect x="-24" y="244" width="48" height="66" rx="20" fill="{shirt}" stroke="#16243b" stroke-width="5"/>')
+        g.append(f'<circle cx="0" cy="214" r="28" fill="{skin}" stroke="#16243b" stroke-width="5"/>')
+        g.append(hair(0,214)); g.append('<circle cx="-9" cy="212" r="3" fill="#16243b"/><circle cx="9" cy="212" r="3" fill="#16243b"/><path d="M-8 224q8 7 16 0" fill="none" stroke="#16243b" stroke-width="3" stroke-linecap="round"/>')
+        g.append('</g>')
+    return "".join(g)
+
+def hair_short(c):
+    return lambda x,y:f'<path d="M{x-29} {y-4}a29 29 0 0 1 58 0c-8-10-20-14-29-14s-21 4-29 14z" fill="{c}" stroke="#16243b" stroke-width="5" stroke-linejoin="round"/>'
+def hair_pig(c):
+    return lambda x,y:f'<path d="M{x-29} {y-2}a29 29 0 0 1 58 0c-8-10-20-14-29-14s-21 4-29 14z" fill="{c}" stroke="#16243b" stroke-width="5" stroke-linejoin="round"/><circle cx="{x-34}" cy="{y+6}" r="10" fill="{c}" stroke="#16243b" stroke-width="4"/><circle cx="{x+34}" cy="{y+6}" r="10" fill="{c}" stroke="#16243b" stroke-width="4"/>'
+def hair_curly(c):
+    return lambda x,y:''.join(f'<circle cx="{x+dx}" cy="{y+dy}" r="11" fill="{c}" stroke="#16243b" stroke-width="4"/>' for dx,dy in [(-22,-12),(-8,-26),(8,-26),(22,-12),(-26,2),(26,2)])
+def hair_pony(c):
+    return lambda x,y:f'<path d="M{x-29} {y-2}a29 29 0 0 1 58 0c-8-10-20-14-29-14s-21 4-29 14z" fill="{c}" stroke="#16243b" stroke-width="5" stroke-linejoin="round"/><path d="M{x+26} {y-12}q22 6 12 34q-12-10-14-24z" fill="{c}" stroke="#16243b" stroke-width="4" stroke-linejoin="round"/>'
+def hair_bun(c):
+    return lambda x,y:f'<path d="M{x-29} {y-2}a29 29 0 0 1 58 0c-8-10-20-14-29-14s-21 4-29 14z" fill="{c}" stroke="#16243b" stroke-width="5" stroke-linejoin="round"/><circle cx="{x}" cy="{y-36}" r="12" fill="{c}" stroke="#16243b" stroke-width="4"/>'
+
+def kids_svg():
+    xs=[90,210,345,490,615]
+    parts=[]
+    parts.append('<g fill="none" stroke-width="20" stroke-linecap="round" opacity=".9"><path d="M40 380a320 320 0 0 1 640 0" stroke="#d23a2b"/><path d="M62 380a298 298 0 0 1 596 0" stroke="#f6b81a"/><path d="M84 380a276 276 0 0 1 552 0" stroke="#0b8a63"/><path d="M106 380a254 254 0 0 1 508 0" stroke="#1d5aa6"/></g>')
+    # ballons
+    for bx,by,c in [(150,70,"#d23a2b"),(280,40,"#f6b81a"),(420,62,"#b94a96"),(553,38,"#1d5aa6")]:
+        parts.append(f'<ellipse cx="{bx}" cy="{by}" rx="26" ry="32" fill="{c}" stroke="#16243b" stroke-width="5"/><path d="M{bx} {by+32}L{bx} 268" stroke="#16243b" stroke-width="2.5" fill="none" opacity=".6"/>')
+    parts.append('<path d="M20 384h680" stroke="#16243b" stroke-width="0"/>')
+    # mains jointes (derrière les corps)
+    skins=["#c98b5e","#f3c9a1","#7a4a2b","#f0b98d","#e2a77a"]
+    for i in range(4):
+        parts.append(f'<path d="M{xs[i]+22} 268L{xs[i+1]-22} 268" stroke="#16243b" stroke-width="20" stroke-linecap="round"/><path d="M{xs[i]+22} 268L{xs[i+1]-22} 268" stroke="{skins[i]}" stroke-width="11" stroke-linecap="round"/>')
+    parts.append(kid(xs[0],skins[0],hair_short("#2a1b12"),"#d23a2b","#1d5aa6",0))
+    parts.append(kid(xs[1],skins[1],hair_pig("#8a4b1f"),"#f6b81a","#b94a96",0))
+    parts.append(kid(xs[2],skins[2],hair_curly("#16243b"),"#1d5aa6","#0b8a63",0,True))
+    parts.append(kid(xs[3],skins[3],hair_pony("#e0a526"),"#0b8a63","#1d5aa6",0))
+    parts.append(kid(xs[4],skins[4],hair_bun("#5a3320"),"#b94a96","#16243b",0,True))
+    return '<svg class="kids" viewBox="0 0 720 400" role="img" aria-label="Illustration : cinq enfants, dont deux en fauteuil roulant, se tiennent par la main sous un arc-en-ciel et des ballons">'+"".join(parts)+'</svg>'
+
+KIDS_SVG = kids_svg()
+
 def write(file, title, desc, body):
     html = head(file,title,desc) + header(file) + body + footer()
     with open(os.path.join(ROOT,file),"w",encoding="utf-8") as f: f.write(html)
 
 # ---------- ACCUEIL
 home = f'''<section class="hero" aria-labelledby="h1">{HERO_SVG}
-<div class="wrap">
+<div class="wrap herogrid"><div>
 <p class="eyebrow" style="background:#fff;display:inline-block;padding:.2rem .9rem;border-radius:999px">Association rognacaise · depuis 2023</p>
-<h1 id="h1">Ensemble, offrons aux enfants <em>l'équipement</em> qui change tout</h1>
-<p class="lead">Les Amis d'Handimak organisent des événements solidaires pour financer le matériel essentiel, mais coûteux, des enfants en situation de handicap.</p>
+<h1 id="h1">Ensemble, vivons <em>l'inclusion</em> !</h1>
+<p class="lead">Ateliers, rencontres et moments de partage entre enfants en situation de handicap et enfants valides, à Rognac.</p>
 <div class="cta"><a class="btn coral" data-don href="faire-un-don.html">♥ Faire un don</a><a class="btn" href="contact.html#benevole">Devenir bénévole</a></div>
-</div></section>
+</div><div class="herofig">{KIDS_SVG}</div></div></section>
 
 <section><div class="wrap next">
 <div class="reveal"><p class="eyebrow">Prochain rendez-vous</p><h2 data-ev-title>Blé de la Sainte-Barbe</h2>
@@ -141,12 +195,12 @@ home = f'''<section class="hero" aria-labelledby="h1">{HERO_SVG}
 </div></section>
 
 <section class="sky"><div class="wrap">
-<p class="eyebrow">Ce que nous faisons</p><h2>Des actions concrètes, tout au long de l'année</h2>
+<p class="eyebrow">Ce que nous faisons</p><h2>Vivre l'inclusion, tout au long de l'année</h2>
 <div class="grid">
-<article class="card reveal">{icon("chaise","c2")}<h3>Financer des équipements</h3><p>Siège de bain, assise adaptée, attelles, stages d'ergothérapie : du matériel peu ou pas pris en charge.</p><a href="notre-action.html">Découvrir notre action</a></article>
 <article class="card reveal">{icon("atelier","c1")}<h3>Ateliers en inclusion</h3><p>Un samedi après-midi par mois, des ateliers créatifs pour tous les enfants, leur fratrie et leurs parents.</p><a href="evenements.html">Voir les ateliers</a></article>
-<article class="card reveal">{icon("ble","c4")}<h3>Blé de la Sainte-Barbe</h3><p>Des sachets confectionnés par nos bénévoles et vendus dans les commerces de Rognac.</p><a href="evenements.html">En savoir plus</a></article>
 <article class="card reveal">{icon("cafe","c3")}<h3>Un espace pour les parents</h3><p>Écoute, échanges, café offert, aide aux dossiers MDPH : un lieu bienveillant, sans jugement.</p><a href="association.html">L'association</a></article>
+<article class="card reveal">{icon("ble","c4")}<h3>Blé de la Sainte-Barbe</h3><p>Des sachets confectionnés par nos bénévoles et vendus dans les commerces de Rognac.</p><a href="evenements.html">En savoir plus</a></article>
+<article class="card reveal">{icon("chaise","c2")}<h3>Financer des équipements</h3><p>Siège de bain, assise adaptée, attelles, stages d'ergothérapie : du matériel peu ou pas pris en charge.</p><a href="notre-action.html">Découvrir notre action</a></article>
 </div></div></section>
 
 <section><div class="wrap"><p class="eyebrow">En chiffres</p><h2>Une communauté qui grandit</h2><div class="stats" data-stats></div></div></section>
@@ -161,16 +215,16 @@ home = f'''<section class="hero" aria-labelledby="h1">{HERO_SVG}
 <p style="margin-top:1.5rem"><a class="btn alt" href="partenaires.html">Tous nos partenaires</a></p></div></section>
 {don_strip()}
 '''
-write("index.html","Accueil","Les Amis d'Handimak, association de Rognac : événements solidaires pour financer les équipements des enfants en situation de handicap.",home)
+write("index.html","Accueil","Les Amis d'handiMak, association de Rognac : ateliers inclusifs, rencontres et partage entre enfants en situation de handicap et enfants valides.",home)
 
 # ---------- ASSOCIATION
 asso = pagehead("Une histoire de solidarité née à Rognac","Depuis le 5 janvier 2023, une poignée de bénévoles transforment les petits gestes en grands soutiens pour les enfants en situation de handicap.","L'association") + f'''
 <section><div class="wrap split">
 <div class="reveal"><p class="eyebrow">Notre histoire</p><h2>De 2 membres à une vraie communauté</h2>
-<p>L'association Les Amis d'Handimak est née le <strong>5 janvier 2023</strong> à Rognac. Elle comptait deux membres de bureau la première année, quatre en 2024, et le bureau s'est étoffé depuis.</p>
+<p>L'association Les Amis d'handiMak est née le <strong>5 janvier 2023</strong> à Rognac. Elle comptait deux membres de bureau la première année, quatre en 2024, et le bureau s'est étoffé depuis.</p>
 <p>D'une quarantaine d'adhérents en 2023, elle en compte <strong>116 sur la saison 2024/2025</strong>. Depuis septembre 2024, elle dispose d'un local municipal, accessible en fauteuil roulant, où se déroulent ateliers et rencontres.</p>
 <p>Notre association commence à être reconnue : les parents ont moins de difficultés à venir demander de l'aide.</p></div>
-<div class="reveal"><div class="card" style="background:var(--cream)">{icon("fusee","c1")}<h3>L'origine du nom « Handimak »</h3><p class="wait-txt">Texte à renseigner par l'association : histoire et signification du nom « Handimak ».</p></div></div>
+<div class="reveal"><div class="card" style="background:var(--cream)">{icon("fusee","c1")}<h3>L'origine du nom « handiMak »</h3><p class="wait-txt">Texte à renseigner par l'association : histoire et signification du nom « handiMak ».</p></div></div>
 </div></section>
 
 <section class="sky"><div class="wrap"><p class="eyebrow">Nos valeurs</p><h2>Ce qui nous guide</h2>
@@ -193,13 +247,13 @@ asso = pagehead("Une histoire de solidarité née à Rognac","Depuis le 5 janvie
 <div class="grid">
 <article class="card person reveal">{icon("coeur","c3")}<h3>Laurie Marafico</h3><p class="meta">Présidente</p></article>
 <article class="card person reveal">{icon("atelier","c1")}<h3>Sabrina Gourre</h3><p class="meta">Secrétaire</p></article>
-<article class="card person reveal">{icon("sante","c4")}<h3>Laurène Corral</h3><p class="meta">Trésorière</p></article>
+<article class="card person reveal">{icon("sante","c4")}<h3>Lorraine Corral</h3><p class="meta">Trésorière</p></article>
 <article class="card person reveal">{icon("mains","c2")}<h3>Nos bénévoles</h3><p class="meta">Retraitées assidues et volontaires : confection d'objets décoratifs à partir de matériel recyclé, couture, sachets de blé.</p></article>
 </div>
 <p class="wait-txt" style="margin-top:1.5rem">Bureau d'après le procès-verbal de l'assemblée générale du 14 mars 2026. Photos et autres membres à ajouter avec leur accord.</p></div></section>
 {don_strip()}
 '''
-write("association.html","L'association","Histoire, valeurs, missions et bureau des Amis d'Handimak, association rognacaise créée en 2023 pour les enfants en situation de handicap.",asso)
+write("association.html","L'association","Histoire, valeurs, missions et bureau des Amis d'handiMak, association rognacaise créée en 2023 pour les enfants en situation de handicap.",asso)
 
 # ---------- NOTRE ACTION
 action = pagehead("Du matériel qui change le quotidien","Les équipements nécessaires aux enfants en situation de handicap sont peu ou pas pris en charge. Nous aidons les familles à y accéder.","Notre action") + f'''
@@ -216,7 +270,7 @@ action = pagehead("Du matériel qui change le quotidien","Les équipements néce
 <article class="card reveal">{icon("sante","c3")}<h3>Stages et soins</h3><p>Stage intensif d'ergothérapie (400 €), stage pluridisciplinaire, soins non pris en charge.</p></article>
 <article class="card reveal">{icon("coeur","c1")}<h3>Aide à l'autonomie</h3><p>Participation de 200 € à l'achat d'un appareil pour gagner en autonomie lors des déplacements.</p></article>
 </div>
-<p class="meta" style="margin-top:1rem">Pour respecter les familles, aucun nom, aucune photo et aucune information médicale d'enfant n'est publié sur ce site.</p></div></section>
+<p class="meta" style="margin-top:1rem">Pour respecter les familles, aucun nom ni aucune information médicale d'enfant n'est publié sur ce site.</p></div></section>
 
 <section><div class="wrap split">
 <div class="reveal"><p class="eyebrow">Comment les projets sont choisis</p><h2>Écouter d'abord, puis agir</h2>
@@ -234,7 +288,7 @@ action = pagehead("Du matériel qui change le quotidien","Les équipements néce
 </div></section>
 {don_strip()}
 '''
-write("notre-action.html","Notre action","Comment Les Amis d'Handimak financent des équipements pour les enfants en situation de handicap : choix des projets, exemples et transparence.",action)
+write("notre-action.html","Notre action","Comment Les Amis d'handiMak financent des équipements pour les enfants en situation de handicap : choix des projets, exemples et transparence.",action)
 
 # ---------- EVENEMENTS
 ev = pagehead("Des rendez-vous solidaires toute l'année","Ateliers, ventes, sensibilisation : venez partager un moment et soutenir les enfants.","Événements") + '''
@@ -242,21 +296,21 @@ ev = pagehead("Des rendez-vous solidaires toute l'année","Ateliers, ventes, sen
 <p class="wait-txt" style="margin-top:1.5rem">Les dates sont à confirmer par l'association : elles se modifient dans <code>data/evenements.json</code>.</p></div></section>
 <section class="tint"><div class="wrap"><p class="eyebrow">Archives</p><h2>Les éditions passées</h2><div class="grid" data-events-arch></div></div></section>
 ''' + don_strip()
-write("evenements.html","Événements","Prochains événements de collecte et archives des Amis d'Handimak à Rognac : ateliers, blé de la Sainte-Barbe, sensibilisation.",ev)
+write("evenements.html","Événements","Prochains événements de collecte et archives des Amis d'handiMak à Rognac : ateliers, blé de la Sainte-Barbe, sensibilisation.",ev)
 
 # ---------- GALERIE
-gal = pagehead("L'action en images","Du matériel, des mains, des objets faits main : nous privilégions les images de l'action plutôt que les portraits d'enfants.","Galerie") + f'''
-<section><div class="wrap"><div class="notice reveal">{icon("sante","c1")}<div><strong>Protection des enfants.</strong> Aucune photo d'enfant n'est publiée sans que sa diffusion publique soit clairement établie et respectueuse. Les photos de l'association s'ajoutent dans <code>data/galerie.json</code>.</div></div>
+gal = pagehead("L'action en images","Ateliers, rencontres, événements : la vie de l'association en images.","Galerie") + f'''
+<section><div class="wrap"><div class="notice reveal">{icon("sante","c1")}<div><strong>Photos publiées avec l'autorisation des parents.</strong> Elles s'ajoutent dans <code>data/galerie.json</code>, classées par événement.</div></div>
 <div class="grid" style="margin-top:28px" data-gallery></div></div></section>
 ''' + don_strip()
-write("galerie.html","Galerie","Galerie des Amis d'Handimak classée par événement, dans le respect de la protection des enfants et des familles.",gal)
+write("galerie.html","Galerie","Galerie des Amis d'handiMak classée par événement, dans le respect de la protection des enfants et des familles.",gal)
 
 # ---------- ACTUALITES
 act = pagehead("Les dernières nouvelles","Assemblée générale, projets, médias : suivez la vie de l'association.","Actualités") + '''
 <section><div class="wrap"><div class="grid" data-news></div>
 <p class="wait-txt" style="margin-top:1.5rem">Plus d'actualités sur notre <a href="https://www.facebook.com/p/Les-Amis-dHandiMak-100090082867432/" target="_blank" rel="noopener">page Facebook</a>.</p></div></section>
 ''' + don_strip()
-write("actualites.html","Actualités","Les dernières nouvelles des Amis d'Handimak : assemblée générale, projets, médias et vie de l'association à Rognac.",act)
+write("actualites.html","Actualités","Les dernières nouvelles des Amis d'handiMak : assemblée générale, projets, médias et vie de l'association à Rognac.",act)
 
 # ---------- DON
 don = pagehead("Un don, un équipement, un sourire","Votre soutien finance directement du matériel pour des enfants en situation de handicap.","Faire un don") + f'''
@@ -277,7 +331,7 @@ don = pagehead("Un don, un équipement, un sourire","Votre soutien finance direc
 <article class="card reveal">{icon("coeur","c3")}<h3>Adhérer</h3><p>10 € par an, valable un an, pour suivre chaque événement et participer aux ateliers.</p><a href="contact.html#adhesion">Adhérer</a></article>
 </div></div></section>
 '''
-write("faire-un-don.html","Faire un don","Soutenez Les Amis d'Handimak à Rognac : don en ligne, dons en nature, bénévolat et relais pour financer les équipements d'enfants en situation de handicap.",don)
+write("faire-un-don.html","Faire un don","Soutenez Les Amis d'handiMak à Rognac : don en ligne, dons en nature, bénévolat et relais pour financer les équipements d'enfants en situation de handicap.",don)
 
 # ---------- PARTENAIRES
 par = pagehead("Merci à celles et ceux qui nous soutiennent","Institutions, associations, commerçants et artistes : sans eux, rien ne serait possible.","Partenaires") + f'''
@@ -288,7 +342,7 @@ par = pagehead("Merci à celles et ceux qui nous soutiennent","Institutions, ass
 <p><a class="btn" href="contact.html#contact">Nous contacter</a></p></div>
 <div class="reveal"><p class="wait-txt">Avantages fiscaux du mécénat : texte à valider par l'association, après confirmation de son statut.</p></div></div></section>
 ''' + don_strip()
-write("partenaires.html","Partenaires & mécènes","Partenaires, commerces et mécènes des Amis d'Handimak à Rognac, et comment devenir partenaire de l'association.",par)
+write("partenaires.html","Partenaires & mécènes","Partenaires, commerces et mécènes des Amis d'handiMak à Rognac, et comment devenir partenaire de l'association.",par)
 
 # ---------- CONTACT
 con = pagehead("Rejoignez l'aventure","Bénévole, adhérent, partenaire ou simplement curieux : écrivez-nous.","Nous rejoindre / Contact") + f'''
@@ -298,8 +352,7 @@ con = pagehead("Rejoignez l'aventure","Bénévole, adhérent, partenaire ou simp
 <ul class="list"><li>Ateliers du samedi après-midi</li><li>Confection et vente de sachets de blé</li><li>Organisation et logistique des événements</li></ul>
 <div id="adhesion"><p class="eyebrow" style="margin-top:2rem">Adhésion</p><h3>10 € par an, valable un an</h3>
 <p>L'adhésion est effective à partir de septembre. Elle permet d'être informé de chaque événement, d'échanger avec nous et de participer aux ateliers. Nous sommes présents chaque année au forum des associations de Rognac.</p>
-<p><a class="btn alt" href="assets/bulletin-adhesion.pdf" download>Télécharger le bulletin d'adhésion (PDF)</a></p>
-<p class="wait-txt">Adhésion en ligne : à renseigner si l'association ouvre une billetterie ou une adhésion HelloAsso. Le bulletin joint porte encore l'ancienne adresse et l'orthographe « Andimac » : à mettre à jour.</p></div></div>
+<p class="wait-txt">Bulletin d'adhésion (PDF) : version corrigée à venir. Pour adhérer d'ici là, écrivez-nous via le formulaire ci-dessous.</p></div></div>
 <div class="card reveal" id="contact"><h2>Écrire à l'association</h2>
 <form name="contact" method="POST" action="merci.html" data-netlify="true" netlify-honeypot="bot-field">
 <input type="hidden" name="form-name" value="contact">
@@ -313,44 +366,45 @@ con = pagehead("Rejoignez l'aventure","Bénévole, adhérent, partenaire ou simp
 </div></section>
 <section class="sky"><div class="wrap split">
 <div class="reveal"><p class="eyebrow">Coordonnées</p><h2>Nous trouver</h2>
-<ul class="list"><li><strong>Adresse :</strong> Centre d'Animation Municipal, 120 boulevard des Jeunes, 13340 Rognac</li>
-<li><strong>E-mail :</strong> <a href="mailto:lesamisdhandimak@hotmail.com">lesamisdhandimak@hotmail.com</a></li>
-<li><strong>Téléphone :</strong> <a href="tel:+33627033080">06 27 03 30 80</a> · <a href="tel:+33631840521">06 31 84 05 21</a> · <a href="tel:+33651861335">06 51 86 13 35</a></li>
+<ul class="list"><li><strong>Local et rencontres :</strong> 88 avenue Jean Jaurès, 13340 Rognac (ateliers et accueil des familles)</li>
+<li><strong>Adresse postale :</strong> CAM, 120 boulevard des Jeunes, 13340 Rognac (pas de boîte aux lettres au local)</li>
+<li><strong>E-mail :</strong> <a href="mailto:l.a.d.handimak@gmail.com">l.a.d.handimak@gmail.com</a></li>
+<li><strong>Laurie Marafico, présidente :</strong> <a href="tel:+33651861335">06 51 86 13 35</a></li><li><strong>Lorraine Corral, trésorière :</strong> <a href="tel:+33631840521">06 31 84 05 21</a></li>
 <li><strong>Facebook :</strong> <a href="https://www.facebook.com/p/Les-Amis-dHandiMak-100090082867432/" target="_blank" rel="noopener">Notre page (nouvel onglet)</a></li></ul>
 <p class="meta">Local accessible en fauteuil roulant, cour sécurisée.</p></div>
-<div class="map reveal"><iframe title="Plan : Rognac" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=5.2150%2C43.4830%2C5.2420%2C43.4980&amp;layer=mapnik&amp;marker=43.4905%2C5.2285"></iframe>
-<p style="margin:10px 14px"><a href="https://www.openstreetmap.org/?mlat=43.4905&amp;mlon=5.2285#map=15/43.4905/5.2285" target="_blank" rel="noopener">Agrandir le plan (nouvel onglet)</a></p></div>
+<div class="map reveal"><iframe title="Plan de Rognac" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=5.2150%2C43.4830%2C5.2420%2C43.4980&amp;layer=mapnik"></iframe>
+<p style="margin:10px 14px"><a href="https://www.openstreetmap.org/search?query=88%20avenue%20Jean%20Jaur%C3%A8s%2C%20Rognac" target="_blank" rel="noopener">Chercher le 88 avenue Jean Jaurès sur le plan (nouvel onglet)</a></p></div>
 </div></section>
 '''
-write("contact.html","Nous rejoindre / Contact","Rejoignez Les Amis d'Handimak à Rognac : bénévolat, adhésion à 10 €, formulaire de contact et coordonnées de l'association.",con)
+write("contact.html","Nous rejoindre / Contact","Rejoignez Les Amis d'handiMak à Rognac : bénévolat, adhésion à 10 €, formulaire de contact et coordonnées de l'association.",con)
 
 # ---------- MENTIONS
 men = pagehead("Mentions légales et confidentialité","Informations réglementaires de l'association.","Mentions légales") + '''
 <section><div class="wrap" style="max-width:860px">
 <h2>Éditeur du site</h2>
-<ul class="list"><li><strong>Dénomination :</strong> Les Amis d'Handimak</li><li><strong>Forme :</strong> association loi 1901, créée le 5 janvier 2023</li><li><strong>Numéro RNA :</strong> W134010967</li>
-<li><strong>Siège social :</strong> Centre d'Animation Municipal, 120 boulevard des Jeunes, 13340 Rognac</li><li><strong>Contact :</strong> lesamisdhandimak@hotmail.com</li>
+<ul class="list"><li><strong>Dénomination :</strong> Les Amis d'handiMak</li><li><strong>Forme :</strong> association loi 1901, créée le 5 janvier 2023</li><li><strong>Numéro RNA :</strong> W134010967</li>
+<li><strong>Adresse postale et siège :</strong> CAM, 120 boulevard des Jeunes, 13340 Rognac</li><li><strong>Local et lieu de rencontre :</strong> 88 avenue Jean Jaurès, 13340 Rognac</li><li><strong>Contact :</strong> l.a.d.handimak@gmail.com</li>
 <li><strong>Directrice de la publication :</strong> Laurie Marafico, présidente</li><li><strong>SIRET :</strong> <span class="wait-txt">à renseigner (si attribué)</span></li></ul>
 <p class="wait-txt">Autres informations réglementaires (statut d'intérêt général, assurance, conditions de reçu fiscal) : à compléter et valider par l'association.</p>
 <h2 style="margin-top:2rem">Hébergement</h2><p>Site hébergé par Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis.</p>
 <h2>Conception</h2><p class="wait-txt">Crédit du prestataire de conception à renseigner.</p>
 <h2>Propriété intellectuelle</h2><p>Le logo et les contenus appartiennent à l'association. Toute reproduction nécessite son accord.</p>
-<h2>Protection des enfants et des familles</h2><p>Ce site ne publie aucun nom, aucune photo ni aucune information médicale concernant un enfant sans accord clair des familles.</p>
+<h2>Protection des enfants et des familles</h2><p>Ce site ne publie aucun nom ni aucune information médicale concernant un enfant. Les photos ne sont publiées qu'avec l'autorisation des parents.</p>
 <h2 id="confidentialite" style="margin-top:2rem">Politique de confidentialité</h2>
-<ul class="list"><li><strong>Responsable du traitement :</strong> Les Amis d'Handimak.</li>
+<ul class="list"><li><strong>Responsable du traitement :</strong> Les Amis d'handiMak.</li>
 <li><strong>Données collectées :</strong> nom, adresse e-mail et message saisis dans le formulaire de contact, traités via Netlify Forms.</li>
 <li><strong>Finalité :</strong> répondre à votre demande. Les données ne sont ni vendues ni utilisées à d'autres fins.</li>
 <li><strong>Durée de conservation :</strong> <span class="wait-txt">à fixer par l'association (par exemple 12 mois).</span></li>
-<li><strong>Vos droits :</strong> accès, rectification, effacement : écrivez à lesamisdhandimak@hotmail.com.</li>
+<li><strong>Vos droits :</strong> accès, rectification, effacement : écrivez à l.a.d.handimak@gmail.com.</li>
 <li><strong>Cookies :</strong> ce site n'utilise aucun traceur publicitaire ni outil de mesure d'audience. Il charge des polices Google Fonts et, sur la page Contact, un plan OpenStreetMap, qui peuvent recevoir votre adresse IP.</li>
 <li><strong>Dons :</strong> traités sur la plateforme externe indiquée sur la page « Faire un don », qui a sa propre politique.</li></ul>
 </div></section>
 '''
-write("mentions-legales.html","Mentions légales","Mentions légales, informations réglementaires (RNA W134010967) et politique de confidentialité des Amis d'Handimak, Rognac.",men)
+write("mentions-legales.html","Mentions légales","Mentions légales, informations réglementaires (RNA W134010967) et politique de confidentialité des Amis d'handiMak, Rognac.",men)
 
 # ---------- MERCI
 mer = pagehead("Merci pour votre message !","Nous vous répondrons dès que possible.","Merci") + f'''
 <section><div class="wrap"><div class="card" style="max-width:640px">{icon("coeur","c3")}<p>Votre message a bien été envoyé à l'association.</p><p><a class="btn" href="index.html">Retour à l'accueil</a></p></div></div></section>
 '''
-write("merci.html","Message envoyé","Votre message a été envoyé aux Amis d'Handimak.",mer)
+write("merci.html","Message envoyé","Votre message a été envoyé aux Amis d'handiMak.",mer)
 print("pages générées")

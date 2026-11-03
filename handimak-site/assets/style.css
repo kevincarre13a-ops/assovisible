@@ -132,3 +132,9 @@ textarea{min-height:160px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 @media(max-width:600px){.hdr .btn{padding:.4rem .9rem;font-size:.95rem;min-height:48px}.brand img{height:44px}.hero{padding-bottom:140px}}
 .only-mob{display:list-item}@media(min-width:1180px){.only-mob{display:none}}
+
+.herogrid{display:grid;gap:24px;align-items:center;grid-template-columns:1fr}
+.herofig{max-width:640px;margin-inline:auto;width:100%}
+.kids{width:100%;height:auto;filter:drop-shadow(0 10px 0 rgba(22,36,59,.08))}
+@media(min-width:980px){.herogrid{grid-template-columns:1fr 1.05fr}}
+.hero h1{max-width:12ch}
