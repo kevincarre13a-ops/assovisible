@@ -1,0 +1,17 @@
+LOGOS - quel fichier choisir ?
+
+Noms de fichiers : logo-[version]-[couleur].png
+  Version : complet (arbre + nom, vertical) · horizontal (arbre à gauche, nom à droite)
+            embleme (arbre seul) · texte (nom seul)
+  Couleur : couleur (version d'origine) · vert (vert profond, 1 couleur) · noir · blanc (pour fonds foncés)
+
+Quel fichier utiliser ?
+  - Fond clair (blanc, crème)  ........ logo-complet-couleur ou logo-horizontal-couleur
+  - Fond foncé ou photo sombre ........ logo-complet-blanc ou logo-horizontal-blanc
+  - Tampon, photocopie, broderie ...... logo-complet-noir ou logo-complet-vert
+  - Photo de profil, icône ............ logo-embleme-couleur (ne pas utiliser sans le nom ailleurs)
+
+PNG : fond transparent, pour le web, Word, PowerPoint, Canva.
+SVG : vectoriel (se redimensionne sans perte), pour l'impression grand format.
+  Les SVG sont une vectorisation du logo fourni : pour une grande bâche, demander un fichier vectoriel d'origine.
+Ne jamais déformer, recolorer ni redessiner le logo (voir la charte, section « Ce qu'il ne faut pas faire »).

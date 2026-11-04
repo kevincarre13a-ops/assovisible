@@ -1,0 +1,9 @@
+DOCUMENTS ADMINISTRATIFS
+
+Bulletin-adhesion_2026-2027.pdf              Le bulletin officiel (A4 recto verso), à imprimer.
+Bulletin-adhesion_2026-2027_MODIFIABLE.docx  La même mise en page dans Word, pour modifier horaires, tarifs ou année.
+                                              Installer d'abord les polices Quicksand, Poppins et Nunito Sans (voir 03_Couleurs-et-polices).
+                                              Après modification, exporter en PDF avant d'imprimer.
+Carte-adherent_recto-verso_85x55mm.pdf       La carte d'adhérent, prête pour l'imprimeur.
+Carte-adherent_planche-impression-A4.pdf     8 cartes par feuille A4 avec traits de coupe (impression à l'association).
+Carte-adherent_MODIFIABLE.pptx               La carte modifiable (Canva, PowerPoint).

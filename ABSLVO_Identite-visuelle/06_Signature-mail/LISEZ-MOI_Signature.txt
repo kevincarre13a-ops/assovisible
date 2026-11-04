@@ -1,0 +1,27 @@
+SIGNATURE E-MAIL - mode d'emploi
+================================
+
+Contenu du dossier
+  Bandeaux_PNG/                   4 bandeaux prêts à l'emploi (1200 x 280 px, affichés en 600 px de large)
+  Bandeaux_modifiables_PPTX/      les mêmes, modifiables dans Canva (voir le Guide Canva)
+  signature-mail.html             la signature complète (bandeau + coordonnées en texte)
+  Apercu_signature.png            ce que voit le destinataire
+
+Quel bandeau utiliser ?
+  1  Institutionnel : par défaut, toute l'année
+  2  Adhésions ouvertes : pendant la période d'inscription
+  3  Événement : quelques jours avant un événement (modifier le titre et la date)
+  4  Information : pour un message important et temporaire
+
+Dans Gmail (l'association utilise une adresse Gmail)
+  1. Paramètres (roue dentée) > Voir tous les paramètres > Général > Signature > Créer.
+  2. Dans l'éditeur, cliquer sur l'icône "Insérer une image" et importer le bandeau choisi
+     (ou coller son adresse web si le fichier est en ligne). Choisir "Taille d'origine" ou 600 px de large.
+  3. Dessous, taper les coordonnées (ou les copier depuis signature-mail.html ouvert dans un navigateur).
+  4. Enregistrer les modifications en bas de page.
+  Les noms des menus de Gmail peuvent légèrement changer.
+
+Conseils
+  - Une signature par adresse e-mail. Changer le bandeau à chaque campagne, puis revenir au n°1.
+  - Garder le texte sous le bandeau : il reste lisible si les images sont bloquées et il est cliquable.
+  - Tester en s'envoyant un message, sur ordinateur et sur téléphone.

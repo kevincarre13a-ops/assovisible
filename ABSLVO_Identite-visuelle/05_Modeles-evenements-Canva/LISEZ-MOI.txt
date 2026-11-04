@@ -1,0 +1,9 @@
+MODELES D'EVENEMENTS (Canva)
+
+Guide-Canva.pdf          Le mode d'emploi (5 pages) : à lire en premier.
+Modeles-Canva_PPTX/      8 modèles à importer dans Canva (Créer > Importer un fichier). Textes et formes modifiables.
+Apercus_PNG/             Une image de chaque modèle, pour choisir. Sert aussi de dépannage si l'import pose problème.
+
+Les 8 modèles : séance bien-être, jardin collectif, événement, atelier / sortie, assemblée générale,
+information / à noter, adhésions ouvertes, photo et bandeau. Format 1080 x 1350 px.
+Les fichiers .pptx s'ouvrent aussi dans PowerPoint, Keynote et LibreOffice Impress.

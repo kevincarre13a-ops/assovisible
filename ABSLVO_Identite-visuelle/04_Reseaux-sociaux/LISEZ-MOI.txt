@@ -1,0 +1,7 @@
+RESEAUX SOCIAUX
+
+Profil/        Photo de profil (1024 x 1024 px) : crème (par défaut), blanc, vert profond. Toujours l'emblème, jamais le nom.
+Couvertures/   Couverture Facebook (1640 x 856 px) et bannière LinkedIn (1584 x 396 px). Garder le contenu au centre.
+Stories/       Modèle de story (1080 x 1920 px), avec et sans texte, et 4 couvertures « À la une ».
+
+Pour les publications (affiches, annonces), utiliser les 8 modèles modifiables du dossier 05_Modeles-evenements-Canva.
