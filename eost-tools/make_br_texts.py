@@ -355,12 +355,12 @@ T.update({
 })
 T.update({"Assemblées":"Bodadegoù meur","Conférences":"Prezegennoù"})
 T.update({
-"Affiches et documents à télécharger":"Afichennoù ha teulioù da bellgargañ",
-"Affiche : les livres 1 à 12":"Afichenn : al levrioù 1 betek 12",
-"Affiche : les livres n° 13 et 14":"Afichenn : al levrioù niv. 13 ha 14",
+"Affiches et documents à télécharger":"Skritelloù ha teulioù da bellgargañ",
+"Affiche : les livres 1 à 12":"Skritell : al levrioù 1 betek 12",
+"Affiche : les livres n° 13 et 14":"Skritell : al levrioù niv. 13 ha 14",
 "Format A4, PDF. À imprimer.":"Ment A4, PDF. Da voullañ.",
 "Format A4 paysage, PDF. À imprimer.":"Ment A4 a-led, PDF. Da voullañ.",
-"Télécharger l'affiche (PDF)":"Pellgargañ an afichenn (PDF)",
+"Télécharger l'affiche (PDF)":"Pellgargañ ar skritell (PDF)",
 })
 # cles speciales: texte "Eost"/"eost" ambigus -> on ne garde que les noeuds exacts (voir build.cjs : cle entouree de > <)
 json.dump(T,open('br-textes.json','w'),ensure_ascii=False,indent=0)
