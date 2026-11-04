@@ -1,94 +1,125 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><title>Devis DEV-2026-001 – AssoVisible</title>
+<html lang="fr"><head><meta charset="utf-8"><title>Devis DEV-2026-1030 – AssoVisible – Compagnie Des Masques, des Voix</title>
 <style>
 @page{size:A4;margin:0}
-:root{--g:#2d5a45;--o:#c8702a;--ink:#1d2a24;--mut:#6b756f;--line:#e3e6df;--bg:#f6f4ee}
+:root{--navy:#19395d;--or:#f28c28;--soft:#eef3f8;--line:#b7c1cc;--mut:#5d6b7a;--ink:#16273b}
 *{box-sizing:border-box}
-body{margin:0;font:9.6pt/1.35 "Inter","Helvetica Neue",Arial,sans-serif;color:var(--ink)}
-.page{width:210mm;height:297mm;padding:12mm 15mm 10mm;overflow:hidden;position:relative}
-.bar{position:absolute;left:0;top:0;width:100%;height:5mm;background:linear-gradient(90deg,var(--g) 70%,var(--o) 70%)}
-header{display:flex;justify-content:space-between;align-items:flex-start;margin-top:4mm}
-header img{height:13mm}
-.title{text-align:right}
-.title h1{margin:0;font-size:26pt;letter-spacing:.08em;color:var(--g);font-weight:800}
-.title p{margin:2px 0 0;color:var(--mut)}
-.meta{display:grid;grid-template-columns:1fr 1fr;gap:8mm;margin-top:6mm}
-.card{border:1px solid var(--line);border-radius:3mm;padding:3.5mm 5mm;background:var(--bg)}
-.card h3{margin:0 0 2mm;font-size:8pt;text-transform:uppercase;letter-spacing:.12em;color:var(--o)}
-.card p{margin:0}
-.card strong{font-size:11pt}
-.info{display:flex;gap:6mm;margin-top:4mm;font-size:9pt}
-.info div{flex:1;border-left:3px solid var(--o);padding-left:3mm}
-.info span{display:block;color:var(--mut);font-size:8pt;text-transform:uppercase;letter-spacing:.08em}
-.obj{margin-top:4mm}
-.obj b{color:var(--g)}
-table{width:100%;border-collapse:collapse;margin-top:3mm}
-th{background:var(--g);color:#fff;text-align:left;font-size:8.5pt;text-transform:uppercase;letter-spacing:.08em;padding:2.6mm 3mm}
-th.r,td.r{text-align:right;white-space:nowrap}
-td{padding:2.2mm 3mm;border-bottom:1px solid var(--line);vertical-align:top}
-td small{display:block;color:var(--mut);font-size:8.8pt;margin-top:1px}
-.tot{width:90mm;margin:3mm 0 0 auto;border-collapse:collapse}
-.tot td{padding:1.4mm 3mm;border:0;white-space:nowrap}
-.tot tr.t td{background:var(--g);color:#fff;font-weight:700;font-size:12pt;border-radius:0}
-.tot tr.a td{color:var(--mut);font-size:9.5pt}
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:8mm;margin-top:5mm}
-.cols h3{margin:0 0 1.5mm;font-size:8pt;text-transform:uppercase;letter-spacing:.12em;color:var(--o)}
-.cols p,.cols li{margin:0;font-size:9.3pt}
-.cols ul{margin:0;padding-left:4mm}
-.bank dl{display:grid;grid-template-columns:22mm 1fr;margin:0;font-size:9.3pt;row-gap:1mm}
-.bank dt{color:var(--mut)}.bank dd{margin:0;font-weight:600}
-.sign{display:grid;grid-template-columns:1fr 1fr;gap:8mm;margin-top:5mm}
-.box{border:1px dashed #b9c0b6;border-radius:3mm;height:24mm;padding:3mm 4mm;font-size:9pt;color:var(--mut)}
-footer{position:absolute;left:16mm;right:16mm;bottom:7mm;border-top:1px solid var(--line);padding-top:2.5mm;font-size:8pt;color:var(--mut);text-align:center}
-</style></head><body><div class="page"><div class="bar"></div>
-<header><img src="logo-assovisible.png" alt="AssoVisible">
-<div class="title"><h1>DEVIS</h1><p>N° DEV-2026-001</p></div></header>
+body{margin:0;font:8.6pt/1.4 Helvetica,Arial,sans-serif;color:var(--ink)}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;padding:0 15mm}
+.top{position:absolute;left:0;top:0;width:100%;height:4.5mm;background:var(--navy)}
+.top i{position:absolute;left:0;top:0;width:33mm;height:100%;background:var(--or)}
+.head{display:flex;justify-content:space-between;padding-top:14mm}
+.head img{height:9mm;display:block}
+.head h2{margin:2.5mm 0 0;font-size:15pt;color:var(--navy)}
+.head small{display:block;margin-top:1mm;font-size:6.5pt;letter-spacing:.12em;color:var(--mut)}
+.ref{text-align:right}
+.ref h1{margin:0 0 2.5mm;font-size:17pt;color:var(--navy);letter-spacing:.02em}
+.ref b{display:block;font-size:8pt;margin-top:1.8mm;color:var(--navy)}
+.objet{margin-top:7mm;background:var(--soft);border-left:1.2mm solid var(--or);padding:3mm 4mm}
+.objet b{color:var(--navy);margin-right:2mm}
+.parties{display:grid;grid-template-columns:1fr 1fr;margin-top:5mm;border:1px solid var(--line)}
+.parties>div+div{border-left:1px solid var(--line)}
+.parties h4{margin:0;background:var(--navy);color:#fff;font-size:7.5pt;letter-spacing:.06em;padding:2.2mm 3.5mm}
+.parties p{margin:0;padding:3mm 3.5mm;font-size:8pt;line-height:1.5}
+h3{margin:7mm 0 2.5mm;font-size:11pt;color:var(--navy);text-transform:uppercase}
+table.p{width:100%;border-collapse:collapse;border:1px solid var(--line)}
+table.p th{background:var(--navy);color:#fff;text-align:left;font-size:7.5pt;letter-spacing:.05em;padding:2.4mm 3.5mm}
+table.p td{padding:2.4mm 3.5mm;border-top:1px solid var(--line);vertical-align:top;font-size:8pt}
+table.p td+td,table.p th+th{border-left:1px solid var(--line)}
+table.p tr:nth-child(even) td{background:#f8fafc}
+table.p td b{display:block;margin-bottom:.6mm;color:var(--navy)}
+table.p td:last-child{font-weight:700;color:var(--navy)}
+.sum{display:grid;grid-template-columns:1fr 1fr;gap:5mm}
+.pay{border:1px solid var(--line);background:var(--soft);padding:3.5mm 4mm;font-size:8pt;line-height:1.5}
+.pay p{margin:0 0 3mm}.pay b{color:var(--navy)}
+.tot{border-collapse:collapse;width:100%;border:1px solid var(--line);font-size:8pt}
+.tot td{padding:2.4mm 3.5mm;border-top:1px solid var(--line)}
+.tot td+td{text-align:right;border-left:1px solid var(--line)}
+.tot tr:first-child td{border-top:0}
+.tot tr.ht td{background:var(--soft);font-weight:700;color:var(--navy)}
+.tot tr.net td{background:var(--or);color:#fff;font-weight:700;font-size:8.8pt;border-color:var(--or)}
+.note{font-size:6.8pt;color:var(--mut);margin:2mm 0 0}
+p.t{margin:0 0 1.5mm}p.t b{color:var(--navy)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line)}
+.steps div{padding:2.5mm 3mm;font-size:7.4pt}
+.steps div+div{border-left:1px solid var(--line)}
+.steps b{display:block;background:var(--soft);margin:-2.5mm -3mm 2mm;padding:2.4mm 3mm;color:var(--navy);font-size:7.4pt;border-bottom:1px solid var(--line)}
+ul{margin:0;padding-left:4mm}li{margin-bottom:1.8mm}li b{color:var(--navy)}
+.sign{display:grid;grid-template-columns:1fr 1fr;margin-top:6mm;border:1px solid var(--line)}
+.sign>div{padding:3mm 3.5mm;height:30mm;font-size:8pt}
+.sign>div+div{border-left:1px solid var(--line)}
+.sign h4{margin:-3mm -3.5mm 2.5mm;background:var(--soft);padding:2.4mm 3.5mm;font-size:7.5pt;color:var(--navy);border-bottom:1px solid var(--line)}
+footer{position:absolute;left:15mm;right:15mm;bottom:8mm;border-top:1px solid var(--line);padding-top:2.5mm;display:flex;justify-content:space-between;font-size:7pt;color:var(--mut)}
+.pb{page-break-after:always}
+</style></head><body>
 
-<div class="meta">
-<div class="card"><h3>Prestataire</h3><p><strong>AssoVisible</strong><br>Kevin Carré – Micro-entreprise<br>Aix-en-Provence, France<br>SIRET : <mark style="background:#fff3c4">[à compléter]</mark><br>contact@assovisible.fr<br>+33 6 47 47 45 81 · www.assovisible.fr</p></div>
-<div class="card"><h3>Client</h3><p><strong>Compagnie Des Masques, des Voix</strong><br>Théâtre amateur · Metz<br>masques-des-voix-metz.netlify.app</p></div>
+<section class="page pb"><div class="top"><i></i></div>
+<div class="head"><div><img src="logo-assovisible.png" alt="AssoVisible"><h2>AssoVisible</h2><small>CRÉATION DE SITES WEB POUR LE MONDE ASSOCIATIF</small></div>
+<div class="ref"><h1>DEVIS</h1><b>N° DEV-2026-1030</b><b>Émis le 4 novembre 2026</b><b>Valable jusqu’au 4 décembre 2026</b></div></div>
+
+<div class="objet"><b>OBJET</b>Création du site internet de la Compagnie Des Masques, des Voix, théâtre amateur à Metz, avec hébergement, nom de domaine, formation et accompagnement.</div>
+
+<div class="parties">
+<div><h4>ÉMETTEUR</h4><p><b>AssoVisible</b><br>Kevin Carré Knafo<br>60 rue François 1er · 75008 Paris · France<br>SIREN / RCS Paris : 999 323 637<br>contact@assovisible.fr · 06 47 47 45 81<br>assovisible.fr</p></div>
+<div><h4>CLIENT</h4><p><b>Compagnie Des Masques, des Voix</b><br>Théâtre amateur<br>Metz · France</p></div>
 </div>
 
-<div class="info">
-<div><span>Date d'émission</span>04/11/2026</div>
-<div><span>Validité de l'offre</span>30 jours (03/12/2026)</div>
-<div><span>Délai de livraison</span>5 jours ouvrés</div>
-</div>
-
-<p class="obj"><b>Objet :</b> création et mise en ligne du site internet de la Compagnie Des Masques, des Voix, avec hébergement sécurisé en France.</p>
-
-<table><thead><tr><th>Désignation</th><th class="r">Qté</th><th class="r">P.U.</th><th class="r">Total</th></tr></thead><tbody>
-<tr><td><b>Création du site internet associatif</b><small>Conception sur mesure, design responsive (mobile, tablette, ordinateur), optimisation pour le référencement, mise en ligne.</small></td><td class="r">1</td><td class="r">100,00 €</td><td class="r">100,00 €</td></tr>
-<tr><td><b>Hébergement sécurisé</b><small>Hébergement français, certificat SSL (HTTPS), sauvegardes et maintenance technique de base.</small></td><td class="r">1</td><td class="r">50,00 €</td><td class="r">50,00 €</td></tr>
-<tr><td><b>Page supplémentaire</b><small>Page de contenu additionnelle, intégrée au design et à la navigation du site.</small></td><td class="r">3</td><td class="r">9,90 €</td><td class="r">29,70 €</td></tr>
+<h3>Prestations</h3>
+<table class="p"><thead><tr><th>PRESTATION</th><th style="width:13mm">QTÉ</th><th style="width:30mm">PRIX UNIT. HT</th><th style="width:28mm">TOTAL HT</th></tr></thead><tbody>
+<tr><td><b>Création du site vitrine — Offre de rentrée</b>Comprend 5 pages de base : conception et design personnalisé, intégration des contenus fournis, espace administrateur pour modifier textes et photos, affichage responsive et ajustements jusqu’à validation.</td><td>1</td><td>390,00 €</td><td>390,00 €</td></tr>
+<tr><td><b>Hébergement et nom de domaine</b>Première année incluse : certificat SSL et référencement naturel de base. Renouvellement à 50 € / an à date anniversaire.</td><td>1</td><td>50,00 €</td><td>50,00 €</td></tr>
+<tr><td><b>Pages supplémentaires</b>Ajout de trois pages complémentaires au site, au tarif unitaire de 9,90 € par page.</td><td>3</td><td>9,90 €</td><td>29,70 €</td></tr>
+<tr><td><b>Formation à la prise en main du site</b>Session d’une heure en visioconférence pour les membres de la compagnie, avec guide d’utilisation remis à la livraison.</td><td>1</td><td>Inclus</td><td>0,00 €</td></tr>
 </tbody></table>
 
+<h3>Règlement et récapitulatif</h3>
+<div class="sum">
+<div class="pay"><p><b>Acompte de 30 % à la signature : 110,91 €</b><br>Solde de 258,79 € à régler à la mise en ligne du site.</p>
+<p><b>Virement bancaire</b><br>Bénéficiaire : Kevin Knafo<br>IBAN : FR76 2823 3000 0173 9389 1770 080<br>BIC : REVOFRP2</p>
+<p style="margin:0"><b>Délai de réalisation</b><br>Selon la rapidité des retours de la compagnie à chaque étape de validation.</p></div>
 <table class="tot">
-<tr><td>Total HT</td><td class="r">179,70 €</td></tr>
-<tr class="a"><td>TVA</td><td class="r">non applicable</td></tr>
-<tr class="t"><td>Total à payer</td><td class="r">179,70 €</td></tr>
-<tr class="a"><td>Acompte à la commande (30 %)</td><td class="r">53,91 €</td></tr>
-<tr class="a"><td>Solde à la livraison</td><td class="r">125,79 €</td></tr>
-</table>
+<tr><td>Montant avant remise</td><td>469,70 €</td></tr>
+<tr><td>Remise Offre de rentrée</td><td>− 100,00 €</td></tr>
+<tr class="ht"><td>Total HT</td><td>369,70 €</td></tr>
+<tr><td>TVA</td><td>0,00 €</td></tr>
+<tr class="net"><td>TOTAL NET À PAYER</td><td>369,70 €</td></tr></table></div>
+<p class="note">TVA non applicable, art. 293 B du CGI. La remise de 100 € s’applique au tarif de création du site vitrine.</p>
 
-<div class="cols">
-<div><h3>Conditions de règlement</h3><ul>
-<li>Acompte de 30 % à la signature du devis.</li>
-<li>Solde à la livraison, avant mise en ligne définitive.</li>
-<li>Paiement par virement bancaire.</li>
-<li>Pénalités de retard : 3 × le taux d'intérêt légal ; indemnité forfaitaire de recouvrement : 40 €.</li></ul>
-<p style="margin-top:2mm;font-size:8.5pt;color:var(--mut)">TVA non applicable, art. 293 B du CGI. Conditions générales de vente : www.assovisible.fr/cgv</p></div>
-<div class="bank"><h3>Coordonnées bancaires</h3><dl>
-<dt>Titulaire</dt><dd>Kevin Carré – AssoVisible</dd>
-<dt>IBAN</dt><dd><mark style="background:#fff3c4">[à compléter]</mark></dd>
-<dt>BIC</dt><dd><mark style="background:#fff3c4">[à compléter]</mark></dd>
-<dt>Référence</dt><dd>DEV-2026-001</dd></dl></div>
-</div>
+<footer><span>AssoVisible · Kevin Carré Knafo · SIREN 999 323 637 · contact@assovisible.fr · 06 47 47 45 81</span><span>DEV-2026-1030 · p. 1</span></footer></section>
 
-<div class="sign">
-<div class="box">Pour AssoVisible<br>Kevin Carré<br>Date et signature</div>
-<div class="box">Bon pour accord – le Client<br>Nom, date et signature précédés de la mention « Bon pour accord »</div>
-</div>
+<section class="page"><div class="top"><i></i></div>
+<h3 style="margin-top:14mm">Déroulement du projet</h3>
+<p class="note" style="margin:-1mm 0 2.5mm">Les principales étapes de réalisation du site internet de la Compagnie Des Masques, des Voix.</p>
+<div class="steps">
+<div><b>1. SIGNATURE</b>Signature du devis et versement de l’acompte.</div>
+<div><b>2. MAQUETTE</b>Présentation de la maquette et retours de la compagnie.</div>
+<div><b>3. FINALISATION</b>Intégration des contenus et des pages convenues.</div>
+<div><b>4. RELECTURE</b>Derniers ajustements et validation du site.</div>
+<div><b>5. MISE EN LIGNE</b>Formation et remise du guide d’utilisation.</div></div>
 
-<footer>AssoVisible · Kevin Carré, micro-entreprise · Aix-en-Provence · contact@assovisible.fr · +33 6 47 47 45 81 · www.assovisible.fr</footer>
-</div></body></html>
+<h3>Ce que la compagnie reçoit</h3>
+<ul>
+<li><b>Un site vitrine comprenant 5 pages de base et 3 pages supplémentaires, soit 8 pages au total.</b></li>
+<li>Un design personnalisé, moderne et adapté aux ordinateurs, tablettes et téléphones.</li>
+<li>Un espace administrateur pour modifier les textes, photos et actualités en autonomie.</li>
+<li>Un site configuré pour l’indexation par les moteurs de recherche.</li>
+<li>Un hébergement sécurisé en France, avec nom de domaine, la première année incluse.</li>
+<li>Une formation d’une heure et un guide d’utilisation.</li>
+<li>Un interlocuteur unique et des réponses sous 48 heures ouvrées.</li></ul>
+
+<h3>Compatibilité, maintenance et évolutions</h3>
+<p class="t"><b>Compatibilité.</b> Le site est conçu en responsive design pour un affichage adapté aux ordinateurs, tablettes et smartphones. Les demandes dépassant le périmètre décrit dans le présent devis feront l’objet d’un devis complémentaire.</p>
+
+<h3>Conditions générales</h3>
+<p class="t"><b>Validité.</b> Ce devis est valable jusqu’au 4 décembre 2026. La signature vaut acceptation des présentes conditions.</p>
+<p class="t"><b>Contenus.</b> La compagnie fournit les textes, photos et documents nécessaires et garantit disposer des droits sur ceux-ci. AssoVisible peut compléter avec des visuels libres de droits.</p>
+<p class="t"><b>Propriété.</b> Après paiement intégral, la compagnie devient propriétaire du site et de ses contenus, avec cession des droits d’exploitation pour tous ses supports.</p>
+<p class="t"><b>Modifications.</b> Les demandes dépassant le périmètre décrit dans le présent devis feront l’objet d’un devis complémentaire.</p>
+<p class="t"><b>Paiement.</b> Aucun escompte pour paiement anticipé. En cas de retard, les pénalités et indemnités légales applicables aux professionnels sont exigibles.</p>
+<p class="t"><b>Référence.</b> Sauf refus écrit de la compagnie, AssoVisible peut citer le projet dans ses références.</p>
+
+<div class="sign"><div><h4>POUR ASSOVISIBLE</h4>Kevin Carré Knafo<br><br>Signature :</div>
+<div><h4>BON POUR ACCORD DU CLIENT</h4>Mention manuscrite « Bon pour accord », nom et qualité du signataire, date, signature et cachet de la compagnie.</div></div>
+
+<footer><span>AssoVisible · Kevin Carré Knafo · SIREN 999 323 637 · contact@assovisible.fr · 06 47 47 45 81</span><span>DEV-2026-1030 · p. 2</span></footer></section>
+</body></html>
