@@ -76,7 +76,7 @@ def footer():
 <p>« La différence nous rend plus riches »</p>
 <a class="btn sm" data-don href="faire-un-don.html">♥ Faire un don</a></div>
 <div><h2>Nous contacter</h2>
-<address style="font-style:normal"><strong>Local et rencontres :</strong><br>88 avenue Jean Jaurès, 13340 Rognac<br><strong>Adresse postale :</strong><br>CAM, 120 boulevard des Jeunes, 13340 Rognac<br>
+<address style="font-style:normal"><strong>Local et rencontres :</strong><br>88 boulevard Jean Jaurès, 13340 Rognac<br><strong>Adresse postale :</strong><br>CAM, 120 boulevard des Jeunes, 13340 Rognac<br>
 <a href="mailto:l.a.d.handimak@gmail.com">l.a.d.handimak@gmail.com</a><br>
 Laurie Marafico, présidente : <a href="tel:+33651861335">06 51 86 13 35</a><br>Laurène Corral, trésorière : <a href="tel:+33631840521">06 31 84 05 21</a></address>
 <h2 style="margin-top:1rem">Suivez-nous</h2>
@@ -211,7 +211,9 @@ home = f'''<section class="hero" aria-labelledby="h1">{HERO_SVG}
 <section><div class="wrap"><p class="eyebrow">Actualités</p><h2>Les dernières nouvelles</h2><div class="grid" data-news data-limit="3"></div>
 <p style="margin-top:1.5rem"><a class="btn alt" href="actualites.html">Toutes les actualités</a></p></div></section>
 
-<section class="sky"><div class="wrap"><p class="eyebrow">Ils nous soutiennent</p><h2>Partenaires et relais</h2><div class="grid" data-partners data-limit="3"></div>
+<section class="sky"><div class="wrap"><p class="eyebrow">Ils nous soutiennent</p><h2>Partenaires et relais</h2><div class="card reveal" style="background:var(--cream)">{icon("flashmob","c4")}<p class="eyebrow">Partenaire à l'honneur</p><h3>AEPH – Association Ensemble pour le Handicap</h3>
+<p>Association rognacaise engagée auprès des <strong>adultes en situation de handicap</strong>, deuxième association de Rognac consacrée à ce public. Nos deux associations se retrouvent et collaborent <strong>fréquemment</strong> : une même envie de faire reculer les idées reçues et de faire vivre l'inclusion, de l'enfance à l'âge adulte.</p>
+<p class="wait-txt">Actions menées ensemble, photos et lien vers le site de l'AEPH : à renseigner avec elle.</p></div><div class="grid" style="margin-top:22px" data-partners data-limit="3"></div>
 <p style="margin-top:1.5rem"><a class="btn alt" href="partenaires.html">Tous nos partenaires</a></p></div></section>
 {don_strip()}
 '''
@@ -335,7 +337,9 @@ write("faire-un-don.html","Faire un don","Soutenez Les Amis d'HandiMak à Rognac
 
 # ---------- PARTENAIRES
 par = pagehead("Merci à celles et ceux qui nous soutiennent","Institutions, associations, commerçants et artistes : sans eux, rien ne serait possible.","Partenaires") + f'''
-<section><div class="wrap"><div class="grid" data-partners></div>
+<section><div class="wrap"><div class="card reveal" style="background:var(--cream)">{icon("flashmob","c4")}<p class="eyebrow">Partenaire à l'honneur</p><h3>AEPH – Association Ensemble pour le Handicap</h3>
+<p>Association rognacaise engagée auprès des <strong>adultes en situation de handicap</strong>, deuxième association de Rognac consacrée à ce public. Nos deux associations se retrouvent et collaborent <strong>fréquemment</strong> : une même envie de faire reculer les idées reçues et de faire vivre l'inclusion, de l'enfance à l'âge adulte.</p>
+<p class="wait-txt">Actions menées ensemble, photos et lien vers le site de l'AEPH : à renseigner avec elle.</p></div><div class="grid" style="margin-top:22px" data-partners></div>
 <p class="wait-txt" style="margin-top:1.5rem">Logos et noms des commerces partenaires à ajouter avec leur accord dans <code>data/partenaires.json</code>.</p></div></section>
 <section class="tint"><div class="wrap split"><div class="reveal"><p class="eyebrow">Devenir partenaire</p><h2>Entreprises, commerces, mécènes</h2>
 <p>Nous avons beaucoup d'idées, mais nous manquons parfois de moyens. Les partenariats sont les bienvenus : relais de nos ventes, soutien d'un événement, don de lots ou de matériel.</p>
@@ -352,7 +356,8 @@ con = pagehead("Rejoignez l'aventure","Bénévole, adhérent, partenaire ou simp
 <ul class="list"><li>Ateliers du samedi après-midi</li><li>Confection et vente de sachets de blé</li><li>Organisation et logistique des événements</li></ul>
 <div id="adhesion"><p class="eyebrow" style="margin-top:2rem">Adhésion</p><h3>10 € par an, valable un an</h3>
 <p>L'adhésion est effective à partir de septembre. Elle permet d'être informé de chaque événement, d'échanger avec nous et de participer aux ateliers. Nous sommes présents chaque année au forum des associations de Rognac.</p>
-<p class="wait-txt">Bulletin d'adhésion (PDF) : version corrigée à venir. Pour adhérer d'ici là, écrivez-nous via le formulaire ci-dessous.</p></div></div>
+<p><a class="btn alt" href="assets/bulletin-adhesion.pdf" download>Télécharger le bulletin d'adhésion (PDF)</a></p>
+<p class="meta">À imprimer, compléter et remettre à l'association avec le règlement de 10 €.</p></div></div>
 <div class="card reveal" id="contact"><h2>Écrire à l'association</h2>
 <form name="contact" method="POST" action="merci.html" data-netlify="true" netlify-honeypot="bot-field">
 <input type="hidden" name="form-name" value="contact">
@@ -366,14 +371,14 @@ con = pagehead("Rejoignez l'aventure","Bénévole, adhérent, partenaire ou simp
 </div></section>
 <section class="sky"><div class="wrap split">
 <div class="reveal"><p class="eyebrow">Coordonnées</p><h2>Nous trouver</h2>
-<ul class="list"><li><strong>Local et rencontres :</strong> 88 avenue Jean Jaurès, 13340 Rognac (ateliers et accueil des familles)</li>
+<ul class="list"><li><strong>Local et rencontres :</strong> 88 boulevard Jean Jaurès, 13340 Rognac (ateliers et accueil des familles)</li>
 <li><strong>Adresse postale :</strong> CAM, 120 boulevard des Jeunes, 13340 Rognac (pas de boîte aux lettres au local)</li>
 <li><strong>E-mail :</strong> <a href="mailto:l.a.d.handimak@gmail.com">l.a.d.handimak@gmail.com</a></li>
 <li><strong>Laurie Marafico, présidente :</strong> <a href="tel:+33651861335">06 51 86 13 35</a></li><li><strong>Laurène Corral, trésorière :</strong> <a href="tel:+33631840521">06 31 84 05 21</a></li>
 <li><strong>Facebook :</strong> <a href="https://www.facebook.com/p/Les-Amis-dHandiMak-100090082867432/" target="_blank" rel="noopener">Notre page (nouvel onglet)</a></li></ul>
 <p class="meta">Local accessible en fauteuil roulant, cour sécurisée.</p></div>
 <div class="map reveal"><iframe title="Plan de Rognac" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=5.2150%2C43.4830%2C5.2420%2C43.4980&amp;layer=mapnik"></iframe>
-<p style="margin:10px 14px"><a href="https://www.openstreetmap.org/search?query=88%20avenue%20Jean%20Jaur%C3%A8s%2C%20Rognac" target="_blank" rel="noopener">Chercher le 88 avenue Jean Jaurès sur le plan (nouvel onglet)</a></p></div>
+<p style="margin:10px 14px"><a href="https://www.openstreetmap.org/search?query=88%20boulevard%20Jean%20Jaur%C3%A8s%2C%20Rognac" target="_blank" rel="noopener">Chercher le 88 boulevard Jean Jaurès sur le plan (nouvel onglet)</a></p></div>
 </div></section>
 '''
 write("contact.html","Nous rejoindre / Contact","Rejoignez Les Amis d'HandiMak à Rognac : bénévolat, adhésion à 10 €, formulaire de contact et coordonnées de l'association.",con)
@@ -383,7 +388,7 @@ men = pagehead("Mentions légales et confidentialité","Informations réglementa
 <section><div class="wrap" style="max-width:860px">
 <h2>Éditeur du site</h2>
 <ul class="list"><li><strong>Dénomination :</strong> Les Amis d'HandiMak</li><li><strong>Forme :</strong> association loi 1901, créée le 5 janvier 2023</li><li><strong>Numéro RNA :</strong> W134010967</li>
-<li><strong>Adresse postale et siège :</strong> CAM, 120 boulevard des Jeunes, 13340 Rognac</li><li><strong>Local et lieu de rencontre :</strong> 88 avenue Jean Jaurès, 13340 Rognac</li><li><strong>Contact :</strong> l.a.d.handimak@gmail.com</li>
+<li><strong>Adresse postale et siège :</strong> CAM, 120 boulevard des Jeunes, 13340 Rognac</li><li><strong>Local et lieu de rencontre :</strong> 88 boulevard Jean Jaurès, 13340 Rognac</li><li><strong>Contact :</strong> l.a.d.handimak@gmail.com</li>
 <li><strong>Directrice de la publication :</strong> Laurie Marafico, présidente</li><li><strong>SIRET :</strong> <span class="wait-txt">à renseigner (si attribué)</span></li></ul>
 <p class="wait-txt">Autres informations réglementaires (statut d'intérêt général, assurance, conditions de reçu fiscal) : à compléter et valider par l'association.</p>
 <h2 style="margin-top:2rem">Hébergement</h2><p>Site hébergé par Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis.</p>
