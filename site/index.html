@@ -53,8 +53,8 @@
         <a class="btn btn-primary" href="jouer-avec-nous.html">Venir essayer une séance</a>
         <a class="btn btn-light" href="adherer-contact.html">Nous contacter</a>
       </div>
-      <p class="hero-next">
-        🗓️ Prochain rendez-vous : <strong>Championnat Régional Franche-Comté — dimanche 1er février 2026</strong>, Salle Jean Zay, 97 rue des Cras, Besançon
+      <p class="hero-next" id="hero-next">
+        🗓️ Séances chaque <strong>mercredi à 14h30</strong> et chaque <strong>jeudi à 20h</strong>, au Centre Pierre Mendès-France, Besançon
       </p>
     </div>
   </section>
@@ -68,7 +68,7 @@
       </div>
       <div class="stats reveal">
         <div class="stat">
-          <span class="num" data-count="38">0</span>
+          <span class="num" data-count="39">0</span>
           <span class="label">licencié(e)s cette saison</span>
         </div>
         <div class="stat">
@@ -80,18 +80,34 @@
           <span class="label">niveaux de jeu, du débutant au classé national</span>
         </div>
         <div class="stat">
-          <span class="num" data-count="2">0</span>
-          <span class="label">tournois régionaux accueillis cette saison à Besançon</span>
+          <span class="num" data-count="8" data-count-from="ici">0</span>
+          <span class="label">rendez-vous de compétition à Besançon cette saison</span>
         </div>
       </div>
       <p class="center reveal" style="margin-top:28px;">
-        <em>Chiffres issus de la fiche officielle du club auprès de la Fédération Française de Scrabble (saison 2025-2026).</em>
+        <em>Chiffres issus de la fiche officielle du club auprès de la Fédération Française de Scrabble (saison 2026-2027).</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- PROCHAINS RENDEZ-VOUS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">À vos agendas</span>
+        <h2>Les prochains rendez-vous à Besançon</h2>
+      </div>
+      <div class="event-list reveal" id="next-events">
+        <p class="notice">Retrouvez-nous chaque mercredi à 14h30 et chaque jeudi à 20h. Le calendrier complet de la saison est disponible sur la page Tournois &amp; résultats.</p>
+      </div>
+      <p class="center reveal" style="margin-top:30px;">
+        <a class="btn btn-primary" href="tournois-resultats.html">Voir tout le calendrier 2026-2027</a>
       </p>
     </div>
   </section>
 
   <!-- APERÇU DES SECTIONS -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Tout le club, en un coup d'œil</span>
@@ -146,7 +162,7 @@
   </section>
 
   <!-- BONUS : MOT DU JOUR + JEU -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Pour se faire la main</span>
@@ -237,6 +253,7 @@
   </div>
 </footer>
 
+<script src="js/calendrier.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

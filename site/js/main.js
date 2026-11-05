@@ -11,6 +11,83 @@
     U: 1, V: 4, W: 10, X: 10, Y: 10, Z: 10
   };
 
+  /* ---------- Calendrier : données (js/calendrier.js) et aides de dates ---------- */
+  var CAL = Array.isArray(window.CALENDRIER) ? window.CALENDRIER.slice() : [];
+  CAL.sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; });
+
+  var MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+  var MOIS_COURTS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
+  var JOURS = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
+
+  function parseDay(s) {
+    var p = s.split("-");
+    return new Date(+p[0], +p[1] - 1, +p[2]);
+  }
+  function isPast(ev) {
+    var now = new Date();
+    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    return parseDay(ev.dateFin || ev.date) < today;
+  }
+  function dayLabel(d) {
+    return d.getDate() === 1 ? "1er" : String(d.getDate());
+  }
+  function longDate(ev) {
+    var d = parseDay(ev.date);
+    if (!ev.dateFin) {
+      return JOURS[d.getDay()] + " " + dayLabel(d) + " " + MOIS[d.getMonth()] + " " + d.getFullYear();
+    }
+    var f = parseDay(ev.dateFin);
+    if (d.getMonth() === f.getMonth() && d.getFullYear() === f.getFullYear()) {
+      return "du " + dayLabel(d) + " au " + dayLabel(f) + " " + MOIS[f.getMonth()] + " " + f.getFullYear();
+    }
+    return "du " + dayLabel(d) + " " + MOIS[d.getMonth()] + " au " + dayLabel(f) + " " + MOIS[f.getMonth()] + " " + f.getFullYear();
+  }
+  function buildEvent(ev) {
+    var d = parseDay(ev.date);
+    var past = isPast(ev);
+
+    var article = document.createElement("article");
+    article.className = "event" + (past ? " is-past" : "");
+
+    var date = document.createElement("div");
+    date.className = "news-date";
+    var dd = document.createElement("span");
+    dd.className = "d";
+    dd.textContent = String(d.getDate());
+    var mm = document.createElement("span");
+    mm.className = "m";
+    mm.textContent = MOIS_COURTS[d.getMonth()] + " " + d.getFullYear();
+    date.appendChild(dd);
+    date.appendChild(mm);
+
+    var body = document.createElement("div");
+    var h = document.createElement("h3");
+    h.textContent = ev.titre;
+    var when = document.createElement("p");
+    when.className = "when-long";
+    when.textContent = longDate(ev);
+    var where = document.createElement("p");
+    where.textContent = "📍 " + ev.lieu;
+    body.appendChild(h);
+    body.appendChild(when);
+    body.appendChild(where);
+    if (past) {
+      var badge = document.createElement("span");
+      badge.className = "badge badge-outline";
+      badge.textContent = "Terminé";
+      body.appendChild(badge);
+    }
+
+    article.appendChild(date);
+    article.appendChild(body);
+    return article;
+  }
+
+  /* Compteur « rendez-vous à Besançon » alimenté par le calendrier */
+  document.querySelectorAll('[data-count-from="ici"]').forEach(function (el) {
+    el.setAttribute("data-count", String(CAL.filter(function (e) { return e.ici; }).length));
+  });
+
   /* ---------- Menu burger (mobile) ---------- */
   var burger = document.querySelector(".burger");
   var nav = document.querySelector(".main-nav");
@@ -87,19 +164,19 @@
   document.querySelectorAll(".tiles-title[data-text]").forEach(function (list) {
     var text = list.getAttribute("data-text") || "";
     var i = 0;
-    text.split("").forEach(function (char) {
-      var li = document.createElement("li");
-      if (char === " ") {
-        li.className = "tile space";
-      } else {
-        li.className = "tile";
-        var rot = (Math.random() * 36 - 18).toFixed(1);
-        li.style.setProperty("--rot", rot + "deg");
-        li.style.setProperty("--delay", (i * 0.07) + "s");
-        li.innerHTML = char + '<span class="pt">' + (LETTER_VALUES[char] || "") + "</span>";
+    text.split(" ").forEach(function (word) {
+      var item = document.createElement("li");
+      item.className = "word";
+      word.split("").forEach(function (char) {
+        var tile = document.createElement("span");
+        tile.className = "tile";
+        tile.style.setProperty("--rot", (Math.random() * 36 - 18).toFixed(1) + "deg");
+        tile.style.setProperty("--delay", (i * 0.07) + "s");
+        tile.innerHTML = char + '<span class="pt">' + (LETTER_VALUES[char] || "") + "</span>";
+        item.appendChild(tile);
         i++;
-      }
-      list.appendChild(li);
+      });
+      list.appendChild(item);
     });
   });
 
@@ -267,5 +344,77 @@
         });
       });
     });
+  }
+
+  /* ---------- Calendrier : accueil (prochains rendez-vous) ---------- */
+  var upcomingHere = CAL.filter(function (e) { return e.ici && !isPast(e); });
+
+  var heroNext = document.getElementById("hero-next");
+  if (heroNext && upcomingHere.length) {
+    var next = upcomingHere[0];
+    var strong = document.createElement("strong");
+    strong.textContent = next.titre + " — " + longDate(next);
+    heroNext.textContent = "🗓️ Prochain rendez-vous : ";
+    heroNext.appendChild(strong);
+    heroNext.appendChild(document.createTextNode(", " + next.lieu));
+  }
+
+  var nextEvents = document.getElementById("next-events");
+  if (nextEvents) {
+    if (upcomingHere.length) {
+      nextEvents.textContent = "";
+      upcomingHere.slice(0, 3).forEach(function (ev) { nextEvents.appendChild(buildEvent(ev)); });
+    }
+  }
+
+  /* ---------- Calendrier : page Tournois & résultats ---------- */
+  var calIci = document.getElementById("cal-ici");
+  var calRegion = document.getElementById("cal-region");
+  var togglePast = document.getElementById("cal-toggle-past");
+
+  function fillCalendar(container, list) {
+    if (!container) return 0;
+    container.textContent = "";
+
+    var past = list.filter(isPast);
+    var upcoming = list.filter(function (e) { return !isPast(e); });
+
+    var pastWrap = document.createElement("div");
+    pastWrap.className = "event-list past-events";
+    pastWrap.hidden = true;
+    past.forEach(function (ev) { pastWrap.appendChild(buildEvent(ev)); });
+    container.appendChild(pastWrap);
+
+    var upWrap = document.createElement("div");
+    upWrap.className = "event-list";
+    upcoming.forEach(function (ev) { upWrap.appendChild(buildEvent(ev)); });
+    container.appendChild(upWrap);
+
+    if (!upcoming.length) {
+      var empty = document.createElement("p");
+      empty.className = "notice";
+      empty.textContent = "Aucun rendez-vous à venir pour le moment : le calendrier de la prochaine saison sera publié ici dès sa réception.";
+      container.appendChild(empty);
+    }
+    return past.length;
+  }
+
+  if ((calIci || calRegion) && CAL.length) {
+    var pastCount =
+      fillCalendar(calIci, CAL.filter(function (e) { return e.ici; })) +
+      fillCalendar(calRegion, CAL.filter(function (e) { return !e.ici; }));
+
+    if (togglePast) {
+      if (!pastCount) {
+        togglePast.hidden = true;
+      } else {
+        togglePast.addEventListener("click", function () {
+          var show = togglePast.getAttribute("aria-expanded") !== "true";
+          document.querySelectorAll(".past-events").forEach(function (el) { el.hidden = !show; });
+          togglePast.setAttribute("aria-expanded", show ? "true" : "false");
+          togglePast.textContent = show ? "Masquer les rendez-vous déjà passés" : "Afficher les rendez-vous déjà passés";
+        });
+      }
+    }
   }
 })();

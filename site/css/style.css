@@ -149,14 +149,15 @@ p{ margin: 0 0 1.1em; }
 .brand-text .big{ display:block; font-weight:700; font-size:1.18rem; color: var(--wood-darker); }
 .brand-text .small{ display:block; font-size:.78rem; letter-spacing:.06em; color: var(--ink-soft); text-transform:uppercase; }
 
-.main-nav{ display:flex; align-items:center; }
+.main-nav{ display:flex; align-items:center; flex-shrink:0; }
 .main-nav ul{
-  display:flex; flex-wrap:wrap; gap:4px;
+  display:flex; flex-wrap:nowrap; gap:4px;
   list-style:none; margin:0; padding:0;
 }
 .main-nav a{
   display:block;
-  padding:.6em 1em;
+  white-space:nowrap;
+  padding:.6em .75em;
   border-radius: 999px;
   color: var(--ink-soft);
   text-decoration:none;
@@ -190,8 +191,10 @@ p{ margin: 0 0 1.1em; }
 .burger[aria-expanded="true"]::after{ transform: translateY(-8px) rotate(-45deg); }
 .burger[aria-expanded="true"] span{ opacity:0; }
 
-@media (max-width: 880px){
+@media (max-width: 1180px){
   .burger{ display:block; }
+  /* backdrop-filter ferait du bandeau le repère du menu fixe : on le retire sur mobile */
+  .site-header{ backdrop-filter:none; background: var(--cream); }
   .main-nav{
     position:fixed; inset: var(--header-h) 0 0 0;
     background: var(--cream);
@@ -199,9 +202,10 @@ p{ margin: 0 0 1.1em; }
     padding: 20px 0 40px;
     overflow-y:auto;
     transform: translateX(100%);
-    transition: transform .25s ease;
+    visibility:hidden;
+    transition: transform .25s ease, visibility .25s;
   }
-  .main-nav.is-open{ transform: translateX(0); }
+  .main-nav.is-open{ transform: translateX(0); visibility:visible; }
   .main-nav ul{ flex-direction:column; gap:6px; padding: 0 24px; }
   .main-nav a{ display:block; padding: .9em 1.1em; font-size:1.15rem; }
 }
@@ -248,10 +252,10 @@ p{ margin: 0 0 1.1em; }
 }
 
 .tiles-title{
-  display:flex; flex-wrap:wrap; justify-content:center; gap: 8px 8px;
+  display:flex; flex-wrap:wrap; justify-content:center; gap: 10px 24px;
   margin: 0 0 28px; padding:0; list-style:none;
 }
-.tiles-title.line-break{ width:100%; }
+.tiles-title .word{ display:flex; flex-wrap:nowrap; gap: 6px; }
 .tile{
   --delay: 0s;
   display:flex; align-items:center; justify-content:center;
@@ -275,7 +279,6 @@ p{ margin: 0 0 1.1em; }
   font-size: .28em; font-weight:700; font-family: var(--font-body);
   color: var(--wood-dark);
 }
-.tile.space{ background: transparent; box-shadow:none; width: clamp(10px,2.2vw,18px); }
 
 @keyframes tile-drop{
   0%{ opacity:0; transform: translateY(-90px) rotate(var(--rot,0deg)); }
@@ -603,6 +606,36 @@ textarea{ min-height: 150px; resize:vertical; }
   display:flex; flex-wrap:wrap; gap:14px; justify-content:space-between; font-size:.9rem; color:#c9bb98;
 }
 .footer-bottom a{ color:#c9bb98; }
+
+/* =========================================================
+   CALENDRIER (accueil + tournois)
+   ========================================================= */
+.event-list{ display:flex; flex-direction:column; gap:16px; }
+.event{
+  display:grid; grid-template-columns: 130px 1fr; gap:22px; align-items:center;
+  background: var(--cream-card); border:1px solid var(--line); border-radius: var(--radius-m);
+  padding: 18px 22px; box-shadow: var(--shadow-s);
+}
+.event .news-date{ padding:12px 6px; }
+.event h3{ font-size:1.25rem; margin:0 0 .2em; }
+.event p{ margin:0 0 .15em; color: var(--ink-soft); font-size:1.02rem; }
+.event .when-long{ font-weight:700; color: var(--pink-dark); }
+.event .when-long::first-letter{ text-transform: uppercase; }
+.event.is-past{ opacity:.6; }
+@media (max-width: 560px){
+  .event{ grid-template-columns: 1fr; gap:12px; }
+  .event .news-date{ display:flex; gap:10px; justify-content:center; align-items:baseline; }
+}
+.past-events{ margin-bottom:16px; }
+.cal-actions{ display:flex; flex-wrap:wrap; gap:14px; margin: 26px 0 0; }
+.cal-images{ display:grid; gap:24px; margin-top: 26px; }
+.cal-images a{
+  display:block; border-radius: var(--radius-m); overflow:hidden;
+  border:1px solid var(--line); box-shadow: var(--shadow-m); background:#fff;
+}
+.cal-images img{ width:100%; height:auto; }
+.cal-images figcaption{ padding:12px 18px; font-size:.95rem; color: var(--ink-soft); background: var(--cream-card); }
+.cal-images figure{ margin:0; }
 
 /* Utilitaires */
 .center{ text-align:center; }
