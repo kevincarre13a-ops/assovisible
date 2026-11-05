@@ -1,4 +1,4 @@
-# Site Les Amis d'handiMak
+# Site Les Amis d'HandiMak
 Site statique multi-pages (HTML/CSS/JS, sans backend).
 - Contenus modifiables : dossier `data/*.json` (site, événements, actualités, partenaires, galerie, chiffres).
 - Lien de don : `data/site.json` → `lienDon`. Montant/objectif : `cagnotte`.
