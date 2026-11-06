@@ -17,7 +17,9 @@ const NAV = [
   ['contact.html', 'Nous rejoindre'],
 ];
 
-const logo = `<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#F6C945" stroke="#4A2F1A" stroke-width="3"/><rect x="11" y="13" width="14" height="14" rx="3" fill="#C93D22" transform="rotate(-12 18 20)"/><circle cx="18" cy="20" r="1.8" fill="#fff"/><circle cx="35" cy="17" r="7" fill="#2A78B5"/><ellipse cx="29" cy="35" rx="11" ry="5" fill="#5E9E4A"/><ellipse cx="29" cy="32" rx="11" ry="5" fill="#8cc774"/></svg>`;
+const logoSvg = `<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#F6C945" stroke="#4A2F1A" stroke-width="3"/><rect x="11" y="13" width="14" height="14" rx="3" fill="#C93D22" transform="rotate(-12 18 20)"/><circle cx="18" cy="20" r="1.8" fill="#fff"/><circle cx="35" cy="17" r="7" fill="#2A78B5"/><ellipse cx="29" cy="35" rx="11" ry="5" fill="#5E9E4A"/><ellipse cx="29" cy="32" rx="11" ry="5" fill="#8cc774"/></svg>`;
+
+const logo = `<img src="images/logo.png" alt="" width="40" height="37">`;
 
 const floaters = (extra = '') => `<div class="floaters" aria-hidden="true">
 <svg class="fl f1" viewBox="0 0 100 100"><ellipse cx="50" cy="66" rx="40" ry="14" fill="#8a5a2b"/><ellipse cx="50" cy="56" rx="40" ry="14" fill="#E4572E"/><ellipse cx="50" cy="56" rx="26" ry="8" fill="#F6C945"/></svg>
@@ -46,7 +48,7 @@ function layout({ file, title, desc, body, hero = true, extraHead = '' }) {
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta name="theme-color" content="#A8672F">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/logo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">${extraHead}
@@ -63,8 +65,8 @@ ${body}
 </main>
 <footer class="site-footer"><div class="wrap">
 <div class="fgrid">
-<div><h3>Jeux de Tout Bois</h3><p>Association de prêt de jeux en bois géants et d’animations à Igny (Essonne).</p></div>
-<div><h3>Nous trouver</h3><ul><li>${site.address}<br>${site.postalCode} ${site.city}</li><li><a href="mailto:${site.email}">${site.email}</a></li>${socials.map(([k, v]) => `<li><a href="${v}" rel="noopener" target="_blank">${labels[k] || k}</a></li>`).join('')}</ul></div>
+<div><h3>Jeux de Tout Bois</h3><p>Des jeux en bois à emprunter et des animations pour tous, à Igny (Essonne).</p></div>
+<div><h3>Nous trouver</h3><ul><li>${site.address}<br>${site.postalCode} ${site.city}</li><li><a href="tel:${site.phone.replace(/ /g, '')}">${site.phone}</a></li><li><a href="mailto:${site.email}">${site.email}</a></li>${socials.map(([k, v]) => `<li><a href="${v}" rel="noopener" target="_blank">${labels[k] || k}</a></li>`).join('')}</ul></div>
 <div><h3>Le site</h3><ul>${foot}<li><a href="mentions-legales.html">Mentions légales</a></li></ul></div>
 </div>
 <p class="copy">© ${new Date().getFullYear()} Jeux de Tout Bois · Association loi 1901 · SIREN ${site.siren}</p>
@@ -93,9 +95,9 @@ pages.push({
 <section><div class="wrap"><div class="next rv" data-render="next"></div></div></section>
 
 <section class="band"><div class="wrap">
-<div class="center"><span class="eyebrow">Ce qu’on fait</span><h2>Jouer, ça se partage</h2><p class="lead">Des jeux d’adresse, de stratégie et d’équilibre en bois, assez grands pour jouer ensemble, dehors comme dedans.</p></div>
+<div class="center"><span class="eyebrow">Ce qu’on fait</span><h2>Jouer, ça se partage</h2><p class="lead">65 jeux en bois, des grands jeux d’animation aux casse-têtes de poche : de quoi faire jouer toute la famille, dehors comme dedans.</p></div>
 <div class="grid" style="margin-top:30px">
-<a class="card link rv" href="jeux.html"><div class="ico">🎲</div><h3>Nos jeux</h3><p>Un catalogue de jeux en bois géants à emprunter.</p></a>
+<a class="card link rv" href="jeux.html"><div class="ico">🎲</div><h3>Nos jeux</h3><p>35 grands jeux, 30 casse-têtes compacts et 2 démos science.</p></a>
 <a class="card link rv" href="evenements.html"><div class="ico">🎪</div><h3>Animations</h3><p>Fêtes, écoles, mairies, particuliers : on installe, on explique, on joue.</p></a>
 <a class="card link rv" href="galerie.html"><div class="ico">📸</div><h3>Galerie</h3><p>Les parties en images.</p></a>
 <a class="card link rv" href="contact.html"><div class="ico">🤝</div><h3>Nous rejoindre</h3><p>Adhérer, donner un coup de main, demander un prêt.</p></a>
@@ -104,8 +106,8 @@ pages.push({
 <section class="stripe"><div class="wrap center"><span class="eyebrow">En chiffres</span><h2>Une asso qui a du jeu</h2><div class="stats" data-render="stats" style="margin-top:26px"></div></div></section>
 
 <section><div class="wrap"><div class="center"><span class="eyebrow">À l’honneur</span><h2>Quelques-uns de nos jeux</h2><p class="lead">Survolez une carte (ou touchez-la) pour la retourner.</p></div>
-<div class="grid" data-render="games" data-limit="3" style="margin-top:30px"></div>
-<p class="center" style="margin-top:28px"><a class="btn green" href="jeux.html">Voir tout le catalogue</a></p></div></section>
+<div class="grid" data-render="games" data-featured="1" style="margin-top:30px"></div>
+<p class="center" style="margin-top:28px"><a class="btn green" href="jeux.html">Voir les 65 jeux du catalogue</a></p></div></section>
 
 <section class="band"><div class="wrap"><h2>Dernières actualités</h2><div class="list" data-render="news" data-limit="3"></div>
 <p style="margin-top:22px"><a href="actualites.html">Toutes les actualités →</a></p></div></section>
@@ -120,7 +122,7 @@ pages.push({
   desc: 'Découvrez l’association Jeux de Tout Bois à Igny : nos valeurs, notre histoire et notre équipe.',
   body: `${pageHero('L’association', 'Des passionnés de jeux en bois, à Igny, pour faire jouer petits et grands.')}
 <section><div class="wrap prose"><span class="eyebrow">Qui sommes-nous</span><h2>Jeux de Tout Bois</h2>
-<p>Jeux de Tout Bois est une association loi 1901 basée à Igny, en Essonne. Elle prête des jeux en bois géants et propose des animations pour que chacun puisse jouer ensemble, dans la bonne humeur.</p>
+<p>Jeux de Tout Bois est une association loi 1901 basée à Igny, en Essonne. Elle conçoit et fabrique de façon artisanale des jeux en bois — 35 grands jeux d’animation et 30 casse-têtes compacts — qu’elle prête et anime pour que chacun puisse jouer ensemble, dans la bonne humeur.</p>
 <p class="todo">✏️ Texte de présentation à compléter par l’association (création, projet, public accueilli…).</p>
 <h2>Notre histoire</h2><p class="todo">✏️ L’histoire de l’association (année de création, premières parties, anecdotes) reste à écrire.</p></div></section>
 <section class="band"><div class="wrap"><div class="center"><span class="eyebrow">Nos valeurs</span><h2>Ce qui nous anime</h2></div>
@@ -135,11 +137,10 @@ pages.push({
 
 pages.push({
   file: 'jeux.html',
-  title: 'Nos jeux en bois géants — Jeux de Tout Bois',
-  desc: 'Le catalogue des jeux en bois de l’association Jeux de Tout Bois à Igny : nombre de joueurs, âge, description.',
-  body: `${pageHero('Nos jeux', 'Retournez les cartes pour découvrir chaque jeu : joueurs, âge, règle en un coup d’œil.')}
-<section><div class="wrap"><p class="todo">✏️ Les jeux affichés sont des exemples. L’association peut les remplacer dans le fichier <code>data/games.json</code> (nom, joueurs, âge, description, photo).</p>
-<div class="grid" data-render="games" style="margin-top:26px"></div>
+  title: 'Nos jeux en bois — catalogue 2026 — Jeux de Tout Bois',
+  desc: 'Le catalogue 2026 de Jeux de Tout Bois : 35 grands jeux en bois, 30 jeux compacts et 2 démos science, avec nombre de joueurs, dimensions et description.',
+  body: `${pageHero('Nos jeux', '65 jeux en bois à découvrir. Retournez les cartes pour tout savoir : joueurs, dimensions, bois utilisés, règle en un coup d’œil.')}
+<section><div class="wrap"><div data-render="games" data-filters="1"></div>
 <p class="center" style="margin-top:34px"><a class="btn" href="contact.html#pret">Demander un prêt de jeux</a></p></div></section>`,
 });
 
@@ -154,7 +155,8 @@ pages.push({
 <div class="card rv"><div class="ico">🎉</div><h3>Fêtes &amp; kermesses</h3><p>Des jeux géants pour animer votre événement.</p></div>
 <div class="card rv"><div class="ico">🏫</div><h3>Écoles</h3><p>Un après-midi jeux pour la classe ou la fête de l’école.</p></div>
 <div class="card rv"><div class="ico">🏛️</div><h3>Mairies &amp; associations</h3><p>Fêtes de quartier, marchés, rencontres entre voisins.</p></div>
-<div class="card rv"><div class="ico">🎂</div><h3>Particuliers</h3><p>Anniversaires, mariages, repas de famille.</p></div></div>
+<div class="card rv"><div class="ico">🎂</div><h3>Particuliers</h3><p>Anniversaires, mariages, repas de famille.</p></div>
+<div class="card rv"><div class="ico">🔬</div><h3>Fête de la science</h3><p>Deux démos clés en main : la Planche de Galton et le pont de Léonard de Vinci.</p></div></div>
 <p class="todo" style="margin-top:22px">✏️ Conditions et tarifs d’intervention à compléter. En attendant : <a href="contact.html#animation">demandez un devis ou un renseignement</a>.</p></div></section>
 <section><div class="wrap"><h2>Archives</h2><div class="list" data-render="archives"></div></div></section>`,
 });
@@ -164,7 +166,7 @@ pages.push({
   title: 'Galerie photos — Jeux de Tout Bois',
   desc: 'Les photos des jeux, des animations et des événements de l’association Jeux de Tout Bois.',
   body: `${pageHero('Galerie', 'Des parties, des rires, des palets qui volent.')}
-<section><div class="wrap"><p class="todo">✏️ Photos à ajouter : déposez-les dans <code>images/</code> et listez-les dans <code>data/gallery.json</code>.</p><div data-render="gallery" style="margin-top:22px"></div></div></section>`,
+<section><div class="wrap"><div data-render="gallery" style="margin-top:22px"></div></div></section>`,
 });
 
 pages.push({
@@ -199,7 +201,7 @@ pages.push({
 <button class="btn" type="submit">Envoyer</button>
 </form></div>
 <div><h2>Coordonnées</h2>
-<div class="card"><p><strong>Jeux de Tout Bois</strong><br>${site.address}<br>${site.postalCode} ${site.city}</p><p>✉️ <a href="mailto:${site.email}">${site.email}</a></p></div>
+<div class="card"><p><strong>Jeux de Tout Bois</strong><br>${site.address}<br>${site.postalCode} ${site.city}</p><p>📞 <a href="tel:${site.phone.replace(/ /g, '')}">${site.phone}</a></p><p>✉️ <a href="mailto:${site.email}">${site.email}</a></p></div>
 <div class="map" style="margin-top:20px"><iframe title="Carte d’Igny" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=${site.map.lon - 0.012}%2C${site.map.lat - 0.007}%2C${site.map.lon + 0.012}%2C${site.map.lat + 0.007}&amp;layer=mapnik&amp;marker=${site.map.lat}%2C${site.map.lon}"></iframe></div>
 <p class="hint">Localisation approximative : Igny (91430).</p></div>
 </div></section>`,
@@ -220,7 +222,7 @@ pages.push({
   desc: 'Mentions légales du site de l’association Jeux de Tout Bois, Igny.',
   body: `${pageHero('Mentions légales', 'Informations légales sur l’association et ce site.')}
 <section><div class="wrap prose">
-<h2>Éditeur du site</h2><p>Association Jeux de Tout Bois (loi 1901)<br>${site.address}, ${site.postalCode} ${site.city}<br>SIREN : ${site.siren}<br>E-mail : <a href="mailto:${site.email}">${site.email}</a></p>
+<h2>Éditeur du site</h2><p>Association Jeux de Tout Bois (loi 1901)<br>${site.address}, ${site.postalCode} ${site.city}<br>SIREN : ${site.siren}<br>Téléphone : ${site.phone}<br>E-mail : <a href="mailto:${site.email}">${site.email}</a></p>
 <h2>Directeur de la publication</h2><p>${site.president}, président.</p>
 <h2>Hébergement</h2><p>Netlify, Inc. — 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis.</p>
 <h2>Données personnelles</h2><p>Les informations saisies dans le formulaire de contact servent uniquement à répondre à votre demande. Vous pouvez demander leur suppression à tout moment en écrivant à <a href="mailto:${site.email}">${site.email}</a>.</p>

@@ -1,6 +1,22 @@
 [
-  { "value": 20, "suffix": "+", "label": "jeux en bois géants", "placeholder": true },
-  { "value": 12, "suffix": "", "label": "animations par an", "placeholder": true },
-  { "value": 100, "suffix": "%", "label": "bois et bonne humeur", "placeholder": false },
-  { "value": 1, "suffix": "", "label": "commune qui joue : Igny", "placeholder": false }
+ {
+  "value": 65,
+  "suffix": "",
+  "label": "jeux en bois à découvrir"
+ },
+ {
+  "value": 35,
+  "suffix": "",
+  "label": "grands jeux d’animation"
+ },
+ {
+  "value": 30,
+  "suffix": "",
+  "label": "jeux compacts casse-tête"
+ },
+ {
+  "value": 2,
+  "suffix": "",
+  "label": "démos Fête de la science"
+ }
 ]

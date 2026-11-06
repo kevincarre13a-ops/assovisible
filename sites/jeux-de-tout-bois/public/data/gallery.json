@@ -1,11 +1,29 @@
 {
-  "categories": ["Tous", "Nos jeux", "Animations", "Événements"],
-  "items": [
-    { "title": "Photo à ajouter", "category": "Nos jeux", "art": "palets", "photo": null },
-    { "title": "Photo à ajouter", "category": "Nos jeux", "art": "pions", "photo": null },
-    { "title": "Photo à ajouter", "category": "Animations", "art": "cubes", "photo": null },
-    { "title": "Photo à ajouter", "category": "Animations", "art": "quilles", "photo": null },
-    { "title": "Photo à ajouter", "category": "Événements", "art": "cible", "photo": null },
-    { "title": "Photo à ajouter", "category": "Événements", "art": "des", "photo": null }
-  ]
+ "categories": [
+  "Tous",
+  "Nos jeux",
+  "Animations"
+ ],
+ "items": [
+  {
+   "title": "Le Boisbi-Foot en action",
+   "category": "Nos jeux",
+   "photo": "images/photos/baby-foot.jpg"
+  },
+  {
+   "title": "La Meule en Folie",
+   "category": "Nos jeux",
+   "photo": "images/photos/meule.jpg"
+  },
+  {
+   "title": "Le Bouclier royal",
+   "category": "Nos jeux",
+   "photo": "images/photos/bouclier.jpg"
+  },
+  {
+   "title": "Plaques à replacer, en famille",
+   "category": "Animations",
+   "photo": "images/photos/plaques.jpg"
+  }
+ ]
 }

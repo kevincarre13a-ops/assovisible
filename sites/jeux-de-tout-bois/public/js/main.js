@@ -26,14 +26,27 @@ function reveal(root){(root||document).querySelectorAll('.rv:not(.in)').forEach(
 var co='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;co.unobserve(e.target);var el=e.target,end=+el.dataset.end,suf=el.dataset.suf||'',t0=performance.now();
  (function tick(t){var p=Math.min((t-t0)/1600,1),v=Math.round(end*(1-Math.pow(1-p,3)));el.textContent=v+suf;if(p<1)requestAnimationFrame(tick)})(t0)})},{threshold:.5}):null;
 
-function flipCard(g){return '<div class="flip rv" tabindex="0" role="button" aria-label="Retourner la carte '+esc(g.name)+'"><div class="flip-in">'+
- '<div class="face front"><div class="art">'+(g.placeholder?'<span class="badge">exemple</span>':'')+art(g)+'</div><div class="meta"><h3>'+esc(g.name)+'</h3><span class="chip">'+esc(g.tag||'')+'</span><span class="chip">'+esc(g.players)+'</span></div></div>'+
- '<div class="face back"><h3>'+esc(g.name)+'</h3><p>'+esc(g.description)+'</p><div><span class="chip">👥 '+esc(g.players)+'</span><span class="chip">🎂 '+esc(g.age)+'</span></div><a class="btn light" href="contact.html#pret">Demander ce jeu</a></div></div></div>'}
+var CAT={grand:'Grand jeu',compact:'Jeu compact',demo:'Démo science'};
+function flipCard(g){var chips=[g.players,g.age].filter(Boolean).map(function(x){return '<span class="chip">'+esc(x)+'</span>'}).join('');
+ var spec=[['Taille',g.size],['Bois',g.material]].filter(function(x){return x[1]}).map(function(x){return '<span class="chip">'+x[0]+' : '+esc(x[1])+'</span>'}).join('');
+ return '<div class="flip rv" tabindex="0" role="button" aria-label="Retourner la carte '+esc(g.name)+'"><div class="flip-in">'+
+ '<div class="face front"><div class="art">'+(g.badge?'<span class="badge">'+esc(g.badge)+'</span>':'')+'<img loading="lazy" src="'+esc(g.photo)+'" alt="'+esc(g.name)+'"></div><div class="meta"><h3>'+esc(g.name)+'</h3><span class="chip cat-'+g.category+'">'+CAT[g.category]+'</span>'+chips+'</div></div>'+
+ '<div class="face back"><h3>'+esc(g.name)+'</h3><p><strong>'+esc(g.tagline||'')+'</strong></p><p>'+esc(g.description)+'</p><div>'+spec+'</div><a class="btn light" href="contact.html#pret">Demander ce jeu</a></div></div></div>'}
+function gamesUI(el,all){var cat='all',q='';
+ el.innerHTML='<div class="filters" role="group" aria-label="Filtrer les jeux"></div><label class="sr" for="gq">Rechercher un jeu</label><input id="gq" class="search" type="search" placeholder="Chercher un jeu (ex. équilibre, billes, quilles…)"><p class="count" aria-live="polite"></p><div class="grid"></div>';
+ var fl=el.querySelector('.filters'),grid=el.querySelector('.grid'),cnt=el.querySelector('.count'),inp=el.querySelector('input');
+ var cats=[['all','Tous ('+all.length+')'],['grand','Grands jeux ('+all.filter(function(g){return g.category==='grand'}).length+')'],['compact','Jeux compacts ('+all.filter(function(g){return g.category==='compact'}).length+')'],['demo','Démos science ('+all.filter(function(g){return g.category==='demo'}).length+')']];
+ function norm(t){return String(t||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}
+ function draw(){fl.innerHTML=cats.map(function(c){return '<button type="button" data-c="'+c[0]+'" aria-pressed="'+(c[0]===cat)+'">'+c[1]+'</button>'}).join('');
+  var n=norm(q),list=all.filter(function(g){return (cat==='all'||g.category===cat)&&(!n||norm([g.name,g.tagline,g.description,g.material,g.players].join(' ')).indexOf(n)>-1)});
+  grid.innerHTML=list.map(flipCard).join('')||'<p class="card">Aucun jeu ne correspond à cette recherche.</p>';cnt.textContent=list.length+' jeu'+(list.length>1?'x':'')+' affiché'+(list.length>1?'s':'');reveal(grid);bindFlip(grid)}
+ fl.addEventListener('click',function(e){var b=e.target.closest('button');if(b){cat=b.dataset.c;draw()}});
+ inp.addEventListener('input',function(){q=inp.value;draw()});draw()}
 
 function render(site){
  document.querySelectorAll('[data-render]').forEach(function(el){
   var k=el.dataset.render,n=+el.dataset.limit||99;
-  if(k==='games')get('games.json').then(function(a){el.innerHTML=a.slice(0,n).map(flipCard).join('');reveal(el);bindFlip(el)});
+  if(k==='games')get('games.json').then(function(a){if(el.dataset.filters){gamesUI(el,a);return}if(el.dataset.featured)a=a.filter(function(g){return g.real});el.innerHTML=a.slice(0,n).map(flipCard).join('');reveal(el);bindFlip(el)});
   if(k==='stats')get('stats.json').then(function(a){el.innerHTML=a.map(function(s){return '<div class="stat rv"><b data-end="'+s.value+'" data-suf="'+esc(s.suffix)+'">0</b><small>'+esc(s.label)+'</small>'+(s.placeholder?'<i>valeur d’attente</i>':'')+'</div>'}).join('');el.querySelectorAll('b').forEach(function(x){co?co.observe(x):x.textContent=x.dataset.end+x.dataset.suf});reveal(el)});
   if(k==='team')get('team.json').then(function(a){el.innerHTML=a.map(function(p){return '<div class="card rv center"><div class="ico" style="margin-inline:auto">🪵</div><h3>'+esc(p.name)+'</h3><p>'+esc(p.role)+'</p></div>'}).join('');reveal(el)});
   if(k==='news')get('news.json').then(function(a){a.sort(function(x,y){return y.date>x.date?1:-1});el.innerHTML=a.slice(0,n).map(function(p){var d=fmt(p.date);return '<article class="row rv"><div class="date"><b>'+d.d+'</b>'+d.m+'</div><div><h3>'+esc(p.title)+'</h3><p>'+esc(el.dataset.full?p.body:p.summary)+'</p></div></article>'}).join('');reveal(el)});

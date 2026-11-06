@@ -2,7 +2,7 @@
   "name": "Jeux de Tout Bois",
   "tagline": "Des jeux en bois géants pour jouer ensemble, de 3 à 103 ans !",
   "email": "jeuxdetoutbois@orange.fr",
-  "phone": null,
+  "phone": "07 43 27 91 13",
   "address": "2 rue Jean Tassel",
   "postalCode": "91430",
   "city": "Igny",
@@ -14,7 +14,7 @@
     "instagram": null,
     "helloasso": null
   },
-  "heroPhoto": null,
+  "heroPhoto": "images/photos/baby-foot.jpg",
   "map": {
     "lat": 48.7339,
     "lon": 2.2268
