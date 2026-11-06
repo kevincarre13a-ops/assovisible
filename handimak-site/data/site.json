@@ -11,5 +11,5 @@
   "lienDon": "",
   "lienDonNote": "À renseigner : lien HelloAsso (ou équivalent) de la collecte en cours. Aucun paiement n'est géré sur ce site.",
   "cagnotte": { "titre": "Collecte en cours", "montant": null, "objectif": null, "note": "Montant collecté et objectif à renseigner par l'association." },
-  "prochainEvenement": { "titre": "Blé de la Sainte-Barbe : sachets solidaires", "date": "2026-12-04T09:00:00", "lieu": "Commerces partenaires de Rognac", "note": "Date traditionnelle du 4 décembre. Édition 2026 à confirmer par l'association." }
+  "prochainEvenement": { "titre": "Pochon de blé de la Sainte-Barbe, 1 €, avec l'AEPH", "date": "2026-12-04T09:00:00", "lieu": "Commerces partenaires de Rognac", "note": "Date traditionnelle du 4 décembre. Édition 2026 à confirmer par l'association." }
 }

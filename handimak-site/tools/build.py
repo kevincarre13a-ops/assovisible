@@ -189,7 +189,7 @@ home = f'''<section class="hero" aria-labelledby="h1">{HERO_SVG}
 <p class="meta"><span data-ev-date></span> · <span data-ev-lieu></span></p>
 <div class="countdown" data-countdown role="timer" aria-label="Compte à rebours avant le prochain événement"><div><b>--</b><span>jours</span></div><div><b>--</b><span>heures</span></div><div><b>--</b><span>minutes</span></div><div><b>--</b><span>secondes</span></div></div>
 <p class="wait-txt" data-ev-note></p>
-<p style="margin-top:1rem"><a class="btn alt sm" href="evenements.html">Tous les événements</a></p></div>
+<p style="margin-top:1rem"><a class="btn alt sm" href="evenements.html">Voir l'affiche et tous les événements</a></p></div>
 <div class="card reveal" style="background:var(--cream)">{icon("ble","c1")}{CAG}
 <p style="margin-top:1rem"><a class="btn sm" data-don href="faire-un-don.html">♥ Participer à la collecte</a></p></div>
 </div></section>
@@ -294,6 +294,14 @@ write("notre-action.html","Notre action","Comment Les Amis d'HandiMak financent 
 
 # ---------- EVENEMENTS
 ev = pagehead("Des rendez-vous solidaires toute l'année","Ateliers, ventes, sensibilisation : venez partager un moment et soutenir les enfants.","Événements") + '''
+<section class="tint"><div class="wrap split" style="align-items:center">
+<figure class="reveal" style="margin:0"><a href="assets/affiche-sainte-barbe.webp" target="_blank" rel="noopener"><img src="assets/affiche-sainte-barbe.webp" alt="Affiche : La différence nous rend plus riche. Un petit brin de blé, un grand élan de solidarité. Les associations AEPH et Les Amis d'HandiMak unissent leurs forces. Pochon de blé, 1 euro." width="1024" height="1535" loading="lazy" style="border:3px solid var(--ink);border-radius:var(--r);box-shadow:0 8px 0 var(--ink);max-width:min(520px,100%);height:auto;margin-inline:auto"></a><figcaption class="meta" style="text-align:center;margin-top:12px">L'affiche de l'opération (clic pour agrandir)</figcaption></figure>
+<div class="reveal"><p class="eyebrow">Sainte-Barbe</p><h2>Un petit brin de blé, un grand élan de solidarité</h2>
+<p>Nos associations, <strong>l'AEPH (Association Ensemble Pour le Handicap)</strong> et <strong>Les Amis d'HandiMak</strong>, unissent leurs forces pour faire grandir de beaux projets, favoriser l'inclusion et apporter du soutien aux personnes en situation de handicap et à leurs familles.</p>
+<p class="quote" style="font-size:1.4rem">Un petit geste aujourd'hui peut faire pousser de grandes choses demain !</p>
+<p style="margin-top:1rem"><strong>Le pochon de blé : 1 €.</strong> Confectionné par nos bénévoles, il est proposé dans les commerces partenaires.</p>
+<p class="wait-txt">Dates, points de vente et commerces partenaires 2026 : à renseigner par l'association.</p>
+<p><a class="btn" data-don href="faire-un-don.html">♥ Soutenir l'opération</a></p></div></div></section>
 <section><div class="wrap"><p class="eyebrow">Prochains événements</p><h2>À venir</h2><div class="grid" data-events-next></div>
 <p class="wait-txt" style="margin-top:1.5rem">Les dates sont à confirmer par l'association : elles se modifient dans <code>data/evenements.json</code>.</p></div></section>
 <section class="tint"><div class="wrap"><p class="eyebrow">Archives</p><h2>Les éditions passées</h2><div class="grid" data-events-arch></div></div></section>
