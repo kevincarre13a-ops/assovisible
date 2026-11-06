@@ -72,7 +72,7 @@ export async function startServer({ port = 0, password = 'test-1234', resendCall
         const chunks = []; for await (const c of req) chunks.push(c);
         const body = chunks.length ? Buffer.concat(chunks) : undefined;
         const headers = { ...req.headers, host: u.host };
-        const request = new Request(fnUrl, { method: req.method, headers, body: req.method === 'GET' || req.method === 'HEAD' ? undefined : body });
+        const request = new Request(target ? u : fnUrl, { /* Netlify conserve l'adresse d'origine pour une réécriture */ method: req.method, headers, body: req.method === 'GET' || req.method === 'HEAD' ? undefined : body });
         const out = await handler(request, { ip: req.socket.remoteAddress });
         res.statusCode = out.status;
         const setCookie = out.headers.getSetCookie ? out.headers.getSetCookie() : [];

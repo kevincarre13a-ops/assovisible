@@ -4,7 +4,8 @@ import { mediaStore } from './lib/store.mjs';
 const TYPES = { jpg: 'image/jpeg', png: 'image/png', gif: 'image/gif', webp: 'image/webp', pdf: 'application/pdf', doc: 'application/msword', docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', odt: 'application/vnd.oasis.opendocument.text', xlsx: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' };
 
 export default async (req) => {
-  const f = new URL(req.url).searchParams.get('f') || '';
+  const u = new URL(req.url);
+  const f = u.searchParams.get('f') || decodeURIComponent(u.pathname.replace(/^\/media\//, ''));
   const m = f.match(/^([a-z0-9]{8,40}(?:-s)?)\.(jpg|png|gif|webp|pdf|doc|docx|odt|xlsx)$/);
   if (!m) return new Response('Introuvable', { status: 404 });
   try {
