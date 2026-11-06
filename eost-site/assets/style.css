@@ -126,3 +126,5 @@ figure.cover{float:right;margin:0 0 20px 28px;width:200px}figure.cover img{width
 .doc img{width:100%;height:auto;border-radius:6px;box-shadow:0 8px 22px rgba(8,42,68,.25);display:block}
 .doc h3{font-size:1.1rem}.doc p{font-size:.9rem;opacity:.85}
 @media(max-width:520px){.doc{grid-template-columns:110px 1fr}}
+
+.flinks{display:flex;gap:22px;flex-wrap:wrap}.flinks a{color:#f0d9a8}

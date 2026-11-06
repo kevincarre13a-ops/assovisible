@@ -11,4 +11,5 @@ var co='IntersectionObserver' in window?new IntersectionObserver(function(es){es
 document.querySelectorAll('[data-count]').forEach(function(el){co?co.observe(el):el.textContent=el.dataset.count});
 var chips=document.querySelectorAll('.chips button');
 chips.forEach(function(c){c.addEventListener('click',function(){chips.forEach(function(x){x.classList.remove('on')});c.classList.add('on');var k=c.dataset.f;document.querySelectorAll('.gal figure').forEach(function(f){f.hidden=!(k==='all'||f.dataset.c===k)})})});
+document.querySelectorAll('input[name=ts]').forEach(function(i){i.value=Date.now()});
 })();

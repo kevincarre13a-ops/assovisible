@@ -1,3 +1,4 @@
+# Fichier généré par eost-tools/build-fn.mjs : ne pas modifier à la main.
 [build]
   publish = "."
 
@@ -10,3 +11,252 @@
   to = "/404.html"
   status = 404
   force = true
+
+# Pages du site : servies par la fonction « page » (contenu d'origine + modifications de l'espace administrateur).
+[[redirects]]
+  from = "/"
+  to = "/.netlify/functions/page?l=fr&p=index"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/.netlify/functions/page?l=fr&p=index"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/index"
+  to = "/.netlify/functions/page?l=fr&p=index"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br"
+  to = "/.netlify/functions/page?l=br&p=index"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/"
+  to = "/.netlify/functions/page?l=br&p=index"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/index.html"
+  to = "/.netlify/functions/page?l=br&p=index"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/index"
+  to = "/.netlify/functions/page?l=br&p=index"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/association"
+  to = "/.netlify/functions/page?l=fr&p=association"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/association.html"
+  to = "/.netlify/functions/page?l=fr&p=association"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/association"
+  to = "/.netlify/functions/page?l=br&p=association"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/association.html"
+  to = "/.netlify/functions/page?l=br&p=association"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/activites"
+  to = "/.netlify/functions/page?l=fr&p=activites"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/activites.html"
+  to = "/.netlify/functions/page?l=fr&p=activites"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/activites"
+  to = "/.netlify/functions/page?l=br&p=activites"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/activites.html"
+  to = "/.netlify/functions/page?l=br&p=activites"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/agenda"
+  to = "/.netlify/functions/page?l=fr&p=agenda"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/agenda.html"
+  to = "/.netlify/functions/page?l=fr&p=agenda"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/agenda"
+  to = "/.netlify/functions/page?l=br&p=agenda"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/agenda.html"
+  to = "/.netlify/functions/page?l=br&p=agenda"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/galerie"
+  to = "/.netlify/functions/page?l=fr&p=galerie"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/galerie.html"
+  to = "/.netlify/functions/page?l=fr&p=galerie"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/galerie"
+  to = "/.netlify/functions/page?l=br&p=galerie"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/galerie.html"
+  to = "/.netlify/functions/page?l=br&p=galerie"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/actualites"
+  to = "/.netlify/functions/page?l=fr&p=actualites"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/actualites.html"
+  to = "/.netlify/functions/page?l=fr&p=actualites"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/actualites"
+  to = "/.netlify/functions/page?l=br&p=actualites"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/actualites.html"
+  to = "/.netlify/functions/page?l=br&p=actualites"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/adherer"
+  to = "/.netlify/functions/page?l=fr&p=adherer"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/adherer.html"
+  to = "/.netlify/functions/page?l=fr&p=adherer"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/adherer"
+  to = "/.netlify/functions/page?l=br&p=adherer"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/adherer.html"
+  to = "/.netlify/functions/page?l=br&p=adherer"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/mentions-legales"
+  to = "/.netlify/functions/page?l=fr&p=mentions-legales"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/mentions-legales.html"
+  to = "/.netlify/functions/page?l=fr&p=mentions-legales"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/mentions-legales"
+  to = "/.netlify/functions/page?l=br&p=mentions-legales"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/mentions-legales.html"
+  to = "/.netlify/functions/page?l=br&p=mentions-legales"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/merci"
+  to = "/.netlify/functions/page?l=fr&p=merci"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/merci.html"
+  to = "/.netlify/functions/page?l=fr&p=merci"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/merci"
+  to = "/.netlify/functions/page?l=br&p=merci"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/br/merci.html"
+  to = "/.netlify/functions/page?l=br&p=merci"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/media/*"
+  to = "/.netlify/functions/media?f=:splat"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "same-origin"

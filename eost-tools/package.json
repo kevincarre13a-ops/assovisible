@@ -1,0 +1,14 @@
+{
+  "name": "eost-tools",
+  "private": true,
+  "type": "module",
+  "description": "Outils de génération du site EOST et de son espace administrateur",
+  "scripts": {
+    "build": "node build.cjs && node build-fn.mjs"
+  },
+  "devDependencies": {
+    "@netlify/blobs": "^8.2.0",
+    "esbuild": "^0.25.12",
+    "sanitize-html": "^2.18.1"
+  }
+}

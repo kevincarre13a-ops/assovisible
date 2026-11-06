@@ -362,6 +362,7 @@ T.update({
 "Format A4 paysage, PDF. À imprimer.":"Ment A4 a-led, PDF. Da voullañ.",
 "Télécharger l'affiche (PDF)":"Pellgargañ ar skritell (PDF)",
 })
+T.update({"Espace administrateur":"Takad merañ"})
 # cles speciales: texte "Eost"/"eost" ambigus -> on ne garde que les noeuds exacts (voir build.cjs : cle entouree de > <)
 json.dump(T,open('br-textes.json','w'),ensure_ascii=False,indent=0)
 print(len(T))
