@@ -83,9 +83,9 @@
     return article;
   }
 
-  /* Compteur « rendez-vous à Besançon » alimenté par le calendrier */
-  document.querySelectorAll('[data-count-from="ici"]').forEach(function (el) {
-    el.setAttribute("data-count", String(CAL.filter(function (e) { return e.ici; }).length));
+  /* Compteur « ans d'existence » : année en cours moins l'année de création */
+  document.querySelectorAll("[data-since]").forEach(function (el) {
+    el.setAttribute("data-count", String(new Date().getFullYear() - parseInt(el.getAttribute("data-since"), 10)));
   });
 
   /* ---------- Menu burger (mobile) ---------- */
