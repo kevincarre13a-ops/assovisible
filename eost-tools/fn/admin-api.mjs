@@ -158,15 +158,6 @@ const actions = {
     await messagesStore().delete(key);
     return json({ ok: true });
   },
-
-  async 'change-password'(ctx) {
-    const { current, next } = ctx.body;
-    const cred = await getCredentials();
-    if (!(await verifyPassword(String(current || ''), cred.hash))) { await sleep(500); return bad('Le mot de passe actuel n\'est pas le bon.', 403); }
-    if (typeof next !== 'string' || next.length < 8) return bad('Le nouveau mot de passe doit faire au moins 8 caractères.');
-    await authStore().setJSON('cred', { user: cred.user, hash: await hashPassword(next) });
-    return json({ ok: true });
-  },
 };
 
 export default async (req, context) => {

@@ -127,7 +127,6 @@
         h('div', { class: 'grid' },
           h('button', { class: 'tile', type: 'button', onclick: showMessages }, 'Messages reçus', h('small', {}, me.unread ? me.unread + ' nouveau' + (me.unread > 1 ? 'x' : '') : 'Messages du formulaire de contact'), me.unread ? h('span', { class: 'pill' }, 'à lire') : null),
           h('button', { class: 'tile', type: 'button', onclick: showHelp }, 'Aide', h('small', {}, 'Comment faire ?')),
-          h('button', { class: 'tile', type: 'button', onclick: showPassword }, 'Changer mon mot de passe', h('small', {}, 'Pour plus de sécurité')),
           h('a', { class: 'tile', href: '/', target: '_blank', rel: 'noopener' }, 'Voir le site', h('small', {}, 'S\'ouvre dans un nouvel onglet'))),
         h('p', { class: 'muted', style: 'margin-top:36px' }, 'Vous ne pouvez pas ajouter ou supprimer de page, ni changer la mise en page : le reste du site est modifiable.')));
   }
@@ -149,23 +148,6 @@
   function showHelp() {
     editorActive = false;
     app.replaceChildren(topBar(h('button', { class: 'btn small', onclick: showHome }, '← Retour au menu')), h('div', { class: 'wrap' }, h('h1', {}, 'Aide'), h('div', { class: 'card' }, helpBody())));
-  }
-
-  /* ---------- mot de passe ---------- */
-  function showPassword() {
-    const cur = h('input', { type: 'password', autocomplete: 'current-password' }), n1 = h('input', { type: 'password', autocomplete: 'new-password' }), n2 = h('input', { type: 'password', autocomplete: 'new-password' });
-    const msg = h('div', { hidden: true, role: 'alert' });
-    const go = h('button', { class: 'btn main', type: 'submit', style: 'margin-top:22px' }, 'Enregistrer mon nouveau mot de passe');
-    const form = h('form', {
-      onsubmit: async (e) => {
-        e.preventDefault(); msg.hidden = true;
-        if (n1.value !== n2.value) { msg.className = 'err'; msg.textContent = 'Les deux nouveaux mots de passe ne sont pas identiques.'; msg.hidden = false; return; }
-        go.disabled = true; const r = await api('change-password', { current: cur.value, next: n1.value }); go.disabled = false;
-        msg.className = r.ok ? 'ok' : 'err'; msg.textContent = r.ok ? 'Votre mot de passe a bien été changé. Notez-le bien.' : r.error; msg.hidden = false;
-        if (r.ok) { cur.value = n1.value = n2.value = ''; }
-      },
-    }, h('label', {}, 'Mot de passe actuel'), cur, h('label', {}, 'Nouveau mot de passe (8 caractères minimum)'), n1, h('label', {}, 'Nouveau mot de passe, une seconde fois'), n2, msg, go);
-    app.replaceChildren(topBar(h('button', { class: 'btn small', onclick: showHome }, '← Retour au menu')), h('div', { class: 'wrap', style: 'max-width:620px' }, h('h1', {}, 'Changer mon mot de passe'), h('div', { class: 'card' }, form)));
   }
 
   /* ---------- messages reçus ---------- */

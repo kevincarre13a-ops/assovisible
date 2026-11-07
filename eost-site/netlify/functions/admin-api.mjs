@@ -12519,11 +12519,6 @@ var COOKIE = "eost_admin";
 var SESSION_MS = 12 * 60 * 60 * 1e3;
 var b64u = (b) => Buffer.from(b).toString("base64url");
 var sign = (secret, data) => createHmac("sha256", secret).update(data).digest("base64url");
-async function hashPassword(password, saltBuf = randomBytes(16)) {
-  const N = 16384, r = 8, p = 1;
-  const key = await scrypt(password.normalize("NFKC"), saltBuf, 32, { N, r, p });
-  return `scrypt$${N}$${r}$${p}$${saltBuf.toString("base64")}$${key.toString("base64")}`;
-}
 async function verifyPassword(password, stored) {
   try {
     const [alg, N, r, p, salt, hash] = String(stored).split("$");
@@ -12855,17 +12850,6 @@ var actions = {
     const { key } = ctx.body;
     if (!/^m:[\w-]+$/.test(String(key))) return bad("Message inconnu.");
     await messagesStore().delete(key);
-    return json({ ok: true });
-  },
-  async "change-password"(ctx) {
-    const { current, next } = ctx.body;
-    const cred = await getCredentials();
-    if (!await verifyPassword(String(current || ""), cred.hash)) {
-      await sleep2(500);
-      return bad("Le mot de passe actuel n'est pas le bon.", 403);
-    }
-    if (typeof next !== "string" || next.length < 8) return bad("Le nouveau mot de passe doit faire au moins 8 caract\xE8res.");
-    await authStore().setJSON("cred", { user: cred.user, hash: await hashPassword(next) });
     return json({ ok: true });
   }
 };

@@ -100,11 +100,8 @@ r = await api2('message-delete', { key: first.key }, cookie); ok('supprimer un m
 r = await api2('message-delete', { key: '../../x' }, cookie); ok('clé de message piégée refusée', (await r.json()).ok === false);
 
 console.log('Mot de passe');
-r = await api2('change-password', { current: 'faux', next: 'nouveau-mdp-123' }, cookie); ok('ancien mot de passe faux : refusé', r.status === 403);
-r = await api2('change-password', { current: 'test-1234', next: 'court' }, cookie); ok('mot de passe trop court refusé', (await r.json()).ok === false);
-r = await api2('change-password', { current: 'test-1234', next: 'nouveau-mdp-123' }, cookie); ok('changement du mot de passe', (await r.json()).ok);
-r = await api2('login', { user: 'eost', password: 'test-1234' }); ok('l\'ancien mot de passe ne marche plus', r.status === 401);
-r = await api2('login', { user: 'eost', password: 'nouveau-mdp-123' }); ok('le nouveau marche', r.status === 200);
+r = await api2('change-password', { current: 'test-1234', next: 'nouveau-mdp-123' }, cookie); ok('changement de mot de passe impossible depuis l\'admin', r.status === 404 || (await r.json()).ok === false);
+r = await api2('login', { user: 'eost', password: 'test-1234' }); ok('le mot de passe reste inchangé', r.status === 200);
 r = await api2('logout', {}, cookie); ok('déconnexion', r.status === 200 && /Max-Age=0/.test(r.headers.get('set-cookie')));
 await s2.stop();
 console.log(`\n${pass} vérifications réussies.`);
