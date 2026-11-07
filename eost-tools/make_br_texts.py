@@ -363,6 +363,18 @@ T.update({
 "Télécharger l'affiche (PDF)":"Pellgargañ ar skritell (PDF)",
 })
 T.update({"Espace administrateur":"Takad merañ"})
+
+T.update({
+" de mai à septembre, animations l'été et lors des journées du patrimoine (le moulin ne tourne que s'il y a du vent !). Visites toute l'année pour les groupes d'au moins 10 personnes, selon la disponibilité des bénévoles. Cet été : 827 visiteurs lors de 40 permanences assurées par 14 bénévoles.":" eus miz Mae da viz Gwengolo, abadennoù en hañv ha da vare Devezhioù ar glad (ne dro ar milin nemet pa vez avel !). Bez e c'hall strolladoù a 10 den da nebeutañ gweladenniñ ar vilin a-hed ar bloaz, hervez ma vez gouest ar re a-youl-vat. An hañv-mañ : 827 gweladenner e-pad 40 abadenn kaset a-benn gant 14 den a-youl-vat.",
+"14 au moulin, 53 adhérents":"14 er milin, 53 ezel",
+"Une curiosité :":"Ur c'hurioztez :",
+" ses ailes tournent à l'envers, mais cela ne se remarque pas si l'on n'est pas spécialiste.":" treiñ a ra e askelioù en tu kontrol, met ne vez ket gwelet ma n'eo ket unan eus an arbennigourien.",
+"30 ans d'EOST":"30 vloaz EOST",
+"Samedi 12 juin : anniversaire des 30 ans de l'association.":"Sadorn 12 a viz Mezheven : lidet 30 vloaz ar gevredigezh.",
+"4 nov. 2026":"4 a viz Du 2026",
+"Activités 2026-2027 et site internet":"Oberiantizoù 2026-2027 ha lec'hienn internet",
+"Conseil d'administration de rentrée : bilan du semestre, 827 visiteurs au moulin cet été grâce à 14 bénévoles, nouveau site bilingue, assemblée générale le 6 février et 30 ans d'EOST le 12 juin.":"Kuzul-merañ an distro-skol : bilañs ar c'hwec'h miz diwezhañ, 827 gweladenner er milin an hañv-mañ a-drugarez da 14 den a-youl-vat, lec'hienn nevez divyezhek, bodadeg veur d'ar 6 a viz C'hwevrer ha 30 vloaz EOST d'an 12 a viz Mezheven.",
+})
 # cles speciales: texte "Eost"/"eost" ambigus -> on ne garde que les noeuds exacts (voir build.cjs : cle entouree de > <)
 json.dump(T,open('br-textes.json','w'),ensure_ascii=False,indent=0)
 print(len(T))
