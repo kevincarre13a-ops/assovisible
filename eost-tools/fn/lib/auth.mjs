@@ -27,11 +27,8 @@ export async function verifyPassword(password, stored) {
 }
 
 /** Identifiants : ceux modifiés par l'utilisateur (Blobs) sinon ceux de l'environnement Netlify. */
+// Identifiant et mot de passe : uniquement dans les variables d'environnement Netlify (modifiables par l'agence seulement).
 export async function getCredentials() {
-  try {
-    const c = await authStore().get('cred', { type: 'json' });
-    if (c && c.user && c.hash) return c;
-  } catch { /* on retombe sur l'environnement */ }
   return { user: env('ADMIN_USER'), hash: env('ADMIN_PASSWORD_HASH') };
 }
 

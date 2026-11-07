@@ -12531,11 +12531,6 @@ async function verifyPassword(password, stored) {
   }
 }
 async function getCredentials() {
-  try {
-    const c = await authStore().get("cred", { type: "json" });
-    if (c && c.user && c.hash) return c;
-  } catch {
-  }
   return { user: env("ADMIN_USER"), hash: env("ADMIN_PASSWORD_HASH") };
 }
 function makeSession(user) {
