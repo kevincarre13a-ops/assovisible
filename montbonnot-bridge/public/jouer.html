@@ -34,14 +34,14 @@
 <button class="nav-toggle" aria-expanded="false" aria-controls="menu"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="label">Menu</span></button>
 <nav class="main-nav" id="menu" aria-label="Navigation principale">
 <ul>
-<li><a href="index.html"><svg class="suit" aria-hidden="true"><use href="#spade"/></svg><span>Accueil</span></a></li>
-<li><a href="le-club.html"><svg class="suit" aria-hidden="true"><use href="#heart"/></svg><span>Le club</span></a></li>
-<li><a href="jouer.html" aria-current="page"><svg class="suit" aria-hidden="true"><use href="#diamond"/></svg><span>Jouer avec nous</span></a></li>
-<li><a href="cours.html"><svg class="suit" aria-hidden="true"><use href="#club"/></svg><span>Cours &amp; initiation</span></a></li>
-<li><a href="tournois.html"><svg class="suit" aria-hidden="true"><use href="#spade"/></svg><span>Tournois &amp; résultats</span></a></li>
+<li class="has-sub"><a href="index.html"><svg class="suit" aria-hidden="true"><use href="#spade"/></svg><span>Accueil</span></a><button type="button" class="sub-toggle" aria-expanded="false" aria-label="Afficher les pages de la rubrique Accueil"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><ul class="subnav"><li><a href="actualites.html#a-l-affiche">À l’affiche</a></li><li><a href="actualites.html#archives">Archives récentes</a></li><li><a href="agenda.html">Agenda</a></li></ul></li>
+<li class="has-sub"><a href="le-club.html"><svg class="suit" aria-hidden="true"><use href="#heart"/></svg><span>Le club</span></a><button type="button" class="sub-toggle" aria-expanded="false" aria-label="Afficher les pages de la rubrique Le club"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><ul class="subnav"><li><a href="le-club.html">Qui sommes-nous ?</a></li><li><a href="le-club.html#nous-trouver">Nous trouver</a></li><li><a href="le-club.html#bureau">Le bureau</a></li></ul></li>
+<li class="has-sub open"><a href="jouer.html" aria-current="page"><svg class="suit" aria-hidden="true"><use href="#diamond"/></svg><span>Jouer avec nous</span></a><button type="button" class="sub-toggle" aria-expanded="true" aria-label="Afficher les pages de la rubrique Jouer avec nous"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><ul class="subnav"><li><a href="jouer.html" aria-current="page">Tournois et parties</a></li><li><a href="animations.html">Les animations</a></li><li><a href="recherche-partenaires.html">Recherche de partenaires</a></li></ul></li>
+<li class="has-sub"><a href="cours.html"><svg class="suit" aria-hidden="true"><use href="#club"/></svg><span>Cours &amp; initiation</span></a><button type="button" class="sub-toggle" aria-expanded="false" aria-label="Afficher les pages de la rubrique Cours et initiation"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><ul class="subnav"><li><a href="cours.html">Cours pour adultes</a></li><li><a href="bridge-scolaire.html">Bridge scolaire</a></li></ul></li>
+<li class="has-sub"><a href="tournois.html"><svg class="suit" aria-hidden="true"><use href="#spade"/></svg><span>Tournois &amp; résultats</span></a><button type="button" class="sub-toggle" aria-expanded="false" aria-label="Afficher les pages de la rubrique Tournois et résultats"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><ul class="subnav"><li><a href="tournois.html#calendrier">Les tournois</a></li><li><a href="tournois.html#competitions">Les compétitions</a></li><li><a href="tournois.html#resultats">Résultats FFB et Bridge+</a></li><li><a href="donnes.html">Donnes commentées</a></li></ul></li>
 <li><a href="galerie.html"><svg class="suit" aria-hidden="true"><use href="#heart"/></svg><span>Galerie</span></a></li>
 <li><a href="actualites.html"><svg class="suit" aria-hidden="true"><use href="#diamond"/></svg><span>Actualités</span></a></li>
-<li><a href="adherer-contact.html"><svg class="suit" aria-hidden="true"><use href="#club"/></svg><span>Adhérer / Contact</span></a></li>
+<li class="has-sub"><a href="adherer-contact.html"><svg class="suit" aria-hidden="true"><use href="#club"/></svg><span>Adhérer / Contact</span></a><button type="button" class="sub-toggle" aria-expanded="false" aria-label="Afficher les pages de la rubrique Adhérer / Contact"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><ul class="subnav"><li><a href="adherer-contact.html">Adhérer et nous écrire</a></li><li><a href="membres.html">Espace membres</a></li><li><a href="liens.html">Liens utiles</a></li></ul></li>
 <li class="sub"><a href="mentions-legales.html"><span>Mentions légales</span></a></li>
 </ul>
 </nav>
@@ -63,7 +63,7 @@
 <div class="sec-head reveal"><span class="kicker"><svg class="suit" aria-hidden="true"><use href="#diamond"/></svg> Tournois et parties</span><h2 id="t-form">Les formules pour jouer</h2></div>
 <div class="grid g2">
 <article class="card hover-lift reveal"><div class="icon-badge"><svg class="suit" aria-hidden="true"><use href="#spade"/></svg></div><h3>Rondes de France</h3><p>Le rendez-vous régulier du club : un tournoi par paires, <strong>tous les lundis et mercredis</strong>, de 13&nbsp;h&nbsp;45 à 18&nbsp;h&nbsp;00, toute l’année.</p><p><span class="tag">Venez avec votre partenaire</span> <span class="tag green">Points d’experts</span></p></article>
-<article class="card hover-lift reveal" data-d="1"><div class="icon-badge red"><svg class="suit" aria-hidden="true"><use href="#heart"/></svg></div><h3>Un événement chaque mois</h3><p>Tournoi à thème avec repas, voyage à la rencontre d’un autre club, sortie à la montagne… et toujours au moins un tournoi de bridge.</p><p><a href="actualites.html">Voir les dernières sorties</a></p></article>
+<article class="card hover-lift reveal" data-d="1"><div class="icon-badge red"><svg class="suit" aria-hidden="true"><use href="#heart"/></svg></div><h3>Un événement chaque mois</h3><p>Tournoi à thème avec repas, voyage à la rencontre d’un autre club, sortie à la montagne… et toujours au moins un tournoi de bridge.</p><p><a href="animations.html">Découvrir les animations</a></p></article>
 <article class="card hover-lift reveal"><div class="icon-badge"><svg class="suit" aria-hidden="true"><use href="#club"/></svg></div><h3>Tournois exceptionnels</h3><p>Tournoi de rentrée, Tournoi des Dindes, tournois caritatifs au profit d’associations : un calendrier festif tout au long de la saison.</p><p><a href="tournois.html">Calendrier des tournois</a></p></article>
 <article class="card hover-lift reveal" data-d="1"><div class="icon-badge red"><svg class="suit" aria-hidden="true"><use href="#diamond"/></svg></div><h3>Parties libres</h3><p>Pour le plaisir de jouer sans enjeu.</p><div class="note todo"><strong>Jours et horaires de jeu libre :</strong> aucune information publiée. À confirmer avec le club.</div></article>
 </div>
@@ -105,7 +105,7 @@
 <div class="reveal">
 <div class="sec-head"><span class="kicker"><svg class="suit" aria-hidden="true"><use href="#club"/></svg> Débutants bienvenus</span><h2 id="t-debutants">Nos conseils pour une première fois</h2></div>
 <ul class="checks">
-<li><strong>Venez avec votre partenaire</strong> : les rondes se jouent par paires. Pas de partenaire ? Envoyez un SMS à Alain Tosi au <a href="tel:0610721178">06 10 72 11 78</a> en précisant votre nom, la date du tournoi, votre classement et votre numéro de portable : le club lance une recherche de partenaire.</li>
+<li><strong>Venez avec votre partenaire</strong> : les rondes se jouent par paires. Pas de partenaire ? <a href="recherche-partenaires.html">Le club vous aide à en trouver un</a> : un SMS à Alain Tosi au <a href="tel:0610721178">06 10 72 11 78</a> suffit.</li>
 <li><strong>Jamais joué ?</strong> Commencez par les cours de première année, destinés aux personnes n’ayant jamais joué au bridge.</li>
 <li><strong>La licence est offerte la première année</strong> (obligatoire pour les compétitions).</li>
 <li><strong>Droits de table réduits</strong> et carte de 9 tournois pour les adhérents.</li>
@@ -136,6 +136,10 @@ Salle Saint-Exupéry — 980 chemin de la Laurelle<br>38330 Montbonnot-Saint-Mar
 <div>
 <h2>Le site</h2>
 <ul><li><a href="index.html">Accueil</a></li><li><a href="le-club.html">Le club</a></li><li><a href="jouer.html">Jouer avec nous</a></li><li><a href="cours.html">Cours &amp; initiation</a></li><li><a href="tournois.html">Tournois &amp; résultats</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="actualites.html">Actualités</a></li><li><a href="adherer-contact.html">Adhérer / Contact</a></li></ul>
+</div>
+<div>
+<h2>Aussi sur le site</h2>
+<ul><li><a href="agenda.html">Agenda</a></li><li><a href="animations.html">Les animations</a></li><li><a href="recherche-partenaires.html">Recherche de partenaires</a></li><li><a href="bridge-scolaire.html">Bridge scolaire</a></li><li><a href="donnes.html">Donnes commentées</a></li><li><a href="membres.html">Espace membres</a></li><li><a href="liens.html">Liens utiles</a></li></ul>
 </div>
 <div>
 <h2>Sur le web</h2>

@@ -21,6 +21,24 @@
     window.matchMedia("(min-width:1340px)").addEventListener("change", function () { setMenu(false); });
   }
 
+  /* ---- Sous-menus : accordéon (mobile) ou liste déroulante (bureau) ---- */
+  var desktop = window.matchMedia("(min-width:1340px)");
+  doc.querySelectorAll(".sub-toggle").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var li = btn.closest(".has-sub");
+      var cls = desktop.matches ? "dd-open" : "open";
+      var open = !li.classList.contains(cls);
+      doc.querySelectorAll(".has-sub.dd-open").forEach(function (x) { if (x !== li) x.classList.remove("dd-open"); });
+      li.classList.toggle(cls, open);
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+  doc.addEventListener("click", function () { doc.querySelectorAll(".has-sub.dd-open").forEach(function (x) { x.classList.remove("dd-open"); }); });
+  doc.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") doc.querySelectorAll(".has-sub.dd-open").forEach(function (x) { x.classList.remove("dd-open"); });
+  });
+
   /* ---- Ombre de l'en-tête ---- */
   var header = doc.querySelector(".site-header");
   function onScroll() { if (header) header.classList.toggle("scrolled", window.scrollY > 10); }
@@ -150,6 +168,65 @@
       if (e.key === "ArrowLeft") show(idx - 1);
       if (e.key === "ArrowRight") show(idx + 1);
     });
+  }
+
+
+  /* ---- Actualités : « À l'affiche » (2 mois maximum) / « Archives récentes » ---- */
+  var boxA = doc.querySelector("#a-l-affiche .news"), boxB = doc.querySelector("#archives .news");
+  if (boxA && boxB) {
+    var items = Array.prototype.slice.call(doc.querySelectorAll(".news-item"));
+    var nowD = new Date();
+    items.forEach(function (el) {
+      var d = el.getAttribute("data-date"), recent = true;
+      if (d) { var q = d.split("-"); recent = (nowD - new Date(+q[0], +q[1] - 1, +q[2])) / 86400000 <= 62; }
+      (recent ? boxA : boxB).appendChild(el);
+    });
+    [boxA, boxB].forEach(function (b) { var n = b.parentNode.querySelector(".empty-note"); if (n) n.hidden = b.children.length > 0; });
+  }
+
+  /* ---- Agenda : calendrier du mois + prochains rendez-vous ---- */
+  var cal = doc.getElementById("agenda-cal");
+  if (cal) {
+    var MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+    var JOURS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
+    var evs = (window.CLUB_EVENTS || []).map(function (e) { var p = e.date.split("-"); return { d: new Date(+p[0], +p[1] - 1, +p[2]), e: e }; });
+    var t0 = new Date(); t0 = new Date(t0.getFullYear(), t0.getMonth(), t0.getDate());
+    var view = new Date(t0.getFullYear(), t0.getMonth(), 1);
+    var same = function (a, b) { return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate(); };
+    var draw = function () {
+      var y = view.getFullYear(), m = view.getMonth();
+      var first = new Date(y, m, 1), lead = (first.getDay() + 6) % 7, days = new Date(y, m + 1, 0).getDate();
+      var html = '<div class="cal-head"><button type="button" data-n="-1" aria-label="Mois précédent">‹</button><h3>' + MOIS[m] + " " + y +
+        '</h3><button type="button" data-n="1" aria-label="Mois suivant">›</button></div><table><thead><tr>';
+      JOURS.forEach(function (j) { html += '<th scope="col" abbr="' + j + '">' + j.slice(0, 3) + ".</th>"; });
+      html += "</tr></thead><tbody><tr>";
+      for (var i = 0; i < lead; i++) html += "<td></td>";
+      for (var d = 1; d <= days; d++) {
+        var dt = new Date(y, m, d), wd = dt.getDay(), cls = [], label = d + " " + MOIS[m];
+        var ev = evs.filter(function (x) { return same(x.d, dt); })[0];
+        if (wd === 1 || wd === 3) { cls.push("ronde"); label += " : Ronde de France, 13 h 45"; }
+        if (ev) { cls.push("ev"); label += " : " + ev.e.titre; }
+        if (same(dt, t0)) cls.push("today");
+        html += '<td class="' + cls.join(" ") + '"><span' + (cls.length ? ' title="' + label + '" aria-label="' + label + '"' : "") + ">" + d + "</span></td>";
+        if ((lead + d) % 7 === 0 && d < days) html += "</tr><tr>";
+      }
+      html += "</tr></tbody></table>";
+      cal.innerHTML = html;
+      cal.querySelectorAll(".cal-head button").forEach(function (b) {
+        b.addEventListener("click", function () { view = new Date(y, m + (+b.getAttribute("data-n")), 1); draw(); });
+      });
+    };
+    draw();
+    var list = doc.getElementById("agenda-list"), empty = doc.getElementById("agenda-empty");
+    var up = evs.filter(function (x) { return x.d >= t0; }).sort(function (a, b) { return a.d - b.d; });
+    up.forEach(function (x) {
+      var li = doc.createElement("li");
+      li.innerHTML = "<strong></strong> <span></span>";
+      li.firstChild.textContent = JOURS[(x.d.getDay() + 6) % 7] + " " + x.d.getDate() + " " + MOIS[x.d.getMonth()];
+      li.lastChild.textContent = (x.e.heure ? ", " + x.e.heure : "") + " : " + x.e.titre + (x.e.lieu ? " — " + x.e.lieu : "") + (x.e.details ? ". " + x.e.details : "");
+      list.insertBefore(li, list.firstChild);
+    });
+    if (empty) empty.hidden = up.length > 0;
   }
 
   /* ---- Formulaire : sujet pré-rempli (?sujet=cours) ---- */

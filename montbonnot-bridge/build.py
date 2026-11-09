@@ -4,6 +4,7 @@
 Usage : python3 build.py
 Le menu, l'en-tête et le pied de page sont définis une seule fois ici et injectés dans toutes les pages.
 """
+import datetime
 import os
 import re
 
@@ -25,14 +26,38 @@ MAPS = "https://www.google.com/maps/search/?api=1&query=980+chemin+de+la+Laurell
 MAP_EMBED = "https://maps.google.com/maps?q=980+chemin+de+la+Laurelle+38330+Montbonnot-Saint-Martin&output=embed&hl=fr"
 
 NAV = [
-    ("index.html", "Accueil", "spade"),
-    ("le-club.html", "Le club", "heart"),
-    ("jouer.html", "Jouer avec nous", "diamond"),
-    ("cours.html", "Cours &amp; initiation", "club"),
-    ("tournois.html", "Tournois &amp; résultats", "spade"),
-    ("galerie.html", "Galerie", "heart"),
-    ("actualites.html", "Actualités", "diamond"),
-    ("adherer-contact.html", "Adhérer / Contact", "club"),
+    ("index.html", "Accueil", "spade", [
+        ("actualites.html#a-l-affiche", "À l’affiche"),
+        ("actualites.html#archives", "Archives récentes"),
+        ("agenda.html", "Agenda"),
+    ]),
+    ("le-club.html", "Le club", "heart", [
+        ("le-club.html", "Qui sommes-nous ?"),
+        ("le-club.html#nous-trouver", "Nous trouver"),
+        ("le-club.html#bureau", "Le bureau"),
+    ]),
+    ("jouer.html", "Jouer avec nous", "diamond", [
+        ("jouer.html", "Tournois et parties"),
+        ("animations.html", "Les animations"),
+        ("recherche-partenaires.html", "Recherche de partenaires"),
+    ]),
+    ("cours.html", "Cours &amp; initiation", "club", [
+        ("cours.html", "Cours pour adultes"),
+        ("bridge-scolaire.html", "Bridge scolaire"),
+    ]),
+    ("tournois.html", "Tournois &amp; résultats", "spade", [
+        ("tournois.html#calendrier", "Les tournois"),
+        ("tournois.html#competitions", "Les compétitions"),
+        ("tournois.html#resultats", "Résultats FFB et Bridge+"),
+        ("donnes.html", "Donnes commentées"),
+    ]),
+    ("galerie.html", "Galerie", "heart", []),
+    ("actualites.html", "Actualités", "diamond", []),
+    ("adherer-contact.html", "Adhérer / Contact", "club", [
+        ("adherer-contact.html", "Adhérer et nous écrire"),
+        ("membres.html", "Espace membres"),
+        ("liens.html", "Liens utiles"),
+    ]),
 ]
 LEGAL = ("mentions-legales.html", "Mentions légales")
 
@@ -76,11 +101,30 @@ def head(page, title, desc):
 """
 
 
+CHEVRON = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+
+
 def header(page):
     items = []
-    for f, label, s in NAV:
-        cur = ' aria-current="page"' if f == page else ""
-        items.append(f'<li><a href="{f}"{cur}>{suit(s)}<span>{label}</span></a></li>')
+    for f, label, s_, kids in NAV:
+        is_page = f == page
+        is_anc = (not is_page) and page in {k[0] for k in kids if "#" not in k[0]}
+        cur = ' aria-current="page"' if is_page else (' aria-current="true"' if is_anc else "")
+        link = f'<a href="{f}"{cur}>{suit(s_)}<span>{label}</span></a>'
+        if not kids:
+            items.append(f"<li>{link}</li>")
+            continue
+        sub = []
+        for href, klabel in kids:
+            kcur = ' aria-current="page"' if (href == page) else ""
+            sub.append(f'<li><a href="{href}"{kcur}>{klabel}</a></li>')
+        opened = is_page or is_anc
+        items.append(
+            f'<li class="has-sub{" open" if opened else ""}">{link}'
+            f'<button type="button" class="sub-toggle" aria-expanded="{"true" if opened else "false"}" '
+            f'aria-label="Afficher les pages de la rubrique {label.replace("&amp;", "et")}">{CHEVRON}</button>'
+            f'<ul class="subnav">{"".join(sub)}</ul></li>'
+        )
     f, label = LEGAL
     cur = ' aria-current="page"' if f == page else ""
     items.append(f'<li class="sub"><a href="{f}"{cur}><span>{label}</span></a></li>')
@@ -102,8 +146,18 @@ def header(page):
 
 
 def footer():
-    links = "".join(
-        f'<li><a href="{f}">{l}</a></li>' for f, l, _ in NAV
+    links = "".join(f'<li><a href="{f}">{l}</a></li>' for f, l, _, _ in NAV)
+    more = "".join(
+        f'<li><a href="{f}">{l}</a></li>'
+        for f, l in (
+            ("agenda.html", "Agenda"),
+            ("animations.html", "Les animations"),
+            ("recherche-partenaires.html", "Recherche de partenaires"),
+            ("bridge-scolaire.html", "Bridge scolaire"),
+            ("donnes.html", "Donnes commentées"),
+            ("membres.html", "Espace membres"),
+            ("liens.html", "Liens utiles"),
+        )
     )
     return f"""<footer class="site-footer">
 <div class="wrap">
@@ -124,6 +178,10 @@ def footer():
 <div>
 <h2>Le site</h2>
 <ul>{links}</ul>
+</div>
+<div>
+<h2>Aussi sur le site</h2>
+<ul>{more}</ul>
 </div>
 <div>
 <h2>Sur le web</h2>
@@ -394,7 +452,19 @@ def page_club():
 </div>
 </section>
 
-<section class="alt" aria-labelledby="t-bureau">
+<section id="nous-trouver" aria-labelledby="t-trouver">
+<div class="wrap split">
+<div class="reveal">
+{sec_head('Nous trouver', 'Au cœur du village de Montbonnot', 'heart').replace('<h2>', '<h2 id="t-trouver">').replace(' reveal', '')}
+<p>Le club se trouve à la <strong>salle Saint-Exupéry</strong>, derrière la maison des Arts (sous la médiathèque).</p>
+<address style="font-style:normal;font-size:1.2rem;margin-bottom:1.2rem"><strong>{ADDR1}</strong><br>{ADDR2}</address>
+<div class="btn-row"><a class="btn btn-red" href="{MAPS}" target="_blank" rel="noopener">Itinéraire sur Google Maps</a><a class="btn btn-outline" href="jouer.html">Horaires de jeu</a></div>
+</div>
+<div class="reveal" data-d="1"><iframe class="map" title="Plan : salle Saint-Exupéry, 980 chemin de la Laurelle, Montbonnot-Saint-Martin" src="{MAP_EMBED}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</div>
+</section>
+
+<section class="alt" id="bureau" aria-labelledby="t-bureau">
 <div class="wrap">
 {sec_head('Bureau et comité', 'Les bénévoles qui font vivre le club', 'club').replace('<h2>', '<h2 id="t-bureau">')}
 <div class="split" style="margin-bottom:34px"><figure class="photo reveal"><img src="img/equipe-ffb.jpg" alt="Six bénévoles du club en T-shirts assortis devant l’entrée de la Fédération Française de Bridge" width="426" height="504" loading="lazy" style="max-height:520px;object-fit:cover;width:100%"><figcaption>Des bénévoles du club, en T-shirts aux couleurs de Montbonnot, devant la Fédération Française de Bridge.</figcaption></figure><div class="reveal" data-d="1"><p style="font-size:1.25rem">Derrière chaque tournoi, chaque cours et chaque sortie, il y a une équipe de bénévoles qui donne de son temps avec le sourire.</p><p>Envie de nous donner un coup de main ou simplement de faire connaissance ? Venez nous voir un lundi ou un mercredi après-midi.</p><div class="btn-row"><a class="btn btn-red" href="adherer-contact.html#essayer">Venir nous voir</a></div></div></div>
@@ -438,7 +508,7 @@ def page_jouer():
 {sec_head('Tournois et parties', 'Les formules pour jouer', 'diamond').replace('<h2>', '<h2 id="t-form">')}
 <div class="grid g2">
 <article class="card hover-lift reveal"><div class="icon-badge">{suit('spade')}</div><h3>Rondes de France</h3><p>Le rendez-vous régulier du club : un tournoi par paires, <strong>tous les lundis et mercredis</strong>, de 13 h 45 à 18 h 00, toute l’année.</p><p><span class="tag">Venez avec votre partenaire</span> <span class="tag green">Points d’experts</span></p></article>
-<article class="card hover-lift reveal" data-d="1"><div class="icon-badge red">{suit('heart')}</div><h3>Un événement chaque mois</h3><p>Tournoi à thème avec repas, voyage à la rencontre d’un autre club, sortie à la montagne… et toujours au moins un tournoi de bridge.</p><p><a href="actualites.html">Voir les dernières sorties</a></p></article>
+<article class="card hover-lift reveal" data-d="1"><div class="icon-badge red">{suit('heart')}</div><h3>Un événement chaque mois</h3><p>Tournoi à thème avec repas, voyage à la rencontre d’un autre club, sortie à la montagne… et toujours au moins un tournoi de bridge.</p><p><a href="animations.html">Découvrir les animations</a></p></article>
 <article class="card hover-lift reveal"><div class="icon-badge">{suit('club')}</div><h3>Tournois exceptionnels</h3><p>Tournoi de rentrée, Tournoi des Dindes, tournois caritatifs au profit d’associations : un calendrier festif tout au long de la saison.</p><p><a href="tournois.html">Calendrier des tournois</a></p></article>
 <article class="card hover-lift reveal" data-d="1"><div class="icon-badge red">{suit('diamond')}</div><h3>Parties libres</h3><p>Pour le plaisir de jouer sans enjeu.</p><div class="note todo"><strong>Jours et horaires de jeu libre :</strong> aucune information publiée. À confirmer avec le club.</div></article>
 </div>
@@ -480,7 +550,7 @@ def page_jouer():
 <div class="reveal">
 {sec_head('Débutants bienvenus', 'Nos conseils pour une première fois', 'club').replace('<h2>', '<h2 id="t-debutants">').replace(' reveal', '')}
 <ul class="checks">
-<li><strong>Venez avec votre partenaire</strong> : les rondes se jouent par paires. Pas de partenaire ? Envoyez un SMS à Alain Tosi au <a href="tel:{PHONE_RAW}">{PHONE}</a> en précisant votre nom, la date du tournoi, votre classement et votre numéro de portable : le club lance une recherche de partenaire.</li>
+<li><strong>Venez avec votre partenaire</strong> : les rondes se jouent par paires. Pas de partenaire ? <a href="recherche-partenaires.html">Le club vous aide à en trouver un</a> : un SMS à Alain Tosi au <a href="tel:{PHONE_RAW}">{PHONE}</a> suffit.</li>
 <li><strong>Jamais joué ?</strong> Commencez par les cours de première année, destinés aux personnes n’ayant jamais joué au bridge.</li>
 <li><strong>La licence est offerte la première année</strong> (obligatoire pour les compétitions).</li>
 <li><strong>Droits de table réduits</strong> et carte de 9 tournois pour les adhérents.</li>
@@ -517,7 +587,7 @@ def page_cours():
     )
     body = page_hero(
         "Cours &amp; initiation",
-        "Découvrir le bridge, reprendre après des années ou se perfectionner : une école de bridge pour chacun.",
+        "Cours pour adultes : découvrir le bridge, reprendre après des années ou se perfectionner. Une école de bridge pour chacun.",
         "Cours &amp; initiation",
     ) + f"""
 <section aria-labelledby="t-ecole">
@@ -527,7 +597,7 @@ def page_cours():
 <h2 id="t-ecole" style="margin-top:.7rem">Apprendre avec des moniteurs diplômés</h2>
 <p>Les cours du 1er cycle d’enseignement du bridge français sont dispensés par des <strong>moniteurs de la Fédération Française de Bridge</strong> issus des clubs de Montbonnot, Biviers, Meylan et Saint-Ismier. Le programme est celui de l’Université du Bridge de la FFB, pour une progression en douceur.</p>
 <p>Les séances durent <strong>2 heures</strong>, en petits groupes, dans une ambiance bienveillante.</p>
-<div class="btn-row"><a class="btn btn-red" href="adherer-contact.html?sujet=cours#contact">S’inscrire ou poser une question</a></div>
+<div class="btn-row"><a class="btn btn-red" href="adherer-contact.html?sujet=cours#contact">S’inscrire ou poser une question</a><a class="btn btn-outline" href="bridge-scolaire.html">Bridge scolaire (enfants)</a></div>
 </div>
 <figure class="photo reveal" data-d="1"><img src="img/ecole-bridge.jpg" alt="Un animateur devant un tableau blanc face à des enfants attablés autour de tables de bridge" width="418" height="309" loading="lazy"><figcaption>À l’école de bridge, on apprend dans la bonne humeur — même les plus jeunes !</figcaption></figure>
 </div>
@@ -603,7 +673,7 @@ def page_tournois():
         "Rondes régulières, événements festifs, interclubs et résultats officiels.",
         "Tournois &amp; résultats",
     ) + f"""
-<section aria-labelledby="t-cal">
+<section id="calendrier" aria-labelledby="t-cal">
 <div class="wrap">
 {sec_head('Calendrier', 'Les rendez-vous du club', 'spade').replace('<h2>', '<h2 id="t-cal">')}
 <div class="table-scroll reveal"><table>
@@ -619,7 +689,7 @@ def page_tournois():
 </div>
 </section>
 
-<section class="alt" aria-labelledby="t-res">
+<section class="alt" id="resultats" aria-labelledby="t-res">
 <div class="wrap">
 {sec_head('Résultats et classements', 'Où retrouver les résultats', 'heart').replace('<h2>', '<h2 id="t-res">')}
 <div class="grid g3">
@@ -640,7 +710,7 @@ def page_tournois():
 </div>
 </section>
 
-<section class="dark" aria-labelledby="t-inter">
+<section class="dark" id="competitions" aria-labelledby="t-inter">
 <div class="wrap split">
 <div class="reveal">
 <span class="kicker" style="color:var(--gold-soft);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.9rem">{suit('spade')} Compétitions</span>
@@ -779,36 +849,55 @@ def page_galerie():
 # ACTUALITÉS
 # --------------------------------------------------------------------------------------
 def page_actus():
-    def item(big, small, title, text, extra=""):
-        return f"""<article class="news-item reveal"><div class="when"><b>{big}</b><span>{small}</span></div><div><h3>{title}</h3>{text}{extra}</div></article>"""
+    def item(big, small, title, text, extra="", date=""):
+        d = f' data-date="{date}"' if date else ""
+        return f"""<article class="news-item reveal"{d}><div class="when"><b>{big}</b><span>{small}</span></div><div><h3>{title}</h3>{text}{extra}</div></article>"""
 
-    items = [
-        item("Été", "2026", "Trois sorties bridge à la montagne et à la campagne",
-             "<p>Le club a proposé un tournoi festif à la <strong>ferme des Charrières à Herbeys</strong> (vendredi 3 juillet), une sortie à <strong>Chamrousse</strong> avec les estivants (24 juillet) et une journée au <strong>Col de Porte</strong> (7 août) : petite randonnée ou concours de boules le matin, repas, puis tournoi de bridge l’après-midi.</p>",
-             '<p><span class="tag">Dates de l’été prochain : à confirmer</span></p>'),
-        item("Bravo", "interclubs", "Nos équipes à l’honneur",
-             "<p>Troisième place en finale de comité interclubs D2, victoires en éliminatoires de district, belles places en finale de l’Isère : le club brille en compétition. Retrouvez le détail dans la page <a href=\"tournois.html\">Tournois &amp; résultats</a>.</p>"),
-        item("29", "mars 2025", "Tournoi au profit d’Espoir Isère contre le Cancer",
+    # (date ISO ou "" si mise à l'honneur sans date, élément)
+    entries = [
+        ("", item("Bravo", "interclubs", "Nos équipes à l’honneur",
+             "<p>Troisième place en finale de comité interclubs D2, victoires en éliminatoires de district, belles places en finale de l’Isère : le club brille en compétition. Retrouvez le détail dans la page <a href=\"tournois.html#competitions\">Tournois &amp; résultats</a>.</p>")),
+        ("2026-08-07", item("Été", "2026", "Trois sorties bridge à la montagne et à la campagne",
+             "<p>Le club a proposé un tournoi festif à la <strong>ferme des Charrières à Herbeys</strong> (vendredi 3 juillet), une sortie à <strong>Chamrousse</strong> avec les estivants (24 juillet) et une journée au <strong>Col de Porte</strong> (7 août) : petite randonnée ou concours de boules le matin, repas, puis tournoi de bridge l’après-midi. <a href=\"animations.html\">Toutes les animations</a>.</p>",
+             '<p><span class="tag">Dates de l’été prochain : à confirmer</span></p>', date="2026-08-07")),
+        ("2025-03-29", item("29", "mars 2025", "Tournoi au profit d’Espoir Isère contre le Cancer",
              "<p>Tournoi par paires homologué organisé par les clubs de Montbonnot, Biviers, Saint-Ismier, Grenoble et Meylan : accueil à partir de 13 h, début du tournoi à 13 h 45, remise des prix et cocktail à partir de 18 h 15. Engagement : 25 €, nombreux lots à gagner.</p>",
-             '<img src="img/affiche-espoir.jpg" alt="Affiche du tournoi au profit d’Espoir Isère contre le Cancer" width="340" height="362" loading="lazy">'),
-        item("9", "déc. 2024", "Tournoi des Dindes",
-             "<p>Un bon entraînement pour les fêtes de Noël, salle Saint-Exupéry : <strong>56 joueurs</strong> se sont affrontés, puis ont ripaillé dans la bonne humeur. <a href=\"galerie.html\">Voir les photos</a>.</p>"),
-        item("30", "sept. 2024", "Tournoi festival des simultanés et assemblée générale",
-             "<p>Le lundi 30 septembre, tournoi suivi de l’assemblée générale du club et d’un cocktail dînatoire.</p>"),
+             '<img src="img/affiche-espoir.jpg" alt="Affiche du tournoi au profit d’Espoir Isère contre le Cancer" width="340" height="362" loading="lazy">', date="2025-03-29")),
+        ("2024-12-09", item("9", "déc. 2024", "Tournoi des Dindes",
+             "<p>Un bon entraînement pour les fêtes de Noël, salle Saint-Exupéry : <strong>56 joueurs</strong> se sont affrontés, puis ont ripaillé dans la bonne humeur. <a href=\"galerie.html\">Voir les photos</a>.</p>", date="2024-12-09")),
+        ("2024-09-30", item("30", "sept. 2024", "Tournoi festival des simultanés et assemblée générale",
+             "<p>Le lundi 30 septembre, tournoi suivi de l’assemblée générale du club et d’un cocktail dînatoire.</p>", date="2024-09-30")),
     ]
+    today = datetime.date.today()
+    recent, older = [], []
+    for d, html in entries:
+        if not d or (today - datetime.date.fromisoformat(d)).days <= 62:
+            recent.append(html)
+        else:
+            older.append(html)
+
+    def block(items, empty):
+        note = f'<p class="empty-note"{" hidden" if items else ""}>{empty}</p>'
+        return f'<div class="news">{"".join(items)}</div>{note}'
+
     body = page_hero(
         "Actualités",
         "La vie du club : sorties, tournois festifs, distinctions et rendez-vous à ne pas manquer.",
         "Actualités",
     ) + f"""
-<section aria-labelledby="t-actus">
+<section id="a-l-affiche" aria-labelledby="t-affiche">
 <div class="wrap narrow">
-<h2 id="t-actus" class="sr-only">Dernières nouvelles</h2>
-<div class="news">
-{''.join(items)}
+{sec_head('À l’affiche', 'Les nouvelles des deux derniers mois', 'diamond').replace('<h2>', '<h2 id="t-affiche">')}
+{block(recent, 'Pas de nouvelle récente pour le moment. Les prochains rendez-vous sont dans l’<a href="agenda.html">agenda</a>.')}
 </div>
-<div class="note reveal" style="margin-top:32px"><strong>Toujours plus d’infos :</strong> convocations aux assemblées, comptes rendus du conseil d’administration, règlement des interclubs et agenda complet sont sur le <a href="{OFFICIAL}" target="_blank" rel="noopener">site officiel du club</a>.</div>
-<div class="btn-row"><a class="btn btn-red" href="adherer-contact.html">Nous contacter</a><a class="btn btn-outline" href="tournois.html">Calendrier des tournois</a></div>
+</section>
+
+<section class="alt" id="archives" aria-labelledby="t-archives">
+<div class="wrap narrow">
+{sec_head('Archives récentes', 'Les actualités de l’année et des années passées', 'club').replace('<h2>', '<h2 id="t-archives">')}
+{block(older, 'Aucune archive pour le moment.')}
+<div class="note reveal" style="margin-top:32px"><strong>Toujours plus d’infos :</strong> convocations aux assemblées, comptes rendus du conseil d’administration, calendrier de la Coupe des clubs, règlement des interclubs et agenda complet sont sur le <a href="{OFFICIAL}" target="_blank" rel="noopener">site officiel du club</a>.</div>
+<div class="btn-row"><a class="btn btn-red" href="adherer-contact.html">Nous contacter</a><a class="btn btn-outline" href="agenda.html">Agenda du club</a></div>
 </div>
 </section>
 """
@@ -872,6 +961,7 @@ def page_contact():
 <option data-key="cours" value="Cours / école de bridge">Cours et école de bridge</option>
 <option data-key="adhesion" value="Adhésion / licence">Adhésion et licence</option>
 <option data-key="partenaire" value="Recherche de partenaire">Recherche de partenaire de jeu</option>
+<option data-key="scolaire" value="Bridge scolaire">Bridge scolaire (enfants, écoles)</option>
 <option data-key="autre" value="Autre question">Autre question</option>
 </select></div>
 <div><label for="message">Votre message *</label><textarea id="message" name="message" required></textarea></div>
@@ -951,9 +1041,229 @@ def page_404():
     html = head("404.html", "Page introuvable", "Page introuvable.") + header("404.html") + body + "</main>\n" + footer()
     for a in ('href="css/', 'href="img/', 'href="favicon', 'src="img/', 'src="js/'):
         html = html.replace(a, a.replace('="', '="/'))
-    for f, _, _ in NAV + [LEGAL + ("",)]:
+    for f in [n[0] for n in NAV] + [LEGAL[0]]:
         html = html.replace(f'href="{f}"', f'href="/{f}"')
     write("404.html", html)
+
+
+
+# --------------------------------------------------------------------------------------
+# PAGES DU PLAN D'ARCHITECTURE : agenda, animations, partenaires, scolaire, donnes, membres, liens
+# --------------------------------------------------------------------------------------
+def page_agenda():
+    body = page_hero(
+        "Agenda",
+        "Les rendez-vous du club, mis à jour au moins une fois par mois.",
+        "Agenda",
+    ) + f"""
+<section aria-labelledby="t-ag">
+<div class="wrap split" style="align-items:start">
+<div class="reveal">
+{sec_head('Prochains rendez-vous', 'Ce qui arrive au club', 'diamond').replace('<h2>', '<h2 id="t-ag">').replace(' reveal', '')}
+<ul class="agenda-list" id="agenda-list">
+<li><strong>Chaque lundi et mercredi</strong>, 13 h 45 – 18 h 00 : Ronde de France, salle Saint-Exupéry.</li>
+</ul>
+<p id="agenda-empty" class="empty-note" hidden>Aucun événement exceptionnel annoncé pour le moment. Un tournoi à thème, une sortie ou une soirée est organisé chaque mois : l’agenda se met à jour dès que la date est fixée.</p>
+<div class="btn-row"><a class="btn btn-red" href="{AGENDA}" target="_blank" rel="noopener">Agenda complet du club</a><a class="btn btn-outline" href="jouer.html">Jouer avec nous</a></div>
+<div class="note"><strong>Pour le club :</strong> ajoutez les animations dès qu’elles sont programmées dans <code>js/events.js</code> ; elles apparaissent ici, dans le calendrier et dans le bloc « Prochain tournoi » de l’accueil.</div>
+</div>
+<div class="reveal" data-d="1">
+<div class="cal" id="agenda-cal" aria-live="polite"></div>
+<p class="cal-legend"><span class="dot ronde"></span> Ronde de France (lundi, mercredi) <span class="dot ev"></span> Événement du club</p>
+<noscript><p>Le calendrier interactif nécessite JavaScript. Rondes de France : tous les lundis et mercredis, 13 h 45 – 18 h 00.</p></noscript>
+</div>
+</div>
+</section>
+"""
+    build_page("agenda.html", "Agenda", "Agenda du Club de Bridge de Montbonnot : rondes de France les lundis et mercredis, événements, sorties et tournois à venir.", body)
+
+
+def page_animations():
+    body = page_hero(
+        "Les animations",
+        "Chaque mois, un événement : tournoi à thème, repas, voyage ou sortie à la montagne.",
+        "Animations",
+    ) + f"""
+<section aria-labelledby="t-anim">
+<div class="wrap split">
+<div class="reveal">
+{sec_head('Une tradition du club', 'Un événement chaque mois', 'heart').replace('<h2>', '<h2 id="t-anim">').replace(' reveal', '')}
+<p>Une particularité du club : organiser chaque mois un « événement ». Ce peut être un <strong>tournoi à thème avec un repas</strong> préparé par le club (tournoi italien, tournoi breton), un <strong>voyage</strong> en France ou à l’étranger avec la rencontre d’un autre club de bridge, ou une <strong>sortie</strong> avec une activité — et toujours au moins un tournoi de bridge.</p>
+<div class="btn-row"><a class="btn btn-red" href="agenda.html">Voir l’agenda</a><a class="btn btn-outline" href="galerie.html">Photos des animations</a></div>
+</div>
+<figure class="photo reveal" data-d="1"><img src="img/sortie-rando.jpg" alt="Groupe de membres du club en randonnée dans la forêt" width="417" height="297" loading="lazy"><figcaption>Sortie bridge et balade : le club aime se retrouver hors des tables.</figcaption></figure>
+</div>
+</section>
+
+<section class="alt" aria-labelledby="t-rdv">
+<div class="wrap">
+{sec_head('Rendez-vous réguliers', 'Les temps forts de la saison', 'diamond').replace('<h2>', '<h2 id="t-rdv">')}
+<div class="grid g3">
+<article class="card hover-lift reveal"><div class="icon-badge">{suit('club')}</div><h3>Tournoi de rentrée et assemblée générale</h3><p>La saison démarre par un tournoi — en 2024, un festival de simultanés le lundi 30 septembre — suivi de l’assemblée générale et d’un cocktail dînatoire.</p></article>
+<article class="card hover-lift reveal" data-d="1"><div class="icon-badge red">{suit('heart')}</div><h3>Tournoi des Dindes</h3><p>Avant les fêtes de Noël, un tournoi puis un repas dans la bonne humeur. Le 9 décembre 2024 : 56 joueurs, salle Saint-Exupéry.</p><p><a href="galerie.html">Voir les photos</a></p></article>
+<article class="card hover-lift reveal" data-d="2"><div class="icon-badge">{suit('diamond')}</div><h3>Tournois solidaires</h3><p>Des tournois au profit d’associations, comme Espoir Isère contre le Cancer (29 mars 2025), avec les clubs de Biviers, Saint-Ismier, Grenoble et Meylan.</p></article>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="t-sorties">
+<div class="wrap">
+{sec_head('Sorties de l’été', 'Bridge, balade et convivialité', 'spade').replace('<h2>', '<h2 id="t-sorties">')}
+<div class="table-scroll reveal"><table>
+<thead><tr><th scope="col">Sortie (été 2026)</th><th scope="col">Programme</th><th scope="col">Participation</th></tr></thead>
+<tbody>
+<tr><td><strong>Vendredi 3 juillet</strong><br>Ferme des Charrières, Herbeys</td><td>Accueil café, tournoi de régularité homologué en deux parties, promenade apéritive facultative, repas au restaurant de la ferme, remise des prix.</td><td>41 € adhérent · 46 € non-adhérent (hors covoiturage)</td></tr>
+<tr><td><strong>Vendredi 24 juillet</strong><br>Chamrousse, avec les estivants</td><td>Petite randonnée facultative, pique-nique ou restaurant, tournoi l’après-midi, apéritif offert par le club.</td><td>8 € par personne, tournoi compris</td></tr>
+<tr><td><strong>Vendredi 7 août</strong><br>Col de Porte</td><td>Petite randonnée ou concours de pétanque le matin, apéritif et repas au restaurant, tournoi de bridge de 14 h à 18 h.</td><td>37 € adhérent · 39 € non-adhérent</td></tr>
+</tbody></table></div>
+<p class="source" style="color:var(--ink-soft)">Programmes et tarifs publiés par le club pour l’été 2026. Les dates de l’été prochain seront annoncées dans l’<a href="agenda.html">agenda</a>.</p>
+</div>
+</section>
+
+<section class="cta" aria-labelledby="t-anim-cta">
+<div class="wrap reveal">
+<h2 id="t-anim-cta">Venez partager un moment avec nous</h2>
+<p>Membres ou non, vous êtes les bienvenus aux animations : écrivez-nous pour savoir ce qui est prévu.</p>
+<div class="btn-row"><a class="btn btn-gold" href="adherer-contact.html#contact">Nous écrire</a><a class="btn btn-ghost" href="agenda.html">Agenda</a></div>
+</div>
+</section>
+"""
+    build_page("animations.html", "Les animations", "Animations du Club de Bridge de Montbonnot : un événement chaque mois, tournoi des Dindes, tournois solidaires et sorties bridge à la montagne.", body)
+
+
+def page_partenaires():
+    body = page_hero(
+        "Recherche de partenaires",
+        "Vous voulez jouer mais vous n’avez pas de partenaire ? Le club vous aide.",
+        "Recherche de partenaires",
+    ) + f"""
+<section aria-labelledby="t-part">
+<div class="wrap split" style="align-items:start">
+<div class="reveal">
+{sec_head('Comment ça marche', 'Trouver un partenaire pour un tournoi', 'club').replace('<h2>', '<h2 id="t-part">').replace(' reveal', '')}
+<p>Les rondes se jouent par paires. Si vous cherchez un partenaire pour jouer à Montbonnot, <strong>envoyez un SMS à Alain Tosi</strong> en précisant :</p>
+<ul class="checks">
+<li>votre <strong>nom</strong> ;</li>
+<li>la <strong>date du tournoi</strong> ;</li>
+<li>votre <strong>classement</strong> ;</li>
+<li>votre <strong>numéro de téléphone portable</strong>.</li>
+</ul>
+<p>Le club lance alors une recherche par la boîte Gmail du club, auprès de tous les membres.</p>
+<div class="btn-row"><a class="btn btn-red" href="sms:{PHONE_RAW}">Envoyer un SMS au {PHONE}</a><a class="btn btn-outline" href="adherer-contact.html?sujet=partenaire#contact">Ou passer par le formulaire</a></div>
+</div>
+<div class="reveal" data-d="1">
+<div class="card"><div class="icon-badge red">{suit('heart')}</div><h3>Prochains tournois</h3><p>Rondes de France <strong>tous les lundis et mercredis</strong>, de 13 h 45 à 18 h 00, salle Saint-Exupéry.</p><p><a href="agenda.html">Voir l’agenda</a> · <a href="jouer.html">Horaires et tarifs</a></p></div>
+<figure class="photo" style="margin-top:22px"><img src="img/partie-conviviale.jpg" alt="Joueurs souriants autour d’une table de bridge" width="419" height="313" loading="lazy"><figcaption>À Montbonnot, on ne reste pas longtemps sans partenaire !</figcaption></figure>
+</div>
+</div>
+</section>
+"""
+    build_page("recherche-partenaires.html", "Recherche de partenaires", "Pas de partenaire pour jouer au bridge à Montbonnot ? Le club vous aide à en trouver un : un SMS suffit.", body)
+
+
+def page_scolaire():
+    body = page_hero(
+        "Bridge scolaire",
+        "Faire découvrir le bridge aux enfants et aux jeunes, en classe ou au club.",
+        "Cours &amp; initiation · Bridge scolaire",
+    ) + f"""
+<section aria-labelledby="t-sco">
+<div class="wrap split">
+<div class="reveal">
+<span class="tag green">Nouveau</span>
+<h2 id="t-sco" style="margin-top:.7rem">Le bridge, ça s’apprend aussi tôt</h2>
+<p>Le bridge est un jeu de cartes qui se joue à quatre, en équipe : on y exerce la mémoire, le calcul, la logique et l’esprit d’équipe. Le club propose aux enfants de le découvrir dans une ambiance joyeuse, avec des animateurs formés.</p>
+<p>Cette page présentera le programme, les établissements concernés et les modalités pour inscrire un enfant ou proposer une intervention dans une école.</p>
+<div class="btn-row"><a class="btn btn-red" href="adherer-contact.html?sujet=scolaire#contact">Nous contacter à ce sujet</a><a class="btn btn-outline" href="cours.html">Cours pour adultes</a></div>
+</div>
+<figure class="photo reveal" data-d="1"><img src="img/ecole-bridge.jpg" alt="Un animateur devant un tableau blanc face à des enfants attablés autour de tables de bridge" width="418" height="309" loading="lazy"><figcaption>Une séance de bridge pour les enfants, tables vertes et chaises colorées.</figcaption></figure>
+</div>
+</section>
+
+<section class="alt" aria-labelledby="t-sco-info">
+<div class="wrap narrow">
+{sec_head('Informations pratiques', 'Écoles, horaires, intervenants', 'club').replace('<h2>', '<h2 id="t-sco-info">')}
+<div class="note todo"><strong>Page à concevoir avec le club :</strong> établissements et classes concernés, jours et horaires, intervenants, tarif éventuel, comment inscrire un enfant ou proposer une intervention en milieu scolaire. Ces informations n’ont pas été publiées.</div>
+</div>
+</section>
+"""
+    build_page("bridge-scolaire.html", "Bridge scolaire", "Bridge scolaire au Club de Bridge de Montbonnot : initiation des enfants et des jeunes au bridge, en classe ou au club.", body)
+
+
+def page_donnes():
+    body = page_hero(
+        "Donnes commentées",
+        "Des donnes pour s’entraîner, destinées en priorité aux élèves de l’école de bridge.",
+        "Tournois &amp; résultats · Donnes",
+    ) + f"""
+<section aria-labelledby="t-donnes">
+<div class="wrap narrow">
+{sec_head('S’entraîner', 'Quelques donnes commentées', 'spade').replace('<h2>', '<h2 id="t-donnes">')}
+<div class="reveal">
+<p>Le club publie des donnes « problème » : on cherche la meilleure ligne de jeu, puis on consulte la solution commentée. Les énoncés sont ouverts à tous ; <strong>les solutions sont réservées aux adhérents connectés</strong>.</p>
+<div class="btn-row"><a class="btn btn-red" href="https://montbonnotbridge.fr/index.php/donnes" target="_blank" rel="noopener">Voir les donnes</a><a class="btn btn-outline" href="membres.html">Espace membres</a></div>
+<div class="note todo"><strong>Donnes à faire vivre avec les éducateurs :</strong> une sélection de donnes destinées aux élèves pourra être présentée directement ici.</div>
+</div>
+</div>
+</section>
+"""
+    build_page("donnes.html", "Donnes commentées", "Donnes de bridge commentées par le Club de Bridge de Montbonnot : problèmes à résoudre, solutions pour les adhérents.", body)
+
+
+def page_membres():
+    cards = [
+        ("Annuaire", "Les coordonnées des adhérents, pour se joindre entre membres.", "heart"),
+        ("Photothèque", "Les photos des tournois, des cours et des sorties, triées par événement.", "diamond"),
+        ("Documents", "Comptes rendus du conseil d’administration, des assemblées générales et convocations, règlements, documents standards (notes de frais…).", "club"),
+        ("Archives", "Les informations et documents des années précédentes, classés par année.", "spade"),
+    ]
+    cards_html = "".join(
+        f'<article class="card reveal" data-d="{i % 4}"><div class="icon-badge">{suit(s_)}</div><h3>{t} <span class="tag">Réservé aux adhérents</span></h3><p>{d}</p></article>'
+        for i, (t, d, s_) in enumerate(cards)
+    )
+    body = page_hero(
+        "Espace membres",
+        "Un espace réservé aux adhérents : annuaire, photothèque, documents et archives.",
+        "Adhérer / Contact · Espace membres",
+    ) + f"""
+<section aria-labelledby="t-mem">
+<div class="wrap">
+{sec_head('Ce que vous y trouvez', 'Quatre rubriques pour les adhérents', 'heart').replace('<h2>', '<h2 id="t-mem">')}
+<div class="grid g2">{cards_html}</div>
+<div class="reveal" style="margin-top:34px">
+<p>Le contenu de l’espace membres est protégé : il reste sur l’espace sécurisé du site officiel du club, où chaque adhérent se connecte avec son identifiant.</p>
+<div class="btn-row"><a class="btn btn-red" href="https://montbonnotbridge.fr/index.php/espace-membres/connexion" target="_blank" rel="noopener">Se connecter à l’espace membres</a><a class="btn btn-outline" href="adherer-contact.html">Devenir adhérent</a></div>
+<div class="note"><strong>Mot de passe perdu ?</strong> Utilisez le lien « Mot de passe perdu » sur la page de connexion, ou <a href="adherer-contact.html#contact">écrivez-nous</a>.</div>
+</div>
+</div>
+</section>
+"""
+    build_page("membres.html", "Espace membres", "Espace membres du Club de Bridge de Montbonnot : annuaire, photothèque, documents et archives réservés aux adhérents.", body)
+
+
+def page_liens():
+    links = [
+        ("Fédération Française de Bridge", "https://www.ffbridge.fr/", "Le site de la fédération : licences, compétitions, actualités du bridge français."),
+        ("Comité de bridge Dauphiné-Savoie", CDS, "Le comité régional : calendriers, classements et compétitions du Dauphiné et de la Savoie."),
+        ("Résultats sur l’espace licencié FFB", FFB_RESULTS, "Les résultats de nos rondes, publiés sur l’espace licencié."),
+        ("Bridge+", BRIDGEPLUS, "Résultats et donnes de bridge."),
+        ("Le Bridgeur", "https://www.lebridgeur.com/", "Le magazine et les actualités du bridge."),
+        ("Jouer Bridge", "https://www.jouerbridge.com/", "Pour jouer au bridge en ligne."),
+        ("Site officiel du club", OFFICIAL, "Le site historique du club, avec l’agenda complet et l’espace membres."),
+    ]
+    cards = "".join(
+        f'<article class="card hover-lift reveal"><h3>{t}</h3><p>{d}</p><a class="btn btn-outline" href="{u}" target="_blank" rel="noopener">Visiter le site</a></article>'
+        for t, u, d in links
+    )
+    body = page_hero("Liens utiles", "Quelques sites à visiter, sélectionnés par le club.", "Adhérer / Contact · Liens") + f"""
+<section aria-labelledby="t-liens">
+<div class="wrap">
+{sec_head('À visiter', 'Fédérations de bridge et autres sites', 'diamond').replace('<h2>', '<h2 id="t-liens">')}
+<div class="grid g3">{cards}</div>
+</div>
+</section>
+"""
+    build_page("liens.html", "Liens utiles", "Liens utiles du Club de Bridge de Montbonnot : Fédération Française de Bridge, comité Dauphiné-Savoie, Bridge+, Le Bridgeur et Jouer Bridge.", body)
 
 
 FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#0d4a37" stroke="#c9a24b" stroke-width="3"/><path fill="#f8f4e9" d="M32 12c-8 9-18 15-18 25 0 6 5 10 11 10 3 0 6-1 8-3-.2 4-1.8 8-4.5 11h7c-2.700-3-4.300-7-4.500-11 2 2 5 3 8 3 6 0 11-4 11-10 0-10-10-16-18-25z" transform="translate(0 -1) scale(1)"/></svg>"""
@@ -987,6 +1297,7 @@ if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     page_index(); page_club(); page_jouer(); page_cours(); page_tournois()
     page_galerie(); page_actus(); page_contact(); page_legal(); page_merci(); page_404()
+    page_agenda(); page_animations(); page_partenaires(); page_scolaire(); page_donnes(); page_membres(); page_liens()
     write("favicon.svg", FAVICON)
     with open(os.path.join(os.path.dirname(OUT), "netlify.toml"), "w", encoding="utf-8") as fh:
         fh.write(NETLIFY)
