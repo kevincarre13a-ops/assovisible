@@ -25,39 +25,46 @@ CDS = "https://www.cdsbridge.fr/"
 MAPS = "https://www.google.com/maps/search/?api=1&query=980+chemin+de+la+Laurelle+38330+Montbonnot-Saint-Martin"
 MAP_EMBED = "https://maps.google.com/maps?q=980+chemin+de+la+Laurelle+38330+Montbonnot-Saint-Martin&output=embed&hl=fr"
 
+MEMBER_PAGES = {"membres.html", "annuaire.html", "phototheque.html", "documents.html", "archives-membres.html"}
+# (lien principal, libellé, symbole, sous-pages, pages qui rendent la rubrique « active »)
 NAV = [
     ("index.html", "Accueil", "spade", [
         ("actualites.html#a-l-affiche", "À l’affiche"),
         ("actualites.html#archives", "Archives récentes"),
         ("agenda.html", "Agenda"),
-    ]),
+    ], {"index.html", "actualites.html", "agenda.html"}),
     ("le-club.html", "Le club", "heart", [
         ("le-club.html", "Qui sommes-nous ?"),
         ("le-club.html#nous-trouver", "Nous trouver"),
         ("le-club.html#bureau", "Le bureau"),
-    ]),
-    ("jouer.html", "Jouer avec nous", "diamond", [
-        ("jouer.html", "Tournois et parties"),
-        ("animations.html", "Les animations"),
-        ("recherche-partenaires.html", "Recherche de partenaires"),
-    ]),
-    ("cours.html", "Cours &amp; initiation", "club", [
+        ("galerie.html", "Galerie photos"),
+    ], {"le-club.html", "galerie.html"}),
+    ("jouer.html", "Activités", "diamond", [
         ("cours.html", "Cours pour adultes"),
         ("bridge-scolaire.html", "Bridge scolaire"),
-    ]),
-    ("tournois.html", "Tournois &amp; résultats", "spade", [
-        ("tournois.html#calendrier", "Les tournois"),
-        ("tournois.html#competitions", "Les compétitions"),
-        ("tournois.html#resultats", "Résultats FFB et Bridge+"),
-        ("donnes.html", "Donnes commentées"),
-    ]),
-    ("galerie.html", "Galerie", "heart", []),
-    ("actualites.html", "Actualités", "diamond", []),
-    ("adherer-contact.html", "Adhérer / Contact", "club", [
+        ("jouer.html", "Tournois et parties libres"),
+        ("tournois.html#competitions", "Compétitions"),
+        ("animations.html", "Animations"),
+        ("recherche-partenaires.html", "Recherche de partenaires"),
+    ], {"jouer.html", "cours.html", "bridge-scolaire.html", "animations.html", "recherche-partenaires.html"}),
+    ("tournois.html", "Résultats", "club", [
+        ("tournois.html", "Calendrier et palmarès"),
+        ("https://licencie.ffbridge.fr/#/home", "Via la FFB"),
+        ("https://www.bridgeplus.com/", "Via Bridge+"),
+    ], {"tournois.html"}),
+    ("donnes.html", "Donnes", "heart", [], {"donnes.html"}),
+    ("membres.html", "Membres", "diamond", [
+        ("membres.html", "Connexion"),
+        ("annuaire.html", "Annuaire"),
+        ("phototheque.html", "Photothèque"),
+        ("documents.html", "Documents"),
+        ("archives-membres.html", "Archives"),
+    ], MEMBER_PAGES),
+    ("liens.html", "Liens", "spade", [], {"liens.html"}),
+    ("adherer-contact.html", "Contact", "club", [
         ("adherer-contact.html", "Adhérer et nous écrire"),
-        ("membres.html", "Espace membres"),
-        ("liens.html", "Liens utiles"),
-    ]),
+        ("adherer-contact.html#essayer", "Venir essayer"),
+    ], {"adherer-contact.html", "merci.html"}),
 ]
 LEGAL = ("mentions-legales.html", "Mentions légales")
 
@@ -106,9 +113,9 @@ CHEVRON = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fi
 
 def header(page):
     items = []
-    for f, label, s_, kids in NAV:
+    for f, label, s_, kids, pages in NAV:
         is_page = f == page
-        is_anc = (not is_page) and page in {k[0] for k in kids if "#" not in k[0]}
+        is_anc = (not is_page) and page in pages
         cur = ' aria-current="page"' if is_page else (' aria-current="true"' if is_anc else "")
         link = f'<a href="{f}"{cur}>{suit(s_)}<span>{label}</span></a>'
         if not kids:
@@ -116,8 +123,10 @@ def header(page):
             continue
         sub = []
         for href, klabel in kids:
+            ext = href.startswith("http")
             kcur = ' aria-current="page"' if (href == page) else ""
-            sub.append(f'<li><a href="{href}"{kcur}>{klabel}</a></li>')
+            tgt = ' target="_blank" rel="noopener"' if ext else ""
+            sub.append(f'<li><a href="{href}"{kcur}{tgt}>{klabel}</a></li>')
         opened = is_page or is_anc
         items.append(
             f'<li class="has-sub{" open" if opened else ""}">{link}'
@@ -146,19 +155,19 @@ def header(page):
 
 
 def footer():
-    links = "".join(f'<li><a href="{f}">{l}</a></li>' for f, l, _, _ in NAV)
-    more = "".join(
-        f'<li><a href="{f}">{l}</a></li>'
-        for f, l in (
-            ("agenda.html", "Agenda"),
-            ("animations.html", "Les animations"),
-            ("recherche-partenaires.html", "Recherche de partenaires"),
-            ("bridge-scolaire.html", "Bridge scolaire"),
-            ("donnes.html", "Donnes commentées"),
-            ("membres.html", "Espace membres"),
-            ("liens.html", "Liens utiles"),
-        )
-    )
+    def lst(pairs):
+        return "".join(f'<li><a href="{f}">{l}</a></li>' for f, l in pairs)
+
+    links = lst((
+        ("index.html", "Accueil"), ("le-club.html", "Le club"), ("jouer.html", "Jouer avec nous"),
+        ("cours.html", "Cours &amp; initiation"), ("tournois.html", "Tournois &amp; résultats"),
+        ("galerie.html", "Galerie"), ("actualites.html", "Actualités"), ("adherer-contact.html", "Adhérer / Contact"),
+    ))
+    more = lst((
+        ("agenda.html", "Agenda"), ("animations.html", "Les animations"),
+        ("recherche-partenaires.html", "Recherche de partenaires"), ("bridge-scolaire.html", "Bridge scolaire"),
+        ("donnes.html", "Donnes commentées"), ("membres.html", "Espace membres"), ("liens.html", "Liens utiles"),
+    ))
     return f"""<footer class="site-footer">
 <div class="wrap">
 <div class="foot-grid">
@@ -283,7 +292,8 @@ def page_index():
 <section class="hero" aria-labelledby="titre-hero" style="padding-block-start:calc(var(--header-h) + 10px);padding-block-end:min(16vh,150px)">
 {hand_html('n')}
 <div class="hero-inner">
-<div class="eyebrow">{suit('spade')} Bridge · Montbonnot-Saint-Martin · Isère {suit('heart')}</div>
+<img class="hero-logo" src="img/logo-montbonnot-bridge.png" alt="Logo du Bridge Club de Montbonnot" width="86" height="72">
+<div class="sr-only">Bridge à Montbonnot-Saint-Martin, Isère</div>
 <h1 id="titre-hero">Club de Bridge<br>de Montbonnot<em>Le club où l’on joue, apprend et trinque, au cœur du Grésivaudan</em></h1>
 <p class="lead">Rondes de France deux après-midi par semaine, cours pour tous les niveaux et une ambiance détendue. Les débutants sont les bienvenus.</p>
 <div class="btn-row">
@@ -293,6 +303,7 @@ def page_index():
 </div>
 {hand_html('s')}
 {hand_html('w')}{hand_html('e')}
+<img class="hero-photo" src="img/paysage.jpg" alt="" aria-hidden="true" width="1035" height="290">
 {MOUNTAINS}
 </section>
 
@@ -312,6 +323,20 @@ def page_index():
 <div>
 <a class="btn btn-red" href="jouer.html">Infos pratiques</a>
 </div>
+</div>
+</div>
+</section>
+
+<section class="slider-sec" aria-label="Le club en images">
+<div class="wrap">
+<div class="slider" id="slider" role="region" aria-roledescription="carrousel" aria-label="Photos du club">
+<div class="slides"><figure class="slide" style="--bg:#17694e" role="group" aria-roledescription="diapositive" aria-label="1 sur 8"><figcaption><small>Montbonnot-Bridge,</small><b>un club où l’on joue…</b></figcaption><img src="img/partie-conviviale.jpg" alt="Joueurs souriants autour d’une table de bridge" loading="lazy"></figure><figure class="slide" style="--bg:#1c3f9e" role="group" aria-roledescription="diapositive" aria-label="2 sur 8"><figcaption><small>Montbonnot-Bridge,</small><b>un club où l’on apprend…</b></figcaption><img src="img/ecole-bridge.jpg" alt="Séance de bridge pour les enfants" loading="lazy"></figure><figure class="slide" style="--bg:#5b2a86" role="group" aria-roledescription="diapositive" aria-label="3 sur 8"><figcaption><small>Montbonnot-Bridge,</small><b>un club où l’on s’entraîne…</b></figcaption><img src="img/competition.jpg" alt="Joueurs en compétition autour d’une table" loading="lazy"></figure><figure class="slide" style="--bg:#b4232c" role="group" aria-roledescription="diapositive" aria-label="4 sur 8"><figcaption><small>Montbonnot-Bridge,</small><b>un club où l’on s’amuse…</b></figcaption><img src="img/equipe-ffb.jpg" alt="Bénévoles du club en T-shirts assortis devant la Fédération Française de Bridge" loading="lazy"></figure><figure class="slide" style="--bg:#c26a12" role="group" aria-roledescription="diapositive" aria-label="5 sur 8"><figcaption><small>Montbonnot-Bridge,</small><b>un club où l’on trinque…</b></figcaption><img src="img/sortie-rando.jpg" alt="Membres du club en balade en montagne" loading="lazy"></figure><figure class="slide" style="--bg:#0d4a37" role="group" aria-roledescription="diapositive" aria-label="6 sur 8"><figcaption><small>Montbonnot-Bridge,</small><b>au cœur du Grésivaudan…</b></figcaption><img src="img/paysage.jpg" alt="Prairie fleurie et chaîne de montagnes enneigées" loading="lazy"></figure><figure class="slide" style="--bg:#8c161e" role="group" aria-roledescription="diapositive" aria-label="7 sur 8"><figcaption><small>Montbonnot-Bridge,</small><b>un club qui vous accueille à Saint-Exupéry…</b></figcaption><img src="img/salle-2.jpg" alt="Façade de la salle Saint-Exupéry à Montbonnot" loading="lazy"></figure><figure class="slide" style="--bg:#17694e" role="group" aria-roledescription="diapositive" aria-label="8 sur 8"><figcaption><small>Montbonnot-Bridge,</small><b>le club que vous cherchez !</b><a class="btn btn-gold" href="adherer-contact.html#essayer">Rejoignez-nous</a></figcaption><img src="img/cartes.jpg" alt="Main de cartes de bridge sur tapis vert" loading="lazy"></figure></div>
+<div class="slider-ctl">
+<button type="button" class="s-prev" aria-label="Photo précédente">‹</button>
+<button type="button" class="s-play" aria-label="Mettre en pause le défilement" aria-pressed="false">❚❚</button>
+<button type="button" class="s-next" aria-label="Photo suivante">›</button>
+</div>
+<div class="s-dots" aria-hidden="true"></div>
 </div>
 </div>
 </section>
@@ -1041,8 +1066,7 @@ def page_404():
     html = head("404.html", "Page introuvable", "Page introuvable.") + header("404.html") + body + "</main>\n" + footer()
     for a in ('href="css/', 'href="img/', 'href="favicon', 'src="img/', 'src="js/'):
         html = html.replace(a, a.replace('="', '="/'))
-    for f in [n[0] for n in NAV] + [LEGAL[0]]:
-        html = html.replace(f'href="{f}"', f'href="/{f}"')
+    html = re.sub(r'href="(?!https?:|mailto:|tel:|sms:|#|/)([^"]+)"', r'href="/\1"', html)
     write("404.html", html)
 
 
@@ -1210,6 +1234,32 @@ def page_donnes():
     build_page("donnes.html", "Donnes commentées", "Donnes de bridge commentées par le Club de Bridge de Montbonnot : problèmes à résoudre, solutions pour les adhérents.", body)
 
 
+def member_gate(slug, title, lead, what, s_):
+    body = page_hero(title, lead, f"Membres · {title}") + f"""
+<section aria-labelledby="t-{slug}">
+<div class="wrap narrow">
+<div class="card reveal" style="text-align:center;padding:40px 28px">
+<div class="icon-badge" style="margin-inline:auto">{suit(s_)}</div>
+<span class="tag red">Réservé exclusivement aux adhérents</span>
+<h2 id="t-{slug}" style="margin-top:.8rem">{title}</h2>
+<p style="max-width:34em;margin-inline:auto">{what}</p>
+<div class="btn-row" style="justify-content:center"><a class="btn btn-red" href="https://montbonnotbridge.fr/index.php/espace-membres/connexion" target="_blank" rel="noopener">Me connecter</a><a class="btn btn-outline" href="adherer-contact.html">Devenir adhérent</a></div>
+<p style="margin:1.4rem 0 0;font-size:1rem;color:var(--ink-soft)">Identifiant ou mot de passe oublié ? <a href="adherer-contact.html#contact">Écrivez-nous</a>.</p>
+</div>
+<p class="reveal" style="margin-top:28px;text-align:center"><a href="membres.html">← Toutes les rubriques de l’espace membres</a></p>
+</div>
+</section>
+"""
+    build_page(f"{slug}.html", title, f"{title} : rubrique de l’espace membres du Club de Bridge de Montbonnot, réservée aux adhérents.", body)
+
+
+def page_membres_rubriques():
+    member_gate("annuaire", "Annuaire", "Les coordonnées des adhérents du club.", "L’annuaire des adhérents permet de se joindre entre membres. Son accès est strictement réservé aux adhérents du club.", "heart")
+    member_gate("phototheque", "Photothèque", "Les photos des tournois, des cours et des sorties.", "Toutes les photos de la vie du club, triées par événement. Quelques photos publiques sont à voir dans la <a href=\"galerie.html\">galerie</a>.", "diamond")
+    member_gate("documents", "Documents", "Comptes rendus, règlements et documents standards.", "Comptes rendus des réunions du conseil d’administration, comptes rendus d’assemblées générales et convocations, règlements, documents standards (note de frais…).", "club")
+    member_gate("archives-membres", "Archives", "Les informations et documents des années passées.", "Les informations et documents anciens du club, classés par année.", "spade")
+
+
 def page_membres():
     cards = [
         ("Annuaire", "Les coordonnées des adhérents, pour se joindre entre membres.", "heart"),
@@ -1218,8 +1268,8 @@ def page_membres():
         ("Archives", "Les informations et documents des années précédentes, classés par année.", "spade"),
     ]
     cards_html = "".join(
-        f'<article class="card reveal" data-d="{i % 4}"><div class="icon-badge">{suit(s_)}</div><h3>{t} <span class="tag">Réservé aux adhérents</span></h3><p>{d}</p></article>'
-        for i, (t, d, s_) in enumerate(cards)
+        f'<article class="card hover-lift reveal" data-d="{i % 4}"><div class="icon-badge">{suit(s_)}</div><h3>{t} <span class="tag">Réservé aux adhérents</span></h3><p>{d}</p><a class="btn btn-outline" href="{h}">Ouvrir la rubrique</a></article>'
+        for i, ((t, d, s_), h) in enumerate(zip(cards, ("annuaire.html", "phototheque.html", "documents.html", "archives-membres.html")))
     )
     body = page_hero(
         "Espace membres",
@@ -1297,7 +1347,7 @@ if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     page_index(); page_club(); page_jouer(); page_cours(); page_tournois()
     page_galerie(); page_actus(); page_contact(); page_legal(); page_merci(); page_404()
-    page_agenda(); page_animations(); page_partenaires(); page_scolaire(); page_donnes(); page_membres(); page_liens()
+    page_agenda(); page_membres_rubriques(); page_animations(); page_partenaires(); page_scolaire(); page_donnes(); page_membres(); page_liens()
     write("favicon.svg", FAVICON)
     with open(os.path.join(os.path.dirname(OUT), "netlify.toml"), "w", encoding="utf-8") as fh:
         fh.write(NETLIFY)

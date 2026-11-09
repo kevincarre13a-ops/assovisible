@@ -229,6 +229,34 @@
     if (empty) empty.hidden = up.length > 0;
   }
 
+  /* ---- Défilement de photos (accueil) ---- */
+  var slider = doc.getElementById("slider");
+  if (slider) {
+    var slides = slider.querySelectorAll(".slide"), dotsBox = slider.querySelector(".s-dots"), cur = 0, timer = null, paused = reduce;
+    var dots = [];
+    slides.forEach(function (_, i) { var d = doc.createElement("i"); dotsBox.appendChild(d); dots.push(d); });
+    var go = function (n) {
+      cur = (n + slides.length) % slides.length;
+      slides.forEach(function (sl, i) { sl.classList.toggle("on", i === cur); sl.setAttribute("aria-hidden", i === cur ? "false" : "true"); });
+      dots.forEach(function (d, i) { d.classList.toggle("on", i === cur); });
+    };
+    var play = slider.querySelector(".s-play");
+    var start = function () { stop(); if (!paused) timer = setInterval(function () { go(cur + 1); }, 5000); };
+    var stop = function () { if (timer) { clearInterval(timer); timer = null; } };
+    slider.querySelector(".s-prev").addEventListener("click", function () { go(cur - 1); start(); });
+    slider.querySelector(".s-next").addEventListener("click", function () { go(cur + 1); start(); });
+    play.addEventListener("click", function () {
+      paused = !paused; play.setAttribute("aria-pressed", paused ? "true" : "false");
+      play.textContent = paused ? "▶" : "❚❚";
+      play.setAttribute("aria-label", paused ? "Relancer le défilement" : "Mettre en pause le défilement");
+      start();
+    });
+    slider.addEventListener("mouseenter", stop); slider.addEventListener("mouseleave", start);
+    slider.addEventListener("focusin", stop); slider.addEventListener("focusout", start);
+    if (paused) { play.textContent = "▶"; play.setAttribute("aria-pressed", "true"); play.setAttribute("aria-label", "Relancer le défilement"); }
+    go(0); start();
+  }
+
   /* ---- Formulaire : sujet pré-rempli (?sujet=cours) ---- */
   var sujet = doc.getElementById("sujet");
   if (sujet) {
