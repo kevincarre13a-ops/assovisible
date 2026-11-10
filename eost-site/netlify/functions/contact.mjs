@@ -15,6 +15,10 @@ var PAGES = [
 var SERVED = PAGES.map((p) => p.key);
 var env = (k, d = "") => typeof process !== "undefined" && process.env && process.env[k] || d;
 
+// fn/lib/auth.mjs
+import { createHmac, randomBytes, scrypt as _scrypt, timingSafeEqual, createHash } from "node:crypto";
+import { promisify } from "node:util";
+
 // node_modules/@netlify/blobs/dist/chunk-XR3MUBBK.js
 var NF_ERROR = "x-nf-error";
 var NF_REQUEST_ID = "x-nf-request-id";
@@ -627,12 +631,9 @@ function openStore(name) {
   if (f) return f(name);
   return getStore({ name, consistency: "strong" });
 }
-var messagesStore = () => openStore("eost-messages");
 var authStore = () => openStore("eost-auth");
 
 // fn/lib/auth.mjs
-import { createHmac, randomBytes, scrypt as _scrypt, timingSafeEqual, createHash } from "node:crypto";
-import { promisify } from "node:util";
 var scrypt = promisify(_scrypt);
 var SESSION_MS = 12 * 60 * 60 * 1e3;
 var WINDOW_MS = 15 * 60 * 1e3;
@@ -682,7 +683,7 @@ async function sendMail(m) {
     m.message,
     "",
     "--",
-    `Message re\xE7u le ${m.at}. Il est aussi conserv\xE9 dans l'espace administrateur du site (Messages re\xE7us).`,
+    `Message envoy\xE9 depuis le formulaire du site le ${m.at}.`,
     "Pour r\xE9pondre au visiteur, utilisez simplement \xAB R\xE9pondre \xBB."
   ].join("\n");
   const mail = { from: FROM(), to: [TO()], subject: `Site EOST \u2013 nouveau message (${m.sujet})`, text };
@@ -725,28 +726,11 @@ var contact_default = async (req, context) => {
   if (rate.blocked) {
     return page(lang, lang === "br" ? "Re a gemennadenno\xF9" : "Trop de messages", lang === "br" ? "Klaskit en-dro un tamm diwezhatoc, mar plij." : "Merci de r\xE9essayer un peu plus tard, ou de nous appeler au 06 64 96 45 50.", 429);
   }
-  const id = randomUUID().replace(/-/g, "").slice(0, 12);
-  const at = (/* @__PURE__ */ new Date()).toISOString();
-  const rec = { id, at, nom, email, sujet, message, lang, read: false, mail: "en attente" };
-  const st = messagesStore();
-  const key = `m:${at.replace(/[-:TZ.]/g, "").slice(0, 17)}-${id}`;
-  let stored = true;
-  try {
-    await st.setJSON(key, rec);
-  } catch (e) {
-    stored = false;
-    console.error("Enregistrement du message impossible", e && e.message);
-  }
+  const rec = { id: randomUUID().replace(/-/g, "").slice(0, 12), at: (/* @__PURE__ */ new Date()).toISOString(), nom, email, sujet, message, lang };
   const r = await sendMail(rec);
-  if (!r.ok) console.error("Envoi de l'e-mail impossible :", r.why);
-  if (stored) {
-    try {
-      await st.setJSON(key, { ...rec, mail: r.ok ? "envoy\xE9" : `erreur : ${r.why}` });
-    } catch {
-    }
-  }
-  if (!stored && !r.ok) {
-    return page(lang, lang === "br" ? "Ur gudenn zo bet" : "Un probl\xE8me est survenu", lang === "br" ? "N'eo ket bet kaset ho kemennadenn. Telefonit d'ar 06 64 96 45 50, mar plij." : "Votre message n'a pas pu \xEAtre envoy\xE9. Merci de nous appeler au 06 64 96 45 50.", 500);
+  if (!r.ok) {
+    console.error("Envoi de l'e-mail impossible :", r.why);
+    return page(lang, lang === "br" ? "Ur gudenn zo bet" : "Un probl\xE8me est survenu", lang === "br" ? "N'eo ket bet kaset ho kemennadenn. Telefonit d'ar 06 64 96 45 50, mar plij." : "Votre message n'a pas pu \xEAtre envoy\xE9. Merci de t\xE9l\xE9phoner au 06 64 96 45 50 ou d'\xE9crire \xE0 yannber.kemener1@orange.fr.", 500);
   }
   try {
     await registerFail(rate);

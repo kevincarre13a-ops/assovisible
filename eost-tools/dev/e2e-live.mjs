@@ -188,12 +188,8 @@ const brHtml = await (await fetch(s.url + '/br/agenda')).text();
 ok('la page bretonne garde ses chemins (../assets) et sa langue', brHtml.includes('../assets/style.css') && brHtml.includes('lang="br"'));
 await page.getByRole('button', { name: '← Retour au menu' }).click();
 
-console.log('Messages reçus (lecture seule)');
-await page.locator('.tile', { hasText: 'Messages reçus' }).click();
-await page.getByRole('heading', { name: /Messages/ }).waitFor();
-ok('la page des messages s\'ouvre', true);
-await shot('e2e-7-messages');
-await page.getByRole('button', { name: '← Retour au menu' }).click();
+console.log('Plus de rubrique « Messages reçus »');
+ok('le menu ne propose plus les messages', (await page.locator('.tile', { hasText: 'Messages reçus' }).count()) === 0);
 
 console.log('Nettoyage : retour des pages modifiées à leur version d\'origine');
 const post = async (a, body) => { const j = await page.evaluate(async ([a, body]) => (await fetch('/.netlify/functions/admin-api?a=' + a, { method: 'POST', headers: { 'X-Requested-With': 'eost-admin', 'Content-Type': 'application/json' }, body: JSON.stringify(body) })).json(), [a, body]); return { json: async () => j }; };

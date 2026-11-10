@@ -91,13 +91,9 @@ r = await post({ ...good, sujet: 'Adhésion\nBcc: pirate@example.org', nom: 'Jea
 r = await fetch(B2 + '/.netlify/functions/contact'); ok('GET refusé', r.status === 405);
 let st = 0; for (let i = 0; i < 8; i++) st = (await post({ ...good, nom: 'Spam' + i })).status; ok('trop de messages depuis la même adresse : bloqué (429)', st === 429);
 
-console.log('Messages dans l\'espace administrateur');
-r = await api2('messages', undefined, cookie); const ms = await r.json(); ok('les messages sont conservés', ms.ok && ms.items.length >= 3 && ms.items.some(m => m.nom === 'Marie Le Goff' && m.mail === 'envoyé'));
-r = await api2('me', undefined, cookie); ok('compteur de messages non lus', (await r.json()).unread >= 3);
-const first = ms.items[0];
-r = await api2('message-read', { key: first.key }, cookie); ok('marquer comme lu', (await r.json()).ok);
-r = await api2('message-delete', { key: first.key }, cookie); ok('supprimer un message', (await r.json()).ok && !(await (await api2('messages', undefined, cookie)).json()).items.some(m => m.key === first.key));
-r = await api2('message-delete', { key: '../../x' }, cookie); ok('clé de message piégée refusée', (await r.json()).ok === false);
+console.log('Plus de messages dans l\'espace administrateur');
+r = await api2('messages', undefined, cookie); ok('l\'action « messages » n\'existe plus', r.status === 404);
+r = await api2('message-delete', { key: 'm:x' }, cookie); ok('ni la suppression', r.status === 404);
 
 console.log('Entretien');
 r = await api2('purge-history', { lang: 'fr', page: 'agenda' }, cookie); const pj = await r.json(); ok('effacer les anciennes versions (entretien)', pj.ok === true);

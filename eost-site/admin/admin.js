@@ -1,4 +1,4 @@
-/* Espace administrateur EOST : modification directe des pages (français et breton), photos, documents, messages. */
+/* Espace administrateur EOST : modification directe des pages (français et breton), photos, documents. */
 (function () {
   'use strict';
 
@@ -125,7 +125,6 @@
         h('h2', {}, 'Pages en breton (Brezhoneg)'), h('div', { class: 'grid' }, tiles('br')),
         h('h2', {}, 'Autres'),
         h('div', { class: 'grid' },
-          h('button', { class: 'tile', type: 'button', onclick: showMessages }, 'Messages reçus', h('small', {}, me.unread ? me.unread + ' nouveau' + (me.unread > 1 ? 'x' : '') : 'Messages du formulaire de contact'), me.unread ? h('span', { class: 'pill' }, 'à lire') : null),
           h('button', { class: 'tile', type: 'button', onclick: showHelp }, 'Aide', h('small', {}, 'Comment faire ?')),
           h('a', { class: 'tile', href: '/', target: '_blank', rel: 'noopener' }, 'Voir le site', h('small', {}, 'S\'ouvre dans un nouvel onglet'))),
         h('p', { class: 'muted', style: 'margin-top:36px' }, 'Vous ne pouvez pas ajouter ou supprimer de page, ni changer la mise en page : le reste du site est modifiable.')));
@@ -148,28 +147,6 @@
   function showHelp() {
     editorActive = false;
     app.replaceChildren(topBar(h('button', { class: 'btn small', onclick: showHome }, '← Retour au menu')), h('div', { class: 'wrap' }, h('h1', {}, 'Aide'), h('div', { class: 'card' }, helpBody())));
-  }
-
-  /* ---------- messages reçus ---------- */
-  async function showMessages() {
-    const r = await api('messages');
-    const list = h('div', {});
-    const items = r.items || [];
-    if (!r.ok) list.append(h('div', { class: 'err' }, r.error || 'Impossible de lire les messages.'));
-    else if (!items.length) list.append(h('div', { class: 'card' }, 'Aucun message pour le moment.'));
-    items.forEach((m) => {
-      const card = h('div', { class: 'card msg' + (m.read ? '' : ' new') },
-        h('div', { class: 'row', style: 'justify-content:space-between' }, h('b', {}, m.nom), h('span', { class: 'muted' }, fmtDate(m.at))),
-        h('div', {}, h('a', { href: 'mailto:' + m.email }, m.email), ' · ', h('b', {}, m.sujet || 'Autre')),
-        h('pre', {}, m.message),
-        h('div', { class: 'muted' }, m.mail === 'envoyé' ? 'E-mail envoyé à l\'association ✔' : '⚠ E-mail non envoyé (' + (m.mail || '?') + ') : le message est conservé ici.'),
-        h('div', { class: 'row', style: 'margin-top:12px' },
-          h('a', { class: 'btn small main', href: 'mailto:' + m.email + '?subject=' + encodeURIComponent('Re : votre message sur le site EOST') }, 'Répondre'),
-          h('button', { class: 'btn small', type: 'button', onclick: async () => { await api('message-read', { key: m.key, read: !m.read }); showMessages(); } }, m.read ? 'Marquer comme non lu' : 'Marquer comme lu'),
-          h('button', { class: 'btn small danger', type: 'button', onclick: async () => { if (await confirmBox('Supprimer ce message ?', 'Il sera effacé définitivement.', 'Oui, supprimer', true)) { await api('message-delete', { key: m.key }); showMessages(); } } }, 'Supprimer')));
-      list.append(card);
-    });
-    app.replaceChildren(topBar(h('button', { class: 'btn small', onclick: showHome }, '← Retour au menu')), h('div', { class: 'wrap' }, h('h1', {}, 'Messages reçus'), h('p', { class: 'muted' }, 'Les messages envoyés depuis la page « Adhérer / Contact » arrivent aussi par e-mail.'), list));
   }
 
   /* ---------- éditeur ---------- */

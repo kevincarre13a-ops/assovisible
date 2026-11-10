@@ -12508,7 +12508,6 @@ function openStore(name) {
 }
 var pagesStore = () => openStore("eost-pages");
 var mediaStore = () => openStore("eost-media");
-var messagesStore = () => openStore("eost-messages");
 var authStore = () => openStore("eost-auth");
 
 // fn/lib/auth.mjs
@@ -12721,15 +12720,7 @@ async function saveWithHistory(st, key, histPrefix, html, by) {
 }
 var actions = {
   async me(ctx) {
-    let unread = 0;
-    try {
-      const { blobs } = await messagesStore().list({ prefix: "m:" });
-      const recent = blobs.map((b) => b.key).sort().reverse().slice(0, 100);
-      const recs = await Promise.all(recent.map((k) => messagesStore().get(k, { type: "json" })));
-      unread = recs.filter((r) => r && !r.read).length;
-    } catch {
-    }
-    return json({ ok: true, user: ctx.session.u, unread });
+    return json({ ok: true, user: ctx.session.u });
   },
   async pages() {
     const st = pagesStore();
@@ -12835,27 +12826,6 @@ var actions = {
       }
     }
     return json(out);
-  },
-  async messages() {
-    const st = messagesStore();
-    const { blobs } = await st.list({ prefix: "m:" });
-    const keys = blobs.map((b) => b.key).sort().reverse().slice(0, 200);
-    const items = (await Promise.all(keys.map((k) => st.get(k, { type: "json" }).then((r) => r && { ...r, key: k })))).filter(Boolean);
-    return json({ ok: true, items });
-  },
-  async "message-read"(ctx) {
-    const { key, read } = ctx.body;
-    if (!/^m:[\w-]+$/.test(String(key))) return bad("Message inconnu.");
-    const st = messagesStore(), r = await st.get(key, { type: "json" });
-    if (!r) return bad("Message introuvable.", 404);
-    await st.setJSON(key, { ...r, read: read !== false });
-    return json({ ok: true });
-  },
-  async "message-delete"(ctx) {
-    const { key } = ctx.body;
-    if (!/^m:[\w-]+$/.test(String(key))) return bad("Message inconnu.");
-    await messagesStore().delete(key);
-    return json({ ok: true });
   }
 };
 var admin_api_default = async (req, context) => {

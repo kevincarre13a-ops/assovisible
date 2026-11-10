@@ -185,19 +185,8 @@ const brHtml = await (await fetch(s.url + '/br/agenda')).text();
 ok('la page bretonne garde ses chemins (../assets) et sa langue', brHtml.includes('../assets/style.css') && brHtml.includes('lang="br"'));
 await page.getByRole('button', { name: '← Retour au menu' }).click();
 
-console.log('Messages reçus');
-await fetch(s.url + '/.netlify/functions/contact', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ lang: 'fr', nom: 'Paul Test', email: 'paul@example.org', sujet: 'Livres', message: 'Où acheter le livre 15 ?', ts: String(Date.now() - 9000) }) });
-await page.reload();
-await page.getByRole('heading', { name: /Que voulez-vous modifier/ }).waitFor();
-ok('le menu signale le nouveau message', await page.locator('.tile', { hasText: 'Messages reçus' }).locator('.pill').isVisible());
-await page.locator('.tile', { hasText: 'Messages reçus' }).click();
-await page.locator('.msg.new').waitFor();
-ok('le message est lisible avec un bouton « Répondre »', (await text(page.locator('.msg pre'))).includes('livre 15') && await page.getByRole('link', { name: 'Répondre' }).isVisible());
-await shot('e2e-7-messages');
-await page.getByRole('button', { name: 'Supprimer' }).first().click(); await page.getByRole('button', { name: 'Oui, supprimer' }).click();
-await page.getByText('Aucun message pour le moment').waitFor();
-ok('suppression d\'un message', true);
-await page.getByRole('button', { name: '← Retour au menu' }).click();
+console.log('Plus de rubrique « Messages reçus »');
+ok('le menu ne propose plus les messages', (await page.locator('.tile', { hasText: 'Messages reçus' }).count()) === 0);
 
 console.log('Aide, mot de passe, déconnexion');
 await page.locator('.tile', { hasText: 'Aide' }).click();

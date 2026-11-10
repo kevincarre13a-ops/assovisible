@@ -1,6 +1,5 @@
 // Formulaire de contact : enregistre le message (consultable dans l'espace administrateur) puis l'envoie par e-mail via Resend.
 import { env } from './lib/config.mjs';
-import { messagesStore } from './lib/store.mjs';
 import { rateState, registerFail, clientIp } from './lib/auth.mjs';
 import { randomUUID } from 'node:crypto';
 
@@ -23,7 +22,7 @@ async function sendMail(m) {
     'Nouveau message depuis le formulaire de contact du site EOST.', '',
     `Nom : ${m.nom}`, `E-mail : ${m.email}`, `Sujet : ${m.sujet}`, `Langue de la page : ${m.lang === 'br' ? 'breton' : 'français'}`, '',
     'Message :', m.message, '', '--',
-    `Message reçu le ${m.at}. Il est aussi conservé dans l'espace administrateur du site (Messages reçus).`,
+    `Message envoyé depuis le formulaire du site le ${m.at}.`,
     'Pour répondre au visiteur, utilisez simplement « Répondre ».',
   ].join('\n');
   const mail = { from: FROM(), to: [TO()], subject: `Site EOST – nouveau message (${m.sujet})`, text };
@@ -62,19 +61,11 @@ export default async (req, context) => {
     return page(lang, lang === 'br' ? 'Re a gemennadennoù' : 'Trop de messages', lang === 'br' ? 'Klaskit en-dro un tamm diwezhatoc, mar plij.' : 'Merci de réessayer un peu plus tard, ou de nous appeler au 06 64 96 45 50.', 429);
   }
 
-  const id = randomUUID().replace(/-/g, '').slice(0, 12);
-  const at = new Date().toISOString();
-  const rec = { id, at, nom, email, sujet, message, lang, read: false, mail: 'en attente' };
-  const st = messagesStore();
-  const key = `m:${at.replace(/[-:TZ.]/g, '').slice(0, 17)}-${id}`;
-  let stored = true;
-  try { await st.setJSON(key, rec); } catch (e) { stored = false; console.error('Enregistrement du message impossible', e && e.message); }
-
+  const rec = { id: randomUUID().replace(/-/g, '').slice(0, 12), at: new Date().toISOString(), nom, email, sujet, message, lang };
   const r = await sendMail(rec);
-  if (!r.ok) console.error('Envoi de l\'e-mail impossible :', r.why);
-  if (stored) { try { await st.setJSON(key, { ...rec, mail: r.ok ? 'envoyé' : `erreur : ${r.why}` }); } catch { /* le message est déjà conservé */ } }
-  if (!stored && !r.ok) {
-    return page(lang, lang === 'br' ? 'Ur gudenn zo bet' : 'Un problème est survenu', lang === 'br' ? 'N\'eo ket bet kaset ho kemennadenn. Telefonit d\'ar 06 64 96 45 50, mar plij.' : 'Votre message n\'a pas pu être envoyé. Merci de nous appeler au 06 64 96 45 50.', 500);
+  if (!r.ok) {
+    console.error('Envoi de l\'e-mail impossible :', r.why);
+    return page(lang, lang === 'br' ? 'Ur gudenn zo bet' : 'Un problème est survenu', lang === 'br' ? 'N\'eo ket bet kaset ho kemennadenn. Telefonit d\'ar 06 64 96 45 50, mar plij.' : 'Votre message n\'a pas pu être envoyé. Merci de téléphoner au 06 64 96 45 50 ou d\'écrire à yannber.kemener1@orange.fr.', 500);
   }
   try { await registerFail(rate); } catch { /* sans effet pour le visiteur */ }
   return redirect(done);
