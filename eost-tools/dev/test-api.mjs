@@ -99,6 +99,9 @@ r = await api2('message-read', { key: first.key }, cookie); ok('marquer comme lu
 r = await api2('message-delete', { key: first.key }, cookie); ok('supprimer un message', (await r.json()).ok && !(await (await api2('messages', undefined, cookie)).json()).items.some(m => m.key === first.key));
 r = await api2('message-delete', { key: '../../x' }, cookie); ok('clé de message piégée refusée', (await r.json()).ok === false);
 
+console.log('Entretien');
+r = await api2('purge-history', { lang: 'fr', page: 'agenda' }, cookie); const pj = await r.json(); ok('effacer les anciennes versions (entretien)', pj.ok === true);
+r = await api2('history', { lang: 'fr', page: 'agenda' }, cookie); ok('plus aucune ancienne version', ((await r.json()).items || []).length === 0);
 console.log('Mot de passe');
 r = await api2('change-password', { current: 'test-1234', next: 'nouveau-mdp-123' }, cookie); ok('changement de mot de passe impossible depuis l\'admin', r.status === 404 || (await r.json()).ok === false);
 r = await api2('login', { user: 'eost', password: 'test-1234' }); ok('le mot de passe reste inchangé', r.status === 200);

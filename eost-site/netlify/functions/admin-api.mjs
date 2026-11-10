@@ -12795,6 +12795,16 @@ var actions = {
     await st.delete(`page:${lang}:${page}`);
     return json({ ok: true });
   },
+  // Entretien (agence) : efface les anciennes versions d'une page ou du pied de page. Aucun bouton ne l'appelle.
+  async "purge-history"(ctx) {
+    const { lang, page, footer } = ctx.body;
+    if (!isLang(lang) || !footer && !isEditable(page)) return bad("Page inconnue.");
+    const st = pagesStore();
+    const prefix = footer ? `histfooter:${lang}:` : `hist:${lang}:${page}:`;
+    const { blobs } = await st.list({ prefix });
+    for (const b of blobs) await st.delete(b.key);
+    return json({ ok: true, removed: blobs.length });
+  },
   async "reset-footer"(ctx) {
     const { lang } = ctx.body;
     if (!isLang(lang)) return bad("Langue inconnue.");
