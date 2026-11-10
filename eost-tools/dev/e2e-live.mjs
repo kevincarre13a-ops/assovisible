@@ -100,7 +100,7 @@ await page.getByRole('button', { name: 'Anciennes versions' }).click();
 await page.locator('.hist').first().waitFor();
 ok('liste des anciennes versions', (await page.locator('.hist').count()) >= 2);
 await shot('e2e-5-versions');
-await page.locator('.hist').nth(2).getByRole('button').click();
+await page.locator('.hist').nth(1).getByRole('button').click();
 await page.getByRole('button', { name: /Oui, revenir/ }).click();
 await page.locator('.toast', { hasText: 'Ancienne version' }).waitFor();
 await page.locator('iframe.frame').waitFor();
