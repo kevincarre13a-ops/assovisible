@@ -3,7 +3,7 @@
    Blanc cassé lumineux · encre · rouge du logo (#D71806)
    ========================================================================== */
 :root{
-  --bg:#faf7f1; --bg2:#f1eadc; --card:#ffffff; --ink:#17130f; --muted:#5a5247;
+  --bg:#fffdfa; --bg2:#f7f2e9; --card:#ffffff; --ink:#17130f; --muted:#5a5247;
   --line:rgba(23,19,15,.14); --red:#d71806; --red-deep:#a91204; --red-soft:#fde9e5;
   --gold:#946506; --night:#14141a;
   /* alias conservés pour les gabarits */
@@ -37,7 +37,7 @@ em.serif,.serif{font-family:var(--f-serif);font-style:italic;font-weight:400;tex
 .narrow{width:min(100% - 2*var(--gutter),780px);margin-inline:auto}
 
 /* ---------- En-tête ---------- */
-.site-header{position:fixed;inset:0 0 auto 0;height:var(--header-h);z-index:100;display:flex;align-items:center;background:rgba(250,247,241,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);transition:box-shadow .3s}
+.site-header{position:fixed;inset:0 0 auto 0;height:var(--header-h);z-index:100;display:flex;align-items:center;background:rgba(255,253,250,.96);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);transition:box-shadow .3s}
 .site-header.is-solid{box-shadow:0 6px 24px -14px rgba(23,19,15,.35)}
 .hdr{position:relative;display:flex;align-items:center;justify-content:space-between;gap:1rem;width:min(100% - 2*var(--gutter),1480px);margin-inline:auto}
 .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;flex:none}
@@ -83,9 +83,11 @@ em.serif,.serif{font-family:var(--f-serif);font-style:italic;font-weight:400;tex
 
 /* ---------- Héros de l'accueil : un seul grand visuel ---------- */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;isolation:isolate;padding:calc(var(--header-h) + 2rem) 0 4rem;background:var(--bg)}
-.hero-photo{position:absolute;top:0;right:0;bottom:0;width:72%;z-index:-2;background:url(../img/une-koltes.webp) right center/cover;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 38%);mask-image:linear-gradient(to right,transparent 0,#000 38%);animation:photo-in 1.6s var(--ease) both}
+.hero-photo{position:absolute;top:0;right:0;bottom:0;width:78%;z-index:-2;background:url(../img/une-koltes.webp) right center/cover;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 38%);mask-image:linear-gradient(to right,transparent 0,#000 38%);animation:photo-in 1.6s var(--ease) both}
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:var(--red);z-index:1}
 .hero-copy{max-width:min(46rem,100%)}
+.hero-logo{margin:0 0 1.6rem;line-height:0}
+.hero-logo img{width:clamp(270px,42vw,620px);height:auto;opacity:0;transform:translateY(.5rem);animation:rise .9s var(--ease) .1s forwards}
 .logo-title{margin:0 0 1.4rem;display:flex;align-items:stretch;gap:clamp(.7rem,2vw,1.4rem);color:var(--red);text-transform:uppercase;font-family:var(--f-display);font-weight:700;line-height:.84;letter-spacing:0}
 .logo-title{--lt:clamp(3.5rem,11vw,8.6rem)}
 .lt-block{display:flex;flex-direction:column;justify-content:space-between}
@@ -364,7 +366,7 @@ form.f{display:grid;gap:1.1rem}
 /* ---------- Révélations au défilement ---------- */
 .rv{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0ms)}
 .rv.in{opacity:1;transform:none}
-.no-js .rv,.no-js .logo-title span,.no-js .hero-photo{opacity:1;transform:none;animation:none}
+.no-js .rv,.no-js .hero-logo img,.no-js .hero-photo{opacity:1;transform:none;animation:none}
 
 /* ---------- Keyframes ---------- */
 @keyframes rise{to{opacity:1;transform:none}}
@@ -374,6 +376,6 @@ form.f{display:grid;gap:1.1rem}
 @keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-  .rv,.logo-title span{opacity:1!important;transform:none!important}
+  .rv,.hero-logo img{opacity:1!important;transform:none!important}
 }
 @media print{.site-header,.site-footer,.scroll-cue{display:none}}
