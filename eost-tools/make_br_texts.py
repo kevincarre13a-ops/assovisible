@@ -145,7 +145,7 @@ T={
 "Participation d'EOST à la course pour la langue bretonne, dans la montagne d'Argol (annoncée).":"EOST a gemer perzh er redadeg evit ar brezhoneg, e menez Argol (kemennet).",
 "mars 2026":"Meurzh 2026","Cinéma":"Sinema","Séance de cinéma : Telgruc des années 1950-1970":"Abadenn sinema : Terrug er bloavezhioù 1950-1970",
 "Films de Pierre D'Hervé avec la Cinémathèque de Bretagne. Gratuit.":"Filmoù Pierre D'Hervé gant Filmaoueg Breizh. Digoust.",
-"févr. 2026":"C'hwevrer 2026","Livres":"Levrioù","Salon du livre de Camaret":"Saloñ al levrioù Kameled","Présence d'EOST avec ses ouvrages.":"EOST a vez eno gant e levrioù.",
+"févr. 2026":"C'hwevrer 2026","Livres":"Levrioù","Salon du livre de Camaret":"Saloñs al levrioù e Kameled","Présence d'EOST avec ses ouvrages.":"EOST a vez eno gant e levrioù.",
 "Une trentaine de membres sur 53 adhérents ; bilans moral et financier approuvés.":"Tregont ezel bennak war 53 ; danevelloù moral hag arc'hant kadarnaet.",
 "nov. 2025":"Du 2025","Bilan : 674 visiteurs au moulin, appel à de nouveaux bénévoles.":"Bilañs : 674 gweladenner er milin, galv da volontered nevez.",
 "mars 2025":"Meurzh 2025","Séance de cinéma, films de Pierre D'Hervé":"Abadenn sinema, filmoù Pierre D'Hervé","Salle polyvalente, gratuit.":"Sal liesimplij, digoust.",
@@ -365,15 +365,21 @@ T.update({
 T.update({"Espace administrateur":"Takad merañ"})
 
 T.update({
-" de mai à septembre, animations l'été et lors des journées du patrimoine (le moulin ne tourne que s'il y a du vent !). Visites toute l'année pour les groupes d'au moins 10 personnes, selon la disponibilité des bénévoles. Cet été : 827 visiteurs lors de 40 permanences assurées par 14 bénévoles.":" eus miz Mae da viz Gwengolo, abadennoù en hañv ha da vare Devezhioù ar glad (ne dro ar milin nemet pa vez avel !). Bez e c'hall strolladoù a 10 den da nebeutañ gweladenniñ ar vilin a-hed ar bloaz, hervez ma vez gouest ar re a-youl-vat. An hañv-mañ : 827 gweladenner e-pad 40 abadenn kaset a-benn gant 14 den a-youl-vat.",
+" de mai à septembre, animations l'été et lors des journées du patrimoine (le moulin ne tourne que s'il y a du vent !). Visites toute l'année pour les groupes d'au moins 10 personnes, selon la disponibilité des bénévoles. Cet été : 827 visiteurs lors de 40 permanences assurées par 14 bénévoles.":" eus miz Mae da viz Gwengolo, abadennoù en hañv ha da vare Devezhioù ar glad (ne dro ar milin nemet pa vez avel !). Bez e c'hall strolladoù a 10 den da nebeutañ gweladenniñ ar vilin a-hed ar bloaz, hervez ma vez gouest ar re a-youl-vat. En hañv tremenet : 827 gweladenner er vilin e-pad 40 abadenn kaset a-benn gant 14 den a-youl-vat.",
 "14 au moulin, 53 adhérents":"14 er milin, 53 ezel",
 "Une curiosité :":"Ur c'hurioztez :",
 " ses ailes tournent à l'envers, mais cela ne se remarque pas si l'on n'est pas spécialiste.":" treiñ a ra e askelioù en tu kontrol, met ne vez ket gwelet ma n'eo ket unan eus an arbennigourien.",
 "30 ans d'EOST":"30 vloaz EOST",
-"Samedi 12 juin : anniversaire des 30 ans de l'association.":"Sadorn 12 a viz Mezheven : lidet 30 vloaz ar gevredigezh.",
+"Samedi 12 juin : anniversaire des 30 ans de l'association.":"Sadorn 12 a viz Mezheven : lidet e vo 30 vloaz ar gevredigezh.",
 "4 nov. 2026":"4 a viz Du 2026",
 "Activités 2026-2027 et site internet":"Oberiantizoù 2026-2027 ha lec'hienn internet",
-"Conseil d'administration de rentrée : bilan du semestre, 827 visiteurs au moulin cet été grâce à 14 bénévoles, nouveau site bilingue, assemblée générale le 6 février et 30 ans d'EOST le 12 juin.":"Kuzul-merañ an distro-skol : bilañs ar c'hwec'h miz diwezhañ, 827 gweladenner er milin an hañv-mañ a-drugarez da 14 den a-youl-vat, lec'hienn nevez divyezhek, bodadeg veur d'ar 6 a viz C'hwevrer ha 30 vloaz EOST d'an 12 a viz Mezheven.",
+"Conseil d'administration de rentrée : bilan du semestre, 827 visiteurs au moulin cet été grâce à 14 bénévoles, nouveau site bilingue, assemblée générale le 6 février et 30 ans d'EOST le 12 juin.":"Kuzul-merañ an distro-skol : bilañs ar c'hwec'h miz diwezhañ, 827 gweladenner er vilin en hañv tremenet a-drugarez da 14 den a-youl-vat, lec'hienn nevez divyezhek, bodadeg veur d'ar 6 a viz C'hwevrer ha 30 vloaz EOST d'an 12 a viz Mezheven.",
+})
+
+T.update({
+"EOST y sera présent avec ses ouvrages.":"Eno e vo EOST gant e levrioù.",
+"Adresse :":"Chomlec'h :",
+" le moulin de Luzéoc (Penn-ar-Stank) se trouve au 510, rue du moulin, entre le bourg et la côte.":" milin Lezuoc (Penn-ar-Stank) a zo etre ar vorc'h hag an aod, 510, hent ar vilin.",
 })
 # cles speciales: texte "Eost"/"eost" ambigus -> on ne garde que les noeuds exacts (voir build.cjs : cle entouree de > <)
 json.dump(T,open('br-textes.json','w'),ensure_ascii=False,indent=0)
