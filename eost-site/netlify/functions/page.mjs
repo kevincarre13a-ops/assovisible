@@ -136,6 +136,7 @@ var LANGS = ["fr", "br"];
 var isLang = (l) => LANGS.includes(l);
 var isPage = (p) => SERVED.includes(p);
 var isEditable = (p) => PAGES.some((x) => x.key === p);
+var env = (k, d = "") => typeof process !== "undefined" && process.env && process.env[k] || d;
 
 // node_modules/@netlify/blobs/dist/chunk-XR3MUBBK.js
 var NF_ERROR = "x-nf-error";
@@ -158,16 +159,16 @@ var collectIterator = async (iterator) => {
   return result;
 };
 var base64Decode = (input) => {
-  const { Buffer } = globalThis;
-  if (Buffer) {
-    return Buffer.from(input, "base64").toString();
+  const { Buffer: Buffer2 } = globalThis;
+  if (Buffer2) {
+    return Buffer2.from(input, "base64").toString();
   }
   return atob(input);
 };
 var base64Encode = (input) => {
-  const { Buffer } = globalThis;
-  if (Buffer) {
-    return Buffer.from(input).toString("base64");
+  const { Buffer: Buffer2 } = globalThis;
+  if (Buffer2) {
+    return Buffer2.from(input).toString("base64");
   }
   return btoa(input);
 };
@@ -751,6 +752,33 @@ function openStore(name) {
 }
 var pagesStore = () => openStore("eost-pages");
 
+// fn/lib/auth.mjs
+import { createHmac, randomBytes, scrypt as _scrypt, timingSafeEqual, createHash } from "node:crypto";
+import { promisify } from "node:util";
+var scrypt = promisify(_scrypt);
+var COOKIE = "eost_admin";
+var SESSION_MS = 12 * 60 * 60 * 1e3;
+var sign = (secret, data) => createHmac("sha256", secret).update(data).digest("base64url");
+function readSession(req) {
+  const secret = env("SESSION_SECRET");
+  if (!secret) return null;
+  const cookie = req.headers.get("cookie") || "";
+  const m = cookie.match(new RegExp(`(?:^|;\\s*)${COOKIE}=([^;]+)`));
+  if (!m) return null;
+  const [payload, sig] = m[1].split(".");
+  if (!payload || !sig) return null;
+  const good = sign(secret, payload);
+  const a = Buffer.from(sig), b = Buffer.from(good);
+  if (a.length !== b.length || !timingSafeEqual(a, b)) return null;
+  try {
+    const s = JSON.parse(Buffer.from(payload, "base64url").toString());
+    return s.exp > Date.now() ? s : null;
+  } catch {
+    return null;
+  }
+}
+var WINDOW_MS = 15 * 60 * 1e3;
+
 // fn/page.mjs
 function splice(html, main, footer) {
   let out = html;
@@ -772,12 +800,16 @@ var page_default = async (req) => {
   const base = isLang(l) && isPage(p) ? pages_generated_default[`${l}:${p}`] : null;
   if (!base) return new Response("Page introuvable", { status: 404, headers: { "Content-Type": "text/plain; charset=utf-8" } });
   let html = base;
+  const preview = url.searchParams.get("draft") === "1" && !!readSession(req);
   try {
     const st = pagesStore();
-    const [m, f] = await Promise.all([
-      isEditable(p) ? st.get(`page:${l}:${p}`, { type: "json" }) : null,
-      st.get(`footer:${l}`, { type: "json" })
-    ]);
+    const get = (k) => st.get(k, { type: "json" });
+    let [m, f] = await Promise.all([isEditable(p) ? get(`page:${l}:${p}`) : null, get(`footer:${l}`)]);
+    if (preview) {
+      const [dm, df] = await Promise.all([isEditable(p) ? get(`draft:${l}:${p}`) : null, get(`draftfooter:${l}`)]);
+      if (dm) m = dm.reset ? null : dm;
+      if (df) f = df.reset ? null : df;
+    }
     html = splice(base, m && m.html, f && f.html);
   } catch (e) {
     console.error("Lecture des modifications impossible, page d'origine affich\xE9e :", e && e.message);
@@ -785,7 +817,7 @@ var page_default = async (req) => {
   return new Response(html, {
     headers: {
       "Content-Type": "text/html; charset=utf-8",
-      "Cache-Control": "public, max-age=0, must-revalidate",
+      "Cache-Control": preview ? "no-store" : "public, max-age=0, must-revalidate",
       "X-Content-Type-Options": "nosniff"
     }
   });

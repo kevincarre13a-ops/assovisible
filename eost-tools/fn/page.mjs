@@ -2,6 +2,7 @@
 import pages from './pages.generated.json' with { type: 'json' };
 import { isLang, isPage, isEditable } from './lib/config.mjs';
 import { pagesStore } from './lib/store.mjs';
+import { readSession } from './lib/auth.mjs';
 
 export function splice(html, main, footer) {
   let out = html;
@@ -24,12 +25,17 @@ export default async (req) => {
   const base = isLang(l) && isPage(p) ? pages[`${l}:${p}`] : null;
   if (!base) return new Response('Page introuvable', { status: 404, headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
   let html = base;
+  // Aperçu des brouillons : réservé à l'administrateur connecté (jamais mis en cache).
+  const preview = url.searchParams.get('draft') === '1' && !!readSession(req);
   try {
     const st = pagesStore();
-    const [m, f] = await Promise.all([
-      isEditable(p) ? st.get(`page:${l}:${p}`, { type: 'json' }) : null,
-      st.get(`footer:${l}`, { type: 'json' }),
-    ]);
+    const get = (k) => st.get(k, { type: 'json' });
+    let [m, f] = await Promise.all([isEditable(p) ? get(`page:${l}:${p}`) : null, get(`footer:${l}`)]);
+    if (preview) {
+      const [dm, df] = await Promise.all([isEditable(p) ? get(`draft:${l}:${p}`) : null, get(`draftfooter:${l}`)]);
+      if (dm) m = dm.reset ? null : dm;
+      if (df) f = df.reset ? null : df;
+    }
     html = splice(base, m && m.html, f && f.html);
   } catch (e) {
     console.error('Lecture des modifications impossible, page d\'origine affichée :', e && e.message);
@@ -37,7 +43,7 @@ export default async (req) => {
   return new Response(html, {
     headers: {
       'Content-Type': 'text/html; charset=utf-8',
-      'Cache-Control': 'public, max-age=0, must-revalidate',
+      'Cache-Control': preview ? 'no-store' : 'public, max-age=0, must-revalidate',
       'X-Content-Type-Options': 'nosniff',
     },
   });

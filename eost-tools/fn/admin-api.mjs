@@ -43,14 +43,20 @@ const actions = {
     const out = [];
     for (const lang of ['fr', 'br']) {
       for (const p of PAGES) {
-        let at = null;
+        let at = null, draft = null;
         try { const r = await st.get(`page:${lang}:${p.key}`, { type: 'json' }); at = r && r.at; } catch { /* page d'origine */ }
-        out.push({ lang, key: p.key, name: p[lang], modified: at });
+        try { const d = await st.get(`draft:${lang}:${p.key}`, { type: 'json' }); draft = d ? d.at : null; } catch { /* pas de brouillon */ }
+        out.push({ lang, key: p.key, name: p[lang], modified: at, draft });
       }
     }
-    return json({ ok: true, pages: out });
+    const footers = {};
+    for (const lang of ['fr', 'br']) {
+      try { const d = await st.get(`draftfooter:${lang}`, { type: 'json' }); if (d) footers[lang] = d.at; } catch { /* rien */ }
+    }
+    return json({ ok: true, pages: out, footers });
   },
 
+  // Enregistre un BROUILLON : rien n'est visible des visiteurs avant « publish ».
   async 'save-page'(ctx) {
     const { lang, page, main, footer } = ctx.body;
     if (!isLang(lang) || !isEditable(page)) return bad('Page inconnue.');
@@ -58,13 +64,14 @@ const actions = {
     const html = sanitizeFragment(main);
     if (html.replace(/<[^>]*>/g, '').trim().length < 20 || !/<section/.test(html)) return bad("Le contenu envoyé semble incomplet : rien n'a été enregistré.");
     const st = pagesStore();
-    await saveWithHistory(st, `page:${lang}:${page}`, `hist:${lang}:${page}:`, html, ctx.session.u);
+    const at = new Date().toISOString();
+    await st.setJSON(`draft:${lang}:${page}`, { html, at, by: ctx.session.u });
     let footerSaved = false;
     if (typeof footer === 'string' && footer.length <= MAX_HTML) {
       const f = sanitizeFragment(footer);
-      if (f.replace(/<[^>]*>/g, '').trim().length >= 10) { await saveWithHistory(st, `footer:${lang}`, `histfooter:${lang}:`, f, ctx.session.u); footerSaved = true; }
+      if (f.replace(/<[^>]*>/g, '').trim().length >= 10) { await st.setJSON(`draftfooter:${lang}`, { html: f, at, by: ctx.session.u }); footerSaved = true; }
     }
-    return json({ ok: true, footerSaved, at: new Date().toISOString() });
+    return json({ ok: true, footerSaved, at });
   },
 
   async history(ctx) {
@@ -86,18 +93,55 @@ const actions = {
     const st = pagesStore();
     const old = await st.get(`hist:${lang}:${page}:${id}`, { type: 'json' });
     if (!old || typeof old.html !== 'string') return bad('Cette ancienne version est introuvable.', 404);
-    await saveWithHistory(st, `page:${lang}:${page}`, `hist:${lang}:${page}:`, old.html, ctx.session.u);
+    await st.setJSON(`draft:${lang}:${page}`, { html: old.html, at: new Date().toISOString(), by: ctx.session.u });
     return json({ ok: true });
   },
 
   async 'reset-page'(ctx) {
     const { lang, page } = ctx.body;
     if (!isLang(lang) || !isEditable(page)) return bad('Page inconnue.');
-    const st = pagesStore();
-    const prev = await st.get(`page:${lang}:${page}`, { type: 'json' });
-    if (prev && typeof prev.html === 'string') await st.setJSON(`hist:${lang}:${page}:${stamp()}-${randomUUID().slice(0, 4)}`, prev);
-    await st.delete(`page:${lang}:${page}`);
+    await pagesStore().setJSON(`draft:${lang}:${page}`, { reset: true, at: new Date().toISOString(), by: ctx.session.u });
     return json({ ok: true });
+  },
+
+  // Abandonne les brouillons (une page, ou tout) : le site en ligne n'est pas touché.
+  async discard(ctx) {
+    const { lang, page, all } = ctx.body;
+    const st = pagesStore();
+    if (all) {
+      const { blobs } = await st.list({ prefix: 'draft' });
+      for (const b of blobs) await st.delete(b.key);
+      return json({ ok: true, removed: blobs.length });
+    }
+    if (!isLang(lang) || !isEditable(page)) return bad('Page inconnue.');
+    await st.delete(`draft:${lang}:${page}`);
+    return json({ ok: true, removed: 1 });
+  },
+
+  // MISE EN LIGNE, en une seule fois : tous les brouillons deviennent la version publique.
+  async publish() {
+    const st = pagesStore();
+    const { blobs } = await st.list({ prefix: 'draft' });
+    const done = [];
+    for (const b of blobs.map((x) => x.key).sort()) {
+      const d = await st.get(b, { type: 'json' });
+      if (!d) continue;
+      const isFooter = b.startsWith('draftfooter:');
+      const [, lang, page] = b.split(':');
+      if (!isLang(lang) || (!isFooter && !isEditable(page))) { await st.delete(b); continue; }
+      const liveKey = isFooter ? `footer:${lang}` : `page:${lang}:${page}`;
+      const histPrefix = isFooter ? `histfooter:${lang}:` : `hist:${lang}:${page}:`;
+      if (d.reset) {
+        const prev = await st.get(liveKey, { type: 'json' });
+        if (prev && typeof prev.html === 'string') { await st.setJSON(`${histPrefix}${stamp()}-${randomUUID().slice(0, 4)}`, prev); await keepRecent(st, histPrefix); }
+        await st.delete(liveKey);
+      } else if (typeof d.html === 'string') {
+        await saveWithHistory(st, liveKey, histPrefix, d.html, d.by || 'eost');
+      }
+      await st.delete(b);
+      done.push(isFooter ? `pied de page ${lang}` : `${lang}/${page}`);
+    }
+    return json({ ok: true, published: done.length, items: done, at: new Date().toISOString() });
   },
 
   // Entretien (agence) : efface les anciennes versions d'une page ou du pied de page. Aucun bouton ne l'appelle.
@@ -114,7 +158,7 @@ const actions = {
   async 'reset-footer'(ctx) {
     const { lang } = ctx.body;
     if (!isLang(lang)) return bad('Langue inconnue.');
-    await pagesStore().delete(`footer:${lang}`);
+    await pagesStore().setJSON(`draftfooter:${lang}`, { reset: true, at: new Date().toISOString(), by: ctx.session.u });
     return json({ ok: true });
   },
 

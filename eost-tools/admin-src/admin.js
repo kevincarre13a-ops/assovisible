@@ -14,7 +14,7 @@
     { key: 'merci', fr: 'Remerciement après envoi du formulaire', br: 'Trugarez goude kas ar follenn' },
   ];
   const app = document.getElementById('app');
-  let editorActive = false;
+  let editorActive = false, pendingCount = 0;
   const pageUrl = (lang, key) => (lang === 'br' ? '/br/' + (key === 'index' ? '' : key) : '/' + (key === 'index' ? '' : key));
 
   /* ---------- petits outils ---------- */
@@ -113,23 +113,65 @@
     const me = await api('me');
     if (!me.ok) return;
     const pg = await api('pages');
-    const mod = {};
-    (pg.pages || []).forEach((p) => { mod[p.lang + ':' + p.key] = p.modified; });
-    const tiles = (lang) => PAGES.map((p) => h('button', { class: 'tile', type: 'button', onclick: () => openEditor(lang, p.key) },
-      h('span', {}, p[lang]), h('small', {}, mod[lang + ':' + p.key] ? 'Modifiée le ' + fmtDate(mod[lang + ':' + p.key]).split(' à')[0].split(',')[0] : 'Version d\'origine'), mod[lang + ':' + p.key] ? h('span', { class: 'pill' }, 'modifiée') : null));
+    const mod = {}, drf = {};
+    (pg.pages || []).forEach((p) => { mod[p.lang + ':' + p.key] = p.modified; drf[p.lang + ':' + p.key] = p.draft; });
+    const pending = (pg.pages || []).filter((p) => p.draft);
+    const footersPending = Object.keys(pg.footers || {});
+    const nb = pending.length;
+    pendingCount = nb + footersPending.length;
+    const tiles = (lang) => PAGES.map((p) => {
+      const k = lang + ':' + p.key;
+      return h('button', { class: 'tile', type: 'button', onclick: () => openEditor(lang, p.key) },
+        h('span', {}, p[lang]),
+        h('small', {}, drf[k] ? 'Enregistrée, pas encore en ligne' : mod[k] ? 'Modifiée le ' + fmtDate(mod[k]).split(' à')[0].split(',')[0] : 'Version d\'origine'),
+        drf[k] ? h('span', { class: 'pill wait' }, 'à mettre en ligne') : mod[k] ? h('span', { class: 'pill' }, 'en ligne') : null);
+    });
+    const names = pending.map((p) => h('li', {}, h('b', {}, p.name), ' (' + (p.lang === 'br' ? 'breton' : 'français') + ') ',
+      h('a', { href: pageUrl(p.lang, p.key) + '?draft=1', target: '_blank', rel: 'noopener' }, 'voir'), ' · ',
+      h('a', { href: '#', onclick: async (e) => { e.preventDefault();
+        if (!(await confirmBox('Abandonner les changements de cette page ?', 'Les modifications enregistrées de cette page (pas encore en ligne) seront effacées. Le site en ligne ne change pas.', 'Oui, abandonner', true))) return;
+        const r = await api('discard', { lang: p.lang, page: p.key }); if (r.ok) { toast('Changements abandonnés.'); showHome(); } else toast(r.error, true); } }, 'abandonner')));
+    footersPending.forEach((l) => names.push(h('li', {}, h('b', {}, 'Pied de page'), ' (' + (l === 'br' ? 'breton' : 'français') + ')')));
+    const publishBox = pendingCount
+      ? h('div', { class: 'publish wait' },
+        h('h2', {}, '⚠ Modifications enregistrées, pas encore en ligne'),
+        h('p', {}, 'Les visiteurs ne voient encore rien de ce que vous avez fait. Quand vous avez ', h('b', {}, 'terminé toutes vos pages'), ' (français et breton), faites la mise en ligne ', h('b', {}, 'une seule fois'), '.'),
+        h('ul', {}, names),
+        h('button', { class: 'btn main big', type: 'button', onclick: publish }, '🌐 Mettre le site en ligne'),
+        h('p', { class: 'muted', style: 'margin-top:12px' }, 'Ne mettez pas en ligne page par page : cela peut provoquer des erreurs sur le site. Une seule mise en ligne, à la fin.'))
+      : h('div', { class: 'publish ok' }, h('b', {}, '✔ Le site est à jour.'), ' Aucune modification en attente. Quand vous modifiez et enregistrez des pages, elles restent en attente ici jusqu\'à la mise en ligne.');
     app.replaceChildren(topBar(h('button', { class: 'btn small', onclick: logout }, 'Se déconnecter')),
       h('div', { class: 'wrap' },
         h('h1', {}, 'Bonjour ! Que voulez-vous modifier ?'),
-        h('p', {}, 'Choisissez une page. Vous pourrez cliquer directement sur les textes et les photos pour les changer.'),
+        h('p', {}, 'Choisissez une page. Vous pourrez cliquer directement sur les textes et les photos pour les changer. ', h('b', {}, 'Vos changements ne sont visibles des visiteurs qu\'après la mise en ligne finale.')),
+        publishBox,
         h('h2', {}, 'Pages en français'), h('div', { class: 'grid' }, tiles('fr')),
         h('h2', {}, 'Pages en breton (Brezhoneg)'), h('div', { class: 'grid' }, tiles('br')),
         h('h2', {}, 'Autres'),
         h('div', { class: 'grid' },
           h('button', { class: 'tile', type: 'button', onclick: showHelp }, 'Aide', h('small', {}, 'Comment faire ?')),
-          h('a', { class: 'tile', href: '/', target: '_blank', rel: 'noopener' }, 'Voir le site', h('small', {}, 'S\'ouvre dans un nouvel onglet'))),
+          h('a', { class: 'tile', href: '/', target: '_blank', rel: 'noopener' }, 'Voir le site en ligne', h('small', {}, 'S\'ouvre dans un nouvel onglet'))),
         h('p', { class: 'muted', style: 'margin-top:36px' }, 'Vous ne pouvez pas ajouter ou supprimer de page, ni changer la mise en page : le reste du site est modifiable.')));
   }
-  async function logout() { await api('logout', {}); showLogin(); }
+  async function publish() {
+    const go = await confirmBox('Mettre le site en ligne ?',
+      'Avez-vous terminé TOUTES vos modifications, en français et en breton ? La mise en ligne se fait en une seule fois, quand tout est fini. Ne la refaites pas page par page : cela peut provoquer des erreurs sur le site. Vous pouvez d\'abord vérifier chaque page avec « voir ».',
+      'Oui, tout est terminé : mettre en ligne');
+    if (!go) return;
+    const r = await api('publish', {});
+    if (r.ok) {
+      pendingCount = 0;
+      await modal('✔ Le site est en ligne', h('div', {}, h('p', {}, r.published + ' élément' + (r.published > 1 ? 's' : '') + ' mis en ligne en une seule fois.'), h('p', {}, 'Les visiteurs voient maintenant vos modifications.')), [{ id: 'ok', label: 'Très bien', cls: 'main' }]);
+      showHome();
+    } else toast(r.error || 'La mise en ligne a échoué. Rien n\'est perdu : réessayez.', true);
+  }
+  async function logout() {
+    if (pendingCount) {
+      const r = await modal('Des modifications ne sont pas en ligne', h('div', {}, h('p', {}, 'Vous avez des pages enregistrées mais pas encore mises en ligne. Elles sont conservées, mais les visiteurs ne les verront qu\'après la mise en ligne.')), [{ id: 'stay', label: 'Retourner au menu', cls: 'main' }, { id: 'out', label: 'Me déconnecter quand même' }]);
+      if (r !== 'out') return;
+    }
+    await api('logout', {}); showLogin();
+  }
 
   /* ---------- aide ---------- */
   function helpBody() {
@@ -140,7 +182,8 @@
         h('li', {}, h('b', {}, 'Ajouter un élément (un événement, une photo, un livre…) : '), 'cliquez dans un élément existant : une barre noire apparaît au-dessus. Choisissez « Ajouter un autre comme celui-ci », puis modifiez la copie.'),
         h('li', {}, h('b', {}, 'Supprimer, monter ou descendre un élément : '), 'utilisez la même barre noire.'),
         h('li', {}, h('b', {}, 'Changer un lien ou un document à télécharger : '), 'cliquez sur le bouton ou le lien, puis sur « Modifier le lien ».'),
-        h('li', {}, h('b', {}, 'Enregistrer : '), 'cliquez sur le grand bouton vert « Enregistrer ». Les visiteurs voient tout de suite le changement.'),
+        h('li', {}, h('b', {}, 'Enregistrer : '), 'cliquez sur le grand bouton vert « Enregistrer » à chaque page terminée. Vos changements sont gardés, mais les visiteurs ne les voient pas encore.'),
+        h('li', {}, h('b', {}, 'Mettre en ligne (une seule fois) : '), 'quand TOUTES vos pages sont terminées (français et breton), retournez au menu et cliquez sur « Mettre le site en ligne ». Ne le faites pas page par page : cela peut provoquer des erreurs sur le site.'),
         h('li', {}, h('b', {}, 'Vous vous êtes trompé ? '), '« Anciennes versions » permet de revenir en arrière. « Annuler la dernière action » défait le dernier déplacement, ajout ou suppression.')),
       h('p', { class: 'muted' }, 'Le pied de page (en bas de chaque page, avec les coordonnées) est commun à toutes les pages d\'une même langue : si vous le modifiez, le changement s\'applique à toutes les pages.'));
   }
@@ -195,13 +238,13 @@
         undoBtn,
         h('button', { class: 'btn small', type: 'button', onclick: showVersions }, 'Anciennes versions'),
         h('button', { class: 'btn small', type: 'button', onclick: () => modal('Aide', helpBody(), [{ id: 'ok', label: 'J\'ai compris', cls: 'main' }]) }, 'Aide'),
-        h('a', { class: 'btn small', href: url, target: '_blank', rel: 'noopener' }, 'Voir la page')));
-    const tip = h('div', { class: 'tip' }, h('b', {}, 'Cliquez sur un texte'), ' pour le modifier · ', h('b', {}, 'cliquez sur une photo'), ' pour la changer · ', h('b', {}, 'cliquez dans un élément'), ' pour le déplacer, l\'ajouter ou le supprimer.');
+        h('a', { class: 'btn small', href: url + '?draft=1', target: '_blank', rel: 'noopener' }, 'Voir la page')));
+    const tip = h('div', { class: 'tip' }, h('b', {}, 'Cliquez sur un texte'), ' pour le modifier · ', h('b', {}, 'cliquez sur une photo'), ' pour la changer · ', h('b', {}, 'cliquez dans un élément'), ' pour le déplacer, l\'ajouter ou le supprimer. ', h('b', {}, 'Enregistrer ne met pas en ligne'), ' : la mise en ligne se fait une seule fois, depuis le menu.');
     app.replaceChildren(h('div', { class: 'editor' }, bar, tip, iframe));
 
     /* chargement de la vraie page dans le cadre, sans ses scripts d'animation */
     let html;
-    try { html = await (await fetch(url + '?t=' + Date.now(), { credentials: 'same-origin' })).text(); }
+    try { html = await (await fetch(url + '?draft=1&t=' + Date.now(), { credentials: 'same-origin' })).text(); }
     catch { toast('Impossible de charger la page.', true); return showHome(); }
     html = html.replace(/<script[^>]*site\.js[^>]*><\/script>/, '').replace('<head>', '<head><base href="' + location.origin + url + '">');
     iframe.addEventListener('load', setup, { once: true });
@@ -436,7 +479,7 @@
         const main = serialize(mainEl), footer = serialize(footerEl);
         const footerChanged = footer !== S.snap.split('\u0001')[1];
         const r = await api('save-page', { lang, page: key, main, footer: footerChanged ? footer : undefined });
-        if (r.ok) { S.snap = snapshot(); S.dirty = false; dirtyEl.hidden = true; toast('✔ Enregistré. Les visiteurs voient déjà vos modifications.'); }
+        if (r.ok) { S.snap = snapshot(); S.dirty = false; dirtyEl.hidden = true; toast('✔ Enregistré. Pas encore en ligne : quand TOUT est fini, retournez au menu et cliquez sur « Mettre le site en ligne ».'); }
         else toast(r.error || 'L\'enregistrement a échoué. Rien n\'a été perdu : réessayez.', true);
       } finally { S.saving = false; saveBtn.disabled = false; saveBtn.textContent = '✔ Enregistrer'; }
     }
@@ -454,16 +497,16 @@
       const list = h('div', {});
       const items = r.items || [];
       if (!r.ok) list.append(h('div', { class: 'err' }, r.error || 'Impossible de lire l\'historique.'));
-      else if (!items.length) list.append(h('p', {}, 'Aucune ancienne version pour le moment. Elles apparaissent après un enregistrement.'));
+      else if (!items.length) list.append(h('p', {}, 'Aucune ancienne version pour le moment. Elles apparaissent après une mise en ligne.'));
       items.forEach((it) => list.append(h('div', { class: 'hist' }, h('span', {}, fmtDate(it.at)), h('button', { class: 'btn small', type: 'button', onclick: async () => {
-        if (!(await confirmBox('Revenir à cette version ?', 'La page affichée sera remplacée par cette ancienne version (la version actuelle est gardée dans l\'historique).', 'Oui, revenir en arrière'))) return;
+        if (!(await confirmBox('Revenir à cette version ?', 'Cette ancienne version sera chargée dans la page. Elle ne sera visible des visiteurs qu\'après la mise en ligne.', 'Oui, revenir en arrière'))) return;
         const rr = await api('restore', { lang, page: key, id: it.id });
-        if (rr.ok) { window.onbeforeunload = null; closeModals(); toast('✔ Ancienne version rétablie.'); openEditor(lang, key); } else toast(rr.error, true);
+        if (rr.ok) { window.onbeforeunload = null; closeModals(); toast('✔ Ancienne version rétablie dans la page. Pensez à enregistrer puis à mettre en ligne.'); openEditor(lang, key); } else toast(rr.error, true);
       } }, 'Revenir à cette version'))));
       const extra = h('div', { style: 'margin-top:18px' }, h('button', { class: 'btn small danger', type: 'button', onclick: async () => {
-        if (!(await confirmBox('Rétablir la version d\'origine ?', 'Tous vos changements sur cette page seront remplacés par la version d\'origine du site. Vous pourrez les retrouver dans les anciennes versions.', 'Oui, rétablir', true))) return;
+        if (!(await confirmBox('Rétablir la version d\'origine ?', 'La page reviendra à la version d\'origine du site, au moment de la mise en ligne. La version actuelle restera dans les anciennes versions.', 'Oui, rétablir', true))) return;
         const rr = await api('reset-page', { lang, page: key });
-        if (rr.ok) { window.onbeforeunload = null; closeModals(); toast('✔ Version d\'origine rétablie.'); openEditor(lang, key); } else toast(rr.error, true);
+        if (rr.ok) { window.onbeforeunload = null; closeModals(); toast('✔ Version d\'origine rétablie dans la page (pas encore en ligne).'); openEditor(lang, key); } else toast(rr.error, true);
       } }, 'Rétablir la version d\'origine de cette page'));
       await modal('Anciennes versions', h('div', {}, list, extra), [{ id: 'ok', label: 'Fermer', cls: 'main' }]);
     }

@@ -19,6 +19,8 @@ let n = 0; const ok = (name, c, extra = '') => { assert.ok(c, name + ' ' + extra
 const shot = (name) => page.screenshot({ path: `${SHOTS}/${name}.png` });
 const frame = () => page.frameLocator('iframe.frame');
 const text = async (loc) => (await loc.first().innerText()).trim();
+const peek = (u) => page.evaluate(async (u) => (await fetch(u + '?draft=1', { cache: 'no-store' })).text(), u);
+const pubfetch = async (u) => (await fetch(s.url + u, { cache: 'no-store' })).text();
 
 console.log('Connexion');
 await page.goto(s.url + '/adherer');
@@ -53,8 +55,10 @@ await page.getByRole('button', { name: /Enregistrer/ }).click();
 await page.locator('.toast', { hasText: 'Enregistré' }).waitFor(); await page.locator('.dirty').waitFor({ state: 'hidden' }); await page.waitForTimeout(700);
 ok('message « Enregistré »', true);
 ok('plus de « non enregistré »', !(await page.locator('.dirty').isVisible()));
-let pub = await (await fetch(s.url + '/agenda')).text();
-ok('visible tout de suite sur le site public', pub.includes('(mis à jour)'));
+let pub = await peek('/agenda');
+ok('ENREGISTRER NE MET PAS EN LIGNE : le site public n\'a pas changé', !(await pubfetch('/agenda')).includes('(mis à jour)'));
+ok('l\'aperçu du brouillon montre la modification', pub.includes('(mis à jour)'));
+ok('le message dit que ce n\'est pas encore en ligne', /pas encore en ligne/i.test(await text(page.locator('.toast'))));
 ok('rien d\'indésirable enregistré (attributs d\'édition)', !/contenteditable|data-eost|eost-active|eost-img/.test(pub));
 
 console.log('Ajouter, déplacer, supprimer un événement');
@@ -77,7 +81,7 @@ await frame().getByRole('button', { name: /Monter/ }).click();
 ok('puis remonté', (await text(evs().nth(1).locator('h3'))) === 'Sortie au moulin de Luzéoc');
 await page.getByRole('button', { name: /Enregistrer/ }).click();
 await page.locator('.toast', { hasText: 'Enregistré' }).waitFor(); await page.locator('.dirty').waitFor({ state: 'hidden' }); await page.waitForTimeout(700);
-pub = await (await fetch(s.url + '/agenda')).text();
+pub = await peek('/agenda');
 ok('nouvel événement visible sur le site', pub.includes('Sortie au moulin de Luzéoc') && pub.includes('Venez nombreux'));
 ok('la copie garde la mise en page (date, étiquette)', (pub.match(/class="ev[ "]/g) || []).length === before + 1);
 // suppression avec confirmation et annulation
@@ -92,19 +96,56 @@ ok('« Annuler la dernière action » ramène l\'événement', (await evs().coun
 await evs().nth(1).locator('h3').click();
 await frame().locator('.eost-bar button.del').click(); await page.getByRole('button', { name: 'Oui, supprimer' }).click();
 await page.getByRole('button', { name: /Enregistrer/ }).click(); await page.locator('.toast', { hasText: 'Enregistré' }).waitFor(); await page.locator('.dirty').waitFor({ state: 'hidden' }); await page.waitForTimeout(700);
-pub = await (await fetch(s.url + '/agenda')).text();
+pub = await peek('/agenda');
 ok('suppression enregistrée', !pub.includes('Sortie au moulin de Luzéoc'));
 
+console.log('Mise en ligne en une seule fois (1re)');
+await page.getByRole('button', { name: '← Retour au menu' }).click();
+await page.getByRole('heading', { name: /Que voulez-vous modifier/ }).waitFor();
+ok('le menu affiche « Modifications enregistrées, pas encore en ligne »', await page.locator('.publish.wait').isVisible());
+ok('…avec la page concernée et un grand bouton', (await text(page.locator('.publish.wait'))).includes('Agenda') && await page.getByRole('button', { name: /Mettre le site en ligne/ }).isVisible());
+await shot('e2e-5a-menu-attente');
+await page.getByRole('button', { name: /Mettre le site en ligne/ }).click();
+await page.locator('.dlg', { hasText: 'Mettre le site en ligne' }).waitFor();
+ok('l\'avertissement « une seule fois » est affiché', /une seule fois|en une seule fois/.test(await text(page.locator('.dlg'))) && /page par page/.test(await text(page.locator('.dlg'))));
+await shot('e2e-5b-confirmation');
+await page.getByRole('button', { name: 'Non, annuler' }).click().catch(async () => { await page.keyboard.press('Escape'); });
+ok('on peut annuler la mise en ligne : rien n\'a changé', !(await pubfetch('/agenda')).includes('(mis à jour)'));
+await page.getByRole('button', { name: /Mettre le site en ligne/ }).click();
+await page.getByRole('button', { name: /Oui, tout est terminé/ }).click();
+await page.locator('.dlg', { hasText: 'Le site est en ligne' }).waitFor();
+await page.getByRole('button', { name: 'Très bien' }).click();
+pub = await pubfetch('/agenda');
+ok('le site public montre enfin les modifications', pub.includes('(mis à jour)') && !pub.includes('Sortie au moulin'));
+await page.locator('.publish.ok').waitFor();
+ok('le menu indique « Le site est à jour »', true);
+
 console.log('Anciennes versions');
+await page.locator('.grid').first().getByRole('button', { name: /Agenda/ }).click();
+await frame().locator('main h2').first().waitFor();
+await frame().locator('[data-eost-t]').first().waitFor();
+await page.waitForTimeout(1000);
+await frame().locator('main h2').first().click(); await page.keyboard.press('End'); await page.keyboard.type(' bis');
+await page.getByRole('button', { name: /Enregistrer/ }).click(); await page.locator('.toast', { hasText: 'Enregistré' }).waitFor(); await page.locator('.dirty').waitFor({ state: 'hidden' }); await page.waitForTimeout(700);
+await page.locator('.dirty').waitFor({ state: 'hidden' });
+await page.getByRole('button', { name: '← Retour au menu' }).click();
+await page.getByRole('button', { name: /Mettre le site en ligne/ }).click();
+await page.getByRole('button', { name: /Oui, tout est terminé/ }).click();
+await page.getByRole('button', { name: 'Très bien' }).click();
+ok('2e mise en ligne', (await pubfetch('/agenda')).includes(' bis'));
+await page.locator('.grid').first().getByRole('button', { name: /Agenda/ }).click();
+await frame().locator('[data-eost-t]').first().waitFor();
 await page.getByRole('button', { name: 'Anciennes versions' }).click();
 await page.locator('.hist').first().waitFor();
-ok('liste des anciennes versions', (await page.locator('.hist').count()) >= 2);
+ok('liste des anciennes versions (après mise en ligne)', (await page.locator('.hist').count()) >= 1);
 await shot('e2e-5-versions');
-await page.locator('.hist').nth(1).getByRole('button').click();
+await page.locator('.hist').nth(0).getByRole('button').click();
 await page.getByRole('button', { name: /Oui, revenir/ }).click();
 await page.locator('.toast', { hasText: 'Ancienne version' }).waitFor();
 await page.locator('iframe.frame').waitFor();
-ok('retour à la toute première version enregistrée', !(await (await fetch(s.url + '/agenda')).text()).includes('Sortie au moulin') );
+await frame().locator('[data-eost-t]').first().waitFor();
+ok('l\'ancienne version est chargée dans l\'éditeur', !(await text(frame().locator('main h2'))).includes(' bis'));
+ok('mais le site public ne change pas avant la mise en ligne', (await pubfetch('/agenda')).includes(' bis'));
 await page.getByRole('button', { name: '← Retour au menu' }).click();
 
 console.log('Changer une photo (Galerie)');
@@ -126,7 +167,7 @@ ok('la photo a changé et pointe vers /media/', newSrc !== oldSrc && /^\/media\/
 ok('le lien « agrandir » suit la nouvelle photo', (await frame().locator('main .gal figure a').first().getAttribute('href')) === newSrc);
 await frame().locator('main .gal figure figcaption').first().click(); await page.keyboard.press('Control+A'); await page.keyboard.type('9.11.2026 : nouvelle légende - Alc\'hwez nevez.');
 await page.getByRole('button', { name: /Enregistrer/ }).click(); await page.locator('.toast', { hasText: 'Enregistré' }).waitFor(); await page.locator('.dirty').waitFor({ state: 'hidden' }); await page.waitForTimeout(700);
-pub = await (await fetch(s.url + '/galerie')).text();
+pub = await peek('/galerie');
 ok('photo et légende visibles sur le site', pub.includes(newSrc) && pub.includes('nouvelle légende') && pub.includes('alt="Photo de test du moulin"'));
 const media = await fetch(s.url + newSrc); const mlen = (await media.arrayBuffer()).byteLength; ok('la photo est bien servie', media.status === 200 && mlen > 5000);
 ok('la photo a été réduite (< 600 Ko)', mlen < 600 * 1024, String(mlen));
@@ -155,7 +196,7 @@ await page.getByRole('button', { name: 'Valider' }).click();
 const href = await btnLink.getAttribute('href');
 ok('le bouton pointe vers le document envoyé', /^\/media\/[a-z0-9]+\.pdf$/.test(href), href);
 await page.getByRole('button', { name: /Enregistrer/ }).click(); await page.locator('.toast', { hasText: 'Enregistré' }).waitFor(); await page.locator('.dirty').waitFor({ state: 'hidden' }); await page.waitForTimeout(700);
-pub = await (await fetch(s.url + '/activites')).text();
+pub = await peek('/activites');
 ok('lien vers le PDF visible sur le site, ouvert dans un nouvel onglet', pub.includes(`href="${href}"`) && pub.includes('target="_blank"'));
 ok('le PDF se télécharge', (await fetch(s.url + href)).headers.get('content-type') === 'application/pdf');
 await page.getByRole('button', { name: '← Retour au menu' }).click();
@@ -166,7 +207,7 @@ await page.waitForTimeout(2000);
 ok('les chiffres clés montrent leur vraie valeur à l\'édition', /^\d+$/.test((await text(counter))) && (await text(counter)) !== '0');
 await counter.click(); await page.keyboard.press('Control+A'); await page.keyboard.type('31');
 await page.getByRole('button', { name: /Enregistrer/ }).click(); await page.locator('.toast', { hasText: 'Enregistré' }).waitFor(); await page.locator('.dirty').waitFor({ state: 'hidden' }); await page.waitForTimeout(700);
-pub = await (await fetch(s.url + '/')).text();
+pub = await peek('/');
 ok('le chiffre est enregistré pour l\'animation du site', /<b data-count="31">0<\/b>/.test(pub));
 
 console.log('Pied de page et page en breton');
@@ -176,28 +217,53 @@ await frame().locator('footer .fgrid li').nth(0).click().catch(() => {});
 const phone = frame().locator('footer [data-eost-t]', { hasText: '06 64 96 45 50' }).first();
 await phone.click(); await page.keyboard.press('Control+A'); await page.keyboard.type('Tél. 06 64 96 45 50 (test)');
 await page.getByRole('button', { name: /Enregistrer/ }).click(); await page.locator('.toast', { hasText: 'Enregistré' }).waitFor(); await page.locator('.dirty').waitFor({ state: 'hidden' }); await page.waitForTimeout(700);
-ok('le pied de page modifié apparaît sur toutes les pages françaises', (await (await fetch(s.url + '/galerie')).text()).includes('(test)') && !(await (await fetch(s.url + '/br/galerie')).text()).includes('(test)'));
+ok('le pied de page modifié apparaît sur toutes les pages françaises', (await peek('/galerie')).includes('(test)') && !(await peek('/br/galerie')).includes('(test)'));
 await page.getByRole('button', { name: '← Retour au menu' }).click();
 await page.locator('.grid').nth(1).getByRole('button', { name: /Deiziataer/ }).click();
 await frame().locator('main h1').waitFor();
 ok('la page bretonne s\'ouvre pour être modifiée', /Deiziataer/.test(await text(frame().locator('main h1'))));
 await frame().locator('main h1').click(); await page.keyboard.press('Control+A'); await page.keyboard.type('Deiziataer EOST');
 await page.getByRole('button', { name: /Enregistrer/ }).click(); await page.locator('.toast', { hasText: 'Enregistré' }).waitFor(); await page.locator('.dirty').waitFor({ state: 'hidden' }); await page.waitForTimeout(700);
-ok('breton enregistré sans toucher au français', (await (await fetch(s.url + '/br/agenda')).text()).includes('Deiziataer EOST') && !(await (await fetch(s.url + '/agenda')).text()).includes('Deiziataer EOST'));
-const brHtml = await (await fetch(s.url + '/br/agenda')).text();
+ok('breton enregistré sans toucher au français', (await peek('/br/agenda')).includes('Deiziataer EOST') && !(await peek('/agenda')).includes('Deiziataer EOST'));
+const brHtml = await peek('/br/agenda');
 ok('la page bretonne garde ses chemins (../assets) et sa langue', brHtml.includes('../assets/style.css') && brHtml.includes('lang="br"'));
 await page.getByRole('button', { name: '← Retour au menu' }).click();
 
 console.log('Plus de rubrique « Messages reçus »');
 ok('le menu ne propose plus les messages', (await page.locator('.tile', { hasText: 'Messages reçus' }).count()) === 0);
 
-console.log('Nettoyage : retour des pages modifiées à leur version d\'origine');
-const post = async (a, body) => { const j = await page.evaluate(async ([a, body]) => (await fetch('/.netlify/functions/admin-api?a=' + a, { method: 'POST', headers: { 'X-Requested-With': 'eost-admin', 'Content-Type': 'application/json' }, body: JSON.stringify(body) })).json(), [a, body]); return { json: async () => j }; };
-for (const [lang, p] of [['fr', 'agenda'], ['fr', 'galerie'], ['fr', 'activites'], ['fr', 'index'], ['br', 'agenda']]) { const r = await post('reset-page', { lang, page: p }); ok(`rétabli : ${lang}/${p}`, (await r.json()).ok); }
-{ const r = await post('reset-footer', { lang: 'fr' }); ok('rétabli : pied de page FR', (await r.json()).ok); }
-for (const [lang, p] of [['fr', 'agenda'], ['fr', 'galerie'], ['fr', 'activites'], ['fr', 'index'], ['br', 'agenda']]) { const r = await post('purge-history', { lang, page: p }); ok(`anciennes versions effacées : ${lang}/${p}`, (await r.json()).ok); }
-{ const r = await post('purge-history', { lang: 'fr', footer: true }); ok('anciennes versions effacées : pied de page FR', (await r.json()).ok); }
-for (const u of ['/agenda', '/galerie', '/activites', '/', '/br/agenda']) { const t = await (await fetch(s.url + u)).text(); ok(`site public propre : ${u}`, !/\(test\)|\(mis à jour\)|Sortie au moulin|nouvelle légende|Deiziataer EOST|data-count="31"|\/media\//.test(t)); }
+console.log('Mise en ligne finale (tout en une fois)');
+await page.getByRole('heading', { name: /Que voulez-vous modifier/ }).waitFor();
+const box = await text(page.locator('.publish.wait'));
+ok('toutes les pages en attente sont listées (FR + BR + pied de page)', ['Agenda', 'Galerie', 'Activités', 'Accueil', 'Pied de page'].every((t) => box.includes(t)) && /breton/.test(box), box);
+await page.getByRole('button', { name: 'Se déconnecter' }).click();
+await page.locator('.dlg', { hasText: 'ne sont pas en ligne' }).waitFor();
+ok('se déconnecter avec des modifications en attente : avertissement', true);
+await page.getByRole('button', { name: 'Retourner au menu' }).click();
+await page.getByRole('button', { name: /Mettre le site en ligne/ }).click();
+await page.getByRole('button', { name: /Oui, tout est terminé/ }).click();
+await page.locator('.dlg', { hasText: 'Le site est en ligne' }).waitFor();
+ok('message « mis en ligne en une seule fois »', /une seule fois/.test(await text(page.locator('.dlg'))));
+await page.getByRole('button', { name: 'Très bien' }).click();
+ok('photo et légende en ligne (galerie)', (await pubfetch('/galerie')).includes(newSrc));
+ok('document en ligne (activités)', (await pubfetch('/activites')).includes(`href="${href}"`));
+ok('chiffre clé en ligne (accueil)', /<b data-count="31">0<\/b>/.test(await pubfetch('/')));
+ok('pied de page en ligne (FR seulement)', (await pubfetch('/galerie')).includes('(test)') && !(await pubfetch('/br/galerie')).includes('(test)'));
+ok('breton en ligne', (await pubfetch('/br/agenda')).includes('Deiziataer EOST'));
+ok('agenda : version rétablie en ligne', !(await pubfetch('/agenda')).includes(' bis'));
+await page.locator('.publish.ok').waitFor();
+ok('plus rien en attente', true);
+await shot('e2e-5c-en-ligne');
+
+console.log('Nettoyage : retour du site à sa version d\'origine');
+const post = async (a, body) => { const j = await page.evaluate(async ([a, body]) => (await fetch('/.netlify/functions/admin-api?a=' + a, { method: 'POST', headers: { 'X-Requested-With': 'eost-admin', 'Content-Type': 'application/json' }, body: JSON.stringify(body) })).json(), [a, body]); return j; };
+for (const [lang, p] of [['fr', 'agenda'], ['fr', 'galerie'], ['fr', 'activites'], ['fr', 'index'], ['br', 'agenda']]) { ok(`brouillon « origine » : ${lang}/${p}`, (await post('reset-page', { lang, page: p })).ok); }
+ok('brouillon « origine » : pied de page FR', (await post('reset-footer', { lang: 'fr' })).ok);
+{ const j = await post('publish', {}); ok('mise en ligne de l\'état d\'origine', j.ok && j.published === 6, JSON.stringify(j)); }
+for (const [lang, p] of [['fr', 'agenda'], ['fr', 'galerie'], ['fr', 'activites'], ['fr', 'index'], ['br', 'agenda']]) { ok(`anciennes versions effacées : ${lang}/${p}`, (await post('purge-history', { lang, page: p })).ok); }
+ok('anciennes versions effacées : pied de page FR', (await post('purge-history', { lang: 'fr', footer: true })).ok);
+for (const u of ['/agenda', '/galerie', '/activites', '/', '/br/agenda']) { const t = await pubfetch(u); ok(`site public propre : ${u}`, !/\(test\)|\(mis à jour\)| bis|Sortie au moulin|nouvelle légende|Deiziataer EOST|data-count="31"|\/media\//.test(t)); }
+{ const j = await (await page.evaluate(async () => (await fetch('/.netlify/functions/admin-api?a=pages', { method: 'POST', headers: { 'X-Requested-With': 'eost-admin', 'Content-Type': 'application/json' }, body: '{}' })).json())); ok('plus aucun brouillon ni page modifiée', j.pages.every((p) => !p.draft && !p.modified) && Object.keys(j.footers).length === 0); }
 
 console.log('Aide, mot de passe, déconnexion');
 await page.locator('.tile', { hasText: 'Aide' }).click();
