@@ -1,0 +1,4 @@
+# Coordonnées bancaires et devis générés : ne pas versionner
+coordonnees.local.json
+*.pdf
+devis-*.html
