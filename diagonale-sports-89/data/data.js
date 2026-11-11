@@ -1,30 +1,48 @@
 /* ============================================================
    DIAGONALE SPORTS 89 — CONTENUS DU SITE
    Ce fichier est le seul à modifier pour mettre à jour le site :
-   activités, agenda, résultats, actualités, galerie, bureau, chiffres.
+   activités, agenda, résultats, actualités, galerie, bureau, chiffres, histoire.
    Les entrées marquées  placeholder: true  sont des textes d'attente
    à remplacer par les vraies informations du club.
    ============================================================ */
 window.DS89 = {
   club: {
     nom: "Diagonale Sports 89",
+    creation: 2012,                       /* année de déclaration en préfecture (RNA) */
     adresse: "49 bis rue du Professeur Ramon, 89400 Migennes",
     tel: "06 67 56 00 50",
-    telLien: "+33667560050",
     email: "jc.charles89@orange.fr",
-    liens: [
-      { label: "Fiche du club — Walking Football France", url: "https://www.walkingfootballfrance.com/club/association-diagonale-sport-89" },
-      { label: "Annuaire des associations de Migennes", url: "https://www.ville-migennes.fr/annuaire/28/" }
-    ]
+    rna: "W891003707",
+    siren: "819 579 913"
   },
 
-  /* Chiffres clés : value = nombre ; null = à compléter (affiche « — »). */
+  /* Photo plein écran du héro de l'accueil : ex. "img/hero.jpg" (laisser vide = fond graphique) */
+  hero: "",
+
+  /* Chiffres clés : value = nombre ; null = à compléter (affiche « — »).
+     calc: "anciennete" = nombre d'années depuis club.creation (se met à jour tout seul). */
   chiffres: [
-    { value: 89,   label: "Yonne, Bourgogne-Franche-Comté", suffix: "" },
-    { value: 1,    label: "Club référencé par la fédération du walking football", suffix: "" },
-    { value: 2,    label: "Équipes de France de walking football (+50 ans et +60 ans)", suffix: "" },
-    { value: null, label: "Adhérents — à compléter", suffix: "" },
-    { value: null, label: "Séances par semaine — à compléter", suffix: "" }
+    { calc: "anciennete", label: "Ans d'existence (depuis 2012)" },
+    { value: 89,   label: "Yonne, Bourgogne-Franche-Comté" },
+    { calc: "savoirFaire", label: "Animations prévues par nos statuts (loto goal, stages, tournois…)" },
+    { value: null, label: "Adhérents — à compléter" },
+    { value: null, label: "Séances par semaine — à compléter" }
+  ],
+
+  /* Frise : l'histoire réelle du club, d'après le Journal officiel des associations */
+  histoire: [
+    { annee: "2012", titre: "Naissance du club", texte: "Le 4 mai 2012, l'association est déclarée en préfecture de l'Yonne sous le nom « Foot Événementiel 89 », à Joigny. Son idée : faire vivre le football autrement, par l'événement." },
+    { annee: "2014", titre: "Les statuts évoluent", texte: "Une première modification est déclarée à la préfecture. L'association continue d'organiser des rendez-vous autour du football." },
+    { annee: "2017", titre: "Diagonale Sports 89, à Migennes", texte: "Le club porte désormais le nom de Diagonale Sports 89 et installe son siège à Migennes." },
+    { annee: "2024", titre: "Nouvelle adresse à Migennes", texte: "Le siège s'installe rue du Professeur Ramon. Le club est aujourd'hui aussi présent dans le répertoire des clubs sportifs de la Ville d'Auxerre." },
+    { annee: "Aujourd'hui", titre: "Walking football", texte: "Diagonale Sports 89 figure sur la liste des clubs de walking football de l'association française de football en marchant, avec Jean-Claude comme référent." }
+  ],
+
+  /* Ce que le club a prévu de proposer (objet déclaré à sa création, 2012) */
+  savoirFaire: [
+    "Loto goal", "Soirées foot", "Stages de football", "Voyages sportifs",
+    "Tournois en salle", "Tournois adultes et jeunes", "Rencontres de football",
+    "Location de matériel de foot", "Location de mini-bus", "Web TV foot", "Journal sportif"
   ],
 
   activites: [
@@ -36,19 +54,43 @@ window.DS89 = {
       public: "Ouvert à toutes et tous — public précis à confirmer avec le club",
       jours: "À confirmer",
       horaires: "À confirmer",
-      lieu: "Migennes (89) — salle ou terrain à confirmer",
+      lieu: "Migennes / Auxerre — salle ou terrain à confirmer",
       tarif: "À confirmer",
       placeholder: true
     },
     {
-      id: "evenements",
-      titre: "Événements sportifs & culturels",
-      sous: "Animer le territoire",
-      texte: "L'association a pour objet d'animer et d'organiser des événements sportifs et culturels dans l'Yonne. Le détail des rendez-vous sera publié dans l'agenda.",
-      public: "Tous publics",
+      id: "tournois",
+      titre: "Tournois & rencontres",
+      sous: "Football en salle",
+      texte: "Tournois en salle, rencontres entre clubs, tournois adultes et jeunes : le club est né pour faire jouer, se rencontrer et vibrer ensemble.",
+      public: "Adultes et jeunes — à confirmer",
       jours: "Selon l'agenda",
       horaires: "Selon l'agenda",
       lieu: "Yonne (89)",
+      tarif: "À confirmer",
+      placeholder: true
+    },
+    {
+      id: "soirees",
+      titre: "Loto goal & soirées foot",
+      sous: "Convivialité",
+      texte: "Du loto goal aux soirées foot, le club mêle sport et bonne ambiance pour rassembler supporters, joueurs et familles.",
+      public: "Tous publics",
+      jours: "Selon l'agenda",
+      horaires: "Selon l'agenda",
+      lieu: "Migennes et alentours — à confirmer",
+      tarif: "À confirmer",
+      placeholder: true
+    },
+    {
+      id: "stages",
+      titre: "Stages & voyages sportifs",
+      sous: "Progresser, découvrir",
+      texte: "Stages de football et voyages sportifs : l'association a prévu de faire bouger ses membres au-delà du terrain habituel.",
+      public: "À confirmer",
+      jours: "Selon l'agenda",
+      horaires: "Selon l'agenda",
+      lieu: "À confirmer",
       tarif: "À confirmer",
       placeholder: true
     }
@@ -81,6 +123,12 @@ window.DS89 = {
       placeholder: false
     },
     {
+      titre: "Un club qui a plus de dix ans",
+      date: null,
+      texte: "Déclarée en 2012, l'association a plus de dix ans d'existence : une histoire de football, d'événements et de rencontres dans l'Yonne.",
+      placeholder: false
+    },
+    {
       titre: "Bientôt : les prochaines nouvelles du club",
       date: null,
       texte: "Les actualités (séances, tournois, rencontres) seront publiées ici. Texte d'attente à remplacer.",
@@ -92,8 +140,8 @@ window.DS89 = {
   galerie: [
     { categorie: "Séances", titre: "Séance de walking football", src: "", alt: "" },
     { categorie: "Séances", titre: "Échauffement collectif", src: "", alt: "" },
-    { categorie: "Événements", titre: "Tournoi amical", src: "", alt: "" },
-    { categorie: "Événements", titre: "Rencontre inter-clubs", src: "", alt: "" },
+    { categorie: "Événements", titre: "Tournoi en salle", src: "", alt: "" },
+    { categorie: "Événements", titre: "Loto goal", src: "", alt: "" },
     { categorie: "Le club", titre: "Les membres", src: "", alt: "" },
     { categorie: "Le club", titre: "Troisième mi-temps", src: "", alt: "" }
   ],

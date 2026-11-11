@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://diagonale-sports-89.netlify.app/sitemap.xml

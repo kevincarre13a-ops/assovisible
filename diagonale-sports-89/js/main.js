@@ -82,11 +82,32 @@
     },
     chiffres: function (el) {
       el.innerHTML = (D.chiffres || []).map(function (c) {
-        return '<div class="stat rv"><div class="n" ' + (c.value == null ? "" : 'data-count="' + c.value + '"') + '>' + (c.value == null ? "—" : "0") + '</div><p>' + esc(c.label) + '</p></div>';
+        var v = c.value;
+        if (c.calc === "anciennete") v = new Date().getFullYear() - ((D.club || {}).creation || new Date().getFullYear());
+        if (c.calc === "savoirFaire") v = (D.savoirFaire || []).length;
+        return '<div class="stat rv"><div class="n" ' + (v == null ? "" : 'data-count="' + v + '"') + '>' + (v == null ? "—" : "0") + '</div><p>' + esc(c.label) + '</p></div>';
       }).join("");
+    },
+    histoire: function (el) {
+      el.innerHTML = (D.histoire || []).map(function (h) {
+        return '<div class="tl rv"><div class="y"><em>' + esc(h.annee) + '</em></div><h3>' + esc(h.titre) + '</h3><p style="margin:0">' + esc(h.texte) + '</p></div>';
+      }).join("");
+    },
+    chips: function (el) {
+      el.innerHTML = (D.savoirFaire || []).map(function (s) { return "<span>" + esc(s) + "</span>"; }).join("");
+    },
+    ticker: function (el) {
+      var t = ["Walking football", "Depuis 2012", "Migennes · Yonne"].concat(D.savoirFaire || []);
+      var s = t.map(function (x) { return "<span>" + esc(x) + "</span>"; }).join("");
+      el.innerHTML = "<div>" + s + s + "</div>";
     }
   };
   $$("[data-render]").forEach(function (el) { var fn = R[el.getAttribute("data-render")]; if (fn) fn(el); });
+
+  /* Photo plein écran du héro (data.hero) */
+  var ph = $(".hero .photo");
+  if (ph && D.hero) { ph.style.backgroundImage = "url('" + D.hero + "')"; ph.classList.add("has-img"); }
+  var yr = $("#y"); if (yr) yr.textContent = new Date().getFullYear();
 
   /* Apparition + compteurs */
   function count(el) {
