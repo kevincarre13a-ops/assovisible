@@ -128,3 +128,6 @@ figure.cover{float:right;margin:0 0 20px 28px;width:200px}figure.cover img{width
 @media(max-width:520px){.doc{grid-template-columns:110px 1fr}}
 
 .flinks{display:flex;gap:22px;flex-wrap:wrap}.flinks a{color:#f0d9a8}
+
+/* Pastille « Powered by Netlify » injectée par l hébergeur : masquée (offre payante, masquage autorisé). */
+#nl-badge-frame{display:none!important}

@@ -63,3 +63,5 @@ ol.steps{padding-left:1.3em}ol.steps li{margin:.7em 0}
 .publish ul{margin:10px 0 16px;padding-left:22px}
 .publish li{margin:4px 0}
 .btn.big{font-size:1.25rem;padding:16px 28px;min-height:58px}
+
+#nl-badge-frame{display:none!important}
