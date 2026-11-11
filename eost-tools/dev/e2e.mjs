@@ -130,6 +130,7 @@ await page.getByRole('button', { name: '← Retour au menu' }).click();
 await page.getByRole('button', { name: /Mettre le site en ligne/ }).click();
 await page.getByRole('button', { name: /Oui, tout est terminé/ }).click();
 await page.getByRole('button', { name: 'Très bien' }).click();
+await page.locator('.publish.ok').waitFor();
 ok('2e mise en ligne', (await pubfetch('/agenda')).includes(' bis'));
 await page.locator('.grid').first().getByRole('button', { name: /Agenda/ }).click();
 await frame().locator('[data-eost-t]').first().waitFor();
