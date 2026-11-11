@@ -137,7 +137,8 @@
         el.innerHTML = d.prochains.length ? d.prochains.map(function (m) { return '<div class="result reveal"><span class="d">' + esc(fmtDate(m.date)) + "<br>" + esc(fmtHour(m.date)) + "</span><div><b>" + esc(m.domicile) + " – " + esc(m.exterieur) + "</b><small>" + esc(m.categorie) + " · " + esc(m.lieu) + "</small></div><span></span></div>"; }).join("") : '<div class="empty pending">' + esc(d.prochains_attente) + "</div>";
         var r = $("#results"); if (r) r.innerHTML = d.resultats.map(function (m) { return '<div class="result reveal"><span class="d">' + esc(fmtShort(m.date)) + "</span><div><b>" + esc(m.equipes) + "</b><small>" + esc(m.categorie) + " · saison " + esc(m.saison) + " · source " + esc(m.source) + '</small></div><span class="score">' + esc(m.score) + "</span></div>"; }).join("");
         var c = $("#ranking"); if (c) c.textContent = d.classement_attente;
-        var l = $("#match-links"); if (l) l.innerHTML = d.liens.map(function (x) { return '<a class="btn btn-outline" target="_blank" rel="noopener" href="' + esc(x.url) + '">' + esc(x.label) + "</a>"; }).join(" ");
+        var l = $("#match-links"); if (l) l.innerHTML = d.liens.map(function (x) { return '<a class="league-card reveal" target="_blank" rel="noopener" href="' + esc(x.url) + '"><b>' + esc(x.label) + "</b><span>" + esc(x.desc) + "</span><em>Ouvrir le site officiel →</em></a>"; }).join("");
+        $$("[data-lien]").forEach(function (n) { var x = d.liens.filter(function (y) { return y.id === n.dataset.lien; })[0]; if (x) n.innerHTML = '<a class="btn btn-outline" target="_blank" rel="noopener" href="' + esc(x.url) + '">' + esc(n.dataset.texte || x.label) + " ↗</a>"; });
         watch(el);
       });
     },

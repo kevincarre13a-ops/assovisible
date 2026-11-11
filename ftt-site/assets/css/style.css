@@ -322,3 +322,13 @@ textarea { min-height: 150px; resize: vertical; }
 .cols-2 { display: grid; gap: 2rem; }
 @media (min-width: 900px) { .cols-2 { grid-template-columns: 1fr 1fr; } }
 .planning-img { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; max-width: 760px; }
+
+/* Liens ligue / district */
+.league-grid { display: grid; gap: 1rem; }
+@media (min-width: 760px) { .league-grid { grid-template-columns: repeat(2, 1fr); } }
+.league-card { display: flex; flex-direction: column; gap: .3rem; background: var(--white); border-radius: var(--radius); padding: 1.3rem 1.4rem; box-shadow: var(--shadow); text-decoration: none; color: var(--ink); border-left: 8px solid var(--cyan); transition: transform .2s; }
+.league-card:hover { transform: translateY(-3px); }
+.league-card b { font-family: var(--font-title); text-transform: uppercase; font-size: 1.5rem; color: var(--blue); line-height: 1.1; }
+.league-card span { color: var(--muted); }
+.league-card em { font-style: normal; font-weight: 600; color: var(--blue); margin-top: .3rem; }
+.league-link { margin-top: 1.2rem; }

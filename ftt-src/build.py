@@ -60,6 +60,10 @@ FOOTER = f'''<footer class="site-footer">
           <li><a href="actualites-evenements.html">Actualités &amp; événements</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="partenaires.html">Partenaires</a></li>
           <li><a href="contact.html">Nous rejoindre</a></li><li><a href="mentions-legales.html">Mentions légales</a></li>
         </ul>
+        <h4 style="margin-top:1.2rem">Foot officiel</h4>
+        <ul>
+          <li><a href="https://occitanie.fff.fr/" target="_blank" rel="noopener">Ligue de Football d'Occitanie</a></li><li><a href="https://foot82.fff.fr/" target="_blank" rel="noopener">District de Tarn-et-Garonne</a></li>
+        </ul>
       </div>
     </div>
     <div class="legal"><span>© Football Terrasses du Tarn · Photos et visuels : club, crédits indiqués</span><span>Maquette réalisée par <a href="https://assovisible.fr" target="_blank" rel="noopener">AssoVisible</a></span></div>
@@ -239,6 +243,7 @@ eq_body = f'''
     <div class="filters" id="team-filters" role="group" aria-label="Filtrer par catégorie"></div>
     <div class="teams" data-render="teams"></div>
     <p class="hint" style="margin-top:1rem">Horaires d'après le planning officiel 2026-2027. Les éducateurs seront indiqués par le club.</p>
+    <p class="league-link" data-lien="district" data-texte="Championnats du District de Tarn-et-Garonne"></p>
   </div>
 </section>
 <section class="block alt" id="planning">
@@ -260,19 +265,27 @@ m_body = '''
   <div class="container">
     <div class="section-head reveal"><p class="eyebrow" style="color:var(--blue)">Calendrier</p><h2>Prochains matchs</h2></div>
     <div class="grid" data-render="matches"></div>
+    <p class="league-link" data-lien="district" data-texte="Tous les calendriers sur le site du District"></p>
   </div>
 </section>
 <section class="block alt">
   <div class="container">
     <div class="section-head reveal"><p class="eyebrow" style="color:var(--blue)">Résultats</p><h2>Derniers scores</h2><p>Résultats connus publiquement (saison précédente). Les scores de la saison en cours seront ajoutés par le club.</p></div>
     <div class="grid" id="results"></div>
+    <p class="league-link" data-lien="club" data-texte="Tous nos résultats sur la plateforme FFF"></p>
   </div>
 </section>
 <section class="block">
   <div class="container">
     <div class="section-head reveal"><p class="eyebrow" style="color:var(--blue)">Classement</p><h2>Où en sont nos équipes ?</h2></div>
     <div class="empty pending" id="ranking"></div>
-    <p style="margin-top:1.5rem" id="match-links"></p>
+    <p class="league-link" data-lien="ligue" data-texte="Classements de la Ligue d'Occitanie"></p>
+  </div>
+</section>
+<section class="block dark" id="ligue">
+  <div class="container">
+    <div class="section-head reveal"><p class="eyebrow">Sites officiels</p><h2>Ligue, district et FFF</h2><p>Le FTT évolue dans le District de Football de Tarn-et-Garonne, au sein de la Ligue de Football d'Occitanie. Retrouvez-y les calendriers, résultats et classements officiels.</p></div>
+    <div class="league-grid" id="match-links"></div>
   </div>
 </section>
 '''
