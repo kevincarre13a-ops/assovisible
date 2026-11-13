@@ -1,0 +1,20 @@
+import fs from 'fs';
+import {feature} from 'topojson-client';
+import {geoMercator, geoPath, geoGraticule} from 'd3-geo';
+const topo = JSON.parse(fs.readFileSync('node_modules/world-atlas/countries-50m.json'));
+const countries = feature(topo, topo.objects.countries);
+const t2=JSON.parse(fs.readFileSync('node_modules/world-atlas/countries-110m.json'));const c110=feature(t2,t2.objects.countries);
+const W=420,H=560;
+const box={type:'Feature',geometry:{type:'MultiPoint',coordinates:[[-14,3],[14,52]]}};
+const proj=geoMercator().fitExtent([[10,10],[W-10,H-10]],box).clipExtent([[0,0],[W,H]]);
+const path=geoPath(proj).digits(1);
+// clip: keep only countries intersecting bbox
+const inBox=f=>{const [[x0,y0],[x1,y1]]=path.bounds(f);return x1>-50&&x0<W+50&&y1>-50&&y0<H+50;};
+const sel=countries.features.filter(inBox);
+const other=c110.features.filter(inBox).filter(f=>!['France','Côte d\'Ivoire'].includes(f.properties.name));
+const fr=sel.find(f=>f.properties.name==='France');const ci=sel.find(f=>f.properties.name==="Côte d'Ivoire");
+const all=other.map(f=>path(f)).join('');
+const chem=proj([0.09,47.93]), pen=proj([-3.2614,7.33]);
+const out={W,H,others:all,france:path(fr),ci:path(ci),chem,pen,names:sel.map(f=>f.properties.name)};
+fs.writeFileSync('map.json',JSON.stringify(out));
+console.log(out.names.join(', '),chem,pen,all.length,out.france.length);
