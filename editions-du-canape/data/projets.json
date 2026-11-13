@@ -1,0 +1,224 @@
+[
+  {
+    "slug": "kavafis",
+    "titre": "Port-folio Konstantin Kavafis",
+    "titreCourt": "Kavafis, port-folio",
+    "statut": "sous presse",
+    "statutNote": "Le volume de poésies est sous presse depuis septembre 2026 (voir le Carnet).",
+    "categories": ["poesie", "photo-art"],
+    "auteurs": "Dessins : Arthur Gerbier · Impression : Rémi Jimenès",
+    "credits": [
+      { "role": "Dessins", "noms": "Arthur Gerbier" },
+      { "role": "Impression", "noms": "Rémi Jimenès" },
+      { "role": "Coédition", "noms": "L’Enseigne absente et les éditions du Canapé" }
+    ],
+    "partenaires": ["L’Enseigne absente (Bréhémont)"],
+    "presentation": [
+      "L’Enseigne absente, éditeur et imprimeur basé à Bréhémont, en Touraine, a publié quatre poèmes de Konstantin Kavafis, un grand poète grec du XXe siècle. Le Canapé a réalisé les illustrations de cette très belle édition au plomb.",
+      "Pour accompagner ce livre, L’Enseigne absente et le Canapé co-éditent un port-folio de quatre impressions originales qui s’inspirent des dessins réalisés pour les poèmes.",
+      "Tirage limité."
+    ],
+    "contact": "Pour avoir plus d’information sur le port-folio, utilisez le formulaire de contact.",
+    "vignette": { "src": "images/projets/kavafis/vignette.jpg", "alt": "Portrait au trait de Konstantin Kavafis, avec ses lunettes rondes." },
+    "images": [
+      { "src": "images/projets/kavafis/image-01.jpg", "alt": "Dessin à l’encre : un soleil rayonnant au-dessus d’un paysage de montagnes et de mer, dans un cadre." },
+      { "src": "images/projets/kavafis/image-02.jpg", "alt": "Dessin à l’encre : un voilier dans une mer agitée sous un soleil rayonnant." },
+      { "src": "images/projets/kavafis/image-03.jpg", "alt": "Dessin à l’encre : une tour ou un phare sur un rocher battu par les vagues." },
+      { "src": "images/projets/kavafis/image-04.jpg", "alt": "Dessin à l’encre : un rivage et la mer sous un grand soleil, vus depuis une fenêtre." }
+    ]
+  },
+  {
+    "slug": "atelier-de-lecture-de-planches",
+    "titre": "Atelier de lecture de planches",
+    "statut": "à paraître",
+    "categories": ["recherche"],
+    "partage": true,
+    "auteurs": "Textes : Laurent Gerbier",
+    "credits": [
+      { "role": "Textes", "noms": "Laurent Gerbier" }
+    ],
+    "partenaires": ["Équipe de recherche InTRu (université de Tours)", "librairie Bédélire", "Centre d’études supérieures de la Renaissance", "association des étudiants de philosophie de l’université"],
+    "presentation": [
+      "Depuis 2014, l’équipe de recherches InTRu (université de Tours) organise, en partenariat avec la librairie Bédélire, le Centre d’études supérieures de la Renaissance et l’association des étudiants de philosophie de l’université, un atelier consacré à la lecture des planches de bande dessinée.",
+      "Pour célébrer les douze ans de l’Atelier, l’équipe InTRu a demandé au Canapé d’éditer un volume représentant douze de ces lectures de planches : douze études consacrées à douze chefs-d’œuvre de la bande dessinée francophone, douze manières de faire parler la bande dessinée, douze manières d’explorer, en bricolant, rabot dans une main et compas dans l’autre, toutes les facettes de la menuiserie des iconotextes.",
+      "Volume hors commerce, destiné aux participants et participantes de l’Atelier de lecture de planches depuis 2014."
+    ],
+    "contact": "Pour avoir plus d’information sur l’*Atelier de lecture de planches*, utilisez le formulaire de contact.",
+    "vignette": { "src": "images/projets/atelier-de-lecture-de-planches/vignette.jpg", "alt": "Titre dessiné à la main « Atelier de lecture de planches », encadré de livres et de planches de bande dessinée." },
+    "images": []
+  },
+  {
+    "slug": "street-iconotextes",
+    "titre": "Street Iconotextes",
+    "sousTitre": "volume 1 · littérature urbaine",
+    "statut": "à paraître",
+    "categories": ["photo-art"],
+    "auteurs": "Photographies : Laurent Gerbier · Conception graphique : Thomas Gerbier",
+    "credits": [
+      { "role": "Photographies", "noms": "Laurent Gerbier" },
+      { "role": "Conception graphique", "noms": "Thomas Gerbier" }
+    ],
+    "partenaires": [],
+    "presentation": [
+      "Les *Street iconotextes*, ce sont des recueils d’images photographiées au smartphone de ce qu’on peut lire dans les rues de Tours, Bordeaux ou Angoulême. Les autocollants militants côtoient la communication violente des boutiques, et figurent un portrait underground de la société française."
+    ],
+    "contact": "Pour avoir plus d’information sur les *Street Iconotextes*, utilisez le formulaire de contact.",
+    "vignette": { "src": "images/projets/street-iconotextes/vignette.jpg", "alt": "Photographie de rue : un panneau « Sortie de secours, ne pas gêner l’accès » au milieu d’un mur végétal." },
+    "images": [
+      { "src": "images/projets/street-iconotextes/image-01.jpg", "alt": "Graffiti sur un mur de briques rouges." },
+      { "src": "images/projets/street-iconotextes/image-02.jpg", "alt": "Pochoir d’un œil bleu et inscription « je te vois » sur un mur." },
+      { "src": "images/projets/street-iconotextes/image-03.jpg", "alt": "Volet en bois sombre avec une petite affichette." },
+      { "src": "images/projets/street-iconotextes/image-04.jpg", "alt": "Autocollant d’un petit personnage vert sur un poteau." },
+      { "src": "images/projets/street-iconotextes/image-05.jpg", "alt": "Enseigne de boutique en lettres roses : « épilation »." },
+      { "src": "images/projets/street-iconotextes/image-06.jpg", "alt": "Banderole « Avenir déconstruction »." },
+      { "src": "images/projets/street-iconotextes/image-07.jpg", "alt": "Silhouette noire collée sur un mur blanc, avec un petit cœur rouge." },
+      { "src": "images/projets/street-iconotextes/image-08.jpg", "alt": "Porte bleue barrée d’un panneau « Accès interdit »." },
+      { "src": "images/projets/street-iconotextes/image-09.jpg", "alt": "Inscriptions griffonnées à la craie sur une surface sombre." },
+      { "src": "images/projets/street-iconotextes/image-10.jpg", "alt": "Photographie de rue : affiches bleues et rouges sur un mur." }
+    ]
+  },
+  {
+    "slug": "monet-peindre-le-temps",
+    "titre": "Monet, peindre le temps",
+    "statut": "en préparation",
+    "statutNote": "Journée d’études en novembre 2026.",
+    "categories": ["recherche", "photo-art"],
+    "partage": true,
+    "auteurs": "Textes : Pauline Chevalier, Laurent Gerbier, Violaine Gourbet, France Nerlich · Dessins : Clara Chotil",
+    "credits": [
+      { "role": "Textes", "noms": "Pauline Chevalier, Laurent Gerbier, Violaine Gourbet, France Nerlich" },
+      { "role": "Dessins", "noms": "Clara Chotil" }
+    ],
+    "partenaires": ["Équipe de recherche InTRu (université de Tours)", "Musée de l’Orangerie", "Musée d’Orsay"],
+    "presentation": [
+      "À l’occasion de l’exposition *Monet, peindre le temps* (Musée de l’Orangerie, 30 septembre 2026 – 25 janvier 2027), l’équipe de recherche InTRu (université de Tours) et le Musée d’Orsay, tutelle de l’Orangerie, organisent en novembre 2026 une journée d’études et de discussion au milieu des œuvres.",
+      "Pour garder la trace de ces échanges, l’InTRu et le Musée d’Orsay ont confié au Canapé le soin d’éditer un petit volume qui restitue l’essentiel des discussions.",
+      "Les textes sont accompagnés d’une captation dessinée de ce moment d’échange.",
+      "Volume hors commerce, destiné aux chercheurs et chercheuses de l’équipe InTRu, du Musée de l’Orangerie et du centre de recherches du Musée d’Orsay."
+    ],
+    "contact": "Pour avoir plus d’information sur *Peindre le temps*, utilisez le formulaire de contact.",
+    "vignette": { "src": "images/projets/monet-peindre-le-temps/vignette.jpg", "alt": "Détail d’une façade de cathédrale peinte par Claude Monet, dans des tons bleus et dorés." },
+    "images": []
+  },
+  {
+    "slug": "reconnaissances-de-shanghai",
+    "titre": "Reconnaissances de Shanghai",
+    "statut": "à paraître",
+    "categories": ["photo-art", "bilingue"],
+    "auteurs": "Photographies et textes d’André Charrak · Introduction de Laurent Gerbier · Traduction : Norbert Danysz",
+    "credits": [
+      { "role": "Photographies et textes", "noms": "André Charrak" },
+      { "role": "Introduction", "noms": "Laurent Gerbier" },
+      { "role": "Traduction", "noms": "Norbert Danysz" }
+    ],
+    "langues": "Livre bilingue (français et mandarin)",
+    "partenaires": [],
+    "presentation": [
+      "Depuis près de quinze ans, André Charrak, professeur de philosophie et d’esthétique à la Sorbonne, est enseignant invité dans diverses universités en Chine. Chacun de ses séjours en Chine est pour lui l’occasion de photographier la mégalopole en cherchant à dépasser la fascination occidentale, l’exotisme facile et les clichés pittoresques. Exercé par quinze années de déambulations dans la ville chinoise, de jour comme de nuit, son œil décèle dans les paysages urbains de Shanghai des images qui construisent toutes une tension inattendue entre l’étrange et le familier.",
+      "Photographies et textes d’André Charrak. Introduction de Laurent Gerbier. Livre bilingue (français et mandarin). Traduction : Norbert Danysz."
+    ],
+    "ancienTexte": {
+      "titre": "Photos de Shanghai — un petit livre d’art",
+      "texte": "Depuis plus de vingt ans, André Charrak, professeur à la Sorbonne, se rend à Shanghai où il enseigne. La mégapole polymorphe lui accroche l’œil. Il livre ici ses clichés qui montrent l’évolution de la ville et de son regard sur une des plus vastes cités asiatiques."
+    },
+    "contact": "Pour avoir plus d’information sur *Reconnaissances de Shanghai*, utilisez le formulaire de contact.",
+    "vignette": { "src": "images/projets/reconnaissances-de-shanghai/vignette.jpg", "alt": "Rue de Shanghai : enseignes en caractères chinois et énormes conduits métalliques sur une façade." },
+    "images": [
+      { "src": "images/projets/reconnaissances-de-shanghai/image-01.jpg", "alt": "Shanghai : façade d’immeuble et circulation dans une rue." },
+      { "src": "images/projets/reconnaissances-de-shanghai/image-02.jpg", "alt": "Shanghai : immeubles anciens aux balcons encombrés." },
+      { "src": "images/projets/reconnaissances-de-shanghai/image-03.jpg", "alt": "Shanghai : enchevêtrement de fils électriques devant une façade." },
+      { "src": "images/projets/reconnaissances-de-shanghai/image-04.jpg", "alt": "Shanghai : passants sous des parapluies à travers une arche." },
+      { "src": "images/projets/reconnaissances-de-shanghai/image-05.jpg", "alt": "Shanghai : une boutique éclairée la nuit." },
+      { "src": "images/projets/reconnaissances-de-shanghai/image-06.jpg", "alt": "Shanghai : traînées lumineuses de la circulation nocturne sous un pont." },
+      { "src": "images/projets/reconnaissances-de-shanghai/image-07.jpg", "alt": "Shanghai : enseignes lumineuses rouges la nuit." },
+      { "src": "images/projets/reconnaissances-de-shanghai/image-08.jpg", "alt": "Shanghai : ruelle et façades couvertes de linge et de végétation." },
+      { "src": "images/projets/reconnaissances-de-shanghai/image-09.jpg", "alt": "Shanghai : vue plongeante sur la ville dans la brume lumineuse." },
+      { "src": "images/projets/reconnaissances-de-shanghai/image-10.jpg", "alt": "Shanghai : une tour dans le brouillard nocturne." },
+      { "src": "images/projets/reconnaissances-de-shanghai/image-11.jpg", "alt": "Shanghai : une pagode à étages entre deux immeubles." }
+    ]
+  },
+  {
+    "slug": "indignations",
+    "titre": "Indignations",
+    "statut": "en préparation",
+    "statutNote": "Publication prévue en 2027.",
+    "categories": ["photo-art"],
+    "auteurs": "Gravures de PieR Gajewski",
+    "credits": [
+      { "role": "Gravures", "noms": "PieR Gajewski" }
+    ],
+    "partenaires": [],
+    "presentation": [
+      "Pier Gajewski est illustrateur, dessinateur et graveur. Formé à Angoulême (EESI), artiste en résidence à la Villa Kujoyama à Kyoto ou à la Maison des auteurs d’Angoulême, il a exposé ses œuvres un peu partout en France (Paris, Grenoble, La Rochelle…) et dans le monde (Kyoto, Istanbul, New York…). Depuis près de vingt ans, PieR Gajewski réalise des gravures qui entrent en résonance avec l’actualité et proposent autant de manières visuelles de s’indigner, dans la lignée des grands graveurs engagés du début du XXe siècle (Frans Masereel, Lynd Ward).",
+      "Ces gravures, dont certaines ont été exposées en 2008 puis 2010 au Musée International du Manga à Kyoto, n’ont jusqu’ici jamais été rassemblées dans un unique volume. PieR Gajewski nous a fait l’honneur et l’amitié de demander aux éditions du Canapé de combler ce manque et de réaliser le livre qui rassemblera toutes ses « Indignations ». On y travaille, et c’est un de nos principaux projets pour 2027 !",
+      "Publication prévue en 2027."
+    ],
+    "contact": "Pour avoir plus d’informations sur *Indignations*, utilisez le formulaire de contact.",
+    "vignette": { "src": "images/projets/indignations/vignette.jpg", "alt": "Gravure en noir et blanc : une foule compacte de manifestants sous des drapeaux, dont un drapeau européen." },
+    "images": [
+      { "src": "images/projets/indignations/image-01.jpg", "alt": "Gravure en noir et blanc vue en perspective : des visages alignés dans des cases." },
+      { "src": "images/projets/indignations/image-02.jpg", "alt": "Gravure en noir et blanc : une mosaïque de visages et de silhouettes." },
+      { "src": "images/projets/indignations/image-03.jpg", "alt": "Gravure en noir et blanc : une scène de foule dense et tourmentée." }
+    ]
+  },
+  {
+    "slug": "systeme-d",
+    "titre": "Système D",
+    "sousTitre": "un livre-jeu",
+    "statut": "en préparation",
+    "statutNote": "Le développement avance (voir le Carnet, janvier 2026).",
+    "categories": ["jeunesse", "photo-art"],
+    "auteurs": "Un livre de Maxime Garcia",
+    "credits": [
+      { "role": "Un livre de", "noms": "Maxime Garcia" }
+    ],
+    "partenaires": [],
+    "presentation": [
+      "Maxime Garcia (*Ce Chemin qui n’a pas de nom*, Strasbourg, Rodéo d’âme, 2023 ; *La Fille renarde*, Strasbourg, Rodéo d’âme, 2025), vous propose de jouer avec lui et ses images. À partir du mot « débrouille », formez les anagrammes qu’évoque chacune des illustrations.",
+      "*Système D*, c’est un livre-jeu étrange qui trouvera sans aucun doute sa place dans la bibliothèque du Canapé.",
+      "Pour les autres livres de Maxime Garcia, voyez le site des [éditions Rodéo d’âme](https://rodeodame.fr/)."
+    ],
+    "contact": "Pour avoir plus d’information sur *Système D*, utilisez le formulaire de contact.",
+    "vignette": { "src": "images/projets/systeme-d/vignette.jpg", "alt": "Aquarelle de Maxime Garcia : un roi couché, une fleur à la bouche, devant une tenture fleurdelisée." },
+    "images": [
+      { "src": "images/projets/systeme-d/image-01.jpg", "alt": "Maquette de couverture de Système D avec l’aquarelle du roi couché." },
+      { "src": "images/projets/systeme-d/image-02.png", "alt": "Première maquette de couverture de Système D, « à paraître »." }
+    ]
+  },
+  {
+    "slug": "exil-en-coquilles",
+    "titre": "Exil en coquilles",
+    "sousTitre": "un conte écolo et humaniste",
+    "statut": "à préciser",
+    "archive": true,
+    "categories": ["jeunesse"],
+    "auteurs": "Lapoum, Thomas Chéronet et Maxime Garcia",
+    "credits": [
+      { "role": "À six mains", "noms": "Lapoum, Thomas Chéronet et Maxime Garcia" }
+    ],
+    "partenaires": [],
+    "presentation": [
+      "*Exil en coquilles*, c’est un conte qui met en scène des escargots, victimes de la sécheresse qui s’abat sur leur habitat et qui les oblige à prendre la route. Réflexion sur l’écologie et la migration climatique, ce petit livre jeunesse est réalisé à six mains par Lapoum, Thomas Chéronet et Maxime Garcia."
+    ],
+    "contact": "Pour avoir plus d’information sur *Exil en coquilles*, utilisez le formulaire de contact.",
+    "vignette": { "src": "images/projets/exil-en-coquilles/vignette.jpg", "alt": "Illustration colorée d’Exil en coquilles : des escargots et des lettres dessinées." },
+    "images": []
+  },
+  {
+    "slug": "eolien",
+    "titre": "Eolien",
+    "sousTitre": "un petit livre alien",
+    "statut": "à préciser",
+    "archive": true,
+    "categories": ["photo-art"],
+    "auteurs": "auteur à préciser",
+    "credits": [],
+    "partenaires": [],
+    "presentation": [
+      "Des dessins d’éoliennes dans la campagne, des textes écrits dans une langue inconnue, incompréhensible. *Eolien* met à l’honneur ces constructions étranges et futuristes que sont les éoliennes, qui, en se dressant au milieu de la ruralité, créent des paysages dignes de *La Guerre des mondes*."
+    ],
+    "contact": "Pour avoir plus d’information sur *Eolien*, utilisez le formulaire de contact.",
+    "vignette": { "src": "images/projets/eolien/vignette.jpg", "alt": "Aquarelle d’Eolien : des éoliennes dans un paysage de campagne, sous un titre en lettres inventées." },
+    "images": []
+  }
+]

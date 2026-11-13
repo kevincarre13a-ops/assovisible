@@ -1,0 +1,350 @@
+[
+  {
+    "slug": "miette-la-mouette",
+    "titre": "Miette la mouette",
+    "sousTitre": "poème sonore illustré",
+    "accroche": "Un poème, des gravures, une mouette et un héron… Découvrez la nouvelle parution du Canapé.",
+    "nouveaute": true,
+    "ordre": 1,
+    "categories": ["jeunesse", "poesie", "recherche"],
+    "public": "Pour toutes et tous, à commencer par les très petits, les bébés.",
+    "auteurs": ["Axelle Glé"],
+    "illustrateurs": ["Axelle Tamby-Bernage"],
+    "credits": [
+      { "role": "Poème", "noms": "Axelle Glé" },
+      { "role": "Gravures", "noms": "Axelle Tamby-Bernage" },
+      { "role": "Maquette et conception graphique", "noms": "Thomas Gerbier" }
+    ],
+    "presentation": [
+      "*Miette la mouette* est un poème sonore illustré destiné à toutes et tous, à commencer par les très petits, les bébés. Il est l’un des résultats d’une année de recherche-création au sein du laboratoire universitaire InTRu, en complicité avec Cécile Boulaire, chercheuse en lettres. Ce travail a été soutenu par le service culturel de l’Université de Tours en 2023.",
+      "Pendant plusieurs mois, Axelle Glé a accompagné le travail de recherche-action et observé des lectures d’albums aux bébés, en crèche ou à l’hôpital.",
+      "L’objectif était d’illustrer artistiquement un point de rencontre entre deux faits langagiers en apparence très lointains : d’un côté, les expérimentations linguistiques de la poésie sonore ; d’un autre, le bain de langage dans lequel les petits sont plongés et se développent. Dans ces deux contextes linguistiques, la langue est avant tout une matière sonore, musicale, vectrice de lien et d’émotions. Les mots et leurs sonorités permettent alors d’entrer en contact avec les congénères humains.",
+      "Ainsi, après différents temps d’observation, de documentation, d’échanges et d’écriture, le poème *Miette la mouette* a vu le jour.",
+      "Puis Axelle Tamby-Bernage, illustratrice formée aux beaux-arts, a naturellement trouvé sa place dans ce projet, grâce à ses délicates gravures.",
+      "Ce texte laisse une grande part à l’interprétation ainsi qu’à la pluralité des lectures. En poésie sonore, la personne qui lit importe plus que le « bien lire »."
+    ],
+    "reliure": "livre broché",
+    "pages": 68,
+    "format": "17,5 cm × 16,5 cm",
+    "prix": 9,
+    "disponibilite": "en vente",
+    "isbn": "978-2-9591989-6-0",
+    "date": "septembre 2026",
+    "dateISO": "2026-09",
+    "impression": "chez notre imprimeur italien (nom à préciser)",
+    "techniques": "gravures sur Tétrapak®",
+    "librairies": ["bedelire", "libr-enfant"],
+    "commande": "Pour commander *Miette la mouette*, utilisez le formulaire de contact.",
+    "couverture": { "src": "images/livres/miette-la-mouette/couverture.jpg", "alt": "Couverture de Miette la mouette : titre en capitales fines, « poème d’Axelle Glé, gravures d’Axelle Tamby-Bernage », et une ligne gravée figurant un rivage sous un vol d’oiseaux." },
+    "vignette": { "src": "images/livres/miette-la-mouette/vignette.jpg", "alt": "Gravure de Miette la mouette : un héron et un petit oiseau en vol, à l’encre noire." },
+    "images": [
+      { "src": "images/livres/miette-la-mouette/page-01.jpg", "alt": "Gravure : un vol de mouettes noires dans un ciel blanc." },
+      { "src": "images/livres/miette-la-mouette/page-02.jpg", "alt": "Double page de texte du poème, avec deux petits pictogrammes : une étoile et un croissant de lune." },
+      { "src": "images/livres/miette-la-mouette/page-03.jpg", "alt": "Page « Hobi, héron chéri, je rêve à lui », avec le mot en arabe et une gravure ronde de héron." },
+      { "src": "images/livres/miette-la-mouette/page-04.jpg", "alt": "Gravure au trait d’un paysage de dunes et de collines sous un vol d’oiseaux." },
+      { "src": "images/livres/miette-la-mouette/page-05.jpg", "alt": "Gravure d’une ville sombre dominée par un minaret, avec des palmiers et des oiseaux." },
+      { "src": "images/livres/miette-la-mouette/vignette.jpg", "alt": "Gravure : un héron et un petit oiseau en vol." }
+    ]
+  },
+  {
+    "slug": "vox-corporis",
+    "titre": "Vox Corporis",
+    "sousTitre": "images de l’entremonde",
+    "accroche": "*Vox Corporis* rassemble une cinquantaine de photographies de Patrick Gerbier sur le nu masculin. Chacune des images est accompagnée d’un texte dessiné et écrit par Thomas, son fils. Se construit ainsi un dialogue riche et intime entre le père et le fils.",
+    "ordre": 2,
+    "categories": ["photo-art"],
+    "avertissement": "Ce livre d’art contient des photographies de nu masculin.",
+    "auteurs": ["Patrick Gerbier", "Thomas Gerbier"],
+    "illustrateurs": ["Thomas Gerbier"],
+    "credits": [
+      { "role": "Photographies", "noms": "Patrick Gerbier", "lien": { "texte": "découvrir son travail", "url": "http://www.gerbier.net/" } },
+      { "role": "Textes et dessins", "noms": "Thomas Gerbier" },
+      { "role": "Préface", "noms": "Marius Jouanny" },
+      { "role": "Maquette et conception graphique", "noms": "Thomas Gerbier" }
+    ],
+    "presentation": [
+      "Ridé, flasque, velu… Cachez ce corps que je ne saurais voir. Depuis une trentaine d’années, Patrick Gerbier photographie le corps nu des hommes, choisissant ses modèles sans a priori d’âge, de morphologie ou d’origine. Pour la première fois, *Vox Corporis* compile une trentaine d’images en couleurs ou en noir et blanc issues de différentes séries du photographe.",
+      "Mais les clichés ne sont pas disposés seuls : des textes et des dessins conçus à partir des photos les accompagnent, au cours d’un dialogue original entre les arts, mais aussi entre un fils et son père. Thomas Gerbier se fait exégète dévoué des œuvres de Patrick, et guide le regard du lecteur sans imposer un discours qui dissiperait le mystère des images.",
+      "Dans l’espace flou entre Patrick et Thomas, entre l’objectif de l’appareil et le modèle, entre le papier du livre et le regard du lecteur, cet entremonde qui revient page après page révèle un iconotexte riche et engagé, doux et sensuel, à la mesure des contradictions qui travaillent les deux auteurs."
+    ],
+    "reliure": "couverture rigide",
+    "pages": 132,
+    "format": "25 cm × 30 cm",
+    "prix": 34.9,
+    "disponibilite": "en vente",
+    "isbn": "978-2-9591989-1-5",
+    "date": "décembre 2025",
+    "dateISO": "2025-12",
+    "librairies": ["jeux-de-pages", "mauvaise-reputation"],
+    "commande": "Pour commander *Vox Corporis*, utilisez le formulaire de contact.",
+    "couverture": { "src": "images/livres/vox-corporis/couverture.jpg", "alt": "Couverture de Vox Corporis : sur fond noir, le profil d’un visage d’homme éclairé en contre-jour ; titre vertical en capitales blanches, « thomas & patrick gerbier »." },
+    "vignette": { "src": "images/livres/vox-corporis/couverture.jpg", "alt": "Couverture de Vox Corporis." },
+    "images": [
+      { "src": "images/livres/vox-corporis/page-01.jpg", "alt": "Double page : titre manuscrit « Vox Corporis » au-dessus d’une photographie en noir et blanc d’un homme nu allongé, recroquevillé." },
+      { "src": "images/livres/vox-corporis/page-02.jpg", "alt": "Double page : un calligramme de mots formant une silhouette, face à la photographie d’un homme nu en clair-obscur." },
+      { "src": "images/livres/vox-corporis/page-03.jpg", "alt": "Double page panoramique : corps allongés photographiés en couleurs vives, avec une phrase manuscrite." },
+      { "src": "images/livres/vox-corporis/page-04.jpg", "alt": "Double page : un corps enroulé sur lui-même dans un cercle de texte manuscrit, face à une photographie d’homme nu accroupi." },
+      { "src": "images/livres/vox-corporis/quatrieme.jpg", "alt": "Quatrième de couverture de Vox Corporis : texte de présentation en blanc sur fond noir." }
+    ]
+  },
+  {
+    "slug": "bestiaire-monstrueux",
+    "titre": "Le Bestiaire Monstrueux",
+    "titreCourt": "Bestiaire Monstrueux",
+    "sousTitre": "les animaux rares et fantastiques à travers le monde",
+    "accroche": "Ce *Bestiaire Monstrueux* présente des animaux imaginaires, fruit d’un travail pédagogique fait avec une classe de CAP de Gironde. Les illustrations sont réalisées par des élèves d’une classe de maternelle.",
+    "ordre": 3,
+    "categories": ["jeunesse", "ateliers"],
+    "partage": true,
+    "auteurs": ["la classe de CAP 2e année du CFAE de Reignac"],
+    "illustrateurs": ["la classe de maternelle de l’école de Pleine-Selve"],
+    "credits": [
+      { "role": "Textes", "noms": "la classe de CAP 2e année du CFAE de Reignac" },
+      { "role": "Dessins", "noms": "la classe de maternelle de l’école de Pleine-Selve" },
+      { "role": "Projet pédagogique", "noms": "Thomas et Anouck Gerbier" },
+      { "role": "Maquette et conception graphique", "noms": "Thomas Gerbier" }
+    ],
+    "presentation": [
+      "Face à la disparition grandissante de la faune fantastique due à l’oubli, aux nouvelles technologies et à l’accélération du monde, un groupe de jeunes gens motivés a pris au pied de la lettre les appels du congrès sur l’Amnésie Mondiale des Espèces Fabuleuses en voie d’extinction qui cherchent à sauvegarder des espèces de bêtes fantastiques et monstrueuses.",
+      "En effet, sous la direction des professeurs Nell et Casper Mates-Delecades, titulaires tous deux de la chaire de Zoologie fantastique de l’Université Imaginaire de l’Estuaire, les élèves de CAP-EPC 2 du CFAE de Reignac et de l’école maternelle de Pleine-Selve ont décidé non pas de préserver les populations des bêtes fantastiques déjà existantes, mais bien d’offrir de nouvelles espèces monstrueuses à la faune imaginaire de notre planète.",
+      "*Le Bestiaire Monstrueux* est le fruit d’un projet pédagogique mené par Thomas et Anouck Gerbier, qui sont respectivement enseignant de français et professeure des écoles. Ils ont tous deux fait travailler des élèves de CAP et de maternelle sur la création de ce bestiaire à caractère pseudo-scientifique.",
+      "C’est ainsi un livre exigeant destiné à un public jeune, qui permet d’aborder des thématiques très actuelles liées à la biodiversité, et à notre place dans la nature, qui a permis de lancer les éditions du Canapé."
+    ],
+    "reliure": "livre broché",
+    "pages": 48,
+    "format": "23,5 cm × 16,5 cm",
+    "prix": 14.9,
+    "disponibilite": "en vente",
+    "isbn": "978-2-9591989-0-8",
+    "date": "février 2024",
+    "dateISO": "2024-02",
+    "librairies": ["jeux-de-pages"],
+    "commande": "Pour commander le *Bestiaire Monstrueux*, utilisez le formulaire de contact.",
+    "couverture": { "src": "images/livres/bestiaire-monstrueux/couverture.jpg", "alt": "Couverture du Bestiaire Monstrueux : un monstre bleu hérissé aux dents pointues, dessiné aux crayons de couleur par un enfant, sous le titre en capitales noires." },
+    "vignette": { "src": "images/livres/bestiaire-monstrueux/couverture.jpg", "alt": "Couverture du Bestiaire Monstrueux." },
+    "images": [
+      { "src": "images/livres/bestiaire-monstrueux/page-01.jpg", "alt": "Page de titre du Bestiaire Monstrueux avec un petit monstre coloré." },
+      { "src": "images/livres/bestiaire-monstrueux/page-02.jpg", "alt": "Fiche « L’Hibéphant » : nom savant, taille, poids, habitat, répartition et texte descriptif." },
+      { "src": "images/livres/bestiaire-monstrueux/page-03.jpg", "alt": "Dessin d’enfant aux crayons de couleur : un oiseau rond à rayures et à longue trompe, près d’un arbre." },
+      { "src": "images/livres/bestiaire-monstrueux/page-04.jpg", "alt": "Fiche « La Girache » : description pseudo-scientifique d’une licorne australienne." },
+      { "src": "images/livres/bestiaire-monstrueux/page-05.jpg", "alt": "Dessin d’enfant : une créature mi-girafe mi-licorne à crinière arc-en-ciel, entourée d’œufs verts." },
+      { "src": "images/livres/bestiaire-monstrueux/quatrieme.jpg", "alt": "Quatrième de couverture du Bestiaire Monstrueux." },
+      { "src": "images/livres/bestiaire-monstrueux/objet.jpg", "alt": "Photographie du livre imprimé posé sur une table en bois." },
+      { "src": "images/livres/bestiaire-monstrueux/affiche.jpg", "alt": "Affiche du Bestiaire Monstrueux, livre collectif réalisé par la classe de CAP du CFAE de Reignac et la classe de maternelle de l’école de Pleine-Selve." }
+    ]
+  },
+  {
+    "slug": "serie-b",
+    "titre": "Série B",
+    "sousTitre": "10 nouvelles de mauvais genre",
+    "accroche": "Dix nouvelles de mauvais genre écrites par les élèves de CAP du CFAE de Reignac. Amateurs de sensations fortes, régalez-vous !",
+    "ordre": 4,
+    "categories": ["ateliers"],
+    "partage": true,
+    "auteurs": ["les élèves de CAP du CFAE de Reignac"],
+    "illustrateurs": ["Margot", "Arthur", "Laurent et Thomas Gerbier"],
+    "credits": [
+      { "role": "Textes", "noms": "les élèves de CAP du CFAE de Reignac en Gironde" },
+      { "role": "Illustrations", "noms": "Margot, Arthur, Laurent et Thomas Gerbier" },
+      { "role": "Maquette et conception graphique", "noms": "Thomas Gerbier" }
+    ],
+    "presentation": [
+      "Une petite fille affronte ses peurs, la tempête et la forêt presque vivante. Dans la rue, se faire fumer tue, et tu le comprends toujours trop tard. Cinq amis louent une villa isolée et leurs vacances de rêve dérapent dans l’horreur. Un jeune homme emménage dans 60 m² de flipette. Liliane, Léon et Rose : trois vies bousculées par la guerre, le temps et les échos de la mémoire.",
+      "Une jeune femme sans domicile se bat pour survivre dans les rues de Paris hantées par la violence. Quatre jeunes condamnés à revivre encore et encore le même accident de voiture. Une jeune baby-sitter tente de fuir une fillette possédée par une marionnette sanguinaire. Une maison au Japon, Loxo et Sakai et la faucheuse : un cauchemar surréaliste. Une jeune fille vit la pire journée de sa vie qui se répète, se répète, se répète…",
+      "Issues d’un projet pédagogique mené avec une classe de CAP du CFAE de Reignac en Gironde, ces dix nouvelles de mauvais genre illustrées d’une quarantaine de dessins explorent tous les thèmes de la série B : du *body horror* à la romance fantastique, du surréalisme psychédélique au *hardboiled* noir, de la maison hantée à la boucle temporelle, ces dix textes décoiffent.",
+      "Amateurs de sensations fortes, régalez-vous !"
+    ],
+    "reliure": "livre broché",
+    "pages": 168,
+    "format": "12 cm × 17 cm",
+    "prix": 8,
+    "disponibilite": "en vente",
+    "isbn": "978-2-9591989-5-3",
+    "date": "mai 2026",
+    "dateISO": "2026-05",
+    "librairies": ["imaginaute", "bedelire"],
+    "commande": "Pour commander *Série B*, utilisez le formulaire de contact.",
+    "couverture": { "src": "images/livres/serie-b/couverture.jpg", "alt": "Couverture de Série B : titre rouge sang sur fond gris taché, une silhouette noire griffue au centre, sous-titre « 10 nouvelles de mauvais genre »." },
+    "vignette": { "src": "images/livres/serie-b/couverture.jpg", "alt": "Couverture de Série B." },
+    "images": [
+      { "src": "images/livres/serie-b/page-01.png", "alt": "Dessin à l’encre : des troncs d’arbres tordus dans un cadre noir." },
+      { "src": "images/livres/serie-b/page-02.png", "alt": "Dessin à l’encre : un corbeau sur un piquet de clôture, sous un ciel nuageux." },
+      { "src": "images/livres/serie-b/page-03.png", "alt": "Dessin à l’encre : une silhouette décharnée agenouillée, aux longs doigts griffus." },
+      { "src": "images/livres/serie-b/page-04.png", "alt": "Dessin à l’encre : visage d’une jeune femme aux yeux cernés de noir et aux cheveux en bataille." },
+      { "src": "images/livres/serie-b/page-05.jpg", "alt": "Double page : une case dessinée en noir et blanc face à une page de texte." },
+      { "src": "images/livres/serie-b/page-06.jpg", "alt": "Double page : un personnage braquant un pistolet, face à une page de texte." },
+      { "src": "images/livres/serie-b/page-07.jpg", "alt": "Illustration sur fond noir : deux yeux plissés et un sourire inquiétant." },
+      { "src": "images/livres/serie-b/quatrieme.jpg", "alt": "Quatrième de couverture de Série B : résumés des dix nouvelles en lettres rouges sur fond noir." }
+    ]
+  },
+  {
+    "slug": "journal-de-trieste",
+    "titre": "Journal de Trieste",
+    "titreLong": "FÀTS+FF – Journal de Trieste / Diario di Trieste",
+    "sousTitre": "FÀTS+FF · Diario di Trieste",
+    "accroche": "Francesco Gallino, chercheur italien en sciences politiques, livre son expérience du festival de science-fiction de Trieste, édition de 2025. Pendant quatre jours, dans son *Journal de Trieste – Diario di Trieste*, il raconte les conférences, les films, les gens et la ville et ses buffets.",
+    "ordre": 5,
+    "categories": ["bilingue", "recherche"],
+    "partage": true,
+    "langues": ["fr", "it"],
+    "auteurs": ["Francesco Gallino"],
+    "illustrateurs": [],
+    "credits": [
+      { "role": "Textes", "noms": "Francesco Gallino" },
+      { "role": "Maquette et conception graphique", "noms": "Thomas Gerbier" }
+    ],
+    "presentation": [
+      "Quand Francesco a annoncé au groupe de recherche sur la science-fiction politique qu’il allait passer quatre jours au Trieste Science + Fiction Festival, il s’est demandé comment il allait pouvoir faire profiter tous les chercheurs de son expérience. Dans le groupe, on a toujours considéré que la recherche, c’était non seulement ce qu’on faisait pendant nos séminaires, nos ateliers et nos journées d’étude, mais aussi tout ce qui se passait autour : le plaisir de se retrouver dans une ville ou une autre, les discussions dans les cafés, les idées qui jaillissent autour d’un repas en commun. La recherche est une pratique dont la périphérie est partout et dont le centre est nulle part.",
+      "Alors pourquoi pas Trieste ?",
+      "Francesco a donc tenu un journal pendant quatre jours, et chaque matin, il nous a écrit son TS+FF 2025 : les conférences et les pubs qui restent ouverts tard le soir, les projections et les gameuses qui tricotent un bonnet, les tables rondes et les canapés au raifort.",
+      "Bref, ce volume, *FÀTS+FF*, ce n’est pas un livre, c’est un live."
+    ],
+    "reliure": "livre broché",
+    "pages": 138,
+    "format": "10 cm × 15 cm",
+    "prix": null,
+    "disponibilite": "hors commerce",
+    "isbn": "978-2-9591989-3-9",
+    "date": "décembre 2025",
+    "dateISO": "2025-12",
+    "librairies": [],
+    "commande": "Pour avoir plus d’information sur le *Journal de Trieste* ou demander l’envoi d’un exemplaire, utilisez le formulaire de contact.",
+    "couverture": { "src": "images/livres/journal-de-trieste/couverture.jpg", "alt": "Couverture du Journal de Trieste : grandes lettres « FÀTS+FF » rouge corail sur fond crème, « Francesco Gallino, 29/10 – 02/11 2025 »." },
+    "vignette": { "src": "images/livres/journal-de-trieste/couverture.jpg", "alt": "Couverture du Journal de Trieste." },
+    "images": [
+      { "src": "images/livres/journal-de-trieste/couverture-it.jpg", "alt": "Couverture italienne, Diario di Trieste, en blanc sur fond rouge corail." },
+      { "src": "images/livres/journal-de-trieste/page-01.jpg", "alt": "Affiche du Trieste Science+Fiction Festival 2025 : une figure dessinée à la chevelure de câbles." },
+      { "src": "images/livres/journal-de-trieste/page-02.jpg", "alt": "Double page d’ouverture de chapitre : « Chapitre 01 – Éros et les triffides » en français et en italien." },
+      { "src": "images/livres/journal-de-trieste/page-03.jpg", "alt": "Double page de texte bilingue, français à gauche, italien à droite, avec une photographie de Trieste en pied de page." },
+      { "src": "images/livres/journal-de-trieste/page-04.jpg", "alt": "Double page « Talk » : texte bilingue sur les technologies du futur dans la science-fiction." },
+      { "src": "images/livres/journal-de-trieste/page-05.jpg", "alt": "Double page bilingue illustrée de visages de robots en noir et blanc." },
+      { "src": "images/livres/journal-de-trieste/page-06.jpg", "alt": "Couverture alternative : portrait photographique de Francesco Gallino en noir et blanc, « Journal de Trieste / Diario di Trieste »." }
+    ]
+  },
+  {
+    "slug": "abecedaire",
+    "titre": "Abécédaire",
+    "sousTitre": "le premier livre du Canapé",
+    "accroche": "A comme Abécédaire, B comme Bah oui tiens pourquoi pas, C comme Canapé : c’est avec ce petit livre que le Canapé est né.",
+    "ordre": 6,
+    "categories": ["photo-art"],
+    "auteurs": ["Laurent Gerbier"],
+    "illustrateurs": ["Laurent Gerbier"],
+    "credits": [
+      { "role": "Dessins", "noms": "Laurent Gerbier" },
+      { "role": "Maquette et conception graphique", "noms": "Thomas Gerbier" }
+    ],
+    "presentation": [
+      "A comme Abécédaire, B comme Bah oui tiens pourquoi pas, C comme Canapé : c’est avec ce petit livre que le Canapé est né.",
+      "En plus, on l’a fait pour notre Môman.",
+      "Mais on vous prévient : y’en a plus. Ha ha ha.",
+      "Bon, si vous êtes des millions à nous le réclamer, on envisagera peut-être de le rééditer."
+    ],
+    "reliure": "livre dos collé",
+    "pages": 68,
+    "format": "20 cm × 15 cm",
+    "prix": null,
+    "disponibilite": "épuisé",
+    "isbn": "à préciser",
+    "date": "décembre 2023",
+    "dateISO": "2023-12",
+    "dateLibelle": "Imprimé en",
+    "librairies": [],
+    "commande": "Pour avoir plus d’information sur l’*Abécédaire*, utilisez le formulaire de contact.",
+    "couverture": { "src": "images/livres/abecedaire/couverture.jpg", "alt": "Couverture de l’Abécédaire : quatre aquarelles encadrées (fraises, un animal qui court, un kiwi, une tasse) sur un fond de mots en lettres grises." },
+    "vignette": { "src": "images/livres/abecedaire/vignette.jpg", "alt": "Aquarelle de l’Abécédaire : un astronaute dans un ciel étoilé bleu nuit." },
+    "images": [
+      { "src": "images/livres/abecedaire/vignette.jpg", "alt": "Aquarelle : un astronaute dans un ciel étoilé bleu nuit." },
+      { "src": "images/livres/abecedaire/page-01.jpg", "alt": "Double page « B comme baleine » : une baleine à l’aquarelle dans l’eau bleue." },
+      { "src": "images/livres/abecedaire/page-02.jpg", "alt": "Double page « J comme Jean-Paul Yoda » : un petit personnage vert caricaturé avec un sabre lumineux." },
+      { "src": "images/livres/abecedaire/page-03.jpg", "alt": "Double page « L comme Liberty Island » : la statue de la Liberté et Manhattan à l’aquarelle." }
+    ]
+  },
+  {
+    "slug": "moi",
+    "titre": "Moi",
+    "sousTitre": "préface de qui vous savez",
+    "accroche": "Textes et photographies de Justine Gerbier. Avec une préface d’une pertinence rare.",
+    "ordre": 7,
+    "categories": ["photo-art"],
+    "auteurs": ["Justine Gerbier"],
+    "illustrateurs": [],
+    "credits": [
+      { "role": "Textes et photographies", "noms": "Justine Gerbier" },
+      { "role": "Maquette et conception graphique", "noms": "Thomas Gerbier" }
+    ],
+    "presentation": [
+      "On ne remerciera jamais assez le grand acteur américain qu’il n’est plus besoin de nommer de nous avoir fait l’honneur de préfacer ce court livre. Nous ne résistons pas à l’envie de republier ici ces quelques mots forts et d’une pertinence rare qui ne peuvent qu’émouvoir les littérateurs que nous sommes tous. Merci John."
+    ],
+    "citation": [
+      "« Malkovich malkovich malkovich, malkovitch malkovitch. Malko-vitch, malkovitch malkovitch malkovitch ; malkovitch, malkovitch. Malkovitch malkovitch (malkovitch malkovitch) malkovitch, malkovitch, malkovitch.",
+      "Malkovitch ? Malkovitch malkovitch malkovitch ? Malkovitch, malko-vitch. Malkovitch : malkovitch malkovitch. Malkovitch. Malkovitch.",
+      "« Malkovitch mlkovitch malkovitch malkovitch :<br>Mlakovitch malkovitch malkovitch malkovitch,<br>Malkovitch, malkovitch. Malkovitch ? Malkovitch. »<br>Malkovitch, Malkovitch.",
+      "Malkovitch malkovitch. Malkovitch. Malkovitch… »"
+    ],
+    "reliure": "livre dos collé",
+    "pages": 68,
+    "format": "10 cm × 15 cm",
+    "prix": null,
+    "disponibilite": "hors commerce",
+    "isbn": "978-2-9591989-4-6",
+    "date": "décembre 2025",
+    "dateISO": "2025-12",
+    "librairies": [],
+    "commande": "Pour avoir plus d’information sur *Moi*, utilisez le formulaire de contact.",
+    "couverture": { "src": "images/livres/moi/couverture.jpg", "alt": "Couverture de Moi : gros plan d’un visage à lunettes tirant la langue, une chaîne au cou, sur un bandeau jaune où s’inscrit « MOi – Justine Gerbier »." },
+    "vignette": { "src": "images/livres/moi/couverture.jpg", "alt": "Couverture de Moi." },
+    "images": [
+      { "src": "images/livres/moi/page-01.jpg", "alt": "Variante de la couverture : le même visage, avec « Moi ! Moi ! Moi ! » écrit en rouge en arc de cercle." }
+    ]
+  },
+  {
+    "slug": "chroniques-botaniques",
+    "titre": "Chroniques Botaniques",
+    "sousTitre": "Rapport de la mission Élara",
+    "accroche": "Les *Chroniques Botaniques* racontent l’histoire d’une découverte qui bouleverse l’humanité. 3000 ans d’histoire se déroulent devant nos yeux, à travers des récits qui semblent dévoiler un futur au-delà de notre planète.",
+    "ordre": 8,
+    "categories": ["ateliers"],
+    "partage": true,
+    "auteurs": ["la classe de terminale BAC Pro du CFAE de Reignac", "les équipes du Canapé"],
+    "illustrateurs": ["les illustrateurs du Canapé"],
+    "credits": [
+      { "role": "Livre collectif", "noms": "réalisé par les équipes du Canapé sous la direction de la classe de terminale BAC Pro du CFAE de Reignac en Gironde" }
+    ],
+    "epigraphe": { "texte": "Les plantes semblent avoir été semées avec profusion sur la terre comme les étoiles dans le ciel.", "source": "Jean-Jacques Rousseau, *Les Rêveries du promeneur solitaire*" },
+    "presentation": [
+      "Les *Chroniques Botaniques* racontent l’histoire d’une fleur trouvée à Hawaï, sur le mont Mauna Kea, une fleur qui change l’histoire de l’humanité. Afin de rendre accessible à tous ce qui est peut-être la plus grande découverte du XXIe siècle, de nombreux savants ont collaboré pour offrir au public, avec le *Rapport de la mission Élara*, un récit vivant de cette incroyable épopée scientifique.",
+      "Au fil de ce récit, 5000 ans d’histoire se déroulent sous nos yeux. De Mars à Titan, de Proxima du Centaure aux systèmes plus lointains, on suit l’expansion spatiale de l’humanité, qui explore notre galaxie grâce à la découverte de plantes présentes partout dans l’univers.",
+      "Projet fou mené par la classe de terminale BAC Pro du CFAE de Reignac, qui s’est entourée des auteurs et des illustrateurs du Canapé, *Les Chroniques Botaniques – Rapport de la mission Élara*, c’est un roman inclassable et fragmentaire, qui nous raconte un futur auquel nous n’aurons jamais accès."
+    ],
+    "reliure": "livre broché / cousu",
+    "pages": 232,
+    "format": "16 cm × 21 cm",
+    "prix": 15,
+    "disponibilite": "en vente",
+    "isbn": "978-2-9591989-2-2",
+    "date": "novembre 2025",
+    "dateISO": "2025-11",
+    "impression": "réimprimé à 100 exemplaires en avril 2026",
+    "librairies": ["jeux-de-pages", "imaginaute", "bedelire"],
+    "commande": "Pour commander les *Chroniques Botaniques*, utilisez le formulaire de contact.",
+    "actualite": {
+      "titre": "Les Chroniques à Blaye et Jonzac",
+      "sousTitre": "Stands les 21, 23 et 24 janvier (année à préciser : 2025 sur l’ancien site)",
+      "texte": [
+        "Les élèves de terminale du BAC Pro du CFAE de Reignac vendent leur livre, les *Chroniques Botaniques*, à la librairie Jaufré Rudel à Blaye et lors d’une séance spéciale d’Avatar 3 au Zoetrope, le cinéma de Blaye. Ils seront aussi présents à l’espace culture du Leclerc de Jonzac.",
+        "Ces animations commerciales entrent dans le cadre de la formation de ces élèves qui ont dirigé la réalisation de ce livre depuis un an."
+      ]
+    },
+    "couverture": { "src": "images/livres/chroniques-botaniques/couverture.jpg", "alt": "Couverture des Chroniques Botaniques : sur fond rouge carmin, une fleur blanche aux racines déployées, titre en capitales blanches et « Rapport de la mission Élara »." },
+    "vignette": { "src": "images/livres/chroniques-botaniques/couverture.jpg", "alt": "Couverture des Chroniques Botaniques." },
+    "images": [
+      { "src": "images/livres/chroniques-botaniques/page-01.jpg", "alt": "Illustration à l’encre verte et bleue : une plante aux fleurs sombres et aux éclaboussures." },
+      { "src": "images/livres/chroniques-botaniques/page-02.jpg", "alt": "Page : une fleur rouge aux racines déployées au-dessus d’un paragraphe de texte." },
+      { "src": "images/livres/chroniques-botaniques/page-03.jpg", "alt": "Page de texte avec trois vignettes de surfaces lunaires en noir et blanc." },
+      { "src": "images/livres/chroniques-botaniques/page-04.jpg", "alt": "Illustration : la Terre vue de l’espace, peinte à l’aquarelle." },
+      { "src": "images/livres/chroniques-botaniques/page-05.jpg", "alt": "En atelier : une main peint à l’aquarelle bleue, entourée de pots d’encre." },
+      { "src": "images/livres/chroniques-botaniques/page-06.jpg", "alt": "En atelier : une illustration de plante retravaillée sur un ordinateur portable." }
+    ]
+  }
+]

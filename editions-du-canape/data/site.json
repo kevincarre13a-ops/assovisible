@@ -1,0 +1,100 @@
+{
+  "nom": "les éditions du Canapé",
+  "url": "https://www.editionsducanape.fr",
+  "email": "lecanape@jungleprod.com",
+  "adresse": { "rue": "3 la Poterie", "codePostal": "17150", "ville": "Boisredon", "pays": "France" },
+  "rna": "W171005560",
+  "siret": "995 055 613 00013",
+  "statut": "association loi 1901",
+  "devise": "Maison d’édition associative, entre Gascogne et Touraine",
+  "description": "Le Canapé est une maison d’édition associative qui fait des livres illustrés depuis 2023, entre Gascogne et Touraine : micro-édition auto-diffusée, livres faits avec des classes et des chercheurs.",
+  "directeurPublication": "à préciser",
+  "imprimeur": "à préciser (le Carnet parle de « notre imprimeur italien »)",
+
+  "presentation": [
+    "Le Canapé n’est pas une entreprise : c’est une maison d’édition associative qui fait des livres depuis 2023, entre Gascogne et Touraine.",
+    "Comme beaucoup d’autres structures, le Canapé pratique la micro-édition auto-diffusée, parce que la réalité de la vie du livre, ce ne sont pas seulement quelques très gros, ce sont aussi et surtout des milliers de petits.",
+    "Le Canapé s’appelle le canapé parce que tout le monde s’y assied côte à côte, éditeurs, auteurs et autrices, libraires, illustrateurs et illustratrices, lecteurs et lectrices, et tous et toutes se passent les livres de main en main.",
+    "Le Canapé travaille avec des fourmis dans les jambes, avec des imprimeurs, avec l’envie de faire de beaux livres, avec des élèves en alternance, avec des ordinateurs couverts de stickers, avec des chercheurs italiens, avec des photographes, avec les fenêtres ouvertes, avec des traductrices bénévoles, avec des chats sur les genoux, avec des graveuses et des poètes, avec les moyens du bord."
+  ],
+
+  "histoire": "Au départ, le Canapé, c’est une histoire de frangins. Thomas et Laurent, deux profs, l’un à la fac, l’autre dans l’enseignement professionnel, qui aiment les livres. Et puis un jour, en 2023, ils se disent que certains bouquins qu’ils aimeraient avoir dans leur bibliothèque, ils pourraient les faire. Petit à petit se forme une ligne éditoriale qui renverse les pouvoirs : on sera petit, mais on fera des beaux livres, des objets ; on fera de l’éducation populaire, des projets pédagogiques qui mettront en relation des élèves éloignés du livre et le monde universitaire ; on imaginera des livres gratuits à consulter, des petits tirages, et un lieu où lecteurs, auteurs, éditeurs et libraires peuvent s’installer ensemble, échanger autour des livres, en écrire, loin des empires de la diffusion et des enjeux financiers.",
+
+  "accroches": {
+    "catalogue": "Retrouvez ici l’ensemble des titres parus au Canapé.",
+    "bibliotheque": "Découvrez tous les livres iconoclastes déjà publiés qui garnissent la bibliothèque du Canapé.",
+    "aParaitre": ["Au Canapé, on ne chôme pas.", "Nos cartons débordent de projets.", "Jetez un coup d’œil sur nos prochaines publications."],
+    "carnet": "Le carnet, c’est le journal de bord du Canapé, à la fois cuisines, coulisses et actualités."
+  },
+
+  "contact": {
+    "intro": ["Vous vous demandez où trouver nos livres ?", "Vous voulez nous proposer un projet et essayer notre Canapé ?", "Vous avez simplement envie de nous faire un coucou ?", "Vous êtes au bon endroit."],
+    "commande": "Utilisez le formulaire de contact pour nous indiquer votre demande. Nous vous répondrons à la vitesse de la lumière, et dès réception de votre règlement, nous vous enverrons votre commande grâce à la magie de la Poste !",
+    "ouTrouver": "Les éditions du Canapé sont présentes dans quelques librairies du grand-ouest. Découvrez la liste des lieux où nos livres sont disponibles.",
+    "projet": "Le Canapé est friand de nouveaux projets. Même si nous n’éditons que peu d’ouvrages et que notre ligne nous engage à publier des ouvrages qui rassemblent textes et images, nous ne sommes pas sectaires. Décrivez votre projet. Peut-être que nous fabriquerons ensemble un nouveau coussin pour le Canapé !",
+    "coucou": "Rien de plus simple ! Envoyez-nous votre message !",
+    "ancienne": "Si vous êtes amoureux·se du papier et de l’encre, on vous comprend. Vous pouvez nous envoyer par voie postale vos projets, vos avis sur nos livres, ou vos remarques."
+  },
+
+  "equipe": [
+    {
+      "nom": "Thomas Gerbier",
+      "role": "cofondateur · maquette et conception graphique",
+      "texte": "Maquette et conception graphique de tous les livres du Canapé. Textes et dessins de *Vox Corporis*, illustrations de *Série B*, conception graphique des *Street Iconotextes*. Enseignant de français, il a mené le projet pédagogique du *Bestiaire Monstrueux* avec Anouck Gerbier."
+    },
+    {
+      "nom": "Laurent Gerbier",
+      "role": "cofondateur",
+      "texte": "Dessins de l’*Abécédaire*, illustrations de *Série B*, textes de l’*Atelier de lecture de planches* et de *Monet, peindre le temps*, photographies des *Street Iconotextes*, introduction de *Reconnaissances de Shanghai*."
+    }
+  ],
+
+  "complices": [
+    { "nom": "Axelle Glé", "role": "poète", "texte": "Poème de *Miette la mouette*.", "liens": ["livres/miette-la-mouette"] },
+    { "nom": "Axelle Tamby-Bernage", "role": "illustratrice et graveuse", "texte": "Gravures sur Tétrapak® de *Miette la mouette*.", "liens": ["livres/miette-la-mouette"] },
+    { "nom": "Patrick Gerbier", "role": "photographe", "texte": "Photographies de *Vox Corporis*.", "liens": ["livres/vox-corporis"] },
+    { "nom": "Marius Jouanny", "role": "préfacier", "texte": "Préface de *Vox Corporis*.", "liens": ["livres/vox-corporis"] },
+    { "nom": "Anouck Gerbier", "role": "professeure des écoles", "texte": "Projet pédagogique du *Bestiaire Monstrueux*.", "liens": ["livres/bestiaire-monstrueux"] },
+    { "nom": "Francesco Gallino", "role": "chercheur italien en sciences politiques", "texte": "Auteur du *Journal de Trieste*.", "liens": ["livres/journal-de-trieste"] },
+    { "nom": "Justine Gerbier", "role": "autrice et photographe", "texte": "Textes et photographies de *Moi*.", "liens": ["livres/moi"] },
+    { "nom": "Margot et Arthur", "role": "illustrateurs", "texte": "Illustrations de *Série B* ; Arthur Gerbier signe aussi les dessins du port-folio Kavafis.", "liens": ["livres/serie-b", "a-paraitre/kavafis"] },
+    { "nom": "Maxime Garcia", "role": "illustrateur", "texte": "*Système D* ; atelier de création graphique au Zoetrope autour du *Bestiaire Monstrueux*.", "liens": ["a-paraitre/systeme-d"] },
+    { "nom": "PieR Gajewski", "role": "illustrateur, dessinateur et graveur", "texte": "*Indignations*.", "liens": ["a-paraitre/indignations"] },
+    { "nom": "André Charrak", "role": "photographe, professeur de philosophie et d’esthétique à la Sorbonne", "texte": "*Reconnaissances de Shanghai*.", "liens": ["a-paraitre/reconnaissances-de-shanghai"] },
+    { "nom": "Norbert Danysz", "role": "traducteur", "texte": "Traduction de *Reconnaissances de Shanghai*.", "liens": ["a-paraitre/reconnaissances-de-shanghai"] },
+    { "nom": "Clara Chotil", "role": "dessinatrice", "texte": "Captation dessinée de *Monet, peindre le temps*.", "liens": ["a-paraitre/monet-peindre-le-temps"] },
+    { "nom": "Rémi Jimenès", "role": "imprimeur (L’Enseigne absente)", "texte": "Impression du port-folio Kavafis.", "liens": ["a-paraitre/kavafis"] },
+    { "nom": "Lapoum, Thomas Chéronet", "role": "auteurs", "texte": "*Exil en coquilles*, avec Maxime Garcia.", "liens": ["a-paraitre/exil-en-coquilles"] }
+  ],
+
+  "chercheurs": [
+    { "nom": "Cécile Boulaire", "role": "chercheuse en lettres, laboratoire InTRu", "texte": "Complice de la recherche-création qui a donné *Miette la mouette*." },
+    { "nom": "Pauline Chevalier, Violaine Gourbet, France Nerlich", "role": "chercheuses", "texte": "Textes de *Monet, peindre le temps*." }
+  ],
+
+  "partenaires": [
+    { "nom": "Laboratoire InTRu, université de Tours", "texte": "Interactions, transferts, ruptures artistiques et culturelles : recherche-création de *Miette la mouette*, *Atelier de lecture de planches*, *Monet, peindre le temps*.", "url": "https://intru.hypotheses.org/" },
+    { "nom": "Service culturel de l’Université de Tours", "texte": "A soutenu en 2023 le travail de recherche-création de *Miette la mouette*." },
+    { "nom": "Programme « Science(fiction) politique »", "texte": "Programme de recherche franco-italien financé par le Partenariat Hubert-Curien Galilée ; le Canapé participe à ses rencontres.", "url": "https://www.campusfrance.org/fr/galilee" },
+    { "nom": "Musée de l’Orangerie et Musée d’Orsay", "texte": "Journée d’études autour de l’exposition *Monet, peindre le temps*.", "url": "https://www.musee-orangerie.fr/fr/agenda/expositions/monet-peindre-le-temps" },
+    { "nom": "CFAE de Reignac (Gironde)", "texte": "Les classes de CAP et de BAC Pro à l’origine du *Bestiaire Monstrueux*, de *Série B* et des *Chroniques Botaniques*.", "url": "https://cfm-haute-gironde.fr/" },
+    { "nom": "École maternelle de Pleine-Selve (Gironde)", "texte": "Les dessins du *Bestiaire Monstrueux*." },
+    { "nom": "L’Enseigne absente, Bréhémont", "texte": "Éditeur et imprimeur en Touraine, propriétaire de « la Gavotte », presse Stanhope de 1828 ; coéditeur du port-folio Kavafis." },
+    { "nom": "Le Zoetrope, cinéma de Blaye", "texte": "Exposition du *Bestiaire* et rencontres autour des *Chroniques Botaniques*.", "url": "https://www.cineode.fr/le-zoetrope" },
+    { "nom": "Cinévals, Saint-Jean-d’Angély", "texte": "Opération « Un jardin dans les étoiles » : exposition des dessins originaux et rencontre autour des *Chroniques Botaniques*.", "url": "https://saint-jean-angely.veocinemas.fr/" },
+    { "nom": "Pépites en stock", "texte": "Opération des librairies indépendantes de Nouvelle-Aquitaine : les *Chroniques* en vitrine chez Jeux de Pages en 2026.", "url": "https://asso.librairies-nouvelleaquitaine.com/association/pepites-en-stock" },
+    { "nom": "Librairie Jaufré Rudel, Blaye", "texte": "Stand de vente des *Chroniques Botaniques* tenu par les élèves du CFAE de Reignac." },
+    { "nom": "Espace culture du Leclerc de Jonzac", "texte": "Stand de vente des *Chroniques Botaniques* tenu par les élèves du CFAE de Reignac." },
+    { "nom": "Éditions Rodéo d’âme, Strasbourg", "texte": "Éditeur des autres livres de Maxime Garcia.", "url": "https://rodeodame.fr/" }
+  ],
+
+  "frise": [
+    { "etape": "L’idée", "texte": "« Un jour, en 2023, ils se disent que certains bouquins qu’ils aimeraient avoir dans leur bibliothèque, ils pourraient les faire. »", "image": { "src": "images/maison/sticker-rouages.png", "alt": "Dessin au trait : une tête pleine de rouages et une burette d’huile, « Amenez vos rouages… le Canapé fournit l’huile »." }, "lien": "la-maison" },
+    { "etape": "L’atelier", "texte": "« Les équipes du Canapé ont enfin pu rencontrer les élèves de BAC 3 du CFAE de Reignac qui ont piloté les Chroniques Botaniques. »", "image": { "src": "images/carnet/2026-01-23-chroniques-cfae.jpg", "alt": "Séance de travail autour d’une table couverte de dessins encadrés." }, "lien": "carnet/2026-01-23-chroniques-cfae" },
+    { "etape": "La gravure", "texte": "« Axelle Tamby-Bernage remet au Canapé ses magnifiques gravures sur Tétrapak® pour les illustrations de Miette la mouette. »", "image": { "src": "images/carnet/2026-08-04-gravures-de-miette.jpg", "alt": "Une gravure originale posée sur une table." }, "lien": "carnet/2026-08-04-gravures-de-miette" },
+    { "etape": "La maquette", "texte": "« On met le scanner en route pour réaliser une première numérisation de ces gravures et on commence à imaginer la maquette. »", "image": { "src": "images/livres/chroniques-botaniques/page-06.jpg", "alt": "Une illustration retravaillée sur un ordinateur portable." }, "lien": "carnet/2026-08-04-gravures-de-miette" },
+    { "etape": "L’impression", "texte": "« Le texte composé au plomb est tiré sur “la Gavotte”, la vénérable presse Stanhope de 1828 de L’Enseigne absente. »", "image": { "src": "images/carnet/2026-09-17-kavafis-sous-presse.jpg", "alt": "Une forme typographique en plomb dans le châssis de la presse." }, "lien": "carnet/2026-09-17-kavafis-sous-presse" },
+    { "etape": "L’arrivée des cartons", "texte": "« Ce matin, à l’aube, nous avons ouvert la porte à un adorable livreur chargé de quatre cartons. »", "image": { "src": "images/carnet/2026-09-11-miette-est-arrivee.jpg", "alt": "Exemplaires de Miette la mouette sortis de leur carton." }, "lien": "carnet/2026-09-11-miette-est-arrivee" },
+    { "etape": "Les rencontres", "texte": "« Laurent et Thomas viennent à la rencontre du public pour discuter de SF, de plantes, et de micro-édition. »", "image": { "src": "images/carnet/2026-01-23-chroniques-zoetrope.jpg", "alt": "Stand des Chroniques Botaniques dans le hall du cinéma Le Zoetrope." }, "lien": "carnet/2026-04-24-jeux-de-pages" }
+  ]
+}

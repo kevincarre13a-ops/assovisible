@@ -1,0 +1,10 @@
+{
+  "name": "editions-du-canape",
+  "private": true,
+  "type": "commonjs",
+  "description": "Site statique des éditions du Canapé",
+  "scripts": {
+    "build": "node build.js",
+    "start": "node build.js && npx serve dist"
+  }
+}

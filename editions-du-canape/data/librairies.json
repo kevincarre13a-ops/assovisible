@@ -1,0 +1,57 @@
+[
+  {
+    "id": "bedelire",
+    "nom": "Bédélire",
+    "type": "librairie de bande dessinée",
+    "adresse": "81 rue du Commerce",
+    "codePostal": "37000",
+    "ville": "Tours",
+    "site": "https://www.canalbd.net/bedelire",
+    "lat": 47.3948,
+    "lon": 0.6829
+  },
+  {
+    "id": "libr-enfant",
+    "nom": "Libr’Enfant",
+    "type": "librairie jeunesse",
+    "adresse": "48 rue Colbert",
+    "codePostal": "37000",
+    "ville": "Tours",
+    "site": "https://www.librenfant.fr/",
+    "lat": 47.3957,
+    "lon": 0.6892
+  },
+  {
+    "id": "imaginaute",
+    "nom": "L’Imaginaute",
+    "type": "librairie",
+    "adresse": "71 rue du Commerce",
+    "codePostal": "37000",
+    "ville": "Tours",
+    "site": "https://www.imaginaute.com/",
+    "lat": 47.3948,
+    "lon": 0.6833
+  },
+  {
+    "id": "jeux-de-pages",
+    "nom": "Jeux de Pages",
+    "type": "librairie",
+    "adresse": "20 rue Gambetta",
+    "codePostal": "17400",
+    "ville": "Saint-Jean-d’Angély",
+    "site": "https://www.librairie-jeuxdepages.fr/",
+    "lat": 45.9447,
+    "lon": -0.5222
+  },
+  {
+    "id": "mauvaise-reputation",
+    "nom": "La Mauvaise Réputation",
+    "type": "librairie-galerie",
+    "adresse": "19 rue des Argentiers",
+    "codePostal": "33000",
+    "ville": "Bordeaux",
+    "site": "https://www.lamauvaisereputation.net/",
+    "lat": 44.8392,
+    "lon": -0.5700
+  }
+]

@@ -1,0 +1,214 @@
+[
+  {
+    "slug": "2026-09-17-kavafis-sous-presse",
+    "date": "2026-09-17",
+    "titre": "Kavafis sous presse",
+    "themes": ["fabrication"],
+    "texte": [
+      "L’impression du volume de poésies de Konstantin Kavafis, réalisé par L’Enseigne absente pour lequel le Canapé a produit les images, est en cours. Le texte composé au plomb est tiré sur « la Gavotte », la vénérable presse Stanhope de 1828 de L’Enseigne absente."
+    ],
+    "livres": [],
+    "projets": ["kavafis"],
+    "photos": [
+      { "src": "images/carnet/2026-09-17-kavafis-sous-presse.jpg", "alt": "Une forme typographique en plomb serrée dans le châssis de la presse, à côté d’une feuille imprimée." }
+    ]
+  },
+  {
+    "slug": "2026-09-11-miette-est-arrivee",
+    "date": "2026-09-11",
+    "titre": "Miette est arrivée !",
+    "themes": ["fabrication"],
+    "texte": [
+      "Ce matin, à l’aube, nous avons ouvert la porte à un adorable livreur chargé de quatre cartons. À l’intérieur, *Miette la mouette*, que nous attendions avec beaucoup d’impatience. On a déballé, et on a appelé Axelle Glé et Axelle Tamby-Bernage qui nous ont rejoints pour découvrir le dernier-né du Canapé. Nous ne sommes pas peu fiers !"
+    ],
+    "livres": ["miette-la-mouette"],
+    "projets": [],
+    "photos": [
+      { "src": "images/carnet/2026-09-11-miette-est-arrivee.jpg", "alt": "Exemplaires de Miette la mouette tout juste sortis de leur carton." }
+    ]
+  },
+  {
+    "slug": "2026-08-22-miette-sous-presse",
+    "date": "2026-08-22",
+    "titre": "Miette est sous presse !",
+    "themes": ["fabrication"],
+    "texte": [
+      "Enfin ! Après un travail acharné dans la chaleur étouffante de l’été, après de nombreuses discussions avec Axelle Glé et Axelle Tamby-Bernage, après avoir fait suer les ordinateurs et nos cerveaux, *Miette la mouette*, superbe poème illustré de merveilleuses gravures, part sous presse chez notre imprimeur italien."
+    ],
+    "livres": ["miette-la-mouette"],
+    "projets": [],
+    "photos": [
+      { "src": "images/carnet/2026-08-22-miette-sous-presse.jpg", "alt": "Gravure de Miette la mouette : un héron et un petit oiseau en vol." }
+    ]
+  },
+  {
+    "slug": "2026-08-04-gravures-de-miette",
+    "date": "2026-08-04",
+    "titre": "Les gravures de Miette la mouette",
+    "themes": ["fabrication"],
+    "texte": [
+      "Axelle Tamby-Bernage remet au Canapé ses magnifiques gravures sur Tétrapak® pour les illustrations de *Miette la mouette*.",
+      "On met le scanner en route pour réaliser une première numérisation de ces gravures et on commence à imaginer la maquette."
+    ],
+    "livres": ["miette-la-mouette"],
+    "projets": [],
+    "photos": [
+      { "src": "images/carnet/2026-08-04-gravures-de-miette.jpg", "alt": "Une gravure originale d’Axelle Tamby-Bernage posée sur une table : un paysage de falaise." }
+    ]
+  },
+  {
+    "slug": "2026-05-18-universite-de-tours",
+    "date": "2026-05-18",
+    "titre": "Le Canapé à l’université de Tours",
+    "themes": ["rencontres"],
+    "texte": [
+      "L’université de Tours accueille la quatrième session de travail du programme de recherche « Science(fiction) politique », un programme franco-italien financé par le Partenariat Hubert-Curien Galilée.",
+      "Le Canapé participe à ces rencontres."
+    ],
+    "livres": ["journal-de-trieste"],
+    "projets": [],
+    "photos": [
+      { "src": "images/carnet/2026-05-18-universite-de-tours.jpg", "alt": "Programme de la journée d’études « (Fanta)scienza politica / Science(fiction) politique – Parler au(x) futur(s) », 20 mai 2026, université de Tours." }
+    ]
+  },
+  {
+    "slug": "2026-04-24-jeux-de-pages",
+    "date": "2026-04-24",
+    "titre": "Le Canapé à Jeux de Pages",
+    "themes": ["rencontres", "expositions"],
+    "texte": [
+      "Dans la librairie Jeux de Pages, à Saint-Jean-d’Angély, les *Chroniques Botaniques* sont au centre de la vitrine pendant 15 jours, dans le cadre de l’édition 2026 de Pépites en stock. Pour cette occasion, Laurent et Thomas viennent à la rencontre du public pour discuter de SF, de plantes, et de micro-édition."
+    ],
+    "livres": ["chroniques-botaniques"],
+    "projets": [],
+    "photos": [
+      { "src": "images/carnet/2026-04-24-jeux-de-pages.jpg", "alt": "Affiche de Pépites en stock 2026, du 13 au 26 avril : « Habiter la forêt, vivre avec les arbres »." }
+    ]
+  },
+  {
+    "slug": "2026-04-06-cinevals",
+    "date": "2026-04-06",
+    "titre": "Rencontre à Cinévals",
+    "themes": ["rencontres"],
+    "texte": [
+      "Dans le cadre de l’opération Un Jardin dans les étoiles, Laurent et Thomas viennent discuter avec le public de Cinévals de SF des *Chroniques Botaniques* après la diffusion du film *Planètes* de Momoko Seto."
+    ],
+    "livres": ["chroniques-botaniques"],
+    "projets": [],
+    "photos": [
+      { "src": "images/carnet/2026-04-06-cinevals.jpg", "alt": "Une main tient un exemplaire des Chroniques Botaniques ouvert sur une page dédicacée, avec des dessins de plantes." }
+    ]
+  },
+  {
+    "slug": "2026-04-01-chroniques-reimpression",
+    "date": "2026-04-01",
+    "titre": "Les Chroniques en réimpression",
+    "themes": ["fabrication"],
+    "texte": [
+      "Le stock s’épuisant, on vient de prendre une décision : les *Chroniques* repartent chez notre imprimeur pour 100 nouveaux exemplaires."
+    ],
+    "livres": ["chroniques-botaniques"],
+    "projets": [],
+    "photos": [
+      { "src": "images/carnet/2026-04-01-chroniques-reimpression.jpg", "alt": "Couverture des Chroniques Botaniques : une fleur blanche aux racines déployées sur fond rouge." }
+    ]
+  },
+  {
+    "slug": "2026-03-21-jardin-dans-les-etoiles",
+    "date": "2026-03-21",
+    "titre": "Un jardin dans les étoiles",
+    "themes": ["expositions"],
+    "texte": [
+      "Dans le cadre de l’opération Un Jardin dans les étoiles, les dessins originaux des *Chroniques Botaniques* s’exposent à Cinévals pendant 1 mois."
+    ],
+    "livres": ["chroniques-botaniques"],
+    "projets": [],
+    "photos": [
+      { "src": "images/carnet/2026-03-21-jardin-dans-les-etoiles.jpg", "alt": "Affiche « Un jardin dans les étoiles » : une aigrette de pissenlit sur fond sombre ; présentation du film Planètes de Momoko Seto, discussion avec les éditeurs et dédicaces des Chroniques Botaniques." }
+    ]
+  },
+  {
+    "slug": "2026-01-23-chroniques-zoetrope",
+    "date": "2026-01-23",
+    "titre": "Les Chroniques au Zoetrope",
+    "themes": ["rencontres"],
+    "texte": [
+      "Dans le cadre de la promotion des *Chroniques Botaniques*, les BAC 3 du CFAE de Reignac qui ont piloté la publication des *Chroniques Botaniques* vous convient à une découverte du livre à l’occasion d’une projection d’*Avatar 3* au Zoetrope, le cinéma de Blaye."
+    ],
+    "livres": ["chroniques-botaniques"],
+    "projets": [],
+    "photos": [
+      { "src": "images/carnet/2026-01-23-chroniques-zoetrope.jpg", "alt": "Stand dans le hall du cinéma Le Zoetrope : un dessin de plante encadré et des exemplaires des Chroniques Botaniques." }
+    ]
+  },
+  {
+    "slug": "2026-01-23-chroniques-cfae",
+    "date": "2026-01-23",
+    "titre": "Les Chroniques au CFAE de Reignac",
+    "themes": ["ateliers", "rencontres"],
+    "texte": [
+      "Les équipes du Canapé ont enfin pu rencontrer les élèves de BAC 3 du CFAE de Reignac qui ont piloté les *Chroniques Botaniques*. On a passé un après-midi ensemble et on a préparé notre intervention au cinéma le Zoetrope à Blaye (voir brève suivante)."
+    ],
+    "livres": ["chroniques-botaniques"],
+    "projets": [],
+    "photos": [
+      { "src": "images/carnet/2026-01-23-chroniques-cfae.jpg", "alt": "Autour d’une table couverte de dessins encadrés, l’équipe du Canapé et les élèves préparent la présentation du livre." }
+    ]
+  },
+  {
+    "slug": "2026-01-21-atelier-maxime-garcia",
+    "date": "2026-01-21",
+    "titre": "Dans l’atelier de Maxime Garcia",
+    "themes": ["ateliers"],
+    "texte": [
+      "Le développement du prochain livre de Maxime Garcia, *Système D*, avance. On a rencontré Maxime qui nous a présenté son atelier et certains des dessins anagrammes qui composeront le livre."
+    ],
+    "livres": [],
+    "projets": ["systeme-d"],
+    "photos": [
+      { "src": "images/carnet/2026-01-21-atelier-maxime-garcia.jpg", "alt": "Dessins à l’encre de Maxime Garcia étalés sur une table : des oies et des objets en noir et blanc." }
+    ]
+  },
+  {
+    "slug": "2025-11-21-vox-corporis",
+    "date": "2025-11-21",
+    "titre": "On a enfin reçu Vox Corporis !",
+    "themes": ["fabrication"],
+    "texte": [
+      "Enfin ! Après plus de deux années de conception, *Vox Corporis* est arrivé, et on n’est pas peu fiers ! Découvrez ici les premières images de *Vox Corporis*, un livre d’art qui rassemble une sélection de photographies de Patrick Gerbier issues de plus de 30 ans de travail sur le nu masculin."
+    ],
+    "livres": ["vox-corporis"],
+    "projets": [],
+    "photos": [
+      { "src": "images/carnet/2025-11-21-vox-corporis.jpg", "alt": "Page intérieure de Vox Corporis : un texte manuscrit en arc de cercle au-dessus d’un dessin au trait d’un corps." }
+    ]
+  },
+  {
+    "slug": "2025-11-21-chroniques-botaniques",
+    "date": "2025-11-21",
+    "titre": "On a enfin reçu les Chroniques !",
+    "themes": ["fabrication"],
+    "texte": [
+      "Voici les premières images des *Chroniques Botaniques*, roman ovni d’exploration spatiale par les plantes. Les *Chroniques*, c’est un livre atypique issu d’un projet pédagogique de longue haleine avec le CFAE de Reignac en Gironde."
+    ],
+    "livres": ["chroniques-botaniques"],
+    "projets": [],
+    "photos": [
+      { "src": "images/carnet/2025-11-21-chroniques-botaniques.jpg", "alt": "Un exemplaire imprimé des Chroniques Botaniques posé debout sur une table en bois." }
+    ]
+  },
+  {
+    "slug": "2024-11-22-bestiaire-zoetrope",
+    "date": "2024-11-22",
+    "titre": "Le Bestiaire au Zoetrope",
+    "themes": ["expositions", "ateliers"],
+    "texte": [
+      "Dans le cadre de la promotion du *Bestiaire Monstrueux*, rendez-vous au Zoetrope, le cinéma de Blaye, pour découvrir une exposition dédiée au projet pédagogique, une animation sous forme d’atelier de création graphique, dirigée par l’illustrateur Maxime Garcia, et venez voir *Le Règne animal*, le film de Thomas Cailley."
+    ],
+    "livres": ["bestiaire-monstrueux"],
+    "projets": [],
+    "photos": [
+      { "src": "images/carnet/2024-11-22-bestiaire-zoetrope.jpg", "alt": "Dessin d’enfant du Bestiaire Monstrueux : un oiseau rond à rayures et à longue trompe, près d’un arbre." }
+    ]
+  }
+]
