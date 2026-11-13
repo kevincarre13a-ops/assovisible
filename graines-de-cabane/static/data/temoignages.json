@@ -1,0 +1,65 @@
+{
+  "_aide": "Témoignages affichés dans le carrousel de l'accueil, dans l'ordre.",
+  "temoignages": [
+    {
+      "prenom": "Justine",
+      "qualite": "maman",
+      "contexte": "Tyrosse, septembre 2026",
+      "texte": "Un vrai moment de complicité avec mon enfant ! On est venus pour jouer, on est repartis avec le sourire et l'envie de revenir. C'est tellement agréable de partager un moment simple, sans écran et sans pression."
+    },
+    {
+      "prenom": "Louis",
+      "qualite": "9 ans",
+      "contexte": "Fête de Magescq, juillet 2026",
+      "texte": "J'adore venir jouer avec les autres ! On découvre des jeux qu'on ne connaissait pas, on relève des défis et parfois on gagne tous ensemble. C'est quand la prochaine animation ?"
+    },
+    {
+      "prenom": "Louise",
+      "qualite": "grand-mère de Lilian, 7 ans, et Lili, 9 ans",
+      "contexte": "Noëls insolites de Carpentras, 2024",
+      "texte": "Ce que j'aime chez Graines de Cabane, c'est cette capacité à réunir les générations autour d'une même table. Peu importe l'âge, on joue, on échange, on rit… et on crée de jolis souvenirs ensemble."
+    },
+    {
+      "prenom": "Diana",
+      "qualite": "enseignante en CFA",
+      "contexte": "Avignon, 2025",
+      "texte": "Les animations de Graines de Cabane sont de véritables supports pour apprendre autrement. Les jeunes développent leur coopération, leur créativité et leur capacité à agir et construire ensemble, tout en prenant énormément de plaisir."
+    },
+    {
+      "prenom": "Sylvie",
+      "qualite": "bénévole depuis 2020",
+      "contexte": "",
+      "texte": "Ici, chaque jeu a une histoire et peut en commencer une nouvelle ailleurs. Participer à cette aventure, c'est donner un peu de son temps pour faire beaucoup de place au partage, à la solidarité et au plaisir de faire ensemble tout en se sentant utile."
+    },
+    {
+      "prenom": "Marie-Jo",
+      "qualite": "partenaire",
+      "contexte": "Agglo d'Avignon, 2024",
+      "texte": "Nous avons été séduits par une association qui transforme une idée simple en véritable projet de territoire. Graines de Cabane donne une seconde vie aux jeux tout en créant du lien social : une initiative concrète, généreuse et porteuse de sens."
+    },
+    {
+      "prenom": "Vincent",
+      "qualite": "donateur",
+      "contexte": "2024",
+      "texte": "Je ne savais pas quoi faire de tous ces jeux qui dormaient dans nos placards. Savoir qu'ils vont être vérifiés, complétés et retrouver de nouveaux joueurs plutôt que finir à la poubelle, c'est une belle satisfaction."
+    },
+    {
+      "prenom": "Vasvija",
+      "qualite": "chargée de mission",
+      "contexte": "Institut français de Sarajevo, 2026",
+      "texte": "Recevoir ces jeux, c'est recevoir bien plus que des boîtes et des pions. C'est offrir aux enfants et aux apprenants de la langue française des occasions d'apprendre, de partager et de jouer ensemble. Une belle chaîne de solidarité qui traverse les frontières."
+    },
+    {
+      "prenom": "Émilie",
+      "qualite": "enseignante et maître formatrice",
+      "contexte": "2025",
+      "texte": "Ces jeux reconditionnés sont de véritables outils de transmission. Ils permettent de développer la coopération, l'imagination et les apprentissages, tout en rappelant aux enfants que les objets ont de la valeur et méritent qu'on en prenne soin."
+    },
+    {
+      "prenom": "Partenaire mécène matériel",
+      "qualite": "",
+      "contexte": "Avignon, 2024",
+      "texte": "Ce qui nous a convaincus, c'est la capacité de Graines de Cabane à transformer un geste simple, donner un jeu, en une aventure collective qui dépasse les frontières. Des milliers de jeux sauvés, reconditionnés et déjà diffusés dans 15 pays : voilà un engagement qui a du sens !"
+    }
+  ]
+}

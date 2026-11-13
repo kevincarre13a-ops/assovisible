@@ -1,0 +1,129 @@
+<!--META {"title":"Seconde vie des jeux : collecte solidaire et points de récolte dans les Landes","description":"Donnez vos jeux, même incomplets : Graines de Cabane les collecte, trie, reconditionne et redistribue en France et dans 15 pays. Points de récolte à Tyrosse, Castets, Magescq, Soustons, Peyrehorade. Défi 300 kg.","nav":"","priority":"0.9"}-->
+<section class="page-hero page-hero--lime" aria-labelledby="titre-page">
+  {{decor:a}}
+  <div class="container split">
+    <div>
+      <p class="breadcrumb"><a href="index.html">Accueil</a> › Seconde vie des jeux</p>
+      <p class="eyebrow" style="color:var(--lime-deep)">Collecte et réemploi solidaire</p>
+      <h1 id="titre-page">Vos jeux ont encore de <span class="brush">belles parties</span> à vivre !</h1>
+      <p class="lead">Ne jetez plus vos jeux, donnez-leur une seconde vie ! Jeux de société, jeux de construction, puzzles, jouets… Même incomplets, ils peuvent encore servir !</p>
+      <div class="btn-row" style="margin-top:1.4rem"><a class="btn btn--lime" href="#points-de-collecte">{{icon:pin}}Où déposer vos jeux</a><a class="btn btn--ghost" href="#defi">Défi 300 kg</a></div>
+    </div>
+    <a class="poster poster-large reveal" href="images/affiche-nouvelle-vie-jeux.png" data-lightbox="affiche-sv" data-caption="Une nouvelle vie pour vos jeux !" style="max-width:340px"><img src="images/vignettes/affiche-nouvelle-vie-jeux.webp" alt="Affiche « Une nouvelle vie pour vos jeux ! » : que deviennent vos dons" width="520" height="736"><span>Une nouvelle vie pour vos jeux ! Cliquez pour agrandir</span></a>
+  </div>
+</section>
+{{wave:var(--lime-soft)|bottom}}
+
+<section class="section" aria-labelledby="titre-deposer">
+  <div class="container">
+    <div class="section-head center"><p class="eyebrow">Où déposer vos jeux</p><h2 id="titre-deposer">Trois façons de <span class="brush">donner</span></h2></div>
+    <div class="grid grid-3" data-stagger>
+      <div class="card reveal tilt-l card-hover"><span class="icon-bubble">{{icon:dice}}</span><h3>Lors de nos permanences ludiques</h3><p>Nous prévenir pour assurer votre accueil ! Salle Tourren, contre la Croix-Rouge à Tyrosse, de 9h30 à 12h30.</p><div class="mini-dates u-turq" data-next-dates="3"></div></div>
+      <div class="card reveal tilt-r card-hover"><span class="icon-bubble" style="--bubble:var(--lime-soft);--bubble-fg:var(--lime-deep)">{{icon:box}}</span><h3>Dans nos points de collecte</h3><p>Des caisses de récolte vous attendent toute l'année à Saint-Vincent-de-Tyrosse et dans plusieurs communes des Landes.</p><a class="link-arrow" href="#points-de-collecte">Voir les lieux</a></div>
+      <div class="card reveal tilt-l card-hover"><span class="icon-bubble" style="--bubble:var(--sun-soft);--bubble-fg:#b8620a">{{icon:phone}}</span><h3>Sur rendez-vous</h3><p>Beaucoup de jeux, un don d'entreprise ou de collectivité ? Contactez-nous pour organiser la récupération.</p><a class="link-arrow" href="contact.html?sujet=don">Nous contacter</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-lime anchor-offset" id="points-de-collecte" aria-labelledby="titre-lieux">
+  {{wave:var(--lime-soft)}}
+  {{decor:c}}
+  <div class="container">
+    <div class="section-head"><p class="eyebrow" style="color:var(--lime-deep)">Toute l'année</p><h2 id="titre-lieux">Les lieux de récolte à ce jour <span class="brush">dans les Landes</span></h2><p class="lead">Déposez vos jeux, même incomplets, dans l'une des caisses Graines de Cabane.</p></div>
+    <div class="split" style="align-items:start">
+      {{lieux-list}}
+      <div class="map-box reveal" style="height:520px" data-lieux-map="recolte" role="region" aria-label="Carte des lieux de récolte"><p class="map-fallback">Carte des lieux de récolte en cours de chargement…</p></div>
+    </div>
+    <p class="center" style="margin-top:2rem"><a class="btn btn--sun" href="point-de-recolte.html">{{icon:store}}Votre structure peut devenir point de récolte</a></p>
+  </div>
+</section>
+{{wave:var(--lime-soft)|bottom}}
+
+<section class="section defi anchor-offset" id="defi" aria-labelledby="titre-defi">
+  {{decor:d}}
+  <div class="container-narrow" data-defi>
+    <div class="section-head center"><p class="eyebrow">1er défi de récolte dans les Landes</p><h2 id="titre-defi">Défi « 300 kg de jeux <span class="brush">récupérés</span> ! »</h2><p class="lead">Déposez vos jeux, même incomplets, dans les points de récolte participants à Tyrosse et dans les Landes.</p></div>
+    <div class="card reveal" style="padding:1.6rem">
+      <div class="gauge" role="meter" aria-label="Kilos de jeux récoltés" aria-valuemin="0" aria-valuemax="300" aria-valuenow="0"><div class="gauge-fill"></div><div class="gauge-label">0 kg récoltés sur 300 kg</div></div>
+      <div class="gauge-scale"><span>0 kg</span><span>150 kg</span><span><span data-defi-goal>300</span> kg</span></div>
+      <p class="small muted center" style="margin:.8rem 0 0" data-defi-maj></p>
+    </div>
+    <div class="defi-dates" data-stagger>
+      <div class="card reveal tilt-l" style="--c:var(--turq)"><b>20 novembre 2026</b>Lancement du défi</div>
+      <div class="card reveal tilt-r" style="--c:var(--lime-deep)"><b>Du 4 au 31 janvier 2027</b>Temps fort de la récolte</div>
+      <div class="card reveal tilt-l" style="--c:var(--coral)"><b>Samedi 27 février 2027</b>Bilan du défi, journée jeux</div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-creamblue" aria-labelledby="titre-collecte">
+  {{wave:var(--cream-blue)}}
+  <div class="container-narrow">
+    <article class="card prose-block reveal">
+      <p class="eyebrow">La collecte solidaire</p>
+      <h2 id="titre-collecte">Donner une seconde vie aux jeux, faire naître de <span class="brush">nouvelles rencontres</span></h2>
+      <p class="highlight">Et si les jeux qui dorment dans vos placards devenaient les trésors de quelqu'un d'autre ?</p>
+      <p>Chez Graines de Cabane, nous sommes convaincus qu'un jeu ne perd pas sa valeur parce qu'il a déjà été utilisé. Bien au contraire ! Il porte des histoires, des souvenirs et surtout un formidable potentiel de nouvelles rencontres. C'est pourquoi nous avons fait de la collecte et du réemploi solidaire des jeux un axe central de notre projet associatif.</p>
+      <p>Nous récupérons les jeux de société, les puzzles, les jeux de construction et de nombreux autres supports ludiques auprès des particuliers, des entreprises, des collectivités et des établissements partenaires. Même incomplets, certains jeux peuvent encore être valorisés : une boîte abîmée, quelques pièces manquantes ou un jeu délaissé ne signifient pas nécessairement qu'il est inutilisable.</p>
+    </article>
+  </div>
+  <div class="container" style="margin-top:3rem">
+    <div class="section-head center"><p class="eyebrow">De la collecte à la redistribution</p><h2>Un travail de <span class="brush">valorisation</span></h2><p class="lead">Donner une seconde vie à un jeu demande bien plus que de le transmettre. Chaque collecte donne lieu à un véritable travail réalisé par les bénévoles de l'association :</p></div>
+    <ol class="timeline process" style="--n:5;list-style:none;margin:0">
+      <li class="tl-item" style="--c:var(--turq);--i:0"><span class="tl-dot"></span><div class="card"><span class="icon-bubble">{{icon:box}}</span><h3>Collecter</h3><p>Accueillir les dons et récupérer les jeux auprès de nos différents points de collecte et partenaires.</p></div></li>
+      <li class="tl-item" style="--c:var(--sun);--i:1"><span class="tl-dot"></span><div class="card"><span class="icon-bubble" style="--bubble:var(--sun-soft);--bubble-fg:#b8620a">{{icon:search}}</span><h3>Trier</h3><p>Identifier les jeux, vérifier leur état et déterminer leur potentiel de réutilisation.</p></div></li>
+      <li class="tl-item" style="--c:var(--coral);--i:2"><span class="tl-dot"></span><div class="card"><span class="icon-bubble" style="--bubble:#FBE3E1;--bubble-fg:var(--coral)">{{icon:wrench}}</span><h3>Reconditionner</h3><p>Nettoyer, inventorier, compléter, réparer et recomposer les jeux lorsque cela est possible.</p></div></li>
+      <li class="tl-item" style="--c:var(--lime-deep);--i:3"><span class="tl-dot"></span><div class="card"><span class="icon-bubble" style="--bubble:var(--lime-soft);--bubble-fg:var(--lime-deep)">{{icon:truck}}</span><h3>Redistribuer</h3><p>Préparer les jeux pour qu'ils rejoignent de nouveaux lieux de vie, de nouveaux publics et de nouveaux projets.</p></div></li>
+      <li class="tl-item" style="--c:var(--navy);--i:4"><span class="tl-dot"></span><div class="card"><span class="icon-bubble" style="--bubble:var(--sky);--bubble-fg:var(--navy)">{{icon:puzzle}}</span><h3>Compléter</h3><p>Avec les pièces restantes, nous avons constitué un stock de près de 10 000 pièces de jeux pour compléter les vôtres ! <a href="contact.html?sujet=don">Contactez-nous</a>, nous aurons peut-être cette fameuse pièce.</p></div></li>
+    </ol>
+    <p class="center highlight reveal" style="margin-top:2.2rem;max-width:46rem;margin-inline:auto">Ce travail patient permet de transformer des dons parfois hétérogènes en ressources ludiques prêtes à être partagées.</p>
+  </div>
+</section>
+{{wave:var(--cream-blue)|bottom}}
+
+<section class="section" aria-labelledby="titre-voyage">
+  <div class="container">
+    <div class="container-narrow" style="width:100%;max-width:820px">
+      <p class="eyebrow">Des jeux qui voyagent</p>
+      <h2 id="titre-voyage">Des jeux qui franchissent <span class="brush">les frontières</span></h2>
+      <p>Notre engagement ne s'arrête pas à la collecte locale. Grâce à notre réseau de partenaires et à nos ambassadeurs qui transportent des jeux dans leurs bagages, nous organisons leur redistribution en France et à l'international, et cela représente aujourd'hui près de 15 pays destinataires !</p>
+      <p>Écoles, associations, structures éducatives, lieux de vie et initiatives solidaires : autant de destinations où les jeux retrouvent leur vocation première, celle de réunir les personnes autour d'une expérience commune. Nous souhaitons ainsi contribuer à rendre le jeu plus accessible, favoriser les échanges culturels et soutenir celles et ceux qui font vivre des espaces de jeu et de partage.</p>
+    </div>
+    <div style="margin-top:2rem">{{world-map:data-autoplay}}</div>
+  </div>
+</section>
+
+<section class="section bg-navy" aria-labelledby="titre-demarche">
+  {{wave:var(--navy)}}
+  {{decor:w}}
+  <div class="container-narrow">
+    <p class="eyebrow" style="color:var(--lime)">Notre démarche</p>
+    <h2 id="titre-demarche">Une démarche écologique, sociale et profondément <span class="brush">humaine</span></h2>
+    <p>Collecter et reconditionner des jeux, c'est agir concrètement contre le gaspillage, prolonger la durée de vie des objets et encourager une consommation plus responsable.</p>
+    <p>Mais c'est aussi défendre une conviction : le jeu est un formidable vecteur d'éducation, de coopération, de découverte et de lien social. Il ne devrait pas être réservé à ceux qui ont les moyens de l'acheter neuf.</p>
+    <p class="highlight" style="color:#fff">Chaque don compte. Chaque jeu sauvé représente une nouvelle possibilité de jouer, d'apprendre, de se rencontrer et de rêver encore… Avec Graines de Cabane, les jeux ne terminent pas leur histoire : ils en commencent une autre !</p>
+  </div>
+</section>
+{{wave:var(--navy)|bottom}}
+
+<section class="section" aria-labelledby="titre-dons">
+  {{decor:b}}
+  <div class="container">
+    <div class="section-head center"><p class="eyebrow">Une nouvelle vie pour vos jeux</p><h2 id="titre-dons">Que deviennent <span class="brush">vos dons</span> ?</h2></div>
+    <div class="grid grid-3" data-stagger>
+      <article class="card num-card reveal tilt-l card-hover"><span class="step-num" style="--c:var(--coral)">1</span><h3>Triés et reconditionnés</h3><p class="muted">Nous trions les jeux et les remettons en état.</p></article>
+      <article class="card num-card reveal tilt-r card-hover"><span class="step-num" style="--c:var(--sun)">2</span><h3>Des malles à thème</h3><p class="muted">Des jeux réunis et mis à disposition des structures.</p></article>
+      <article class="card num-card reveal tilt-l card-hover"><span class="step-num" style="--c:var(--lime-deep)">3</span><h3>Des jeux qui voyagent</h3><p class="muted">Donnés lors de nos voyages ou confiés à nos ambassadeurs, ils rencontrent de nouveaux joueurs dans le monde.</p></article>
+      <article class="card num-card reveal tilt-r card-hover"><span class="step-num" style="--c:var(--coral)">4</span><h3>Des ventes solidaires</h3><p class="muted">Nous proposons des jeux reconditionnés lors de ventes solidaires.</p></article>
+      <article class="card num-card reveal tilt-l card-hover"><span class="step-num" style="--c:var(--sun)">5</span><h3>Une ressourcerie de pièces</h3><p class="muted">Pions, cartes et plateaux alimentent notre ressourcerie-recyclerie, ouverte aux accueils collectifs de mineurs des Landes.</p></article>
+      <article class="card num-card reveal tilt-r card-hover"><span class="step-num" style="--c:var(--lime-deep)">6</span><h3>De nouveaux projets</h3><p class="muted">Nous imaginons d'autres façons de faire vivre les jeux et de créer des rencontres.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm" aria-label="Aller plus loin">
+  <div class="container grid grid-2">
+    <a class="big-btn reveal" href="ambassadeur.html" style="background:var(--navy);color:#fff"><span class="bb-icon">{{icon:plane}}</span><span><strong>Devenir ambassadeur</strong><small>Un jeu dans vos bagages, un contact, une idée…</small></span><span class="bb-arrow">{{icon:arrow}}</span></a>
+    <a class="big-btn reveal" href="point-de-recolte.html" style="background:var(--sun);color:var(--navy);--d:.1s"><span class="bb-icon">{{icon:store}}</span><span><strong>Devenez point de récolte</strong><small>Un petit espace chez vous, une grande aventure pour les jeux !</small></span><span class="bb-arrow">{{icon:arrow}}</span></a>
+  </div>
+</section>

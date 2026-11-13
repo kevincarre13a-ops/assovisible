@@ -1,0 +1,80 @@
+{
+  "_aide": "Pays où des jeux de Graines de Cabane ont été donnés. 'iso' = code numérique ISO 3166 du pays (ex. France 250), utilisé pour l'allumer sur la carte.",
+  "pays": [
+    {
+      "nom": "Pérou",
+      "iso": "604",
+      "continent": "Amérique du Sud"
+    },
+    {
+      "nom": "Argentine",
+      "iso": "032",
+      "continent": "Amérique du Sud"
+    },
+    {
+      "nom": "Équateur",
+      "iso": "218",
+      "continent": "Amérique du Sud"
+    },
+    {
+      "nom": "Bolivie",
+      "iso": "068",
+      "continent": "Amérique du Sud"
+    },
+    {
+      "nom": "Tanzanie",
+      "iso": "834",
+      "continent": "Afrique"
+    },
+    {
+      "nom": "Maroc",
+      "iso": "504",
+      "continent": "Afrique"
+    },
+    {
+      "nom": "Slovénie",
+      "iso": "705",
+      "continent": "Europe"
+    },
+    {
+      "nom": "Hongrie",
+      "iso": "348",
+      "continent": "Europe"
+    },
+    {
+      "nom": "Portugal",
+      "iso": "620",
+      "continent": "Europe"
+    },
+    {
+      "nom": "Espagne",
+      "iso": "724",
+      "continent": "Europe"
+    },
+    {
+      "nom": "Bosnie-Herzégovine",
+      "iso": "070",
+      "continent": "Europe"
+    },
+    {
+      "nom": "Monténégro",
+      "iso": "499",
+      "continent": "Europe"
+    },
+    {
+      "nom": "Allemagne",
+      "iso": "276",
+      "continent": "Europe"
+    },
+    {
+      "nom": "Grèce",
+      "iso": "300",
+      "continent": "Europe"
+    },
+    {
+      "nom": "Italie",
+      "iso": "380",
+      "continent": "Europe"
+    }
+  ]
+}

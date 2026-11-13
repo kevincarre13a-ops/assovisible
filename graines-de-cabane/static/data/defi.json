@@ -1,0 +1,10 @@
+{
+  "_aide": "Jauge du défi 300 kg. Modifiez 'kgRecoltes' (nombre) et 'miseAJour' (texte libre, ex. '15 janvier 2027').",
+  "objectifKg": 300,
+  "kgRecoltes": 0,
+  "miseAJour": "",
+  "lancement": "2026-11-20",
+  "tempsFortDebut": "2027-01-04",
+  "tempsFortFin": "2027-01-31",
+  "bilan": "2027-02-27"
+}

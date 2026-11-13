@@ -1,0 +1,71 @@
+<!--META {"title":"Nos jeux : près de 500 jeux et plus de 40 grands jeux en bois","description":"Près de 500 jeux renouvelés chaque année et plus de 40 grands jeux en bois : jouer sur place gratuitement pour les 3 premiers RDV, louer de 2 € à 10 € une malle de jeux pour 15 jours. Sud des Landes.","nav":"jeux"}-->
+<section class="page-hero" aria-labelledby="titre-page">
+  {{decor:d}}
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Accueil</a> › Nos jeux</p>
+    <p class="eyebrow">La ludothèque</p>
+    <h1 id="titre-page">Nos <span class="brush">jeux</span></h1>
+    <p class="lead">Près de 500 jeux, renouvelés chaque année, et plus de 40 grands jeux en bois pour toutes vos animations.</p>
+  </div>
+</section>
+{{wave:var(--sky)|bottom}}
+
+<section class="section-sm" aria-labelledby="titre-chantier">
+  <div class="container">
+    <div class="construction reveal">
+      <div class="construction-inner">
+        <div class="pawn-stack" aria-hidden="true">
+          <div class="stk">{{pieceart:die:#F08A1E}}</div>
+          <div class="stk">{{pieceart:die:#1479B8}}</div>
+          <div class="stk">{{pieceart:die:#8FB43A}}</div>
+        </div>
+        <div>
+          <p class="eyebrow">Chantier ludique en cours</p>
+          <h2 id="titre-chantier" style="font-size:clamp(1.6rem,3.4vw,2.3rem)">Inventaire en <span class="brush">construction</span></h2>
+          <p>Nos bénévoles comptent, trient et photographient les jeux un par un. Le catalogue complet arrive bientôt ici ! En attendant, venez les découvrir lors d'une permanence ou demandez-nous conseil.</p>
+          <p class="progress-dots" aria-hidden="true"><span></span><span></span><span></span></p>
+          <div class="btn-row"><a class="btn" href="pret-location.html#grands-jeux">{{icon:hammer}}Voir les {{nb-jeux}} grands jeux en bois</a><a class="btn btn--ghost" href="contact.html?sujet=location">Demander un jeu</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="titre-usages">
+  {{decor:c}}
+  <div class="container">
+    <div class="section-head center"><p class="eyebrow">Comment en profiter ?</p><h2 id="titre-usages">Jouer ou <span class="brush">louer</span></h2></div>
+    <div class="grid grid-2" data-stagger style="max-width:900px;margin-inline:auto">
+      <article class="card price reveal tilt-l card-hover" style="--c:var(--turq)"><span class="icon-bubble">{{icon:dice}}</span><h3>Jouer sur place</h3><p class="amount text">Gratuit pour les 3 premiers RDV</p><p>Lors des permanences du samedi, venez essayer les jeux sur place, seul, en famille ou entre amis.</p><a class="btn btn--turq btn--sm" href="permanences.html">Les permanences</a></article>
+      <article class="card price reveal tilt-r card-hover" style="--c:var(--sun)"><span class="icon-bubble" style="--bubble:var(--sun-soft);--bubble-fg:#b8620a">{{icon:suitcase}}</span><h3>Louer</h3><p class="amount text">De 2 € à 10 €</p><p>pour une malle de jeux pour 15 jours. Malles à thème et grands jeux en bois pour les structures et les manifestations.</p><a class="btn btn--sun btn--sm" href="pret-location.html">Prêt et location</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-creamblue" aria-labelledby="titre-univers">
+  {{wave:var(--cream-blue)}}
+  <div class="container">
+    <div class="section-head center"><p class="eyebrow">Bientôt dans l'inventaire</p><h2 id="titre-univers">Nos jeux <span class="brush">par univers</span></h2></div>
+    <ul class="pill-list" style="justify-content:center" data-stagger>
+      <li class="reveal-pop">Jeux d'ambiance</li><li class="reveal-pop">Jeux de stratégie</li><li class="reveal-pop">Jeux pour les tout-petits</li><li class="reveal-pop">Grands jeux en bois</li><li class="reveal-pop">Jeux coopératifs</li><li class="reveal-pop">Malles à thème</li><li class="reveal-pop">Jeux du monde</li><li class="reveal-pop">Jeux d'assemblage</li>
+    </ul>
+  </div>
+</section>
+{{wave:var(--cream-blue)|bottom}}
+
+<section class="section" aria-labelledby="titre-bois">
+  <div class="container split">
+    <div class="reveal">
+      <p class="eyebrow">Fait maison</p>
+      <h2 id="titre-bois">Nos créations <span class="brush">en bois</span></h2>
+      <p>L'association crée, entretient et répare ses propres jeux en bois : plus de 40 grands jeux qui voyagent d'une fête de village à une cour d'école, et qui se jouent debout, à plusieurs, sans notice compliquée.</p>
+      <p>Et parce que fabriquer, c'est aussi jouer, nous proposons des ateliers de construction de jeux en bois avec les publics.</p>
+      <div class="btn-row"><a class="btn" href="pret-location.html#grands-jeux">Découvrir les grands jeux {{icon:arrow}}</a><a class="btn btn--ghost" href="agenda.html">Les prochains ateliers</a></div>
+    </div>
+    <div class="card reveal tilt-r" style="padding:2rem;text-align:center">
+      <h3 style="margin-top:0">Un jeu vous intéresse ?</h3>
+      <p>Réservez-le par téléphone ou par mail, nous le mettons de côté.</p>
+      <div class="btn-row" style="justify-content:center"><a class="btn btn--coral" href="tel:+33677797727">{{icon:phone}}06 77 79 77 27</a><a class="btn btn--ghost" href="mailto:grainesde@hotmail.fr">{{icon:mail}}grainesde@hotmail.fr</a></div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+{
+  "_aide": "Affiches programme affichées en vignettes (Agenda, Permanences).",
+  "affiches": [
+    {
+      "image": "images/affiche-programme-dec-2026-fev-2027.png",
+      "vignette": "images/vignettes/affiche-programme-dec-2026-fev-2027.webp",
+      "titre": "Programme décembre 2026, janvier et février 2027"
+    },
+    {
+      "image": "images/affiche-programme-sept-dec-2026.png",
+      "vignette": "images/vignettes/affiche-programme-sept-dec-2026.webp",
+      "titre": "Programme octobre à décembre 2026"
+    }
+  ]
+}

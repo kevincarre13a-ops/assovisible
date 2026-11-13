@@ -1,0 +1,76 @@
+<!--META {"title":"Devenir ambassadeur : faites voyager les jeux","description":"Vous voyagez ou avez un contact à l'étranger, en outre-mer ou en France ? Devenez ambassadeur de Graines de Cabane et faites voyager des jeux reconditionnés. Déjà 15 pays et 25 ambassadeurs.","nav":""}-->
+<section class="page-hero page-hero--navy" aria-labelledby="titre-page">
+  {{decor:w}}
+  <div class="container split">
+    <div>
+      <p class="breadcrumb"><a href="index.html">Accueil</a> › Devenir ambassadeur</p>
+      <p class="eyebrow" style="color:var(--lime)">Vous voyagez ?</p>
+      <h1 id="titre-page">Devenez <span class="brush">ambassadeurs</span> !</h1>
+      <p class="lead">Un jeu dans vos bagages, un contact, une idée… Et si l'aventure commençait avec vous ?</p>
+      <div class="btn-row" style="margin-top:1.4rem"><a class="btn btn--coral" href="#formulaire">{{icon:plane}}Je deviens ambassadeur</a><a class="btn btn--ghost-white" href="images/affiche-ambassadeur.pdf" download>{{icon:download}}Télécharger l'affiche (PDF)</a></div>
+    </div>
+    <a class="poster poster-large reveal" href="images/affiche-ambassadeur.png" data-lightbox="affiche-amb" data-caption="Devenez ambassadeurs !" data-pdf="images/affiche-ambassadeur.pdf" style="max-width:360px"><img src="images/vignettes/affiche-ambassadeur.webp" alt="Affiche « Vos jeux déjà dans le monde ! Devenez ambassadeurs ! » avec la carte des 15 pays" width="520" height="736"><span>Cliquez pour agrandir l'affiche</span></a>
+  </div>
+</section>
+{{wave:var(--navy)|bottom}}
+
+<section class="section" aria-labelledby="titre-facons">
+  {{decor:d}}
+  <div class="container">
+    <div class="section-head center"><p class="eyebrow">Chacun peut agir</p><h2 id="titre-facons">5 façons de <span class="brush">participer</span></h2></div>
+    <div class="grid grid-5" data-stagger>
+      <article class="card num-card reveal tilt-l card-hover"><span class="step-num" style="--c:var(--coral)">1</span><span class="icon-bubble" style="--bubble:#FBE3E1;--bubble-fg:var(--coral);margin-top:.6rem">{{icon:suitcase}}</span><h3>Emportez des jeux</h3><p class="muted">En voyage, faites une place dans vos bagages pour des jeux à offrir.</p></article>
+      <article class="card num-card reveal tilt-r card-hover"><span class="step-num" style="--c:var(--turq)">2</span><span class="icon-bubble" style="margin-top:.6rem">{{icon:share}}</span><h3>Créez des liens</h3><p class="muted">Mettez-nous en relation avec une structure, en France, en outre-mer ou à l'étranger.</p></article>
+      <article class="card num-card reveal tilt-l card-hover"><span class="step-num" style="--c:var(--lime-deep)">3</span><span class="icon-bubble" style="--bubble:var(--lime-soft);--bubble-fg:var(--lime-deep);margin-top:.6rem">{{icon:box}}</span><h3>Développez la collecte</h3><p class="muted">Devenez point de collecte ou aidez-nous à en créer dans les Landes.</p></article>
+      <article class="card num-card reveal tilt-r card-hover"><span class="step-num" style="--c:var(--sun)">4</span><span class="icon-bubble" style="--bubble:var(--sun-soft);--bubble-fg:#b8620a;margin-top:.6rem">{{icon:bulb}}</span><h3>Partagez vos idées</h3><p class="muted">Une piste, un contact, une envie ? Faites-en profiter l'association !</p></article>
+      <article class="card num-card reveal tilt-l card-hover"><span class="step-num" style="--c:var(--navy)">5</span><span class="icon-bubble" style="--bubble:var(--sky);--bubble-fg:var(--navy);margin-top:.6rem">{{icon:sparkles}}</span><h3>Imaginez la suite</h3><p class="muted">Des gestes les plus simples aux projets les plus fous, toutes les idées sont bienvenues !</p></article>
+    </div>
+    <p class="center highlight reveal" style="margin-top:2.4rem;max-width:50rem;margin-inline:auto">Seul, en famille, entre amis, avec votre classe, votre accueil de loisirs, votre équipe, votre association ou votre CSE… chacun peut agir !</p>
+  </div>
+</section>
+
+<section class="section bg-sky" aria-labelledby="titre-carte">
+  {{wave:var(--sky)}}
+  <div class="container">
+    <div class="section-head center"><p class="eyebrow">Déjà 15 pays</p><h2 id="titre-carte">Vos jeux déjà <span class="brush">dans le monde</span> !</h2><p class="lead">Pour de nouvelles parties et de belles rencontres.</p></div>
+    {{world-map:data-autoplay}}
+  </div>
+</section>
+{{wave:var(--sky)|bottom}}
+
+<section class="section anchor-offset" id="formulaire" aria-labelledby="titre-form">
+  <div class="container split" style="align-items:start">
+    <div class="reveal">
+      <p class="eyebrow">Rejoindre l'aventure</p>
+      <h2 id="titre-form">Faisons voyager <span class="brush">les jeux</span> ensemble</h2>
+      <p>Dites-nous où vous partez, quand, et quelle place vous avez dans vos bagages. Ou parlez-nous du contact, de l'école ou de l'association que vous aimeriez relier à Graines de Cabane. Nous revenons vers vous pour préparer les jeux.</p>
+      <ul class="contact-list">
+        <li><span class="icon-bubble">{{icon:phone}}</span><div><strong>Par téléphone</strong><a href="tel:+33677797727">06 77 79 77 27</a></div></li>
+        <li><span class="icon-bubble" style="--bubble:#FBE3E1;--bubble-fg:var(--coral)">{{icon:mail}}</span><div><strong>Par e-mail</strong><a href="mailto:grainesde@hotmail.fr">grainesde@hotmail.fr</a></div></li>
+      </ul>
+    </div>
+    <div class="card form-card reveal">
+      <h2 style="font-size:1.7rem">Devenir ambassadeur</h2>
+      <form name="ambassadeur" method="POST" action="/merci.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="ambassadeur">
+        {{honeypot}}
+        <div class="form-grid">
+          <div class="field"><label for="amb-nom">Nom et prénom *</label><input id="amb-nom" type="text" name="nom" autocomplete="name" required></div>
+          <div class="field"><label for="amb-tel">Téléphone</label><input id="amb-tel" type="tel" name="telephone" autocomplete="tel"></div>
+          <div class="field full"><label for="amb-mail">E-mail *</label><input id="amb-mail" type="email" name="email" autocomplete="email" required></div>
+          <fieldset class="field full"><legend>Comment souhaitez-vous participer ?</legend><div class="choices">
+            <label class="choice"><input type="checkbox" name="emporter_des_jeux" value="Oui"><span>Emporter des jeux</span></label>
+            <label class="choice"><input type="checkbox" name="creer_des_liens" value="Oui"><span>Créer des liens</span></label>
+            <label class="choice"><input type="checkbox" name="developper_la_collecte" value="Oui"><span>Développer la collecte</span></label>
+            <label class="choice"><input type="checkbox" name="partager_une_idee" value="Oui"><span>Partager une idée</span></label>
+          </div></fieldset>
+          <div class="field"><label for="amb-dest">Destination ou pays</label><input id="amb-dest" type="text" name="destination"></div>
+          <div class="field"><label for="amb-dates">Dates du voyage</label><input id="amb-dates" type="text" name="dates_voyage"></div>
+          <div class="field full"><label for="amb-msg">Votre message *</label><textarea id="amb-msg" name="message" required placeholder="Place disponible dans vos bagages, structure à contacter, idée…"></textarea></div>
+        </div>
+        <p class="form-note">Vos données servent uniquement à traiter votre demande. <a href="confidentialite.html">En savoir plus</a>.</p>
+        <button class="btn btn--coral" type="submit">{{icon:plane}}Envoyer</button>
+      </form>
+    </div>
+  </div>
+</section>

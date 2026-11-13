@@ -1,0 +1,59 @@
+<!--META {"title":"Agenda : permanences et rendez-vous ludiques à Saint-Vincent-de-Tyrosse","description":"Calendrier des permanences ludiques un samedi sur deux salle Tourren, temps forts, ateliers et défi 300 kg de jeux de Graines de Cabane à Saint-Vincent-de-Tyrosse.","nav":"agenda","priority":"0.9"}-->
+<section class="page-hero" aria-labelledby="titre-page">
+  {{decor:a}}
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Accueil</a> › Agenda</p>
+    <p class="eyebrow">Tous nos rendez-vous</p>
+    <h1 id="titre-page">L'<span class="brush">agenda</span></h1>
+    <p class="lead">Nos permanences régulières, 1 samedi sur 2 de 9h30 à 12h30 salle Tourren, et tous nos rendez-vous ludiques.</p>
+    <div class="btn-row" style="margin-top:1.4rem" data-next-wrap><a class="btn btn--coral" href="#prochain-rendez-vous">{{icon:calendar}}Prochain RDV : <span data-next-rdv>voir ci-dessous</span></a><a class="btn btn--ghost" href="permanences.html">Les permanences</a></div>
+  </div>
+</section>
+{{wave:var(--sky)|bottom}}
+
+<section class="section" aria-labelledby="titre-cal">
+  <div class="container agenda-layout">
+    <div>
+      <h2 id="titre-cal" class="visually-hidden">Calendrier</h2>
+      <div class="card calendar reveal" data-calendar style="position:sticky;top:calc(var(--header-h) + 1rem)">
+        <div class="cal-head"><button class="cal-nav" type="button" data-cal-prev aria-label="Mois précédent">{{icon:left}}</button><h3 data-cal-title aria-live="polite">Calendrier</h3><button class="cal-nav" type="button" data-cal-next aria-label="Mois suivant">{{icon:right}}</button></div>
+        <div class="cal-grid" data-cal-grid></div>
+        <div class="cal-legend"><span class="ev-permanence"><i></i>Permanence</span><span class="ev-evenement"><i></i>Temps fort</span><span class="ev-atelier"><i></i>Atelier</span><span class="ev-defi"><i></i>Défi collecte</span></div>
+        <div class="cal-detail" data-cal-detail aria-live="polite"></div>
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow">À venir</p>
+      <h2 style="font-size:clamp(1.6rem,3vw,2.2rem)">Les prochains <span class="brush">rendez-vous</span></h2>
+      <span id="prochain-rendez-vous" class="anchor-offset" style="display:block"></span>
+      <div data-agenda-list><noscript><p>Activez JavaScript pour afficher l'agenda, ou consultez les affiches ci-dessous.</p></noscript><p>Chargement des dates…</p></div>
+      <details class="archives card" style="padding:1.2rem">
+        <summary>Rendez-vous passés (<span data-archives-count>0</span>)</summary>
+        <div data-agenda-archives style="margin-top:1rem"></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-sky" aria-labelledby="titre-programme">
+  {{wave:var(--sky)}}
+  <div class="container">
+    <div class="section-head center"><p class="eyebrow">Au programme des permanences</p><h2 id="titre-programme">Chaque samedi, <span class="brush">un focus</span></h2><p class="lead">Chaque samedi, un focus est proposé aux côtés des jeux en libre-service.</p></div>
+    <div class="grid grid-3" data-stagger>
+      <div class="card reveal tilt-l card-hover"><span class="icon-bubble">{{icon:dice}}</span><h3>Jouer sur place</h3><p class="muted">Des jeux pour tous et des univers dédiés aux plus petits. Gratuit pour les 3 premiers RDV.</p></div>
+      <div class="card reveal tilt-r card-hover"><span class="icon-bubble" style="--bubble:var(--sun-soft);--bubble-fg:#b8620a">{{icon:suitcase}}</span><h3>Louer des jeux</h3><p class="muted">Des locations pour tous : jeux en bois, malles à thème, univers…</p></div>
+      <div class="card reveal tilt-l card-hover"><span class="icon-bubble" style="--bubble:#FBE3E1;--bubble-fg:var(--coral)">{{icon:cup}}</span><h3>Cafés ludiques</h3><p class="muted">Pourquoi jouer aide les enfants à grandir, peut-on jouer à tout avec tout le monde, quel jeu pour développer quelle compétence…</p></div>
+      <div class="card reveal tilt-r card-hover"><span class="icon-bubble" style="--bubble:var(--lime-soft);--bubble-fg:var(--lime-deep)">{{icon:gift}}</span><h3>La tombola</h3><p class="muted">« Le carton GDC du mois » : 5 jeux surprises reconditionnés à gagner. Et des rencontres et des rendez-vous surprises toute l'année.</p></div>
+      <div class="card reveal tilt-l card-hover"><span class="icon-bubble">{{icon:heart}}</span><h3>Ventes solidaires</h3><p class="muted">Des ventes de jeux solidaires, des dépôts-ventes, des gratiferias ludiques.</p></div>
+      <div class="card reveal tilt-r card-hover"><span class="icon-bubble" style="--bubble:var(--lime-soft);--bubble-fg:var(--lime-deep)">{{icon:recycle}}</span><h3>Dépôt de jeux</h3><p class="muted">Apportez vos jeux, même incomplets. Prévenez-nous pour assurer votre accueil !</p></div>
+    </div>
+  </div>
+</section>
+{{wave:var(--sky)|bottom}}
+
+<section class="section" aria-labelledby="titre-affiches">
+  <div class="container">
+    <div class="section-head center"><p class="eyebrow">À télécharger et afficher</p><h2 id="titre-affiches">Les affiches <span class="brush">programme</span></h2><p class="lead">Cliquez sur une affiche pour l'agrandir. Le programme est aussi relayé sur notre <a href="https://www.facebook.com/p/Graines-De-Cabane-100087526808549/" target="_blank" rel="noopener">page Facebook</a>.</p></div>
+    <div class="posters" data-affiches style="max-width:760px;margin-inline:auto"></div>
+  </div>
+</section>

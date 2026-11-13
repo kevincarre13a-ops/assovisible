@@ -1,0 +1,81 @@
+<!--META {"title":"Devenez point de récolte de jeux, même incomplets","description":"Commerces, associations, entreprises, collectivités, écoles : accueillez une caisse de récolte Graines de Cabane. Nous fournissons l'affiche et la caisse, puis récupérons les jeux pour leur offrir une seconde vie.","nav":""}-->
+<section class="page-hero page-hero--sun" aria-labelledby="titre-page">
+  {{decor:c}}
+  <div class="container split">
+    <div>
+      <p class="breadcrumb"><a href="index.html">Accueil</a> › <a href="seconde-vie.html">Seconde vie des jeux</a> › Point de récolte</p>
+      <p class="eyebrow" style="color:#b8620a">Une nouvelle aventure solidaire</p>
+      <h1 id="titre-page">Devenez <span class="brush">point de récolte</span> !</h1>
+      <p class="lead">De jeux, même incomplets ! Un petit espace chez vous, une grande aventure pour les jeux !</p>
+      <div class="btn-row" style="margin-top:1.4rem"><a class="btn btn--sun" href="#formulaire">{{icon:store}}Je deviens point de récolte</a><a class="btn btn--ghost" href="seconde-vie.html#points-de-collecte">Voir les lieux actuels</a></div>
+    </div>
+    <a class="poster poster-large reveal" href="images/affiche-point-de-recolte.png" data-lightbox="affiche-pdr" data-caption="Devenez point de récolte !" style="max-width:360px"><img src="images/vignettes/affiche-point-de-recolte.webp" alt="Affiche « Devenez point de récolte ! De jeux, même incomplets »" width="520" height="736"><span>Cliquez pour agrandir l'affiche</span></a>
+  </div>
+</section>
+{{wave:var(--sun-soft)|bottom}}
+
+<section class="section" aria-labelledby="titre-maillon">
+  <div class="container-narrow center">
+    <p class="eyebrow" style="justify-content:center;display:flex">Un maillon de la chaîne</p>
+    <h2 id="titre-maillon">Rejoignez notre <span class="brush">réseau de collecte</span></h2>
+    <p class="highlight reveal">Un commerce, une entreprise, une association, une école ou une structure accueillant du public peut devenir un maillon de notre chaîne de solidarité.</p>
+    <p class="reveal">En accueillant un point de récolte, vous permettez à chacun de donner facilement les jeux dont il n'a plus l'usage. Nous venons collecter les dons pour les trier, les reconditionner et les redistribuer en France et à l'international.</p>
+    <h3 style="margin-top:2rem">Pour qui ?</h3>
+    <ul class="pill-list" style="justify-content:center" data-stagger>
+      <li class="reveal-pop">Commerces</li><li class="reveal-pop">Associations</li><li class="reveal-pop">Entreprises</li><li class="reveal-pop">Collectivités</li><li class="reveal-pop">Écoles</li><li class="reveal-pop">Collèges</li><li class="reveal-pop">Lycées</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section bg-sun" aria-labelledby="titre-etapes">
+  {{wave:var(--sun-soft)}}
+  {{decor:b}}
+  <div class="container">
+    <div class="section-head center"><p class="eyebrow" style="color:#b8620a">Simple comme bonjour</p><h2 id="titre-etapes">En 3 <span class="brush">étapes</span></h2></div>
+    <div class="grid grid-3" data-stagger>
+      <article class="card num-card reveal tilt-l card-hover"><span class="step-num" style="--c:var(--coral)">1</span><span class="icon-bubble" style="--bubble:#FBE3E1;--bubble-fg:var(--coral);margin-top:.6rem">{{icon:box}}</span><h3>Nous vous équipons</h3><p class="muted">Graines de Cabane vous fournit une affiche et une caisse de récolte.</p></article>
+      <article class="card num-card reveal tilt-r card-hover"><span class="step-num" style="--c:var(--navy)">2</span><span class="icon-bubble" style="margin-top:.6rem">{{icon:puzzle}}</span><h3>Vous accueillez les dons</h3><p class="muted">Installez la caisse et invitez votre public à déposer ses jeux, même incomplets.</p></article>
+      <article class="card num-card reveal tilt-l card-hover"><span class="step-num" style="--c:var(--lime-deep)">3</span><span class="icon-bubble" style="--bubble:var(--lime-soft);--bubble-fg:var(--lime-deep);margin-top:.6rem">{{icon:calendar}}</span><h3>Nous organisons la suite ensemble</h3><p class="muted">Nous convenons avec vous de la récupération des jeux au fur et à mesure.</p></article>
+    </div>
+    <div class="card reveal" style="margin-top:2.2rem;padding:1.6rem">
+      <h3 style="margin-top:0">Et après ?</h3>
+      <ul class="pill-list">
+        <li><a href="seconde-vie.html">Tri et reconditionnement</a></li><li>Malles à thème</li><li><a href="ambassadeur.html">Dons dans le monde</a></li><li>Ventes solidaires</li><li>Ressourcerie de pièces</li>
+      </ul>
+    </div>
+  </div>
+</section>
+{{wave:var(--sun-soft)|bottom}}
+
+<section class="section" aria-labelledby="titre-actuels">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow">Ils ont déjà dit oui</p><h2 id="titre-actuels">Les lieux de récolte <span class="brush">actuels</span></h2></div>
+    {{lieux-list}}
+  </div>
+</section>
+
+<section class="section bg-creamblue anchor-offset" id="formulaire" aria-labelledby="titre-form">
+  {{wave:var(--cream-blue)}}
+  <div class="container-narrow">
+    <div class="card form-card reveal">
+      <h2 id="titre-form" style="font-size:1.8rem">Devenir point de récolte</h2>
+      <p class="form-note">Prêt à rejoindre l'aventure ? Laissez-nous vos coordonnées, nous vous recontactons pour vous équiper.</p>
+      <form name="point-de-recolte" method="POST" action="/merci.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="point-de-recolte">
+        {{honeypot}}
+        <div class="form-grid">
+          <div class="field"><label for="pdr-structure">Nom de la structure *</label><input id="pdr-structure" type="text" name="structure" required></div>
+          <div class="field"><label for="pdr-type">Type de structure</label><select id="pdr-type" name="type_structure"><option value="">Choisir…</option><option>Commerce</option><option>Association</option><option>Entreprise</option><option>Collectivité</option><option>École</option><option>Collège</option><option>Lycée</option><option>Autre</option></select></div>
+          <div class="field"><label for="pdr-nom">Personne à contacter *</label><input id="pdr-nom" type="text" name="nom" autocomplete="name" required></div>
+          <div class="field"><label for="pdr-tel">Téléphone</label><input id="pdr-tel" type="tel" name="telephone" autocomplete="tel"></div>
+          <div class="field full"><label for="pdr-mail">E-mail *</label><input id="pdr-mail" type="email" name="email" autocomplete="email" required></div>
+          <div class="field full"><label for="pdr-adr">Adresse du lieu *</label><input id="pdr-adr" type="text" name="adresse" autocomplete="street-address" required></div>
+          <div class="field full"><label for="pdr-msg">Message</label><textarea id="pdr-msg" name="message" placeholder="Horaires d'ouverture, public accueilli, espace disponible…"></textarea></div>
+        </div>
+        <p class="form-note">Vos données servent uniquement à traiter votre demande. <a href="confidentialite.html">En savoir plus</a>.</p>
+        <button class="btn btn--sun" type="submit">{{icon:store}}Rejoindre le réseau</button>
+      </form>
+    </div>
+  </div>
+</section>
+{{wave:var(--cream-blue)|bottom}}

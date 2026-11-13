@@ -1,0 +1,131 @@
+{
+  "_aide": "Agenda. Une ligne par rendez-vous. date au format AAAA-MM-JJ ; 'fin' pour un événement sur plusieurs jours ; type parmi permanence, evenement, defi, atelier. Si 'lieu' ou 'horaires' sont absents, les valeurs par défaut ci-dessous s'appliquent.",
+  "lieuParDefaut": "Salle Tourren, 2 rue du Grand Tourren, Saint-Vincent-de-Tyrosse",
+  "horairesParDefaut": "9h30 à 12h30",
+  "evenements": [
+    {
+      "date": "2026-09-05",
+      "titre": "Journée des associations",
+      "type": "evenement",
+      "lieu": "Saint-Vincent-de-Tyrosse",
+      "horaires": "",
+      "description": "Venez nous rencontrer : le programme du 1er trimestre y est dévoilé."
+    },
+    {
+      "date": "2026-09-12",
+      "titre": "Première permanence de la saison",
+      "type": "permanence",
+      "description": "Ouverture de la salle Tourren : jeux sur place, prêts, locations et café ludique."
+    },
+    {
+      "date": "2026-10-10",
+      "titre": "Deviens un enquêteur hors pair !",
+      "type": "permanence"
+    },
+    {
+      "date": "2026-10-24",
+      "titre": "Ça roule !",
+      "type": "permanence"
+    },
+    {
+      "date": "2026-10-31",
+      "titre": "Quand l'art et les artistes nous font rêver… !",
+      "type": "permanence"
+    },
+    {
+      "date": "2026-11-14",
+      "titre": "Concours, défis et tombola : des cartons de jeux à gagner ;)",
+      "type": "permanence"
+    },
+    {
+      "date": "2026-11-20",
+      "titre": "Lancement du défi « 300 kg de jeux récupérés ! »",
+      "type": "defi",
+      "lieu": "Points de récolte à Tyrosse et dans les Landes",
+      "horaires": "",
+      "description": "Lancement du 1er défi de récolte de jeux dans les Landes."
+    },
+    {
+      "date": "2026-11-28",
+      "titre": "Vente de jeux solidaires pour préparer Noël",
+      "type": "permanence",
+      "horaires": "9h30 à 18h",
+      "description": "Ouverture exceptionnelle de 9h30 à 18h."
+    },
+    {
+      "date": "2026-12-05",
+      "titre": "Grands jeux en bois + tombola de jeux et livres-jeux de Noël",
+      "type": "permanence"
+    },
+    {
+      "date": "2026-12-12",
+      "titre": "Rallye escape game « Valeurs de la République et laïcité »",
+      "type": "permanence",
+      "description": "Avec la ville de Tyrosse."
+    },
+    {
+      "date": "2026-12-19",
+      "titre": "Permanence ludique",
+      "type": "permanence"
+    },
+    {
+      "date": "2027-01-04",
+      "titre": "Défi : 300 kg de jeux récupérés !",
+      "fin": "2027-01-31",
+      "type": "defi",
+      "lieu": "Points de récolte à Tyrosse et dans les Landes",
+      "horaires": "",
+      "description": "Déposez vos jeux, même incomplets, dans les points de récolte participants à Tyrosse et dans les Landes."
+    },
+    {
+      "date": "2027-01-09",
+      "titre": "Des jeux pour bâtir, construire, faire et défaire",
+      "type": "permanence"
+    },
+    {
+      "date": "2027-01-23",
+      "titre": "Des jeux d'adresse pour jouer en famille",
+      "type": "permanence"
+    },
+    {
+      "date": "2027-02-06",
+      "titre": "Des jeux du monde sur le monde",
+      "type": "permanence"
+    },
+    {
+      "date": "2027-02-20",
+      "titre": "Atelier de construction de jeux en bois",
+      "type": "atelier",
+      "description": "Dès 6 ans. 5 € adhérents, 10 € non-adhérents. Inscription au 06 77 79 77 27."
+    },
+    {
+      "date": "2027-02-27",
+      "titre": "Journée jeux, bilan du défi 300 kg et lancement du 1er semi-marathon des jeux de Tyrosse !",
+      "type": "evenement"
+    },
+    {
+      "date": "2027-03-06",
+      "titre": "Permanence ludique",
+      "type": "permanence",
+      "description": "Thème à venir."
+    },
+    {
+      "date": "2027-03-20",
+      "titre": "Permanence ludique",
+      "type": "permanence",
+      "description": "Thème à venir."
+    },
+    {
+      "date": "2027-04-03",
+      "titre": "Permanence ludique",
+      "type": "permanence",
+      "description": "Thème à venir."
+    },
+    {
+      "date": "2027-04-17",
+      "titre": "Permanence ludique",
+      "type": "permanence",
+      "description": "Thème à venir."
+    }
+  ]
+}

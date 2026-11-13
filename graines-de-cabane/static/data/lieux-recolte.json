@@ -1,0 +1,51 @@
+{
+  "_aide": "Lieux de récolte des jeux. lat/lng = position du repère sur la carte (centre de la commune si l'adresse précise n'est pas connue).",
+  "communes": [
+    {
+      "commune": "Saint-Vincent-de-Tyrosse",
+      "lat": 43.6603,
+      "lng": -1.3058,
+      "lieux": [
+        "Pôle SEVA",
+        "Bibliothèque",
+        "Cinéma – Mairie",
+        "Pôle enfance jeunesse",
+        "Accueil de loisirs",
+        "Pôle Sud",
+        "CCAS"
+      ]
+    },
+    {
+      "commune": "Castets",
+      "lat": 43.8817,
+      "lng": -1.1447,
+      "lieux": [
+        "Médiathèque – Ludothèque"
+      ]
+    },
+    {
+      "commune": "Magescq",
+      "lat": 43.7811,
+      "lng": -1.2181,
+      "lieux": [
+        "12 bis rue Brémontier, en face des Arènes"
+      ]
+    },
+    {
+      "commune": "Soustons",
+      "lat": 43.7531,
+      "lng": -1.3289,
+      "lieux": [
+        "Entreprise de mobilier et espace de coworking KoH"
+      ]
+    },
+    {
+      "commune": "Peyrehorade",
+      "lat": 43.5486,
+      "lng": -1.1036,
+      "lieux": [
+        "ALSH"
+      ]
+    }
+  ]
+}

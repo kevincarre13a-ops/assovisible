@@ -1,0 +1,26 @@
+<!--META {"title":"Galerie photos : permanences, animations, grands jeux en bois","description":"Les permanences, animations, grands jeux en bois, collectes et voyages de Graines de Cabane en images, dans les Landes et dans le monde.","nav":"galerie","priority":"0.6"}-->
+<section class="page-hero" aria-labelledby="titre-page">
+  {{decor:a}}
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Accueil</a> › Galerie</p>
+    <p class="eyebrow">En images</p>
+    <h1 id="titre-page">La <span class="brush">galerie</span></h1>
+    <p class="lead">Un aperçu de nos permanences, de nos animations, de nos grands jeux en bois, de nos collectes et de nos jeux partis dans le monde.</p>
+  </div>
+</section>
+{{wave:var(--sky)|bottom}}
+
+<section class="section" aria-label="Photos">
+  <div class="container">
+    <div class="filters" role="group" aria-label="Filtrer les photos">
+      <button class="filter" type="button" data-filter="tout" aria-pressed="true">Tout</button>
+      <button class="filter" type="button" data-filter="permanences" aria-pressed="false">Permanences</button>
+      <button class="filter" type="button" data-filter="animations" aria-pressed="false">Animations</button>
+      <button class="filter" type="button" data-filter="grands-jeux" aria-pressed="false">Grands jeux en bois</button>
+      <button class="filter" type="button" data-filter="collecte" aria-pressed="false">Collecte</button>
+      <button class="filter" type="button" data-filter="monde" aria-pressed="false">Dans le monde</button>
+    </div>
+    <div class="masonry" data-galerie aria-live="polite"><p class="center">Chargement de la galerie…</p></div>
+    <p class="center muted" style="margin-top:2rem">Vous avez des photos d'un rendez-vous Graines de Cabane ? <a href="contact.html?sujet=autre">Partagez-les avec nous</a>.</p>
+  </div>
+</section>

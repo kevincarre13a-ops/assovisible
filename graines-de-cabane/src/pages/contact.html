@@ -1,0 +1,70 @@
+<!--META {"title":"Contact et devis : Graines de Cabane, Saint-Vincent-de-Tyrosse","description":"Contactez Graines de Cabane pour un devis d'animation, une location de jeux, une adhésion, un don de jeux, devenir point de récolte ou ambassadeur. 06 77 79 77 27, grainesde@hotmail.fr.","nav":"contact","priority":"0.8"}-->
+<section class="page-hero" aria-labelledby="titre-page">
+  {{decor:b}}
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Accueil</a> › Contact</p>
+    <p class="eyebrow">Écrivez-nous</p>
+    <h1 id="titre-page">Nous <span class="brush">contacter</span></h1>
+    <p class="lead">Une question, un projet d'animation, une envie de jouer, des jeux à donner ? Écrivez-nous, nous vous répondons avec plaisir.</p>
+  </div>
+</section>
+{{wave:var(--sky)|bottom}}
+
+<section class="section" aria-label="Formulaire et coordonnées">
+  <div class="container split" style="align-items:start">
+    <div class="card form-card reveal">
+      <h2 style="font-size:1.8rem">Envoyer un message</h2>
+      <p class="form-note">Les champs marqués d'un astérisque sont obligatoires.</p>
+      <form name="contact" method="POST" action="/merci.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        {{honeypot}}
+        <div class="form-grid">
+          <div class="field"><label for="c-nom">Nom *</label><input id="c-nom" type="text" name="nom" autocomplete="name" required></div>
+          <div class="field"><label for="c-tel">Téléphone <span class="opt">(facultatif)</span></label><input id="c-tel" type="tel" name="telephone" autocomplete="tel"></div>
+          <div class="field full"><label for="c-mail">E-mail *</label><input id="c-mail" type="email" name="email" autocomplete="email" required></div>
+          <div class="field full"><label for="c-sujet">Sujet *</label>
+            <select id="c-sujet" name="sujet" required>
+              <option value="">Choisissez un sujet</option>
+              <option value="devis">Devis animation</option>
+              <option value="location">Location de jeux</option>
+              <option value="adhesion">Adhésion</option>
+              <option value="don">Don de jeux</option>
+              <option value="point-de-recolte">Devenir point de récolte</option>
+              <option value="ambassadeur">Devenir ambassadeur</option>
+              <option value="benevolat">Bénévolat</option>
+              <option value="temoignage">Témoignage</option>
+              <option value="autre">Autre</option>
+            </select></div>
+          <div class="field full"><label for="c-msg">Message *</label><textarea id="c-msg" name="message" required></textarea></div>
+          <label class="choice full"><input type="checkbox" name="accord_publication_temoignage" value="Oui"><span>Si c'est un témoignage : j'accepte qu'il soit publié sur le site avec mon prénom</span></label>
+        </div>
+        <p class="form-note">Vos données servent uniquement à traiter votre demande. <a href="confidentialite.html">En savoir plus</a>.</p>
+        <button class="btn btn--coral" type="submit">{{icon:mail}}Envoyer le message</button>
+      </form>
+    </div>
+
+    <div class="reveal">
+      <h2 style="font-size:1.8rem">Nos coordonnées</h2>
+      <ul class="contact-list">
+        <li><span class="icon-bubble">{{icon:home}}</span><div><strong>Siège : Pôle SEVA</strong>21 place Plaisance, 40230 Saint-Vincent-de-Tyrosse</div></li>
+        <li><span class="icon-bubble" style="--bubble:var(--sun-soft);--bubble-fg:#b8620a">{{icon:dice}}</span><div><strong>Permanences</strong>1 samedi sur 2, de 9h30 à 12h30, salle Tourren, 2 rue du Grand Tourren, Saint-Vincent-de-Tyrosse (à côté de Canopé et de la Croix-Rouge)</div></li>
+        <li><span class="icon-bubble" style="--bubble:#FBE3E1;--bubble-fg:var(--coral)">{{icon:phone}}</span><div><strong>Téléphones</strong><a href="tel:+33677797727">06 77 79 77 27</a> (principal)<br><a href="tel:+33650617677">06 50 61 76 77</a></div></li>
+        <li><span class="icon-bubble" style="--bubble:var(--lime-soft);--bubble-fg:var(--lime-deep)">{{icon:mail}}</span><div><strong>E-mail</strong><a href="mailto:grainesde@hotmail.fr">grainesde@hotmail.fr</a></div></li>
+        <li><span class="icon-bubble" style="--bubble:#E7EEFB;--bubble-fg:#1877F2">{{icon:facebook}}</span><div><strong>Facebook</strong><a href="https://www.facebook.com/p/Graines-De-Cabane-100087526808549/" target="_blank" rel="noopener">Graines de Cabane</a></div></li>
+        <li><span class="icon-bubble" style="--bubble:var(--sky);--bubble-fg:var(--navy)">{{icon:suitcase}}</span><div><strong>Retrait des jeux loués</strong>Soustons, route de Tosse</div></li>
+      </ul>
+      <div class="map-box" style="margin-top:1.6rem;height:320px" data-lieux-map="siege" role="region" aria-label="Carte : Saint-Vincent-de-Tyrosse"><p class="map-fallback">Carte en cours de chargement…</p></div>
+      <p class="small" style="margin-top:.6rem"><a href="https://www.google.com/maps/search/?api=1&amp;query=P%C3%B4le+SEVA+21+place+Plaisance+40230+Saint-Vincent-de-Tyrosse" target="_blank" rel="noopener">Itinéraire vers le Pôle SEVA</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=2+rue+du+Grand+Tourren+40230+Saint-Vincent-de-Tyrosse" target="_blank" rel="noopener">Itinéraire vers la salle Tourren</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-lime anchor-offset" id="points-de-collecte" aria-labelledby="titre-lieux">
+  {{wave:var(--lime-soft)}}
+  <div class="container">
+    <div class="section-head"><p class="eyebrow" style="color:var(--lime-deep)">Donner vos jeux</p><h2 id="titre-lieux">Les points de <span class="brush">collecte</span></h2><p class="lead">Des jeux, même incomplets, peuvent être déposés toute l'année dans ces lieux de récolte.</p></div>
+    {{lieux-list}}
+    <p style="margin-top:1.6rem"><a class="btn btn--lime" href="seconde-vie.html#points-de-collecte">{{icon:pin}}Voir la carte des lieux</a></p>
+  </div>
+</section>
+{{wave:var(--lime-soft)|bottom}}

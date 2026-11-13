@@ -1,0 +1,215 @@
+{
+  "_aide": "Liste des grands jeux en bois. Pour changer une photo, remplacez le fichier indiqué dans 'photo' (même nom).",
+  "jeux": [
+    {
+      "numero": 1,
+      "nom": "Passe-trappe",
+      "photo": "images/grands-jeux/01.jpg"
+    },
+    {
+      "numero": 2,
+      "nom": "Shuffle puck",
+      "photo": "images/grands-jeux/02.jpg"
+    },
+    {
+      "numero": 3,
+      "nom": "Corridor",
+      "photo": "images/grands-jeux/03.jpg"
+    },
+    {
+      "numero": 4,
+      "nom": "Jeu des bâtons",
+      "photo": "images/grands-jeux/04.jpg"
+    },
+    {
+      "numero": 5,
+      "nom": "Quixo",
+      "photo": "images/grands-jeux/05.jpg"
+    },
+    {
+      "numero": 6,
+      "nom": "Fermez la boîte",
+      "photo": "images/grands-jeux/06.jpg"
+    },
+    {
+      "numero": 7,
+      "nom": "Awalé",
+      "photo": "images/grands-jeux/07.jpg"
+    },
+    {
+      "numero": 8,
+      "nom": "Pousse boule",
+      "photo": "images/grands-jeux/08.jpg"
+    },
+    {
+      "numero": 9,
+      "nom": "Suspens",
+      "photo": "images/grands-jeux/09.jpg"
+    },
+    {
+      "numero": 10,
+      "nom": "Fakir",
+      "photo": "images/grands-jeux/10.jpg"
+    },
+    {
+      "numero": 11,
+      "nom": "Le plateau suisse",
+      "photo": "images/grands-jeux/11.jpg"
+    },
+    {
+      "numero": 12,
+      "nom": "Plock",
+      "photo": "images/grands-jeux/12.jpg"
+    },
+    {
+      "numero": 13,
+      "nom": "La tour de Fröbel",
+      "photo": "images/grands-jeux/13.jpg"
+    },
+    {
+      "numero": 14,
+      "nom": "Moripon dynamique",
+      "photo": "images/grands-jeux/14.jpg"
+    },
+    {
+      "numero": 15,
+      "nom": "Puissance 4",
+      "photo": "images/grands-jeux/15.jpg"
+    },
+    {
+      "numero": 16,
+      "nom": "Seega",
+      "photo": "images/grands-jeux/16.jpg"
+    },
+    {
+      "numero": 17,
+      "nom": "Menet",
+      "photo": "images/grands-jeux/17.jpg"
+    },
+    {
+      "numero": 18,
+      "nom": "Quarto",
+      "photo": "images/grands-jeux/18.jpg"
+    },
+    {
+      "numero": 19,
+      "nom": "Carambade",
+      "photo": "images/grands-jeux/19.jpg"
+    },
+    {
+      "numero": 20,
+      "nom": "Maxi plock",
+      "photo": "images/grands-jeux/20.jpg"
+    },
+    {
+      "numero": 21,
+      "nom": "Senet",
+      "photo": "images/grands-jeux/21.jpg"
+    },
+    {
+      "numero": 22,
+      "nom": "Rigoletta",
+      "photo": "images/grands-jeux/22.jpg"
+    },
+    {
+      "numero": 23,
+      "nom": "Ski d'herbe",
+      "photo": "images/grands-jeux/23.jpg"
+    },
+    {
+      "numero": 24,
+      "nom": "Les anneaux",
+      "photo": "images/grands-jeux/24.jpg"
+    },
+    {
+      "numero": 25,
+      "nom": "Barricade",
+      "photo": "images/grands-jeux/25.jpg"
+    },
+    {
+      "numero": 26,
+      "nom": "Billard bordelais",
+      "photo": "images/grands-jeux/26.jpg"
+    },
+    {
+      "numero": 27,
+      "nom": "Billard japonais",
+      "photo": "images/grands-jeux/27.jpg"
+    },
+    {
+      "numero": 28,
+      "nom": "Bamboleo",
+      "photo": "images/grands-jeux/28.jpg"
+    },
+    {
+      "numero": 29,
+      "nom": "Geister (ou jeu des fantômes)",
+      "photo": "images/grands-jeux/29.jpg"
+    },
+    {
+      "numero": 30,
+      "nom": "Fanfaronna",
+      "photo": "images/grands-jeux/30.jpg"
+    },
+    {
+      "numero": 31,
+      "nom": "Planche de surf",
+      "photo": "images/grands-jeux/31.jpg"
+    },
+    {
+      "numero": 32,
+      "nom": "Tir sur cible",
+      "photo": "images/grands-jeux/32.jpg"
+    },
+    {
+      "numero": 33,
+      "nom": "Birdy Wall",
+      "photo": "images/grands-jeux/33.jpg"
+    },
+    {
+      "numero": 34,
+      "nom": "La boîte à trous",
+      "photo": "images/grands-jeux/34.jpg"
+    },
+    {
+      "numero": 35,
+      "nom": "La tour infernale",
+      "photo": "images/grands-jeux/35.jpg"
+    },
+    {
+      "numero": 36,
+      "nom": "Viking Kubb",
+      "photo": "images/grands-jeux/36.jpg"
+    },
+    {
+      "numero": 37,
+      "nom": "La Vague",
+      "photo": "images/grands-jeux/37.jpg"
+    },
+    {
+      "numero": 38,
+      "nom": "Marrakech",
+      "photo": "images/grands-jeux/38.jpg"
+    },
+    {
+      "numero": 39,
+      "nom": "Yoté",
+      "photo": "images/grands-jeux/39.jpg"
+    },
+    {
+      "numero": 40,
+      "nom": "Royal d'Ur",
+      "photo": "images/grands-jeux/40.jpg"
+    },
+    {
+      "numero": 41,
+      "nom": "Carrom",
+      "photo": "images/grands-jeux/41.jpg"
+    },
+    {
+      "numero": 42,
+      "nom": "Cornhole",
+      "photo": "images/grands-jeux/42.jpg"
+    }
+  ]
+}

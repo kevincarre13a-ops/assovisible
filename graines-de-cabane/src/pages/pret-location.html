@@ -1,0 +1,63 @@
+<!--META {"title":"Prêt et location de grands jeux en bois dans les Landes","description":"Plus de 40 grands jeux en bois, malles de jeux et univers pour tout-petits à louer pour vos fêtes et manifestations. Retrait à Soustons, devis sur demande. Graines de Cabane, Landes.","nav":"jeux"}-->
+<section class="page-hero page-hero--sun" aria-labelledby="titre-page">
+  {{decor:c}}
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Accueil</a> › Prêt et location</p>
+    <p class="eyebrow">Pour vos fêtes et manifestations</p>
+    <h1 id="titre-page">Prêt et location de <span class="brush">jeux</span></h1>
+    <p class="lead">Prêt et location de jeux et de malles de jeux, de jeux en bois, et d'univers pour tout-petits. Tarifs adaptés aux manifestations !</p>
+    <div class="btn-row" style="margin-top:1.4rem"><a class="btn btn--sun" href="#demande">{{icon:suitcase}}Faire une demande</a><a class="btn btn--ghost" href="#grands-jeux">Voir les {{nb-jeux}} grands jeux</a></div>
+  </div>
+</section>
+{{wave:var(--sun-soft)|bottom}}
+
+<section class="section" id="grands-jeux" aria-labelledby="titre-jeux">
+  {{decor:d}}
+  <div class="container">
+    <div class="section-head center"><p class="eyebrow">Notre collection</p><h2 id="titre-jeux">Les grands <span class="brush">jeux</span></h2><p class="lead">{{nb-jeux}} grands jeux en bois pour jouer debout, à plusieurs, en intérieur comme en extérieur. Photos à venir pour chaque jeu.</p></div>
+    {{grands-jeux-grid}}
+  </div>
+</section>
+
+<section class="section bg-creamblue" aria-labelledby="titre-comment">
+  {{wave:var(--cream-blue)}}
+  <div class="container split" style="align-items:start">
+    <div class="reveal">
+      <p class="eyebrow">Mode d'emploi</p>
+      <h2 id="titre-comment">Comment louer <span class="brush">des jeux</span> ?</h2>
+      <div class="steps">
+        <div class="step"><span class="step-num" style="--c:var(--turq)">{{icon:mail}}</span><div><h3>Par mail</h3><p>Il vous est possible de nous contacter directement <a href="#demande">ici</a>. N'oubliez pas d'indiquer votre nom, un numéro de téléphone, votre adresse postale, la liste de jeux, et les dates de réservation souhaitées.</p></div></div>
+        <div class="step"><span class="step-num" style="--c:var(--coral)">{{icon:phone}}</span><div><h3>Par téléphone</h3><p>Il vous est possible de nous appeler ou de laisser un SMS au <a href="tel:+33677797727">06 77 79 77 27</a> pour avoir plus de renseignements.</p></div></div>
+        <div class="step"><span class="step-num" style="--c:var(--lime-deep)">{{icon:info}}</span><div><h3>Précisez votre projet</h3><p>Lors de votre demande, il vous est possible de rajouter des informations afin de préciser la raison de la location et le public visé, la durée, si vous voulez vous déplacer ou pas pour récupérer les jeux (sur Soustons, route de Tosse) ; ainsi nous serons mieux à même de vous conseiller !</p></div></div>
+      </div>
+      <div class="notice" style="margin-top:1.6rem">{{icon:info}}<p style="margin:0"><strong>Attention,</strong> une demande de location ne vous assure pas de la disponibilité des jeux : seul le devis qui vous sera envoyé par nos soins et qui devra nous être retourné signé garantit la réservation.</p></div>
+      <p class="highlight" style="margin-top:1.6rem">Tarifs adaptés aux manifestations ! Nous contacter <a href="contact.html?sujet=location">ici</a>.</p>
+    </div>
+
+    <div class="card form-card reveal" id="demande">
+      <h2 style="font-size:1.8rem">Demande de location</h2>
+      <p class="form-note">Les champs marqués d'un astérisque sont obligatoires. Nous vous répondons avec un devis.</p>
+      <form name="location" method="POST" action="/merci.html" data-netlify="true" netlify-honeypot="bot-field" data-games-form>
+        <input type="hidden" name="form-name" value="location">
+        <input type="hidden" name="jeux_souhaites" value="">
+        {{honeypot}}
+        <div class="form-grid">
+          <div class="field"><label for="loc-nom">Nom et prénom *</label><input id="loc-nom" type="text" name="nom" autocomplete="name" required></div>
+          <div class="field"><label for="loc-tel">Téléphone *</label><input id="loc-tel" type="tel" name="telephone" autocomplete="tel" required></div>
+          <div class="field full"><label for="loc-mail">E-mail <span class="opt">(conseillé pour recevoir le devis)</span></label><input id="loc-mail" type="email" name="email" autocomplete="email"></div>
+          <div class="field full"><label for="loc-adr">Adresse postale *</label><input id="loc-adr" type="text" name="adresse" autocomplete="street-address" required></div>
+          <fieldset class="field full"><legend>Jeux souhaités <span class="opt">(<span data-games-count>Aucun jeu sélectionné</span>)</span></legend><div class="choices games-choices">{{grands-jeux-choices}}</div></fieldset>
+          <div class="field full"><label for="loc-autres">Autres jeux, malles ou univers souhaités <span class="opt">(facultatif)</span></label><input id="loc-autres" type="text" name="autres_jeux" placeholder="Malle à thème, univers tout-petits…"></div>
+          <div class="field"><label for="loc-dates">Dates souhaitées *</label><input id="loc-dates" type="text" name="dates" placeholder="ex. du 12 au 14 juin" required></div>
+          <div class="field"><label for="loc-duree">Durée</label><input id="loc-duree" type="text" name="duree" placeholder="ex. un week-end"></div>
+          <div class="field full"><label for="loc-public">Public visé et raison de la location</label><input id="loc-public" type="text" name="public_vise" placeholder="Fête de village, 150 personnes, familles…"></div>
+          <fieldset class="field full"><legend>Retrait des jeux à Soustons (route de Tosse) ?</legend><div class="choices"><label class="choice"><input type="radio" name="retrait_soustons" value="Oui"><span>Oui, je viens les chercher</span></label><label class="choice"><input type="radio" name="retrait_soustons" value="Non"><span>Non, à voir ensemble</span></label></div></fieldset>
+          <div class="field full"><label for="loc-msg">Message</label><textarea id="loc-msg" name="message"></textarea></div>
+        </div>
+        <p class="form-note">Vos données servent uniquement à traiter votre demande. <a href="confidentialite.html">En savoir plus</a>.</p>
+        <button class="btn btn--sun" type="submit">{{icon:mail}}Envoyer ma demande</button>
+      </form>
+    </div>
+  </div>
+</section>
+{{wave:var(--cream-blue)|bottom}}
