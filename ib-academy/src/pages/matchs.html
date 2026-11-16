@@ -1,0 +1,37 @@
+<!--
+title: Matchs & résultats — IB Academy Villejuif
+description: Calendrier des matchs, résultats par équipe, reports et annulations de l'académie de football IB Academy à Villejuif.
+hero: assets/img/duel.webp
+hero_alt: Duel pour le ballon pendant un match
+hero_title: Matchs &amp;|résultats
+crumb: Matchs &amp; résultats
+hero_text: Calendrier, scores et infos de dernière minute pour toutes les équipes de l’académie.
+-->
+<section class="section stripes">
+  <div class="container">
+    <div class="section-head reveal"><div><span class="eyebrow">Compte à rebours</span><h2>Prochain <span class="hl">match</span></h2></div></div>
+    <div class="match-card reveal" data-next-match></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0" id="reports">
+  <div class="container">
+    <div class="section-head reveal"><div><span class="eyebrow" style="color:var(--alerte)">Info de dernière minute</span><h2>Reports &amp; <span style="color:var(--alerte)">annulations</span></h2></div></div>
+    <div data-alerts class="reveal"></div>
+  </div>
+</section>
+
+<section class="section stripes" id="calendrier" style="background-color:var(--noir-2)">
+  <div class="container">
+    <div class="section-head reveal"><div><span class="eyebrow">Saison 2026-2027</span><h2>Calen<span class="hl">drier</span></h2></div></div>
+    <div data-fixtures class="reveal"></div>
+  </div>
+</section>
+
+<section class="section" id="resultats">
+  <div class="container">
+    <div class="section-head reveal"><div><span class="eyebrow">Par équipe</span><h2>Résul<span class="hl">tats</span></h2></div></div>
+    <div class="filters" data-results-filter></div>
+    <div class="scoreboard" data-results-all></div>
+  </div>
+</section>

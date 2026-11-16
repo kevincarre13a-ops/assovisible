@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ib-academy-villejuif.netlify.app/sitemap.xml

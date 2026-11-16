@@ -1,0 +1,79 @@
+<!--
+title: Inscriptions — IB Academy Villejuif
+description: Inscrire son enfant à l'académie de football IB Academy à Villejuif : déroulé, pièces à fournir, tarifs et formulaire de pré-inscription en ligne.
+hero: assets/img/pied-ballon.webp
+hero_alt: Pied posé sur un ballon de football
+hero_title: Inscrip|tions
+crumb: Inscriptions
+hero_text: Filles et garçons dès 7 ans. Pré-inscrivez votre enfant en ligne, le club vous recontacte.
+-->
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal"><div><span class="eyebrow">Mode d’emploi</span><h2>Comment ça <span class="hl">marche ?</span></h2></div></div>
+    <div class="steps">
+      <div class="step reveal"><h3>Pré-inscription</h3><p>Remplissez le formulaire en bas de page : 2 minutes suffisent.</p></div>
+      <div class="step reveal" data-delay="1"><h3>Prise de contact</h3><p>Le club vous recontacte pour confirmer la catégorie et le créneau.</p></div>
+      <div class="step reveal" data-delay="2"><h3>Dossier</h3><p>Vous transmettez les pièces demandées et réglez la cotisation éventuelle.</p></div>
+      <div class="step reveal" data-delay="3"><h3>Sur le terrain !</h3><p>Votre enfant rejoint son groupe d’entraînement.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid grid-2" style="align-items:start">
+    <div class="card reveal">
+      <span class="eyebrow">Le dossier</span>
+      <h3>Pièces à fournir</h3>
+      <ul class="checklist">
+        <li>Formulaire d’inscription complété et signé par le responsable légal</li>
+        <li>Pièce d’identité ou livret de famille du joueur</li>
+        <li>Photo d’identité récente</li>
+        <li>Questionnaire de santé ou certificat médical selon la réglementation en vigueur</li>
+        <li>Autorisation parentale (et droit à l’image) pour les mineurs</li>
+      </ul>
+      <p class="muted" style="margin-top:1rem;font-size:.92rem">Liste indicative : le club confirmera les pièces exactes lors de la prise de contact.</p>
+    </div>
+    <div class="card reveal" data-delay="1">
+      <span class="eyebrow">Tarifs</span>
+      <h3>Cotisation 2026-2027</h3>
+      <div class="placeholder"><strong>Texte d’attente :</strong> montant de la cotisation par catégorie, ce qui est inclus (licence, équipement…), réductions fratrie et aides possibles (Pass’Sport, etc.).</div>
+      <p style="margin-top:1rem">Le projet fondateur de l’académie est de permettre aux jeunes de s’entraîner et d’être encadrés <strong class="hl">gratuitement</strong>. Les conditions actuelles vous seront précisées par le club.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="formulaire">
+  <div class="pitch-lines" aria-hidden="true"></div>
+  <div class="container" style="max-width:900px">
+    <div class="reveal" style="text-align:center;margin-bottom:2.5rem">
+      <span class="eyebrow">Formulaire</span>
+      <h2>Pré-<span class="hl">inscription</span></h2>
+      <p class="muted">Les champs marqués <span class="hl">*</span> sont obligatoires.</p>
+    </div>
+    <form class="form reveal" name="pre-inscription" method="POST" action="/merci.html" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="pre-inscription">
+      <p class="hidden"><label>Ne pas remplir : <input name="bot-field"></label></p>
+      <fieldset>
+        <legend>Le joueur / la joueuse</legend>
+        <div class="form-row">
+          <div class="field"><label for="joueur">Nom et prénom <span class="req">*</span></label><input id="joueur" name="joueur_nom" autocomplete="off" required></div>
+          <div class="field"><label for="naissance">Date de naissance <span class="req">*</span></label><input id="naissance" name="date_naissance" type="date" required></div>
+        </div>
+        <div class="field"><label for="categorie">Catégorie souhaitée <span class="req">*</span></label>
+          <select id="categorie" name="categorie" required data-cat-options><option value="">— Choisir —</option></select>
+          <small>Indicatif : le club confirmera la catégorie selon l’année de naissance.</small></div>
+      </fieldset>
+      <fieldset>
+        <legend>Responsable légal</legend>
+        <div class="form-row">
+          <div class="field"><label for="responsable">Nom et prénom <span class="req">*</span></label><input id="responsable" name="responsable_nom" autocomplete="name" required></div>
+          <div class="field"><label for="tel">Téléphone <span class="req">*</span></label><input id="tel" name="telephone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9 +().-]{10,}" required></div>
+        </div>
+        <div class="field"><label for="email">E-mail <span class="req">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="message">Message</label><textarea id="message" name="message" placeholder="Expérience en club, questions, besoins particuliers…"></textarea></div>
+      </fieldset>
+      <label class="consent"><input type="checkbox" name="consentement" value="oui" required> <span>J’accepte que les informations saisies soient utilisées par IB Academy uniquement pour traiter cette pré-inscription. <a class="hl" href="mentions-legales.html#donnees">En savoir plus</a> <span class="req hl">*</span></span></label>
+      <button class="btn" type="submit" style="justify-self:start">Envoyer la pré-inscription</button>
+    </form>
+  </div>
+</section>
