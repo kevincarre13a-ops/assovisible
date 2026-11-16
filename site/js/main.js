@@ -180,15 +180,6 @@
     });
   });
 
-  /* ---------- Formulaire : message de succès après soumission Netlify ---------- */
-  if (location.search.indexOf("success") !== -1 || location.hash === "#merci") {
-    var successBox = document.getElementById("form-success");
-    if (successBox) {
-      successBox.classList.add("show");
-      successBox.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
-  }
-
   /* =========================================================
      BONUS — Mot du jour + tirage de lettres interactif
      Valeurs officielles des lettres au Scrabble francophone.

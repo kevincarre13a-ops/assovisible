@@ -521,41 +521,28 @@ table.nice tbody tr:nth-child(even){ background: var(--cream-deep); }
 .news-date .m{ text-transform:uppercase; letter-spacing:.07em; font-size:.85rem; }
 
 /* =========================================================
-   FORMULAIRE CONTACT
+   CONTACT
    ========================================================= */
-.form-grid{ display:grid; grid-template-columns: 1.1fr .9fr; gap:40px; align-items:start; }
-@media (max-width: 880px){ .form-grid{ grid-template-columns:1fr; } }
-
-.field{ margin-bottom:22px; }
-.field label{ display:block; font-weight:700; margin-bottom:8px; }
-.field .hint{ font-size:.9rem; color: var(--ink-soft); margin-top:4px; }
-input, textarea, select{
-  width:100%; font-family: var(--font-body); font-size:1.05rem;
-  padding: .85em 1em; border-radius: var(--radius-s);
-  border: 2px solid var(--line); background:#fff; color: var(--ink);
-}
-input:focus, textarea:focus, select:focus{ border-color: var(--pink); }
-textarea{ min-height: 150px; resize:vertical; }
-.hp-field{ position:absolute; left:-5000px; }
-
+.contact-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:30px; align-items:stretch; max-width: 980px; margin: 0 auto; }
+@media (max-width: 880px){ .contact-grid{ grid-template-columns:1fr; } }
 .contact-card{
   background: var(--wood-darker); color:#fdf6e8; border-radius: var(--radius-l);
   padding: 34px; box-shadow: var(--shadow-m);
 }
-.contact-card h3{ color:#fff; }
+.contact-card h3{ color:#fff; margin-bottom:.15em; }
 .contact-card a{ color:#FBE7A1; }
-.contact-list{ list-style:none; margin:0 0 26px; padding:0; display:flex; flex-direction:column; gap:14px; font-size:1.05rem; }
+.contact-role{ color:#e9d9b8; margin:0 0 22px; }
+.contact-card .btn.contact-mail{ color:#fff; font-size:1.1rem; padding:1em 1.2em; word-break:break-word; text-align:center; }
+.contact-card .btn.contact-mail:hover{ color:#fff; }
+.contact-mail-hint{ font-size:.92rem; color:#e9d9b8; margin:10px 0 24px; text-align:center; }
+.contact-welcome{ color:#FBE7A1; font-weight:700; margin:22px 0 0; }
+.contact-list{ list-style:none; margin:0 0 6px; padding:0; display:flex; flex-direction:column; gap:14px; font-size:1.08rem; }
 .contact-list li{ display:flex; gap:10px; align-items:flex-start; }
 .contact-list .ic{ flex-shrink:0; font-size:1.3rem; }
 .map-embed{
   border-radius: var(--radius-m); overflow:hidden; margin-top:20px; border:4px solid rgba(255,255,255,.18);
 }
-.map-embed iframe{ width:100%; height:240px; border:0; display:block; }
-.form-success{
-  display:none; background:#e6f6e9; border:2px solid #4caf6d; color:#215b33;
-  padding:18px 22px; border-radius: var(--radius-m); margin-bottom:24px; font-weight:700;
-}
-.form-success.show{ display:block; }
+.map-embed iframe{ width:100%; height:260px; border:0; display:block; }
 
 /* =========================================================
    BONUS : MOT DU JOUR + TIRAGE
@@ -572,7 +559,13 @@ textarea{ min-height: 150px; resize:vertical; }
 .draw-row{ display:flex; gap:8px; flex-wrap:wrap; margin: 18px 0 20px; }
 .draw-row .tile{ animation:none; opacity:1; transform:none; position:static; width:50px; height:50px; }
 .game-form{ display:flex; gap:10px; flex-wrap:wrap; }
-.game-form input{ flex:1; min-width:180px; }
+.game-form input{
+  flex:1; min-width:180px;
+  font-family: var(--font-body); font-size:1.05rem;
+  padding: .85em 1em; border-radius: var(--radius-s);
+  border: 2px solid var(--line); background:#fff; color: var(--ink);
+}
+.game-form input:focus{ border-color: var(--pink); }
 #game-feedback{ margin-top:14px; font-weight:700; min-height:1.4em; }
 #game-feedback.ok{ color:#215b33; }
 #game-feedback.bad{ color: var(--red); }

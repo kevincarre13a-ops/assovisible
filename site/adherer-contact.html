@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Adhérer / Contact — Club Bisontin de Scrabble</title>
-<meta name="description" content="Rejoignez le Club Bisontin de Scrabble à Besançon : infos d'adhésion, formulaire de contact, coordonnées et plan d'accès. Débutants bienvenus !">
+<meta name="description" content="Rejoignez le Club Bisontin de Scrabble à Besançon : infos d'adhésion, tarifs des licences, coordonnées et plan d'accès. Débutants bienvenus !">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="css/style.css">
@@ -101,80 +101,44 @@
           </tbody>
         </table>
       </div>
-      <p class="reveal" style="margin-top:18px;"><em>Tarifs communiqués par Frédéric Bartier, président du club. Une question sur la formule la plus adaptée à votre situation ? Écrivez-nous ci-dessous.</em></p>
+      <p class="reveal" style="margin-top:18px;"><em>Tarifs communiqués par Frédéric Bartier, président du club. Une question sur la formule la plus adaptée à votre situation ? <a href="#contact-club">Contactez le président</a>.</em></p>
     </div>
   </section>
 
-  <section class="section section-alt">
+  <section class="section section-alt" id="contact-club">
     <div class="container">
       <div class="section-head reveal">
-        <span class="eyebrow">Formulaire</span>
-        <h2>Écrivez-nous</h2>
+        <span class="eyebrow">Contact</span>
+        <h2>Écrivez-nous ou appelez-nous</h2>
+        <p>Une question avant de venir, une demande d'adhésion, une photo à partager : le président du club vous répond directement.</p>
       </div>
 
-      <div class="form-grid">
-
-        <div class="reveal">
-          <div class="form-success" id="form-success">Merci ! Votre message a bien été envoyé, nous reviendrons vers vous rapidement.</div>
-
-          <form name="contact-club-scrabble" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="contact-club-scrabble">
-            <p class="hp-field">
-              <label>Ne pas remplir si vous êtes humain : <input name="bot-field"></label>
-            </p>
-
-            <div class="field">
-              <label for="nom">Nom et prénom</label>
-              <input type="text" id="nom" name="nom" required autocomplete="name">
-            </div>
-
-            <div class="field">
-              <label for="email">Adresse e-mail</label>
-              <input type="email" id="email" name="email" required autocomplete="email">
-            </div>
-
-            <div class="field">
-              <label for="telephone">Téléphone (facultatif)</label>
-              <input type="tel" id="telephone" name="telephone" autocomplete="tel">
-            </div>
-
-            <div class="field">
-              <label for="sujet">Votre demande concerne</label>
-              <select id="sujet" name="sujet">
-                <option>Venir essayer une séance</option>
-                <option>Adhésion au club</option>
-                <option>Un tournoi</option>
-                <option>Partager une photo / une actualité</option>
-                <option>Autre question</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="message">Votre message</label>
-              <textarea id="message" name="message" required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block">Envoyer le message</button>
-          </form>
-        </div>
+      <div class="contact-grid">
 
         <div class="contact-card reveal">
-          <h3>Coordonnées</h3>
+          <h3>Frédéric Bartier</h3>
+          <p class="contact-role">Président du Club Bisontin de Scrabble</p>
+          <a class="btn btn-primary btn-block contact-mail" href="mailto:bartier.frederic@wanadoo.fr">✉️ bartier.frederic@wanadoo.fr</a>
+          <p class="contact-mail-hint">Cliquez pour écrire depuis votre messagerie.</p>
+          <ul class="contact-list">
+            <li><span class="ic">📞</span><span><a href="tel:+33680132223">06 80 13 22 23</a></span></li>
+            <li><span class="ic">🗓️</span><span>Séances : mercredi 14h30 &amp; jeudi 20h</span></li>
+          </ul>
+          <p class="contact-welcome">Débutants bienvenus — venez essayer, sans engagement !</p>
+        </div>
+
+        <div class="contact-card contact-card-map reveal">
+          <h3>Où nous trouver</h3>
           <ul class="contact-list">
             <li><span class="ic">📍</span><span>Centre Pierre Mendès-France<br>3 rue Beauregard, 25000 Besançon</span></li>
-            <li><span class="ic">🗓️</span><span>Mercredi 14h30 &amp; jeudi 20h</span></li>
-            <li><span class="ic">👤</span><span>Frédéric Bartier, président</span></li>
-            <li><span class="ic">📞</span><span><a href="tel:+33680132223">06 80 13 22 23</a></span></li>
-            <li><span class="ic">✉️</span><span><a href="mailto:bartier.frederic@wanadoo.fr">bartier.frederic@wanadoo.fr</a></span></li>
           </ul>
-          <p style="color:#FBE7A1;font-weight:700;">Débutants bienvenus — venez essayer, sans engagement !</p>
           <div class="map-embed">
             <iframe
               src="https://www.google.com/maps?q=Centre+Pierre+Mend%C3%A8s-France,+3+rue+Beauregard,+25000+Besan%C3%A7on&output=embed"
               title="Plan d'accès au Centre Pierre Mendès-France, 3 rue Beauregard, Besançon"
               loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-          <p style="margin-top:14px;"><a href="https://www.google.com/maps?q=Centre+Pierre+Mend%C3%A8s-France,+3+rue+Beauregard,+25000+Besan%C3%A7on" target="_blank" rel="noopener">Ouvrir le plan dans Google Maps →</a></p>
+          <p style="margin:14px 0 0;"><a href="https://www.google.com/maps?q=Centre+Pierre+Mend%C3%A8s-France,+3+rue+Beauregard,+25000+Besan%C3%A7on" target="_blank" rel="noopener">Ouvrir le plan dans Google Maps →</a></p>
         </div>
 
       </div>
