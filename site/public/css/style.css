@@ -635,3 +635,21 @@ table.nice tbody tr:nth-child(even){ background: var(--cream-deep); }
 .mt-0{ margin-top:0; }
 .mb-0{ margin-bottom:0; }
 .visually-hidden-label{ position:absolute; left:-9999px; }
+
+/* =========================================================
+   CONTENUS MODIFIABLES (espace administrateur)
+   ========================================================= */
+main, .site-footer{ transition: opacity .25s ease; }
+.cms-attente main, .cms-attente .site-footer{ opacity:0; }
+.texte-modifie{ white-space: pre-line; }
+[hidden]{ display:none !important; }
+.news-photo{
+  width:100%; max-height:420px; object-fit:cover; border-radius: var(--radius-m);
+  margin: 6px 0 16px; box-shadow: var(--shadow-s);
+}
+.photo-card.photo-reelle{ margin:0; }
+.photo-card .photo-lien{ display:block; aspect-ratio:4/3; overflow:hidden; background: var(--cream-deep); }
+.photo-card .photo-lien img{ width:100%; height:100%; object-fit:cover; transition: transform .3s ease; }
+.photo-card .photo-lien:hover img{ transform: scale(1.04); }
+.footer-admin{ opacity:.75; }
+.footer-admin:hover{ opacity:1; }

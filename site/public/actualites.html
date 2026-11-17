@@ -8,6 +8,7 @@
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add("cms-attente");setTimeout(function(){document.documentElement.classList.remove("cms-attente");},3000);</script>
 </head>
 <body data-page="actualites">
 <a class="skip-link" href="#main">Aller au contenu principal</a>
@@ -44,55 +45,13 @@
       <p class="crumb"><a href="index.html">Accueil</a> › Actualités</p>
       <span class="eyebrow">Quoi de neuf</span>
       <h1>Actualités du club</h1>
-      <p>Les dernières nouvelles du Club Bisontin de Scrabble, saison après saison.</p>
+      <p data-edit="actus.intro" data-edit-label="Présentation en haut de page">Les dernières nouvelles du Club Bisontin de Scrabble, saison après saison.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="news-list">
-
-        <article class="news-item reveal">
-          <div class="news-date"><span class="d">05</span><span class="m">Nov. 2026</span></div>
-          <div>
-            <h3>Le calendrier 2026-2027 est en ligne</h3>
-            <p>Le comité Franche-Comté a publié le calendrier prévisionnel de la saison : qualifications et Open à la Salle Jean Zay de Besançon, TH3 de Besançon le 31 janvier 2027, championnats régionaux, festivals… Retrouvez tous les rendez-vous, avec le calendrier complet à télécharger.</p>
-            <a class="preview-link" href="tournois-resultats.html">Voir le calendrier 2026-2027 →</a>
-          </div>
-        </article>
-
-        <article class="news-item reveal">
-          <div class="news-date"><span class="d">18</span><span class="m">Oct. 2026</span></div>
-          <div>
-            <h3>Le club se dote d'un nouveau site internet</h3>
-            <p>Le Club Bisontin de Scrabble lance son nouveau site pour mieux présenter ses séances, ses tournois et faciliter l'accueil des nouveaux joueurs. Vous êtes curieux du Scrabble duplicate ? Toutes les informations pratiques sont désormais réunies ici.</p>
-            <a class="preview-link" href="jouer-avec-nous.html">Découvrir les séances →</a>
-          </div>
-        </article>
-
-        <article class="news-item reveal">
-          <div class="news-date"><span class="d">01</span><span class="m">Fév. 2026</span></div>
-          <div>
-            <h3>Championnat Régional de Franche-Comté à Besançon</h3>
-            <p>Besançon a accueilli le Championnat Régional Franche-Comté open 2025-2026 à la Salle Jean Zay : trois parties ouvertes à tous les licenciés de la région, avec gratuité pour les jeunes et les poussins.</p>
-            <a class="preview-link" href="tournois-resultats.html">Voir les tournois →</a>
-          </div>
-        </article>
-
-        <article class="news-item reveal">
-          <div class="news-date"><span class="d">18</span><span class="m">Jan. 2026</span></div>
-          <div>
-            <h3>Un multiplex national à Besançon</h3>
-            <p>Le Besançon TH3, étape du Grand Prix, s'est disputé simultanément avec cinq autres clubs de toute la France, avec buvette et restauration sur réservation pour les joueurs venus de toute la région.</p>
-            <a class="preview-link" href="tournois-resultats.html">Voir les tournois →</a>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="notice reveal" style="margin-top:46px;">
-        <strong>À compléter :</strong> cette page sera mise à jour à chaque nouvelle actualité du club (résultats, soirées, journées portes ouvertes...). N'hésitez pas à transmettre vos informations via la page <a href="adherer-contact.html">Contact</a>.
-      </div>
+      <div class="news-list reveal" id="cms-actualites"></div>
     </div>
   </section>
 
@@ -106,7 +65,7 @@
           <img class="brand-logo" src="assets/logo.svg" alt="">
           <strong>Club Bisontin de Scrabble</strong>
         </div>
-        <p>Le rendez-vous des amoureux des mots à Besançon : Scrabble duplicate et tournois, pour tous les niveaux. Débutants bienvenus !</p>
+        <p data-edit="pied.texte" data-edit-label="Présentation du club en bas de chaque page">Le rendez-vous des amoureux des mots à Besançon : Scrabble duplicate et tournois, pour tous les niveaux. Débutants bienvenus !</p>
         <div class="footer-social">
           <!-- Aucune page Facebook / Instagram officielle du club n'a été trouvée à ce jour : à ajouter ici dès son ouverture. -->
         </div>
@@ -124,9 +83,9 @@
       <div>
         <h4>Coordonnées</h4>
         <ul>
-          <li>Centre Pierre Mendès-France<br>3 rue Beauregard, 25000 Besançon</li>
-          <li><a href="tel:+33680132223">06 80 13 22 23</a></li>
-          <li><a href="mailto:bartier.frederic@wanadoo.fr">bartier.frederic@wanadoo.fr</a></li>
+          <li data-cms-adresse>Centre Pierre Mendès-France<br>3 rue Beauregard, 25000 Besançon</li>
+          <li data-cms-si="contact.telephone"><a href="tel:+33680132223" data-cms-lien="tel" data-cms="contact.telephone">06 80 13 22 23</a></li>
+          <li><a href="mailto:bartier.frederic@wanadoo.fr" data-cms-lien="email" data-cms="contact.email">bartier.frederic@wanadoo.fr</a></li>
         </ul>
       </div>
       <div>
@@ -140,11 +99,13 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Club Bisontin de Scrabble — Association loi 1901</span>
-      <a href="mentions-legales.html">Mentions légales</a>
+      <span class="footer-bottom-liens"><a href="mentions-legales.html">Mentions légales</a> · <a class="footer-admin" href="admin/">🔒 Espace administrateur</a></span>
     </div>
   </div>
 </footer>
 
+<script src="js/contenu.js"></script>
+<script src="js/cms.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

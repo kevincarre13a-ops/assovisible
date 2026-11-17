@@ -1,0 +1,199 @@
+/* =========================================================
+   Espace administrateur — Club Bisontin de Scrabble
+   Pensé pour être lu et utilisé facilement : grands textes,
+   grands boutons, couleurs franches, une seule chose à la fois.
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root{
+  --creme:#F8F1E1; --creme-fonce:#EFE2C4; --blanc:#FFFFFF;
+  --encre:#2E2418; --encre-douce:#4A3C2C; --bois:#C98A4B; --bois-fonce:#5E3A1A;
+  --vert:#2E7D32; --vert-fonce:#1B5E20; --vert-clair:#E6F4E7;
+  --rouge:#C62828; --rouge-clair:#FDECEA;
+  --bleu:#1E4E7E; --bleu-clair:#E8F0F8;
+  --jaune-clair:#FFF4D6; --or:#CB9B3C;
+  --ligne:#D9C9A6;
+  --rayon:14px;
+  --ombre:0 4px 14px rgba(46,36,24,.12);
+}
+*,*::before,*::after{ box-sizing:border-box; }
+[hidden]{ display:none !important; }
+html{ font-size:20px; }
+body{
+  margin:0; background:var(--creme); color:var(--encre);
+  font-family:'Atkinson Hyperlegible','Segoe UI',Arial,sans-serif; line-height:1.55;
+}
+h1,h2,h3{ font-family:'Fraunces',Georgia,serif; color:var(--bois-fonce); line-height:1.2; margin:0 0 .5em; }
+h1{ font-size:1.9rem; } h2{ font-size:1.5rem; } h3{ font-size:1.2rem; }
+p{ margin:0 0 1em; }
+a{ color:var(--bleu); }
+:focus-visible{ outline:4px solid #E2588F; outline-offset:3px; }
+img{ max-width:100%; display:block; }
+
+.conteneur{ max-width:980px; margin:0 auto; padding:28px 20px 80px; }
+main:focus{ outline:none; }
+
+/* ---------- En-tête ---------- */
+.entete{ background:var(--bois-fonce); color:#fff; position:sticky; top:0; z-index:10; box-shadow:var(--ombre); }
+.entete-int{ max-width:980px; margin:0 auto; padding:10px 20px; display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+.marque{ display:flex; align-items:center; gap:12px; color:#fff; text-decoration:none; }
+.marque img{ width:48px; height:48px; }
+.marque strong{ display:block; font-size:1.05rem; }
+.marque small{ display:block; font-size:.8rem; opacity:.85; }
+.entete-actions{ display:flex; gap:10px; flex-wrap:wrap; }
+
+/* ---------- Boutons ---------- */
+.bouton{
+  display:inline-flex; align-items:center; justify-content:center; gap:.45em;
+  min-height:56px; padding:.6em 1.3em; border-radius:12px; border:3px solid transparent;
+  font:700 1rem/1.2 'Atkinson Hyperlegible',Arial,sans-serif; cursor:pointer; text-decoration:none;
+  transition:transform .12s ease, background .12s ease, box-shadow .12s ease;
+}
+.bouton:hover{ transform:translateY(-1px); box-shadow:var(--ombre); }
+.bouton:disabled{ opacity:.55; cursor:wait; transform:none; box-shadow:none; }
+.bouton-vert{ background:var(--vert); color:#fff; }
+.bouton-vert:hover{ background:var(--vert-fonce); }
+.bouton-bleu{ background:var(--bleu); color:#fff; }
+.bouton-rouge{ background:#fff; color:var(--rouge); border-color:var(--rouge); }
+.bouton-rouge:hover{ background:var(--rouge-clair); }
+.bouton-gris{ background:#fff; color:var(--encre); border-color:var(--ligne); }
+.bouton-gris:hover{ background:var(--creme-fonce); }
+.bouton-clair{ background:rgba(255,255,255,.14); color:#fff; border-color:rgba(255,255,255,.4); min-height:48px; font-size:.9rem; }
+.bouton-clair:hover{ background:rgba(255,255,255,.26); }
+.bouton-large{ width:100%; font-size:1.1rem; min-height:64px; }
+.bouton-petit{ min-height:44px; font-size:.85rem; padding:.4em .9em; }
+.retour{
+  display:inline-flex; align-items:center; gap:.4em; margin-bottom:22px;
+  font-weight:700; font-size:1rem; color:var(--bleu); background:none; border:none; cursor:pointer;
+  padding:10px 0; text-decoration:underline; text-underline-offset:4px;
+}
+
+/* ---------- Messages ---------- */
+.bandeau{ border-radius:var(--rayon); padding:18px 22px; margin-bottom:24px; font-size:1.05rem; font-weight:700; border:3px solid; }
+.bandeau.ok{ background:var(--vert-clair); border-color:var(--vert); color:var(--vert-fonce); }
+.bandeau.erreur{ background:var(--rouge-clair); border-color:var(--rouge); color:var(--rouge); }
+.bandeau.info{ background:var(--bleu-clair); border-color:var(--bleu); color:var(--bleu); }
+.bandeau a{ color:inherit; margin-left:.5em; }
+.alerte{ border-radius:var(--rayon); padding:16px 20px; }
+.alerte-erreur{ background:var(--rouge-clair); color:var(--rouge); border:3px solid var(--rouge); font-weight:700; }
+.chargement{ font-size:1.1rem; padding:30px 0; }
+
+/* ---------- Carte générique ---------- */
+.carte{ background:var(--blanc); border:2px solid var(--ligne); border-radius:var(--rayon); padding:26px; box-shadow:var(--ombre); }
+.aide{ background:var(--jaune-clair); border:2px dashed var(--or); border-radius:var(--rayon); padding:16px 20px; margin-bottom:24px; }
+.aide strong{ color:var(--bois-fonce); }
+.aide ol{ margin:.4em 0 0; padding-left:1.4em; }
+.intro{ font-size:1.05rem; color:var(--encre-douce); }
+
+/* ---------- Connexion ---------- */
+.connexion{ max-width:520px; margin:20px auto; }
+.connexion .logo{ width:84px; height:84px; margin:0 auto 14px; }
+.connexion h1{ text-align:center; }
+.connexion .sous-titre{ text-align:center; color:var(--encre-douce); margin-bottom:24px; }
+.mdp-ligne{ display:flex; gap:10px; }
+.mdp-ligne input{ flex:1; }
+.oubli{ text-align:center; font-size:.9rem; color:var(--encre-douce); margin:20px 0 0; }
+
+/* ---------- Tableau de bord ---------- */
+.bonjour{ margin-bottom:6px; }
+.tuiles{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:24px; }
+@media (max-width:700px){ .tuiles{ grid-template-columns:1fr; } }
+.tuile{
+  display:flex; align-items:center; gap:18px; text-align:left;
+  background:#fff; border:3px solid var(--ligne); border-radius:18px; padding:20px 22px;
+  color:var(--encre); text-decoration:none; box-shadow:var(--ombre); min-height:110px;
+  transition:border-color .12s ease, transform .12s ease;
+}
+.tuile:hover{ border-color:var(--bois); transform:translateY(-2px); }
+.tuile .icone{ font-size:2.4rem; flex-shrink:0; width:64px; height:64px; display:flex; align-items:center; justify-content:center; background:var(--creme); border-radius:16px; }
+.tuile strong{ display:block; font-size:1.15rem; color:var(--bois-fonce); font-family:'Fraunces',Georgia,serif; }
+.tuile span.desc{ display:block; font-size:.92rem; color:var(--encre-douce); }
+
+/* ---------- Listes ---------- */
+.entete-section{ display:flex; align-items:flex-start; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:10px; }
+.liste{ display:flex; flex-direction:column; gap:14px; margin-top:20px; }
+.element{
+  background:#fff; border:2px solid var(--ligne); border-radius:var(--rayon); padding:18px 20px;
+  display:flex; gap:18px; align-items:center; flex-wrap:wrap; box-shadow:0 2px 8px rgba(46,36,24,.06);
+}
+.element.passe{ opacity:.65; }
+.element.surligne{ border-color:var(--vert); box-shadow:0 0 0 4px var(--vert-clair); }
+.element .vignette{ width:110px; height:82px; object-fit:cover; border-radius:10px; flex-shrink:0; background:var(--creme-fonce); }
+.element .infos{ flex:1; min-width:220px; }
+.element .infos strong{ display:block; font-size:1.08rem; }
+.element .infos span{ display:block; color:var(--encre-douce); font-size:.95rem; }
+.element .actions{ display:flex; gap:8px; flex-wrap:wrap; }
+.vide{ padding:22px; text-align:center; color:var(--encre-douce); background:#fff; border:2px dashed var(--ligne); border-radius:var(--rayon); }
+.etiquette{ display:inline-block !important; font-size:.8rem !important; font-weight:700; padding:.15em .6em; border-radius:999px; margin-top:4px; }
+.etiquette-passe{ background:var(--creme-fonce); color:var(--encre-douce) !important; }
+.etiquette-ici{ background:var(--bleu-clair); color:var(--bleu) !important; }
+.bascule{ margin:18px 0 0; }
+
+/* ---------- Formulaires ---------- */
+.formulaire .champ{ margin-bottom:26px; }
+.formulaire .titre-champ, .formulaire legend{ display:block; font-weight:700; font-size:1.08rem; margin-bottom:6px; color:var(--encre); padding:0; }
+.formulaire .obligatoire{ color:var(--rouge); }
+.formulaire .aide-champ{ display:block; font-size:.9rem; color:var(--encre-douce); margin:-2px 0 8px; }
+.formulaire input[type=text], .formulaire input[type=email], .formulaire input[type=tel],
+.formulaire input[type=number], .formulaire input[type=date], .formulaire input[type=password],
+.formulaire select, .formulaire textarea{
+  width:100%; font:1.05rem/1.4 'Atkinson Hyperlegible',Arial,sans-serif; color:var(--encre);
+  padding:14px 16px; border:3px solid var(--ligne); border-radius:12px; background:#fff; min-height:58px;
+}
+.formulaire textarea{ min-height:120px; resize:vertical; }
+.formulaire input:focus, .formulaire select:focus, .formulaire textarea:focus{ border-color:var(--bleu); outline:none; box-shadow:0 0 0 4px var(--bleu-clair); }
+.formulaire .champ.en-erreur input, .formulaire .champ.en-erreur textarea, .formulaire .champ.en-erreur select{ border-color:var(--rouge); }
+.erreur-champ{ display:block; color:var(--rouge); font-weight:700; margin-top:6px; }
+fieldset{ border:none; margin:0; padding:0; min-width:0; }
+.choix{ display:grid; gap:10px; }
+.choix label{
+  display:flex; align-items:center; gap:14px; padding:14px 16px; border:3px solid var(--ligne);
+  border-radius:12px; background:#fff; cursor:pointer; font-size:1.02rem;
+}
+.choix label:has(input:checked){ border-color:var(--bleu); background:var(--bleu-clair); }
+.choix input, .case input{ width:28px; height:28px; flex-shrink:0; accent-color:var(--bleu); }
+.case{ display:flex; align-items:center; gap:14px; font-weight:700; cursor:pointer; padding:6px 0; }
+.boutons-form{ display:flex; gap:14px; flex-wrap:wrap; margin-top:10px; padding-top:20px; border-top:2px solid var(--creme-fonce); }
+.boutons-form .bouton-vert{ flex:1; min-width:240px; min-height:64px; font-size:1.1rem; }
+.compteur{ display:block; text-align:right; font-size:.85rem; color:var(--encre-douce); margin-top:4px; }
+.reinit{ margin-top:8px; }
+
+/* ---------- Envoi de photo ---------- */
+.photo-zone{ border:3px dashed var(--ligne); border-radius:var(--rayon); padding:20px; background:#fff; text-align:center; }
+.photo-zone img{ max-height:300px; margin:0 auto 14px; border-radius:10px; }
+.photo-zone .boutons{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+.photo-zone input[type=file]{ position:absolute; width:1px; height:1px; opacity:0; }
+.envoi-en-cours{ display:flex; align-items:center; gap:12px; font-weight:700; color:var(--bleu); margin-top:14px; }
+
+/* ---------- Grille de photos ---------- */
+.grille-photos{ display:grid; grid-template-columns:repeat(auto-fill, minmax(230px,1fr)); gap:18px; margin-top:20px; }
+.carte-photo{ background:#fff; border:2px solid var(--ligne); border-radius:var(--rayon); overflow:hidden; display:flex; flex-direction:column; }
+.carte-photo img{ width:100%; aspect-ratio:4/3; object-fit:cover; background:var(--creme-fonce); }
+.carte-photo .texte{ padding:12px 14px; flex:1; }
+.carte-photo .texte strong{ display:block; }
+.carte-photo .texte span{ font-size:.9rem; color:var(--encre-douce); }
+.carte-photo .actions{ display:flex; gap:8px; padding:0 14px 14px; flex-wrap:wrap; }
+.carte-photo.surligne{ border-color:var(--vert); box-shadow:0 0 0 4px var(--vert-clair); }
+
+/* ---------- Choix de page (textes) ---------- */
+.pages{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:20px; }
+@media (max-width:700px){ .pages{ grid-template-columns:1fr; } }
+.pages .tuile{ min-height:84px; }
+.pages .tuile .icone{ width:52px; height:52px; font-size:1.8rem; }
+
+.document{ display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+.document .infos{ flex:1; min-width:220px; }
+.separateur{ border:none; border-top:3px solid var(--creme-fonce); margin:40px 0; }
+
+/* ---------- Téléphone ---------- */
+@media (max-width:700px){
+  html{ font-size:19px; }
+  .entete{ position:static; }
+  .entete-actions{ width:100%; }
+  .entete-actions .bouton{ flex:1; min-height:46px; padding:.4em .5em; font-size:.85rem; }
+  .conteneur{ padding:22px 16px 60px; }
+  .carte{ padding:20px 16px; }
+  h1{ font-size:1.6rem; }
+  .element .actions{ width:100%; }
+  .element .actions .bouton{ flex:1; }
+}

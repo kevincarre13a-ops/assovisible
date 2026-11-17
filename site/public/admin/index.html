@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Espace administrateur — Club Bisontin de Scrabble</title>
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="entete">
+  <div class="entete-int">
+    <a class="marque" href="#accueil">
+      <img src="../assets/logo.svg" alt="" width="48" height="48">
+      <span><strong>Espace administrateur</strong><small>Club Bisontin de Scrabble</small></span>
+    </a>
+    <nav class="entete-actions" id="barre-actions" hidden>
+      <a class="bouton bouton-clair" href="/" target="_blank" rel="noopener">👁️ Voir le site</a>
+      <button type="button" class="bouton bouton-clair" id="deconnexion">🚪 Se déconnecter</button>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu-principal" tabindex="-1">
+  <div class="conteneur">
+    <div id="bandeau" class="bandeau" role="status" aria-live="polite" hidden></div>
+    <div id="app">
+      <p class="chargement">⏳ Chargement de l'espace administrateur…</p>
+    </div>
+  </div>
+</main>
+
+<noscript>
+  <p class="conteneur alerte alerte-erreur">L'espace administrateur a besoin de JavaScript pour fonctionner. Merci de l'activer dans votre navigateur.</p>
+</noscript>
+
+<script src="../js/contenu.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

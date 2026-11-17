@@ -8,6 +8,7 @@
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add("cms-attente");setTimeout(function(){document.documentElement.classList.remove("cms-attente");},3000);</script>
 </head>
 <body data-page="galerie">
 <a class="skip-link" href="#main">Aller au contenu principal</a>
@@ -44,58 +45,59 @@
       <p class="crumb"><a href="index.html">Accueil</a> › Galerie</p>
       <span class="eyebrow">En images</span>
       <h1>Galerie du club</h1>
-      <p>Cette galerie est prête à accueillir vos photos de tournois, de séances et de remises de prix. En attendant, voici les catégories qui structureront nos souvenirs.</p>
+      <p data-edit="galerie.intro" data-edit-label="Présentation en haut de page">Les temps forts du club en images : tournois, séances, remises de prix et moments de convivialité.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
 
-      <div class="notice reveal" style="margin-bottom:40px;">
-        <strong>À compléter :</strong> aucune photo du club n'a pu être retrouvée en ligne au moment de la création de ce site. Les emplacements ci-dessous sont des réservations de place, prêtes à recevoir vos images dès qu'elles seront transmises.
-      </div>
-
       <div class="gallery-filters reveal">
         <button type="button" class="active" data-filter="tous">Tout voir</button>
         <button type="button" data-filter="tournois">Tournois</button>
-        <button type="button" data-filter="entrainements">Séances</button>
+        <button type="button" data-filter="seances">Séances</button>
         <button type="button" data-filter="remises">Remises de prix</button>
         <button type="button" data-filter="vie">Vie du club</button>
       </div>
 
+      <div class="gallery-grid" id="cms-galerie" hidden></div>
+
+      <div id="galerie-attente">
+      <p class="notice" style="margin-bottom:30px;">Les premières photos du club arrivent bientôt : en attendant, voici les grands moments que cette galerie mettra en images.</p>
       <div class="gallery-grid">
-        <div class="photo-card reveal" data-category="tournois">
+        <div class="photo-card" data-category="tournois">
           <div class="photo-ph ph-1"><div><span class="icon">🏆</span><span class="label">Championnat Régional<br>Franche-Comté</span></div></div>
           <div class="cap"><strong>Tournoi à la Salle Jean Zay</strong>Photo à venir — février 2026</div>
         </div>
-        <div class="photo-card reveal" data-category="tournois">
+        <div class="photo-card" data-category="tournois">
           <div class="photo-ph ph-1"><div><span class="icon">🧩</span><span class="label">Besançon TH3<br>Multiplex national</span></div></div>
           <div class="cap"><strong>Tournoi multiplex à 6 clubs</strong>Photo à venir — janvier 2026</div>
         </div>
-        <div class="photo-card reveal" data-category="entrainements">
+        <div class="photo-card" data-category="seances">
           <div class="photo-ph ph-2"><div><span class="icon">📖</span><span class="label">Séance du mercredi</span></div></div>
           <div class="cap"><strong>Séance hebdomadaire</strong>Centre Pierre Mendès-France</div>
         </div>
-        <div class="photo-card reveal" data-category="entrainements">
+        <div class="photo-card" data-category="seances">
           <div class="photo-ph ph-2"><div><span class="icon">🌟</span><span class="label">Initiation débutants</span></div></div>
           <div class="cap"><strong>Premiers pas au duplicate</strong>Photo à venir</div>
         </div>
-        <div class="photo-card reveal" data-category="remises">
+        <div class="photo-card" data-category="remises">
           <div class="photo-ph ph-3"><div><span class="icon">🥇</span><span class="label">Remise des prix</span></div></div>
           <div class="cap"><strong>Clôture de tournoi</strong>Photo à venir</div>
         </div>
-        <div class="photo-card reveal" data-category="remises">
+        <div class="photo-card" data-category="remises">
           <div class="photo-ph ph-3"><div><span class="icon">🎉</span><span class="label">Palmarès de saison</span></div></div>
           <div class="cap"><strong>Félicitations aux lauréats</strong>Photo à venir</div>
         </div>
-        <div class="photo-card reveal" data-category="vie">
+        <div class="photo-card" data-category="vie">
           <div class="photo-ph ph-4"><div><span class="icon">👥</span><span class="label">Vie du club</span></div></div>
           <div class="cap"><strong>Les membres du bureau</strong>Photo à venir</div>
         </div>
-        <div class="photo-card reveal" data-category="vie">
+        <div class="photo-card" data-category="vie">
           <div class="photo-ph ph-4"><div><span class="icon">☕</span><span class="label">Pause conviviale</span></div></div>
           <div class="cap"><strong>Entre deux parties</strong>Photo à venir</div>
         </div>
+      </div>
       </div>
 
       <p class="center reveal" style="margin-top:46px;">
@@ -118,7 +120,7 @@
           <img class="brand-logo" src="assets/logo.svg" alt="">
           <strong>Club Bisontin de Scrabble</strong>
         </div>
-        <p>Le rendez-vous des amoureux des mots à Besançon : Scrabble duplicate et tournois, pour tous les niveaux. Débutants bienvenus !</p>
+        <p data-edit="pied.texte" data-edit-label="Présentation du club en bas de chaque page">Le rendez-vous des amoureux des mots à Besançon : Scrabble duplicate et tournois, pour tous les niveaux. Débutants bienvenus !</p>
         <div class="footer-social">
           <!-- Aucune page Facebook / Instagram officielle du club n'a été trouvée à ce jour : à ajouter ici dès son ouverture. -->
         </div>
@@ -136,9 +138,9 @@
       <div>
         <h4>Coordonnées</h4>
         <ul>
-          <li>Centre Pierre Mendès-France<br>3 rue Beauregard, 25000 Besançon</li>
-          <li><a href="tel:+33680132223">06 80 13 22 23</a></li>
-          <li><a href="mailto:bartier.frederic@wanadoo.fr">bartier.frederic@wanadoo.fr</a></li>
+          <li data-cms-adresse>Centre Pierre Mendès-France<br>3 rue Beauregard, 25000 Besançon</li>
+          <li data-cms-si="contact.telephone"><a href="tel:+33680132223" data-cms-lien="tel" data-cms="contact.telephone">06 80 13 22 23</a></li>
+          <li><a href="mailto:bartier.frederic@wanadoo.fr" data-cms-lien="email" data-cms="contact.email">bartier.frederic@wanadoo.fr</a></li>
         </ul>
       </div>
       <div>
@@ -152,11 +154,13 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Club Bisontin de Scrabble — Association loi 1901</span>
-      <a href="mentions-legales.html">Mentions légales</a>
+      <span class="footer-bottom-liens"><a href="mentions-legales.html">Mentions légales</a> · <a class="footer-admin" href="admin/">🔒 Espace administrateur</a></span>
     </div>
   </div>
 </footer>
 
+<script src="js/contenu.js"></script>
+<script src="js/cms.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

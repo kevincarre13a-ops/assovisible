@@ -1,0 +1,9 @@
+{
+  "name": "club-bisontin-scrabble",
+  "private": true,
+  "type": "module",
+  "description": "Site du Club Bisontin de Scrabble et son espace administrateur (Netlify Functions + Blobs).",
+  "dependencies": {
+    "@netlify/blobs": "^11.1.9"
+  }
+}
