@@ -40,7 +40,10 @@ export default async (req, context) => {
         status: 200,
         headers: {
           "content-type": type,
-          "cache-control": "public, max-age=31536000, immutable",
+          // Navigateur : 1 jour. Réseau Netlify : 1 minute, pour qu'une photo supprimée
+          // ne reste pas accessible par son adresse directe.
+          "cache-control": "public, max-age=86400",
+          "netlify-cdn-cache-control": "public, max-age=60",
           "content-disposition": `inline; filename*=UTF-8''${encodeURIComponent(nom)}`,
           "x-content-type-options": "nosniff",
           "content-security-policy": "default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; sandbox"
