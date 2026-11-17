@@ -129,7 +129,7 @@
           montrerConnexion("Votre session a expiré. Merci de vous reconnecter.");
           throw new ErreurSession();
         }
-        if (r.status === 429) throw new Error("Trop d'essais en peu de temps. Patientez une minute, puis réessayez.");
+        if (r.status === 429) throw new Error(rep.erreur || "Trop d'essais en peu de temps. Patientez quelques minutes, puis réessayez.");
         if (!r.ok) throw new Error(rep.erreur || "Une erreur est survenue. Réessayez dans un instant.");
         return rep;
       });
