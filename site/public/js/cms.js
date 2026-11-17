@@ -488,11 +488,55 @@
   }
   var secours = setTimeout(reveler, 2500);
 
-  var requete = window.fetch
-    ? fetch("/api/contenu", { cache: "no-store", headers: { Accept: "application/json" } })
-    : Promise.reject(new Error("fetch indisponible"));
+  // Aperçu : l'espace administrateur ouvre le site avec « ?apercu=1 » pour montrer les
+  // modifications enregistrées mais pas encore mises en ligne (réservé à l'administrateur connecté).
+  var apercu = false;
+  try {
+    if (/[?&]apercu=1(&|$)/.test(location.search)) sessionStorage.setItem("cbs-apercu", "1");
+    apercu = sessionStorage.getItem("cbs-apercu") === "1";
+  } catch (e) { apercu = /[?&]apercu=1(&|$)/.test(location.search); }
+
+  function quitterApercu() {
+    try { sessionStorage.removeItem("cbs-apercu"); } catch (e) { /* rien */ }
+    location.href = location.pathname + location.hash;
+  }
+
+  function bandeauApercu() {
+    var b = document.createElement("div");
+    b.setAttribute("role", "status");
+    b.style.cssText = "position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#FFF4D6;border-top:4px solid #CB9B3C;color:#2E2418;" +
+      "font:700 16px/1.4 Arial,sans-serif;padding:12px 16px;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:center;box-shadow:0 -4px 14px rgba(0,0,0,.15)";
+    b.appendChild(document.createTextNode("👀 Aperçu : vous voyez vos modifications, elles ne sont pas encore en ligne."));
+    var retour = document.createElement("a");
+    retour.href = "/admin/";
+    retour.textContent = "← Retour à l'espace administrateur";
+    retour.style.cssText = "color:#1E4E7E";
+    var quitter = document.createElement("button");
+    quitter.type = "button";
+    quitter.textContent = "Quitter l'aperçu";
+    quitter.style.cssText = "font:700 15px Arial,sans-serif;padding:6px 14px;border-radius:8px;border:2px solid #5E3A1A;background:#fff;color:#5E3A1A;cursor:pointer";
+    quitter.addEventListener("click", quitterApercu);
+    b.appendChild(retour);
+    b.appendChild(quitter);
+    document.body.appendChild(b);
+    document.body.style.paddingBottom = "70px";
+  }
+
+  function lire(url, entetes) {
+    return fetch(url, { cache: "no-store", credentials: "same-origin", headers: entetes })
+      .then(function (r) { return r.ok ? r.json() : null; });
+  }
+
+  var requete = !window.fetch
+    ? Promise.reject(new Error("fetch indisponible"))
+    : apercu
+      ? lire("/api/contenu?brouillon=1", { Accept: "application/json", "x-cbs": "1" }).then(function (rep) {
+          if (rep && rep.sections) { bandeauApercu(); return rep; }
+          try { sessionStorage.removeItem("cbs-apercu"); } catch (e) { /* rien */ }
+          return lire("/api/contenu", { Accept: "application/json" });
+        })
+      : lire("/api/contenu", { Accept: "application/json" });
   requete
-    .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (rep) {
       if (rep && rep.sections && typeof rep.sections === "object") {
         donnees = fusion(rep.sections);

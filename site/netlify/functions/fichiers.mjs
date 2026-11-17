@@ -75,13 +75,8 @@ export default async (req, context) => {
       return json({ ok: true, id: nouvelId, url: `/api/fichiers/${nouvelId}`, type });
     }
 
-    if (req.method === "DELETE" && id) {
-      const refus = exigerAdmin(req);
-      if (refus) return refus;
-      if (!RE_ID.test(id)) return json({ erreur: "Fichier introuvable." }, 404);
-      await magasin().delete(id);
-      return json({ ok: true });
-    }
+    // Pas de suppression directe : une photo ou un document qui ne sert plus
+    // est supprimé au moment de la mise en ligne (voir publication.mjs).
 
     return json({ erreur: "Méthode non autorisée." }, 405);
   } catch (e) {

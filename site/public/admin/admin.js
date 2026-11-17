@@ -11,10 +11,12 @@
   var bandeau = document.getElementById("bandeau");
   var barreActions = document.getElementById("barre-actions");
   var principal = document.getElementById("contenu-principal");
+  var barrePublication = document.getElementById("barre-publication");
 
   var etat = {
     contenu: null,        // contenus affichés (origine + modifications)
     sale: false,          // un formulaire contient des changements non enregistrés
+    enAttente: [],        // sections enregistrées mais pas encore mises en ligne
     ignorerHash: false,
     textesOrigine: {}     // textes d'origine lus dans les pages du site
   };
@@ -141,6 +143,8 @@
   function enregistrer(section, valeur) {
     return appel("PUT", "/api/contenu/" + section, { valeur: valeur }).then(function (rep) {
       etat.contenu[section] = rep.valeur;
+      if (etat.enAttente.indexOf(section) === -1) etat.enAttente.push(section);
+      majBarrePublication();
       return rep.valeur;
     });
   }
@@ -149,10 +153,8 @@
     return appel("POST", "/api/fichiers", blob, { "content-type": blob.type || "application/octet-stream", "x-cbs-nom": encodeURIComponent(nom || "") });
   }
 
-  function supprimerFichier(id) {
-    if (!fichierUrl(id)) return Promise.resolve();
-    return appel("DELETE", "/api/fichiers/" + id).catch(function () { /* sans gravité */ });
-  }
+  // Les photos et documents qui ne servent plus sont supprimés par le serveur
+  // au moment de la mise en ligne : rien à supprimer ici.
 
   function gererErreur(e) {
     if (e instanceof ErreurSession) return;
@@ -366,6 +368,8 @@
     etat.contenu = null;
     etat.sale = false;
     barreActions.hidden = true;
+    barrePublication.hidden = true;
+    etat.enAttente = [];
     vider(app);
     effacerMessage();
     if (texteInfo) message("info", "ℹ️ " + texteInfo);
@@ -432,9 +436,13 @@
      Démarrage
      ========================================================= */
   function chargerContenu() {
-    return fetch("/api/contenu", { cache: "no-store", credentials: "same-origin" })
+    return fetch("/api/contenu?brouillon=1", { cache: "no-store", credentials: "same-origin", headers: { "x-cbs": "1" } })
       .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
-      .then(function (rep) { etat.contenu = fusion(rep.sections || {}); })
+      .then(function (rep) {
+        etat.contenu = fusion(rep.sections || {});
+        etat.enAttente = liste(rep.enAttente);
+        majBarrePublication();
+      })
       .catch(function () { throw new Error("Impossible de charger les contenus du site. Vérifiez votre connexion internet, puis rechargez la page."); });
   }
 
@@ -467,6 +475,7 @@
 
   document.getElementById("deconnexion").addEventListener("click", function () {
     if (etat.sale && !window.confirm("Vous n'avez pas enregistré vos modifications.\n\nSe déconnecter quand même ?")) return;
+    if (!etat.sale && etat.enAttente.length && !window.confirm("Certaines modifications ne sont pas encore en ligne.\n\nElles restent gardées : vous pourrez cliquer sur « Mettre en ligne » à votre prochaine connexion.\n\nSe déconnecter quand même ?")) return;
     etat.sale = false;
     fetch("/api/deconnexion", { method: "POST", credentials: "same-origin", headers: { "x-cbs": "1" } })
       .catch(function () {})
@@ -476,6 +485,76 @@
         montrerConnexion("Vous êtes bien déconnecté. À bientôt !");
       });
   });
+
+  /* =========================================================
+     Mise en ligne : tout part sur le site en une seule fois
+     ========================================================= */
+  var RAPPEL = " Ce n'est pas encore sur le site : cliquez sur « 🚀 Mettre en ligne » quand vous avez tout fini.";
+  var NOMS_SECTIONS = {
+    calendrier: "Calendrier", calendrierDoc: "Calendrier PDF", actualites: "Actualités", galerie: "Photos",
+    textes: "Textes du site", seances: "Séances", contact: "Contact et chiffres", tarifs: "Tarifs",
+    bureau: "Bureau", classement: "Classement", palmares: "Palmarès", archives: "Archives"
+  };
+  function apercu(chemin) {
+    var morceaux = String(chemin).split("#");
+    return { href: morceaux[0] + "?apercu=1" + (morceaux[1] ? "#" + morceaux[1] : ""), texte: "👀 Voir l'aperçu →" };
+  }
+
+  function majBarrePublication() {
+    if (!barrePublication) return;
+    vider(barrePublication);
+    if (!etat.contenu) { barrePublication.hidden = true; return; }
+    barrePublication.hidden = false;
+    if (!etat.enAttente.length) {
+      barrePublication.className = "barre-publication a-jour";
+      barrePublication.appendChild(h("p", { texte: "✅ Tout est en ligne : le site est à jour." }));
+      return;
+    }
+    var noms = etat.enAttente.map(function (s) { return NOMS_SECTIONS[s] || s; });
+    noms = noms.filter(function (n, i) { return noms.indexOf(n) === i; });
+    barrePublication.className = "barre-publication en-attente";
+    barrePublication.appendChild(h("div", { classe: "texte-publication" }, [
+      h("strong", { texte: "📝 Vous avez des modifications pas encore en ligne" }),
+      h("span", { texte: "Rubriques modifiées : " + noms.join(", ") + "." })
+    ]));
+    barrePublication.appendChild(h("div", { classe: "boutons-publication" }, [
+      h("a", { classe: "bouton bouton-gris", href: "/?apercu=1", target: "_blank", rel: "noopener", texte: "👀 Voir l'aperçu" }),
+      h("button", { type: "button", classe: "bouton bouton-vert bouton-publier", onclick: publier }, ["🚀 Mettre en ligne"])
+    ]));
+    barrePublication.appendChild(h("button", { type: "button", classe: "lien-annuler", onclick: annulerModifications }, ["Annuler ces modifications"]));
+  }
+
+  function publier() {
+    if (etat.sale && !window.confirm("Le formulaire ouvert contient des changements non enregistrés : ils ne seront pas mis en ligne.\n\nContinuer quand même ?")) return;
+    if (!window.confirm("Mettre en ligne toutes vos modifications ?\n\nElles seront visibles par tous les visiteurs du site.")) return;
+    var bouton = barrePublication.querySelector(".bouton-publier");
+    if (bouton) { bouton.disabled = true; bouton.textContent = "⏳ Mise en ligne…"; }
+    effacerMessage();
+    appel("POST", "/api/publier").then(function () {
+      etat.enAttente = [];
+      majBarrePublication();
+      message("ok", "🚀 C'est en ligne ! Toutes vos modifications sont maintenant visibles sur le site.", { href: "/", texte: "Voir le site →" });
+    }).catch(function (err) {
+      majBarrePublication();
+      if (err instanceof ErreurSession) return;
+      message("erreur", "❌ " + err.message + " Vos modifications sont toujours gardées : réessayez dans un instant.");
+    });
+  }
+
+  function annulerModifications() {
+    if (!window.confirm("Annuler toutes les modifications qui ne sont pas encore en ligne ?\n\nLe site reste tel qu'il est actuellement en ligne.")) return;
+    effacerMessage();
+    appel("POST", "/api/annuler-modifications").then(function () {
+      etat.sale = false;
+      return chargerContenu();
+    }).then(function () {
+      afficher();
+      message("info", "↩️ Les modifications ont été annulées. L'espace administrateur montre de nouveau le site tel qu'il est en ligne.");
+    }).catch(function (err) {
+      if (err instanceof ErreurSession) return;
+      message("erreur", "❌ " + err.message);
+    });
+  }
 
   /* =========================================================
      Tableau de bord
@@ -500,7 +579,8 @@
       h("ol", {}, [
         h("li", { texte: "Cliquez sur ce que vous voulez modifier ci-dessous." }),
         h("li", { texte: "Faites vos changements." }),
-        h("li", { texte: "Cliquez sur le bouton vert « Enregistrer ». C'est en ligne tout de suite !" })
+        h("li", { texte: "Cliquez sur le bouton vert « Enregistrer ». Vos changements sont gardés, mais pas encore visibles sur le site." }),
+        h("li", {}, ["Quand vous avez tout fini, cliquez sur ", h("strong", { texte: "« 🚀 Mettre en ligne »" }), " en haut de l'écran : tout part sur le site en une seule fois."])
       ])
     ]));
     var grille = h("div", { classe: "tuiles" });
@@ -667,9 +747,7 @@
     resume: function (a) { return { titre: a.tournoi, lignes: [dateLongue(a.date), a.lieu ? "📍 " + a.lieu : ""] }; }
   };
 
-  function voirSurLeSite(cfg) {
-    return { href: "/" + cfg.page, texte: "Voir sur le site →" };
-  }
+  function voirSurLeSite(cfg) { return apercu("/" + cfg.page); }
 
   // Liste d'éléments avec boutons Modifier / Supprimer (et Monter / Descendre si l'ordre compte)
   function rendreListe(cfg, cible, surligne) {
@@ -737,11 +815,10 @@
     var donnees = liste(etat.contenu[cfg.section]).slice();
     var r = cfg.resume(donnees[i]);
     if (!window.confirm("Voulez-vous vraiment supprimer " + cfg.nomElement + " ?\n\n« " + (r.titre || "") + " »\n\nCette action est définitive.")) return;
-    var retire = donnees.splice(i, 1)[0];
+    donnees.splice(i, 1);
     effacerMessage();
     enregistrer(cfg.section, donnees).then(function () {
-      if (retire && retire.photo) supprimerFichier(retire.photo);
-      apresEnregistrement(cfg, "🗑️ C'est supprimé. Le site est à jour.", -1);
+      apresEnregistrement(cfg, "🗑️ C'est supprimé." + RAPPEL, -1);
     }).catch(gererErreur);
   }
 
@@ -752,7 +829,7 @@
     var tmp = donnees[i]; donnees[i] = donnees[j]; donnees[j] = tmp;
     effacerMessage();
     enregistrer(cfg.section, donnees).then(function () {
-      apresEnregistrement(cfg, "✅ L'ordre est enregistré. Le site est à jour.", j);
+      apresEnregistrement(cfg, "✅ L'ordre est enregistré." + RAPPEL, j);
     }).catch(gererErreur);
   }
 
@@ -842,8 +919,7 @@
           position = index;
         }
         return enregistrer(cfg.section, nouvelle).then(function () {
-          if (anciennePhoto && anciennePhoto !== brouillon.photo) supprimerFichier(anciennePhoto);
-          apresEnregistrement(cfg, nouveau ? "✅ C'est ajouté ! Le site est à jour." : "✅ C'est enregistré ! Le site est à jour.", position);
+          apresEnregistrement(cfg, (nouveau ? "✅ C'est ajouté !" : "✅ C'est enregistré !") + RAPPEL, position);
         });
       }).catch(function (err) {
         bouton.disabled = false;
@@ -890,9 +966,8 @@
         if (!window.confirm("Revenir au calendrier 2026-2027 fourni à la création du site ?")) return;
         effacerMessage();
         enregistrer("calendrierDoc", { fichier: "", nom: "" }).then(function () {
-          supprimerFichier(doc.fichier);
           afficher();
-          message("ok", "✅ C'est fait. Le calendrier d'origine est de nouveau proposé.", { href: "/tournois-resultats.html#calendrier-complet", texte: "Voir sur le site →" });
+          message("ok", "✅ C'est fait : le calendrier d'origine sera de nouveau proposé." + RAPPEL, apercu("/tournois-resultats.html#calendrier-complet"));
         }).catch(gererErreur);
       } }) : null,
       entree
@@ -907,9 +982,8 @@
       etatEnvoi.textContent = "⏳ Envoi du document… merci de patienter.";
       envoyerFichier(f, f.name).then(function (rep) {
         return enregistrer("calendrierDoc", { fichier: rep.id, nom: f.name }).then(function () {
-          if (doc.fichier) supprimerFichier(doc.fichier);
           afficher();
-          message("ok", "✅ Le nouveau calendrier PDF est en ligne. Pensez à mettre à jour la saison dans « Textes du site » → « Tournois & résultats ».", { href: "/tournois-resultats.html#calendrier-complet", texte: "Voir sur le site →" });
+          message("ok", "✅ Le nouveau calendrier PDF est enregistré. Pensez aussi à changer la saison dans « Textes du site » → « Tournois & résultats »." + RAPPEL, apercu("/tournois-resultats.html#calendrier-complet"));
         });
       }).catch(function (err) { etatEnvoi.hidden = true; entree.value = ""; gererErreur(err); });
     });
@@ -1006,7 +1080,7 @@
       enregistrer("contact", valeur).then(function () {
         etat.sale = false;
         bouton.disabled = false;
-        message("ok", "✅ C'est enregistré ! Le site est à jour.", { href: "/adherer-contact.html", texte: "Voir sur le site →" });
+        message("ok", "✅ C'est enregistré !" + RAPPEL, apercu("/adherer-contact.html"));
       }).catch(function (err) { bouton.disabled = false; gererErreur(err); });
     });
     app.appendChild(form);
@@ -1144,7 +1218,7 @@
         enregistrer("textes", nouveaux).then(function () {
           etat.sale = false;
           bouton.disabled = false;
-          message("ok", "✅ Les textes sont enregistrés ! Le site est à jour.", { href: "/" + page.fichier, texte: "Voir sur le site →" });
+          message("ok", "✅ Les textes sont enregistrés !" + RAPPEL, apercu("/" + page.fichier));
         }).catch(function (err) { bouton.disabled = false; gererErreur(err); });
       });
       zone.appendChild(form);

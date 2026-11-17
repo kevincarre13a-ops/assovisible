@@ -209,3 +209,16 @@ fieldset{ border:none; margin:0; padding:0; min-width:0; }
   position:sticky; bottom:0; z-index:5; background:#fff;
   padding:16px 0; margin-bottom:-10px; box-shadow:0 -8px 14px -10px rgba(46,36,24,.35);
 }
+
+/* ---------- Mise en ligne ---------- */
+.barre-publication{ border-radius:var(--rayon); margin-bottom:20px; display:flex; flex-wrap:wrap; align-items:center; gap:14px 20px; }
+.barre-publication.a-jour{ padding:10px 18px; background:var(--vert-clair); border:2px solid #A5D6A7; color:var(--vert-fonce); font-weight:700; }
+.barre-publication.a-jour p{ margin:0; }
+.barre-publication.en-attente{ padding:18px 22px; background:var(--jaune-clair); border:3px solid var(--or); box-shadow:var(--ombre); }
+.texte-publication{ flex:1 1 320px; display:flex; flex-direction:column; gap:4px; }
+.texte-publication strong{ font-size:1.15rem; color:var(--bois-fonce); }
+.texte-publication span{ color:var(--encre-douce); }
+.boutons-publication{ display:flex; gap:10px; flex-wrap:wrap; }
+.bouton-publier{ font-size:1.15rem; padding-left:26px; padding-right:26px; }
+.lien-annuler{ flex-basis:100%; text-align:left; background:none; border:none; padding:0; color:var(--rouge); text-decoration:underline; font:inherit; font-size:.95rem; cursor:pointer; }
+@media (max-width:600px){ .boutons-publication, .boutons-publication .bouton{ width:100%; } }
