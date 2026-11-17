@@ -1042,7 +1042,18 @@
           var estPied = cle.indexOf("pied.") === 0;
           if (page.seulement ? cle.indexOf(page.seulement) !== 0 : estPied) return;
           vus[cle] = true;
-          champs.push({ cle: cle, libelle: e.getAttribute("data-edit-label") || cle, origine: normal(e.textContent), masquable: e.hasAttribute("data-edit-vide") });
+          var groupe;
+          if (estPied) groupe = "Bas de page";
+          else if (e.closest(".page-hero, .hero")) groupe = "Haut de la page";
+          else {
+            var titres = doc.querySelectorAll("main h2");
+            groupe = "";
+            for (var t = 0; t < titres.length; t++) {
+              if (titres[t] === e || (titres[t].compareDocumentPosition(e) & Node.DOCUMENT_POSITION_FOLLOWING)) groupe = normal(titres[t].textContent);
+            }
+            groupe = groupe ? "Partie « " + groupe + " »" : "Haut de la page";
+          }
+          champs.push({ cle: cle, libelle: e.getAttribute("data-edit-label") || cle, origine: normal(e.textContent), masquable: e.hasAttribute("data-edit-vide"), groupe: groupe });
         });
         etat.textesOrigine[page.id] = champs;
         return champs;
@@ -1076,19 +1087,26 @@
       vider(zone);
       zone.appendChild(h("div", { classe: "aide" }, [
         h("strong", { texte: "Astuce : " }),
-        "modifiez les textes ci-dessous puis cliquez sur le bouton vert en bas de la page. Le bouton « Remettre le texte d'origine » annule vos changements sur un texte."
+        "modifiez les textes ci-dessous, puis cliquez sur le bouton vert « Enregistrer » en bas de l'écran. Si vous changez d'avis sur un texte, le bouton « Remettre le texte d'origine » apparaît juste en dessous."
       ]));
       var textes = etat.contenu.textes || {};
       var form = h("form", { classe: "formulaire carte", novalidate: true });
       var lecteurs = [];
+      var groupeCourant = null;
       champsPage.forEach(function (f, n) {
+        if (f.groupe !== groupeCourant) {
+          groupeCourant = f.groupe;
+          form.appendChild(h("h2", { classe: "groupe-textes", texte: f.groupe }));
+        }
         var actuel = Object.prototype.hasOwnProperty.call(textes, f.cle) ? textes[f.cle] : f.origine;
         var id = "texte-" + n;
-        var ta = h("textarea", { id: id, rows: Math.min(10, Math.max(2, Math.ceil(actuel.length / 70) + 1)), maxlength: 4000 });
+        var ta = h("textarea", { id: id, classe: actuel.length < 70 ? "court" : null, rows: actuel.length < 70 ? 1 : Math.min(10, Math.max(2, Math.ceil(actuel.length / 70) + 1)), maxlength: 4000 });
         ta.value = actuel;
         var reinit = h("button", { type: "button", classe: "bouton bouton-gris bouton-petit reinit", texte: "↺ Remettre le texte d'origine" });
-        reinit.addEventListener("click", function () { ta.value = f.origine; etat.sale = true; ta.focus(); });
-        ta.addEventListener("input", function () { etat.sale = true; });
+        function majReinit() { reinit.hidden = normal(ta.value) === f.origine; }
+        reinit.addEventListener("click", function () { ta.value = f.origine; etat.sale = true; majReinit(); ta.focus(); });
+        ta.addEventListener("input", function () { etat.sale = true; majReinit(); });
+        majReinit();
         form.appendChild(h("div", { classe: "champ" }, [
           h("label", { classe: "titre-champ", "for": id, texte: f.libelle }),
           f.masquable ? h("span", { classe: "aide-champ", texte: "Si vous videz entièrement ce texte, il ne s'affichera plus sur le site." }) : null,
@@ -1100,7 +1118,7 @@
       });
       if (!lecteurs.length) form.appendChild(h("p", { texte: "Aucun texte modifiable sur cette page." }));
       var bouton = h("button", { type: "submit", classe: "bouton bouton-vert", texte: "💾 Enregistrer les textes de cette page" });
-      form.appendChild(h("div", { classe: "boutons-form" }, [bouton]));
+      form.appendChild(h("div", { classe: "boutons-form collant" }, [bouton]));
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var vides = lecteurs.filter(function (l) {

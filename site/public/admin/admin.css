@@ -197,3 +197,15 @@ fieldset{ border:none; margin:0; padding:0; min-width:0; }
   .element .actions{ width:100%; }
   .element .actions .bouton{ flex:1; }
 }
+
+/* ---------- Textes du site : intertitres et bouton toujours visible ---------- */
+.groupe-textes{
+  font-size:1.15rem; margin:34px 0 18px; padding:10px 14px; border-radius:10px;
+  background:var(--creme); border-left:6px solid var(--bois);
+}
+.formulaire .groupe-textes:first-child{ margin-top:0; }
+.formulaire textarea.court{ min-height:58px; }
+.boutons-form.collant{
+  position:sticky; bottom:0; z-index:5; background:#fff;
+  padding:16px 0; margin-bottom:-10px; box-shadow:0 -8px 14px -10px rgba(46,36,24,.35);
+}
