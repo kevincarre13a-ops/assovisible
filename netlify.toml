@@ -2,6 +2,12 @@
   base = "site"
   publish = "public"
 
+# Le HTML est servi tel quel : pas de réécriture des liens ni des attributs.
+[build.processing]
+  skip_processing = true
+[build.processing.html]
+  pretty_urls = false
+
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
