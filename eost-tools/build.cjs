@@ -164,7 +164,7 @@ for(const f of fs.readdirSync(OUT).filter(x=>x.endsWith('.html')&&x!=='404.html'
  let h=fr.replace('__LANGSW__',sw('br',f)).replace('__ALT__',alt(f,'br')).split('assets/').join('../assets/').replace('<html lang="fr">','<html lang="br">').replace('name="lang" value="fr"','name="lang" value="br"');
  for(const [k,v] of dict)h=h.split(k).join(v);
  h=h.replace(/>([^<>]+)</g,(m,t)=>Object.prototype.hasOwnProperty.call(txt,t)?'>'+txt[t]+'<':m);
- if(!done.has(f))h=h.replace('</section>','</section>'+banner);
+// bandeau « traduction en cours » retiré à la demande de l'association (17 nov. 2026)
  fs.writeFileSync(path.join(OUT,'br',f),nb(h));
 }
 let n=fs.readFileSync(path.join(OUT,'404.html'),'utf8').replace('__LANGSW__','').replace('__ALT__','');fs.writeFileSync(path.join(OUT,'404.html'),n);
