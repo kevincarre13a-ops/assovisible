@@ -12,6 +12,10 @@
   to = "/etudes-outils.html"
   status = 301
 [[redirects]]
+  from = "/%C3%A9tudes-outils"
+  to = "/etudes-outils.html"
+  status = 301
+[[redirects]]
   from = "/la-sialb"
   to = "/la-sialb.html"
   status = 200
