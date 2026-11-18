@@ -1,0 +1,116 @@
+{
+  "url": "https://www.sialb.fr/contact",
+  "meta": {
+    "title": "Contact | SIALB",
+    "og:title": "Contact | SIALB",
+    "og:url": "https://www.sialb.fr/contact",
+    "og:site_name": "SIALB",
+    "og:type": "website",
+    "twitter:card": "summary_large_image",
+    "twitter:title": "Contact | SIALB",
+    "canonical": "https://www.sialb.fr/contact"
+  },
+  "titres": [
+    {
+      "niveau": "H1",
+      "texte": "Contact"
+    }
+  ],
+  "liens": [
+    {
+      "texte": "",
+      "href": "https://www.sialb.fr/",
+      "cible": "_self"
+    },
+    {
+      "texte": "Accueil",
+      "href": "https://www.sialb.fr/",
+      "cible": "_self"
+    },
+    {
+      "texte": "La SIALB",
+      "href": "https://www.sialb.fr/la-sialb",
+      "cible": "_self"
+    },
+    {
+      "texte": "Les rencontres",
+      "href": "https://www.sialb.fr/les-rencontres",
+      "cible": "_self"
+    },
+    {
+      "texte": "Études & outils",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils",
+      "cible": "_self"
+    },
+    {
+      "texte": "Carnets",
+      "href": "https://www.sialb.fr/carnets",
+      "cible": "_self"
+    },
+    {
+      "texte": "Agenda",
+      "href": "https://www.sialb.fr/news",
+      "cible": "_self"
+    },
+    {
+      "texte": "Contact",
+      "href": "https://www.sialb.fr/contact",
+      "cible": "_self"
+    },
+    {
+      "texte": "contact@sialb.fr",
+      "href": "mailto:contact@sialb.fr",
+      "cible": ""
+    }
+  ],
+  "formulaires": [
+    {
+      "champs": [
+        {
+          "type": "text",
+          "nom": "nom",
+          "libelle": "Nom"
+        },
+        {
+          "type": "text",
+          "nom": "prénom",
+          "libelle": "Prénom"
+        },
+        {
+          "type": "email",
+          "nom": "email",
+          "libelle": "Email"
+        },
+        {
+          "type": "text",
+          "nom": "objet",
+          "libelle": "Objet"
+        },
+        {
+          "type": "textarea",
+          "nom": "",
+          "libelle": "Message"
+        }
+      ]
+    }
+  ],
+  "styles": {
+    "corps": {
+      "police": "avenir-lt-w01_35-light1475496, sans-serif",
+      "taille": "16px",
+      "graisse": "400",
+      "couleur": "rgb(0, 0, 0)"
+    },
+    "titre1": {
+      "police": "oswald-medium, oswald, sans-serif",
+      "taille": "46px",
+      "graisse": "700",
+      "couleur": "rgb(0, 0, 0)"
+    },
+    "fond": "rgba(0, 0, 0, 0)"
+  },
+  "iframes": [],
+  "videos": [],
+  "entete": "Études & outils\n\nBiographie et bibliographie d'Étienne de la Boétie -\n\nManuscrits du Discours de la servitude et éditions du XVIème siècle du texte -\n\nArticles, thèse et mémoires - Publications de la SIALB -\n\nBibliographie et sitographie\n\nAccueil\n\nLa SIALB\n\nLes rencontres\n\nÉtudes & outils\n\nCarnets\n\nAgenda\n\nContact",
+  "pied": "Société Internationale des Amis de La Boétie\n\nHôtel de Ville de Sarlat, Place de la liberté, CS 80210,  24206, Sarlat-la-Canéda Cedex\n\ncontact@sialb.fr\n\n06 00 00 00 00\n\n© 2021 SIALB / Thomas Gerbier / Wix.com"
+}

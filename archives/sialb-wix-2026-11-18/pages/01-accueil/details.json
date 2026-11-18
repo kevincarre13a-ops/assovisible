@@ -1,0 +1,127 @@
+{
+  "url": "https://www.sialb.fr/",
+  "meta": {
+    "title": "Accueil | SIALB",
+    "og:title": "Accueil | SIALB",
+    "og:url": "https://www.sialb.fr",
+    "og:site_name": "SIALB",
+    "og:type": "website",
+    "twitter:card": "summary_large_image",
+    "twitter:title": "Accueil | SIALB",
+    "canonical": "https://www.sialb.fr/"
+  },
+  "titres": [
+    {
+      "niveau": "H1",
+      "texte": "Société Internationale des Amis de La Boétie"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Les dernières rencontres"
+    }
+  ],
+  "liens": [
+    {
+      "texte": "",
+      "href": "https://www.sialb.fr/",
+      "cible": "_self"
+    },
+    {
+      "texte": "Accueil",
+      "href": "https://www.sialb.fr/",
+      "cible": "_self"
+    },
+    {
+      "texte": "La SIALB",
+      "href": "https://www.sialb.fr/la-sialb",
+      "cible": "_self"
+    },
+    {
+      "texte": "Les rencontres",
+      "href": "https://www.sialb.fr/les-rencontres",
+      "cible": "_self"
+    },
+    {
+      "texte": "Études & outils",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils",
+      "cible": "_self"
+    },
+    {
+      "texte": "Carnets",
+      "href": "https://www.sialb.fr/carnets",
+      "cible": "_self"
+    },
+    {
+      "texte": "Agenda",
+      "href": "https://www.sialb.fr/news",
+      "cible": "_self"
+    },
+    {
+      "texte": "Contact",
+      "href": "https://www.sialb.fr/contact",
+      "cible": "_self"
+    },
+    {
+      "texte": "Facebook",
+      "href": "https://www.facebook.com/wix",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Twitter",
+      "href": "https://www.twitter.com/wix",
+      "cible": "_blank"
+    },
+    {
+      "texte": "LinkedIn",
+      "href": "https://www.linkedin.com/company/wix-com",
+      "cible": "_blank"
+    },
+    {
+      "texte": "télécharger le programme",
+      "href": "https://www.sialb.fr/_files/ugd/9bb91e_f312ddb6850748018a7634fe47baed56.pdf",
+      "cible": "_blank"
+    },
+    {
+      "texte": "télécharger le programme",
+      "href": "https://www.sialb.fr/_files/ugd/9bb91e_01185c7d80264b5a867ea2d608836c34.pdf",
+      "cible": "_blank"
+    },
+    {
+      "texte": "contact@sialb.fr",
+      "href": "mailto:contact@sialb.fr",
+      "cible": ""
+    }
+  ],
+  "formulaires": [],
+  "styles": {
+    "corps": {
+      "police": "avenir-lt-w01_35-light1475496, sans-serif",
+      "taille": "16px",
+      "graisse": "400",
+      "couleur": "rgb(0, 0, 0)"
+    },
+    "titre1": {
+      "police": "oswald-medium, oswald, sans-serif",
+      "taille": "31px",
+      "graisse": "700",
+      "couleur": "rgb(0, 0, 0)"
+    },
+    "titre2": {
+      "police": "oswald-medium, oswald, sans-serif",
+      "taille": "27px",
+      "graisse": "400",
+      "couleur": "rgb(0, 0, 0)"
+    },
+    "lien": {
+      "police": "Arial, Helvetica, sans-serif",
+      "taille": "10px",
+      "graisse": "400",
+      "couleur": "rgb(0, 0, 238)"
+    },
+    "fond": "rgba(0, 0, 0, 0)"
+  },
+  "iframes": [],
+  "videos": [],
+  "entete": "Études & outils\n\nBiographie et bibliographie d'Étienne de la Boétie -\n\nManuscrits du Discours de la servitude et éditions du XVIème siècle du texte -\n\nArticles, thèse et mémoires - Publications de la SIALB -\n\nBibliographie et sitographie\n\nAccueil\n\nLa SIALB\n\nLes rencontres\n\nÉtudes & outils\n\nCarnets\n\nAgenda\n\nContact",
+  "pied": "Société Internationale des Amis de La Boétie\n\nHôtel de Ville de Sarlat, Place de la liberté, CS 80210,  24206, Sarlat-la-Canéda Cedex\n\ncontact@sialb.fr\n\n06 00 00 00 00\n\n© 2021 SIALB / Thomas Gerbier / Wix.com"
+}

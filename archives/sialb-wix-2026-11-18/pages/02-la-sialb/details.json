@@ -1,0 +1,446 @@
+{
+  "url": "https://www.sialb.fr/la-sialb",
+  "meta": {
+    "title": "La SIALB | SIALB",
+    "og:title": "La SIALB | SIALB",
+    "og:url": "https://www.sialb.fr/la-sialb",
+    "og:site_name": "SIALB",
+    "og:type": "website",
+    "twitter:card": "summary_large_image",
+    "twitter:title": "La SIALB | SIALB",
+    "canonical": "https://www.sialb.fr/la-sialb"
+  },
+  "titres": [
+    {
+      "niveau": "H1",
+      "texte": "La SIALB"
+    },
+    {
+      "niveau": "H1",
+      "texte": "L'association"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Présentation de la SIALB"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Le bureau de la SIALB"
+    },
+    {
+      "niveau": "H3",
+      "texte": "John O'Brien"
+    },
+    {
+      "niveau": "H3",
+      "texte": "Julien Siegle"
+    },
+    {
+      "niveau": "H3",
+      "texte": "Laurent Gerbier"
+    },
+    {
+      "niveau": "H3",
+      "texte": "Thomas Gerbier"
+    },
+    {
+      "niveau": "H3",
+      "texte": "Ambre Pérez-Parfait"
+    },
+    {
+      "niveau": "H3",
+      "texte": "Xavier Griffet"
+    },
+    {
+      "niveau": "H3",
+      "texte": "Frédéric Inizan"
+    },
+    {
+      "niveau": "H3",
+      "texte": "Mickaël Boulet"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Adhérer à la SIALB"
+    },
+    {
+      "niveau": "H1",
+      "texte": "Historique"
+    },
+    {
+      "niveau": "H1",
+      "texte": "Les activités de la SIALB"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Avec le Lycée Pré de Cordy de Sarlat"
+    },
+    {
+      "niveau": "H2",
+      "texte": "À Sarlat"
+    },
+    {
+      "niveau": "H1",
+      "texte": "Les partenaires de la SIALB"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Les organismes universitaires"
+    }
+  ],
+  "liens": [
+    {
+      "texte": "",
+      "href": "https://www.sialb.fr/",
+      "cible": "_self"
+    },
+    {
+      "texte": "Accueil",
+      "href": "https://www.sialb.fr/",
+      "cible": "_self"
+    },
+    {
+      "texte": "La SIALB",
+      "href": "https://www.sialb.fr/la-sialb",
+      "cible": "_self"
+    },
+    {
+      "texte": "Les rencontres",
+      "href": "https://www.sialb.fr/les-rencontres",
+      "cible": "_self"
+    },
+    {
+      "texte": "Études & outils",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils",
+      "cible": "_self"
+    },
+    {
+      "texte": "Carnets",
+      "href": "https://www.sialb.fr/carnets",
+      "cible": "_self"
+    },
+    {
+      "texte": "Agenda",
+      "href": "https://www.sialb.fr/news",
+      "cible": "_self"
+    },
+    {
+      "texte": "Contact",
+      "href": "https://www.sialb.fr/contact",
+      "cible": "_self"
+    },
+    {
+      "texte": "L'ASSOCIATION",
+      "href": "https://www.sialb.fr/la-sialb#prsentation",
+      "cible": "_self"
+    },
+    {
+      "texte": "HISTORIQUE",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils",
+      "cible": "_self"
+    },
+    {
+      "texte": "ACTIVITÉS",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils",
+      "cible": "_self"
+    },
+    {
+      "texte": "PARTENAIRES",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils",
+      "cible": "_self"
+    },
+    {
+      "texte": "Présentation de la Société Internationale des Amis de La Boétie",
+      "href": "https://www.sialb.fr/la-sialb#association",
+      "cible": "_self"
+    },
+    {
+      "texte": "Le bureau de l'association",
+      "href": "https://www.sialb.fr/la-sialb#bureau",
+      "cible": "_self"
+    },
+    {
+      "texte": "Adhérer à la SIALB",
+      "href": "https://www.sialb.fr/la-sialb#adhrer",
+      "cible": "_self"
+    },
+    {
+      "texte": "Les partenaires de la SIALB",
+      "href": "https://www.sialb.fr/la-sialb#partenaires",
+      "cible": "_self"
+    },
+    {
+      "texte": "Histoire de l'association",
+      "href": "https://www.sialb.fr/la-sialb#histoire",
+      "cible": "_self"
+    },
+    {
+      "texte": "Les activités de la SIALB auprès du Lycée Pré de Cordy",
+      "href": "https://www.sialb.fr/la-sialb#lyceprdecordy",
+      "cible": "_self"
+    },
+    {
+      "texte": "Haut de page",
+      "href": "https://www.sialb.fr/la-sialb",
+      "cible": "_self"
+    },
+    {
+      "texte": "L'ASSOCIATION",
+      "href": "https://www.sialb.fr/la-sialb#association",
+      "cible": "_self"
+    },
+    {
+      "texte": "HISTORIQUE",
+      "href": "https://www.sialb.fr/la-sialb#historique",
+      "cible": "_self"
+    },
+    {
+      "texte": "ACTIVITÉS",
+      "href": "https://www.sialb.fr/la-sialb#activits",
+      "cible": "_self"
+    },
+    {
+      "texte": "PARTENAIRES",
+      "href": "https://www.sialb.fr/la-sialb#partenaires",
+      "cible": "_self"
+    },
+    {
+      "texte": "Présentation de la Société Internationale des Amis de La Boétie",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils",
+      "cible": "_self"
+    },
+    {
+      "texte": "Le bureau de l'association",
+      "href": "https://www.sialb.fr/la-sialb#bureau",
+      "cible": "_self"
+    },
+    {
+      "texte": "Adhérer à la SIALB",
+      "href": "https://www.sialb.fr/la-sialb#adhrer",
+      "cible": "_self"
+    },
+    {
+      "texte": "Haut de page",
+      "href": "https://www.sialb.fr/la-sialb",
+      "cible": "_self"
+    },
+    {
+      "texte": "La première circulation de la Servitude Volontaire en France et au-delà",
+      "href": "https://www.honorechampion.com/fr/10946-book-08534990-9782745349903.html",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Haut de page",
+      "href": "https://www.sialb.fr/la-sialb",
+      "cible": "_self"
+    },
+    {
+      "texte": "Cliquez sur ce lien pour adhérer à la SIALB via Hello Asso",
+      "href": "https://www.helloasso.com/associations/societe-internationale-des-amis-de-la-boetie",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Haut de page",
+      "href": "https://www.sialb.fr/la-sialb",
+      "cible": "_self"
+    },
+    {
+      "texte": "Histoire de la SIALB",
+      "href": "https://www.sialb.fr/la-sialb#histoire",
+      "cible": "_self"
+    },
+    {
+      "texte": "Les rencontres La Boétie",
+      "href": "https://www.sialb.fr/les-rencontres",
+      "cible": "_self"
+    },
+    {
+      "texte": "Les publications de la SIALB",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils",
+      "cible": "_self"
+    },
+    {
+      "texte": "Haut de page",
+      "href": "https://www.sialb.fr/la-sialb",
+      "cible": "_self"
+    },
+    {
+      "texte": "Les rencontres La Boétie",
+      "href": "https://www.sialb.fr/les-rencontres",
+      "cible": "_self"
+    },
+    {
+      "texte": "Le Lycée Pré de Cordy à Sarlat",
+      "href": "https://www.sialb.fr/la-sialb#lyceprdecordy",
+      "cible": "_self"
+    },
+    {
+      "texte": "Haut de page",
+      "href": "https://www.sialb.fr/la-sialb",
+      "cible": "_self"
+    },
+    {
+      "texte": "À Sarlat",
+      "href": "https://www.sialb.fr/la-sialb#sarlat",
+      "cible": "_self"
+    },
+    {
+      "texte": "Les organismes universitaires",
+      "href": "https://www.sialb.fr/la-sialb#organismesuniversitaires",
+      "cible": "_self"
+    },
+    {
+      "texte": "",
+      "href": "https://www.sarlat.fr/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Ville de Sarlat",
+      "href": "https://www.sarlat.fr/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "",
+      "href": "https://www.la-couleuvrine.com/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Hôtel restaurant La Couleuvrine",
+      "href": "https://www.la-couleuvrine.com/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "",
+      "href": "https://lycee-predecordy-sarlat.com/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Lycée Pré de Cordy",
+      "href": "https://lycee-predecordy-sarlat.com/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "",
+      "href": "https://www.vins-bergeracduras.fr/appellations/pecharmant/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Le Pécharmant",
+      "href": "https://www.vins-bergeracduras.fr/appellations/pecharmant/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "",
+      "href": "https://lefoiegras.fr/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Le Foie Gras",
+      "href": "https://lefoiegras.fr/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "",
+      "href": "http://www.armagnac.fr/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "L'Armagnac",
+      "href": "http://www.armagnac.fr/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "",
+      "href": "https://www.utlspn.fr/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Université du temps libre de Sarlat",
+      "href": "https://www.utlspn.fr/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Haut de page",
+      "href": "https://www.sialb.fr/la-sialb",
+      "cible": "_self"
+    },
+    {
+      "texte": "",
+      "href": "https://www.univ-tours.fr/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Université de Tours",
+      "href": "https://www.univ-tours.fr/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "",
+      "href": "https://www.u-bordeaux-montaigne.fr/fr/index.html",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Université Bordeaux Montaigne",
+      "href": "https://www.u-bordeaux-montaigne.fr/fr/index.html",
+      "cible": "_blank"
+    },
+    {
+      "texte": "",
+      "href": "https://www.univ-tlse2.fr/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Université Toulouse Jean Jaurès",
+      "href": "https://www.univ-tlse2.fr/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Haut de page",
+      "href": "https://www.sialb.fr/la-sialb",
+      "cible": "_self"
+    },
+    {
+      "texte": "contact@sialb.fr",
+      "href": "mailto:contact@sialb.fr",
+      "cible": ""
+    }
+  ],
+  "formulaires": [],
+  "styles": {
+    "corps": {
+      "police": "avenir-lt-w01_35-light1475496, sans-serif",
+      "taille": "20px",
+      "graisse": "400",
+      "couleur": "rgb(0, 0, 0)"
+    },
+    "titre1": {
+      "police": "oswald-medium, oswald, sans-serif",
+      "taille": "46px",
+      "graisse": "700",
+      "couleur": "rgb(0, 0, 0)"
+    },
+    "titre2": {
+      "police": "oswald-medium, oswald, sans-serif",
+      "taille": "27px",
+      "graisse": "400",
+      "couleur": "rgb(0, 0, 0)"
+    },
+    "titre3": {
+      "police": "oswald-medium, oswald, sans-serif",
+      "taille": "25px",
+      "graisse": "400",
+      "couleur": "rgb(0, 0, 0)"
+    },
+    "lien": {
+      "police": "Arial, Helvetica, sans-serif",
+      "taille": "10px",
+      "graisse": "400",
+      "couleur": "rgb(0, 0, 238)"
+    },
+    "fond": "rgba(0, 0, 0, 0)"
+  },
+  "iframes": [],
+  "videos": [],
+  "entete": "Études & outils\n\nBiographie et bibliographie d'Étienne de la Boétie -\n\nManuscrits du Discours de la servitude et éditions du XVIème siècle du texte -\n\nArticles, thèse et mémoires - Publications de la SIALB -\n\nBibliographie et sitographie\n\nAccueil\n\nLa SIALB\n\nLes rencontres\n\nÉtudes & outils\n\nCarnets\n\nAgenda\n\nContact",
+  "pied": "Société Internationale des Amis de La Boétie\n\nHôtel de Ville de Sarlat, Place de la liberté, CS 80210,  24206, Sarlat-la-Canéda Cedex\n\ncontact@sialb.fr\n\n06 00 00 00 00\n\n© 2021 SIALB / Thomas Gerbier / Wix.com"
+}

@@ -1,0 +1,225 @@
+{
+  "url": "https://www.sialb.fr/les-rencontres",
+  "meta": {
+    "title": "Les rencontres | SIALB",
+    "og:title": "Les rencontres | SIALB",
+    "og:url": "https://www.sialb.fr/les-rencontres",
+    "og:site_name": "SIALB",
+    "og:type": "website",
+    "twitter:card": "summary_large_image",
+    "twitter:title": "Les rencontres | SIALB",
+    "canonical": "https://www.sialb.fr/les-rencontres"
+  },
+  "titres": [
+    {
+      "niveau": "H1",
+      "texte": "Les Rencontres Internationales la Boétie"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Présentation"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Les Rencontres : programmes et contenu"
+    },
+    {
+      "niveau": "H2",
+      "texte": "La volonté"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Reconnaissance et Entre-connaissance"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Les possibles de la servitude volontaire : circulations, diffusions, réceptions de la Boétie"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Traductions de la Boétie"
+    },
+    {
+      "niveau": "H2",
+      "texte": "La Boétie & Rousseau"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Nature & naturel"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Amitiés et Compagnie"
+    },
+    {
+      "niveau": "H2",
+      "texte": "La coutume : formes, représentations et enjeux"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Servitude volontaire & psychiatrie"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Démocratie, pouvoirs, résistances"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Aux origines de l'inégalité"
+    }
+  ],
+  "liens": [
+    {
+      "texte": "",
+      "href": "https://www.sialb.fr/",
+      "cible": "_self"
+    },
+    {
+      "texte": "Accueil",
+      "href": "https://www.sialb.fr/",
+      "cible": "_self"
+    },
+    {
+      "texte": "La SIALB",
+      "href": "https://www.sialb.fr/la-sialb",
+      "cible": "_self"
+    },
+    {
+      "texte": "Les rencontres",
+      "href": "https://www.sialb.fr/les-rencontres",
+      "cible": "_self"
+    },
+    {
+      "texte": "Études & outils",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils",
+      "cible": "_self"
+    },
+    {
+      "texte": "Carnets",
+      "href": "https://www.sialb.fr/carnets",
+      "cible": "_self"
+    },
+    {
+      "texte": "Agenda",
+      "href": "https://www.sialb.fr/news",
+      "cible": "_self"
+    },
+    {
+      "texte": "Contact",
+      "href": "https://www.sialb.fr/contact",
+      "cible": "_self"
+    },
+    {
+      "texte": "Présentation",
+      "href": "https://www.sialb.fr/la-sialb",
+      "cible": "_self"
+    },
+    {
+      "texte": "Affiches, programmes et contenu",
+      "href": "https://www.sialb.fr/la-sialb",
+      "cible": "_self"
+    },
+    {
+      "texte": "Découvrir les Cahiers La Boétie",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils",
+      "cible": "_self"
+    },
+    {
+      "texte": "télécharger le programme",
+      "href": "https://www.sialb.fr/_files/ugd/9bb91e_f0c383c2680e4704af0f0f05680c02c1.pdf",
+      "cible": "_blank"
+    },
+    {
+      "texte": "télécharger le programme",
+      "href": "https://www.sialb.fr/_files/ugd/9bb91e_9e0fec6f08b7492aa3706d8ed64c46b2.pdf",
+      "cible": "_blank"
+    },
+    {
+      "texte": "télécharger le programme",
+      "href": "https://www.sialb.fr/_files/ugd/9bb91e_01185c7d80264b5a867ea2d608836c34.pdf",
+      "cible": "_blank"
+    },
+    {
+      "texte": "télécharger le programme",
+      "href": "https://www.sialb.fr/_files/ugd/9bb91e_f312ddb6850748018a7634fe47baed56.pdf",
+      "cible": "_blank"
+    },
+    {
+      "texte": "télécharger le programme",
+      "href": "https://www.sialb.fr/_files/ugd/9bb91e_a3c016afad124b62801e1351eead7565.pdf",
+      "cible": "_blank"
+    },
+    {
+      "texte": "télécharger le programme",
+      "href": "https://www.sialb.fr/_files/ugd/9bb91e_82c591d91d914c808c03495dd6cb912b.pdf",
+      "cible": "_blank"
+    },
+    {
+      "texte": "télécharger le programme",
+      "href": "https://www.sialb.fr/_files/ugd/9bb91e_a32c552099164403934534297abe84c0.pdf",
+      "cible": "_blank"
+    },
+    {
+      "texte": "télécharger le programme",
+      "href": "https://www.sialb.fr/_files/ugd/9bb91e_9b1d19b5181a4ea68468b9415d1da5c8.pdf",
+      "cible": "_blank"
+    },
+    {
+      "texte": "télécharger le programme",
+      "href": "https://www.sialb.fr/_files/ugd/9bb91e_4cd206c9e2cf429abd6edd50e55940ad.pdf",
+      "cible": "_blank"
+    },
+    {
+      "texte": "télécharger le programme",
+      "href": "https://www.sialb.fr/_files/ugd/9bb91e_6122554a551b4679abacdaef11262242.pdf",
+      "cible": "_blank"
+    },
+    {
+      "texte": "télécharger le programme",
+      "href": "https://www.sialb.fr/_files/ugd/9bb91e_afd155523f9a4bd58fdb39cbf360376e.pdf",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Haut de page",
+      "href": "https://www.sialb.fr/les-rencontres",
+      "cible": "_self"
+    },
+    {
+      "texte": "contact@sialb.fr",
+      "href": "mailto:contact@sialb.fr",
+      "cible": ""
+    }
+  ],
+  "formulaires": [],
+  "styles": {
+    "corps": {
+      "police": "avenir-lt-w01_35-light1475496, sans-serif",
+      "taille": "20px",
+      "graisse": "400",
+      "couleur": "rgb(0, 0, 0)"
+    },
+    "titre1": {
+      "police": "oswald-medium, oswald, sans-serif",
+      "taille": "46px",
+      "graisse": "700",
+      "couleur": "rgb(0, 0, 0)"
+    },
+    "titre2": {
+      "police": "oswald-medium, oswald, sans-serif",
+      "taille": "27px",
+      "graisse": "400",
+      "couleur": "rgb(0, 0, 0)"
+    },
+    "lien": {
+      "police": "Arial, Helvetica, sans-serif",
+      "taille": "10px",
+      "graisse": "400",
+      "couleur": "rgb(0, 0, 238)"
+    },
+    "fond": "rgba(0, 0, 0, 0)"
+  },
+  "iframes": [],
+  "videos": [],
+  "entete": "Études & outils\n\nBiographie et bibliographie d'Étienne de la Boétie -\n\nManuscrits du Discours de la servitude et éditions du XVIème siècle du texte -\n\nArticles, thèse et mémoires - Publications de la SIALB -\n\nBibliographie et sitographie\n\nAccueil\n\nLa SIALB\n\nLes rencontres\n\nÉtudes & outils\n\nCarnets\n\nAgenda\n\nContact",
+  "pied": "Société Internationale des Amis de La Boétie\n\nHôtel de Ville de Sarlat, Place de la liberté, CS 80210,  24206, Sarlat-la-Canéda Cedex\n\ncontact@sialb.fr\n\n06 00 00 00 00\n\n© 2021 SIALB / Thomas Gerbier / Wix.com"
+}

@@ -1,0 +1,330 @@
+{
+  "url": "https://www.sialb.fr/%C3%A9tudes-outils",
+  "meta": {
+    "title": "Études & outils | SIALB",
+    "og:title": "Études & outils | SIALB",
+    "og:url": "https://www.sialb.fr/%C3%A9tudes-outils",
+    "og:site_name": "SIALB",
+    "og:type": "website",
+    "twitter:card": "summary_large_image",
+    "twitter:title": "Études & outils | SIALB",
+    "canonical": "https://www.sialb.fr/%C3%A9tudes-outils"
+  },
+  "titres": [
+    {
+      "niveau": "H1",
+      "texte": "Études & outils"
+    },
+    {
+      "niveau": "H1",
+      "texte": "Biographie d'Étienne de la Boétie"
+    },
+    {
+      "niveau": "H1",
+      "texte": "L'œuvre en son siècle"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Manuscrits du Discours de la servitude"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Éditions imprimées du XVIe siècle"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Montaigne éditeur de La Boétie"
+    },
+    {
+      "niveau": "H1",
+      "texte": "Publications"
+    },
+    {
+      "niveau": "H1",
+      "texte": "Ressources"
+    },
+    {
+      "niveau": "H2",
+      "texte": "Bibliographie"
+    }
+  ],
+  "liens": [
+    {
+      "texte": "",
+      "href": "https://www.sialb.fr/",
+      "cible": "_self"
+    },
+    {
+      "texte": "Accueil",
+      "href": "https://www.sialb.fr/",
+      "cible": "_self"
+    },
+    {
+      "texte": "La SIALB",
+      "href": "https://www.sialb.fr/la-sialb",
+      "cible": "_self"
+    },
+    {
+      "texte": "Les rencontres",
+      "href": "https://www.sialb.fr/les-rencontres",
+      "cible": "_self"
+    },
+    {
+      "texte": "Études & outils",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils",
+      "cible": "_self"
+    },
+    {
+      "texte": "Carnets",
+      "href": "https://www.sialb.fr/carnets",
+      "cible": "_self"
+    },
+    {
+      "texte": "Agenda",
+      "href": "https://www.sialb.fr/news",
+      "cible": "_self"
+    },
+    {
+      "texte": "Contact",
+      "href": "https://www.sialb.fr/contact",
+      "cible": "_self"
+    },
+    {
+      "texte": "Biographie",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils#biographie",
+      "cible": "_self"
+    },
+    {
+      "texte": "L'œuvre en son siècle",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils#oeuvre",
+      "cible": "_self"
+    },
+    {
+      "texte": "Publications",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils#publications",
+      "cible": "_self"
+    },
+    {
+      "texte": "Bibliographie",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils#ressources",
+      "cible": "_self"
+    },
+    {
+      "texte": "Biographie d'Étienne de La Boétie",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils#biographie",
+      "cible": "_self"
+    },
+    {
+      "texte": "Manuscrits et éditins du XVIe siècle de la Servitude Volontaire",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils#oeuvre",
+      "cible": "_self"
+    },
+    {
+      "texte": "Articles, thèse et mémoires - Publications de la SIALB",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils#publications",
+      "cible": "_self"
+    },
+    {
+      "texte": "Bibliographie",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils#ressources",
+      "cible": "_self"
+    },
+    {
+      "texte": "Haut de page",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils",
+      "cible": "_self"
+    },
+    {
+      "texte": "Liste des manuscrits de la Servitude Volontaire",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils#manuscrits",
+      "cible": "_self"
+    },
+    {
+      "texte": "Liste des manuscrits des éditions imprimées du texte au XVIe siècle",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils#imprims",
+      "cible": "_self"
+    },
+    {
+      "texte": "Montaigne éditeur de La Boétie",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils#montaignediteur",
+      "cible": "_self"
+    },
+    {
+      "texte": "consulter en ligne le manuscrit",
+      "href": "https://gallica.bnf.fr/ark:/12148/btv1b9059515n/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "disponible en ligne",
+      "href": "https://gallica.bnf.fr/ark:/12148/btv1b9063110m/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "consulter en ligne le manuscrit",
+      "href": "https://gallica.bnf.fr/ark:/12148/btv1b525072316/f209.item",
+      "cible": "_blank"
+    },
+    {
+      "texte": "la notice sur le site de la Biblioteca Ambrogiana,",
+      "href": "https://ambrosiana.comperio.it/opac/detail/view/ambro:catalog:25260",
+      "cible": "_blank"
+    },
+    {
+      "texte": "consulter en ligne le manuscrit",
+      "href": "https://montaigne.univ-tours.fr/un-manuscrit-inedit-du-discours-de-la-servitude-volontaire-de-la-boetie/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "consulter en ligne le manucrit (attention, le manuscrit ne commence qu’au f° 175r°)",
+      "href": "http://www.bl.uk/manuscripts/Viewer.aspx?ref=add_ms_48043",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Haut de page",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils",
+      "cible": "_self"
+    },
+    {
+      "texte": "Consulter en ligne l'édition",
+      "href": "https://gallica.bnf.fr/ark:/12148/bpt6k109366x.texteImage",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Consulter en ligne l'édition",
+      "href": "https://gallica.bnf.fr/ark:/12148/btv1b8626324d",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Consulter en ligne l'édition",
+      "href": "https://gallica.bnf.fr/ark:/12148/btv1b86263230/",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Haut de page",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils",
+      "cible": "_self"
+    },
+    {
+      "texte": "Haut de page",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils",
+      "cible": "_self"
+    },
+    {
+      "texte": "découvrir chez Garnier",
+      "href": "https://classiques-garnier.com/cahiers-la-boetie-amitie-compagnie.html",
+      "cible": "_blank"
+    },
+    {
+      "texte": "découvrir chez Garnier",
+      "href": "https://classiques-garnier.com/cahiers-la-boetie-les-figures-de-la-coutume.html",
+      "cible": "_blank"
+    },
+    {
+      "texte": "découvrir chez Garnier",
+      "href": "https://classiques-garnier.com/cahiers-la-boetie-lectures-politiques-de-la-boetie.html",
+      "cible": "_blank"
+    },
+    {
+      "texte": "découvrir chez Garnier",
+      "href": "https://classiques-garnier.com/cahiers-la-boetie-nature-et-naturel-autour-du-discours-de-la-servitude-volontaire.html",
+      "cible": "_blank"
+    },
+    {
+      "texte": "découvrir chez Garnier",
+      "href": "https://classiques-garnier.com/cahiers-la-boetie-la-parole-de-la-boetie-approches-philosophiques-rhetoriques-et-litteraires.html",
+      "cible": "_blank"
+    },
+    {
+      "texte": "découvrir chez Garnier",
+      "href": "https://classiques-garnier.com/traductions-de-la-boetie.html",
+      "cible": "_blank"
+    },
+    {
+      "texte": "découvrir chez Garnier",
+      "href": "https://classiques-garnier.com/etienne-de-la-boetie-et-le-destin-du-discours-de-la-servitude-volontaire.html",
+      "cible": "_blank"
+    },
+    {
+      "texte": "découvrir chez Garnier",
+      "href": "https://classiques-garnier.com/poesies-completes-1.html",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Haut de page",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils",
+      "cible": "_self"
+    },
+    {
+      "texte": "Bibliographie",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils#bibliographie",
+      "cible": "_self"
+    },
+    {
+      "texte": "découvrir chez Garnier-Flamarion",
+      "href": "https://classiques-garnier.com/cahiers-la-boetie-amitie-compagnie.html",
+      "cible": "_blank"
+    },
+    {
+      "texte": "découvrir chez Garnier-Flamarion",
+      "href": "https://classiques-garnier.com/cahiers-la-boetie-les-figures-de-la-coutume.html",
+      "cible": "_blank"
+    },
+    {
+      "texte": "découvrir chez Garnier-Flamarion",
+      "href": "https://classiques-garnier.com/cahiers-la-boetie-lectures-politiques-de-la-boetie.html",
+      "cible": "_blank"
+    },
+    {
+      "texte": "découvrir chez Garnier-Flamarion",
+      "href": "https://classiques-garnier.com/cahiers-la-boetie-nature-et-naturel-autour-du-discours-de-la-servitude-volontaire.html",
+      "cible": "_blank"
+    },
+    {
+      "texte": "découvrir chez Garnier-Flamarion",
+      "href": "https://classiques-garnier.com/cahiers-la-boetie-la-parole-de-la-boetie-approches-philosophiques-rhetoriques-et-litteraires.html",
+      "cible": "_blank"
+    },
+    {
+      "texte": "Haut de page",
+      "href": "https://www.sialb.fr/%C3%A9tudes-outils",
+      "cible": "_self"
+    },
+    {
+      "texte": "contact@sialb.fr",
+      "href": "mailto:contact@sialb.fr",
+      "cible": ""
+    }
+  ],
+  "formulaires": [],
+  "styles": {
+    "corps": {
+      "police": "avenir-lt-w01_35-light1475496, sans-serif",
+      "taille": "20px",
+      "graisse": "400",
+      "couleur": "rgb(0, 0, 0)"
+    },
+    "titre1": {
+      "police": "oswald-medium, oswald, sans-serif",
+      "taille": "46px",
+      "graisse": "700",
+      "couleur": "rgb(0, 0, 0)"
+    },
+    "titre2": {
+      "police": "oswald-medium, oswald, sans-serif",
+      "taille": "27px",
+      "graisse": "400",
+      "couleur": "rgb(0, 0, 0)"
+    },
+    "lien": {
+      "police": "Arial, Helvetica, sans-serif",
+      "taille": "10px",
+      "graisse": "400",
+      "couleur": "rgb(0, 0, 238)"
+    },
+    "fond": "rgba(0, 0, 0, 0)"
+  },
+  "iframes": [],
+  "videos": [],
+  "entete": "Études & outils\n\nBiographie et bibliographie d'Étienne de la Boétie -\n\nManuscrits du Discours de la servitude et éditions du XVIème siècle du texte -\n\nArticles, thèse et mémoires - Publications de la SIALB -\n\nBibliographie et sitographie\n\nAccueil\n\nLa SIALB\n\nLes rencontres\n\nÉtudes & outils\n\nCarnets\n\nAgenda\n\nContact",
+  "pied": "Société Internationale des Amis de La Boétie\n\nHôtel de Ville de Sarlat, Place de la liberté, CS 80210,  24206, Sarlat-la-Canéda Cedex\n\ncontact@sialb.fr\n\n06 00 00 00 00\n\n© 2021 SIALB / Thomas Gerbier / Wix.com"
+}

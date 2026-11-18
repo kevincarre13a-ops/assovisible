@@ -1,0 +1,1240 @@
+[
+  {
+    "slug": "01-accueil",
+    "url": "https://www.sialb.fr/",
+    "groupe": "page",
+    "media": {
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229,h_87,al_c,q_85,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_27,h_42,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_25,h_38,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/0fdef751204647a3bbd7eaa2827ed4f9.png/v1/fill/w_22,h_22,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0fdef751204647a3bbd7eaa2827ed4f9.png": {
+        "alt": "Facebook",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/c7d035ba85f6486680c2facedecdcf4d.png/v1/fill/w_22,h_22,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c7d035ba85f6486680c2facedecdcf4d.png": {
+        "alt": "Twitter",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/6ea5b4a88f0b4f91945b40499aa0af00.png/v1/fill/w_22,h_22,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/6ea5b4a88f0b4f91945b40499aa0af00.png": {
+        "alt": "LinkedIn",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_1280,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": "MS_Meriadeck-4.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_321": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/0fdef751204647a3bbd7eaa2827ed4f9.png/v1/fill/w_22": {
+        "alt": "Facebook",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/0fdef751204647a3bbd7eaa2827ed4f9.png/v1/fill/w_44": {
+        "alt": "Facebook",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/c7d035ba85f6486680c2facedecdcf4d.png/v1/fill/w_22": {
+        "alt": "Twitter",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/c7d035ba85f6486680c2facedecdcf4d.png/v1/fill/w_44": {
+        "alt": "Twitter",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/6ea5b4a88f0b4f91945b40499aa0af00.png/v1/fill/w_22": {
+        "alt": "LinkedIn",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/6ea5b4a88f0b4f91945b40499aa0af00.png/v1/fill/w_44": {
+        "alt": "LinkedIn",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_160,h_61,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_35,h_54,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_320,h_216,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_37,h_56,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_320,h_226,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/shapes/a3c153_64191a64b70a446fb44c9be3fce6df77.svg": {
+        "alt": ""
+      }
+    },
+    "docs": [
+      "https://www.sialb.fr/_files/ugd/9bb91e_01185c7d80264b5a867ea2d608836c34.pdf",
+      "https://www.sialb.fr/_files/ugd/9bb91e_f312ddb6850748018a7634fe47baed56.pdf"
+    ],
+    "erreurs": [],
+    "http_ordinateur": 200,
+    "http_mobile": 200
+  },
+  {
+    "slug": "02-la-sialb",
+    "url": "https://www.sialb.fr/la-sialb",
+    "groupe": "page",
+    "media": {
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229,h_87,al_c,q_85,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg/v1/fill/w_44,h_65,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_6d7e9006f665420dbe568cc5375179a2~mv2.jpg/v1/crop/x_0,y_2,w_201,h_246/fill/w_219,h_268,al_c,lg_1,q_80,enc_avif,quality_auto/bonhomme_01.jpg": {
+        "alt": "bonhomme_01.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_48934aa658a04f81b0ac4a9179939f5e~mv2.jpg/v1/crop/x_0,y_17,w_476,h_573/fill/w_220,h_265,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/6_daniel_10_11_ans_0.jpg": {
+        "alt": "6_daniel_10_11_ans_0.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d2acc5ef61b64b8691cb96b59d908854~mv2.jpg/v1/crop/x_6,y_0,w_621,h_756/fill/w_220,h_268,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bonhomme_06.jpg": {
+        "alt": "bonhomme_06.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_7da6d4af8da34b65805686b9bd12af5d~mv2.jpg/v1/crop/x_0,y_7,w_264,h_327/fill/w_219,h_271,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bonhomme_03.jpg": {
+        "alt": "bonhomme_03.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_fc399d3d5f294ebdb3caccae651c1fc7~mv2.jpg/v1/crop/x_0,y_9,w_179,h_222/fill/w_219,h_271,al_c,lg_1,q_80,enc_avif,quality_auto/ambre.jpg": {
+        "alt": "ambre.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg/v1/fill/w_1280,h_900,al_t,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg": {
+        "alt": "MS_Meriadeck-6.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_f0765f95796547f7a8713d12ce40f03d~mv2.jpg/v1/crop/x_0,y_13,w_179,h_229/fill/w_219,h_280,al_c,lg_1,q_80,enc_avif,quality_auto/xavier.jpg": {
+        "alt": "xavier.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_dd57eba4e95a410b89cf66285d451ac2~mv2.jpg/v1/crop/x_17,y_0,w_168,h_207/fill/w_218,h_268,al_c,lg_1,q_80,enc_avif,quality_auto/bonhomme_05.jpg": {
+        "alt": "bonhomme_05.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_79d0893193ec40658d36740a81011b2f~mv2.jpg/v1/crop/x_2,y_0,w_200,h_246/fill/w_219,h_269,al_c,lg_1,q_80,enc_avif,quality_auto/bonhomme_02.jpg": {
+        "alt": "bonhomme_02.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_ad4d4da0de414b0cb841fe82881ab24f~mv2.png/v1/fill/w_55,h_85,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_pre-de-cordy.png": {
+        "alt": "logo_pre-de-cordy.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_1de8725d233e49fdba3fd0c79f95e5a6~mv2.png/v1/fill/w_173,h_85,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_sarlat.png": {
+        "alt": "logo_sarlat.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_05fbf10b1e6947ab8aaeebfb639bdb4c~mv2.jpg/v1/fill/w_286,h_85,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/la-couleuvrine-sarlat-la-caneda-5ff7321448abc.jpg": {
+        "alt": "la-couleuvrine-sarlat-la-caneda-5ff7321448abc.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_66eaa57c88844e5eb9e64f6a18be8c27~mv2.png/v1/fill/w_113,h_113,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO_FoieGras_QUADRI.png": {
+        "alt": "LOGO_FoieGras_QUADRI.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_ae153cc082c94b79956f022deb31312c~mv2.png/v1/fill/w_159,h_113,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/pecharmant_logo.png": {
+        "alt": "pecharmant_logo.webp",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_566826702eeb44fdb359e625d0758129~mv2.jpg/v1/fill/w_221,h_96,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/armagnac-logo.jpg": {
+        "alt": "armagnac-logo.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_a25c0191ed7d4cd6baccfd1ba3690cab~mv2.png/v1/fill/w_301,h_78,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/1400px-Logo_Universit%C3%A9_Tours_2017_svg.png": {
+        "alt": "1400px-Logo_Université_Tours_2017.svg.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_4fa90c82cacc43e38266d272d373ce36~mv2.png/v1/fill/w_312,h_85,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/utl_sarlat%20copie.png": {
+        "alt": "utl_sarlat copie.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_ef23219222464940856b9a2e0268641e~mv2.png/v1/fill/w_289,h_70,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_de_l'universit%C3%A9_Toulouse_-_Jean_Jaur%C3%A8s.png": {
+        "alt": "Logo_de_l'université_Toulouse_-_Jean_Jaurès.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_a3b1c3c48be0474fbe16c4bd9635d118~mv2.png/v1/fill/w_268,h_85,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Universite_bordeaux-montaigne_2014_logo_svg.png": {
+        "alt": "Universite_bordeaux-montaigne_2014_logo.svg.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_321": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_48934aa658a04f81b0ac4a9179939f5e~mv2.jpg/v1/crop/x_0": {
+        "alt": "6_daniel_10_11_ans_0.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_6d7e9006f665420dbe568cc5375179a2~mv2.jpg/v1/crop/x_0": {
+        "alt": "bonhomme_01.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d2acc5ef61b64b8691cb96b59d908854~mv2.jpg/v1/crop/x_6": {
+        "alt": "bonhomme_06.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_7da6d4af8da34b65805686b9bd12af5d~mv2.jpg/v1/crop/x_0": {
+        "alt": "bonhomme_03.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_fc399d3d5f294ebdb3caccae651c1fc7~mv2.jpg/v1/crop/x_0": {
+        "alt": "ambre.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_f0765f95796547f7a8713d12ce40f03d~mv2.jpg/v1/crop/x_0": {
+        "alt": "xavier.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_dd57eba4e95a410b89cf66285d451ac2~mv2.jpg/v1/crop/x_17": {
+        "alt": "bonhomme_05.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_79d0893193ec40658d36740a81011b2f~mv2.jpg/v1/crop/x_2": {
+        "alt": "bonhomme_02.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_1de8725d233e49fdba3fd0c79f95e5a6~mv2.png/v1/fill/w_173": {
+        "alt": "logo_sarlat.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_1de8725d233e49fdba3fd0c79f95e5a6~mv2.png/v1/fill/w_346": {
+        "alt": "logo_sarlat.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_05fbf10b1e6947ab8aaeebfb639bdb4c~mv2.jpg/v1/fill/w_286": {
+        "alt": "la-couleuvrine-sarlat-la-caneda-5ff7321448abc.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_05fbf10b1e6947ab8aaeebfb639bdb4c~mv2.jpg/v1/fill/w_572": {
+        "alt": "la-couleuvrine-sarlat-la-caneda-5ff7321448abc.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_ad4d4da0de414b0cb841fe82881ab24f~mv2.png/v1/fill/w_55": {
+        "alt": "logo_pre-de-cordy.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_ad4d4da0de414b0cb841fe82881ab24f~mv2.png/v1/fill/w_110": {
+        "alt": "logo_pre-de-cordy.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_ae153cc082c94b79956f022deb31312c~mv2.png/v1/fill/w_159": {
+        "alt": "pecharmant_logo.webp",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_ae153cc082c94b79956f022deb31312c~mv2.png/v1/fill/w_318": {
+        "alt": "pecharmant_logo.webp",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_66eaa57c88844e5eb9e64f6a18be8c27~mv2.png/v1/fill/w_113": {
+        "alt": "LOGO_FoieGras_QUADRI.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_66eaa57c88844e5eb9e64f6a18be8c27~mv2.png/v1/fill/w_226": {
+        "alt": "LOGO_FoieGras_QUADRI.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_566826702eeb44fdb359e625d0758129~mv2.jpg/v1/fill/w_221": {
+        "alt": "armagnac-logo.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_566826702eeb44fdb359e625d0758129~mv2.jpg/v1/fill/w_442": {
+        "alt": "armagnac-logo.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_4fa90c82cacc43e38266d272d373ce36~mv2.png/v1/fill/w_312": {
+        "alt": "utl_sarlat copie.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_4fa90c82cacc43e38266d272d373ce36~mv2.png/v1/fill/w_624": {
+        "alt": "utl_sarlat copie.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_a25c0191ed7d4cd6baccfd1ba3690cab~mv2.png/v1/fill/w_301": {
+        "alt": "1400px-Logo_Université_Tours_2017.svg.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_a25c0191ed7d4cd6baccfd1ba3690cab~mv2.png/v1/fill/w_602": {
+        "alt": "1400px-Logo_Université_Tours_2017.svg.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_a3b1c3c48be0474fbe16c4bd9635d118~mv2.png/v1/fill/w_268": {
+        "alt": "Universite_bordeaux-montaigne_2014_logo.svg.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_a3b1c3c48be0474fbe16c4bd9635d118~mv2.png/v1/fill/w_536": {
+        "alt": "Universite_bordeaux-montaigne_2014_logo.svg.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_ef23219222464940856b9a2e0268641e~mv2.png/v1/fill/w_289": {
+        "alt": "Logo_de_l'université_Toulouse_-_Jean_Jaurès.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_ef23219222464940856b9a2e0268641e~mv2.png/v1/fill/w_578": {
+        "alt": "Logo_de_l'université_Toulouse_-_Jean_Jaurès.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_160,h_61,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg/v1/fill/w_80,h_118,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg/v1/fill/w_40,h_60,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg/v1/fill/w_320,h_470,al_t,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg/v1/fill/w_320,h_238,al_t,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg/v1/fill/w_12,h_18,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_7da6d4af8da34b65805686b9bd12af5d~mv2.jpg/v1/crop/x_0,y_7,w_264,h_327/fill/w_150,h_186,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bonhomme_03.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_48934aa658a04f81b0ac4a9179939f5e~mv2.jpg/v1/crop/x_0,y_17,w_476,h_573/fill/w_150,h_181,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/6_daniel_10_11_ans_0.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_6d7e9006f665420dbe568cc5375179a2~mv2.jpg/v1/crop/x_0,y_2,w_201,h_246/fill/w_150,h_184,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bonhomme_01.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d2acc5ef61b64b8691cb96b59d908854~mv2.jpg/v1/crop/x_6,y_0,w_621,h_756/fill/w_150,h_183,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bonhomme_06.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/shapes/a3c153_64191a64b70a446fb44c9be3fce6df77.svg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_fc399d3d5f294ebdb3caccae651c1fc7~mv2.jpg/v1/crop/x_0,y_9,w_179,h_222/fill/w_150,h_186,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ambre.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_f0765f95796547f7a8713d12ce40f03d~mv2.jpg/v1/crop/x_0,y_13,w_179,h_229/fill/w_150,h_184,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/xavier.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_dd57eba4e95a410b89cf66285d451ac2~mv2.jpg/v1/crop/x_17,y_0,w_168,h_207/fill/w_150,h_184,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bonhomme_05.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_79d0893193ec40658d36740a81011b2f~mv2.jpg/v1/crop/x_2,y_0,w_200,h_246/fill/w_150,h_184,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/bonhomme_02.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_05fbf10b1e6947ab8aaeebfb639bdb4c~mv2.jpg/v1/fill/w_280,h_83,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/la-couleuvrine-sarlat-la-caneda-5ff7321448abc.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_4fa90c82cacc43e38266d272d373ce36~mv2.png/v1/fill/w_280,h_76,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/utl_sarlat%20copie.png": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_a25c0191ed7d4cd6baccfd1ba3690cab~mv2.png/v1/fill/w_280,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/1400px-Logo_Universit%C3%A9_Tours_2017_svg.png": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg/v1/fill/w_320,h_72,al_t,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_ef23219222464940856b9a2e0268641e~mv2.png/v1/fill/w_280,h_68,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_de_l'universit%C3%A9_Toulouse_-_Jean_Jaur%C3%A8s.png": {
+        "alt": ""
+      }
+    },
+    "docs": [],
+    "erreurs": [],
+    "http_ordinateur": 200,
+    "http_mobile": 200
+  },
+  {
+    "slug": "03-les-rencontres",
+    "url": "https://www.sialb.fr/les-rencontres",
+    "groupe": "page",
+    "media": {
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229,h_87,al_c,q_85,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9bf09656e7ee42769a9a82b81a4916c6~mv2.jpg/v1/fill/w_43,h_65,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/9bb91e_9bf09656e7ee42769a9a82b81a4916c6~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9bf09656e7ee42769a9a82b81a4916c6~mv2.jpg/v1/fill/w_1280,h_430,al_t,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9bf09656e7ee42769a9a82b81a4916c6~mv2.jpg": {
+        "alt": "MS_Meriadeck-20.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_321": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9bf09656e7ee42769a9a82b81a4916c6~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_160,h_61,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9bf09656e7ee42769a9a82b81a4916c6~mv2.jpg/v1/fill/w_39,h_58,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/9bb91e_9bf09656e7ee42769a9a82b81a4916c6~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/shapes/a3c153_64191a64b70a446fb44c9be3fce6df77.svg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9bf09656e7ee42769a9a82b81a4916c6~mv2.jpg/v1/fill/w_320,h_230,al_t,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9bf09656e7ee42769a9a82b81a4916c6~mv2.jpg": {
+        "alt": ""
+      }
+    },
+    "docs": [
+      "https://www.sialb.fr/_files/ugd/9bb91e_f0c383c2680e4704af0f0f05680c02c1.pdf",
+      "https://www.sialb.fr/_files/ugd/9bb91e_01185c7d80264b5a867ea2d608836c34.pdf",
+      "https://www.sialb.fr/_files/ugd/9bb91e_9b1d19b5181a4ea68468b9415d1da5c8.pdf",
+      "https://www.sialb.fr/_files/ugd/9bb91e_82c591d91d914c808c03495dd6cb912b.pdf",
+      "https://www.sialb.fr/_files/ugd/9bb91e_6122554a551b4679abacdaef11262242.pdf",
+      "https://www.sialb.fr/_files/ugd/9bb91e_4cd206c9e2cf429abd6edd50e55940ad.pdf",
+      "https://www.sialb.fr/_files/ugd/9bb91e_a3c016afad124b62801e1351eead7565.pdf",
+      "https://www.sialb.fr/_files/ugd/9bb91e_afd155523f9a4bd58fdb39cbf360376e.pdf",
+      "https://www.sialb.fr/_files/ugd/9bb91e_a32c552099164403934534297abe84c0.pdf",
+      "https://www.sialb.fr/_files/ugd/9bb91e_9e0fec6f08b7492aa3706d8ed64c46b2.pdf",
+      "https://www.sialb.fr/_files/ugd/9bb91e_f312ddb6850748018a7634fe47baed56.pdf"
+    ],
+    "erreurs": [],
+    "http_ordinateur": 200,
+    "http_mobile": 200
+  },
+  {
+    "slug": "04-etudes-outils",
+    "url": "https://www.sialb.fr/%C3%A9tudes-outils",
+    "groupe": "page",
+    "media": {
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229,h_87,al_c,q_85,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_259,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_139,h_215,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_1280,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": "MS_Meriadeck-4.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_1280,h_900,al_t,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": "MS_Meriadeck-4.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_1280,h_900,al_b,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": "MS_Meriadeck-4.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_321": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_160,h_61,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_320,h_238,al_t,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_320,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_65,h_100,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/shapes/a3c153_64191a64b70a446fb44c9be3fce6df77.svg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_320,h_400,al_b,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": ""
+      }
+    },
+    "docs": [],
+    "erreurs": [],
+    "http_ordinateur": 200,
+    "http_mobile": 200
+  },
+  {
+    "slug": "05-carnets",
+    "url": "https://www.sialb.fr/carnets",
+    "groupe": "page",
+    "media": {
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229,h_87,al_c,q_85,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_1280,h_900,al_t,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": "MS_Meriadeck-4.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_321": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_160,h_61,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_320,h_238,al_t,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/shapes/a3c153_64191a64b70a446fb44c9be3fce6df77.svg": {
+        "alt": ""
+      }
+    },
+    "docs": [
+      "https://www.sialb.fr/_files/ugd/9bb91e_8a4cc59e25714eeab109e1c91c60861b.pdf"
+    ],
+    "erreurs": [],
+    "http_ordinateur": 200,
+    "http_mobile": 200
+  },
+  {
+    "slug": "06-agenda-news",
+    "url": "https://www.sialb.fr/news",
+    "groupe": "page",
+    "media": {
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229,h_87,al_c,q_85,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9bf09656e7ee42769a9a82b81a4916c6~mv2.jpg/v1/fill/w_43,h_65,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/9bb91e_9bf09656e7ee42769a9a82b81a4916c6~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_374,h_250,al_c,q_30,blur_30,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_292,h_195,fp_0.50_0.50,q_90,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": "Le 06 d'Étienne de la Boétie fuite sur le web",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_444,h_250,al_c,q_30,blur_30,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_292,h_164,fp_0.50_0.50,q_90,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": "Étienne de la Boétie : viandard ou flexitarien ?",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg/v1/fill/w_333,h_250,al_c,q_30,blur_30,enc_avif,quality_auto/e1907a2463aa4edaac3bb0c5b408bd28.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_374,h_250,al_c,q_30,blur_30,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg/v1/fill/w_292,h_219,fp_0.50_0.50,q_90,enc_avif,quality_auto/e1907a2463aa4edaac3bb0c5b408bd28.jpg": {
+        "alt": "La nouvelle édition du Discours retrouvé était un faux.",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_292,h_195,fp_0.50_0.50,q_90,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": "Montaigne - La Boétie : le SMS qui met le feu aux poudres.",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.jpg/v1/fill/w_374,h_250,al_c,q_30,blur_30,enc_avif,quality_auto/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9bf09656e7ee42769a9a82b81a4916c6~mv2.jpg/v1/fill/w_1280,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9bf09656e7ee42769a9a82b81a4916c6~mv2.jpg": {
+        "alt": "MS_Meriadeck-20.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_8736f87ada724bf6bd118be9045b22f7~mv2.jpg/v1/fill/w_374,h_250,al_c,q_30,blur_30,enc_avif,quality_auto/11062b_8736f87ada724bf6bd118be9045b22f7~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.jpg/v1/fill/w_292,h_195,fp_0.50_0.50,q_90,enc_avif,quality_auto/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.jpg": {
+        "alt": "La SIALB a mis la main sur un bulletin de 3ème d'Étienne : des notes catastrophiques en maths",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_8736f87ada724bf6bd118be9045b22f7~mv2.jpg/v1/fill/w_292,h_195,fp_0.50_0.50,q_90,enc_avif,quality_auto/11062b_8736f87ada724bf6bd118be9045b22f7~mv2.jpg": {
+        "alt": "Document interdit : les confessions de Madame de la Boétie.",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_321": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_292,h_164,fp_0.50_0.50,q_90,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.webp": {
+        "alt": "Étienne de la Boétie : viandard ou flexitarien ?",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_292,h_195,fp_0.50_0.50,q_90,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.webp": {
+        "alt": "Montaigne - La Boétie : le SMS qui met le feu aux poudres.",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_292,h_195,fp_0.50_0.50,q_90,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.webp": {
+        "alt": "Le 06 d'Étienne de la Boétie fuite sur le web",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg/v1/fill/w_292,h_219,fp_0.50_0.50,q_90,enc_avif,quality_auto/e1907a2463aa4edaac3bb0c5b408bd28.webp": {
+        "alt": "La nouvelle édition du Discours retrouvé était un faux.",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.jpg/v1/fill/w_292,h_195,fp_0.50_0.50,q_90,enc_avif,quality_auto/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.webp": {
+        "alt": "La SIALB a mis la main sur un bulletin de 3ème d'Étienne : des notes catastrophiques en maths",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_8736f87ada724bf6bd118be9045b22f7~mv2.jpg/v1/fill/w_292,h_195,fp_0.50_0.50,q_90,enc_avif,quality_auto/11062b_8736f87ada724bf6bd118be9045b22f7~mv2.webp": {
+        "alt": "Document interdit : les confessions de Madame de la Boétie.",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9bf09656e7ee42769a9a82b81a4916c6~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_160,h_61,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9bf09656e7ee42769a9a82b81a4916c6~mv2.jpg/v1/fill/w_320,h_230,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9bf09656e7ee42769a9a82b81a4916c6~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_320,h_180,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_320,h_213,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_320,h_213,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/shapes/a3c153_64191a64b70a446fb44c9be3fce6df77.svg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg/v1/fill/w_320,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/e1907a2463aa4edaac3bb0c5b408bd28.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.jpg/v1/fill/w_320,h_214,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_8736f87ada724bf6bd118be9045b22f7~mv2.jpg/v1/fill/w_320,h_213,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_8736f87ada724bf6bd118be9045b22f7~mv2.jpg": {
+        "alt": ""
+      }
+    },
+    "docs": [],
+    "erreurs": [],
+    "http_ordinateur": 200,
+    "http_mobile": 200
+  },
+  {
+    "slug": "07-contact",
+    "url": "https://www.sialb.fr/contact",
+    "groupe": "page",
+    "media": {
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229,h_87,al_c,q_85,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_1280,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": "MS_Meriadeck-4.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg/v1/fill/w_1280,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg": {
+        "alt": "MS_Meriadeck-6.jpg",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg/v1/fill/w_65,h_96,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_321": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_160,h_61,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg/v1/fill/w_320,h_230,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_9d135b381a0e4ff5af3f3c4ccf78c8c9~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg/v1/fill/w_80,h_118,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg/v1/fill/w_320,h_637,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9bb91e_95ec55f3258f48e69cfe12fb208c1dbd~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/shapes/a3c153_64191a64b70a446fb44c9be3fce6df77.svg": {
+        "alt": ""
+      }
+    },
+    "docs": [],
+    "erreurs": [],
+    "http_ordinateur": 200,
+    "http_mobile": 200
+  },
+  {
+    "slug": "blog-demo-1-open-positions-for-research-assistants",
+    "url": "https://www.sialb.fr/post/open-positions-for-research-assistants",
+    "groupe": "blog-demo",
+    "media": {
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229,h_87,al_c,q_85,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_980,h_653,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_291,h_163,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": "Étienne de la Boétie : viandard ou flexitarien ?",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg/v1/fill/w_291,h_163,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/e1907a2463aa4edaac3bb0c5b408bd28.jpg": {
+        "alt": "La nouvelle édition du Discours retrouvé était un faux.",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_291,h_164,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": "Montaigne - La Boétie : le SMS qui met le feu aux poudres.",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_740,h_493,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_321": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_740": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/https://lh3.googleusercontent.com/a-/AAuE7mD7Msffz1oXmNyu9zoUeotJaorTU1R-N9tLZkIV7w%3Ds96-c": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_160,h_61,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_480,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_284,h_189,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/shapes/a3c153_64191a64b70a446fb44c9be3fce6df77.svg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/e1907a2463aa4edaac3bb0c5b408bd28.jpg": {
+        "alt": ""
+      }
+    },
+    "docs": [],
+    "erreurs": [],
+    "http_ordinateur": 200,
+    "http_mobile": 200
+  },
+  {
+    "slug": "blog-demo-2-lv-foundation-funds-new-thomas-hill-research-center-projects",
+    "url": "https://www.sialb.fr/post/lv-foundation-funds-new-thomas-hill-research-center-projects",
+    "groupe": "blog-demo",
+    "media": {
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229,h_87,al_c,q_85,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg/v1/fill/w_980,h_736,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e1907a2463aa4edaac3bb0c5b408bd28.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_291,h_163,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": "Étienne de la Boétie : viandard ou flexitarien ?",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_291,h_164,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": "Montaigne - La Boétie : le SMS qui met le feu aux poudres.",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_291,h_163,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": "Le 06 d'Étienne de la Boétie fuite sur le web",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg/v1/fill/w_740,h_556,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e1907a2463aa4edaac3bb0c5b408bd28.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_321": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg/v1/fill/w_740": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/https://lh3.googleusercontent.com/a-/AAuE7mD7Msffz1oXmNyu9zoUeotJaorTU1R-N9tLZkIV7w%3Ds96-c": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_160,h_61,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg/v1/fill/w_480,h_361,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/e1907a2463aa4edaac3bb0c5b408bd28.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg/v1/fill/w_284,h_213,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/e1907a2463aa4edaac3bb0c5b408bd28.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/shapes/a3c153_64191a64b70a446fb44c9be3fce6df77.svg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": ""
+      }
+    },
+    "docs": [],
+    "erreurs": [],
+    "http_ordinateur": 200,
+    "http_mobile": 200
+  },
+  {
+    "slug": "blog-demo-3-the-annual-thomas-hill-research-center-symposium",
+    "url": "https://www.sialb.fr/post/the-annual-thomas-hill-research-center-symposium",
+    "groupe": "blog-demo",
+    "media": {
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229,h_87,al_c,q_85,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_980,h_653,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_291,h_163,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": "Étienne de la Boétie : viandard ou flexitarien ?",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg/v1/fill/w_291,h_163,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/e1907a2463aa4edaac3bb0c5b408bd28.jpg": {
+        "alt": "La nouvelle édition du Discours retrouvé était un faux.",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_291,h_164,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": "Le 06 d'Étienne de la Boétie fuite sur le web",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_740,h_493,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_321": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_740": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/https://lh3.googleusercontent.com/a-/AAuE7mD7Msffz1oXmNyu9zoUeotJaorTU1R-N9tLZkIV7w%3Ds96-c": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_160,h_61,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_480,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_284,h_189,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/shapes/a3c153_64191a64b70a446fb44c9be3fce6df77.svg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/e1907a2463aa4edaac3bb0c5b408bd28.jpg": {
+        "alt": ""
+      }
+    },
+    "docs": [],
+    "erreurs": [],
+    "http_ordinateur": 200,
+    "http_mobile": 200
+  },
+  {
+    "slug": "blog-demo-4-new-publication-classification-of-new-predictive-modeling-techniques",
+    "url": "https://www.sialb.fr/post/new-publication-classification-of-new-predictive-modeling-techniques",
+    "groupe": "blog-demo",
+    "media": {
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229,h_87,al_c,q_85,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_8736f87ada724bf6bd118be9045b22f7~mv2.jpg/v1/fill/w_980,h_653,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_8736f87ada724bf6bd118be9045b22f7~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_291,h_163,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": "Étienne de la Boétie : viandard ou flexitarien ?",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_291,h_164,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": "Montaigne - La Boétie : le SMS qui met le feu aux poudres.",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_291,h_163,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": "Le 06 d'Étienne de la Boétie fuite sur le web",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_8736f87ada724bf6bd118be9045b22f7~mv2.jpg/v1/fill/w_740,h_493,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_8736f87ada724bf6bd118be9045b22f7~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_321": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_8736f87ada724bf6bd118be9045b22f7~mv2.jpg/v1/fill/w_740": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/https://lh3.googleusercontent.com/a-/AAuE7mD7Msffz1oXmNyu9zoUeotJaorTU1R-N9tLZkIV7w%3Ds96-c": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_8736f87ada724bf6bd118be9045b22f7~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_160,h_61,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_8736f87ada724bf6bd118be9045b22f7~mv2.jpg/v1/fill/w_284,h_189,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_8736f87ada724bf6bd118be9045b22f7~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/shapes/a3c153_64191a64b70a446fb44c9be3fce6df77.svg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": ""
+      }
+    },
+    "docs": [],
+    "erreurs": [],
+    "http_ordinateur": 200,
+    "http_mobile": 200
+  },
+  {
+    "slug": "blog-demo-5-new-publication-using-machine-learning-in-data-mining",
+    "url": "https://www.sialb.fr/post/new-publication-using-machine-learning-in-data-mining",
+    "groupe": "blog-demo",
+    "media": {
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229,h_87,al_c,q_85,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_291,h_163,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": "Étienne de la Boétie : viandard ou flexitarien ?",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_291,h_163,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": "Le 06 d'Étienne de la Boétie fuite sur le web",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_291,h_164,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": "Montaigne - La Boétie : le SMS qui met le feu aux poudres.",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.jpg/v1/fill/w_980,h_654,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.jpg/v1/fill/w_740,h_494,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_321": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.jpg/v1/fill/w_740": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/https://lh3.googleusercontent.com/a-/AAuE7mD7Msffz1oXmNyu9zoUeotJaorTU1R-N9tLZkIV7w%3Ds96-c": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_160,h_61,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.jpg/v1/fill/w_480,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.jpg/v1/fill/w_284,h_190,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ad420a_7dff1f541e5d4473aed77998e84ea1fc~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/shapes/a3c153_64191a64b70a446fb44c9be3fce6df77.svg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": ""
+      }
+    },
+    "docs": [],
+    "erreurs": [],
+    "http_ordinateur": 200,
+    "http_mobile": 200
+  },
+  {
+    "slug": "blog-demo-6-the-past-year-in-research-at-thomas-hill-research-center",
+    "url": "https://www.sialb.fr/post/the-past-year-in-research-at-thomas-hill-research-center",
+    "groupe": "blog-demo",
+    "media": {
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229,h_87,al_c,q_85,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg/v1/fill/w_291,h_163,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/e1907a2463aa4edaac3bb0c5b408bd28.jpg": {
+        "alt": "La nouvelle édition du Discours retrouvé était un faux.",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_980,h_551,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_291,h_164,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": "Le 06 d'Étienne de la Boétie fuite sur le web",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_291,h_163,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": "Montaigne - La Boétie : le SMS qui met le feu aux poudres.",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_740,h_416,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_229": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_321": {
+        "alt": "logo_SIALB.png",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_740": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/https://lh3.googleusercontent.com/a-/AAuE7mD7Msffz1oXmNyu9zoUeotJaorTU1R-N9tLZkIV7w%3Ds96-c": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg": {
+        "alt": "",
+        "nom": ""
+      },
+      "https://static.wixstatic.com/media/9bb91e_d6db8fa0b2c64d08a9e9e0111add9d0b~mv2.png/v1/fill/w_160,h_61,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_SIALB.png": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_480,h_270,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/cd35222d980540fe85d5008737465866.jpg/v1/fill/w_284,h_160,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cd35222d980540fe85d5008737465866.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/shapes/a3c153_64191a64b70a446fb44c9be3fce6df77.svg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_add41d056f974341a232dae6f010b2f7~mv2.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/e1907a2463aa4edaac3bb0c5b408bd28.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/e1907a2463aa4edaac3bb0c5b408bd28.jpg": {
+        "alt": ""
+      },
+      "https://static.wixstatic.com/media/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg/v1/fill/w_248,h_140,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f99ee89647c9464a8fb6e1d8ecb0d70b~mv2.jpg": {
+        "alt": ""
+      }
+    },
+    "docs": [],
+    "erreurs": [],
+    "http_ordinateur": 200,
+    "http_mobile": 200
+  }
+]

@@ -92,6 +92,8 @@ Tout dossier `sialb/` modifié se redéploie tel quel sur Netlify (glisser-dépo
 
 ## Reprise du contenu du site actuel (sialb.fr) : choix et points à valider
 
+Une archive complète du site Wix (pages, captures, images originales, documents) a été réalisée le 18 novembre 2026, avant la résiliation du forfait Wix : voir `archives/sialb-wix-2026-11-18/LISEZMOI.md` à la racine du dépôt.
+
 Contenus repris du site Wix actuel : bureau, histoire, partenaires, Rencontres (programmes PDF, affiches), manuscrits et imprimés, publications, biographie, Carnets, coordonnées. Les logos, dessins du bureau, scans du manuscrit Mériadeck et affiches viennent du site actuel ; les gravures (bandeau, lettrine) de l'édition Bonnefon de 1892 (domaine public) ; la statue et la maison natale proviennent de Wikimedia Commons (licence CC BY-SA 4.0, crédits dans les mentions légales).
 
 **Non repris, volontairement**
@@ -104,7 +106,7 @@ Contenus repris du site Wix actuel : bureau, histoire, partenaires, Rencontres (
 - *3es Rencontres* : le site actuel les intitule « Servitude volontaire et psychiatrie », le programme PDF « Servitude volontaire et psychanalyse » (titre retenu).
 - *Lieu des 11es Rencontres* : non précisé sur le site actuel ; « Bordeaux » est repris du programme PDF.
 - *Mentions légales* : le SIREN et le directeur de la publication sont des textes d'attente à confirmer.
-- *Portraits du bureau* : les dessins d'origine ont été repris dans l'ordre d'affichage du site actuel ; à vérifier.
+- *Portraits du bureau* : les dessins d'origine sont attribués comme sur le site Wix (vérifié sur les captures de l'archive du 18 novembre 2026).
 - *Affiche des 9es Rencontres* : aucun visuel exploitable ; une carte typographique la remplace.
 - Quelques coquilles du site actuel ont été corrigées (ex. « éditins », « manucrit », « Sécrétaire », « Vejdova » → Vejvoda, « Nicolà » → Nicola Panichi).
 - Les listes « Articles, thèses et mémoires », « Sitographie » et les listes des Carnets (hors la recension de Sylvia Giocanti) étaient vides sur le site actuel : elles contiennent des textes d'attente.
