@@ -107,7 +107,7 @@ photos, PNG pour le logo et les affiches.
 | `images/logo-gdc.png` | 640 × 294 px, fond transparent | Toutes (en-tête, pied de page) | Logo officiel en place |
 | `images/favicon.png` | 64 × 64 px | Onglet du navigateur | En place |
 | `images/hero.jpg` | 1900 × 1270 px, paysage | Accueil (grand bandeau) | Photo de l'association (Puissance 4 géant) |
-| `images/qui-sommes-nous-abdel.jpg` | 900 × 1125 px, portrait | Accueil, « Qui sommes-nous ? » | Visuel d'attente |
+| `images/qui-sommes-nous-abdel.jpg` | 900 × 1125 px, portrait | Accueil, « Qui sommes-nous ? » | Photo d'Abdel à l'Institut français |
 | `images/illustration-plateau.jpg` | 1200 × 800 px | L'association (mission) | Photo de l'association (Fermez la boîte) |
 | `images/og-graines-de-cabane.jpg` | 1200 × 630 px | Aperçu lors des partages (Facebook…) | Visuel au logo |
 | `images/affiche-programme-sept-dec-2026.png` | 1024 × 1536 px | Agenda, Permanences | Affiche fournie |
