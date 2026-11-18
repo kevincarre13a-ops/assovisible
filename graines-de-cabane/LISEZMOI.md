@@ -106,9 +106,9 @@ photos, PNG pour le logo et les affiches.
 |---|---|---|---|
 | `images/logo-gdc.png` | 640 × 294 px, fond transparent | Toutes (en-tête, pied de page) | Logo officiel en place |
 | `images/favicon.png` | 64 × 64 px | Onglet du navigateur | En place |
-| `images/hero.jpg` | 1900 × 1270 px, paysage | Accueil (grand bandeau) | Photo provisoire de plateau de jeu (Unsplash) |
+| `images/hero.jpg` | 1900 × 1270 px, paysage | Accueil (grand bandeau) | Photo de l'association (Puissance 4 géant) |
 | `images/qui-sommes-nous-abdel.jpg` | 900 × 1125 px, portrait | Accueil, « Qui sommes-nous ? » | Visuel d'attente |
-| `images/illustration-plateau.jpg` | 1200 × 800 px | L'association (mission) | Photo provisoire de plateau (Unsplash) |
+| `images/illustration-plateau.jpg` | 1200 × 800 px | L'association (mission) | Photo de l'association (Fermez la boîte) |
 | `images/og-graines-de-cabane.jpg` | 1200 × 630 px | Aperçu lors des partages (Facebook…) | Visuel au logo |
 | `images/affiche-programme-sept-dec-2026.png` | 1024 × 1536 px | Agenda, Permanences | Affiche fournie |
 | `images/affiche-programme-dec-2026-fev-2027.png` | 1024 × 1536 px | Agenda, Permanences | Affiche fournie |
@@ -117,8 +117,9 @@ photos, PNG pour le logo et les affiches.
 | `images/affiche-nouvelle-vie-jeux.png` | 1054 × 1492 px | Seconde vie des jeux | Affiche fournie |
 | `images/affiche-jeux-dans-le-monde.png` | 1054 × 1492 px | Réserve (même affiche que l'ambassadeur) | Affiche fournie |
 | `images/vignettes/*.webp` | 520 px de large | Vignettes des affiches | Générées depuis les affiches |
-| `images/grands-jeux/01.jpg` à `42.jpg` | 800 × 600 px, paysage 4:3 | Prêt et location | Visuels d'attente numérotés |
-| `images/galerie/…` | 1200 px max sur le grand côté | Galerie | À ajouter + déclarer dans `galerie.json` |
+| `images/grands-jeux/01.jpg` à `42.jpg` | 800 × 600 px, paysage 4:3 | Prêt et location | Vraies photos pour 01, 06 et 15 ; visuels d'attente pour les autres |
+| `images/affiche-vente-solidaire-28-novembre-2026.png` + `.pdf` | 1199 × 1312 px | Agenda, Permanences (téléchargeable) | Affiche fournie |
+| `images/galerie/…` | 1400 px max sur le grand côté | Galerie | 12 photos de l'association en place, à compléter dans `galerie.json` |
 | Photos d'équipe (facultatif) | 400 × 400 px, carré | L'association | Silhouettes en attente |
 
 Quand vous remplacez une affiche, pensez à régénérer sa vignette (520 px de large, format WebP ou JPG)

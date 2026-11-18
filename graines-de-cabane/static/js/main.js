@@ -157,7 +157,7 @@
     return `<article class="event-card ev-${e.type}${isNext ? ' is-next' : ''}" id="${e.id}">
       <div class="event-date"><span class="dw">${fmt(d, { weekday: 'short' }).replace('.', '')}</span><span class="d">${d.getDate()}</span><span class="m">${fmt(d, { month: 'short' }).replace('.', '')}${d.getFullYear() !== today.getFullYear() ? ' ' + String(d.getFullYear()).slice(2) : ''}</span></div>
       <div class="event-body"><span class="event-type">${TYPES[e.type] || 'Rendez-vous'}</span>${isNext ? '<span class="badge-next">Prochain RDV</span>' : ''}${e.ongoing && e.fin ? '<span class="badge-next">En cours</span>' : ''}
-        <h3>${esc(e.titre)}</h3><p>${esc(meta)}</p>${e.description ? `<p>${esc(e.description)}</p>` : ''}</div></article>`;
+        <h3>${esc(e.titre)}</h3><p>${esc(meta)}</p>${e.description ? `<p>${esc(e.description)}</p>` : ''}${e.affiche ? `<p class="event-links"><a href="${esc(e.affiche)}" data-lightbox data-caption="${esc(e.titre)}"${e.affichePdf ? ` data-pdf="${esc(e.affichePdf)}"` : ''}>Voir l'affiche</a>${e.affichePdf ? ` · <a href="${esc(e.affichePdf)}" download>Télécharger l'affiche (PDF)</a>` : ` · <a href="${esc(e.affiche)}" download>Télécharger l'affiche</a>`}</p>` : ''}</div></article>`;
   };
 
   /* Liste « À venir » + archives */
@@ -331,7 +331,7 @@
 
   /* ---------- Affiches (vignettes cliquables) ---------- */
   $$('[data-affiches]').forEach((box) => getJSON('affiches').then(({ affiches }) => {
-    box.innerHTML = affiches.map((a) => `<a class="poster reveal" href="${esc(a.image)}" data-lightbox="affiches" data-caption="${esc(a.titre)}"><img src="${esc(a.vignette || a.image)}" alt="Affiche : ${esc(a.titre)}" loading="lazy" width="520" height="780"><span>${esc(a.titre)}</span></a>`).join('');
+    box.innerHTML = affiches.map((a) => `<div class="poster-wrap"><a class="poster reveal" href="${esc(a.image)}" data-lightbox="affiches" data-caption="${esc(a.titre)}"${a.pdf ? ` data-pdf="${esc(a.pdf)}"` : ''}><img src="${esc(a.vignette || a.image)}" alt="Affiche : ${esc(a.titre)}" loading="lazy" width="520" height="780"><span>${esc(a.titre)}</span></a><a class="poster-dl" href="${esc(a.pdf || a.image)}" download>Télécharger${a.pdf ? ' (PDF)' : ''}</a></div>`).join('');
     observeAll(box);
   }).catch(() => {}));
 

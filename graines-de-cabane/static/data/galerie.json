@@ -1,4 +1,65 @@
 {
   "_aide": "Photos de la galerie. 'categorie' parmi : permanences, animations, grands-jeux, collecte, monde. Déposez les fichiers dans images/galerie/.",
-  "photos": []
+  "photos": [
+    {
+      "src": "images/galerie/atelier-peinture-jeu-bois.jpg",
+      "alt": "Atelier de fabrication : on peint les chiffres d'un grand jeu en bois",
+      "categorie": "grands-jeux"
+    },
+    {
+      "src": "images/galerie/atelier-plateau-chiffres.jpg",
+      "alt": "Un grand jeu en bois en cours de fabrication, chiffres au pochoir",
+      "categorie": "grands-jeux"
+    },
+    {
+      "src": "images/galerie/grand-jeu-bois-boules.jpg",
+      "alt": "Grand jeu en bois à boules de Graines de Cabane",
+      "categorie": "grands-jeux"
+    },
+    {
+      "src": "images/galerie/grand-jeu-bois-batons.jpg",
+      "alt": "Grand jeu en bois à bâtons de Graines de Cabane",
+      "categorie": "grands-jeux"
+    },
+    {
+      "src": "images/galerie/jeu-peche-poissons-bois.jpg",
+      "alt": "Jeu de pêche aux poissons en bois",
+      "categorie": "grands-jeux"
+    },
+    {
+      "src": "images/galerie/puissance-4-geant.jpg",
+      "alt": "Partie de Puissance 4 géant en pleine rue",
+      "categorie": "animations"
+    },
+    {
+      "src": "images/galerie/fermez-la-boite.jpg",
+      "alt": "Partie de Fermez la boîte entre petits et grands",
+      "categorie": "animations"
+    },
+    {
+      "src": "images/galerie/passe-trappe-mascotte.jpg",
+      "alt": "Passe-trappe en ville, avec la visite d'une mascotte",
+      "categorie": "animations"
+    },
+    {
+      "src": "images/galerie/passe-trappe-plein-air.jpg",
+      "alt": "Tournoi de passe-trappe en plein air",
+      "categorie": "animations"
+    },
+    {
+      "src": "images/galerie/animation-jeu-de-cartes.jpg",
+      "alt": "Un animateur accompagne une partie de cartes en accueil de loisirs",
+      "categorie": "animations"
+    },
+    {
+      "src": "images/galerie/jeu-de-plateau-cooperatif.jpg",
+      "alt": "Partie de jeu de plateau",
+      "categorie": "permanences"
+    },
+    {
+      "src": "images/galerie/tout-petits-cubes-bois.jpg",
+      "alt": "Espace tout-petits : construire avec des cubes en bois",
+      "categorie": "permanences"
+    }
+  ]
 }

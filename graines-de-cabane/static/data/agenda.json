@@ -47,10 +47,12 @@
     },
     {
       "date": "2026-11-28",
-      "titre": "Vente de jeux solidaires pour préparer Noël",
+      "titre": "1re vente de jeux solidaires : préparez vos fêtes en douceur !",
       "type": "permanence",
-      "horaires": "9h30 à 18h",
-      "description": "Ouverture exceptionnelle de 9h30 à 18h."
+      "horaires": "9h30 à 12h30 et 14h à 18h",
+      "description": "Tous les jeux et jouets de seconde main à 2 €, 4 €, 6 € ou 8 €. Jeux en bois sur place, espace pour les tout-petits, tombola (tirage à 16h), café, thé et bar à sirop. Tous les fonds servent à acheminer les jeux offerts aux enfants et aux familles de par le monde.",
+      "affiche": "images/affiche-vente-solidaire-28-novembre-2026.png",
+      "affichePdf": "images/affiche-vente-solidaire-28-novembre-2026.pdf"
     },
     {
       "date": "2026-12-05",

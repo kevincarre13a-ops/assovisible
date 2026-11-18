@@ -748,3 +748,11 @@ dialog::backdrop { background: rgba(18, 34, 60, .82); backdrop-filter: blur(4px)
 .format .art { isolation: isolate; }
 .hero-grid > * { min-width: 0; }
 @media (max-width: 960px) { .piece { opacity: .45; --w: 40px !important; } }
+.event-links { margin-top: .4rem !important; font-weight: 800; }
+.poster-wrap { display: grid; gap: .7rem; justify-items: center; }
+.poster-wrap .poster { width: 100%; }
+.poster-dl { font-weight: 800; font-size: .95rem; }
+.poster-wrap:nth-child(odd) .poster { transform: rotate(-1.6deg); } .poster-wrap:nth-child(even) .poster { transform: rotate(1.6deg); }
+.poster-wrap .poster:hover { transform: rotate(0) translateY(-8px) scale(1.02); }
+.posters { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 300px)); justify-content: center; }
+.poster img { object-fit: contain; background: #fff; }

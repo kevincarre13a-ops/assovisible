@@ -2,6 +2,12 @@
   "_aide": "Affiches programme affichées en vignettes (Agenda, Permanences).",
   "affiches": [
     {
+      "image": "images/affiche-vente-solidaire-28-novembre-2026.png",
+      "vignette": "images/vignettes/affiche-vente-solidaire-28-novembre-2026.webp",
+      "pdf": "images/affiche-vente-solidaire-28-novembre-2026.pdf",
+      "titre": "1re vente de jeux solidaires, samedi 28 novembre 2026"
+    },
+    {
       "image": "images/affiche-programme-dec-2026-fev-2027.png",
       "vignette": "images/vignettes/affiche-programme-dec-2026-fev-2027.webp",
       "titre": "Programme décembre 2026, janvier et février 2027"
