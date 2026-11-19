@@ -2,6 +2,11 @@
   "_aide": "Photos de la galerie. 'categorie' parmi : permanences, animations, grands-jeux, collecte, monde. Déposez les fichiers dans images/galerie/.",
   "photos": [
     {
+      "src": "images/galerie/jeu-de-lancer-palets.jpg",
+      "alt": "Jeu de lancer de sac sur grand plateau en bois numéroté",
+      "categorie": "animations"
+    },
+    {
       "src": "images/galerie/atelier-peinture-jeu-bois.jpg",
       "alt": "Atelier de fabrication : on peint les chiffres d'un grand jeu en bois",
       "categorie": "grands-jeux"
