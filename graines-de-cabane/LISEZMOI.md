@@ -129,12 +129,20 @@ Rappel : pas de photo d'enfant identifiable sans autorisation écrite des parent
 
 ---
 
-## Formulaires (Netlify Forms)
+## Formulaires (Netlify Forms + Resend)
 
-Quatre formulaires : `contact`, `location`, `ambassadeur`, `point-de-recolte`. Les messages arrivent
-dans l'interface Netlify (onglet **Forms**). Pour les recevoir par e-mail :
-Netlify › Project configuration › Notifications › Emails and webhooks › Form submission notifications.
-Un champ piège invisible bloque les robots ; la page `merci.html` s'affiche après l'envoi.
+Quatre formulaires : `contact`, `location`, `ambassadeur`, `point-de-recolte`. Chaque message validé
+(hors spam) est enregistré dans Netlify (onglet **Forms**) ET envoyé par e-mail via Resend par la fonction
+`netlify/functions/submission-created.mjs`. « Répondre » dans le mail répond directement à la personne.
+
+Variables d'environnement à définir dans Netlify (Project configuration › Environment variables,
+portée « Functions »), puis redéployer :
+- `RESEND_API_KEY` : la clé API Resend (secrète) ;
+- `MAIL_FROM` : l'expéditeur, sur le domaine validé dans Resend, ex. `Site Graines de Cabane <site@grainesdecabanes.org>` ;
+- `MAIL_TO` : le ou les destinataires séparés par des virgules (par défaut `grainesde@hotmail.fr`).
+
+En cas de souci : Netlify › Logs › Functions › submission-created affiche l'erreur renvoyée par Resend.
+Un champ piège invisible bloque les robots ; la page `/merci` s'affiche après l'envoi.
 
 Le sujet du formulaire de contact peut être présélectionné par l'adresse :
 `contact.html?sujet=devis` (devis, location, adhesion, don, point-de-recolte, ambassadeur, benevolat,
