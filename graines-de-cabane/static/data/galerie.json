@@ -90,6 +90,26 @@
       "src": "images/galerie/tout-petits-cubes-bois.jpg",
       "alt": "Espace tout-petits : construire avec des cubes en bois",
       "categorie": "permanences"
+    },
+    {
+      "src": "images/galerie/collecte-sacs-et-cartons.jpg",
+      "alt": "Sacs et cartons remplis de jeux donnés, prêts à être triés",
+      "categorie": "collecte"
+    },
+    {
+      "src": "images/galerie/collecte-jeux-table-basse.jpg",
+      "alt": "Jeux de société donnés posés sur une table basse avant le tri",
+      "categorie": "collecte"
+    },
+    {
+      "src": "images/galerie/collecte-pile-de-jeux.jpg",
+      "alt": "Pile de boîtes de jeux et cartons de dons récoltés",
+      "categorie": "collecte"
+    },
+    {
+      "src": "images/galerie/collecte-chargement-voiture.jpg",
+      "alt": "Une bénévole souriante charge un grand sac de jeux collectés dans une voiture",
+      "categorie": "collecte"
     }
   ]
 }

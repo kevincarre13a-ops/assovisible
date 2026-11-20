@@ -778,3 +778,5 @@ dialog::backdrop { background: rgba(18, 34, 60, .82); backdrop-filter: blur(4px)
 .js .anim-photo.reveal.is-in:nth-child(odd) { transform: rotate(-1deg); } .js .anim-photo.reveal.is-in:nth-child(even) { transform: rotate(1deg); }
 .anim-photo:hover, .js .anim-photo.reveal.is-in:hover { transform: translateY(-6px) rotate(0); box-shadow: var(--shadow-lift); }
 .anim-photo img { width: 100%; height: 100%; object-fit: cover; }
+.anim-photos--4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 960px) { .anim-photos--4 { grid-template-columns: 1fr 1fr; } }
