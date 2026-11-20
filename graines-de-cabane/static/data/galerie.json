@@ -176,6 +176,46 @@
       "vignette": "images/galerie/vignettes/collecte-chargement-voiture.webp",
       "largeur": 600,
       "hauteur": 338
+    },
+    {
+      "src": "images/galerie/monde-animation-jeu-de-cartes.jpg",
+      "alt": "Abdel anime un jeu de cartes avec des enfants",
+      "categorie": "monde",
+      "vignette": "images/galerie/vignettes/monde-animation-jeu-de-cartes.webp",
+      "largeur": 600,
+      "hauteur": 800
+    },
+    {
+      "src": "images/galerie/monde-atelier-jeux-adultes.jpg",
+      "alt": "Atelier découverte des jeux avec des professionnels de l'éducation",
+      "categorie": "monde",
+      "vignette": "images/galerie/vignettes/monde-atelier-jeux-adultes.webp",
+      "largeur": 600,
+      "hauteur": 450
+    },
+    {
+      "src": "images/galerie/monde-classe-jeux-offerts.jpg",
+      "alt": "Une classe brandit les jeux offerts par Graines de Cabane",
+      "categorie": "monde",
+      "vignette": "images/galerie/vignettes/monde-classe-jeux-offerts.webp",
+      "largeur": 600,
+      "hauteur": 452
+    },
+    {
+      "src": "images/galerie/monde-ecole-jeu-animaux.jpg",
+      "alt": "Des écoliers jouent avec un jeu d'animaux à assembler",
+      "categorie": "monde",
+      "vignette": "images/galerie/vignettes/monde-ecole-jeu-animaux.webp",
+      "largeur": 600,
+      "hauteur": 451
+    },
+    {
+      "src": "images/galerie/monde-ecole-jeu-de-plateau.jpg",
+      "alt": "Des écoliers découvrent un jeu de plateau offert",
+      "categorie": "monde",
+      "vignette": "images/galerie/vignettes/monde-ecole-jeu-de-plateau.webp",
+      "largeur": 600,
+      "hauteur": 451
     }
   ]
 }
