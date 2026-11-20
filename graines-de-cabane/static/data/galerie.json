@@ -2,6 +2,31 @@
   "_aide": "Photos de la galerie. 'categorie' parmi : permanences, animations, grands-jeux, collecte, monde. Déposez les fichiers dans images/galerie/.",
   "photos": [
     {
+      "src": "images/galerie/animation-corridor-terrasse.jpg",
+      "alt": "Partie de Corridor géant en terrasse entre un adulte et un jeune",
+      "categorie": "animations"
+    },
+    {
+      "src": "images/galerie/animation-jeu-de-cartes-mains.jpg",
+      "alt": "Mains d'enfants posées sur un jeu de cartes coopératif",
+      "categorie": "animations"
+    },
+    {
+      "src": "images/galerie/animation-festival-grands-jeux.jpg",
+      "alt": "Rangée de grands jeux en bois en plein air, carrom au premier plan",
+      "categorie": "animations"
+    },
+    {
+      "src": "images/galerie/animation-jeux-de-batons.jpg",
+      "alt": "Une animatrice et des enfants autour de grands jeux en bois à bâtons",
+      "categorie": "animations"
+    },
+    {
+      "src": "images/galerie/animation-jeux-plateau-groupe.jpg",
+      "alt": "Groupe d'enfants et d'animateurs autour de jeux de plateau sur une grande table",
+      "categorie": "animations"
+    },
+    {
       "src": "images/galerie/jeu-de-lancer-palets.jpg",
       "alt": "Jeu de lancer de sac sur grand plateau en bois numéroté",
       "categorie": "animations"
