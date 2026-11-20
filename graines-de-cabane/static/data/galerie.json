@@ -178,6 +178,14 @@
       "hauteur": 338
     },
     {
+      "src": "images/galerie/monde-remise-de-jeux.jpg",
+      "alt": "Remise de jeux offerts par Graines de Cabane à des partenaires",
+      "categorie": "monde",
+      "vignette": "images/galerie/vignettes/monde-remise-de-jeux.webp",
+      "largeur": 600,
+      "hauteur": 800
+    },
+    {
       "src": "images/galerie/monde-animation-jeu-de-cartes.jpg",
       "alt": "Abdel anime un jeu de cartes avec des enfants",
       "categorie": "monde",
