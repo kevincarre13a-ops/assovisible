@@ -3,6 +3,7 @@
 // Les pages sont dans src/pages : en-tête et pied de page sont ajoutés automatiquement.
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
@@ -10,6 +11,10 @@ const SRC = path.join(ROOT, 'src');
 const STATIC = path.join(ROOT, 'static');
 const DIST = path.join(ROOT, 'dist');
 const SITE_URL = 'https://grainesdecabanes.org';
+// Numéro de version des fichiers CSS/JS : change dès que le fichier change (mise en cache longue sans risque)
+const ver = (rel) => crypto.createHash('md5').update(fs.readFileSync(path.join(STATIC, rel))).digest('hex').slice(0, 10);
+const V_CSS = ver('css/style.css');
+const V_JS = ver('js/main.js');
 const readJSON = (f) => JSON.parse(fs.readFileSync(path.join(STATIC, 'data', f), 'utf8'));
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -219,11 +224,30 @@ function worldMap(opts = '') {
 const honeypot = `<p class="hp"><label>Ne pas remplir : <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>`;
 const piece = (type, color, style) => `<div class="piece" data-parallax style="${style}">${PIECES[type](color)}</div>`;
 
+/* Rendez-vous de l'agenda au format Event de schema.org (lisible par Google) */
+function eventsLD() {
+  const a = readJSON('agenda.json');
+  const offset = (d) => { const p = new Intl.DateTimeFormat('en', { timeZone: 'Europe/Paris', timeZoneName: 'longOffset' }).formatToParts(new Date(d + 'T12:00:00Z')).find((x) => x.type === 'timeZoneName').value; return p === 'GMT' ? '+00:00' : p.replace('GMT', ''); };
+  const time = (d, h, last) => { const m = [...String(h || '').matchAll(/(\d{1,2})h(\d{2})?/g)]; const x = last ? m[m.length - 1] : m[0]; return x ? `T${x[1].padStart(2, '0')}:${x[2] || '00'}:00${offset(d)}` : ''; };
+  const place = (lieu) => /Tourren/i.test(lieu)
+    ? { '@type': 'Place', name: 'Salle Tourren', address: { '@type': 'PostalAddress', streetAddress: '2 rue du Grand Tourren', postalCode: '40230', addressLocality: 'Saint-Vincent-de-Tyrosse', addressCountry: 'FR' } }
+    : { '@type': 'Place', name: lieu || 'Saint-Vincent-de-Tyrosse', address: { '@type': 'PostalAddress', addressLocality: 'Saint-Vincent-de-Tyrosse', postalCode: '40230', addressRegion: 'Landes', addressCountry: 'FR' } };
+  return a.evenements.map((e) => {
+    const lieu = e.lieu ?? a.lieuParDefaut; const h = e.horaires ?? a.horairesParDefaut;
+    const ev = { '@context': 'https://schema.org', '@type': 'Event', name: e.titre, startDate: e.date + time(e.date, h, false), endDate: (e.fin || e.date) + time(e.fin || e.date, h, true),
+      eventStatus: 'https://schema.org/EventScheduled', eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode', location: place(lieu),
+      organizer: { '@type': 'Organization', name: 'Graines de Cabane', url: SITE_URL + '/' }, image: SITE_URL + '/images/og-graines-de-cabane.jpg',
+      description: e.description || (e.type === 'permanence' ? 'Permanence ludique de Graines de Cabane : jeux pour tous les âges, espace tout-petits, café et thème du samedi.' : e.titre) };
+    if (e.affiche) ev.image = SITE_URL + '/' + e.affiche;
+    return ev;
+  });
+}
+
 /* ---------- Gabarit ---------- */
 function layout(meta, body) {
   const canonical = SITE_URL + (meta.slug === 'index' ? '/' : '/' + meta.slug);
   const title = meta.slug === 'index' ? meta.title : `${meta.title} | Graines de Cabane`;
-  const ld = [meta.slug === 'index' || meta.slug === 'contact' ? LD_ORG : null, ...(meta.ld || [])].filter(Boolean);
+  const ld = [meta.slug === 'index' || meta.slug === 'contact' ? LD_ORG : null, ...(meta.slug === 'agenda' || meta.slug === 'permanences' ? eventsLD() : []), ...(meta.ld || [])].filter(Boolean);
   return `<!doctype html>
 <html lang="fr" class="no-js">
 <head>
@@ -242,13 +266,14 @@ ${meta.slug === '404' ? '<base href="/">\n' : ''}<meta name="viewport" content="
 <meta property="og:image" content="${SITE_URL}/images/${meta.ogImage || 'og-graines-de-cabane.jpg'}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="images/favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <link rel="preload" href="fonts/fredoka.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=${V_CSS}">
 <script>document.documentElement.classList.replace('no-js','js');</script>
 ${ld.map((o) => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join('\n')}
-<script src="js/main.js" defer></script>
+<script src="js/main.js?v=${V_JS}" defer></script>
 </head>
 <body class="page-${meta.slug}">
 ${header(meta.nav)}
@@ -292,5 +317,7 @@ for (const file of pages) {
   if (!meta.noindex) sitemap.push({ loc: SITE_URL + (meta.slug === 'index' ? '/' : '/' + meta.slug), p: meta.priority || '0.7' });
 }
 fs.writeFileSync(path.join(DIST, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemap.map((u) => `  <url><loc>${u.loc}</loc><changefreq>weekly</changefreq><priority>${u.p}</priority></url>`).join('\n')}\n</urlset>\n`);
+fs.writeFileSync(path.join(DIST, 'site.webmanifest'), JSON.stringify({ name: 'Graines de Cabane', short_name: 'Graines de Cabane', lang: 'fr', start_url: '/', display: 'browser', background_color: '#FBF7F0', theme_color: '#1F3A63',
+  icons: [{ src: '/images/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/images/icon-512.png', sizes: '512x512', type: 'image/png' }] }, null, 2));
 fs.writeFileSync(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`);
 console.log(`${pages.length} pages construites dans dist/`);

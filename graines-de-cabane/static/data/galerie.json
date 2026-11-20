@@ -4,112 +4,178 @@
     {
       "src": "images/galerie/animation-corridor-terrasse.jpg",
       "alt": "Partie de Corridor géant en terrasse entre un adulte et un jeune",
-      "categorie": "animations"
+      "categorie": "animations",
+      "vignette": "images/galerie/vignettes/animation-corridor-terrasse.webp",
+      "largeur": 600,
+      "hauteur": 800
     },
     {
       "src": "images/galerie/animation-jeu-de-cartes-mains.jpg",
       "alt": "Mains d'enfants posées sur un jeu de cartes coopératif",
-      "categorie": "animations"
+      "categorie": "animations",
+      "vignette": "images/galerie/vignettes/animation-jeu-de-cartes-mains.webp",
+      "largeur": 600,
+      "hauteur": 800
     },
     {
       "src": "images/galerie/animation-festival-grands-jeux.jpg",
       "alt": "Rangée de grands jeux en bois en plein air, carrom au premier plan",
-      "categorie": "animations"
+      "categorie": "animations",
+      "vignette": "images/galerie/vignettes/animation-festival-grands-jeux.webp",
+      "largeur": 600,
+      "hauteur": 800
     },
     {
       "src": "images/galerie/animation-jeux-de-batons.jpg",
       "alt": "Une animatrice et des enfants autour de grands jeux en bois à bâtons",
-      "categorie": "animations"
+      "categorie": "animations",
+      "vignette": "images/galerie/vignettes/animation-jeux-de-batons.webp",
+      "largeur": 600,
+      "hauteur": 800
     },
     {
       "src": "images/galerie/animation-jeux-plateau-groupe.jpg",
       "alt": "Groupe d'enfants et d'animateurs autour de jeux de plateau sur une grande table",
-      "categorie": "animations"
+      "categorie": "animations",
+      "vignette": "images/galerie/vignettes/animation-jeux-plateau-groupe.webp",
+      "largeur": 600,
+      "hauteur": 800
     },
     {
       "src": "images/galerie/jeu-de-lancer-palets.jpg",
       "alt": "Jeu de lancer de sac sur grand plateau en bois numéroté",
-      "categorie": "animations"
+      "categorie": "animations",
+      "vignette": "images/galerie/vignettes/jeu-de-lancer-palets.webp",
+      "largeur": 600,
+      "hauteur": 876
     },
     {
       "src": "images/galerie/atelier-peinture-jeu-bois.jpg",
       "alt": "Atelier de fabrication : on peint les chiffres d'un grand jeu en bois",
-      "categorie": "grands-jeux"
+      "categorie": "grands-jeux",
+      "vignette": "images/galerie/vignettes/atelier-peinture-jeu-bois.webp",
+      "largeur": 600,
+      "hauteur": 800
     },
     {
       "src": "images/galerie/atelier-plateau-chiffres.jpg",
       "alt": "Un grand jeu en bois en cours de fabrication, chiffres au pochoir",
-      "categorie": "grands-jeux"
+      "categorie": "grands-jeux",
+      "vignette": "images/galerie/vignettes/atelier-plateau-chiffres.webp",
+      "largeur": 600,
+      "hauteur": 800
     },
     {
       "src": "images/galerie/grand-jeu-bois-boules.jpg",
       "alt": "Grand jeu en bois à boules de Graines de Cabane",
-      "categorie": "grands-jeux"
+      "categorie": "grands-jeux",
+      "vignette": "images/galerie/vignettes/grand-jeu-bois-boules.webp",
+      "largeur": 600,
+      "hauteur": 800
     },
     {
       "src": "images/galerie/grand-jeu-bois-batons.jpg",
       "alt": "Grand jeu en bois à bâtons de Graines de Cabane",
-      "categorie": "grands-jeux"
+      "categorie": "grands-jeux",
+      "vignette": "images/galerie/vignettes/grand-jeu-bois-batons.webp",
+      "largeur": 600,
+      "hauteur": 800
     },
     {
       "src": "images/galerie/jeu-peche-poissons-bois.jpg",
       "alt": "Jeu de pêche aux poissons en bois",
-      "categorie": "grands-jeux"
+      "categorie": "grands-jeux",
+      "vignette": "images/galerie/vignettes/jeu-peche-poissons-bois.webp",
+      "largeur": 600,
+      "hauteur": 800
     },
     {
       "src": "images/galerie/puissance-4-geant.jpg",
       "alt": "Partie de Puissance 4 géant en pleine rue",
-      "categorie": "animations"
+      "categorie": "animations",
+      "vignette": "images/galerie/vignettes/puissance-4-geant.webp",
+      "largeur": 600,
+      "hauteur": 277
     },
     {
       "src": "images/galerie/fermez-la-boite.jpg",
       "alt": "Partie de Fermez la boîte entre petits et grands",
-      "categorie": "animations"
+      "categorie": "animations",
+      "vignette": "images/galerie/vignettes/fermez-la-boite.webp",
+      "largeur": 600,
+      "hauteur": 277
     },
     {
       "src": "images/galerie/passe-trappe-mascotte.jpg",
       "alt": "Passe-trappe en ville, avec la visite d'une mascotte",
-      "categorie": "animations"
+      "categorie": "animations",
+      "vignette": "images/galerie/vignettes/passe-trappe-mascotte.webp",
+      "largeur": 600,
+      "hauteur": 1300
     },
     {
       "src": "images/galerie/passe-trappe-plein-air.jpg",
       "alt": "Tournoi de passe-trappe en plein air",
-      "categorie": "animations"
+      "categorie": "animations",
+      "vignette": "images/galerie/vignettes/passe-trappe-plein-air.webp",
+      "largeur": 600,
+      "hauteur": 450
     },
     {
       "src": "images/galerie/animation-jeu-de-cartes.jpg",
       "alt": "Un animateur accompagne une partie de cartes en accueil de loisirs",
-      "categorie": "animations"
+      "categorie": "animations",
+      "vignette": "images/galerie/vignettes/animation-jeu-de-cartes.webp",
+      "largeur": 600,
+      "hauteur": 450
     },
     {
       "src": "images/galerie/jeu-de-plateau-cooperatif.jpg",
       "alt": "Partie de jeu de plateau",
-      "categorie": "permanences"
+      "categorie": "permanences",
+      "vignette": "images/galerie/vignettes/jeu-de-plateau-cooperatif.webp",
+      "largeur": 600,
+      "hauteur": 800
     },
     {
       "src": "images/galerie/tout-petits-cubes-bois.jpg",
       "alt": "Espace tout-petits : construire avec des cubes en bois",
-      "categorie": "permanences"
+      "categorie": "permanences",
+      "vignette": "images/galerie/vignettes/tout-petits-cubes-bois.webp",
+      "largeur": 600,
+      "hauteur": 450
     },
     {
       "src": "images/galerie/collecte-sacs-et-cartons.jpg",
       "alt": "Sacs et cartons remplis de jeux donnés, prêts à être triés",
-      "categorie": "collecte"
+      "categorie": "collecte",
+      "vignette": "images/galerie/vignettes/collecte-sacs-et-cartons.webp",
+      "largeur": 600,
+      "hauteur": 800
     },
     {
       "src": "images/galerie/collecte-jeux-table-basse.jpg",
       "alt": "Jeux de société donnés posés sur une table basse avant le tri",
-      "categorie": "collecte"
+      "categorie": "collecte",
+      "vignette": "images/galerie/vignettes/collecte-jeux-table-basse.webp",
+      "largeur": 600,
+      "hauteur": 800
     },
     {
       "src": "images/galerie/collecte-pile-de-jeux.jpg",
       "alt": "Pile de boîtes de jeux et cartons de dons récoltés",
-      "categorie": "collecte"
+      "categorie": "collecte",
+      "vignette": "images/galerie/vignettes/collecte-pile-de-jeux.webp",
+      "largeur": 600,
+      "hauteur": 841
     },
     {
       "src": "images/galerie/collecte-chargement-voiture.jpg",
       "alt": "Une bénévole souriante charge un grand sac de jeux collectés dans une voiture",
-      "categorie": "collecte"
+      "categorie": "collecte",
+      "vignette": "images/galerie/vignettes/collecte-chargement-voiture.webp",
+      "largeur": 600,
+      "hauteur": 338
     }
   ]
 }

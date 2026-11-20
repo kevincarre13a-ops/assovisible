@@ -24,6 +24,10 @@
   --muted: #49627E;
   --border: #C7DCE8;
   --white: #fff;
+  --turq-text: #0E6295;
+  --lime-text: #4A6614;
+  --sun-text: #8A4706;
+  --coral-text: #B1232A;
 
   --radius: 1.25rem;
   --radius-lg: 1.6rem;
@@ -56,7 +60,7 @@ body {
 
 img, svg, video { max-width: 100%; display: block; }
 img { height: auto; }
-a { color: var(--turq); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a { color: var(--turq-text); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 a:hover { color: var(--navy); }
 p { margin: 0 0 1em; }
 ul, ol { padding-left: 1.2em; }
@@ -89,7 +93,7 @@ h4 { font-size: 1.15rem; }
 .small { font-size: .92rem; }
 .eyebrow {
   display: inline-flex; align-items: center; gap: .45rem; font-family: var(--font-title); font-weight: 600;
-  font-size: .95rem; letter-spacing: .04em; text-transform: uppercase; color: var(--turq); margin-bottom: .8rem;
+  font-size: .95rem; letter-spacing: .04em; text-transform: uppercase; color: var(--turq-text); margin-bottom: .8rem;
 }
 .eyebrow::before { content: ""; width: 26px; height: 6px; border-radius: 6px; background: var(--lime); }
 .section-head { margin-bottom: clamp(2rem, 4vw, 3rem); }
@@ -281,8 +285,11 @@ main { padding-top: var(--header-h); }
 .t-author span { opacity: .85; }
 .t-controls { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1rem; }
 .t-dots { display: flex; gap: .4rem; flex-wrap: wrap; }
-.t-dot { width: 12px; height: 12px; border-radius: 999px; border: 0; padding: 0; background: rgba(255,255,255,.45); cursor: pointer; transition: width .35s var(--spring), background-color .2s; }
-.t-dot[aria-current="true"] { width: 30px; background: var(--lime); }
+.t-dots { gap: 0; }
+.t-dot { position: relative; width: 24px; height: 24px; border: 0; padding: 0; background: transparent; cursor: pointer; transition: width .35s var(--spring); }
+.t-dot::before { content: ""; position: absolute; left: 6px; right: 6px; top: 6px; bottom: 6px; border-radius: 999px; background: rgba(255,255,255,.45); transition: background-color .2s; }
+.t-dot[aria-current="true"] { width: 42px; }
+.t-dot[aria-current="true"]::before { background: var(--lime); }
 .t-arrows { display: flex; gap: .45rem; }
 .t-arrow { width: 44px; height: 44px; border-radius: 50%; border: 2px solid rgba(255,255,255,.7); color: #fff; background: transparent; cursor: pointer; display: grid; place-items: center; transition: transform .3s var(--spring), background-color .2s; }
 .t-arrow:hover { background: rgba(255,255,255,.18); transform: scale(1.1); }

@@ -316,7 +316,7 @@
   if (gal) getJSON('galerie').then(({ photos }) => {
     const CATS = { permanences: ['Permanences', '#E6F1F7'], animations: ['Animations', '#FBE3E1'], 'grands-jeux': ['Grands jeux en bois', '#FDEBD3'], collecte: ['Collecte', '#EEF5DC'], monde: ['Dans le monde', '#EAF3F7'] };
     const ARS = ['1', '4/5', '4/3', '3/4', '1', '5/4'];
-    let html = photos.map((p, i) => `<a class="m-item reveal" data-cat="${esc(p.categorie)}" href="${esc(p.src)}" data-lightbox="galerie" data-caption="${esc(p.legende || p.alt || '')}"><img src="${esc(p.src)}" alt="${esc(p.alt || '')}" loading="lazy"></a>`).join('');
+    let html = photos.map((p, i) => `<a class="m-item reveal" data-cat="${esc(p.categorie)}" href="${esc(p.src)}" data-lightbox="galerie" data-caption="${esc(p.legende || p.alt || '')}"><img src="${esc(p.vignette || p.src)}" alt="${esc(p.alt || '')}"${p.largeur ? ` width="${p.largeur}" height="${p.hauteur}"` : ''} loading="${i < 4 ? 'eager' : 'lazy'}" decoding="async"></a>`).join('');
     const cats = Object.keys(CATS); const have = new Set(photos.map((p) => p.categorie));
     let k = 0;
     cats.forEach((c) => { if (have.has(c)) return; for (let j = 0; j < 3; j++) html += `<div class="m-item m-placeholder reveal" data-cat="${c}" style="--ph:${CATS[c][1]};--ar:${ARS[k++ % ARS.length]}"><div><svg viewBox="0 0 24 24" fill="none" stroke="#1F3A63" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="15" rx="3"/><circle cx="12" cy="12.5" r="3.6"/><path d="M8.5 5l1.5-2h4l1.5 2"/></svg><strong>Photos bientôt en ligne</strong><small>${CATS[c][0]}</small></div></div>`; });
