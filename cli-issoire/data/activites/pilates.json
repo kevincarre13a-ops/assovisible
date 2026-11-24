@@ -20,7 +20,13 @@
       "note": null
     }
   ],
-  "photos": [],
+  "photos": [
+    {
+      "src": "illustrations/pilates",
+      "alt": "Exercice de pilates sur tapis",
+      "illustration": true
+    }
+  ],
   "liens": [],
   "source": "Activité absente de l'ancien site : toutes les informations pratiques sont à renseigner par le responsable (fichier data/activites/pilates.json)."
 }

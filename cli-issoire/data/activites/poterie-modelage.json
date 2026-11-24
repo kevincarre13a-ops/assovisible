@@ -1,5 +1,9 @@
 {
-  "ordre": 9, "slug": "poterie-modelage", "theme": "ateliers", "titre": "Poterie et modelage", "icone": "vase",
+  "ordre": 9,
+  "slug": "poterie-modelage",
+  "theme": "ateliers",
+  "titre": "Poterie et modelage",
+  "icone": "vase",
   "resume": "Pots, plats, sculptures : le plaisir de transformer l'argile, au four de la Maison des associations.",
   "description": [
     "Le travail de l'argile traverse les millénaires et tous les pays du monde. Modestement mais avec passion, le groupe essaie de retrouver les gestes et les techniques de nos lointains ancêtres, mais aussi ceux des céramistes et sculpteurs contemporains.",
@@ -13,17 +17,28 @@
       "jours": "Jeudi et/ou vendredi",
       "horaires": "Jeudi 13h30–17h30 · Vendredi 14h00–18h00",
       "lieu": "Salle Atelier, Maison des associations",
-      "animateur": "Joëlle et Henri (conseillers)", "tarif": null, "note": null
+      "animateur": "Joëlle et Henri (conseillers)",
+      "tarif": null,
+      "note": null
     },
     {
       "intitule": "Modelage",
       "description": "Sculptures plus ou moins figuratives : figures humaines, animaux réalistes ou fabuleux. Après séchage, les œuvres sont cuites, puis le plus souvent patinées et cirées.",
-      "jours": "Lundi", "horaires": "9h00–12h00",
+      "jours": "Lundi",
+      "horaires": "9h00–12h00",
       "lieu": "Salle Atelier, Maison des associations",
-      "animateur": "Aliette", "tarif": null, "note": null
+      "animateur": "Aliette",
+      "tarif": null,
+      "note": null
     }
   ],
-  "photos": ["e/exp/Expo-MDA-12042024-1.jpg"],
+  "photos": [
+    {
+      "src": "illustrations/poterie-modelage",
+      "alt": "Mains façonnant l'argile sur un tour de potier",
+      "illustration": true
+    }
+  ],
   "liens": [],
   "source": "Ancien site cli63.com (archives web), page « Activités poterie et modelage »."
 }

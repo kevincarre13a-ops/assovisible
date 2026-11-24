@@ -4,59 +4,64 @@
     "page": "convivialite.html",
     "nom": "La Convivialité",
     "court": "Convivialité",
-    "couleur": "#C2410C",
-    "teinte": "#FFEDD5",
+    "couleur": "#D8502F",
+    "teinte": "#FDE7E1",
     "icone": "smile",
     "accroche": "Bouger, danser, jouer : le plaisir d'être ensemble.",
     "intro": "Gymnastique, pilates, danse et jeux de société : des moments joyeux, à son rythme, où l'on rencontre du monde.",
-    "image": "d/dan/Danse-groupe1.png"
+    "image": "club/der24-14",
+    "fonce": "#B23A1E"
   },
   {
     "slug": "solidarite",
     "page": "solidarite.html",
     "nom": "La Solidarité",
     "court": "Solidarité",
-    "couleur": "#BE185D",
-    "teinte": "#FCE7F3",
+    "couleur": "#F08A24",
+    "teinte": "#FEEEDC",
     "icone": "heart",
     "accroche": "Prêter sa voix à ceux qui ne peuvent pas lire.",
     "intro": "Les Voix d'Yss enregistrent des livres audio pour les personnes empêchées de lire.",
-    "image": null
+    "image": "illustrations/voix-d-yss",
+    "fonce": "#A8520A"
   },
   {
     "slug": "sorties",
     "page": "sorties.html",
     "nom": "Les Sorties",
     "court": "Sorties",
-    "couleur": "#15803D",
-    "teinte": "#DCFCE7",
+    "couleur": "#54B448",
+    "teinte": "#E3F4E0",
     "icone": "mountain",
     "accroche": "Les volcans d'Auvergne et bien au-delà, à pied ou à vélo.",
     "intro": "Randonnée pédestre en quatre groupes de niveau, randonnée cycliste, voyages et séjours.",
-    "image": "r/r1v/R1-vielle-brioude-5.jpg"
+    "image": "club/dole-29",
+    "fonce": "#2E7D32"
   },
   {
     "slug": "ateliers",
     "page": "ateliers.html",
     "nom": "Les Ateliers",
     "court": "Ateliers",
-    "couleur": "#A16207",
-    "teinte": "#FEF3C7",
+    "couleur": "#FCC024",
+    "teinte": "#FFF4D2",
     "icone": "palette",
     "accroche": "Créer de ses mains, et faire travailler sa tête.",
     "intro": "Vannerie, poterie, peinture sur soie, dessin, marqueterie et exercices pour la mémoire.",
-    "image": "a/ala/a-l-action1.jpg"
+    "image": "illustrations/poterie-modelage",
+    "fonce": "#8A6100"
   },
   {
     "slug": "nouvelles-technologies",
     "page": "nouvelles-technologies.html",
     "nom": "Les Nouvelles Technologies",
     "court": "Nouvelles technologies",
-    "couleur": "#1D4ED8",
-    "teinte": "#DBEAFE",
+    "couleur": "#0090D8",
+    "teinte": "#DDF0FA",
     "icone": "laptop",
     "accroche": "Le numérique sans stress, entre bénévoles patients.",
     "intro": "Des ateliers d'informatique, de smartphone et d'intelligence artificielle, du lundi au vendredi.",
-    "image": "f/for/formation-numerique-cli.jpeg"
+    "image": "activites/informatique",
+    "fonce": "#00679E"
   }
 ]

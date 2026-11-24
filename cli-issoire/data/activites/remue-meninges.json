@@ -1,5 +1,9 @@
 {
-  "ordre": 11, "slug": "remue-meninges", "theme": "ateliers", "titre": "Remue-méninges", "icone": "bulb",
+  "ordre": 11,
+  "slug": "remue-meninges",
+  "theme": "ateliers",
+  "titre": "Remue-méninges",
+  "icone": "bulb",
   "resume": "Une joyeuse gymnastique pour les neurones, sans compétition.",
   "description": [
     "Le but de cet atelier est d'entretenir ses fonctions intellectuelles, de soutenir son attention et sa concentration à travers différents exercices.",
@@ -16,11 +20,21 @@
     {
       "intitule": "Remue-méninges",
       "description": null,
-      "jours": "Tous les mardis", "horaires": "9h30–11h00",
-      "lieu": "Salle Futuna", "animateur": null, "tarif": null, "note": null
+      "jours": "Tous les mardis",
+      "horaires": "9h30–11h00",
+      "lieu": "Salle Futuna",
+      "animateur": null,
+      "tarif": null,
+      "note": null
     }
   ],
-  "photos": ["g/grp/grptrav3.jpg", "g/grp/grptrav4.jpg", "a/aaa/aaaath1.jpg"],
+  "photos": [
+    {
+      "src": "illustrations/remue-meninges",
+      "alt": "Une personne remplit une grille de mots croisés",
+      "illustration": true
+    }
+  ],
   "liens": [],
   "source": "Ancien site cli63.com (archives web), page « Remue-méninges »."
 }

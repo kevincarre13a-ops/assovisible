@@ -81,10 +81,26 @@
     "Les consignes de sécurité à respecter lorsqu'on marche en groupe sont détaillées dans un document dédié (voir liens)."
   ],
   "photos": [
-    "r/r1v/R1-vielle-brioude-5.jpg",
-    "l/lem/le-Mont-fier-44.jpg",
-    "p/pho/photo-de-groupe-1.jpg",
-    "p/pho/photos-de-groupe.jpg"
+    {
+      "src": "club/dole-12",
+      "alt": "Randonneurs du CLI sur un sentier du Jura (voyage 2025)",
+      "illustration": false
+    },
+    {
+      "src": "club/dole-29",
+      "alt": "Le groupe de randonneurs du CLI en montée (voyage 2025)",
+      "illustration": false
+    },
+    {
+      "src": "club/der24-25",
+      "alt": "Photo de groupe des randonneurs du CLI (voyage 2024, Alpes du Sud)",
+      "illustration": false
+    },
+    {
+      "src": "club/dole-04",
+      "alt": "Départ de randonnée (voyage 2025)",
+      "illustration": false
+    }
   ],
   "liens": [
     {

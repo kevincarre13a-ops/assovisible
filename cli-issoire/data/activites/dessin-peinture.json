@@ -21,9 +21,11 @@
     }
   ],
   "photos": [
-    "a/ala/a-l-action1.jpg",
-    "a/ala/a-l-action2.jpg",
-    "l/las/la-salle-tournesol.jpg"
+    {
+      "src": "illustrations/dessin-peinture",
+      "alt": "Pinceau et palette d'aquarelle",
+      "illustration": true
+    }
   ],
   "liens": [],
   "source": "Ancien site cli63.com (archives web), page « L'activité peinture ». Animateur et tarif à renseigner."

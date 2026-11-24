@@ -1,5 +1,9 @@
 {
-  "ordre": 10, "slug": "peinture-sur-soie", "theme": "ateliers", "titre": "Peinture sur soie", "icone": "brush",
+  "ordre": 10,
+  "slug": "peinture-sur-soie",
+  "theme": "ateliers",
+  "titre": "Peinture sur soie",
+  "icone": "brush",
   "resume": "Gutta, anti-fusant et couleurs : un atelier d'entraide où chacune avance à son rythme.",
   "description": [
     "L'activité fonctionne sous forme d'atelier : les personnes les plus expérimentées donnent des explications et aident celles qui ont des difficultés.",
@@ -9,14 +13,21 @@
     {
       "intitule": "Atelier peinture sur soie",
       "description": null,
-      "jours": "Mardi et jeudi", "horaires": "14h00–17h00 (après-midi)",
+      "jours": "Mardi et jeudi",
+      "horaires": "14h00–17h00 (après-midi)",
       "lieu": "Salle Tournesol, 1er étage de la Maison des associations",
       "animateur": "Monique Schena (responsable)",
       "tarif": "Couleurs, gutta et 50/50 fournis gratuitement par le CLI",
       "note": "Matériel à apporter : ses pinceaux et une boîte de rangement pour les petits pots de couleur."
     }
   ],
-  "photos": [],
+  "photos": [
+    {
+      "src": "illustrations/peinture-sur-soie",
+      "alt": "Motif floral peint aux couleurs vives",
+      "illustration": true
+    }
+  ],
   "liens": [],
   "source": "Ancien site cli63.com (archives web), page « Peinture sur soie »."
 }

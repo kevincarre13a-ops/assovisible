@@ -1,28 +1,53 @@
 {
-  "ordre": 5, "slug": "voix-d-yss", "theme": "solidarite", "titre": "Les Voix d'Yss", "icone": "mic",
+  "ordre": 5,
+  "slug": "voix-d-yss",
+  "theme": "solidarite",
+  "titre": "Les Voix d'Yss",
+  "icone": "mic",
   "resume": "Enregistrer des livres audio pour les personnes malvoyantes ou empêchées de lire.",
   "description": [
     "Les Voix d'Yss sont au service des personnes, jeunes ou adultes, empêchées de lire en raison d'un handicap visuel, moteur, cognitif ou d'un trouble « dys ». Elles enregistrent des ouvrages destinés exclusivement à la Bibliothèque Sonore de Chamalières, qui fait partie du réseau des 120 Bibliothèques Sonores de France, au sein de l'Association des Donneurs de Voix, reconnue d'utilité publique depuis 1977.",
     "Cette activité du CLI a été créée en mars 2004, à l'initiative d'Andrée Malet, avec l'aide logistique de Michel Denoux."
   ],
   "faits": [
-    { "valeur": 2004, "label": "année de création", "format": "annee" },
-    { "valeur": 19, "label": "membres" },
-    { "valeur": 2, "label": "groupes d'enregistrement" },
-    { "valeur": 120, "label": "bibliothèques sonores en France" }
+    {
+      "valeur": 2004,
+      "label": "année de création",
+      "format": "annee"
+    },
+    {
+      "valeur": 19,
+      "label": "membres"
+    },
+    {
+      "valeur": 2,
+      "label": "groupes d'enregistrement"
+    },
+    {
+      "valeur": 120,
+      "label": "bibliothèques sonores en France"
+    }
   ],
   "seances": [
     {
       "intitule": "Groupe du mardi",
       "description": "Enregistrement collectif à plusieurs voix.",
-      "jours": "Mardi", "horaires": "10h00–12h00", "lieu": "Salle Danube, Maison des associations",
-      "animateur": null, "tarif": null, "note": null
+      "jours": "Mardi",
+      "horaires": "10h00–12h00",
+      "lieu": "Salle Danube, Maison des associations",
+      "animateur": null,
+      "tarif": null,
+      "note": null
     },
     {
       "intitule": "Groupe du vendredi",
       "description": "Enregistrement collectif à plusieurs voix.",
-      "jours": "Vendredi", "horaires": "14h00–17h00", "lieu": "Salle Danube, Maison des associations",
-      "animateur": null, "tarif": null, "note": null
+      "jours": "Vendredi",
+      "horaires": "14h00–17h00",
+      "lieu": "Salle Danube, Maison des associations",
+      "animateur": null,
+      "tarif": null,
+      "note": null
     }
   ],
   "points": [
@@ -38,10 +63,22 @@
     "participer": "Vous aimez lire à voix haute, ou le montage audio vous intéresse ? Venez rencontrer le groupe : écrivez-nous depuis la page Contact en choisissant « Les Voix d'Yss », ou passez à la permanence du samedi.",
     "beneficier": "Les livres enregistrés sont destinés exclusivement aux adhérents de la Bibliothèque Sonore de Chamalières. Pour en bénéficier, renseignez-vous auprès d'elle ou de l'Association des Donneurs de Voix."
   },
-  "photos": ["l/log/LOGO_BSF_2019_BRIQUE_MD_420Ko.jpg"],
+  "photos": [
+    {
+      "src": "illustrations/voix-d-yss",
+      "alt": "Micro d'enregistrement devant un texte",
+      "illustration": true
+    }
+  ],
   "liens": [
-    { "texte": "Bibliothèque Sonore de Chamalières", "url": "https://www.bibliothequesonore63-chamalieres.fr/" },
-    { "texte": "Association des Donneurs de Voix", "url": "https://lesbibliothequessonores.org/" }
+    {
+      "texte": "Bibliothèque Sonore de Chamalières",
+      "url": "https://www.bibliothequesonore63-chamalieres.fr/"
+    },
+    {
+      "texte": "Association des Donneurs de Voix",
+      "url": "https://lesbibliothequessonores.org/"
+    }
   ],
   "source": "Ancien site cli63.com (archives web), pages « Les Voix d'Yss »."
 }

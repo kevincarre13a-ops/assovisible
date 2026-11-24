@@ -1,5 +1,9 @@
 {
-  "ordre": 3, "slug": "danse", "theme": "convivialite", "titre": "Danse", "icone": "music",
+  "ordre": 3,
+  "slug": "danse",
+  "theme": "convivialite",
+  "titre": "Danse",
+  "icone": "music",
   "resume": "« Dansons ensemble » : valse, cha-cha, tango, madison et nouveautés, sans prise de tête.",
   "description": [
     "La danse de société est accessible à tous. C'est une activité culturelle divertissante qui favorise la convivialité, le relationnel et le lien social, en solo, en couple ou en groupe.",
@@ -11,11 +15,26 @@
     {
       "intitule": "Dansons ensemble",
       "description": null,
-      "jours": null, "horaires": null, "lieu": null, "animateur": null, "tarif": null,
+      "jours": null,
+      "horaires": null,
+      "lieu": null,
+      "animateur": null,
+      "tarif": null,
       "note": "Venez essayer : la première séance est une découverte."
     }
   ],
-  "photos": ["d/dan/Danse-groupe1.png", "d/dan/danse1.JPG", "d/dan/Danse-couple1.png", "d/dan/Danse-groupe2.png"],
+  "photos": [
+    {
+      "src": "illustrations/danse",
+      "alt": "Danse en groupe",
+      "illustration": true
+    },
+    {
+      "src": "illustrations/danse-2",
+      "alt": "Couples de danseurs de salon",
+      "illustration": true
+    }
+  ],
   "liens": [],
   "source": "Texte repris de l'ancien site. Jours, horaires, lieu et animateur n'y figuraient pas : à renseigner par le responsable."
 }

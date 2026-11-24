@@ -23,8 +23,16 @@
     }
   ],
   "photos": [
-    "c/cli/cli-section-velo-sejour-2026-cantal.jpg",
-    "v/vel/velo-page-00.jpg"
+    {
+      "src": "illustrations/randonnee-cycliste",
+      "alt": "Cyclistes seniors sur une petite route",
+      "illustration": true
+    },
+    {
+      "src": "activites/velo-route-des-fromages",
+      "alt": "Le parcours « Route des fromages » vers Salers, du séjour vélo du club",
+      "illustration": false
+    }
   ],
   "liens": [
     {

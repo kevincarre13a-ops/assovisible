@@ -30,9 +30,18 @@ Ouvrir `data/actualites/informatique.json` et ajouter, en tête de liste :
 Champs facultatifs : `dateLabel` (texte libre à la place de la date), `lien` (un bouton), `liens` (une liste de liens).
 Pour une activité sans fichier d'actualités, créer `data/actualites/<slug-de-l-activite>.json` contenant `[ ... ]`.
 
-## Photos
-Les photos viennent de l'ancien site `cli63.com` via les archives web (`imageBase` dans `data/site.json`).
-Pour utiliser des photos hébergées avec le site : les déposer dans `public/img/` puis, dans les fichiers de données, mettre `"/img/mon-image.jpg"` (une adresse commençant par `http` ou `/` est utilisée telle quelle).
+## Photos et logo
+Toutes les images sont hébergées avec le site, dans `public/img/` :
+- `club/` : photos des albums du club (voyages 2024 et 2025) ;
+- `activites/` : images issues des contenus du club (vidéo informatique, séjour vélo) ;
+- `illustrations/` : photos libres de droits (Unsplash) affichées avec la mention « Photo d'illustration », à remplacer par des photos des séances dès qu'elles existent ;
+- `logo-cli.png` et `logo-cli@2x.png` : le logo du club sur fond transparent.
+
+Chaque photo existe en deux tailles : `nom-m.jpg` (720 px) et `nom.jpg` (1600 px). Dans les données, on écrit le chemin sans extension, par exemple `"club/der24-25"`.
+Pour remplacer une illustration par une vraie photo : déposer les deux fichiers dans `public/img/…`, mettre le chemin dans `photos` de l'activité et passer `"illustration"` à `false`.
+
+## Couleurs
+Les couleurs des thèmes sont celles du logo (`data/themes.json`) : rouge (Convivialité), orange (Solidarité, mélange du rouge et du jaune du logo), vert (Sorties), jaune (Ateliers), bleu (Nouvelles technologies). Chaque thème a une couleur vive (`couleur`), une version foncée lisible pour le texte (`fonce`) et une teinte claire (`teinte`).
 
 ## Fabriquer le site
 ```

@@ -1,5 +1,9 @@
 {
-  "ordre": 1, "slug": "gymnastique", "theme": "convivialite", "titre": "Gymnastique", "icone": "dumbbell",
+  "ordre": 1,
+  "slug": "gymnastique",
+  "theme": "convivialite",
+  "titre": "Gymnastique",
+  "icone": "dumbbell",
   "resume": "Gym d'entretien et gym douce : renforcement, équilibre, souplesse, dans la bonne humeur.",
   "description": [
     "Deux formules pour entretenir son corps à son rythme. La séance commence par une mise en condition et un échauffement, et se termine toujours par des étirements et de la relaxation."
@@ -26,7 +30,18 @@
       "note": "Tenue confortable, chaussons et bouteille d'eau."
     }
   ],
-  "photos": [],
+  "photos": [
+    {
+      "src": "illustrations/gymnastique",
+      "alt": "Seniors pendant une séance de gymnastique",
+      "illustration": true
+    },
+    {
+      "src": "illustrations/gymnastique-2",
+      "alt": "Exercice d'équilibre en groupe",
+      "illustration": true
+    }
+  ],
   "liens": [],
   "source": "Horaires et tarifs relevés sur l'ancien site (saison 2024-2025). À vérifier et mettre à jour pour la saison en cours."
 }

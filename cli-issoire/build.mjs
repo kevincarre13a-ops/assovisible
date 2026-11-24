@@ -21,25 +21,29 @@ const equipe = readJSON('data', 'equipe.json');
 const galerie = readJSON('data', 'galerie.json');
 const themeBySlug = Object.fromEntries(themes.map((t) => [t.slug, t]));
 const actBySlug = Object.fromEntries(activites.map((a) => [a.slug, a]));
-const NEUTRAL = { couleur: '#5A3422', teinte: '#F1EBE2', image: site.panorama };
-const CLUB = { slug: 'club', titre: 'Vie du club', theme: 'club', icone: 'people' };
+// Fond « club » (pages générales) : bleu nuit avec les rubans du logo.
+const NEUTRAL = { slug: 'club', couleur: '#FCC024', fonce: '#13263D', teinte: '#E8EEF5', court: 'Club', image: site.heroImage };
+const CLUB = { slug: 'vie-du-club', titre: 'Vie du club', theme: 'club', icone: 'people' };
 const labelFor = (slug) => actBySlug[slug] || CLUB;
-const themeOf = (slug) => themeBySlug[labelFor(slug).theme] || { slug: 'club', couleur: '#2A2725', teinte: '#F1EBE2', court: 'Club' };
+const themeOf = (slug) => themeBySlug[labelFor(slug).theme] || { ...NEUTRAL, couleur: '#13263D', teinte: '#E8EEF5' };
 
 const news = listJSON('data/actualites')
   .flatMap((f) => {
     const slug = f.replace('.json', '');
-    return readJSON('data', 'actualites', f).map((n) => ({ ...n, activite: slug }));
+    return readJSON('data', 'actualites', f).map((n) => ({ ...n, activite: slug === 'club' ? CLUB.slug : slug }));
   })
   .sort((a, b) => (a.date < b.date ? 1 : -1));
 
 /* ---------- utilitaires ---------- */
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const IMG = (p) => (/^(https?:|\/)/.test(p) ? p : site.imageBase + p.split('/').map(encodeURIComponent).join('/'));
+// Photos locales : "club/der24-25" -> /img/club/der24-25-m.jpg (720 px) ou .jpg (1600 px)
+const pic = (base, size = 'm') => (/^(https?:|\/)/.test(base) ? base : `/img/${base}${size === 'm' ? '-m' : ''}.jpg`);
 const isExternal = (u) => /^https?:/.test(u);
 const fmtDate = (d) => new Date(d + 'T12:00:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 const todayISO = new Date().toISOString().slice(0, 10);
-const cvars = (t) => `--c:${t.couleur};--t:${t.teinte}`;
+// Couleur lisible posée sur la couleur vive du thème
+const onColor = (t) => (['ateliers', 'solidarite', 'club'].includes(t.slug) ? '#1F2430' : '#FFFFFF');
+const cvars = (t) => `--c:${t.couleur};--cd:${t.fonce};--t:${t.teinte};--on:${onColor(t)}`;
 const NEWTAB = ' target="_blank" rel="noopener"';
 const link = (l, cls = '') =>
   `<a href="${esc(l.url)}"${isExternal(l.url) ? NEWTAB : ''}${cls ? ` class="${cls}"` : ''}>${esc(l.texte)}${isExternal(l.url) ? '<span class="sr-only"> (nouvel onglet)</span>' : ''}</a>`;
@@ -76,17 +80,24 @@ const ICONS = {
   camera: '<path d="M3 8a2 2 0 012-2h2l1.5-2h7L17 6h2a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><circle cx="12" cy="13" r="3.5"/>',
   people: '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 3-5.5 6.5-5.5S15.5 16.4 15.5 20"/><circle cx="17" cy="9" r="2.8"/><path d="M17 14.5c2.6 0 4.5 1.6 4.5 4.5"/>',
   sparkle: '<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/>',
-  book: '<path d="M4 5.5A2.5 2.5 0 016.5 3H20v16H6.5A2.5 2.5 0 004 21.5z"/><path d="M4 19V5.5"/>',
-  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/>'
+  book: '<path d="M4 5.5A2.5 2.5 0 016.5 3H20v16H6.5A2.5 2.5 0 004 21.5z"/><path d="M4 19V5.5"/>'
 };
 const icon = (n, cls = '') => `<svg class="ico${cls ? ' ' + cls : ''}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${ICONS[n] || ICONS.sparkle}</svg>`;
-const img = (src, alt = '', extra = '') =>
-  `<img src="${esc(IMG(src))}" alt="${esc(alt)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="imgFail(this)"${extra ? ' ' + extra : ''}>`;
+// Image responsive : 720 px et 1600 px
+const img = (base, alt = '', { sizes = '(min-width: 900px) 50vw, 100vw', eager = false } = {}) =>
+  `<img src="${esc(pic(base, 'm'))}" srcset="${esc(pic(base, 'm'))} 720w, ${esc(pic(base, 'l'))} 1600w" sizes="${sizes}" alt="${esc(alt)}"${eager ? '' : ' loading="lazy"'} decoding="async">`;
 const todo = (txt = 'À compléter') => `<span class="todo">${esc(txt)}</span>`;
 const reveal = (i = 0) => `reveal d${i % 6}`;
+const LOGO = `/img/${site.logo}.png`;
+const LOGO2X = `/img/${site.logo}@2x.png`;
+// Rubans décoratifs reprenant les courbes colorées du logo
+const rubans = (cls = 'rubans') =>
+  `<svg class="${cls}" viewBox="0 0 720 420" aria-hidden="true" focusable="false">${['--rouge', '--orange', '--jaune', '--vert', '--bleu']
+    .map((v, i) => `<path style="stroke:var(${v})" d="M${20 + i * 22} 410 C ${90 + i * 22} 230, ${260 + i * 18} ${120 - i * 6}, ${700} ${40 + i * 22}"/>`)
+    .join('')}</svg>`;
 
 /* ---------- gabarit commun ---------- */
-const nav = (current, mobile = false) =>
+const nav = (current) =>
   `<ul class="nav-list">${site.pagesMenu
     .map(([href, label]) => {
       const th = themeBySlug[href.replace('.html', '')];
@@ -95,11 +106,12 @@ const nav = (current, mobile = false) =>
     })
     .join('')}</ul>`;
 
-function layout({ file, title, description, body, hero = '', bodyClass = '' }) {
+function layout({ file, title, description, body, hero = '' }) {
   const url = `${site.url}/${file === 'index.html' ? '' : file}`;
   const fullTitle = file === 'index.html' ? `${site.sigle} Issoire — ${site.nom}, culture et loisirs pour seniors` : `${title} | ${site.sigle} Issoire`;
   const a = site.adresse;
   const member = site.espaceAdherent.url;
+  const tel = site.telephonePermanence.replace(/\s/g, '');
   return `<!doctype html>
 <html lang="fr">
 <head>
@@ -107,7 +119,7 @@ function layout({ file, title, description, body, hero = '', bodyClass = '' }) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description)}">
-<meta name="theme-color" content="#2A2725">
+<meta name="theme-color" content="#13263D">
 <link rel="canonical" href="${url}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
@@ -115,37 +127,39 @@ function layout({ file, title, description, body, hero = '', bodyClass = '' }) {
 <meta property="og:title" content="${esc(fullTitle)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${url}">
-<meta property="og:image" content="${esc(IMG(site.panorama))}">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/fonts/fraunces-600-800.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:image" content="${site.url}${pic(site.heroImage, 'l')}">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/img/logo-cli-blanc.png">
+<link rel="preload" href="/fonts/nunito-600-900.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/atkinson-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/fonts.css">
 <link rel="stylesheet" href="/css/style.css">
-<script>document.documentElement.classList.add('js');window.imgFail=function(i){var p=i.closest('[data-img]')||i.parentNode;p.classList.add('noimg');i.remove()}</script>
+<script>document.documentElement.classList.add('js')</script>
 </head>
-<body${bodyClass ? ` class="${bodyClass}"` : ''}>
+<body>
 <a class="skip" href="#contenu">Aller au contenu</a>
 <header class="site-header">
   <div class="container">
     <div class="header-top">
-      <a class="brand" href="index.html" data-img aria-label="${esc(site.nom)} — retour à l'accueil">
-        <img class="brand__logo" src="${esc(IMG(site.logo))}" alt="" referrerpolicy="no-referrer" onerror="imgFail(this)">
-        <span class="brand__logo-fallback" aria-hidden="true">${esc(site.sigle)}</span>
-        <span class="brand__text"><span class="brand__name">${esc(site.nom)}</span><span class="brand__sub">${esc(site.baseline)}</span></span>
+      <a class="brand" href="index.html" aria-label="${esc(site.nom)} — retour à l'accueil">
+        <img class="brand__logo" src="${LOGO}" srcset="${LOGO} 1x, ${LOGO2X} 2x" width="204" height="200" alt="">
+        <span class="brand__text"><span class="brand__name">${esc(site.nom)}</span><span class="brand__sub">${esc(site.baseline)} depuis la Maison des associations</span></span>
       </a>
       <div class="header-actions">
-        <a class="btn btn--stone btn--member" href="${esc(member)}"${NEWTAB}>${icon('key')}Espace adhérent<span class="sr-only"> (nouvel onglet)</span></a>
+        <a class="header-tel" href="tel:${tel}">${icon('phone')}${esc(site.telephonePermanence)}</a>
+        <a class="btn btn--nuit btn--member" href="${esc(member)}"${NEWTAB}>${icon('key')}Espace adhérent<span class="sr-only"> (nouvel onglet)</span></a>
         <button class="burger" type="button" aria-expanded="false" aria-controls="mobile-menu">${icon('menu', 'ico--open')}${icon('close', 'ico--close')}<span class="burger__label">Menu</span></button>
       </div>
     </div>
-    <nav class="nav" aria-label="Navigation principale">${nav(file)}</nav>
+    <nav class="nav" aria-label="Navigation principale"><div class="nav-row"><a class="nav-mini" href="index.html" aria-label="Accueil"><img src="${LOGO}" width="204" height="200" alt=""></a>${nav(file)}</div></nav>
   </div>
+  <div class="ruban" aria-hidden="true"></div>
 </header>
-<div class="mobile-menu" id="mobile-menu" aria-label="Menu de navigation">
-  <nav aria-label="Navigation mobile">${nav(file, true)}</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <nav aria-label="Navigation mobile">${nav(file)}</nav>
   <div style="max-width:560px;margin:0 auto">
-    <a class="btn btn--stone" href="${esc(member)}"${NEWTAB}>${icon('key')}Espace adhérent</a>
-    <p class="mm-tel">${icon('phone')} <a href="tel:${site.telephonePermanence.replace(/\s/g, '')}">${esc(site.telephonePermanence)}</a></p>
+    <a class="btn btn--nuit" href="${esc(member)}"${NEWTAB}>${icon('key')}Espace adhérent</a>
+    <p class="mm-tel">${icon('phone')} <a href="tel:${tel}">${esc(site.telephonePermanence)}</a></p>
   </div>
 </div>
 <main id="contenu">
@@ -154,11 +168,12 @@ ${body}
 </main>
 <footer class="site-footer">
   <div class="volcans" aria-hidden="true"></div>
+  <div class="ruban" aria-hidden="true"></div>
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand" data-img>
-          <span class="plate"><img src="${esc(IMG(site.logo))}" alt="Logo du ${esc(site.nom)}" loading="lazy" referrerpolicy="no-referrer" onerror="imgFail(this)"><span class="brand__logo-fallback" aria-hidden="true">${esc(site.sigle)}</span></span>
+        <div class="footer-brand">
+          <span class="plate"><img src="${LOGO}" srcset="${LOGO} 1x, ${LOGO2X} 2x" width="204" height="200" alt="Logo du ${esc(site.nom)}" loading="lazy"></span>
           <strong>${esc(site.nom)}</strong>
         </div>
         <p>${esc(site.baseline)}. Une association pour seniors actifs, au cœur d'Issoire.</p>
@@ -200,13 +215,11 @@ ${body}
 
 /* ---------- briques ---------- */
 function pageHero({ eyebrow, title, lead, theme, icone, photos = [] }) {
-  const t = theme || { couleur: '#2A2725', teinte: '#F1EBE2' };
-  const tiles = photos
-    .slice(0, 4)
-    .map((p, i) => `<figure class="tile" style="--c:${t.couleur};--d:${-i * 1.3}s">${img(p.src, '')}</figure>`)
-    .join('');
-  return `<section class="page-hero" style="--c:${t.couleur}">
-  ${t.image ? `<div class="page-hero__bg" style="background-image:url('${esc(IMG(t.image))}')" aria-hidden="true"></div>` : ''}
+  const t = theme || NEUTRAL;
+  const figs = photos.slice(0, 4).map((p) => `<figure>${img(p.src, '', { sizes: '25vw' })}</figure>`).join('');
+  return `<section class="page-hero${t.slug === 'club' ? ' page-hero--club' : ''}" style="${cvars(t)}">
+  ${t.image ? `<div class="page-hero__bg" style="background-image:url('${esc(pic(t.image, 'l'))}')" aria-hidden="true"></div>` : ''}
+  <div class="page-hero__band" aria-hidden="true"></div>
   <div class="container page-hero__inner">
     <div>
       ${icone ? `<span class="page-hero__icon" aria-hidden="true">${icon(icone)}</span><br>` : ''}
@@ -214,7 +227,7 @@ function pageHero({ eyebrow, title, lead, theme, icone, photos = [] }) {
       <h1>${esc(title)}</h1>
       <p class="lead">${esc(lead)}</p>
     </div>
-    ${tiles ? `<div class="page-hero__photos" aria-hidden="true">${tiles}</div>` : ''}
+    ${figs ? `<div class="page-hero__photos" aria-hidden="true">${figs}</div>` : ''}
   </div>
   <div class="volcans" aria-hidden="true"></div>
 </section>`;
@@ -264,9 +277,22 @@ function tableau(a) {
   </div>`;
 }
 
-function fiche(a, idx = 0) {
+const creditLabel = (p) => (p.illustration ? "Photo d'illustration" : 'Photo du club');
+
+function participer(a) {
+  const p = a.participer;
+  return `<div>
+    <h3>${esc(p.titre)}</h3>
+    <div class="duo">
+      <div><h3 style="margin-top:0">${icon('mic')} Participer</h3><p>${esc(p.participer)}</p><a class="btn btn--theme" href="contact.html?activite=${a.slug}#formulaire">Rejoindre le groupe ${icon('arrow')}</a></div>
+      <div><h3 style="margin-top:0">${icon('book')} En bénéficier</h3><p>${esc(p.beneficier)}</p>${a.liens && a.liens[0] ? `<a class="btn btn--ghost" href="${esc(a.liens[0].url)}"${NEWTAB}>${esc(a.liens[0].texte)} ${icon('external')}</a>` : ''}</div>
+    </div>
+  </div>`;
+}
+
+function fiche(a) {
   const th = themeBySlug[a.theme];
-  const photos = (a.photos || []).slice(0, 6);
+  const [cover, ...more] = a.photos || [];
   return `<article class="fiche ${reveal(0)}" id="${a.slug}" style="${cvars(th)}">
   <header class="fiche__head">
     <span class="fiche__icon" aria-hidden="true">${icon(a.icone)}</span>
@@ -274,10 +300,11 @@ function fiche(a, idx = 0) {
   </header>
   <div class="fiche__body fiche__body--split">
     <div class="fiche__text">
+      ${cover ? `<figure class="cover">${img(cover.src, cover.alt)}<figcaption class="credit">${creditLabel(cover)}</figcaption></figure>` : ''}
       ${a.description.map((p) => `<p>${esc(p)}</p>`).join('')}
-      ${a.faits ? `<div class="facts" style="margin:22px 0">${a.faits.map((f) => `<div class="fact"><b data-count="${f.valeur}"${f.format === 'annee' ? ' data-plain="1"' : ''}>${f.valeur}</b><span>${esc(f.label)}</span></div>`).join('')}</div>` : ''}
+      ${a.faits ? `<div class="facts">${a.faits.map((f) => `<div class="fact"><b data-count="${f.valeur}"${f.format === 'annee' ? ' data-plain="1"' : ''}>${f.valeur}</b><span>${esc(f.label)}</span></div>`).join('')}</div>` : ''}
       ${a.points ? `<h3>${esc(a.pointsTitre || 'À savoir')}</h3><ul class="points">${a.points.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>` : ''}
-      ${photos.length ? `<div class="photos" style="margin-top:22px">${photos.map((p) => `<figure class="shot">${img(p, `${a.titre} : photo du club`)}</figure>`).join('')}</div>` : ''}
+      ${more.length ? `<div class="photos">${more.map((p) => `<figure class="shot">${img(p.src, p.alt, { sizes: '300px' })}<figcaption class="credit">${creditLabel(p)}</figcaption></figure>`).join('')}</div>` : ''}
     </div>
     <div class="fiche__practical">
       <h3>Infos pratiques</h3>
@@ -293,32 +320,20 @@ function fiche(a, idx = 0) {
 </article>`;
 }
 
-function participer(a) {
-  const p = a.participer;
-  return `<div>
-    <h3>${esc(p.titre)}</h3>
-    <div class="duo">
-      <div><h3 style="margin-top:0">${icon('mic')} Participer</h3><p>${esc(p.participer)}</p><a class="btn btn--theme" href="contact.html?activite=${a.slug}#formulaire">Rejoindre le groupe ${icon('arrow')}</a></div>
-      <div><h3 style="margin-top:0">${icon('book')} En bénéficier</h3><p>${esc(p.beneficier)}</p>${a.liens && a.liens[0] ? `<a class="btn btn--ghost" href="${esc(a.liens[0].url)}"${NEWTAB}>${esc(a.liens[0].texte)} ${icon('external')}</a>` : ''}</div>
-    </div>
-  </div>`;
-}
-
 function newsCard(n, i = 0) {
   const act = labelFor(n.activite);
   const th = themeOf(n.activite);
-  const links = n.liens || (n.lien ? [] : []);
-  return `<article class="news-card ${reveal(i % 3)}" data-activite="${n.activite}" style="--c:${th.couleur}">
+  return `<article class="news-card ${reveal(i % 3)}" data-activite="${n.activite}" style="${cvars(th)}">
     <div class="news-card__meta"><span class="tag">${icon(act.icone)}${esc(act.titre)}</span><span class="news-card__date">${esc(n.dateLabel || fmtDate(n.date))}</span></div>
     <h3>${esc(n.titre)}</h3>
     <p>${esc(n.texte)}</p>
-    ${links.length ? `<ul class="news-card__links">${links.map((l) => `<li>${link(l)}</li>`).join('')}</ul>` : ''}
-    ${n.lien ? `${link(n.lien, 'btn btn--theme')}` : ''}
+    ${n.liens && n.liens.length ? `<ul class="news-card__links">${n.liens.map((l) => `<li>${link(l)}</li>`).join('')}</ul>` : ''}
+    ${n.lien ? link(n.lien, 'btn btn--theme') : ''}
   </article>`;
 }
 
 function memberBand() {
-  return `<section class="section" style="padding-block:0 clamp(48px,7vw,80px)"><div class="container"><div class="member-band ${reveal(0)}">
+  return `<section class="section" style="padding-block:clamp(48px,7vw,80px)"><div class="container"><div class="member-band ${reveal(0)}">
     <div><h2>Vous êtes adhérent ?</h2><p>Retrouvez votre espace personnel : il est géré à part de ce site.</p></div>
     <a class="btn btn--big" href="${esc(site.espaceAdherent.url)}"${NEWTAB}>${icon('key')}Espace adhérent<span class="sr-only"> (nouvel onglet)</span></a>
   </div></div></section>`;
@@ -326,58 +341,71 @@ function memberBand() {
 
 function tryBand(text) {
   return `<section class="try">
+  ${rubans()}
   <div class="container try__inner">
     <div class="${reveal(0)}">
-      <h2>${esc(text || 'Envie d\'essayer ? Venez nous rencontrer !')}</h2>
+      <h2>${esc(text || "Envie d'essayer ? Venez nous rencontrer !")}</h2>
       <p class="lead" style="color:var(--ink)">Passez à la permanence ${esc(site.permanence)}. On vous présente les activités, vous choisissez celle qui vous plaît.</p>
     </div>
     <div class="try__actions ${reveal(1)}">
-      <a class="btn btn--stone btn--big" href="contact.html#formulaire">${icon('mail')}Nous écrire</a>
+      <a class="btn btn--nuit btn--big" href="contact.html#formulaire">${icon('mail')}Nous écrire</a>
       <a class="btn btn--light btn--big" href="tel:${site.telephonePermanence.replace(/\s/g, '')}">${icon('phone')}${esc(site.telephonePermanence)}</a>
     </div>
   </div>
 </section>`;
 }
 
+const filterChips = (items, label) => {
+  const slugs = [...new Set(items.map((x) => x.activite))];
+  return [`<li><button class="chip" type="button" data-filter="tout" aria-pressed="true">Toutes <span class="chip__n">${items.length}</span></button></li>`]
+    .concat(slugs.map((s) => `<li><button class="chip" type="button" data-filter="${s}" style="${cvars(themeOf(s))}" aria-pressed="false">${esc(labelFor(s).titre)} <span class="chip__n">${items.filter((x) => x.activite === s).length}</span></button></li>`))
+    .join('');
+};
+
 /* ---------- pages ---------- */
 const pages = {};
 
 /* Accueil */
 {
-  const tiles = [
-    ['p/pho/photos-de-groupe.jpg', 'Randonnée', 'sorties'],
-    ['j/jeu/Jeux-Societe-1-.JPG', 'Jeux de société', 'convivialite'],
-    ['d/dan/Danse-groupe1.png', 'Danse', 'convivialite'],
-    ['c/cli/cli-section-velo-sejour-2026-cantal.jpg', 'Vélo', 'sorties'],
-    ['f/for/formation-numerique-cli.jpeg', 'Informatique', 'nouvelles-technologies'],
-    ['g/grp/grptrav3.jpg', 'Remue-méninges', 'ateliers'],
-    ['a/ala/a-l-action1.jpg', 'Peinture', 'ateliers'],
-    ['r/r1v/R1-vielle-brioude-5.jpg', 'Randonnée pédestre', 'sorties']
-  ];
+  // Ordre de la mosaïque : 4 colonnes x 4 rangées sur ordinateur, 2 colonnes sur mobile (2 vignettes larges)
+  const ORDER = [['randonnee-pedestre', true], ['gymnastique'], ['danse'], ['jeux-de-societe'], ['pilates'], ['voix-d-yss'], ['randonnee-cycliste'], ['poterie-modelage'], ['vannerie'], ['peinture-sur-soie'], ['dessin-peinture'], ['remue-meninges'], ['marqueterie'], ['informatique', true]];
+  const tiles = ORDER.map(([slug, wide], i) => {
+    const a = actBySlug[slug];
+    const t = themeBySlug[a.theme];
+    return `<li${wide ? ' class="wide"' : ''}><a class="tile" href="${t.page}#${slug}" style="${cvars(t)};--d:${(0.15 + i * 0.05).toFixed(2)}s" aria-label="${esc(a.titre)} — thème ${esc(t.court)}">
+      ${img(a.photos[0].src, '', { sizes: wide ? '(min-width: 1000px) 320px, 90vw' : '(min-width: 1000px) 160px, 45vw', eager: i < 6 })}
+      <span class="tile__go" aria-hidden="true">${icon('arrow')}</span>
+      <span class="tile__label" aria-hidden="true"><span class="tile__name">${esc(a.titre)}</span><span class="tile__theme">${esc(t.court)}</span></span>
+    </a></li>`;
+  }).join('');
+
   const hero = `<section class="hero" aria-labelledby="titre-accueil">
-  <div class="hero__bg" style="background-image:url('${esc(IMG(site.panorama))}')" aria-hidden="true"></div>
+  <div class="hero__bg" style="background-image:url('${esc(pic(site.heroImage, 'l'))}')" aria-hidden="true"></div>
+  ${rubans()}
   <div class="container hero__inner">
     <div>
-      <span class="hero__badge">${icon('sun')} Issoire · Puy-de-Dôme · Auvergne</span>
-      <h1 id="titre-accueil">Club Culture et Loisirs <em>Issoirien</em></h1>
+      <span class="hero__kicker"><img src="${LOGO}" width="204" height="200" alt="">Issoire · Puy-de-Dôme</span>
+      <h1 id="titre-accueil">Club Culture et Loisirs <span class="accent">Issoirien</span></h1>
       <p class="hero__lead">Des loisirs, de la culture et des amis à Issoire : ${site.chiffres.activites} activités pour bien vivre chaque jour.</p>
       <div class="hero__cta">
         <a class="btn btn--big" href="#themes">Découvrir nos activités ${icon('arrow')}</a>
         <a class="btn btn--ghost btn--big" href="contact.html#formulaire">Venir essayer</a>
       </div>
+      <ul class="hero__facts"><li><b>${site.chiffres.adherents}</b> adhérents</li><li><b>${site.chiffres.activites}</b> activités</li><li><b>${site.chiffres.themes}</b> thèmes</li></ul>
     </div>
-    <div class="mosaic" aria-hidden="true">
-      ${tiles.map(([src, cap, th]) => `<figure class="tile" style="--c:${themeBySlug[th].couleur}">${img(src, '')}<figcaption>${esc(cap)}</figcaption></figure>`).join('')}
+    <div class="mosaic-wrap">
+      <p class="mosaic-title"><span>Nos ${site.chiffres.activites} activités</span><span>Touchez une photo pour en savoir plus</span></p>
+      <ul class="mosaic">${tiles}</ul>
+      <ul class="legend" aria-label="Les 5 thèmes">${themes.map((t) => `<li><a href="${t.page}" style="--c:${t.couleur}">${esc(t.court)}</a></li>`).join('')}</ul>
     </div>
   </div>
   <div class="volcans" aria-hidden="true"></div>
 </section>`;
 
-  const themeCards = themes
-    .map((t, i) => {
-      const acts = activites.filter((a) => a.theme === t.slug);
-      return `<article class="theme-card ${reveal(i % 3)}" style="${cvars(t)}">
-      <div class="theme-card__top"><div class="theme-card__img${t.image ? '' : ' noimg'}">${t.image ? img(t.image, '') : icon(t.icone, 'ico--big')}</div>
+  const themeCards = themes.map((t, i) => {
+    const acts = activites.filter((a) => a.theme === t.slug);
+    return `<article class="theme-card ${reveal(i % 3)}" style="${cvars(t)}">
+      <div class="theme-card__top"><div class="theme-card__img">${img(t.image, '', { sizes: '(min-width: 760px) 40vw, 100vw' })}</div>
       <span class="theme-card__badge" aria-hidden="true">${icon(t.icone)}</span></div>
       <div class="theme-card__body">
         <h3>${esc(t.nom)}</h3>
@@ -386,40 +414,45 @@ const pages = {};
         <a class="theme-card__more" href="${t.page}">Découvrir ${esc(t.court.toLowerCase())} ${icon('arrow')}</a>
       </div>
     </article>`;
-    })
-    .join('');
+  }).join('');
 
   const c = site.chiffres;
-  const counters = [
-    [c.adherents, 'adhérents cette année'],
-    [c.activites, 'activités'],
-    [c.themes, 'thèmes'],
-    [c.niveauxRando, 'niveaux de randonnée']
-  ];
+  const counters = [[c.adherents, 'adhérents cette année', '--rouge'], [c.activites, 'activités', '--jaune'], [c.themes, 'thèmes', '--vert'], [c.niveauxRando, 'niveaux de randonnée', '--bleu']];
+  const strip = [['club/der24-25', 'Voyage 2024 dans les Alpes du Sud'], ['club/der24-14', 'À table pendant le voyage'], ['club/dole-29', 'En route vers la Dôle'], ['club/yvo-22', "Pique-nique au bord du Léman"], ['club/der24-16', 'Une pause en terrasse']];
   const body = `
 <section class="section" id="themes">
   <div class="container">
     <div class="${reveal(0)}" style="max-width:760px;margin-bottom:40px">
       <span class="eyebrow">Nos activités</span>
       <h2>Cinq univers, quatorze activités</h2>
-      <p class="lead">Chaque thème a sa couleur. Choisissez celui qui vous ressemble, ou essayez-les tous !</p>
+      <p class="lead">Chaque thème a la couleur d'un ruban de notre logo. Choisissez celui qui vous ressemble, ou essayez-les tous !</p>
     </div>
     <div class="themes">${themeCards}</div>
   </div>
 </section>
 
-<section class="section section--stone" style="position:relative" aria-labelledby="chiffres">
+<section class="section section--nuit" aria-labelledby="chiffres">
   <div class="container">
     <h2 id="chiffres" class="${reveal(0)}" style="text-align:center;margin-bottom:36px">Le CLI en chiffres</h2>
-    <div class="counters">${counters.map(([n, l], i) => `<div class="counter ${reveal(i)}"><span class="counter__num" data-count="${n}">${n}</span><span class="counter__label">${esc(l)}</span></div>`).join('')}</div>
+    <div class="counters">${counters.map(([n, l, v], i) => `<div class="counter ${reveal(i)}" style="--c:var(${v})"><span class="counter__num" data-count="${n}">${n}</span><span class="counter__label">${esc(l)}</span></div>`).join('')}</div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
+    <div class="${reveal(0)}" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:28px">
+      <div><span class="eyebrow">La vie du club</span><h2 style="margin:0">Nos adhérents en sortie</h2></div>
+      <a class="btn btn--nuit" href="galerie.html">Voir la galerie ${icon('arrow')}</a>
+    </div>
+    <div class="club-strip ${reveal(1)}">${strip.map(([src, cap], i) => `<figure>${img(src, cap, { sizes: i ? '25vw' : '50vw' })}<figcaption>${esc(cap)}</figcaption></figure>`).join('')}</div>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="container">
     <div class="${reveal(0)}" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:32px">
       <div><span class="eyebrow">Dernières actualités</span><h2 style="margin:0">Ça se passe au club</h2></div>
-      <a class="btn btn--stone" href="actualites.html">Toutes les actualités ${icon('arrow')}</a>
+      <a class="btn btn--nuit" href="actualites.html">Toutes les actualités ${icon('arrow')}</a>
     </div>
     <div class="news-grid news-grid--3">${news.slice(0, 3).map((n, i) => newsCard(n, i)).join('')}</div>
   </div>
@@ -439,8 +472,8 @@ ${tryBand()}`;
 /* Pages de thèmes */
 function themePage(t) {
   const acts = activites.filter((a) => a.theme === t.slug);
-  const photos = acts.flatMap((a) => (a.photos || []).map((src) => ({ src })));
-  const hero = pageHero({ eyebrow: 'Notre thème', title: t.nom, lead: t.intro, theme: { ...t }, icone: t.icone, photos });
+  const photos = acts.flatMap((a) => a.photos || []);
+  const hero = pageHero({ eyebrow: 'Notre thème', title: t.nom, lead: t.intro, theme: t, icone: t.icone, photos });
   let extra = '';
   if (t.slug === 'sorties') {
     const ev = calendrier.evenements.slice().sort((a, b) => (a.date < b.date ? 1 : -1));
@@ -449,26 +482,23 @@ function themePage(t) {
       const d = new Date(e.date + 'T12:00:00');
       const past = (e.fin || e.date) < todayISO;
       const range = e.fin && e.fin !== e.date ? `${fmtDate(e.date)} au ${fmtDate(e.fin)}` : fmtDate(e.date);
-      return `<li class="cal__item${past ? ' is-past' : ''}" data-fin="${e.fin || e.date}" style="--c:${th.couleur};--t:${th.teinte}">
+      return `<li class="cal__item${past ? ' is-past' : ''}" data-fin="${e.fin || e.date}" style="${cvars(th)}">
         <div class="cal__date"><b>${d.getDate()}</b><span>${d.toLocaleDateString('fr-FR', { month: 'short' })} ${d.getFullYear()}</span></div>
         <div><h3>${esc(e.titre)}</h3><p>${esc(range)}${e.lieu ? ' · ' + esc(e.lieu) : ''}${past ? ' · <strong>terminé</strong>' : ''}</p>${e.lien ? `<p>${link(e.lien)}</p>` : ''}</div></li>`;
     };
     const up = ev.filter((e) => (e.fin || e.date) >= todayISO);
     const past = ev.filter((e) => (e.fin || e.date) < todayISO);
-    extra = `<section class="section section--tint" id="calendrier" style="position:relative;--c:${t.couleur};--t:${t.teinte}">
+    extra = `<section class="section section--tint" id="calendrier" style="position:relative;${cvars(t)}">
   <div class="container">
     <div class="${reveal(0)}" style="max-width:760px;margin-bottom:30px"><span class="eyebrow">Calendrier</span><h2>Le calendrier des sorties</h2>
     <p class="lead">Les programmes détaillés sont publiés par les animateurs. Les dates ci-dessous sont modifiables dans <code>data/calendrier.json</code>.</p></div>
-    <ul class="cal" style="list-style:none;padding:0;margin:0 0 28px">
-      ${calendrier.rythme.map((r) => {
-        const th = themeOf(r.activite);
-        return `<li class="cal__item cal__item--rhythm" style="--c:${th.couleur};--t:${th.teinte}"><div class="cal__rhythm-ico">${icon('calendar')}</div><div><h3>${esc(r.quand)} · ${esc(labelFor(r.activite).titre)}</h3><p>${esc(r.quoi)}</p></div></li>`;
-      }).join('')}
+    <ul class="cal">
+      ${calendrier.rythme.map((r) => `<li class="cal__item cal__item--rhythm" style="${cvars(themeOf(r.activite))}"><div class="cal__rhythm-ico">${icon('calendar')}</div><div><h3>${esc(r.quand)} · ${esc(labelFor(r.activite).titre)}</h3><p>${esc(r.quoi)}</p></div></li>`).join('')}
     </ul>
     <h3>À venir</h3>
-    ${up.length ? `<ul class="cal" style="list-style:none;padding:0;margin:0 0 28px">${up.map(item).join('')}</ul>` : `<p class="empty">${icon('calendar')}<br><strong>Aucune sortie exceptionnelle n'est annoncée pour le moment.</strong><br>Le prochain programme sera publié ici par les animateurs. ${todo('Calendrier à compléter')}</p>`}
+    ${up.length ? `<ul class="cal">${up.map(item).join('')}</ul>` : `<p class="empty">${icon('calendar')}<br><strong>Aucune sortie exceptionnelle n'est annoncée pour le moment.</strong><br>Le prochain programme sera publié ici par les animateurs. ${todo('Calendrier à compléter')}</p>`}
     <h3 style="margin-top:32px">Déjà passées</h3>
-    <ul class="cal" style="list-style:none;padding:0;margin:0">${past.map(item).join('')}</ul>
+    <ul class="cal">${past.map(item).join('')}</ul>
   </div>
   <div class="volcans" aria-hidden="true"></div>
 </section>`;
@@ -476,8 +506,8 @@ function themePage(t) {
   const body = `
 <section class="section" style="padding-bottom:20px">
   <div class="container">
-    <ul class="quicknav" style="--c:${t.couleur}" aria-label="Aller directement à une activité">${acts.map((a) => `<li><a href="#${a.slug}">${icon(a.icone)}${esc(a.titre)}</a></li>`).join('')}${t.slug === 'sorties' ? `<li><a href="#calendrier">${icon('calendar')}Calendrier</a></li>` : ''}</ul>
-    ${acts.map((a, i) => fiche(a, i)).join('')}
+    <ul class="quicknav" style="${cvars(t)}" aria-label="Aller directement à une activité">${acts.map((a) => `<li><a href="#${a.slug}">${icon(a.icone)}${esc(a.titre)}</a></li>`).join('')}${t.slug === 'sorties' ? `<li><a href="#calendrier">${icon('calendar')}Calendrier</a></li>` : ''}</ul>
+    ${acts.map((a) => fiche(a)).join('')}
   </div>
 </section>
 ${extra}
@@ -490,15 +520,15 @@ themes.forEach(themePage);
 /* Le club */
 {
   const hero = pageHero({
-    eyebrow: 'Le club', title: 'Un club chaleureux, au cœur d\'Issoire',
+    eyebrow: 'Le club', title: "Un club chaleureux, au cœur d'Issoire",
     lead: 'Le Club Culture et Loisirs Issoirien réunit chaque semaine des adhérents venus partager des activités, des sorties et de bons moments.',
     theme: NEUTRAL, icone: 'people',
-    photos: [{ src: 'p/pho/photo-de-groupe-1.jpg' }, { src: 'j/jeu/Jeux-Societe-6-.JPG' }, { src: 'd/dan/Danse-groupe2.png' }, { src: 'f/for/formation-numerique-cli.jpeg' }]
+    photos: [{ src: 'club/der24-06' }, { src: 'club/der24-14' }, { src: 'club/dole-29' }, { src: 'club/yvo-22' }]
   });
   const valeurs = [
-    ['smile', 'Convivialité', 'Le club est animé dans un esprit convivial : on vient pour s\'amuser, apprendre et rencontrer du monde.', 'convivialite'],
-    ['heart', 'Solidarité', 'Un esprit solidaire, jusque dans l\'activité Les Voix d\'Yss qui prête sa voix aux personnes empêchées de lire.', 'solidarite'],
-    ['palette', 'Culture et loisirs', 'Le but de l\'association : organiser des activités culturelles et de loisirs pour tous.', 'ateliers'],
+    ['smile', 'Convivialité', "Le club est animé dans un esprit convivial : on vient pour s'amuser, apprendre et rencontrer du monde.", 'convivialite'],
+    ['heart', 'Solidarité', "Un esprit solidaire, jusque dans l'activité Les Voix d'Yss qui prête sa voix aux personnes empêchées de lire.", 'solidarite'],
+    ['palette', 'Culture et loisirs', "Le but de l'association : organiser des activités culturelles et de loisirs pour tous.", 'ateliers'],
     ['people', 'Entraide', 'Dans les ateliers, les plus expérimentés aident les débutants : on avance ensemble, sans compétition.', 'sorties']
   ];
   const body = `
@@ -510,12 +540,12 @@ themes.forEach(themePage);
       <p>Le <strong>Club Culture et Loisirs Issoirien (CLI)</strong> est une association pour seniors, bien connue des Issoiriens. Elle a pour but d'organiser, dans un esprit convivial et solidaire, des activités culturelles et de loisirs.</p>
       <p>Responsables et animateurs se donnent pour mission d'assurer un rôle d'acteur social au cœur de la cité. Cette année, le club compte <strong>${site.chiffres.adherents} adhérents</strong> et propose <strong>${site.chiffres.activites} activités</strong>, regroupées en ${site.chiffres.themes} thèmes.</p>
       <p>Le club est installé à la <strong>${esc(site.adresse.lieu)}</strong>, ${esc(site.adresse.rue)}, ${esc(site.adresse.codePostal)} ${esc(site.adresse.ville)}.</p>
-      <a class="btn btn--stone" href="contact.html">Nous rejoindre ${icon('arrow')}</a>
+      <a class="btn btn--nuit" href="contact.html">Nous rejoindre ${icon('arrow')}</a>
     </div>
-    <div class="photos ${reveal(1)}" style="--c:#2A2725">
-      <figure class="shot" style="grid-column:1/-1;aspect-ratio:16/9">${img('p/pho/photos-de-groupe.jpg', 'Photo de groupe des adhérents du CLI')}</figure>
-      <figure class="shot">${img('j/jeu/Jeux-Societe-13-.JPG', 'Jeux de société')}</figure>
-      <figure class="shot">${img('d/dan/danse1.JPG', 'Séance de danse')}</figure>
+    <div class="photo-stack ${reveal(1)}">
+      <figure>${img('club/der24-06', 'Les randonneurs du CLI réunis pour une photo de groupe, voyage 2024')}</figure>
+      <figure>${img('club/der24-14', 'Déjeuner en terrasse pendant le voyage 2024', { sizes: '25vw' })}</figure>
+      <figure>${img('club/der24-16', 'Pause conviviale en terrasse, voyage 2024', { sizes: '25vw' })}</figure>
     </div>
   </div>
 </section>
@@ -523,7 +553,7 @@ themes.forEach(themePage);
 <section class="section section--tint">
   <div class="container">
     <div class="${reveal(0)}" style="max-width:700px;margin-bottom:34px"><span class="eyebrow">Nos valeurs</span><h2>Ce qui nous rassemble</h2></div>
-    <div class="values">${valeurs.map(([ic, ti, tx, th], i) => `<div class="value ${reveal(i)}" style="--c:${themeBySlug[th].couleur}">${icon(ic)}<h3>${ti}</h3><p>${tx}</p></div>`).join('')}</div>
+    <div class="values">${valeurs.map(([ic, ti, tx, th], i) => `<div class="value ${reveal(i)}" style="${cvars(themeBySlug[th])}">${icon(ic)}<h3>${ti}</h3><p>${tx}</p></div>`).join('')}</div>
   </div>
 </section>
 
@@ -533,9 +563,9 @@ themes.forEach(themePage);
       <span class="eyebrow">Histoire</span>
       <h2>Quelques repères</h2>
       <p>Le CLI est une association très ancienne et très ancrée dans la vie locale. Cette page attend le récit de son histoire, écrit par ceux qui l'ont vécue.</p>
-      <p>${todo('Texte de l\'histoire du club à compléter')}</p>
+      <p>${todo("Texte de l'histoire du club à compléter")}</p>
     </div>
-    <ol class="timeline ${reveal(1)}" style="list-style:none">
+    <ol class="timeline ${reveal(1)}">
       <li><b>${todo('Année de création')}</b><br>Fondation du Club Culture et Loisirs Issoirien.</li>
       <li><b>Mars 2004</b><br>Naissance des Voix d'Yss, à l'initiative d'Andrée Malet, avec l'aide logistique de Michel Denoux.</li>
       <li><b>Aujourd'hui</b><br>${site.chiffres.adherents} adhérents, ${site.chiffres.activites} activités et des bénévoles qui animent le club toute la semaine.</li>
@@ -548,13 +578,9 @@ themes.forEach(themePage);
     <div class="${reveal(0)}" style="max-width:760px;margin-bottom:34px"><span class="eyebrow">Bureau et équipe</span><h2>Ceux qui font vivre le club</h2>
     <p class="lead">Le club fonctionne grâce à ses bénévoles. Voici les responsables et animateurs des activités.</p></div>
     <h3>Le bureau</h3>
-    <div class="people" style="margin-bottom:34px">${equipe.bureau.map((b, i) => `<div class="person ${reveal(i)}" style="--c:#2A2725"><b>${b.nom ? esc(b.nom) : todo('Nom à compléter')}</b><span>${esc(b.role)}</span></div>`).join('')}</div>
+    <div class="people" style="margin-bottom:34px">${equipe.bureau.map((b, i) => `<div class="person ${reveal(i)}" style="--c:var(--nuit)"><b>${b.nom ? esc(b.nom) : todo('Nom à compléter')}</b><span>${esc(b.role)}</span></div>`).join('')}</div>
     <h3>Responsables et animateurs d'activités</h3>
-    <div class="people">${equipe.responsables.map((r, i) => {
-      const a = actBySlug[r.activite];
-      const th = themeBySlug[a.theme];
-      return `<div class="person ${reveal(i % 4)}" style="--c:${th.couleur}"><b>${esc(r.nom)}</b><span>${esc(r.role)}</span></div>`;
-    }).join('')}</div>
+    <div class="people">${equipe.responsables.map((r, i) => `<div class="person ${reveal(i % 4)}" style="${cvars(themeBySlug[actBySlug[r.activite].theme])}"><b>${esc(r.nom)}</b><span>${esc(r.role)}</span></div>`).join('')}</div>
     <h3 style="margin-top:34px">Les animateurs informatique</h3>
     <p>${equipe.informatique.map(esc).join(' · ')}</p>
   </div>
@@ -566,16 +592,12 @@ ${tryBand('Envie de nous rejoindre ?')}`;
 /* Actualités */
 {
   const hero = pageHero({ eyebrow: 'Actualités', title: 'Les nouvelles du club', lead: 'Chaque activité a ses propres publications. Filtrez par activité pour ne voir que ce qui vous intéresse.', theme: NEUTRAL, icone: 'sparkle' });
-  const slugs = [...new Set(news.map((n) => n.activite))];
-  const chips = [`<li><button class="chip" type="button" data-filter="tout" aria-pressed="true">Toutes <span class="chip__n">${news.length}</span></button></li>`]
-    .concat(slugs.map((s) => `<li><button class="chip" type="button" data-filter="${s}" style="--c:${themeOf(s).couleur}" aria-pressed="false">${esc(labelFor(s).titre)} <span class="chip__n">${news.filter((n) => n.activite === s).length}</span></button></li>`))
-    .join('');
   const body = `
 <section class="section">
   <div class="container">
     <div data-filter-root data-target=".news-card" data-status="news-status" data-empty="news-empty">
       <p id="filtre-label" style="font-weight:700">Afficher les actualités de :</p>
-      <ul class="chips" aria-labelledby="filtre-label">${chips}</ul>
+      <ul class="chips" aria-labelledby="filtre-label">${filterChips(news)}</ul>
     </div>
     <p id="news-status" class="sr-only" aria-live="polite"></p>
     <div class="news-grid">${news.map((n, i) => newsCard(n, i)).join('')}</div>
@@ -588,26 +610,21 @@ ${tryBand()}`;
 
 /* Galerie */
 {
-  const hero = pageHero({ eyebrow: 'Galerie', title: 'Le club en images', lead: 'Sorties, ateliers, danse, jeux : les moments forts de nos adhérents, classés par activité.', theme: NEUTRAL, icone: 'camera' });
-  const slugs = [...new Set(galerie.map((g) => g.activite))];
-  const chips = [`<li><button class="chip" type="button" data-filter="tout" aria-pressed="true">Toutes <span class="chip__n">${galerie.length}</span></button></li>`]
-    .concat(slugs.map((s) => `<li><button class="chip" type="button" data-filter="${s}" style="--c:${themeOf(s).couleur}" aria-pressed="false">${esc(labelFor(s).titre)} <span class="chip__n">${galerie.filter((g) => g.activite === s).length}</span></button></li>`))
-    .join('');
+  const hero = pageHero({ eyebrow: 'Galerie', title: 'Le club en images', lead: 'Voyages, randonnées et moments partagés : les photos de nos adhérents, classées par activité.', theme: NEUTRAL, icone: 'camera', photos: [{ src: 'club/der24-25' }, { src: 'club/dole-10' }, { src: 'club/der24-07' }, { src: 'club/yvo-08' }] });
   const albums = news.flatMap((n) => (n.liens || []).filter((l) => /photos\.app\.goo\.gl/.test(l.url)).map((l) => ({ ...l, groupe: n.dateLabel })));
   const body = `
 <section class="section">
   <div class="container">
     <div data-filter-root data-target=".masonry__item" data-status="gal-status">
       <p id="filtre-label" style="font-weight:700">Voir les photos de :</p>
-      <ul class="chips" aria-labelledby="filtre-label">${chips}</ul>
+      <ul class="chips" aria-labelledby="filtre-label">${filterChips(galerie)}</ul>
     </div>
     <p id="gal-status" class="sr-only" aria-live="polite"></p>
     <div class="masonry">${galerie.map((g) => {
       const act = labelFor(g.activite);
-      const th = themeOf(g.activite);
-      return `<figure class="masonry__item" data-activite="${g.activite}" style="--c:${th.couleur}"><button type="button" class="photo-btn" data-full="${esc(IMG(g.src))}" data-alt="${esc(g.alt)}" aria-label="Agrandir : ${esc(g.alt)}">${img(g.src, g.alt)}<span class="tag">${esc(act.titre)}</span></button></figure>`;
+      return `<figure class="masonry__item" data-activite="${g.activite}" style="${cvars(themeOf(g.activite))}"><button type="button" class="photo-btn" data-full="${esc(pic(g.src, 'l'))}" data-alt="${esc(g.alt)}" aria-label="Agrandir : ${esc(g.alt)}">${img(g.src, g.alt, { sizes: '(min-width: 900px) 33vw, (min-width: 560px) 50vw, 100vw' })}<span class="tag">${esc(act.titre)}</span></button></figure>`;
     }).join('')}</div>
-    <p class="lead" style="margin-top:20px">${icon('camera')} Les photos du club s'enrichissent au fil des activités : les responsables peuvent en ajouter dans <code>data/galerie.json</code>.</p>
+    <p class="lead" style="margin-top:20px">${icon('camera')} Les photos viennent des albums du club. Les responsables peuvent en ajouter dans <code>data/galerie.json</code>.</p>
   </div>
 </section>
 <section class="section section--tint">
@@ -621,21 +638,22 @@ ${tryBand()}`;
   <div class="lightbox__inner">
     <button class="lightbox__btn lightbox__close" type="button" aria-label="Fermer">${icon('close')}</button>
     <button class="lightbox__btn lightbox__prev" type="button" aria-label="Photo précédente">${icon('arrow')}</button>
-    <img src="" alt="">
+    <img alt="">
     <p class="lightbox__cap"></p>
     <button class="lightbox__btn lightbox__next" type="button" aria-label="Photo suivante">${icon('arrow')}</button>
   </div>
 </dialog>
 ${tryBand()}`;
-  pages['galerie.html'] = layout({ file: 'galerie.html', title: 'Galerie photos, classées par activité', description: 'Les photos du CLI Issoire par activité : randonnées, danse, jeux de société, peinture, informatique, voyages.', hero, body });
+  pages['galerie.html'] = layout({ file: 'galerie.html', title: 'Galerie photos, classées par activité', description: 'Les photos du CLI Issoire par activité : randonnées, voyages, vie du club, vélo, informatique.', hero, body });
 }
 
 /* Contact */
 {
   const a = site.adresse;
-  const hero = pageHero({ eyebrow: 'Contact et adhésion', title: 'Nous contacter, nous rejoindre', lead: 'Une question ? Une envie de venir essayer ? Écrivez-nous, appelez-nous ou passez le samedi matin.', theme: NEUTRAL, icone: 'mail', photos: [{ src: 'p/pho/photo-de-groupe-1.jpg' }, { src: 'j/jeu/Jeux-Societe-9-.JPG' }] });
+  const hero = pageHero({ eyebrow: 'Contact et adhésion', title: 'Nous contacter, nous rejoindre', lead: 'Une question ? Une envie de venir essayer ? Écrivez-nous, appelez-nous ou passez le samedi matin.', theme: NEUTRAL, icone: 'mail', photos: [{ src: 'club/der24-29' }, { src: 'club/dole-25' }] });
   const opts = themes.map((t) => `<optgroup label="${esc(t.court)}">${activites.filter((x) => x.theme === t.slug).map((x) => `<option value="${x.slug}">${esc(x.titre)}</option>`).join('')}</optgroup>`).join('');
   const bbox = `${(a.longitude - 0.006).toFixed(4)},${(a.latitude - 0.003).toFixed(4)},${(a.longitude + 0.006).toFixed(4)},${(a.latitude + 0.003).toFixed(4)}`;
+  const bubble = (t, ic) => `<span class="bubble" style="${cvars(themeBySlug[t])}">${icon(ic)}</span>`;
   const body = `
 <section class="section">
   <div class="container contact-grid">
@@ -643,27 +661,27 @@ ${tryBand()}`;
       <div class="card ${reveal(0)}">
         <h2 style="font-size:1.7rem">Coordonnées</h2>
         <ul class="info-list">
-          <li><span class="bubble">${icon('pin')}</span><div><b>${esc(a.lieu)}</b>${esc(a.rue)}<br>${esc(a.codePostal)} ${esc(a.ville)}</div></li>
-          <li><span class="bubble">${icon('phone')}</span><div><b>Téléphone</b><a href="tel:${site.telephone.replace(/\s/g, '')}">${esc(site.telephone)}</a> (Maison des associations)<br><a href="tel:${site.telephonePermanence.replace(/\s/g, '')}">${esc(site.telephonePermanence)}</a> (permanence)</div></li>
-          <li><span class="bubble">${icon('mail')}</span><div><b>Courriel</b><a href="mailto:${esc(site.email)}">${esc(site.email)}</a></div></li>
-          <li><span class="bubble">${icon('clock')}</span><div><b>Permanence</b>${esc(site.permanence.charAt(0).toUpperCase() + site.permanence.slice(1))}</div></li>
-          <li><span class="bubble">${icon('user')}</span><div><b>Personne à contacter</b>${esc(site.contactPrincipal.nom)}, ${esc(site.contactPrincipal.role.toLowerCase())}</div></li>
+          <li>${bubble('convivialite', 'pin')}<div><b>${esc(a.lieu)}</b>${esc(a.rue)}<br>${esc(a.codePostal)} ${esc(a.ville)}</div></li>
+          <li>${bubble('solidarite', 'phone')}<div><b>Téléphone</b><a href="tel:${site.telephone.replace(/\s/g, '')}">${esc(site.telephone)}</a> (Maison des associations)<br><a href="tel:${site.telephonePermanence.replace(/\s/g, '')}">${esc(site.telephonePermanence)}</a> (permanence)</div></li>
+          <li>${bubble('ateliers', 'mail')}<div><b>Courriel</b><a href="mailto:${esc(site.email)}">${esc(site.email)}</a></div></li>
+          <li>${bubble('sorties', 'clock')}<div><b>Permanence</b>${esc(site.permanence.charAt(0).toUpperCase() + site.permanence.slice(1))}</div></li>
+          <li>${bubble('nouvelles-technologies', 'user')}<div><b>Personne à contacter</b>${esc(site.contactPrincipal.nom)}, ${esc(site.contactPrincipal.role.toLowerCase())}</div></li>
         </ul>
       </div>
       <div class="card ${reveal(1)}">
         <h2 style="font-size:1.7rem">Où nous trouver ?</h2>
         <iframe class="map" title="Plan : Maison des associations, 20 rue du Palais, Issoire" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&amp;layer=mapnik&amp;marker=${a.latitude}%2C${a.longitude}"></iframe>
-        <p style="margin-top:14px"><a class="btn btn--stone" href="https://www.openstreetmap.org/?mlat=${a.latitude}&amp;mlon=${a.longitude}#map=17/${a.latitude}/${a.longitude}"${NEWTAB}>${icon('pin')}Ouvrir le plan<span class="sr-only"> (nouvel onglet)</span></a></p>
+        <p style="margin-top:14px"><a class="btn btn--nuit" href="https://www.openstreetmap.org/?mlat=${a.latitude}&amp;mlon=${a.longitude}#map=17/${a.latitude}/${a.longitude}"${NEWTAB}>${icon('pin')}Ouvrir le plan<span class="sr-only"> (nouvel onglet)</span></a></p>
       </div>
-      <div class="card ${reveal(2)}" style="border-top:10px solid var(--sun)">
+      <div class="card ${reveal(2)}" style="border-top:10px solid var(--jaune)">
         <h2 style="font-size:1.7rem">Pour rejoindre le club</h2>
         <ol class="steps">
           <li><strong>Venez nous rencontrer</strong> à la permanence ${esc(site.permanence)}.</li>
           <li><strong>Essayez une activité</strong> : indiquez celle qui vous tente, nous vous orienterons.</li>
           <li><strong>Inscrivez-vous</strong> : les inscriptions ont lieu à la rentrée, fin août et début septembre.</li>
         </ol>
-        <p>Cotisation annuelle, pièces à fournir et modalités d'inscription : ${todo('Texte d\'attente — à compléter par le bureau')}</p>
-        <p style="margin-bottom:0"><a class="btn btn--stone" href="${esc(site.espaceAdherent.url)}"${NEWTAB}>${icon('key')}Espace adhérent<span class="sr-only"> (nouvel onglet)</span></a></p>
+        <p>Cotisation annuelle, pièces à fournir et modalités d'inscription : ${todo("Texte d'attente — à compléter par le bureau")}</p>
+        <p style="margin-bottom:0"><a class="btn btn--nuit" href="${esc(site.espaceAdherent.url)}"${NEWTAB}>${icon('key')}Espace adhérent<span class="sr-only"> (nouvel onglet)</span></a></p>
       </div>
     </div>
     <div class="card ${reveal(1)}" id="formulaire">
@@ -679,7 +697,7 @@ ${tryBand()}`;
           <select id="f-activite" name="activite"><option value="general">Une question générale</option>${opts}</select></div>
         <div class="field"><label for="f-message">Votre message</label><textarea id="f-message" name="message" required></textarea></div>
         <div class="check"><input id="f-rgpd" name="consentement" type="checkbox" required><label for="f-rgpd">J'accepte que ces informations soient utilisées pour répondre à ma demande (voir les <a href="mentions-legales.html#donnees">mentions légales</a>).</label></div>
-        <button class="btn btn--stone btn--big" type="submit">${icon('mail')}Envoyer mon message</button>
+        <button class="btn btn--nuit btn--big" type="submit">${icon('mail')}Envoyer mon message</button>
       </form>
     </div>
   </div>
@@ -704,11 +722,13 @@ ${tryBand()}`;
       <p>Le formulaire de contact recueille votre nom, votre adresse e-mail, votre téléphone (facultatif) et votre message. Ces données servent uniquement à répondre à votre demande. Elles ne sont ni vendues ni cédées, et sont conservées le temps nécessaire au traitement de votre demande. Le formulaire est traité par le service Netlify Forms.</p>
       <p>Conformément au règlement général sur la protection des données (RGPD) et à la loi « Informatique et libertés », vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition et de portabilité. Pour l'exercer, écrivez à <a href="mailto:${esc(site.email)}">${esc(site.email)}</a>. Vous pouvez aussi saisir la CNIL (<a href="https://www.cnil.fr/fr/plaintes"${NEWTAB}>cnil.fr</a>).</p>
       <h2>Cookies et suivi</h2>
-      <p>Ce site n'utilise aucun cookie de suivi ni outil de mesure d'audience. Le plan de la page Contact est fourni par OpenStreetMap, et certaines photos sont chargées depuis les archives de l'ancien site du club (Internet Archive) : ces services peuvent recevoir votre adresse IP lors de l'affichage.</p>
+      <p>Ce site n'utilise aucun cookie de suivi ni outil de mesure d'audience. Les polices et les photos sont hébergées avec le site. Seul le plan de la page Contact est fourni par OpenStreetMap, qui peut recevoir votre adresse IP lors de son affichage.</p>
       <h2>Photographies</h2>
-      <p>Les photos présentent des activités du club. Toute personne reconnaissable qui souhaite le retrait d'une image peut écrire à <a href="mailto:${esc(site.email)}">${esc(site.email)}</a> : elle sera retirée rapidement.</p>
+      <p>Les photos de sorties, de voyages et de la vie du club proviennent des albums des adhérents du club (voyages 2024 et 2025). L'illustration de l'informatique provient de la vidéo de présentation des ateliers du club.</p>
+      <p>Les photos marquées « Photo d'illustration » (gymnastique, pilates, danse, jeux de société, Les Voix d'Yss, randonnée cycliste et ateliers) proviennent de la banque d'images libre Unsplash (licence Unsplash) : elles ne montrent pas les adhérents du club et pourront être remplacées par des photos des séances.</p>
+      <p>Toute personne reconnaissable qui souhaite le retrait d'une image peut écrire à <a href="mailto:${esc(site.email)}">${esc(site.email)}</a> : elle sera retirée rapidement.</p>
       <h2>Propriété intellectuelle</h2>
-      <p>Les textes et images du site appartiennent au ${esc(site.nom)} ou à leurs auteurs. Le logo et les contenus proviennent de l'ancien site www.cli63.com du club. Polices : Fraunces et Atkinson Hyperlegible (licence SIL OFL).</p>
+      <p>Les textes et images du site appartiennent au ${esc(site.nom)} ou à leurs auteurs. Le logo et les contenus proviennent de l'ancien site www.cli63.com du club. Polices : Nunito et Atkinson Hyperlegible (licence SIL OFL).</p>
     </div>
   </div>
 </section>`;
@@ -718,11 +738,11 @@ ${tryBand()}`;
 /* Merci + 404 */
 pages['merci.html'] = layout({
   file: 'merci.html', title: 'Message envoyé', description: 'Votre message a bien été envoyé au CLI Issoire.',
-  body: `<section class="section"><div class="container" style="max-width:760px;text-align:center"><span class="page-hero__icon" style="background:var(--sun);color:var(--ink)" aria-hidden="true">${icon('mail')}</span><h1>Merci, votre message est envoyé !</h1><p class="lead" style="margin-inline:auto">Nous vous répondrons dès que possible. En attendant, découvrez nos activités.</p><p><a class="btn btn--stone btn--big" href="index.html">Retour à l'accueil</a></p></div></section>`
+  body: `<section class="section"><div class="container" style="max-width:760px;text-align:center"><img src="${LOGO}" srcset="${LOGO} 1x, ${LOGO2X} 2x" width="204" height="200" alt="" style="margin:0 auto 20px;height:140px;width:auto"><h1>Merci, votre message est envoyé !</h1><p class="lead" style="margin-inline:auto">Nous vous répondrons dès que possible. En attendant, découvrez nos activités.</p><p><a class="btn btn--nuit btn--big" href="index.html">Retour à l'accueil</a></p></div></section>`
 });
 pages['404.html'] = layout({
-  file: '404.html', title: 'Page introuvable', description: 'Cette page n\'existe pas.',
-  body: `<section class="section"><div class="container" style="max-width:760px;text-align:center"><h1>Oups, cette page est introuvable</h1><p class="lead" style="margin-inline:auto">Le lien est peut-être ancien. Retournez à l'accueil ou choisissez un thème.</p><p><a class="btn btn--stone btn--big" href="/index.html">Retour à l'accueil</a></p></div></section>`
+  file: '404.html', title: 'Page introuvable', description: "Cette page n'existe pas.",
+  body: `<section class="section"><div class="container" style="max-width:760px;text-align:center"><img src="${LOGO}" srcset="${LOGO} 1x, ${LOGO2X} 2x" width="204" height="200" alt="" style="margin:0 auto 20px;height:140px;width:auto"><h1>Oups, cette page est introuvable</h1><p class="lead" style="margin-inline:auto">Le lien est peut-être ancien. Retournez à l'accueil ou choisissez un thème.</p><p><a class="btn btn--nuit btn--big" href="/index.html">Retour à l'accueil</a></p></div></section>`
 });
 
 /* ---------- écriture ---------- */
