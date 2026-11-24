@@ -21,7 +21,7 @@ const equipe = readJSON('data', 'equipe.json');
 const galerie = readJSON('data', 'galerie.json');
 const themeBySlug = Object.fromEntries(themes.map((t) => [t.slug, t]));
 const actBySlug = Object.fromEntries(activites.map((a) => [a.slug, a]));
-// Fond « club » (pages générales) : bleu nuit avec les rubans du logo.
+// Fond « club » (pages générales) : bleu nuit, accent jaune du logo.
 const NEUTRAL = { slug: 'club', couleur: '#FCC024', fonce: '#13263D', teinte: '#E8EEF5', court: 'Club', image: site.heroImage };
 const CLUB = { slug: 'vie-du-club', titre: 'Vie du club', theme: 'club', icone: 'people' };
 const labelFor = (slug) => actBySlug[slug] || CLUB;
@@ -73,6 +73,7 @@ const ICONS = {
   phone: '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/>',
   mail: '<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/>',
   arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+  chevron: '<path d="M6 9l6 6 6-6"/>',
   menu: '<path d="M4 6.5h16M4 12h16M4 17.5h16"/>',
   close: '<path d="M6 6l12 12M18 6L6 18"/>',
   key: '<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3"/>',
@@ -90,14 +91,9 @@ const todo = (txt = 'À compléter') => `<span class="todo">${esc(txt)}</span>`;
 const reveal = (i = 0) => `reveal d${i % 6}`;
 const LOGO = `/img/${site.logo}.png`;
 const LOGO2X = `/img/${site.logo}@2x.png`;
-// Rubans décoratifs reprenant les courbes colorées du logo
-const rubans = (cls = 'rubans') =>
-  `<svg class="${cls}" viewBox="0 0 720 420" aria-hidden="true" focusable="false">${['--rouge', '--orange', '--jaune', '--vert', '--bleu']
-    .map((v, i) => `<path style="stroke:var(${v})" d="M${20 + i * 22} 410 C ${90 + i * 22} 230, ${260 + i * 18} ${120 - i * 6}, ${700} ${40 + i * 22}"/>`)
-    .join('')}</svg>`;
-
 /* ---------- gabarit commun ---------- */
-const nav = (current) =>
+// Menu mobile : toutes les pages, dans l'ordre du menu
+const navMobile = (current) =>
   `<ul class="nav-list">${site.pagesMenu
     .map(([href, label]) => {
       const th = themeBySlug[href.replace('.html', '')];
@@ -105,6 +101,18 @@ const nav = (current) =>
       return `<li><a class="nav-link" href="${href}"${current === href ? ' aria-current="page"' : ''}>${dot}${esc(label)}</a></li>`;
     })
     .join('')}</ul>`;
+// Menu ordinateur : les 5 thèmes sont regroupés sous « Activités »
+const navDesktop = (current) => {
+  const cur = (h) => (current === h ? ' aria-current="page"' : '');
+  const inTheme = themes.some((t) => t.page === current);
+  const item = (h, l) => `<li><a class="nav-link" href="${h}"${cur(h)}>${esc(l)}</a></li>`;
+  const sub = themes
+    .map((t) => `<li><a href="${t.page}"${cur(t.page)}><span class="dot" style="--dot:${t.couleur}" aria-hidden="true"></span><span>${esc(t.court)}<small>${esc(activites.filter((a) => a.theme === t.slug).map((a) => a.titre).join(', '))}</small></span></a></li>`)
+    .join('');
+  return `<ul class="nav-list">${item('index.html', 'Accueil')}${item('le-club.html', 'Le club')}
+    <li class="has-sub${inTheme ? ' current' : ''}"><button class="nav-link nav-sub-btn" type="button" aria-expanded="false" aria-controls="sous-menu-activites">Activités ${icon('chevron')}</button><ul class="subnav" id="sous-menu-activites">${sub}</ul></li>
+    ${item('actualites.html', 'Actualités')}${item('galerie.html', 'Galerie')}${item('contact.html', 'Contact')}</ul>`;
+};
 
 function layout({ file, title, description, body, hero = '' }) {
   const url = `${site.url}/${file === 'index.html' ? '' : file}`;
@@ -138,25 +146,29 @@ function layout({ file, title, description, body, hero = '' }) {
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
-<header class="site-header">
+<div class="topbar">
   <div class="container">
-    <div class="header-top">
-      <a class="brand" href="index.html" aria-label="${esc(site.nom)} — retour à l'accueil">
-        <img class="brand__logo" src="${LOGO}" srcset="${LOGO} 1x, ${LOGO2X} 2x" width="204" height="200" alt="">
-        <span class="brand__text"><span class="brand__name">${esc(site.nom)}</span><span class="brand__sub">${esc(site.baseline)} depuis la Maison des associations</span></span>
-      </a>
-      <div class="header-actions">
-        <a class="header-tel" href="tel:${tel}">${icon('phone')}${esc(site.telephonePermanence)}</a>
-        <a class="btn btn--nuit btn--member" href="${esc(member)}"${NEWTAB}>${icon('key')}Espace adhérent<span class="sr-only"> (nouvel onglet)</span></a>
-        <button class="burger" type="button" aria-expanded="false" aria-controls="mobile-menu">${icon('menu', 'ico--open')}${icon('close', 'ico--close')}<span class="burger__label">Menu</span></button>
-      </div>
-    </div>
-    <nav class="nav" aria-label="Navigation principale"><div class="nav-row"><a class="nav-mini" href="index.html" aria-label="Accueil"><img src="${LOGO}" width="204" height="200" alt=""></a>${nav(file)}</div></nav>
+    <ul class="topbar__info">
+      <li>${icon('pin')}${esc(a.lieu)}, ${esc(a.rue)}, ${esc(a.ville)}</li>
+      <li>${icon('clock')}Permanence le samedi, 10h–11h30</li>
+      <li>${icon('phone')}<a href="tel:${tel}">${esc(site.telephonePermanence)}</a></li>
+    </ul>
+    <a class="topbar__member" href="${esc(member)}"${NEWTAB}>${icon('key')}Espace adhérent<span class="sr-only"> (nouvel onglet)</span></a>
+  </div>
+</div>
+<header class="site-header">
+  <div class="container header-bar">
+    <a class="brand" href="index.html" aria-label="${esc(site.nom)} — retour à l'accueil">
+      <img class="brand__logo" src="${LOGO}" srcset="${LOGO} 1x, ${LOGO2X} 2x" width="204" height="200" alt="">
+      <span class="brand__text"><span class="brand__name">${esc(site.nom)}</span><span class="brand__sub">${esc(site.baseline)}</span></span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">${navDesktop(file)}</nav>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="mobile-menu">${icon('menu', 'ico--open')}${icon('close', 'ico--close')}<span class="burger__label">Menu</span></button>
   </div>
   <div class="ruban" aria-hidden="true"></div>
 </header>
 <div class="mobile-menu" id="mobile-menu">
-  <nav aria-label="Navigation mobile">${nav(file)}</nav>
+  <nav aria-label="Navigation mobile">${navMobile(file)}</nav>
   <div style="max-width:560px;margin:0 auto">
     <a class="btn btn--nuit" href="${esc(member)}"${NEWTAB}>${icon('key')}Espace adhérent</a>
     <p class="mm-tel">${icon('phone')} <a href="tel:${tel}">${esc(site.telephonePermanence)}</a></p>
@@ -341,7 +353,6 @@ function memberBand() {
 
 function tryBand(text) {
   return `<section class="try">
-  ${rubans()}
   <div class="container try__inner">
     <div class="${reveal(0)}">
       <h2>${esc(text || "Envie d'essayer ? Venez nous rencontrer !")}</h2>
@@ -367,40 +378,42 @@ const pages = {};
 
 /* Accueil */
 {
-  // Ordre de la mosaïque : 4 colonnes x 4 rangées sur ordinateur, 2 colonnes sur mobile (2 vignettes larges)
-  const ORDER = [['randonnee-pedestre', true], ['gymnastique'], ['danse'], ['jeux-de-societe'], ['pilates'], ['voix-d-yss'], ['randonnee-cycliste'], ['poterie-modelage'], ['vannerie'], ['peinture-sur-soie'], ['dessin-peinture'], ['remue-meninges'], ['marqueterie'], ['informatique', true]];
-  const tiles = ORDER.map(([slug, wide], i) => {
-    const a = actBySlug[slug];
-    const t = themeBySlug[a.theme];
-    return `<li${wide ? ' class="wide"' : ''}><a class="tile" href="${t.page}#${slug}" style="${cvars(t)};--d:${(0.15 + i * 0.05).toFixed(2)}s" aria-label="${esc(a.titre)} — thème ${esc(t.court)}">
-      ${img(a.photos[0].src, '', { sizes: wide ? '(min-width: 1000px) 320px, 90vw' : '(min-width: 1000px) 160px, 45vw', eager: i < 6 })}
-      <span class="tile__go" aria-hidden="true">${icon('arrow')}</span>
-      <span class="tile__label" aria-hidden="true"><span class="tile__name">${esc(a.titre)}</span><span class="tile__theme">${esc(t.court)}</span></span>
-    </a></li>`;
-  }).join('');
-
+  // Collage de photos du club (forme de la première version)
+  const COLLAGE = [
+    ['club/der24-25', 'Voyage 2024', 'sorties'], ['club/der24-14', 'Convivialité', 'convivialite'], ['club/dole-29', 'Randonnée', 'sorties'],
+    ['club/yvo-08', 'Léman', 'sorties'], ['club/der24-07', 'À table', 'convivialite'], ['club/dole-06', 'Pause', 'sorties'],
+    ['club/dole-12', 'Jura', 'sorties'], ['club/yvo-22', 'Pique-nique', 'convivialite']
+  ];
   const hero = `<section class="hero" aria-labelledby="titre-accueil">
   <div class="hero__bg" style="background-image:url('${esc(pic(site.heroImage, 'l'))}')" aria-hidden="true"></div>
-  ${rubans()}
   <div class="container hero__inner">
     <div>
-      <span class="hero__kicker"><img src="${LOGO}" width="204" height="200" alt="">Issoire · Puy-de-Dôme</span>
-      <h1 id="titre-accueil">Club Culture et Loisirs <span class="accent">Issoirien</span></h1>
-      <p class="hero__lead">Des loisirs, de la culture et des amis à Issoire : ${site.chiffres.activites} activités pour bien vivre chaque jour.</p>
+      <span class="hero__kicker">${icon('pin')}Issoire · Puy-de-Dôme</span>
+      <h1 id="titre-accueil">Club Culture et Loisirs <span>Issoirien</span></h1>
+      <p class="hero__lead">Des loisirs, de la culture et des amis à Issoire : ${site.chiffres.activites} activités pour les seniors qui aiment bouger, créer et partager.</p>
       <div class="hero__cta">
-        <a class="btn btn--big" href="#themes">Découvrir nos activités ${icon('arrow')}</a>
+        <a class="btn btn--big" href="#activites">Découvrir nos activités ${icon('arrow')}</a>
         <a class="btn btn--ghost btn--big" href="contact.html#formulaire">Venir essayer</a>
       </div>
-      <ul class="hero__facts"><li><b>${site.chiffres.adherents}</b> adhérents</li><li><b>${site.chiffres.activites}</b> activités</li><li><b>${site.chiffres.themes}</b> thèmes</li></ul>
+      <ul class="hero__facts"><li><b>${site.chiffres.adherents}</b>adhérents</li><li><b>${site.chiffres.activites}</b>activités</li><li><b>${site.chiffres.themes}</b>thèmes</li></ul>
     </div>
-    <div class="mosaic-wrap">
-      <p class="mosaic-title"><span>Nos ${site.chiffres.activites} activités</span><span>Touchez une photo pour en savoir plus</span></p>
-      <ul class="mosaic">${tiles}</ul>
-      <ul class="legend" aria-label="Les 5 thèmes">${themes.map((t) => `<li><a href="${t.page}" style="--c:${t.couleur}">${esc(t.court)}</a></li>`).join('')}</ul>
+    <div class="collage" aria-hidden="true">
+      ${COLLAGE.map(([src, cap, th], i) => `<figure style="${cvars(themeBySlug[th])}">${img(src, '', { sizes: '(min-width: 980px) 25vw, 50vw', eager: i < 4 })}<figcaption>${esc(cap)}</figcaption></figure>`).join('')}
     </div>
   </div>
-  <div class="volcans" aria-hidden="true"></div>
 </section>`;
+
+  // Les 14 activités en carrés photo, cliquables, filtrables par thème
+  const actCards = activites.map((a) => {
+    const t = themeBySlug[a.theme];
+    return `<li data-activite="${t.slug}"><a class="act" href="${t.page}#${a.slug}" style="${cvars(t)}">
+      <span class="act__img">${img(a.photos[0].src, '', { sizes: '(min-width: 1100px) 160px, (min-width: 640px) 30vw, 50vw' })}</span>
+      <span class="act__body"><span class="act__theme">${esc(t.court)}</span><span class="act__name">${esc(a.titre)}</span></span>
+    </a></li>`;
+  }).join('');
+  const themeChips = [`<li><button class="chip" type="button" data-filter="tout" aria-pressed="true">Toutes <span class="chip__n">${activites.length}</span></button></li>`]
+    .concat(themes.map((t) => `<li><button class="chip" type="button" data-filter="${t.slug}" style="${cvars(t)}" aria-pressed="false">${esc(t.court)} <span class="chip__n">${activites.filter((a) => a.theme === t.slug).length}</span></button></li>`))
+    .join('');
 
   const themeCards = themes.map((t, i) => {
     const acts = activites.filter((a) => a.theme === t.slug);
@@ -420,12 +433,27 @@ const pages = {};
   const counters = [[c.adherents, 'adhérents cette année', '--rouge'], [c.activites, 'activités', '--jaune'], [c.themes, 'thèmes', '--vert'], [c.niveauxRando, 'niveaux de randonnée', '--bleu']];
   const strip = [['club/der24-25', 'Voyage 2024 dans les Alpes du Sud'], ['club/der24-14', 'À table pendant le voyage'], ['club/dole-29', 'En route vers la Dôle'], ['club/yvo-22', "Pique-nique au bord du Léman"], ['club/der24-16', 'Une pause en terrasse']];
   const body = `
+<section class="acts-section" id="activites" aria-labelledby="titre-activites">
+  <div class="container">
+    <div class="acts-panel">
+      <div class="acts-head">
+        <div><h2 id="titre-activites">Nos ${site.chiffres.activites} activités</h2><p>Cliquez sur une activité pour voir les jours, les horaires et le lieu.</p></div>
+      </div>
+      <div class="acts-filter" data-filter-root data-target=".acts > li" data-status="acts-status">
+        <ul class="chips" aria-label="Filtrer par thème">${themeChips}</ul>
+      </div>
+      <p id="acts-status" class="sr-only" aria-live="polite"></p>
+      <ul class="acts">${actCards}</ul>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="themes">
   <div class="container">
     <div class="${reveal(0)}" style="max-width:760px;margin-bottom:40px">
-      <span class="eyebrow">Nos activités</span>
-      <h2>Cinq univers, quatorze activités</h2>
-      <p class="lead">Chaque thème a la couleur d'un ruban de notre logo. Choisissez celui qui vous ressemble, ou essayez-les tous !</p>
+      <span class="eyebrow">Nos 5 thèmes</span>
+      <h2>Cinq univers aux couleurs du club</h2>
+      <p class="lead">Chaque thème reprend une couleur de notre logo. Choisissez celui qui vous ressemble, ou essayez-les tous !</p>
     </div>
     <div class="themes">${themeCards}</div>
   </div>

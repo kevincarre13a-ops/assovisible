@@ -3,13 +3,31 @@
   'use strict';
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- en-tête : compact au défilement ---------- */
+  /* ---------- en-tête : ombre au défilement ---------- */
   var header = document.querySelector('.site-header');
   function onScroll() {
-    if (header) header.classList.toggle('is-compact', window.scrollY > 90);
+    if (header) header.classList.toggle('is-scrolled', window.scrollY > 10);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+
+  /* ---------- sous-menu « Activités » ---------- */
+  [].slice.call(document.querySelectorAll('.has-sub')).forEach(function (item) {
+    var btn = item.querySelector('.nav-sub-btn');
+    function set(open) {
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      item.classList.toggle('open', open);
+    }
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      set(btn.getAttribute('aria-expanded') !== 'true');
+    });
+    item.addEventListener('mouseenter', function () { set(true); });
+    item.addEventListener('mouseleave', function () { set(false); });
+    item.addEventListener('focusout', function (e) { if (!item.contains(e.relatedTarget)) set(false); });
+    document.addEventListener('click', function () { set(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { set(false); } });
+  });
 
   /* ---------- menu mobile ---------- */
   var burger = document.querySelector('.burger');
@@ -31,7 +49,7 @@
       if (e.key === 'Escape') setMenu(false);
     });
     window.addEventListener('resize', function () {
-      if (window.innerWidth >= 1120) setMenu(false);
+      if (window.innerWidth >= 1100) setMenu(false);
     });
   }
 
