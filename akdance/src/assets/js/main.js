@@ -28,7 +28,7 @@
   if ('IntersectionObserver' in window && !reduce) {
     const io = new IntersectionObserver((es) => es.forEach((e) => {
       if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }), { threshold: 0, rootMargin: '0px 0px -8% 0px' });
     items.forEach((el) => io.observe(el));
   } else items.forEach((el) => el.classList.add('in'));
 

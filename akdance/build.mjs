@@ -29,15 +29,18 @@ const bienEtre = disc.items.filter((d) => d.famille === 'bien-etre');
 /* ---------- éléments communs ---------- */
 const roseMark = (cls = '') => `<svg class="mark ${cls}" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
   <g transform="translate(24 24)">
-    <ellipse rx="7" ry="16" transform="rotate(0) translate(0 -9)" fill="#E0346F"/>
-    <ellipse rx="7" ry="16" transform="rotate(72) translate(0 -9)" fill="#FF6B4A" opacity=".92"/>
-    <ellipse rx="7" ry="16" transform="rotate(144) translate(0 -9)" fill="#E0346F" opacity=".85"/>
-    <ellipse rx="7" ry="16" transform="rotate(216) translate(0 -9)" fill="#FF8A5C" opacity=".9"/>
-    <ellipse rx="7" ry="16" transform="rotate(288) translate(0 -9)" fill="#3E9C90" opacity=".92"/>
-    <circle r="5.5" fill="#FFF6EE"/>
+    <ellipse rx="7" ry="16" transform="rotate(0) translate(0 -9)" fill="#D4141C"/>
+    <ellipse rx="7" ry="16" transform="rotate(72) translate(0 -9)" fill="#111111" opacity=".92"/>
+    <ellipse rx="7" ry="16" transform="rotate(144) translate(0 -9)" fill="#D4141C" opacity=".85"/>
+    <ellipse rx="7" ry="16" transform="rotate(216) translate(0 -9)" fill="#D4141C" opacity=".9"/>
+    <ellipse rx="7" ry="16" transform="rotate(288) translate(0 -9)" fill="#111111" opacity=".92"/>
+    <circle r="5.5" fill="#FFFFFF"/>
   </g></svg>`;
 
-const brand = (cls = '') => `<span class="brand ${cls}">${roseMark()}<span class="brand-text">AK<em> Dance</em></span></span>`;
+const logoFile = ['svg', 'png', 'webp', 'jpg'].map((e) => `logo.${e}`).find((f) => existsSync(join(ROOT, 'src', 'assets', 'img', f)));
+const brand = (cls = '') => logoFile
+  ? `<span class="brand ${cls}"><img class="logo-img" src="assets/img/${logoFile}" alt="AK Dance"></span>`
+  : `<span class="brand ${cls}">${roseMark()}<span class="brand-text">AK<em> Dance</em></span></span>`;
 
 const icon = {
   fb: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5H16l.5-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.6V21h2.9z"/></svg>',
@@ -104,7 +107,7 @@ function layout({ file, title, description, hero, body, bodyClass = '', extraHea
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description)}">
-<meta name="theme-color" content="#E0346F">
+<meta name="theme-color" content="#D4141C">
 <link rel="canonical" href="${url}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
