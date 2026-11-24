@@ -16,10 +16,12 @@ const events = load('events');
 const news = load('news');
 const gallery = load('gallery');
 const team = load('team');
+const avis = load('avis');
+news.items.sort((a, b) => b.date.localeCompare(a.date));
 
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const tbc = (v) => (v && String(v).trim() ? esc(v) : `<span class="tbc">${esc(site.placeholder)}</span>`);
-const fmtDate = (iso) => new Date(iso + 'T12:00:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+const fmtDate = (iso) => new Date(iso + 'T12:00:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }).replace(/^1 /, '1er ');
 const c = site.contact;
 const fullAddr = `${c.address}, ${c.zip} ${c.city}`;
 
@@ -37,9 +39,11 @@ const roseMark = (cls = '') => `<svg class="mark ${cls}" viewBox="0 0 48 48" ari
     <circle r="5.5" fill="#FFFFFF"/>
   </g></svg>`;
 
-const logoFile = ['svg', 'png', 'webp', 'jpg'].map((e) => `logo.${e}`).find((f) => existsSync(join(ROOT, 'src', 'assets', 'img', f)));
-const brand = (cls = '') => logoFile
-  ? `<span class="brand ${cls}"><img class="logo-img" src="assets/img/${logoFile}" alt="AK Dance"></span>`
+// Logo officiel : src/assets/img/logo.webp (fond clair) et logo-blanc.webp (fond sombre).
+const hasLogo = existsSync(join(ROOT, 'src', 'assets', 'img', 'logo.webp'));
+const logoImg = (dark, cls = 'logo-img', extra = '') => `<img class="${cls}" src="assets/img/${dark ? 'logo-blanc' : 'logo'}.webp" alt="AK Dance" width="640" height="542"${extra}>`;
+const brand = (cls = '') => hasLogo
+  ? `<span class="brand ${cls}">${logoImg(cls.includes('on-dark'))}</span>`
   : `<span class="brand ${cls}">${roseMark()}<span class="brand-text">AK<em> Dance</em></span></span>`;
 
 const icon = {
@@ -107,7 +111,7 @@ function layout({ file, title, description, hero, body, bodyClass = '', extraHea
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(description)}">
-<meta name="theme-color" content="#D4141C">
+<meta name="theme-color" content="#E3000B">
 <link rel="canonical" href="${url}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
@@ -115,10 +119,11 @@ function layout({ file, title, description, hero, body, bodyClass = '', extraHea
 <meta property="og:title" content="${esc(fullTitle)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${url}">
+<meta property="og:image" content="${site.url}/assets/img/logo.png">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org',
@@ -184,6 +189,8 @@ const eventCard = (e, past) => `<article class="event ${past ? 'past' : ''}" dat
     <h3>${esc(e.titre)}</h3>
     <p class="meta">${esc(fmtDate(e.date))}${e.dateFin ? ' → ' + esc(fmtDate(e.dateFin)) : ''}${e.lieu ? ' · ' + esc(e.lieu) : ''}</p>
     <p>${esc(e.resume || '')}</p>
+    ${e.aConfirmer ? `<p><span class="tbc">Participation d'AK Dance à confirmer</span></p>` : ''}
+    ${e.lien ? `<a class="link-arrow" href="${esc(e.lien)}" target="_blank" rel="noopener">${esc(e.libelleLien || 'En savoir plus')} <span aria-hidden="true">→</span></a>` : ''}
   </div>
 </article>`;
 
@@ -193,6 +200,17 @@ const newsCard = (n) => `<article class="news-card" data-reveal>
   <p>${esc(n.resume)}</p>
   ${n.lien ? `<a class="link-arrow" href="${esc(n.lien)}" target="_blank" rel="noopener">${esc(n.libelleLien || 'En savoir plus')} <span aria-hidden="true">→</span></a>` : ''}
 </article>`;
+
+const moisFr = (ym) => { const [y, m] = ym.split('-'); return new Date(+y, +m - 1, 15).toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' }); };
+const avisHtml = (tint) => `<section class="section avis ${tint ? 'tint' : ''}">
+  <div class="wrap">
+    <p class="kicker center" data-reveal>Ils en parlent</p>
+    <h2 class="center" data-reveal>Une école <em>recommandée</em></h2>
+    <p class="rating center" data-reveal><span class="stars" aria-hidden="true">★★★★★</span> <b>${avis.note}/5</b> · ${avis.nombre} avis Google</p>
+    <div class="quotes">${avis.items.map((q) => `<blockquote class="quote-card" data-reveal><p>« ${esc(q.texte)} »</p><cite>${esc(avis.source)} · ${esc(moisFr(q.date))}</cite></blockquote>`).join('')}</div>
+    <p class="center" data-reveal><a class="link-arrow" href="${esc(avis.lien)}" target="_blank" rel="noopener">Lire tous les avis sur Google <span aria-hidden="true">→</span></a></p>
+  </div>
+</section>`;
 
 const futureEvents = events.avenir.filter((e) => new Date(e.date + 'T23:59:59') >= new Date()).sort((a, b) => a.date.localeCompare(b.date));
 const nextEvent = futureEvents[0];
@@ -246,10 +264,13 @@ pages['index.html'] = layout({
     ${Array.from({ length: 9 }, (_, i) => `<b class="petal p${i + 1}"></b>`).join('')}
   </div>
   <div class="wrap hero-inner">
+    ${hasLogo ? `<figure class="hero-logo" data-reveal>${logoImg(false, 'hero-logo-img', ' fetchpriority="high"')}</figure>` : ''}
+    <div class="hero-text">
     <p class="kicker" data-reveal>Mandres-les-Roses · Val-de-Marne</p>
-    <h1 data-reveal><span class="h-ak">AK</span> <span class="h-dance">Dance</span></h1>
-    <p class="hero-sub" data-reveal>${esc(site.baseline)}.<br><em>Dès 4 ans, tous niveaux, dans une ambiance chaleureuse.</em></p>
+    <h1 data-reveal><span class="sr-only">AK Dance : </span><span class="h-red">D</span>anse <i class="h-amp">&amp;</i> <span class="h-well">bien-être</span></h1>
+    <p class="hero-sub" data-reveal>L'association de danse et de bien-être de Mandres-les-Roses.<br><em>Dès 4 ans, tous niveaux, dans une ambiance chaleureuse.</em></p>
     <p class="hero-cta" data-reveal><a class="btn btn-primary" href="contact.html#essai">Cours d'essai gratuit</a> <a class="btn btn-ghost-dark" href="planning-tarifs.html">Voir le planning</a></p>
+    </div>
   </div>
   <a class="scroll-hint" href="#apercu" aria-label="Découvrir la suite"><span></span></a>
 </section>`,
@@ -281,16 +302,16 @@ pages['index.html'] = layout({
     <div data-reveal><b data-count="${disc.items.length}">0</b><span>disciplines</span></div>
     <div data-reveal><b data-count="${team.professeurs.length}">0</b><span>professeurs</span></div>
     ${nbCours > 0 ? `<div data-reveal><b data-count="${nbCours}">0</b><span>cours par semaine</span></div>` : `<div data-reveal><b data-count="${site.stats.joursDeCours}">0</b><span>jours de cours (lun → sam)</span></div>`}
-    ${site.stats.foundedYear ? `<div data-reveal><b data-count="${new Date().getFullYear() - site.stats.foundedYear}">0</b><span>années d'existence</span></div>` : ''}
+    ${site.stats.foundedYear ? `<div data-reveal><b data-count="${new Date().getFullYear() - site.stats.foundedYear}">0</b><span>années d'existence</span></div>` : site.stats.anciennete ? `<div data-reveal><b data-count="${site.stats.anciennete}" data-suffix="+">0</b><span>ans de danse à Mandres</span></div>` : ''}
   </div>
 </section>
-
-<section class="section">
+${avisHtml(false)}
+<section class="section tint">
   <div class="wrap two-col">
     <div data-reveal>
       <p class="kicker">Prochain rendez-vous</p>
       <h2>${nextEvent ? esc(nextEvent.titre) : 'Spectacle, stages, portes ouvertes'}</h2>
-      ${nextEvent ? `<p class="meta">${esc(fmtDate(nextEvent.date))}${nextEvent.lieu ? ' · ' + esc(nextEvent.lieu) : ''}</p><p>${esc(nextEvent.resume || '')}</p>` : `<p>${esc(events.attente.gala)} Suivez nos annonces sur Instagram et Facebook.</p>`}
+      ${nextEvent ? `<p class="meta">${esc(fmtDate(nextEvent.date))}${nextEvent.lieu ? ' · ' + esc(nextEvent.lieu) : ''}</p><p>${esc(nextEvent.resume || '')}</p>${nextEvent.aConfirmer ? '<p><span class="tbc">Participation d\'AK Dance à confirmer</span></p>' : ''}` : `<p>${esc(events.attente.gala)} Suivez nos annonces sur Instagram et Facebook.</p>`}
       <a class="btn btn-primary" href="evenements.html">Tous les événements</a>
     </div>
     <div class="news-stack">
@@ -320,7 +341,8 @@ pages['association.html'] = layout({
     <div data-reveal>
       <h2>Notre histoire</h2>
       <p class="callout">${site.stats.foundedYear ? `Association créée en ${site.stats.foundedYear}.` : `Date de création et grandes étapes de l'association : <span class="tbc">à compléter</span> par l'association (modifiable dans <code>data/site.json</code> et dans ce texte).`}</p>
-      <p>Au fil des saisons, AK Dance anime la vie locale : cours hebdomadaires du lundi au samedi, week-ends danse, spectacles et rencontres avec les habitants de Mandres-les-Roses.</p>
+      <p>Une adhérente témoigne y danser depuis dix ans : AK Dance fait vivre la danse à Mandres-les-Roses depuis <strong>plus d'une décennie</strong>.</p>
+      <p>Au fil des saisons, l'association anime la vie locale : cours du lundi au samedi, stages le week-end avec des professeurs invités, week-end Center Parcs, démonstration à la Fête des associations et représentations des élèves aux carnavals de la ville (2023, 2025, 2026).</p>
     </div>
   </div>
 </section>
@@ -341,6 +363,7 @@ pages['association.html'] = layout({
     <p class="muted" data-reveal>Prénoms des professeurs issus de l'ancien site de l'association ; disciplines et membres du bureau à compléter.</p>
   </div>
 </section>
+${avisHtml(true)}
 ${joinCta}`
 });
 
@@ -400,6 +423,7 @@ pages['planning-tarifs.html'] = layout({
       <h2>S'inscrire</h2>
       <ol class="steps">${tarifs.inscription.etapes.map((e) => `<li>${esc(e)}</li>`).join('')}</ol>
       <p class="callout">${esc(tarifs.inscription.attente)}</p>
+      <p class="callout tj">${esc(tarifs.ticketsJeunes)} <a href="${site.ticketsJeunes}" target="_blank" rel="noopener">En savoir plus</a></p>
     </div>
     <div data-reveal class="essai-box">
       <h2>Cours d'essai</h2>

@@ -1,12 +1,41 @@
 {
-  "_aide": "À venir : ajoutez un événement dans « avenir » (date au format AAAA-MM-JJ). Quand il est passé, déplacez-le dans « archives ». type = gala, stage, portes-ouvertes, sortie, autre.",
-  "avenir": [],
+  "_aide": "À venir : ajoutez un événement dans « avenir » (date au format AAAA-MM-JJ). Quand il est passé, il disparaît tout seul des événements à venir : déplacez-le alors dans « archives ». type = gala, stage, portes-ouvertes, ville, sortie, autre. Champs facultatifs : dateFin, lieu, lien, libelleLien, aConfirmer (true pour afficher « participation à confirmer »).",
+  "avenir": [
+    {
+      "titre": "Carnaval de Mandres-les-Roses",
+      "type": "ville",
+      "date": "2027-04-25",
+      "lieu": "Cour de la Ferme de Monsieur, 14h-18h",
+      "resume": "Le carnaval de la ville : animations, défilé et concours de déguisements pour les enfants. AK Dance s'y est produite en 2023, 2025 et 2026.",
+      "aConfirmer": true,
+      "lien": "https://www.mandreslesroses.fr/",
+      "libelleLien": "Agenda de la ville"
+    }
+  ],
   "attente": {
     "gala": "Spectacle de fin d'année : date et lieu à annoncer.",
-    "stages": "Prochains stages : dates à annoncer.",
-    "portesOuvertes": "Portes ouvertes et cours d'essai : dates à annoncer (cours d'essai gratuit sur demande)."
+    "stages": "AK Dance organise des stages le week-end, avec des professeurs invités. Prochaines dates à annoncer.",
+    "portesOuvertes": "Cours d'essai gratuit toute l'année sur simple demande. Retrouvez aussi l'association chaque rentrée à la Fête des associations de Mandres-les-Roses."
   },
   "archives": [
+    {
+      "titre": "Carnaval futuriste",
+      "type": "ville",
+      "date": "2026-04-12",
+      "lieu": "Cour de la Ferme de Monsieur",
+      "resume": "Après le défilé et le concours de costumes (robots, astronautes, aliens…), place à une représentation des élèves d'AK Dance.",
+      "lien": "https://www.mandreslesroses.fr/retour-en-images-carnaval-2026",
+      "libelleLien": "Retour en images sur le site de la ville"
+    },
+    {
+      "titre": "Carnaval « Contes et Légendes »",
+      "type": "ville",
+      "date": "2025-04-06",
+      "lieu": "Parc Beauséjour",
+      "resume": "Une représentation des jeunes élèves d'AK Dance, avant le concours de costumes qui a réuni plus de 90 enfants.",
+      "lien": "https://www.mandreslesroses.fr/retour-en-images-carnaval-2025",
+      "libelleLien": "Retour en images sur le site de la ville"
+    },
     {
       "titre": "Week-end Center Parcs",
       "type": "sortie",
@@ -14,6 +43,24 @@
       "dateFin": "2024-12-09",
       "lieu": "Domaine des Bois Francs",
       "resume": "Un week-end danse en cottage : cours de street dance, street jazz, contempo, moderne, dancehall et cabaret, accès à la Bulle et repas du samedi. Tous niveaux, dès 18 ans, ouvert aussi aux non-adhérents. 220 € par personne."
+    },
+    {
+      "titre": "Fête des associations",
+      "type": "ville",
+      "date": "2024-09-08",
+      "lieu": "Mandres-les-Roses",
+      "resume": "Démonstration d'AK Dance à 11h30, parmi plus de 40 associations présentes.",
+      "lien": "https://www.mandreslesroses.fr/fete-des-assos",
+      "libelleLien": "L'annonce sur le site de la ville"
+    },
+    {
+      "titre": "Carnaval 2023",
+      "type": "ville",
+      "date": "2023-04-01",
+      "lieu": "Parc Beauséjour",
+      "resume": "Défilé costumé et musical depuis la place des Tours Grises, avec la participation d'AK Dance aux côtés des associations de la ville.",
+      "lien": "https://www.mandreslesroses.fr/retour-en-image-carnaval-2023",
+      "libelleLien": "Retour en images sur le site de la ville"
     }
   ]
 }

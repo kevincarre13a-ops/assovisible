@@ -35,12 +35,12 @@
   /* compteurs animés */
   const counters = $$('[data-count]');
   const run = (el) => {
-    const end = +el.dataset.count;
-    if (reduce) { el.textContent = end; return; }
+    const end = +el.dataset.count, suf = el.dataset.suffix || '';
+    if (reduce) { el.textContent = end + suf; return; }
     const t0 = performance.now(), dur = 1600;
     const tick = (t) => {
       const p = Math.min(1, (t - t0) / dur);
-      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + suf;
       if (p < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
@@ -50,7 +50,7 @@
       if (e.isIntersecting) { run(e.target); co.unobserve(e.target); }
     }), { threshold: 0.4 });
     counters.forEach((el) => co.observe(el));
-  } else counters.forEach((el) => { el.textContent = el.dataset.count; });
+  } else counters.forEach((el) => { el.textContent = el.dataset.count + (el.dataset.suffix || ''); });
 
   /* léger parallaxe du héro */
   const hero = $('.hero');

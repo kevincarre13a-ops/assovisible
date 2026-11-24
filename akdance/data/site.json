@@ -27,18 +27,49 @@
   "stats": {
     "adherents": 350,
     "foundedYear": null,
-    "joursDeCours": 6
+    "joursDeCours": 6,
+    "anciennete": 10,
+    "_ancienneteSource": "Au moins 10 ans : une adhérente indique pratiquer dans l'école depuis 10 ans (avis Google, mars 2025). Remplacer par foundedYear dès que la date de création est connue."
   },
   "nav": [
-    { "href": "index.html", "label": "Accueil" },
-    { "href": "association.html", "label": "L'association" },
-    { "href": "danse.html", "label": "Danse" },
-    { "href": "bien-etre.html", "label": "Bien-être" },
-    { "href": "planning-tarifs.html", "label": "Planning & tarifs" },
-    { "href": "evenements.html", "label": "Événements & gala" },
-    { "href": "galerie.html", "label": "Galerie" },
-    { "href": "actualites.html", "label": "Actualités" },
-    { "href": "contact.html", "label": "Nous rejoindre" }
+    {
+      "href": "index.html",
+      "label": "Accueil"
+    },
+    {
+      "href": "association.html",
+      "label": "L'association"
+    },
+    {
+      "href": "danse.html",
+      "label": "Danse"
+    },
+    {
+      "href": "bien-etre.html",
+      "label": "Bien-être"
+    },
+    {
+      "href": "planning-tarifs.html",
+      "label": "Planning & tarifs"
+    },
+    {
+      "href": "evenements.html",
+      "label": "Événements & gala"
+    },
+    {
+      "href": "galerie.html",
+      "label": "Galerie"
+    },
+    {
+      "href": "actualites.html",
+      "label": "Actualités"
+    },
+    {
+      "href": "contact.html",
+      "label": "Nous rejoindre"
+    }
   ],
-  "placeholder": "À confirmer"
+  "placeholder": "À confirmer",
+  "ticketsJeunes": "https://tickets-jeunes.mandreslesroses.fr/associations",
+  "googleMaps": "https://www.google.com/maps/place?q=place_id:ChIJHW0SqIAJ5kcRWbcbuO53feI"
 }

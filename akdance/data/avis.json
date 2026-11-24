@@ -1,0 +1,14 @@
+{
+  "_aide": "Extraits d'avis publics laissés sur la fiche Google d'AK Dance. Mettez à jour la note et le nombre d'avis de temps en temps.",
+  "note": 5,
+  "nombre": 32,
+  "source": "Avis Google",
+  "lien": "https://www.google.com/maps/place?q=place_id:ChIJHW0SqIAJ5kcRWbcbuO53feI",
+  "releve": "2026-11",
+  "items": [
+    { "texte": "Cela fait 10 ans que je pratique de la danse dans cette école. Laetitia est une super prof, toujours des chorées innovantes, le bureau répond très vite. Lola, nouvelle prof, est également géniale.", "date": "2025-03" },
+    { "texte": "Ravie d'avoir inscrit ma petite. Danse enseignée avec beaucoup de pédagogie et de douceur bienveillante tout en étant bien cadrée. Je recommande pour les 4/5 ans.", "date": "2022-09" },
+    { "texte": "Une chouette école avec des cours variés. Les profs sont très sympa, l'ambiance cool et bon esprit !", "date": "2019-12" },
+    { "texte": "Des stages avec des intervenants de folie ont lieu régulièrement les week-ends. Les professeurs sont géniaux, dynamiques et créatifs.", "date": "2020-01" }
+  ]
+}
