@@ -1,50 +1,16 @@
 {
   "hospitals": [
-    {
-      "name": "Hôpital de Belley",
-      "city": "Belley (Ain)"
-    },
-    {
-      "name": "Pédiatrie d'Albertville",
-      "city": "Albertville (Savoie)"
-    },
-    {
-      "name": "Hôpital de Chambéry",
-      "city": "Chambéry (Savoie)"
-    },
-    {
-      "name": "Hôpital Debrousse",
-      "city": "Lyon (Rhône)"
-    },
-    {
-      "name": "HFME – Hôpital Femme Mère Enfant",
-      "city": "Bron / Lyon (Rhône)"
-    },
-    {
-      "name": "IHOPe – Institut d'Hématologie et d'Oncologie Pédiatrique",
-      "city": "Lyon (Rhône)"
-    }
+    { "name": "Hôpital de Belley", "city": "Belley (Ain)", "pin": "Belley", "lat": 45.7594, "lon": 5.6881 },
+    { "name": "Pédiatrie d'Albertville", "city": "Albertville (Savoie)", "pin": "Albertville", "lat": 45.6758, "lon": 6.3925 },
+    { "name": "Hôpital de Chambéry", "city": "Chambéry (Savoie)", "pin": "Chambéry", "lat": 45.5694, "lon": 5.9178 },
+    { "name": "Hôpital Debrousse", "city": "Lyon (Rhône)", "pin": "Lyon", "lat": 45.7537, "lon": 4.8172 },
+    { "name": "HFME – Hôpital Femme Mère Enfant", "city": "Bron / Lyon (Rhône)", "pin": "Lyon", "lat": 45.7413, "lon": 4.9065 },
+    { "name": "IHOPe – Institut d'Hématologie et d'Oncologie Pédiatrique", "city": "Lyon (Rhône)", "pin": "Lyon", "lat": 45.7413, "lon": 4.8828 }
   ],
   "materials": [
-    {
-      "icon": "🎨",
-      "title": "Loisirs créatifs",
-      "text": "Peinture, perles, fils pour bracelets brésiliens, crayons de couleur…"
-    },
-    {
-      "icon": "📚",
-      "title": "Livres et jeux éducatifs",
-      "text": "De quoi s'évader, apprendre et s'amuser depuis son lit ou en salle de jeux."
-    },
-    {
-      "icon": "🎮",
-      "title": "Matériel numérique",
-      "text": "Selon les besoins et les fonds : consoles, ordinateurs, téléviseurs, lecteurs DVD."
-    },
-    {
-      "icon": "🧸",
-      "title": "Collectes de jouets",
-      "text": "Des jouets neufs rassemblés, notamment pour les fêtes de fin d'année."
-    }
+    { "icon": "palette", "title": "Loisirs créatifs", "text": "Peinture, perles, fils pour bracelets brésiliens, crayons de couleur…" },
+    { "icon": "book", "title": "Livres et jeux éducatifs", "text": "De quoi s'évader, apprendre et s'amuser depuis son lit ou en salle de jeux." },
+    { "icon": "gamepad", "title": "Matériel numérique", "text": "Selon les besoins et les fonds : consoles, ordinateurs, téléviseurs, lecteurs DVD." },
+    { "icon": "gift", "title": "Collectes de jouets", "text": "Des jouets neufs rassemblés, notamment pour les fêtes de fin d'année." }
   ]
 }

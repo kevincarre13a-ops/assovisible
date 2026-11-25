@@ -4,7 +4,7 @@
       "title": "Prochain rendez-vous à venir",
       "date": "",
       "place": "Aix-les-Bains et alentours",
-      "description": "Repas dansant, tournoi de foot, thé dansant… Les dates seront annoncées ici dès qu'elles sont fixées. (Texte d'attente à modifier.)",
+      "description": "Repas dansant, tournoi de foot, thé dansant… Les prochaines dates seront annoncées ici et sur nos réseaux sociaux dès qu'elles seront fixées.",
       "placeholder": true
     }
   ],
@@ -17,9 +17,25 @@
     }
   ],
   "formats": [
-    { "icon": "💃", "title": "Repas dansants", "text": "Des soirées conviviales pour se retrouver et récolter des fonds." },
-    { "icon": "⚽", "title": "Tournois de foot", "text": "Du sport et de la bonne humeur au service des enfants." },
-    { "icon": "🎶", "title": "Thés dansants", "text": "Des après-midi festifs, ouverts à toutes les générations." },
-    { "icon": "🎭", "title": "Cabarets et spectacles", "text": "Des soirées en lumière pour soutenir nos projets." }
+    {
+      "icon": "utensils",
+      "title": "Repas dansants",
+      "text": "Des soirées conviviales pour se retrouver et récolter des fonds."
+    },
+    {
+      "icon": "ball",
+      "title": "Tournois de foot",
+      "text": "Du sport et de la bonne humeur au service des enfants."
+    },
+    {
+      "icon": "music",
+      "title": "Thés dansants",
+      "text": "Des après-midi festifs, ouverts à toutes les générations."
+    },
+    {
+      "icon": "star",
+      "title": "Cabarets et spectacles",
+      "text": "Des soirées en lumière pour soutenir nos projets."
+    }
   ]
 }

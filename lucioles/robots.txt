@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://association-lucioles-aix.netlify.app/sitemap.xml
