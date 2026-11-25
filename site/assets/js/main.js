@@ -69,7 +69,7 @@
     doc.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && entete.classList.contains("ouvert")) { basculerMenu(false); burger.focus(); }
     });
-    window.addEventListener("resize", function () { if (window.innerWidth >= 1360) basculerMenu(false); });
+    window.addEventListener("resize", function () { if (window.innerWidth >= 1180) basculerMenu(false); });
   }
 
   /* ---------- apparition douce ---------- */
@@ -231,24 +231,26 @@
       if (elProchain) {
         var auj = aujourdhui();
         var suivant = t.avenir.filter(function (e) { return e.date && e.date >= auj; })[0] || t.avenir.filter(function (e) { return e.date; })[0];
-        var encours = t.avenir.filter(function (e) { return e.date && e.date_fin && e.date <= auj && e !== suivant; })[0];
         var g = elProchain.querySelector(".gauche");
-        if (suivant) {
-          g.innerHTML = '<p class="date-grande">' + esc(plage(suivant)) + (suivant.heure ? " · " + esc(suivant.heure) : "") + "</p>" +
-            "<h2>" + esc(suivant.titre) + "</h2><p>" + esc(suivant.resume) + '</p><p><a class="btn btn-contour" href="evenements.html">Voir tous les rendez-vous</a></p>';
-        } else {
-          g.innerHTML = "<h2>Programme à venir</h2><p>Les prochains rendez-vous seront annoncés prochainement.</p>" + '<p><a class="btn btn-contour" href="evenements.html">Événements &amp; expositions</a></p>';
-        }
-        if (encours) {
-          var ex = elProchain.querySelector("[data-encours]");
-          ex.innerHTML = '<h3>À l’affiche</h3><p><strong>' + esc(encours.titre) + "</strong><br>" + esc(plage(encours)) + "</p>";
-        }
+        var lienTous = '<p><a class="btn btn-contour" href="activites.html#evenements">Nos activités</a></p>';
+        donnees("site").catch(function () { return {}; }).then(function (s) {
+          var an = s.annonce_accueil || {};
+          if (an.titre) {
+            g.innerHTML = '<span class="eyebrow">Annonce</span><h2>' + esc(an.titre) + "</h2><p>" + esc(an.texte || "") + "</p>" +
+              (an.lien ? '<p><a class="btn btn-contour" href="' + esc(an.lien) + '">En savoir plus</a></p>' : "");
+          } else if (suivant) {
+            g.innerHTML = '<span class="eyebrow">Prochain rendez-vous</span><p class="date-grande">' + esc(plage(suivant)) + (suivant.heure ? " · " + esc(suivant.heure) : "") + "</p>" +
+              "<h2>" + esc(suivant.titre) + "</h2><p>" + esc(suivant.resume) + "</p>" + lienTous;
+          } else {
+            g.innerHTML = '<span class="eyebrow">Événements</span><h2>Programme à venir</h2><p>Les prochains rendez-vous seront annoncés prochainement.</p>' + lienTous;
+          }
+        });
       }
       if (elListeEvt) {
         var cats = {};
         t.avenir.forEach(function (e) { cats[e.categorie] = 1; });
         var fb = doc.querySelector("[data-filtres-evt]");
-        if (fb) {
+        if (fb && t.avenir.length) {
           fb.innerHTML = '<li><button type="button" aria-pressed="true" data-f="">Tout</button></li>' +
             Object.keys(cats).map(function (c) { return '<li><button type="button" aria-pressed="false" data-f="' + c + '">' + esc(NOMS_CAT[c] || c) + "</button></li>"; }).join("");
           fb.addEventListener("click", function (ev) {
@@ -317,6 +319,24 @@
     }).catch(function () { [elCollec, elChrono].forEach(function (x) { if (x) erreurDonnees(x); }); });
   }
 
+  /* ---------- publications ---------- */
+  var elsPub = doc.querySelectorAll("[data-publications]");
+  if (elsPub.length) {
+    donnees("publications").then(function (data) {
+      elsPub.forEach(function (cont) {
+        var liste = data[cont.dataset.publications] || [];
+        cont.innerHTML = liste.length ? liste.map(function (x, k) {
+          var meta = [x.auteur, x.annee].filter(Boolean).map(esc).join(" · ");
+          return '<article class="bloc publi reveal' + (x.attente ? " attente" : "") + '" data-d="' + (k % 3) + '">' +
+            (x.image ? '<img src="' + esc(x.image) + '" alt="" loading="lazy" style="border-radius:10px;margin-bottom:1rem">' : "") +
+            "<h3>" + esc(x.titre) + "</h3>" + (meta ? '<p class="etiquette">' + meta + "</p>" : "") + "<p>" + esc(x.resume) + "</p>" +
+            (x.lien ? '<a class="btn btn-contour" href="' + esc(x.lien) + '">Lire</a>' : "") + "</article>";
+        }).join("") : '<p class="note">Publications à venir.</p>';
+        observer(cont);
+      });
+    }).catch(function () { elsPub.forEach(erreurDonnees); });
+  }
+
   /* ---------- galerie ---------- */
   var elGal = doc.querySelector("[data-galerie]");
   if (elGal) {
@@ -324,6 +344,7 @@
       var fb = doc.querySelector("[data-filtres-gal]");
       function afficher(theme) {
         var photos = data.photos.filter(function (p) { return !theme || p.theme === theme; });
+        if (!photos.length) { elGal.innerHTML = '<p class="note">Photos à venir.</p>'; return; }
         elGal.innerHTML = photos.map(function (p) {
           return '<figure class="reveal"><button type="button" class="zoomable" data-src="' + esc(p.src) + '" data-alt="' + esc(p.alt) + '" data-legende="' + esc(p.legende) + '">' +
             '<img src="' + esc(p.src) + '" alt="' + esc(p.alt) + '" loading="lazy">' + LOUPE + '<span class="sr-only">Agrandir : ' + esc(p.legende) + "</span></button><figcaption>" + esc(p.legende) + "</figcaption></figure>";

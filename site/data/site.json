@@ -6,6 +6,12 @@
   "contact_prenom": "[À COMPLÉTER : prénom du contact]",
   "adresse_hotel_dieu": "Hôtel-Dieu, 68 rue de la République, 69220 Belleville-en-Beaujolais",
   "adresse_postale": "27 rue du Moulin, 69220 Belleville-en-Beaujolais",
+  "annonce_accueil": {
+    "_aide": "Annonce affichée en tête de l'accueil. Laissez « titre » vide pour afficher automatiquement le prochain événement (ou « Programme à venir »).",
+    "titre": "",
+    "texte": "",
+    "lien": ""
+  },
   "musee": {
     "nom": "Musée de l'Hôtel-Dieu (commune de Belleville-en-Beaujolais)",
     "telephone": "04 74 66 44 67",
@@ -13,32 +19,77 @@
     "site": "https://hoteldieu-belleville.fr/"
   },
   "reseaux": [
-    { "nom": "Facebook (Hôtel-Dieu)", "url": "https://www.facebook.com/hoteldieudebelleville/" },
-    { "nom": "Instagram (Hôtel-Dieu)", "url": "https://www.instagram.com/hotel_dieu_belleville/" }
+    {
+      "nom": "Facebook (Hôtel-Dieu)",
+      "url": "https://www.facebook.com/hoteldieudebelleville/"
+    },
+    {
+      "nom": "Instagram (Hôtel-Dieu)",
+      "url": "https://www.instagram.com/hotel_dieu_belleville/"
+    }
   ],
-  "gps": { "lat": 46.109184, "lon": 4.747553 },
+  "gps": {
+    "lat": 46.109184,
+    "lon": 4.747553
+  },
   "horaires": {
     "annee_note": "Nouveau en 2026 : ouverture du mercredi après-midi au samedi.",
     "hors_vacances": [
-      { "jour": "Mercredi", "heures": "14h30 – 17h30 (fermé le matin)" },
-      { "jour": "Jeudi", "heures": "10h – 12h30 puis 15h30 – 17h30" },
-      { "jour": "Vendredi", "heures": "10h – 12h30 puis 14h30 – 17h30" },
-      { "jour": "Samedi", "heures": "11h – 12h30 puis 14h30 – 17h30" }
+      {
+        "jour": "Mercredi",
+        "heures": "14h30 – 17h30 (fermé le matin)"
+      },
+      {
+        "jour": "Jeudi",
+        "heures": "10h – 12h30 puis 15h30 – 17h30"
+      },
+      {
+        "jour": "Vendredi",
+        "heures": "10h – 12h30 puis 14h30 – 17h30"
+      },
+      {
+        "jour": "Samedi",
+        "heures": "11h – 12h30 puis 14h30 – 17h30"
+      }
     ],
     "visite_guidee_hors_vacances": "Jeudi de 14h30 à 15h30 et samedi de 10h à 11h.",
     "vacances_zone_a": [
-      { "jour": "Mardi et jeudi", "heures": "10h – 12h30 puis 15h30 – 17h30" },
-      { "jour": "Mercredi et vendredi", "heures": "10h – 12h30 puis 14h30 – 17h30" },
-      { "jour": "Samedi", "heures": "11h – 12h30 puis 14h30 – 17h30" }
+      {
+        "jour": "Mardi et jeudi",
+        "heures": "10h – 12h30 puis 15h30 – 17h30"
+      },
+      {
+        "jour": "Mercredi et vendredi",
+        "heures": "10h – 12h30 puis 14h30 – 17h30"
+      },
+      {
+        "jour": "Samedi",
+        "heures": "11h – 12h30 puis 14h30 – 17h30"
+      }
     ],
     "visite_guidee_vacances": "Mardi et jeudi de 14h30 à 15h30 et samedi de 10h à 11h.",
     "fermeture": "Fermeture hivernale du 25 décembre 2026 au 2 février 2027."
   },
   "tarifs": {
     "individuels": [
-      { "libelle": "Visite libre ou « visite libre + exposition temporaire »", "normal": "5 €", "reduit": "4 €", "moins10": "Gratuit" },
-      { "libelle": "Visite guidée", "normal": "7 €", "reduit": "5 €", "moins10": "Gratuit" },
-      { "libelle": "Conférence", "normal": "Gratuit", "reduit": "Gratuit", "moins10": "Gratuit" }
+      {
+        "libelle": "Visite libre ou « visite libre + exposition temporaire »",
+        "normal": "5 €",
+        "reduit": "4 €",
+        "moins10": "Gratuit"
+      },
+      {
+        "libelle": "Visite guidée",
+        "normal": "7 €",
+        "reduit": "5 €",
+        "moins10": "Gratuit"
+      },
+      {
+        "libelle": "Conférence",
+        "normal": "Gratuit",
+        "reduit": "Gratuit",
+        "moins10": "Gratuit"
+      }
     ],
     "reduit_conditions": "Tarif réduit : plus de 65 ans, moins de 26 ans, personnes à mobilité réduite, familles nombreuses, demandeurs d'emploi.",
     "famille": [
@@ -63,11 +114,26 @@
   },
   "bureau_date": "Composition communiquée par la presse locale en octobre 2023 : à confirmer par l'association.",
   "bureau": [
-    { "nom": "Janine Hugand", "role": "Présidente" },
-    { "nom": "Yves Bernard", "role": "Secrétaire" },
-    { "nom": "Christine Dutreve", "role": "Vice-secrétaire" },
-    { "nom": "Mireille Broyer", "role": "Trésorière" },
-    { "nom": "Aline Mallet", "role": "Vice-trésorière" }
+    {
+      "nom": "Janine Hugand",
+      "role": "Présidente"
+    },
+    {
+      "nom": "Yves Bernard",
+      "role": "Secrétaire"
+    },
+    {
+      "nom": "Christine Dutreve",
+      "role": "Vice-secrétaire"
+    },
+    {
+      "nom": "Mireille Broyer",
+      "role": "Trésorière"
+    },
+    {
+      "nom": "Aline Mallet",
+      "role": "Vice-trésorière"
+    }
   ],
   "partenaires": [
     "Commune de Belleville-en-Beaujolais",

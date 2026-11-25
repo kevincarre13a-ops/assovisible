@@ -90,14 +90,14 @@ ul{padding-left:1.2em}
 .ouvert .burger span{background:transparent}
 .ouvert .burger span::before{transform:translateY(8px) rotate(45deg)}
 .ouvert .burger span::after{transform:translateY(-8px) rotate(-45deg)}
-@media (max-width:1359px){
+@media (max-width:1179px){
   .menu{position:fixed;inset:var(--entete) 0 0 0;display:flex;flex-direction:column;padding:1.2rem 1.4rem 3rem;background:var(--creme);overflow-y:auto;transform:translateX(100%);visibility:hidden;transition:transform .4s cubic-bezier(.2,.7,.2,1),visibility .4s}
   .ouvert .menu{transform:none;visibility:visible}
   .menu a{color:var(--faience-fonce);font-family:var(--titre);font-size:1.7rem;font-weight:700;padding:.5em .2em;border-bottom:1px solid var(--pierre-claire)}
   .menu a::after{display:none}
   .menu a[aria-current="page"]{color:var(--vin);padding-left:.7rem;border-left:4px solid var(--vin)}
 }
-@media (min-width:1360px){.menu{display:flex;gap:.1rem}.burger{display:none}}
+@media (min-width:1180px){.menu{display:flex;gap:.2rem}.burger{display:none}}
 @media (max-width:420px){.marque-nom small{display:none}.marque img{width:44px}}
 
 /* héros */
@@ -318,3 +318,11 @@ a.carte{text-decoration:none;color:inherit}
 .frise{background-image:url(../img/frise-bleue.svg)}
 .site-footer .frise,.hero-pots,.section.bleu .frise{background-image:url(../img/frise-or.svg)}
 .statut:empty{display:none}
+.hero .sous-accroche{font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:600;letter-spacing:.02em;text-shadow:0 2px 12px rgba(0,0,0,.55);margin:0;color:var(--pierre-claire)}
+.hero .accroche{margin-bottom:.6rem}
+.prochain-carte.seule{grid-template-columns:1fr}
+.sommaire{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;padding:1.4rem 0 0}
+.sommaire a{font-weight:600;text-decoration:none;padding:.45em 1em;border-radius:999px;background:var(--creme-2);color:var(--faience-fonce);font-size:.97rem}
+.sommaire a:hover{background:var(--faience);color:#fff}
+.publi .couv{aspect-ratio:3/4;background:var(--creme-2);display:grid;place-items:center}
+section[id],article[id],div[id]{scroll-margin-top:calc(var(--entete) + 12px)}

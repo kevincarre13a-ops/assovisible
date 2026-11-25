@@ -5,16 +5,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>L’Albarelle, Hôtel-Dieu de Belleville-en-Beaujolais</title>
-<meta name="description" content="L’Albarelle, association pour la mise en valeur de l’Hôtel-Dieu de Belleville-en-Beaujolais (Rhône) : histoire, apothicairerie, visites, événements. Découvrez et soutenez ce patrimoine.">
+<meta name="description" content="L’Albarelle, association pour la mise en valeur de l’Hôtel-Dieu de Belleville-en-Beaujolais (Rhône) : faisons vivre l’Hôtel-Dieu ensemble, trois siècles de soins, de remèdes et de mémoire.">
 <meta name="theme-color" content="#102a52">
-<link rel="canonical" href="https://lalbarelle-hotel-dieu.netlify.app/">
+<link rel="canonical" href="https://lalbarelle-hotel-dieu-belleville.netlify.app/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="L’Albarelle, Hôtel-Dieu de Belleville-en-Beaujolais">
-<meta property="og:description" content="L’Albarelle, association pour la mise en valeur de l’Hôtel-Dieu de Belleville-en-Beaujolais (Rhône) : histoire, apothicairerie, visites, événements. Découvrez et soutenez ce patrimoine.">
-<meta property="og:image" content="https://lalbarelle-hotel-dieu.netlify.app/assets/img/vue-aerienne.jpg">
-<meta property="og:url" content="https://lalbarelle-hotel-dieu.netlify.app/">
+<meta property="og:description" content="L’Albarelle, association pour la mise en valeur de l’Hôtel-Dieu de Belleville-en-Beaujolais (Rhône) : faisons vivre l’Hôtel-Dieu ensemble, trois siècles de soins, de remèdes et de mémoire.">
+<meta property="og:image" content="https://lalbarelle-hotel-dieu-belleville.netlify.app/assets/img/vue-aerienne.jpg">
+<meta property="og:url" content="https://lalbarelle-hotel-dieu-belleville.netlify.app/">
 <link rel="preload" href="assets/fonts/cormorant.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -28,7 +28,7 @@
     </a>
     <nav aria-label="Navigation principale">
       <ul class="menu" id="menu-principal">
-        <li><a href="index.html" aria-current="page">Accueil</a></li><li><a href="association.html">L’association</a></li><li><a href="hotel-dieu.html">L’Hôtel-Dieu</a></li><li><a href="visites.html">Visites &amp; infos</a></li><li><a href="evenements.html">Événements &amp; expositions</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="actualites.html">Actualités</a></li><li><a href="soutenir.html">Nous soutenir</a></li><li><a href="contact.html">Contact</a></li><li><a href="mentions-legales.html">Mentions légales</a></li>
+        <li><a href="association.html">L’association</a></li><li><a href="activites.html">Nos activités</a></li><li><a href="publications.html">Publications</a></li><li><a href="hotel-dieu.html">L’Hôtel-Dieu</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="contact.html">Contacts / Adhésions</a></li><li><a href="mentions-legales.html">Mentions légales</a></li>
       </ul>
     </nav>
     <button class="burger" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Ouvrir le menu"><span></span></button>
@@ -37,33 +37,23 @@
 <main id="contenu">
 <section class="hero" aria-label="Présentation">
   <div class="hero-fond" aria-hidden="true">
-    <img class="actif" src="assets/img/vue-aerienne.jpg" alt="" fetchpriority="high">
-    <img src="assets/img/apothicairerie-panorama.jpg" alt="" loading="lazy">
-    <img src="assets/img/salle-malades-perspective.jpg" alt="" loading="lazy">
+    <img class="actif" src="assets/img/photo-a-salle-grille.jpg" alt="" fetchpriority="high">
+    <img src="assets/img/photo-b-salle-soeurs.jpg" alt="" loading="lazy">
+    <img src="assets/img/photo-c-albarelles.jpg" alt="" loading="lazy">
   </div>
   <div class="wrap hero-contenu">
-    <span class="eyebrow">Association pour la mise en valeur de l’Hôtel-Dieu de Belleville-en-Beaujolais</span>
     <h1>L’Albarelle</h1>
-    <p class="accroche">Trois siècles de soins, de remèdes et de mémoire : faisons vivre l’Hôtel-Dieu ensemble.</p>
-    <div class="btns">
-      <a class="btn btn-primaire" href="visites.html">Préparer ma visite</a>
-      <a class="btn btn-clair" href="soutenir.html">Soutenir l’association</a>
-    </div>
+    <p class="accroche">Faisons vivre l’Hôtel-Dieu ensemble</p>
+    <p class="sous-accroche">Trois siècles de soins, de remèdes et de mémoire.</p>
   </div>
   <a class="defiler" href="#prochain">Découvrir</a>
   <div class="frise hero-pots" role="presentation"></div>
 </section>
 
-<section class="prochain" id="prochain" aria-labelledby="t-prochain">
+<section class="prochain" id="prochain" aria-label="Événements en cours">
   <div class="wrap">
-    <div class="prochain-carte reveal" data-prochain>
-      <div class="gauche"><span class="eyebrow" id="t-prochain">Prochain rendez-vous</span><p>Chargement du programme…</p></div>
-      <div class="droite">
-        <h3>Prochaines visites guidées</h3>
-        <ul data-prochaine-visite><li>Voir les horaires sur la page « Visites &amp; infos ».</li></ul>
-        <div data-encours></div>
-        <p><a href="visites.html">Horaires et tarifs →</a></p>
-      </div>
+    <div class="prochain-carte seule reveal" data-prochain>
+      <div class="gauche"><span class="eyebrow">Événements</span><h2>Programme à venir</h2><p>Les prochains rendez-vous seront annoncés prochainement.</p></div>
     </div>
   </div>
 </section>
@@ -71,13 +61,12 @@
 <section class="section">
   <div class="wrap deux-col">
     <div class="reveal">
-      <span class="eyebrow">Une histoire à partager</span>
-      <h2>Un hôpital devenu mémoire vivante</h2>
-      <p class="lead">Construit au XVIIIe siècle pour accueillir les pauvres de Belleville, l’Hôtel-Dieu a soigné jusqu’en 1991. Il est aujourd’hui classé Monument historique.</p>
-      <p>Salles de malades aux lits à ruelle, apothicairerie et ses pots de faïence, chapelles, archives, jardin de plantes médicinales : depuis 1993, les bénévoles de l’Albarelle veillent sur ce patrimoine, le font connaître et le font vivre.</p>
-      <div class="btns"><a class="btn btn-contour" href="hotel-dieu.html">Découvrir l’Hôtel-Dieu</a><a class="btn btn-contour" href="association.html">Connaître l’association</a></div>
+      <span class="eyebrow">L’association</span>
+      <h2>L’Albarelle, association pour la mise en valeur de l’Hôtel-Dieu de Belleville-en-Beaujolais</h2>
+      <p class="lead">Depuis plus de trente ans, un groupe de passionnés du patrimoine s’implique activement dans la protection, l’embellissement et l’animation de ce site incomparable.</p>
+      <div class="btns"><a class="btn btn-contour" href="association.html">Découvrir l’association</a></div>
     </div>
-    <div class="cadre reveal" data-d="1"><img src="assets/img/apothicairerie-panorama.jpg" width="1280" height="610" alt="L’apothicairerie de l’Hôtel-Dieu, avec ses boiseries et ses pots alignés" loading="lazy"></div>
+    <div class="cadre reveal" data-d="1"><img src="assets/img/photo-1-facade.jpg" width="1600" height="1323" alt="Façade de l’Hôtel-Dieu de Belleville-en-Beaujolais et son clocher" loading="lazy"></div>
   </div>
 </section>
 <div class="frise douce" role="presentation"></div>
@@ -86,12 +75,12 @@
   <div class="wrap">
     <div class="center narrow reveal"><span class="eyebrow">Explorer</span><h2 id="t-apercu">Entrez dans l’Hôtel-Dieu</h2></div>
     <div class="grille g3" style="margin-top:2.4rem">
-      <a class="carte reveal" href="association.html"><div class="vignette"><img src="assets/img/salle-du-conseil.jpg" alt="" loading="lazy"></div><div class="corps"><h3>L’association</h3><p>Une trentaine d’années d’engagement bénévole pour sauver et transmettre ce patrimoine.</p><span class="plus">Qui sommes-nous</span></div></a>
-      <a class="carte reveal" data-d="1" href="hotel-dieu.html"><div class="vignette"><img src="assets/img/salle-malades-poele.jpg" alt="" loading="lazy"></div><div class="corps"><h3>L’Hôtel-Dieu</h3><p>Architecture, apothicairerie, collections et frise chronologique de 1733 à aujourd’hui.</p><span class="plus">Parcourir l’histoire</span></div></a>
-      <a class="carte reveal" data-d="2" href="visites.html"><div class="vignette"><img src="assets/img/salle-malades-grille.jpg" alt="" loading="lazy"></div><div class="corps"><h3>Visites &amp; infos pratiques</h3><p>Horaires, tarifs, visites guidées, groupes, scolaires, accès et plan.</p><span class="plus">Préparer ma venue</span></div></a>
-      <a class="carte reveal" href="evenements.html"><div class="vignette"><img src="assets/img/expo-visiteurs.jpg" alt="" loading="lazy"></div><div class="corps"><h3>Événements &amp; expositions</h3><p>Expositions, conférences, ateliers et Journées du patrimoine.</p><span class="plus">Voir l’agenda</span></div></a>
-      <a class="carte reveal" data-d="1" href="galerie.html"><div class="vignette"><img src="assets/img/jardin-bugle.jpg" alt="" loading="lazy"></div><div class="corps"><h3>Galerie</h3><p>Le bâtiment, l’apothicairerie, les expositions et les événements en images.</p><span class="plus">Voir les photos</span></div></a>
-      <a class="carte reveal" data-d="2" href="soutenir.html"><div class="vignette"><img src="assets/img/apothicairerie-pots.jpg" alt="" loading="lazy"></div><div class="corps"><h3>Nous soutenir</h3><p>Adhérer, devenir bénévole, faire un don ou devenir mécène.</p><span class="plus">Agir avec nous</span></div></a>
+      <a class="carte reveal" href="association.html"><div class="vignette"><img src="assets/img/salle-du-conseil.jpg" alt="" loading="lazy"></div><div class="corps"><h3>L’association</h3><p>Notre histoire, notre mission, nos valeurs et celles et ceux qui font l’Albarelle.</p><span class="plus">Qui sommes-nous</span></div></a>
+      <a class="carte reveal" data-d="1" href="activites.html"><div class="vignette"><img src="assets/img/expo-visiteurs.jpg" alt="" loading="lazy"></div><div class="corps"><h3>Nos activités</h3><p>Événements, inventaires, visites : ce que nous faisons tout au long de l’année.</p><span class="plus">Voir nos activités</span></div></a>
+      <a class="carte reveal" data-d="2" href="publications.html"><div class="vignette"><img src="assets/img/photo-c-albarelles.jpg" alt="" loading="lazy"></div><div class="corps"><h3>Publications</h3><p>Livres, extraits et miscellanées sur l’histoire de l’Hôtel-Dieu.</p><span class="plus">Lire nos publications</span></div></a>
+      <a class="carte reveal" href="hotel-dieu.html"><div class="vignette"><img src="assets/img/salle-malades-poele.jpg" alt="" loading="lazy"></div><div class="corps"><h3>L’Hôtel-Dieu</h3><p>Un site historique : salles, chapelles, apothicairerie et nos créations.</p><span class="plus">Parcourir le site</span></div></a>
+      <a class="carte reveal" data-d="1" href="galerie.html"><div class="vignette"><img src="assets/img/photo-b-salle-soeurs.jpg" alt="" loading="lazy"></div><div class="corps"><h3>Galerie</h3><p>Le bâtiment, les salles, l’apothicairerie, le jardin et nos activités en images.</p><span class="plus">Voir les photos</span></div></a>
+      <a class="carte reveal" data-d="2" href="contact.html"><div class="vignette"><img src="assets/img/jardin-bugle.jpg" alt="" loading="lazy"></div><div class="corps"><h3>Contacts &amp; adhésions</h3><p>Nous écrire, adhérer, devenir bénévole ou nous soutenir.</p><span class="plus">Nous rejoindre</span></div></a>
     </div>
   </div>
 </section>
@@ -103,33 +92,11 @@
       <div class="compteur reveal"><strong data-depuis="1733">293</strong><span>années d’histoire depuis l’ouverture en 1733</span></div>
       <div class="compteur reveal" data-d="1"><strong data-depuis="1993">33</strong><span>ans d’engagement de l’Albarelle depuis 1993</span></div>
       <div class="compteur reveal" data-d="2"><strong data-cible="20">20</strong><span>bénévoles actifs<small>presse locale, 2023</small></span></div>
-      <div class="compteur reveal" data-d="3"><strong data-cible="10">10</strong><span>massifs de plantes médicinales dans le jardin de simples</span></div>
+      <div class="compteur reveal" data-d="3"><strong data-cible="10">10</strong><span>massifs de plantes médicinales dans le jardin de l’Albarelle</span></div>
       <div class="compteur reveal" data-d="3"><strong data-cible="3">3</strong><span>salles de malades et leurs lits à ruelle</span></div>
     </div>
   </div>
   <div class="frise douce" role="presentation" style="margin-top:3rem"></div>
-</section>
-
-<section class="section" aria-labelledby="t-actus">
-  <div class="wrap">
-    <div class="reveal" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:end;margin-bottom:2rem">
-      <div><span class="eyebrow">À la une</span><h2 id="t-actus" style="margin:0">Dernières actualités</h2></div>
-      <a class="btn btn-contour" href="actualites.html">Toutes les actualités</a>
-    </div>
-    <div class="grille g3" data-actus="3"></div>
-  </div>
-</section>
-
-<section class="section alt">
-  <div class="wrap deux-col">
-    <div class="cadre reveal"><img src="assets/img/jardin-cour.jpg" width="1280" height="610" alt="Le jardin de plantes médicinales dans la cour de l’Hôtel-Dieu" loading="lazy"></div>
-    <div class="reveal" data-d="1">
-      <span class="eyebrow">Rejoignez-nous</span>
-      <h2>Aidez-nous à faire vivre l’Hôtel-Dieu</h2>
-      <p class="lead">Adhésion, bénévolat, don ou mécénat : chaque geste finance la recherche, les expositions, le jardin et la transmission aux plus jeunes.</p>
-      <div class="btns"><a class="btn btn-primaire" href="soutenir.html">Nous soutenir</a><a class="btn btn-contour" href="contact.html">Nous écrire</a></div>
-    </div>
-  </div>
 </section>
 
 </main>
@@ -151,7 +118,7 @@
       </div>
       <div>
         <h2>Le site</h2>
-        <ul><li><a href="index.html">Accueil</a></li><li><a href="association.html">L’association</a></li><li><a href="hotel-dieu.html">L’Hôtel-Dieu</a></li><li><a href="visites.html">Visites &amp; infos</a></li><li><a href="evenements.html">Événements &amp; expositions</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="actualites.html">Actualités</a></li><li><a href="soutenir.html">Nous soutenir</a></li><li><a href="contact.html">Contact</a></li></ul>
+        <ul><li><a href="association.html">L’association</a></li><li><a href="activites.html">Nos activités</a></li><li><a href="publications.html">Publications</a></li><li><a href="hotel-dieu.html">L’Hôtel-Dieu</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="contact.html">Contacts / Adhésions</a></li></ul>
       </div>
       <div>
         <h2>Suivre l’Hôtel-Dieu</h2>

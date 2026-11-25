@@ -44,21 +44,6 @@
       "lien": "https://hoteldieu-belleville.fr/events/event/atelier-artistique-ecriture/"
     },
     {
-      "id": "conference-albarelle-2026",
-      "titre": "Conférence de l'Albarelle [À COMPLÉTER : sujet et date 2026]",
-      "categorie": "conference",
-      "date": "",
-      "date_fin": "",
-      "heure": "18h",
-      "lieu": "Hôtel-Dieu",
-      "resume": "TEXTE D'ATTENTE : l'association propose régulièrement des conférences gratuites à l'Hôtel-Dieu. Renseignez ici le sujet, l'intervenant et la date de la prochaine conférence.",
-      "public": "Tout public",
-      "prix": "Gratuit",
-      "image": "assets/img/affiche-conference-albarelle.jpg",
-      "lien": "",
-      "attente": true
-    },
-    {
       "id": "jep-2026",
       "titre": "Journées européennes du patrimoine 2026",
       "categorie": "patrimoine",

@@ -1,0 +1,36 @@
+{
+  "_aide": "Publications de l'association. Rubriques : livres, extraits, miscellanees. Chaque élément : titre, auteur, annee, resume, image (facultative), lien (facultatif, ex. un PDF déposé dans assets/docs). Un élément avec « attente »: true est un texte d'attente à remplacer.",
+  "livres": [
+    {
+      "titre": "[À COMPLÉTER : titre du livre]",
+      "auteur": "L’Albarelle",
+      "annee": "",
+      "resume": "Présentation de l’ouvrage, nombre de pages, prix et lieu de vente (accueil du musée, librairies…).",
+      "image": "",
+      "lien": "",
+      "attente": true
+    }
+  ],
+  "extraits": [
+    {
+      "titre": "[À COMPLÉTER : titre de l’extrait]",
+      "auteur": "",
+      "annee": "",
+      "resume": "Quelques lignes ou un chapitre tiré d’un ouvrage ou d’un article de l’association, par exemple l’article préparé pour la Société française d’histoire de la médecine.",
+      "image": "",
+      "lien": "",
+      "attente": true
+    }
+  ],
+  "miscellanees": [
+    {
+      "titre": "[À COMPLÉTER : anecdote ou document d’archive]",
+      "auteur": "",
+      "annee": "",
+      "resume": "Une petite histoire, une recette de remède, un document retrouvé dans les archives…",
+      "image": "",
+      "lien": "",
+      "attente": true
+    }
+  ]
+}
