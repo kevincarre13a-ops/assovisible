@@ -9,7 +9,7 @@ from html import escape
 from pathlib import Path
 
 OUT = Path(__file__).parent / "site"
-URL = "https://lalbarelle-hotel-dieu-belleville.netlify.app"  # à remplacer par https://lalbarelle-hotel-dieu-belleville.fr une fois le domaine actif
+URL = "https://lalbarelle-hotel-dieu-belleville.fr"
 
 NAV = [
     ("association.html", "L’association"),
