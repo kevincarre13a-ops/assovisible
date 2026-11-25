@@ -34,3 +34,10 @@
   from = "/soutenir*"
   to = "/contact.html#adhesion"
   status = 301
+
+# L'ancienne adresse Netlify renvoie vers le nom de domaine officiel
+[[redirects]]
+  from = "https://lalbarelle-hotel-dieu-belleville.netlify.app/*"
+  to = "https://lalbarelle-hotel-dieu-belleville.fr/:splat"
+  status = 301
+  force = true
