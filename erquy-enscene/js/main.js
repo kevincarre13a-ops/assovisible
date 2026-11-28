@@ -110,3 +110,15 @@
     dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
   }
 })();
+
+/* Teasers : la vidéo YouTube ne se charge qu'au clic (rapidité et vie privée) */
+document.querySelectorAll('.teaser button[data-yt]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + b.getAttribute('data-yt') + '?autoplay=1&rel=0';
+    f.title = b.getAttribute('aria-label') || 'Teaser';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    b.parentNode.replaceChild(f, b);
+  });
+});
